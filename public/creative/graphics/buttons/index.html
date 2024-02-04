@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BUTTONZ PARA TI - WiiCHiCKEN</title>
+    <link href="/resources/nav/navbar.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="heightCheck"></div>
+    <div class="heading" id="poopBlock"></div>
+    <div id="sideButton" onclick="openSidey()"></div>
+    <div id="overSide"></div>
+    <script src="/resources/nav/navbar.js"></script>
+    <style>
+      body {
+        background-color: #201c00;
+        color: #f9e466;
+        font-family: 'PT Sans', sans-serif;
+      }
+      main {
+        max-width: 800px;
+        margin: auto;
+      }
+      h1, h2, h3, h4, h5 {
+        font-family: 'Martian Mono', monospace;
+        margin-block-start: 0;
+		    margin-block-end: 0;
+      }
+      button {
+        background-color: #353117;
+        color: #cfc7a2;
+        border: 1px solid #655f41;
+        transition-duration: 0.3s;
+      }
+      button:hover {
+        color: #353117;
+        background-color: #cfc7a2;
+        box-shadow: 0 0 20px 5px #cfc7a2;
+      }
+      #downloadButt {
+        color: #353117;
+        background-color: #cfc7a2;
+      }
+      #downloadButt:hover {
+        box-shadow: 0 0 20px 5px #cfc7a2;
+        background-color: #353117;
+        color: #cfc7a2;
+      }
+      .butt {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .butt img {cursor: pointer;}
+      img {
+        width: 88px;
+        height: 31px;
+        image-rendering: pixelated;
+      }
+      .box {
+        border: 1px solid yellow;
+        background-color: #3830004d;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+      .less {opacity: 0.3;}
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 150;
+        width: 100%;
+        height: 100%;
+        background-color: #161300de;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+      }
+      .modalbox {
+        background-color: #201c00;
+        border: 1px solid yellow;
+        padding: 5px;
+        box-shadow: 0 0 200px 5px yellow;
+        max-width: 600px;
+      }
+    </style>
+    <main>
+      <div class="box">
+        <h1>MY BUTTONS</h1>
+      </div>
+      <div class="box">
+        <p>Look at these awesome buttons that I made. You can use these in your site as long as you <strong>don't hotlink them</strong>. Credit isn't required, but is appreciated.<br>Click on a button for more information, as well as to download it.</p>
+      </div>
+      <div class="box">
+        <h2>life</h2>
+        <div class="butt">
+          <a onclick="popUp('my car has 100,000 miles', 'mine actually have 200,000 miles. yeahhhhhhhhh, im goated', 'life/100000miles.PNG', 'WHYDIDMYINTERNETGOOUT.png')"><img src="life/100000miles.PNG" loading="lazy"></a>
+        </div>
+      </div>
+      <div class="box">
+        <h2>tech</h2>
+        <div class="box">
+          <h3><span class="less">tech/</span>mobile</h3>
+          <div class="butt">
+            <a onclick="popUp('1.1.1.1', 'now you can FINALLY bypass your school\'s wifi restrictions and moderate your discord server, completely uninterrupted.', 'tech/mobile/1111.PNG', 'flubber.png')"><img src="tech/mobile/1111.PNG" loading="lazy"></a>
+          </div>
+          <div class="box">
+            <h4><span class="less">tech/mobile/</span>android</h4>
+            <div class="butt">
+              <a onclick="popUp('i use 3 button navigation', 'the only way to use a phone', 'tech/mobile/android/3button.PNG', 'dog-with-a-blog.png');"><img src="tech/mobile/android/3button.PNG" loading="lazy"></a>
+              <a onclick="popUp('i use 2 button navigation', 'this was kinda a cool feature i think', 'tech/mobile/android/2button.PNG', 'ever-played-cuphead.png');"><img src="tech/mobile/android/2button.PNG" loading="lazy"></a>
+              <a onclick="popUp('i use gesture navigation', 'sorry i dont really like this one', 'tech/mobile/android/gestures.PNG', 'poop-emoji-hq.png');"><img src="tech/mobile/android/gestures.PNG" loading="lazy"></a>
+            </div>
+          </div>
+          <div class="box">
+            <h4><span class="less">tech/mobile/</span>ios</h4>
+            <div class="butt">
+              <a onclick="popUp('do not disturb', 'admit it, this is me when my boss calls at 5:03 PM on a friday', 'tech/mobile/ios/dnd.PNG', 'dungeons-and-dragons.png')"><img src="tech/mobile/ios/dnd.PNG" loading="lazy"></a>
+              <a onclick="popUp('what does low power mode do?', 'erm it stops your email from refreshing in the background and thats about it', 'tech/mobile/ios/lowpower.PNG', 'kanye-west-power-128kbps.png')"><img src="tech/mobile/ios/lowpower.PNG" loading="lazy"></a>
+            </div>
+            <div class="box">
+              <h5><span class="less">tech/mobile/ios/</span>jailbreak</h5>
+              <p>do you guys remember when jailbreaking was a thing haha we should bring that back</p>
+              <div class="butt">
+                <a onclick="popUp('AltStore', 'my favorite excuse to let my laptop gain an outstanding uptime of 34 hours', 'tech/mobile/ios/jailbreak/altstore.PNG', 'littleBabyBum.png')"><img src="tech/mobile/ios/jailbreak/altstore.PNG" loading="lazy"></a>
+                <a onclick="popUp('SideStore', 'its like altstore but better', 'tech/mobile/ios/jailbreak/sidestore.PNG', 'granolaFun.png')"><img src="tech/mobile/ios/jailbreak/sidestore.PNG" loading="lazy"></a>
+              </div>
+            </div>
+            <div class="box">
+              <h5><span class="less">tech/mobile/ios/</span>noise</h5>
+              <p>buttons inspired by the different noise cancellation modes you get on airpod pros. ain't nobody usin these.</p>
+              <div class="butt">
+                <a onclick="popUp('Transparency', 'wow this is like if you were wearing nothing', 'tech/mobile/ios/noise/transparency.PNG', 'flubberInHindi.png')"><img src="tech/mobile/ios/noise/transparency.PNG" loading="lazy"></a>
+                <a onclick="popUp('Adaptive', 'the rainbow gradient should spin. @apple make it happen', 'tech/mobile/ios/noise/adaptive.PNG', 'tiredOfNamingThese.png')"><img src="tech/mobile/ios/noise/adaptive.PNG" loading="lazy"></a>
+                <a onclick="popUp('Noise Cancelling', 'you can basically be in your own world but it feels like youre head is being shoved underwater so is it really worth it', 'tech/mobile/ios/noise/cancelling.PNG', 'theseButtonsSuckBeHonest.png')"><img src="tech/mobile/ios/noise/cancelling.PNG" loading="lazy"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="modal" id="helloNeighbor">
+      <div class="modalbox">
+        <img id="buttPrev">
+        <h2 id="buttTitle">Title</h2>
+        <p id="buttDesc"></p>
+        <div>
+          <button id="downloadButt" onclick="downloadFile();">Download</button>
+          <button onclick="document.getElementById('helloNeighbor').style.display = 'none';">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="box" id="secret" style="display: none;">
+      <h2>Super Secret Settings</h2>
+      <p>fuck</p>
+      <form>
+        <label for="nameYourChild">name:</label>
+        <input type="text" id="nameYourChild" name="nameYourChild"><br>
+        <label for="pagecont">dexcriptuon:</label>
+        <input type="text" id="pagecont" name="pagecont" style="width: 100%; height: 300px;"><br>
+        <label for="link1">one direction photobooth for fans new:</label>
+        <input type="text" id="link1" name="link1" style="width: 400px;"><br>
+        <label for="link2">baby name generator 3837 leaked now:</label>
+        <input type="text" id="link2" name="link2"><br>
+      </form>
+      <button onclick="generateNew()">get cookin'</button>
+      <p id="outputhtml">since you poop out solid corn, if you eat so much corn theres no poop, does that mean you can just eat the corn you poop out for the rest of your life?</p>
+      <p id="byeBye">look.</p>
+    </div>
+    <script>
+      var helloNabbit = document.getElementById('helloNeighbor');
+      let downloadURL, downloadName;
+      function downloadFile() {
+        var link = document.createElement("a");
+        link.download = downloadName;
+        link.href = downloadURL;
+        link.target = '_blank';
+        link.click();
+      }
+      function popUp(title, desc, uniSource, fileName) {
+        downloadURL = uniSource;
+        downloadName = fileName;
+        document.getElementById('buttPrev').src = uniSource;
+        document.getElementById('buttTitle').innerHTML = title;
+        document.getElementById('buttDesc').innerHTML = desc;
+        var downButt = document.getElementById('downloadButt');
+        helloNabbit.style.display = 'flex';
+      }
+      window.onclick = function(event) {
+        if (event.target === helloNabbit) {
+          helloNabbit.style.display = 'none';
+        }
+      }
+      function generateNew() {
+        var happyBirthday = document.getElementById("nameYourChild").value;
+        var poopCont = document.getElementById("pagecont").value;
+        var linkNo1 = document.getElementById("link1").value;
+        var linkNo2 = document.getElementById("link2").value;
+        let newGen = `&lt;a onclick="popUp('${happyBirthday}', '${poopCont}', '${linkNo1}', '${linkNo2}')"&gt;&lt;img src="${linkNo1}" loading="lazy"&gt;&lt;/a&gt;`;
+        let yourBabyDied = `<a onclick="popUp('${happyBirthday}', '${poopCont}', '${linkNo1}', '${linkNo2}')"><img src="${linkNo1}" loading="lazy"></a>`;
+        document.getElementById("outputhtml").innerHTML = newGen;
+        document.getElementById("byeBye").innerHTML = yourBabyDied;
+      }
+      function superSecretSettings() {document.getElementById('secret').style.display = 'block';}
+    </script>
+  </body>
+</html>

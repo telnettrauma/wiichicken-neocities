@@ -1,0 +1,111 @@
+h1 {
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 2px 2px 5px black;
+    transition-duration: 0.6s;
+}
+h2 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button {
+    transition-duration: 0.4s;
+    border-radius: 5px;
+}
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border-radius: 10px;
+}
+.column {
+    float: left;
+    padding: 10px;
+}
+.column.side {
+    width: 35%;
+}
+.column.middle {
+    width: 25%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%
+    }
+}
+#score {
+    text-align: center;
+    font-size: 25px;
+}
+#bpscounter {
+    text-align: center;
+}
+#singlebytebutton {
+    background-color: rgb(0, 255, 64);
+    border: 10px solid rgb(0, 255, 64);
+    padding: 20px 35px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    margin: auto;
+    width: 100%;
+}
+#singlebytebutton:hover {
+    background-color: rgb(87, 255, 224);
+    border: 10px solid rgb(87, 255, 224);
+    color: black;
+    border-radius: 30px;
+}
+#keypresser {
+    background-color: rgb(255, 0, 0);
+    border: 3px solid rgb(255, 0, 0);
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+#catbuy {
+    background-color: rgb(255, 0, 0);
+    border: 3px solid rgb(255, 0, 0);
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+#aiupgradebutton {
+    background-color: rgb(255, 0, 0);
+    border: 3px solid rgb(255, 0, 0);
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+#holdbuy {
+    background-color: rgb(255, 0, 0);
+    border: 3px solid rgb(255, 0, 0);
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+#fingerpurchase {
+    background-color: rgb(255, 0, 0);
+    border: 3px solid rgb(255, 0, 0);
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+#welcomehead:hover {
+    color: red;
+    text-shadow: 6px 6px 10px black;
+}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>COMMUNITY 404 BULLETIN BOARD</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#ff0000">
+		<style>
+			@font-face {
+				font-family: VCR;
+				src: url("https://wiichicken.neocities.org/resources/VCR_OSD_MONO_1.001.ttf");
+			}
+			body {
+				font-family: VCR;
+				text-align: center;
+				background-color: black;
+			}
+			main {
+				max-width: 800px;
+				max-height: 600px;
+				margin: auto;
+				aspect-ratio: 4 / 3;
+			}
+			div {margin: 0;}
+			p {
+				font-size: 30px;
+				padding-top: 5px;
+				padding-bottom: 10px;
+				margin: 0;
+			}
+			h1 {
+				font-family: VCR;
+				background-color: red;
+				text-align: center;
+				padding: 2%;
+				color: white;
+				font-size: 3em;
+				margin: 0px;
+			}
+			h2 {
+				font-family: VCR;
+				font-size: 2em;
+				padding-top: 5px;
+				padding-bottom: 10px;
+				margin: 0;
+			}
+			.divider {
+				padding: 1px;
+				margin: 0px;
+			}
+			#datentime {
+				font-size: 35px;
+				margin: 0px;
+				padding: 0px;
+				background-color: blue;
+			}
+			#datentime p {
+				display: inline-table;
+				text-align: center;
+				width: 50%;
+				padding: 0px;
+				margin: 0px;
+				color: white;
+			}
+			/* https://aleclownes.com/2017/02/01/crt-display.html */
+			.crt::before {
+				content: " ";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+				z-index: 2;
+				background-size: 100% 2px, 3px 100%;
+				pointer-events: none;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+		</script>
+		<main class="crt">
+			<div>
+				<h1>COMMUNITY 404 BULLETIN</h1>
+				<div id="datentime">
+					<p id="datedisp"></p><p id="timedisp"></p>
+					<script>
+						// Updates the clock once every second
+						async function autoUpdate() {
+							function updateClock() {
+								var date = new Date();
+								function addZeroes(additionVar) {if (9 >= additionVar) {return "0" + additionVar;} else {return additionVar;}}
+								var dateText = date.getFullYear() + "-" + addZeroes((date.getMonth()+1)) + "-" + addZeroes(date.getDate());
+								document.getElementById("datedisp").innerHTML = dateText;
+								var clockTime = addZeroes(date.getHours()) + ":" + addZeroes(date.getMinutes()) + ":" + addZeroes(date.getSeconds());
+								document.getElementById("timedisp").innerHTML = clockTime;
+							}
+							while (1 < 2) {
+								updateClock();
+								await sleep(1000);
+							}
+						}
+						autoUpdate();
+					</script>
+					<div class="divider" style="background-color: white;"></div>
+				</div>
+			</div>
+			<!-- Main Content -->
+			<div id="largearea">
+				<style>
+					.centralcontent {
+						display: none;
+						height: 500px;
+						background-color: red;
+					}
+					#largearea {
+						height: 70%;
+						margin: 0px;
+						padding: 0px;
+						width: 100%;
+					}
+				</style>
+				
+				<!-- Message for people with JavaScript disabled -->
+				<div class="centralcontent" id="jsoff">
+					<style>
+						#jsoff {display: block;}
+						#jsoff h2 {
+							background-color: red;
+							color: white;
+						}
+						#jsoff p {
+							background-color: black;
+							color: white;
+						}
+						#jsoff #p01 {
+							background-color: green;
+							color: yellow;
+						}
+					</style>
+					<h2>BREAKING NEWS</h2>
+					<p>LOCAL "FED UP" WITH JAVASCRIPT</p>
+					<p>DECIDES TO DISABLE IT ENTIRELY</p>
+					<p id="p01">PAGE NOT FOUND</p>
+					<p id="p01">CLICK "RETURN HOME" AT THE BOTTOM</p>
+					<p id="p01">OF THE SCREEN TO RETURN TO THE</p>
+					<p id="p01">HOMEPAGE</p>
+					<script>
+						document.getElementById("jsoff").style.display = "none";
+					</script>
+				</div>
+				
+				<!-- Main Message: Page not found -->
+				<div class="centralcontent" id="pagenotfound">
+					<style>
+						#pagenotfound {margin: 0px;}
+						#pagenotfound h2 {
+							background-color: yellow;
+							color: green;
+						}
+						#pagenotfound p {
+							background-color: blue;
+							color: yellow;
+						}
+						#pagenotfound #p01 {
+							background-color: black;
+							color: white;
+						}
+					</style>
+					<p style="font-size: 10em; background-color: red; color: white;">404</p>
+					<h2>PAGE NOT FOUND</h2>
+					<div class="divider" style="background-color: white;"></div>
+					<p>THE PAGE YOU ARE LOOKING FOR DOESN'T EXIST!</p>
+					<div class="divider" style="background-color: white;"></div>
+					<p id="p01">DOUBLE CHECK THE URL</p>
+				</div>
+				
+				<!-- Report Message -->
+				<div class="centralcontent" id="reporthis">
+					<style>
+						#reporthis h2 {
+							background-color: green;
+							color: white;
+						}
+						#reporthis p {
+							background-color: yellow;
+							color: green;
+						}
+					</style>
+					<h2>KEEP FINDING DEAD LINKS?</h2>
+					<p>REPORT THE ISSUE TO ME!</p>
+					<p>I PROBABLY WILL NOT RESPOND</p>
+					<div class="divider" style="background-color: white;"></div>
+					<p>WE APPRECIATE YOUR COOPERATION</p>
+					<p>ALL 1 OF US</p>
+				</div>
+				
+				<!-- Enjoying the music? -->
+				<div class="centralcontent" id="enjoymusic">
+					<style>
+						#enjoymusic h2 {
+							background-color: green;
+							color: white;
+						}
+						#enjoymusic p {
+							background-color: blue;
+							color: yellow;
+						}
+						#enjoymusic #p01 {
+							background-color: yellow;
+							color: green;
+						}
+					</style>
+					<h2>ENJOYING THE MUSIC?</h2>
+					<p>NO YOU AREN'T</p>
+					<p>STOP LYING TO YOURSELF</p>
+					<div class="divider" style="background-color: white;"></div>
+					<p id="p01">A PUBLIC SERVICE MESSAGE FROM</p>
+					<p id="p01">ME</p>
+				</div>
+				
+				<!-- $500 fine -->
+				<div class="centralcontent" id="fine500">
+					<style>
+						#fine500 {margin: 0px;}
+						#fine500 h2 {
+							background-color: red;
+							color: white;
+						}
+						#fine500 #p01 {
+							background-color: blue;
+							color: white;
+						}
+						#fine500 #p02 {
+							background-color: green;
+							color: white;
+							font-size: 85px;
+						}
+						#fine500 p {
+							background-color: black;
+							color: white;
+						}
+					</style>
+					<h2>WARNING!</h2>
+					<p id="p01">READING THIS TEXT WILL</p>
+					<p id="p01">RESULT IN A FINE OF</p>
+					<p id="p02">$500</p>
+					<div class="divider" style="background-color: white;"></div>
+					<p>THANKS FOR YOUR UNDERSTANDING</p>
+				</div>
+
+				<!-- up next-->
+				<div class="centralcontent" id="upnext">
+					<h2>COMING UP NEXT:</h2>
+					<div class="divider" style="background-color: white;"></div>
+					<p style="background-color: blue; color: white;">CATS</p>
+					<p style="background-color: blue; color: white;">CATS</p>
+					<p style="background-color: blue; color: white;">LAUGHING BABIES</p>
+					<p style="background-color: blue; color: white;">PEOPLE FALLING</p>
+					<p style="background-color: blue; color: white;">HOT HOT LADIES</p>
+					<div class="divider" style="background-color: white;"></div>
+					<p style="background-color: green; color: yellow;">I FORGOT THE REST OF THE WORDS</p>
+				</div>
+				
+				<!-- Script to automatically change what "page" is displayed every 10 seconds -->
+				<script>
+					let currentPage = 0;
+					var pageList = ["pagenotfound", "reporthis", "enjoymusic", "fine500", "upnext"];
+					// Hides the previous page and displays the new one
+					function changePage(oldPage, newPage) {
+						document.getElementById(pageList[oldPage]).style.display = "none";
+						document.getElementById(pageList[newPage]).style.display = "block";
+					}
+					async function autoSwitch() {
+						// Forever continues to change the page
+						while (1 < 2) {
+							await sleep(10000);
+							currentPage++;
+							// If all pages have been displayed, loop back to the start
+							if (currentPage === pageList.length) {currentPage = 0;}
+							// If displaying the last page, set the script to hide the last page and show the first
+							let prevPage = currentPage - 1;
+							if (prevPage < 0) {prevPage = (pageList.length - 1);}
+							console.log(prevPage + ", " + currentPage);
+							changePage(prevPage, currentPage);
+						}
+					}
+					document.getElementById("pagenotfound").style.display = "block";
+					autoSwitch();
+				</script>
+			</div>
+			<!-- Footer -->
+			<div id="scrollingfooter">
+				<style>
+					#scrollingfooter marquee {
+						font-size: 35px;
+						background-color: green;
+						color: white;
+						margin: 0px;
+						padding-top: 5px;
+						padding-bottom: 10px;
+					}
+					#scrollingfooter a {
+						padding: 0px;
+						margin: 0px;
+						color: purple;
+						text-decoration: none;
+					}
+					#scrollingfooter {
+						margin: 0px;
+					}
+				</style>
+				<p style="background-color: pink; margin: 0px;"><a href="index.html">RETURN HOME</a></p>
+				<div class="divider" style="background-color: white; margin: 0px;"></div>
+				<marquee scrollamount="15"><p style="margin: 0px;">IN 2020 THERE WILL BE A DEADLY VIRUS THAT WILL CAUSE THE ECONOMY TO CRASH AND EVERYBODY WILL BE FORCED TO WEAR MASKS</p></marquee>
+			</div>
+		</main>
+	</body>
+</html>

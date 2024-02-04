@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>iNTERESTS</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="/resources/nav/navbar.css" rel="stylesheet">
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: #252328;
+        color: #CAC4D0;
+        font-family: 'PT Sans', sans-serif;
+      }
+      a {text-decoration: none;}
+      h1 {font-family: 'Martian Mono', monospace;}
+      main {
+        width: 600px;
+        margin: auto;
+      }
+      .box, header {
+        background-color: #49454F;
+        padding: 5px;
+        border: 1px solid #CCC2DC;
+        margin-bottom: 10px;
+      }
+      header {
+        background-color: #CCC2DC;
+        color: #332D41;
+        box-shadow: 0 0 10px 1px #CCC2DC;
+        padding: 0;
+      }
+      #whitepages .box {
+        font-family: 'Martian Mono', monospace;
+        font-size: 30px;
+        margin-block-start: 0;
+		    margin-block-end: 0;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: #4a4458;
+      }
+      nav a {
+        background-color: #4a4458;
+        padding: 3px;
+        color: #ccc2db;
+        font-weight: bold;
+      }
+    </style>
+    <div id="heightCheck"></div>
+		<div class="heading" id="poopBlock"></div>
+    <div id="sideButton" onclick="openSidey()"></div>
+    <div id="overSide"></div>
+    <main>
+      <header>
+        <nav>
+          <a href="/index.html">HOME</a>
+					<a href="/aboutme.html">ABOUT</a>
+					<a href="/creative/index.html">ART</a>
+					<a href="/more/archive/blog/index.html">BLOG</a>
+					<a href="/interests/index.html">MEDiA</a>
+					<a href="/more/index.html">MORE</a>
+        </nav>
+        <h1 style="padding: 5px;">iNTERESTS</h1>
+      </header>
+      <div class="box">
+        <p>hello, welcome to my interest page.<br>this is still a major work in progress as i am not only trying to figure out what to put here, but i am still trying to figure out what my interests actually are. as such, basically all of these pages are under construction (he said the thing!)<br>navigation through these pages may be a little janky! watch out!</p>
+      </div>
+      <div id="whitepages">
+        <div class="box" style="background-color: #7a3000; border-color: #984718;">
+          <a href="music/index.html" style="color: #ffb693;">MUSiC</a>
+        </div>
+        <div class="box" style="background-color: #003642; border-color: #00677d;">
+          <a href="websites/index.html" style="color: #5ad5f9;">WEBSiTES</a>
+        </div>
+      </div>
+    </main>
+    <script src="/resources/nav/navbar.js"></script>
+  </body>
+</html>

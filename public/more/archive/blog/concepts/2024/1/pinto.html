@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas Background</title>
+	<style>
+		canvas {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script>
+		const canvas = document.getElementById('canvas');
+		const ctx = canvas.getContext('2d');
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+		const rectangles = [];
+		let count = 0;
+		const maxCount = 25;
+		const maxSpeed = 1.8;
+		const minSpeed = 1.1;
+		const maxRotation = 360;
+		const minRotation = 0;
+		const maxRectSize = 50;
+		const minRectSize = 10;
+		const maxRectangles = 2;
+		const minRectangles = 1;
+		const colors = ['red', 'blue'];
+		function random(min, max) {
+			return Math.floor(Math.random() * (max - min + 1) + min);
+		}
+    function createRectangle() {
+  const size = random(minRectSize, maxRectSize);
+  const speed = random(minSpeed, maxSpeed);
+  const rotation = random(minRotation, maxRotation);
+  const color = colors[random(0, colors.length - 1)];
+  const x = random(0, 1) ? -size - 100 : canvas.width + 100;
+  const y = random(0, canvas.height - size);
+  const side = x < 0 ? 1 : -1;
+  rectangles.push({
+    x,
+    y,
+    size,
+    speed: side * speed,
+    rotation,
+    color
+  });
+}
+const intervalId = setInterval(createRectangle, 1000);
+    function update() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      count++;
+      if (count > maxCount) {
+        count = 0;
+        const numRectangles = random(minRectangles, maxRectangles);
+        for (let i = 0; i < numRectangles; i++) {
+          createRectangle();
+        }
+      }
+      for (let i = 0; i < rectangles.length; i++) {
+        const rect = rectangles[i];
+        rect.x += rect.speed;
+        if (rect.x > canvas.width + 100 || rect.x < -rect.size - 100) {
+          rectangles.splice(i, 1);
+          i--;
+        }
+        ctx.save();
+        ctx.translate(rect.x + rect.size / 2, rect.y + rect.size / 2);
+        ctx.rotate(rect.rotation * Math.PI / 180);
+        ctx.fillStyle = rect.color;
+        ctx.fillRect(-rect.size / 2, -rect.size / 2, rect.size, rect.size);
+        ctx.restore();
+      }
+      requestAnimationFrame(update);
+    }
+
+		update();
+	</script>
+</body>
+</html>

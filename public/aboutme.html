@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ALL ABOUT WiiCHiCKEN</title>
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+		<link href="resources/nav/navbar.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<style>
+			body {
+				background-color: #001117;
+				margin: 0;
+				font-family: 'PT Sans', sans-serif;
+			}
+			h1, h2, h3, h4 {font-family: 'Martian Mono', monospace;}
+			p, h1, h2, h3, h4 {
+				margin-block-start: 0;
+				margin-block-end: 0;
+			}
+			a {text-decoration: none;}
+			td {border: 1px solid #58d6f7;}
+			th {
+				border: 1px solid #58d6f7;
+				font-size: x-large;
+				font-family: 'Martian Mono', monospace;
+				overflow: hidden;
+			}
+			th p {
+				display: inline-block;
+				margin-right: 20px;
+			}
+			.sidebar {
+				margin-top: 50px;
+				width: 150px;
+				background-color: #003642a8;
+				color: #58d6f7;
+				backdrop-filter: blur(5px);
+				position: fixed;
+				box-shadow: 0px 0px 15px 0px #58D6F7;
+			}
+			.sidebar a {
+				background-color: #b1ebff;
+				color: #001f27;
+			}
+			.sidebar ul {
+				list-style-type: none;
+				margin: 3px;
+				padding: 0;
+			}
+			.main {
+				margin-left: 100px;
+				width: 600px;
+				margin: auto;
+			}
+			.main a {
+				background-color: #dfe0ff;
+				color: #404565;
+			}
+			header, .box {
+				width: 100%;
+				background-color: #2a2e4d;
+				color: #c1c4eb;
+				padding: 5px;
+				box-shadow: 0px 0px 15px 0px #c1c4eb;
+				border: 1px solid #c1c4eb;
+				margin-bottom: 10px;
+				overflow: hidden;
+			}
+			.box {
+				box-shadow: none;
+				background-color: #151b2c;
+				color: #dde2f9;
+			}
+			.auto {flex-wrap: nowrap !important;}
+			.auto header, .auto .box {
+				width: auto;
+			}
+			#links a {
+				display: flex;
+				padding: 5px;
+				margin-bottom: 10px;
+			}
+			#helloGames {
+				width: 950px;
+				margin: auto;
+				margin-top: 10px;
+			}
+			.nomarblock {
+				margin-block-start: 0;
+				margin-block-end: 0;
+			}
+			.row {
+				display: flex;
+				width: 612px;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+			/* .row .box {width: 47%;} */
+			.gradtext {
+				background-clip: text;
+				color: transparent;
+			}
+			.blurry {
+				position: absolute;
+				filter: blur(25px);
+				object-fit: cover;
+			}
+			#buttons img {
+				width: 88px;
+				height: 31px;
+				image-rendering: pixelated;
+			}
+			.yourMarginSucks {margin-right: 10px;}
+			@media only screen and (max-width: 950px) {
+				.sidebar {position: static;}
+				article, .row, #helloGames, .main, .box, header {width: auto;}
+				.row {
+					flex-wrap: wrap;
+					flex-direction: column;
+				}
+				.hideMob {display: none !important;}
+				.row .box {width: auto;}
+				.yourMarginSucks {margin-right: 0 !important;}
+				#theGoofyRow {display: flex !important;}
+			}
+			::-webkit-scrollbar {width: 5px;}
+			::-webkit-scrollbar-track {background: #573e5c;}
+			::-webkit-scrollbar-thumb {background: #fad8fd;}
+		</style>
+		<div id="heightCheck"></div>
+		<div class="heading" id="poopBlock"></div>
+		<div id="sideButton" onclick="openSidey()"></div>
+		<div id="overSide"></div>
+		<script src="resources/nav/navbar.js"></script>
+		<div id="helloGames">
+			<table class="sidebar" style="border-collapse: collapse;">
+				<tr style="background-image: url(resources/about/img/cyan-grad.png); image-rendering: pixelated;">
+					<th style="color: #004d43; mix-blend-mode: multiply;">ABOUT ME</th>
+				</tr>
+				<tr>
+					<td>
+						<ul>
+							<li><a href="https://wiichicken.neocities.org">Home</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<ul>
+							<li><a href="#aboutme">About Me</a></li>
+							<li><a href="#follow">Follow Me</a></li>
+							<li><a href="#site">This Site</a></li>
+							<li><a href="#naq">NAQ</a></li>
+							<li><a href="#cred">Credits</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<div class="main">
+				<div class="row" style="display: grid; gap: 10px;" id="theGoofyRow">
+					<div class="box hideMob" style="padding: 0; display: flex; width: 250px; grid-column: 1/2; grid-row: 1/2;">
+						<img src="resources/about/img/hello.png" style="image-rendering: pixelated;">
+					</div>
+					<div class="auto" style="grid-column: 2/3; grid-row: 1/2;">
+						<header style="width: auto;">
+							<h1 id="aboutme">ABOUT ME</h1>
+						</header>
+						<header style="width: auto;">
+							<h2>ME</h2>
+						</header>
+						<div class="box">
+							<p>Hello, my name is WiiCHiCKEN. The name comes from when my friend sent me this picture with just the caption "wii chicken":</p>
+						</div>
+						<div class="box">
+							<img src="https://i.ytimg.com/vi/mTRyL5Kl8zg/maxresdefault.jpg" style="width: 254px;">
+						</div>
+						<div class="box">
+							<p>The styilization of capitilizing every letter but the letter "i" is because I like how LiDAR is styilized.</p>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<p>I am from American.</p>
+					<p>I have been interested in technology for almost my whole life, ever since I got my first Windows XP laptop when I was, I don't know, 7? I used that laptop to make PowerPoint presentations, check the weather online, read my email, listen to the huge iTunes library my father gave me (remember when you didn't have to pay for iTunes Radio?), watch Minecraft videos, and look at Magic: The Gathering cards. Unrestricted internet access did not completely ruin me as a person, like it did for everyone else.</p>
+				</div>
+				<div class="box" id="buttons">
+					<p>i have to leave in 10 minutes so i will probably forget but here are some buttons i wanna add here</p>
+					<ul>
+						<li>oneshot</li>
+						<li>not optimized for safari</li>
+						<li>coded in vs:code</li>
+						<li>i love markdown <a href="https://dabric.neocities.org/about/">that button is here</a></li>
+						<li>last.fm/music</li>
+					</ul>
+					<p>if you wanna see some buttons i made check out <a href="creative\graphics\buttons\index.html" target="_blank">this page</a></p>
+				</div>
+				<header>
+					<h2>HOBBiES</h2>
+				</header>
+				<div class="box">
+					<p>Unfourtanately, I don't have too many hobbies. I was born with aspburgers (I have spelled it assburgers my whole life), and as apart of that, I feel like I don't really have many hobbies, except for ones I picked up when I was young.</p>
+				</div>
+				<div class="row auto">
+					<div class="box hideMob" style="padding: 0; display: flex; min-width: 100px; position: relative;">
+						<img src="resources/about/img/console.png" width="100" height="150" style="position: relative;">
+						<img class="blurry" src="resources/about/img/console.png" width="100" height="150" style="filter: blur(10px);">
+					</div>
+					<div class="box yourMarginSucks" style="width: auto;">
+						<p><strong>coding</strong> - Kind of. I got started with programming with Scratch when I was young. I made hundreds of projects, and then for some reason deleted my account. That's why I am currently working on archiving all of my old projects, because they are still up if you search for them.<br>Eventually, my grandma bought me a book that taught me Python, but I never really went that far with it. I should probably start learning it, or C++. I want to learn JavaScript so I can make more effects.</p>
+					</div>
+				</div>
+				<div class="row auto">
+					<div class="box">
+						<p><strong>maps</strong> - I have always been obsessed with maps and GPS. In fact, I got a GPS for Christmas one year and I liked it so much I ended up locking myself out of it because I brute forced the lock pin.</p>
+					</div>
+					<div class="box hideMob yourMarginSucks" style="min-width: 150px; padding: 0; position: relative; display: flex;">
+						<img src="resources/about/img/lazymap.png" width="150" height="150" style="position: relative;">
+						<img class="blurry" src="resources/about/img/lazymap.png" width="150" height="150" style="filter: blur(10px);">
+					</div>
+				</div>
+				<div class="box">
+					<p><strong>listening to music</strong> - I really like listening to music. I try to listen to a large variety of genres. You can check my last.fm or Rate Your Music if you want to, or you can view the music pages I have on this site</p>
+				</div>
+				<header>
+					<h2>FAVORiTES</h2>
+				</header>
+				<div class="box">
+					<p>you can find more of my interests on the <a href="interests/index.html">interests</a> page. these aren't in any particular order, btw.</p>
+				</div>
+				<header>
+					<h3>GAMES</h3>
+				</header>
+				<div class="box">
+					<ul>
+						<li>OneShot</li>
+						<li>Microsoft Solitaire Collection</li>
+						<li>Fortnite (#sorrycharlie)</li>
+						<li>Saints Row 3</li>
+					</ul>
+				</div>
+				<header>
+					<h3>FiLMS</h3>
+				</header>
+				<div class="box">
+					<p>i hate to tell you but i really dont watch movies much</p>
+					<ul>
+						<li>WALL-E</li>
+						<li>Everything Everywhere All at Once</li>
+					</ul>
+				</div>
+				<header>
+					<h3>MUSiC</h3>
+				</header>
+				<div class="row">
+					<div class="box">
+						<h4>ARTiSTS</h4>
+						<ul>
+							<li><a href="https://www.last.fm/music/Pond" target="_blank">POND</a></li>
+							<li><a href="https://www.last.fm/music/MGMT" target="_blank">MGMT</a></li>
+							<li><a href="https://www.last.fm/music/Oliver+Malcolm" target="_blank">Oliver Malcolm</a></li>
+							<li><a href="https://www.last.fm/music/Andor" target="_blank">Andor</a></li>
+							<li><a href="https://www.last.fm/music/Mike" target="_blank">MIKE</a></li>
+						</ul>
+					</div>
+					<div class="box">
+						<h4>SONGS</h4>
+						<p>you can also find an archive of my favorite songs on my <a href="https://www.last.fm/user/wiichicken/obsessions" target="_blank">last.fm obsessions</a> page or on this site's <a href="/interests/music/favsongs.html">favorite songs</a> page.</p>
+						<ul>
+							<li><strong>untitled 05 | 09.21.2014.</strong> - Kendrick Lamar</li>
+							<li><strong>Responsibility</strong> - Andor</li>
+							<li><strong>Sum of my Cares</strong> - The Long Faces</li>
+							<li><strong>Sunflower</strong> - Rex Orange County</li>
+							<li><strong>Melancholyism.</strong> - Super Whatevr</li>
+							<li><strong>Paint Me Silver</strong> - Pond</li>
+							<li><strong>Giving Bad People Good Ideas</strong> - Death Grips</li>
+						</ul>
+					</div>
+				</div>
+				<header>
+					<h1 id="follow">FOLLOW ME</h1>
+				</header>
+				<div class="box">
+					<p>in case for some reason you need more of me in your life.</p>
+				</div>
+				<div class="row" id="links">
+					<a href="https://www.youtube.com/channel/UCBfjBEKsW8ChxbX3MEGrx2Q" target="_blank" style="background-color: #410000; color: #ffdad4; border: 1px solid red;">youtube</a>
+					<a href="https://letterboxd.com/wiichicken/" target="_blank" style="background-color: #002106; color: #6cff80; border: 1px solid #6cff80;">letterboxd</a>
+					<a href="https://www.backloggd.com/u/wiichicken/" target="_blank" style="background-color: #3f001b; color: #ffd9e1; border: 1px solid #ea377a;">backloggd</a>
+					<a href="https://neocities.org/site/wiichicken" target="_blank" style="background-color: #2c1600; color: #ffdcbd; border: 1px solid orange;">neocities</a>
+				</div>
+				<header>
+					<h2 id="contact">CONTACT ME</h2>
+				</header>
+				<div class="box">
+					<ul>
+						<li><strong>discord</strong>: wiichicken#0040 <a href="https://discord.gg/aeYHWsw" target="_blank">server</a> (sam told me to add this link, but don't join it sucks)</li>
+						<li><strong>email</strong>: <a href="mailto:vimeoofficial@gmail.com" target="_blank">vimeoofficial@gmail.com</a></li>
+					</ul>
+				</div>
+				<header>
+					<h1 id="site">THiS SiTE</h1>
+				</header>
+				<div class="box">
+					<p>The reason I discovered Neocities was Cookie Clicker. The old school I attended blocked Cookie Clicker, but someone hosted the whole game on Neocities, albeit an older version. I got bored and decided to check the homepage of Neocities, and tried making another page for students to play games on at school. That page has been lost to time.<br>Recently I started getting really into website designing again. I found it is much more fun being able to have control of almost everything instead of just posting pictures and videos to a static feed. I hope that the content of my site makes up for the lack of effects and styling on it.</p>
+					<p>I am hoping that soon this site can become a hub for my works and projects. I don't want things to be consistent across pages, I want it to be obvious how my design style has evolved (or devolved) over time.</p>
+				</div>
+				<div class="box">
+					<p>As much as I don't like big tech and social media, this site wasn't made as a big middle finger towards them. Instead, this site is a creation of my own. It's something that I can look at and say "I made this" with pride. I feel alot of people forget about that when they start making their own websites. Making websites as protest is cool, but making websites for fun is also cool. I highly recommend you read the <a href="https://sadgrl.online/cyberspace/internet-manifesto" target="_blank">sadgrl.online Internet Manifesto</a>, as I strongly agree with what it says.</p>
+				</div>
+				<header>
+					<h1 id="naq">NEVER ASKED QUESTiONS</h1>
+				</header>
+				<div class="row">
+					<div class="box">
+						<p><strong>How can I contact you?</strong></p>
+						<p>Check the <a href="index.html">homepage</a>, there should be a few contact links there. There is also a <a href="#contact">contact</a> section on this page, don't know how you missed it.</p>
+					</div>
+					<div class="box">
+						<p><strong>What do you use to draw?</strong></p>
+						<p>I still have yet to decide what app I wanna commit to on computer, but I use a modified version of ibisPaint so I don't have to pay, because I'm cheap. On my phone I use the same app.</p>
+					</div>
+					<div class="box">
+						<p><strong>What did you make this site in?</strong></p>
+						<p>At first I made this site in the Neocities editor, but now I mainly use Visual Studio code. I code in a lot of places at once, so when I'm not on my laptop, I'm using the browser version. My settings aren't synced between browsers so sometimes the indenting is inconsistent.</p>
+					</div>
+					<div class="box">
+						<p><strong>How do you pick colors?</strong></p>
+						<p>First I think of a theme color or color combination, usually revolving around and red and blue gradient. I do this using my brain. After that, I find a color and put it into the <a href="https://m3.material.io/theme-builder#/custom" target="_blank">Material Theme Builder</a>. I use this to make the background and text colors more harmonized.</p>
+					</div>
+					<div class="box">
+						<p><strong>Why do you have a Q&A section?</strong></p>
+						<p>I am always going through what the kids call "writers block", so writing useless stuff like this makes it look like I have done work.</p>
+					</div>
+					<div class="box">
+						<p><strong>Why wiggle.monster?</strong></p>
+						<p>Because it's funny. No other reason.</p>
+					</div>
+					<div class="box">
+						<p><strong>Why do some pages have Google Analytics tags?</strong></p>
+						<p>I am data obsessed, so I used to add Google Analytics tags to my pages. I don't really care about that anymore, so I stopped adding them. However, some pages may still have them, and I don't feel like going through to find what ones still do. Just use uBlock Origin or something, I dunno.</p>
+					</div>
+					<div class="box">
+						<p><strong>I am your friend. How can I get in your friend section?</strong></p>
+						<p>Hello, friend. Just let me know. However, I may not put your website if you don't have a 88x31 button or if your site is basically just a linktree/caard. Just add a page with a marquee that says "poop" or something and maybe I will consider it.</p>
+					</div>
+					<div class="box">
+						<p><strong>Where's your landing page?</strong></p>
+						<p>A landing page? In THIS economy? sorry i just don't really care enough for that and i dont think i have anything on my site where i would need to warn you before viewing (ex. autoplaying music)</p>
+					</div>
+					<div class="box">
+						<p><strong>How many slices of bread do you eat a day?</strong></p>
+						<p>I used to average 4, 6 on a bad day, but now I only average 2.</p>
+					</div>
+					<div class="box">
+						<p><strong>what up what you doing</strong></p>
+						<p>just watching my game. You?</p>
+					</div>
+					<div class="box">
+						<p><strong>do yall got lap tops</strong></p>
+						<p>you mean, the players? Do they have laptops?</p>
+					</div>
+				</div>
+				<header>
+					<h1 id="cred">CREDiTS</h1>
+				</header>
+				<div class="box">
+					<p>My website would of been possible without you, but you helped make it much cooler.</p>
+				</div>
+				<div class="box">
+					<h2>last.fm Now Playing Widget</h2>
+					<p>Created by septic (<a href="https://septic.lol/?z=/code/widgets.html">septic.lol</a>)<br>Code from: <a href="https://septic.lol/code/lastfm.js">https://septic.lol/code/lastfm.js</a></p>
+				</div>
+				<div class="box">
+					<h2>sadgrl.online</h2>
+					<p><strong>Sadgrl's layout builder</strong></p>
+					<p><a href="https://sadgrl.online/projects/layout-builder/">https://sadgrl.online/projects/layout-builder/</a><br>Parts of code generated with this tool are used throughout my site.</p>
+					<p><strong>Display last update and visitor count on Neocities</strong></p>
+					<p><a href="https://sadgrl.online/learn/articles/last-update-visitors" target="_blank">https://sadgrl.online/learn/articles/last-update-visitors</a><br>Used for visitor count and last updated widgets on the homepage</p>
+				</div>
+				<div class="box">
+					<h2>Bloople RSS 2 HTML</h2>
+					<p>Created by Brenton Fletcher (<a href="https://bloople.net">bloople.net</a>)<br>Used for widgets on the homepage, including recent blip, last Rate Your Music review, and last Letterboxd review.</p>
+				</div>
+				<div class="box">
+					<h2>HTML Analog Clock</h2>
+					<p>Written by imsushant12<br><a href="https://www.geeksforgeeks.org/how-to-create-analog-clock-using-html-css-and-javascript/" target="_blank">https://www.geeksforgeeks.org/how-to-create-analog-clock-using-html-css-and-javascript/</a></p>
+				</div>
+				<div class="box">
+					<h2>Using CSS to create a CRT</h2>
+					<p><a href="https://aleclownes.com/2017/02/01/crt-display.html" target="_blank">https://aleclownes.com/2017/02/01/crt-display.html</a></p>
+				</div>
+				<div class="box">
+					<h2>Pure css3 snowflakes animation</h2>
+					<p>Written by Joshua McKenzie (<a href="https://codepen.io/iautomation">@iautomation</a>)<br><a href="https://codepen.io/iautomation/pen/VYexBz">https://codepen.io/iautomation/pen/VYexBz</a></p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

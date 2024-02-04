@@ -1,0 +1,9 @@
+#statuscafe {
+  color: #690005;
+}
+#statuscafe-username {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Martian Mono', monospace;
+}
+#statuscafe-username a {display: none;}
