@@ -1,5 +1,0 @@
-the following icons are current unused:
-
-- button.png
-- disc.png
-- film.png
