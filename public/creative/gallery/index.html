@@ -12,11 +12,13 @@
       img {image-rendering: pixelated;}
       aside {
         width: 20%;
-        padding: 20px;
+        padding: 0;
+        padding-left: 5px;
         order: 1;
         background-color: #20182a;
         color: #ebddf7;
-        overflow: auto;
+        overflow-y: scroll;
+        height: 100vh;
       }
       main {
         flex: 1;
@@ -41,11 +43,6 @@
         <div class="gallery">
           <a onclick="setPage('faceid.html')"><img src="https://i.imgur.com/6TeRXJd.png">FACE ID</a>
           <a onclick="setPage('character.html')"><img src="https://i.imgur.com/6qRGg2J.png">Main Character (Coming Soon)</a>
-          <a><img src="https://i.imgur.com/6TeRXJd.png">filler to allow scrolling</a>
-          <a><img src="https://i.imgur.com/6TeRXJd.png">filler to allow scrolling</a>
-          <a><img src="https://i.imgur.com/6TeRXJd.png">filler to allow scrolling</a>
-          <a><img src="https://i.imgur.com/6TeRXJd.png">filler to allow scrolling</a>
-          <a><img src="https://i.imgur.com/6TeRXJd.png">filler to allow scrolling</a>
         </div>
         <p>more galleries coming... whenever</p>
       </aside>
