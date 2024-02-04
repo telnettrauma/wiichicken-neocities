@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WiiCHiCKEN Neocities Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <style>
+      body {background-color: #092017; margin: 0; font-family: 'PT Sans', sans-serif;}
+      a {
+        text-decoration: none;
+        background-color: #6bdbad;
+        color: #003826;
+      }
+      p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+      }
+      #flex {
+        display: flex;
+      }
+      aside {
+        width: 300px;
+        order: 1;
+        background-color: #264b5c;
+        color: #c2e8fd;
+        padding-left: 5px;
+        overflow-y: scroll;
+        height: 100vh;
+      }
+      @media (max-width: 1000px) {
+        aside {
+          width: 100%;
+          height: auto;
+          margin: 0;
+        }
+        #mf {display: none;}
+        #flex {
+          display: block;
+          height: auto;
+          width: 98%;
+        }
+        #theMain {display: none;}
+      }
+      @media (min-width: 1000px) {
+        .popup {display: none !important;}
+      }
+      aside a {
+        background-color: #c2e8fd;
+        color: #001f2a;
+        cursor: pointer;
+      }
+      aside li:nth-child(odd) a {
+        background-color: #a0cfd2;
+        color: #003739;
+      }
+      main {
+        flex: 1;
+        order: 2;
+        background-color: white;
+        color: #88f8c8;
+        height: 100vh;
+      }
+      .popup {
+        z-index: 1;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+      }
+      .popup-stuff {
+        background-color: #fefefe;
+        height: 100%;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 100%;
+      }
+      .close {
+        background-color: #6bdbad;
+        color: #003826;
+        float: right;
+        font-size: 36px;
+        font-weight: bold;
+      }
+      .line {
+        height: 1px;
+        background-color: #c2e8fd;
+        width: 100%;
+        margin-top: 5px;
+      }
+      .concept {display: none;}
+      #mobpop {display: none;}
+      #container {
+        margin: 0;
+      }
+      ul {padding-left: 25px;}
+      h2, h3 {
+        margin: 0;
+        font-family: 'Martian Mono', monospace;
+      }
+      .metaBadge, .designBadge, .rantBadge, .socialBadge, .concept::after, .codeBadge {padding: 0 2px 0 2px;}
+      .metaBadge {
+        background-color: #035300;
+        color: #77ff60;
+      }
+      .codeBadge {
+        background-color: #243600;
+        color: #afd36e;
+      }
+      .designBadge {
+        background-color: #581e00;
+        color: #ffdbcd;
+      }
+      .rantBadge {
+        background-color: #930100;
+        color: #ffb4a8;
+      }
+      .socialBadge {
+        background-color: #0e30c5;
+        color: #bbc3ff;
+      }
+      .concept {opacity: 0.7;}
+      .concept::after {
+        animation: rainbow 10s linear infinite;
+        content: '#concept';
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      @keyframes rainbow {
+        0% {background-color: #ffb4a8; color: #690100;}
+        14% {background-color: #ffb86f; color: #4a2800;}
+        28% {background-color: #e3c600; color: #393000;}
+        42% {background-color: #77df00; color: #193800;}
+        56% {background-color: #00e1ab; color: #003828;}
+        70% {background-color: #96ccff; color: #003353;}
+        84% {background-color: #d5bbff; color: #41008b;}
+        96% {background-color: #faabff; color: #570066;}
+        100% {background-color: #ffb4a8; color: #690100;}
+      }
+    </style>
+    <div id="container">
+      <div id="flex">
+        <aside>
+          <a href="/index.html">Home</a>
+          <a onclick="changeSite('welcome.html')">Blog Home</a>
+          <button onclick="shareCopyLink()">copy article url</button>
+          <button id="myMixify" onclick="toggleFallingRocks()">show concepts</button>
+          <div class="line"></div>
+          <details>
+            <summary>Jump to year:</summary>
+            <ul>
+              <li><a href="#24">2024</a></li>
+              <li><a href="#23">2023</a></li>
+            </ul>
+          </details>
+          <h2 id="24">2024</h2>
+          <details>
+            <summary>Jump to month:</summary>
+            <ul>
+              <li><a href="#24m1">January</a></li>
+              <li><a href="#24m2">Feburary</a></li>
+            </ul>
+          </details>
+          <h3 id="24m2">Feburary</h3>
+          <ul>
+            <li class="meta code"><a onclick="changeSite('2024/2/git.html')">2. trying to use Git on my site</a> <span class="metaBadge">#meta</span><span class="codeBadge">#code</span></li>
+            <li class="concept"><a onclick="changeSite('concepts/2024/2/meandmachine.html')">1. me and the machine</a></li>
+          </ul>
+          <h3 id="24m1">January</h3>
+          <ul>
+            <li class="rant"><a onclick="changeSite('2024/1/headempty.html')">31. Click to add text</a> <span class="rantBadge">#rant</span></li>
+            <li class="concept"><a onclick="changeSite('concepts/2024/1/comic.html')">30. comic</a></li>
+            <li class="concept"><a onclick="changeSite('concepts/2024/1/pinto.html')">30. pinto</a></li>
+            <li class="design"><a onclick="changeSite('2024/1/start.html')">28. lock the taskbar</a> <span class="designBadge">#design</span></li>
+            <li class="rant"><a onclick="changeSite('2024/1/spotify.html')">26. Spotify Sucks!!</a> <span class="rantBadge">#rant</span></li>
+            <li class="social"><a onclick="changeSite('2024/1/follow.html')">25. i DONT WANT TO BE YOUR FRiEND</a> <span class="socialBadge">#social</span></li>
+            <li><a onclick="changeSite('2024/1/bookmarks.html')">23. i need BOOKMARKS Goku</a></li>
+            <li class="meta"><a onclick="changeSite('2024/1/22.html')">22. whereAmI</a> <span class="metaBadge">#meta</span></li>
+            <li class="design"><a onclick="changeSite('2024/1/np.html')">16. comparing mobile now playing widgets</a> <span class="designBadge">#design</span></li>
+            <li class="meta"><a onclick="changeSite('2024/1/13.html')">13. TRENDY LAYOUT</a> <span class="metaBadge">#meta</span></li>
+            <li class="meta"><a onclick="changeSite('2024/1/9.html')">9. THE NEW NEW</a> <span class="metaBadge">#meta</span></li>
+          </ul>
+          <h2 id="23">2023</h2>
+          <details>
+            <summary>Jump to month:</summary>
+            <ul>
+              <li><a href="#23m12">December</a></li>
+              <li><a href="#23m11">November</a></li>
+            </ul>
+          </details>
+          <h3 id="23m12">December</h3>
+          <ul>
+            <li class="meta"><a onclick="changeSite('2023/december/31.html')">31. WiGGLE.MONSTER</a> <span class="metaBadge">#meta</span></li>
+            <li class="meta"><a onclick="changeSite('2023/december/20.html')">20. REDUCED MOTiON</a> <span class="metaBadge">#meta</span></li>
+            <li class="meta"><a onclick="changeSite('2023/december/18.html')">18. i AiNT GOT NO iPHONE</a> <span class="metaBadge">#meta</span></li>
+            <li class="meta"><a onclick="changeSite('2023/december/11.html')">11. iDrewThis</a> <span class="metaBadge">#meta</span></li>
+            <li class="meta"><a onclick="changeSite('2023/december/8.html')">8. MERRY CHRiSTMAS</a> <span class="metaBadge">#meta</span></li>
+            <li class="meta"><a onclick="changeSite('2023/december/6.html')">6. SiGN THE GUESTBOOK YOU DiNGUS</a> <span class="metaBadge">#meta</span></li>
+            <li class="meta"><a onclick="changeSite('2023/december/4.html')">4. HOUSTON, WE HAVE WiDGETS</a> <span class="metaBadge">#meta</span></li>
+          </ul>
+          <h3 id="23m11">November</h3>
+          <ul>
+            <li class="concept"><a onclick="changeSite('concepts/2023/ai.html')">"Ai" Assistant</a></li>
+            <li class="meta"><a onclick="changeSite('2023/november/30.html')">30. ALL ABOUT ME</a> <span class="metaBadge">#meta</span></li>
+            <li class="meta"><a onclick="changeSite('2023/november/26.html')">26. HOMEPAGE REDESiGN</a> <span class="metaBadge">#meta</span></li>
+          </ul>
+        </aside>
+        <script>
+          function changeSite(newSite) {
+            const wiggler = window.innerWidth;
+            if (wiggler >= 1000) {
+              document.getElementById('mf').src = newSite;
+            } else {
+              document.getElementById('sf').src = newSite;
+              document.getElementById('mobpop').style.display = "block";
+              document.getElementById('theMain').style.display = 'block';
+            }
+          }
+          function closePopup() {
+            document.getElementById('mobpop').style.display = 'none';
+            document.getElementById('theMain').style.display = 'none';
+          }
+          async function shareCopyLink() {
+            var toCopy = document.getElementById('mf').src;
+            await navigator.clipboard.writeText(toCopy);
+            window.alert('done!');
+          }
+          let conceptsAvailable = 0;
+          // i dont know who wrote this code im just borrowing it from an old site i made but i know i didnt write it
+          function toggleFallingRocks() {
+            var arrayOfElements=document.getElementsByClassName('concept');
+            var lengthOfArray=arrayOfElements.length;
+            if (conceptsAvailable === 0) {
+              for (var i=0; i<lengthOfArray; i++) {
+                arrayOfElements[i].style.display = 'list-item';
+              }
+              conceptsAvailable = 1;
+              document.getElementById('myMixify').innerHTML = 'hide concepts';
+            } else {
+              for (var i=0; i<lengthOfArray; i++) {
+                arrayOfElements[i].style.display = 'none';
+              }
+              conceptsAvailable = 0;
+              document.getElementById('myMixify').innerHTML = 'show concepts';
+            }
+          }
+        </script>
+        <main id="theMain">
+          <iframe src="welcome.html" id="mf"></iframe>
+          <div id="mobpop" class="popup">
+            <div class="popup-stuff">
+              <span onclick="closePopup()" class="close">CLOSE</span>
+              <iframe src="welcome.html" id="sf"></iframe>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

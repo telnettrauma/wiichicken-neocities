@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css.css">
+    <link rel="shortcut icon" href="favicon1.ico">
+    <title>idle file</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <p id="score">0 bytes</p>
+    <p id="bpscounter">0 bytes per second</p>
+    <button id="singlebytebutton" onclick="oneByte()">Type</button>
+    <hr>
+    <button class="tablink" onclick="openPage('autoup')">Automatic Upgrades</button>
+    <button class="tablink" onclick="openPage('clickup')">Clicking Upgrades</button>
+    <button class="tablink" onclick="openPage('moreup')">More Upgrades</button>
+    <button class="tablink" onclick="openStatsPage()">Statistics</button>
+    <button class="tablink" onclick="openPage('settings')">Settings</button>
+    <div id="autoup" class="tabcontent">
+        <h2>Automatic Upgrades</h2>
+        <p style="text-align: center;">These upgrades increase your file size automatically</p>
+        <hr>
+        <button id="keypresser" onclick="upgradeSPS()">Keypresser (15 bytes, +1 byte per second)</button>
+        <button id="catbuy" onclick="buyCat()">Cat (150 bytes, 5+ bytes per second)</button>
+        <button id="holdbuy" onclick="buyHold()">Key Holder (1000 bytes, +30 bytes per second)</button>
+        <button id="macrobuy" onclick="buyWordMacro()">Word Macro (50 KB, +250 bytes per second)</button>
+        <button id="collabuy" onclick="buyCollab()">Collab Document (1 MB, +5 KB per second)</button>
+    </div>
+
+    <div id="moreup" class="tabcontent">
+        <h2>More Upgrades</h2>
+        <p style="text-align: center;">Hover over an upgrade for more information</p>
+        <hr>
+        <div class="tooltip" id="aiupgradediv">
+            <button id="aiupgradebutton" onclick="buyBadAi()">600 seconds remaining!</button>
+            <span class="tooltiptext">Increases your bytes per second by 1 every second</span>
+        </div>
+        <div class="tooltip" id="selfsusmach">
+            <button id="selfsusmachine" onclick="buySelfSustainedMachine()">1500 clicks remaining!</button>
+            <span class="tooltiptext">Increases your bytes per second by 1 for every click</span>
+        </div>
+        <div class="tooltip" id="plasticursor">
+            <button id="purchaseplasticursor" onclick="buyPlasticCursor()">1000 bps remaining!</button>
+            <span class="tooltiptext">Clicking gains 1% of your bytes per second</span>
+        </div>
+    </div>
+
+    <div id="clickup" class="tabcontent">
+        <h2>Clicking Upgrades</h2>
+        <p style="text-align: center;">These upgrades increase your file size even more per click</p>
+        <hr>
+        <button id="fingerpurchase" onclick="buyFinger()">Extra Finger (500 bytes, +1 byte per click)</button>
+        <button id="keyboardpurchase" onclick="buyKeyboard()">Extra Keyboard (10 KB, +40 bytes per click)</button>
+    </div>
+
+    <div id="settings" class="tabcontent">
+        <h2>Settings</h2>
+        <p style="text-align: center;">Customize your game experience</p>
+        <hr>
+        <h3>Save data</h3>
+        <p>Warning: This feature has not been fully implemented. It may not work as expected, and not everything may be saved. Clearing your browser cookies will remove this data, so be careful!</p>
+        <button id="savebutton" onclick="saveGame()">Save (WIP)</button>
+        <button id="loadbutton" onclick="loadGame()">LOAD (WIP)</button>
+        <h3>Appearance</h3>
+        <button id="darkmodebutton" onclick="toggleDarkMode()">Enable Dark Mode</button>
+        <div class="tooltip">
+            <button id="doroundisplay" onclick="modeToggle('roundmaindisp')" style="background-color: greenyellow;">Disable Score Rounding</button>
+            <span class="tooltiptext">Toggles rounding your byte count.</span>
+        </div>
+        <div class="tooltip">
+            <button id="doroundbytespersec" onclick="modeToggle('roundbpsdisp')" style="background-color: greenyellow;">Disable BPS Rounding</button>
+            <span class="tooltiptext">Toggles rounding your bytes per second count.</span>
+        </div>
+        <div class="tooltip">
+            <button id="iscoremonospaced" onclick="toggleMonospaceFont()">Enable Monospaced Font</button>
+            <span class="tooltiptext">Switches the font showing your bytes to a monospaced font to reduce motion.</span>
+        </div>
+        <h3>Other</h3>
+        <button id="defaultOpen" onclick="openPage('tutorial')" style="background-color: cyan;">View tutorial</button>
+    </div>
+
+    <div id="tutorial" class="tabcontent">
+        <h2 id="welcometext"></h2>
+        <p id="clickonbuttontext" style="text-align: center;"></p>
+        <p id="howtospendtext" style="text-align: center;"></p>
+        <p id="viewupgradestext" style="text-align: center;"></p>
+        <p id="changesettingstext" style="text-align: center;"></p>
+        <p id="viewtutorialagaintext" style="text-align: center;"></p>
+        <p id="havefuntext" style="text-align: center;"></p>
+    </div>
+
+    <div id="statistics" class="tabcontent">
+        <h2>Statistics</h2>
+        <p style="text-align: center;">View your gameplay statistics</p>
+        <hr>
+        <p>All statistics are updated when this page is opened.</p>
+        <p id="timeplayedcounter">Time played: 0 seconds</p>
+        <h3>Clicking</h3>
+        <p id="clickcountstat">Total clicks: 0</p>
+        <p id="sizeperclickstat">Size per click: 0 bytes</p>
+        <p id="sizefromclicking">Size from clicking: 0 bytes</p>
+    </div>
+
+    <div class="cookiesmessage" id="cookiespopup">
+        <div class="cookiesmessage-header">COOKIES WOOO!</div>
+        <span class="closecookiesmessage" onclick="closeCookiesPopup()">x</span>
+        <div class="cookiesmessage-container">
+            <p>this uses cookies i guess.</p>
+        </div>
+    </div>
+    <div id="snackbar">Message</div>
+    <script src="java.js"></script>
+    <noscript>Sorry, but you cannot play this game because your browser does not support JavaScript.</noscript>
+</body>
+</html>
