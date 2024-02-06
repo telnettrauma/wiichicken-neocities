@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap');
+body {
+  background-color: black;
+  background-image: url('https://i.imgur.com/gTeKwva.gif');
+  font-family: 'PT Sans', sans-serif;
+  color: #6ff6fe;
+}
+h2 {
+  font-family: 'Martian Mono', monospace;
+  color: #6ff6fe;
+  text-shadow: #6ff6fecc 0 0 15px;
+}
+a {
+  text-decoration: none;
+  background-color: #324b4d;
+  color: #cce8e9;
+  position: relative;
+}
+a::after {
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,136,255,1) 100%);
+  height: 1px;
+  transform: scaleX(0);
+  content: '';
+  width: 100%;
+  position: absolute;
+  transform-origin: bottom right;
+  bottom: 0;
+  left: 0;
+  transition-duration: 0.4s;
+}
+a:hover::after {transform: scaleX(1);}
+header, section {
+  backdrop-filter: blur(5px);
+  padding: 5px;
+}
+section {
+  background-color: #002124cc;
+  color: #6ff6fe;
+  border: 1px solid #6ff6fe;
+}
+header {
+  background-color: #081c36cc;
+  color: #d6e3ff;
+  border: 1px solid #0051ff;
+  margin-bottom: 10px;
+}
+header:hover, section:hover {
+  box-shadow: 0 0 5px 1px;
+}
+nav {text-align: center;}
+dt {color: #6ff6fe;}
+.cols {grid-gap: 10px !important;}
