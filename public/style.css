@@ -5,6 +5,7 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {font-family: 'Martian Mono', monospace;}
+a {text-decoration: none;}
 .nomarblock {
   margin-block-start: 0;
   margin-block-end: 0;
@@ -68,8 +69,7 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Martian Mono', monospace;}
   margin: 0;
   transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
-#fakeLogo:hover #s1 {box-shadow: 0 0 100px 25px red;}
-#fakeLogo:hover #s2 {box-shadow: 0 0 100px 25px #00a2ff;}
+#fakeLogo:hover #s1 {box-shadow: 0 0 100px 25px red, 50px 0 100px 25px #00a2ff;}
 #fakeLogo .square {
   width: 15px;
   height: 15px;
