@@ -42,10 +42,11 @@ var messageList = [ 'lorem ipsum i want to buy a car',
 '<span style="animation: rainbow 1s linear infinite;">Merry Christmas Xbox</span>',
 'just wait until youre in hummus',
 'oh goody goody',
-'is YEN the lastest gen z trend?',
+'is EURO the lastest gen z trend?',
 'i love posting on X about shows on MAX',
 'this really gets my goat, bahhh',
-'pizza > homework'
+'pizza > homework',
+'netflix and kill'
 ]
 function setRandomMessage() {
   document.getElementById('messageTxt').innerHTML = messageList[Math.floor(Math.random() * messageList.length)];

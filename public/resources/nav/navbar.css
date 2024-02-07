@@ -54,8 +54,7 @@
   margin: 0;
   transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
-#fakeLogo:hover #s1 {box-shadow: 0 0 100px 25px red;}
-#fakeLogo:hover #s2 {box-shadow: 0 0 100px 25px #00a2ff;}
+#fakeLogo:hover #s1 {box-shadow: 0 0 100px 25px red; box-shadow: 0 0 100px 42px #00a2ff;}
 #fakeLogo .square {
   width: 15px;
   height: 15px;

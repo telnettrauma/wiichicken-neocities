@@ -56,7 +56,7 @@
 	main {
 		order: 2;
 		flex: 1;
-		width: 650px;
+		min-width: 650px;
 		margin: 10px;
 	}
 	.row {
@@ -97,7 +97,7 @@
 	.blox a:hover {box-shadow: 0px 0px 10px 0px rgba(0, 255, 204, 0.50);}
 	.sidebox {
 		border: 1px solid red;
-		background-color: #2c1512cc;
+		background-color: #2c151299;
 		backdrop-filter: blur(5px);
 		-webkit-backdrop-filter: blur(5px);
 		color: #ffdad5;
@@ -468,18 +468,6 @@
 		margin-left: 8px;
 		margin-right: 8px;
 	}
-	/* Code from: https://www.myoussouf.com/blog/horizontal-scrolling-text-css */
-	.marquee {
-		display: flex;
-		overflow: hidden;
-		width: 100%;
-		white-space: nowrap;
-	}
-	.innermarq {animation: marquee 10s linear infinite;}
-	@keyframes marquee {
-		0% {transform: translateX(0%);}
-		100% {transform: translateX(-100%);}
-	}
 	.innermarq h1 {
 		margin: 0 20px 0px 0px;
 		display: inline-block;
@@ -523,20 +511,19 @@
 	}
 	/* i hate my life and i wanan die, i aint got no iphone */
 	@media only screen and (max-width: 900px) {
-		#flex {flex-wrap: wrap;}
+		#flex, aside {flex-wrap: wrap;}
+		aside, main, .main {width: 100%;}
 		aside {
-			width: 100%;
 			display: flex;
 			justify-content: center;
 		}
 		main {
-			width: 100%;
 			order: 1;
 			animation: none;
+			min-width: unset;
 		}
-		.main {width: 100%;}
 		.mobileVisible {display: block;}
-		.mobileHidden {display: none !important;}
+		.mobileHidden, #statusCard img {display: none !important;}
 		#leftSidebar {order: 2;}
 		#rightSidebar {
 			order: 3;
@@ -556,25 +543,43 @@
 			flex-direction: column;
 			height: auto;
 		}
-		#frens {width: 105px;}
+		#frens {min-width: 105px;}
 		.helpbutt {display: none;}
 		.blox {width: auto !important;}
 		.row {flex-direction: column;}
 		.lefty {margin: 0;}
 		nav .row .blox {
-			width: auto !important;
-			margin-left: 0 !important;
+			width: auto;
+			margin-left: 0;
+		}
+		#webr {width: 100%;}
+		#littleBuddies {flex-direction: row;}
+		#littleBuddies .blox {
+			width: 100% !important;
+			height: 90px;
+		}
+		#littleBuddies .lefty {margin-left: 10px;}
+		.sidebox {
+			width: auto;
+			margin-top: 0 !important;
 		}
 		#infamous {display: flex !important;}
-		#statusCard img {display: none !important;}
+		#neorings-neoring-container {font-size: 3vmax;}
+		.bring {width: auto;}
+		#personSighted {display: flex;}
+		#moresites, #webr {margin-right: 10px !important;}
+		#webr {margin-top: 0;}
 	}
 	.reducedVisible {display: none;}
 	@media (prefers-reduced-motion) {
 		.reducedHidden {display: none !important;}
 		.reducedVisible {display: block;}
-		main {width: 650px;}
 		* {animation: none !important;}
-		#mainsection {width: 640px;}
+		#hefty {display: none;}
+	}
+	@media (prefers-reduced-transparency) {
+		.blox, .sidebox {backdrop-filter: blur(0px);}
+		.blurry, #hefty {display: none;}
 	}
 </style>
 <div class="heading headerInvisible" id="poopBlock"></div>
@@ -599,82 +604,84 @@
 <div class="main">
 	<div id="flex">
 		<aside id="leftSidebar">
-			<div class="sidebox" id="frens" style="background-color: #29005599; color: #eddcff; border: 1px solid #7d24e4;">
-				<div class="sidehead" style="background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(138,0,189,1) 100%); color: #eddcff;">
-					<p><strong>FRiENDS</strong></p>
-					<span class="helpbutt" id="frihelp" onclick="flipTheScript('frihelp', 'frens', 'fri2', 'fri1', '#7d24e4', '#eddcff')">?</span>
-				</div>
-				<div class="sidebox-content">
-					<div id="fri1">
-						<div class="dabuttons">
-						<a href="https://sep7ic.github.io/" target="_blank"><img src="https://sep7ic.github.io/images/sep.gif"></a>
-						<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
+			<div id="personSighted">
+				<div class="sidebox" id="frens" style="background-color: #29005599; color: #eddcff; border: 1px solid #7d24e4;">
+					<div class="sidehead" style="background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(138,0,189,1) 100%); color: #eddcff;">
+						<p><strong>FRiENDS</strong></p>
+						<span class="helpbutt" id="frihelp" onclick="flipTheScript('frihelp', 'frens', 'fri2', 'fri1', '#7d24e4', '#eddcff')">?</span>
+					</div>
+					<div class="sidebox-content">
+						<div id="fri1">
+							<div class="dabuttons">
+							<a href="https://sep7ic.github.io/" target="_blank"><img src="https://sep7ic.github.io/images/sep.gif"></a>
+							<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
+							</div>
 						</div>
-					</div>
-					<div id="fri2">
-						<p class="nomarblock">If we are friends, just contact me to get your button added here (we're friends, so you should have contact with me). If I only know you on Neocities, I may still add you, but don't feel upset if I don't!</p>
-					</div>
-					<script>
-						function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms || DEF_DELAY));}
-						async function flipTheScript(buttono, elemento, side1, side2, mainColor, bgColor) {
-							var friHelp = document.getElementById(buttono);
-							var frens = document.getElementById(elemento);
-							frens.style.transitionDuration = '0.2s';
-							frens.style.transform = 'rotateY(90deg)';
-							await sleep(200);
-							if (document.getElementById(side1).style.display === 'block') {
-								document.getElementById(side1).style.display = 'none';
-								document.getElementById(side2).style.display = 'block';
-								friHelp.style.backgroundColor = bgColor;
-								friHelp.style.color = mainColor;
-							} else {
-								document.getElementById(side1).style.display = 'block';
-								document.getElementById(side2).style.display = 'none';
-								friHelp.style.color = bgColor;
-								friHelp.style.backgroundColor = mainColor;
+						<div id="fri2">
+							<p class="nomarblock">If we are friends, just contact me to get your button added here (we're friends, so you should have contact with me). If I only know you on Neocities, I may still add you, but don't feel upset if I don't!</p>
+						</div>
+						<script>
+							function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms || DEF_DELAY));}
+							async function flipTheScript(buttono, elemento, side1, side2, mainColor, bgColor) {
+								var friHelp = document.getElementById(buttono);
+								var frens = document.getElementById(elemento);
+								frens.style.transitionDuration = '0.2s';
+								frens.style.transform = 'rotateY(90deg)';
+								await sleep(200);
+								if (document.getElementById(side1).style.display === 'block') {
+									document.getElementById(side1).style.display = 'none';
+									document.getElementById(side2).style.display = 'block';
+									friHelp.style.backgroundColor = bgColor;
+									friHelp.style.color = mainColor;
+								} else {
+									document.getElementById(side1).style.display = 'block';
+									document.getElementById(side2).style.display = 'none';
+									friHelp.style.color = bgColor;
+									friHelp.style.backgroundColor = mainColor;
+								}
+								frens.style.transitionDuration = '0s';
+								frens.style.transform = 'rotateY(270deg)';
+								await sleep(10);
+								frens.style.transitionDuration = '0.2s';
+								frens.style.transform = 'rotateY(360deg)';
+								await sleep(200);
+								frens.style.transitionDuration = '0s';
+								frens.style.transform = 'rotateY(0)';
 							}
-							frens.style.transitionDuration = '0s';
-							frens.style.transform = 'rotateY(270deg)';
-							await sleep(10);
-							frens.style.transitionDuration = '0.2s';
-							frens.style.transform = 'rotateY(360deg)';
-							await sleep(200);
-							frens.style.transitionDuration = '0s';
-							frens.style.transform = 'rotateY(0)';
-						}
-					</script>
-				</div>
-			</div>
-			<div class="sidebox" id="moresites" style="background-color: #001e3399; color: #cee5ff; border: 1px solid #00a6ff;">
-				<div class="sidehead" style="background: linear-gradient(45deg, rgba(0,74,119,1) 0%, rgba(0,105,119,1) 100%); color: #cee5ff;">
-					<p><strong>MORE SiTES</strong></p>
-				</div>
-				<div class="sidebox-content" style="padding: 0;">
-					<div class="dabuttons">
-						<a href="https://afellowu.neocities.org/" target="_blank"><img src="https://afellowu.neocities.org/images/buttons/mebi_county.gif"></a>
-						<a href="https://federiefederi.neocities.org" target="_blank"><img src="media/buttons/federiefederi.gif"></a>
-						<a href="https://vidapon.net/" target="_blank"><img alt="Vidapon's Artbox!" src="https://vidapon.net/global/netgraphics/Astertrail_button.gif"></a>
-						<a href="https://ninacti0n.neocities.org" target="_blank"><img src="https://ninacti0n.neocities.org/assets/RS%20animated%20button.gif" alt="Ninacti0n's lab"></a>
-						<a href="https://divsel.neocities.org" target="_blank"><img id="divsel" src="media/buttons/divsel.png"></a>
-						<iframe src="https://incr.easrng.net/badge?key=wiichicken" title="increment badge" width="88" height="31" frameborder="0" style="padding: 2px;"></iframe>
-						<a href="https://josef.neocities.org" target="_blank"><img src="media/buttons/alulabutton.gif"></a>
-						<a href="https://catbyte.site/" target="_blank"><img src="media/buttons/catbyte.png"></a>
-						<a href="https://dabric.neocities.org" target="_blank"><img src="https://dabric.neocities.org/butt.png" alt="dabric"></a>
-						<a href="https://gradientos.neocities.org" target="_blank"><img src="https://gradientos.neocities.org/bsab/badge0.gif" alt="GradientOS"></a>
-						<a href="https://wi-fi.neocities.org/" target="_blank"><img src="media/buttons/needwifi.png"></a>
+						</script>
 					</div>
-					<div class="favrow">
-						<a href="https://charpine.neocities.org" target="_blank"><img src="media/buttons/favicon/charpine.png"></a>
-						<a href="https://e4494s.neocities.org" target="_blank"><img src="interests/websites/ficon/game/e4494s.png"></a>
-						<a href="https://awe921.neocities.org" target="_blank"><img src="media/buttons/favicon/awehead.png"></a>
-						<a href="https://wented.neocities.org" target="_blank"><img src="media/buttons/favicon/epicomics.png"></a>
-						<a href="https://sidi0s0.neocities.org" target="_blank"><img src="media/buttons/favicon/sidiicon.ico"></a>
-						<a href="https://cattafang.neocities.org" target="_blank"><img src="media/buttons/favicon/cattafang.ico"></a>
-						<a href="https://plorg.neocities.org" target="_blank"><img src="media/buttons/favicon/plorg.ico"></a>
+				</div>
+				<div class="sidebox" id="moresites" style="background-color: #001e3399; color: #cee5ff; border: 1px solid #00a6ff;">
+					<div class="sidehead" style="background: linear-gradient(45deg, rgba(0,74,119,1) 0%, rgba(0,105,119,1) 100%); color: #cee5ff;">
+						<p><strong>MORE SiTES</strong></p>
 					</div>
-					<div class="twolinkies">
-						<a href="interests/websites/fav_sites.html" target="_blank">MORE</a>
-						<a href="#mybum">MY BUTTON!</a>
+					<div class="sidebox-content" style="padding: 0;">
+						<div class="dabuttons">
+							<a href="https://afellowu.neocities.org/" target="_blank"><img src="https://afellowu.neocities.org/images/buttons/mebi_county.gif"></a>
+							<a href="https://federiefederi.neocities.org" target="_blank"><img src="media/buttons/federiefederi.gif"></a>
+							<a href="https://vidapon.net/" target="_blank"><img alt="Vidapon's Artbox!" src="https://vidapon.net/global/netgraphics/Astertrail_button.gif"></a>
+							<a href="https://ninacti0n.neocities.org" target="_blank"><img src="https://ninacti0n.neocities.org/assets/RS%20animated%20button.gif" alt="Ninacti0n's lab"></a>
+							<a href="https://divsel.neocities.org" target="_blank"><img id="divsel" src="media/buttons/divsel.png"></a>
+							<iframe src="https://incr.easrng.net/badge?key=wiichicken" title="increment badge" width="88" height="31" frameborder="0" style="padding: 2px;"></iframe>
+							<a href="https://josef.neocities.org" target="_blank"><img src="media/buttons/alulabutton.gif"></a>
+							<a href="https://catbyte.site/" target="_blank"><img src="media/buttons/catbyte.png"></a>
+							<a href="https://dabric.neocities.org" target="_blank"><img src="https://dabric.neocities.org/butt.png" alt="dabric"></a>
+							<a href="https://gradientos.neocities.org" target="_blank"><img src="https://gradientos.neocities.org/bsab/badge0.gif" alt="GradientOS"></a>
+							<a href="https://wi-fi.neocities.org/" target="_blank"><img src="media/buttons/needwifi.png"></a>
+						</div>
+						<div class="favrow">
+							<a href="https://charpine.neocities.org" target="_blank"><img src="media/buttons/favicon/charpine.png"></a>
+							<a href="https://e4494s.neocities.org" target="_blank"><img src="interests/websites/ficon/game/e4494s.png"></a>
+							<a href="https://awe921.neocities.org" target="_blank"><img src="media/buttons/favicon/awehead.png"></a>
+							<a href="https://wented.neocities.org" target="_blank"><img src="media/buttons/favicon/epicomics.png"></a>
+							<a href="https://sidi0s0.neocities.org" target="_blank"><img src="media/buttons/favicon/sidiicon.ico"></a>
+							<a href="https://cattafang.neocities.org" target="_blank"><img src="media/buttons/favicon/cattafang.ico"></a>
+							<a href="https://plorg.neocities.org" target="_blank"><img src="media/buttons/favicon/plorg.ico"></a>
+						</div>
+						<div class="twolinkies">
+							<a href="interests/websites/fav_sites.html" target="_blank">MORE</a>
+							<a href="#mybum">MY BUTTON!</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -683,7 +690,7 @@
 					<p><strong>WEBRiNG</strong></p>
 				</div>
 				<div class="sidebox-content">
-					<div id=neorings-neoring-container style="text-align: center; margin-top: 5px;">
+					<div id=neorings-neoring-container style="text-align: center;">
 						<a class="bring" href="https://neorings.org/api/webring/1/previous?via=https%3A%2F%2Fwiichicken.neocities.org"><strong>&lt;</strong></a>
 						<a href="https://neorings.org/webring/1/">Neoring</a>
 						<a id="randring" style="padding-left: 2px;" href="https://neorings.org/api/webring/1/random" title="Random">?</a>
@@ -832,18 +839,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="blox" id="whatsheader" style="padding: 0; border: 1px solid #3978c6;">
+			<div class="blox" id="whatsheader" style="border: 1px solid #3978c6;">
 				<div class="accordion">
-					<div class="marquee reducedHidden">
-						<div class="innermarq">
-							<h1 style="display: inline-block; white-space: pre;">WHAT'S NEW WHAT'S NEW WHAT'S NEW WHAT'S NEW WHAT'S NEW WHAT'S NEW</h1>
-						</div>
-						<div style="display: inline-block;" class="innermarq">
-							<h1 style="display: inline-block; white-space: pre;">WHAT'S NEW WHAT'S NEW WHAT'S NEW WHAT'S NEW WHAT'S NEW WHAT'S NEW</h1>
-						</div>
-					</div>
-					<h1 class="reducedVisible">WHAT'S NEW</h1>
-					<div style="padding: 5px;">
+					<h1>WHAT'S NEW</h1>
+					<div>
 						<h3 style="margin: 0; font-size: 15px;"><strong>SAME SH!T, NOW ON GiT</strong></h3>
 						<p style="margin-top: 0; margin-bottom: 2px;"><strong>Feburary 4, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
 					</div>
@@ -892,7 +891,7 @@
 			<div id="signguest" class="blox" style="border: 1px solid #ff8875;">
 				<p>Remember to <a style="cursor: pointer !important;" href="guestbook.html">sign the guestbook</a> before you go!</p>
 			</div>
-			<div class="row">
+			<div class="row" id="littleBuddies">
 				<div style="background-color: #0039219b; border: 1px solid #3ca370;" class="blox animal">
 					<a href="https://wobble.town/visit/1517"><img src="https://wobble.town/visit/1517/wobble.gif"></a>
 				</div>
