@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FAVORiTE SiTES</title>
+    <title>WiiCHiCKEN'S iNTERNET DiRECTORY</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +9,14 @@
   <body>
   <style>
     body {
-      width: 900px;
-      margin: auto;
       background-color: #000e11;
       font-family: 'PT Sans', sans-serif;
       margin-top: 10px;
+    }
+    #flex {
+      display: flex;
+      width: 900px;
+      margin: auto;
     }
     h1, h2, h3, .noth1 {
       font-family: 'Martian Mono', monospace;
@@ -26,6 +29,17 @@
       color: #00677d;
     }
     img {image-rendering: pixelated;}
+    #chewTooth {
+      position: fixed;
+      background-image: url('https://api.mapbox.com/styles/v1/wiichicken/clsd8mma9031j01qq8uqdcxe7/static/28.5539,0,0.54,0/1280x1280@2x?access_token=pk.eyJ1Ijoid2lpY2hpY2tlbiIsImEiOiJjbHNkOHZmcG4wcTg5MmtzYjgweTE0ZHVsIn0.EvdZamD3MyA9v5sPV6fzyw');
+      background-size: cover;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
     table {border-collapse: collapse;}
     td {border: 1px solid #5ad5f9;}
     th {
@@ -39,7 +53,8 @@
       margin-right: 20px;
     }
     #urls table {
-      width: 747px;
+      max-width: 747px;
+      width: 100%;
       text-indent: initial;
       margin-bottom: 10px;
       background-color: #001f27;
@@ -76,7 +91,7 @@
     }
     .main {
       margin-left: 150px;
-      width: 700px;
+      max-width: 700px;
       margin: auto;
       order: 2;
     }
@@ -103,6 +118,7 @@
       color: #b4ebff;
       width: 100%;
       margin-bottom: 10px;
+      max-width: 688px;
     }
     header .lessvis {
       background-color: #004e5f !important;
@@ -132,8 +148,7 @@
       .main {flex: 1;}
     }
     @media only screen and (max-width: 900px) {
-      body {width: 100%;}
-      .main {width: 100%;}
+      body, .main {width: 100%;}
       #flex {flex-wrap: wrap;}
       .sidebar {
         width: 100%;
@@ -141,7 +156,8 @@
       }
 	  }
   </style>
-  <div style="display: flex;" id="flex">
+  <div id="chewTooth"></div>
+  <div id="flex">
   <nav>
   <table class="sidebar">
     <tr>
@@ -158,8 +174,10 @@
       <td>
         <ul>
           <li><a href="#ps">uncategorized</a></li>
-          <li><a href="#ol">old web</a></li>
+          <li><a href="#ol">graphics</a></li>
+          <li><a href="#btech">tech</a></li>
           <li><a href="#arts">artists</a></li>
+          <li><a href="#theart">art</a></li>
         </ul>
       </td>
     </tr>
@@ -186,7 +204,7 @@
     <header>
       <div>
         <div class="box" style="width: auto;">
-          <h1>FAVOURiTE SiTEZ</h1>
+          <h1>DiRECTORY</h1>
         </div>
         <div class="box adder">
           <p class="noth1">+</p>
@@ -201,60 +219,104 @@
         </div>
       </div>
     </header>
+    <div class="box" style="padding: 0; display: flex; background-color: #352500; border-color: #f6be14; max-width: 698px;">
+      <iframe src="sotfp/widget.html" style="width: 100%; height: 100px; border: none;"></iframe>
+    </div>
     <div class="box">
       <p>i hate everything!</p>
     </div>
-    <header>
-      <div class="box" style="width: auto;">
-        <h1>BUTTONS!</h1>
+    <div id="butterball">
+      <header>
+        <div class="box" style="width: auto;">
+          <h1>BUTTONS!</h1>
+        </div>
+      </header>
+      <div class="box" style="background-color: #690005; color: #ffb4ab; border-color: red;">
+        <p><a onclick="scrollAway();" style="background-color: #ffb4ab; color: #93000a; cursor: pointer;">click here</a> to scroll past and hide buttons (for those with epilepsy)</p>
+        <script>
+          function scrollAway() {
+            document.getElementById('butterball').style.display = 'none';
+            document.getElementById('urls').scrollIntoView();
+          }
+        </script>
       </div>
-    </header>
-    <div class="box">
-      <p>any <span style="text-shadow: 0px 0px 4px #c1c4eb;">glowing</span> buttons indicate that a website may contain mature content, such as excessive blood/gore. basically, if it breaks instagram tos, it won't be here (even though content that breaks instagram tos is frequently kept up on ig, but you get the point). Note that I will <strong>NEVER</strong> link to websites with adult content on them. If a website here contains adult content, email me immediately and I will remove it from this page ASAP.</p>
-    </div>
-    <header>
-      <div class="box lessvis">
-        <h2 id="ps">UNCATEGORiZED</h2>
+      <div class="box">
+        <p>any <span style="text-shadow: 0px 0px 4px #c1c4eb;">glowing</span> buttons indicate that a website may contain mature content, such as excessive blood/gore. basically, if it breaks instagram tos, it won't be here (even though content that breaks instagram tos is frequently kept up on ig, but you get the point). Note that I will <strong>NEVER</strong> link to websites with adult content on them. If a website here contains adult content, email me immediately and I will remove it from this page ASAP.</p>
       </div>
-    </header>
-    <div class="box">
-      <div class="buttonhell">
-        <a target="_blank" href="https://melonking.net"><img alt="Visit Melonking.Net!" src="https://melonking.net/images/badges/MELON-BADGE-2.GIF" style="image-rendering: pixelated"></a>
-        <a href="https://afellowu.neocities.org/" target="_blank"><img src="https://afellowu.neocities.org/images/buttons/mebi_county.gif"></a>
-        <a href="https://nerucom.neocities.org"><img src="https://nerucom.neocities.org/images/neruconc/nerucom.gif"></a>
-        <a target="_blank" href="http://devils.neocities.org"><img src="https://66.media.tumblr.com/b9e32e17568f6e8b052011afb9ccfae4/tumblr_inline_ps5cezThgH1w1xdc5_540.gif"></a>
-        <a href="https://4ivilo.neocities.org/"><img style = "width: 88px; height: 31px;" src="https://4ivilo.neocities.org/buttons/4ivilos_button.gif"/></a>
-        <a href="https://josef.neocities.org/home"><img src="/media/buttons/alulabutton.gif"></a>
-        <a href="https://dabric.neocities.org"><img src="https://dabric.neocities.org/butt.png" alt="dabric"></a>
+      <header>
+        <div class="box lessvis">
+          <h2 id="ps">UNCATEGORiZED</h2>
+        </div>
+      </header>
+      <div class="box">
+        <div class="buttonhell">
+          <a target="_blank" href="https://melonking.net"><img loading="lazy" alt="Visit Melonking.Net!" src="https://melonking.net/images/badges/MELON-BADGE-2.GIF" style="image-rendering: pixelated"></a>
+          <a href="https://afellowu.neocities.org/" target="_blank"><img loading="lazy" src="https://afellowu.neocities.org/images/buttons/mebi_county.gif"></a>
+          <a href="https://nerucom.neocities.org"><img loading="lazy" src="https://nerucom.neocities.org/images/neruconc/nerucom.gif"></a>
+          <a target="_blank" href="http://devils.neocities.org"><img loading="lazy" src="https://66.media.tumblr.com/b9e32e17568f6e8b052011afb9ccfae4/tumblr_inline_ps5cezThgH1w1xdc5_540.gif"></a>
+          <a href="https://4ivilo.neocities.org/"><img loading="lazy" style = "width: 88px; height: 31px;" src="https://4ivilo.neocities.org/buttons/4ivilos_button.gif"/></a>
+          <a href="https://josef.neocities.org/home"><img loading="lazy" src="button/alulabutton.gif"></a>
+          <a href="https://catbyte.site" target="_blank"><img src="button/catbyte.png" loading="lazy"></a>
+          <a href="https://sep7ic.github.io/" target="_blank"><img src="https://sep7ic.github.io/images/sep.gif" loading="lazy"></a>
+					<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif" loading="lazy"></a>
+        </div>
       </div>
-    </div>
-    <header>
-      <div class="box lessvis">
-        <h2 id="ol">OLD WEB</h2>
+      <header>
+        <div class="box lessvis">
+          <h2 id="ol">GRAPHiCS</h2>
+        </div>
+      </header>
+      <div class="box">
+        <p>i like looking at images</p>
+        <div class="buttonhell">
+          <a target="_blank" href="https://momg.neocities.org/"><img loading="lazy" alt="Visit the Gif Gallery!" src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
+        </div>
       </div>
-    </header>
-    <div class="box">
-      <p>im going to be honest, 95% of the people using neocities were never alive during early web, me included</p>
-      <div class="buttonhell">
-        <a target="_blank" href="https://momg.neocities.org/"><img alt="Visit the Gif Gallery!" src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
-        <a target="_blank" href="https://neonaut.neocities.org/"><img src="https://neonaut.neocities.org/images/buttons/neonaut-banner.png"></a>
+      <header>
+        <div class="box lessvis">
+          <h2 id="btech">TECH</h2>
+        </div>
+      </header>
+      <div class="box">
+        <p>computer nerd stuff that a computer nerd would start nerding out all nerdver. this includes neocities meta</p>
+        <div class="buttonhell">
+          <a target="_blank" href="https://neonaut.neocities.org/"><img loading="lazy" src="https://neonaut.neocities.org/images/buttons/neonaut-banner.png"></a>
+          <a href="https://dabric.neocities.org"><img loading="lazy" src="https://dabric.neocities.org/butt.png" alt="dabric"></a>
+          <a href="https://divsel.neocities.org" target="_blank"><img loading="lazy" src="button/divsel.png"></a>
+          <a href="https://federiefederi.neocities.org" target="_blank"><img src="button/federiefederi.gif" loading="lazy"></a>
+          <a href="https://gradientos.neocities.org" target="_blank"><img src="https://gradientos.neocities.org/bsab/badge0.gif" alt="GradientOS" loading="lazy"></a>
+					<a href="https://wi-fi.neocities.org/" target="_blank"><img src="button/needwifi.png" loading="lazy"></a>
+        </div>
       </div>
-    </div>
-    <header>
-      <div class="box lessvis">
-        <h2 id="arts">ARTiSTS</h2>
+      <header>
+        <div class="box lessvis">
+          <h2 id="arts">ARTiSTS</h2>
+        </div>
+      </header>
+      <div class="box">
+        <p>websites with a lot of art in them. this doesn't do a good job at describing this category but trust me you'll quickly get the vibe</p>
+        <div class="buttonhell">
+          <a href="https://vidapon.net/"><img loading="lazy" alt="Vidapon's Artbox!" src="https://vidapon.net/global/netgraphics/Astertrail_button.gif"></a>
+          <a href="https://ninacti0n.neocities.org" target="_blank"><img loading="lazy" src="https://ninacti0n.neocities.org/assets/RS%20animated%20button.gif" alt="Ninacti0n's lab"></a>
+          <a href="https://38cautionzone.com" title="this site may contain mild nudity and blood"><img loading="lazy" class="glow" src="https://38cautionzone.com/88x31-38Caution.gif"></a>
+          <a href="https://azoart-nexus.neocities.org"><img loading="lazy" src="https://azoart-nexus.neocities.org/img/azobutton.gif"></a>
+          <a href="https://cinnamuff.neocities.org/"><img loading="lazy" src="https://cinnamuff.neocities.org/cinnamuffbtn.png"></a>
+          <a href="https://rabbitnet.neocities.org"><img loading="lazy" src="button/Rabbitnetskybutton.gif"></a>
+          <a target="_blank" href="https://berii.neocities.org"><img loading="lazy" src="https://berii.neocities.org/button2.gif"></a>
+          <a href="https://charpine.neocities.org" target="_blank"><img src="button/artists/charpine.gif" loading="lazy"></a>
+          <a href="https://dhampyr.neocities.org/" target="_blank"><img src="https://dhampyr.neocities.org/buttons/dhampyr.gif" loading="lazy"></a> 
+        </div>
       </div>
-    </header>
-    <div class="box">
-      <p>websites with a lot of art in them. this doesn't do a good job at describing this category but trust me you'll quickly get the vibe</p>
-      <div class="buttonhell">
-        <a href="https://vidapon.net/"><img alt="Vidapon's Artbox!" src="https://vidapon.net/global/netgraphics/Astertrail_button.gif"></a>
-        <a href="https://ninacti0n.neocities.org" target="_blank"><img src="https://ninacti0n.neocities.org/assets/RS%20animated%20button.gif" alt="Ninacti0n's lab"></a>
-        <a href="https://38cautionzone.com" title="this site may contain mild nudity and blood"><img class="glow" src="https://38cautionzone.com/88x31-38Caution.gif"></a>
-        <a href="https://azoart-nexus.neocities.org"><img src="https://azoart-nexus.neocities.org/img/azobutton.gif"></a>
-        <a href="https://cinnamuff.neocities.org/"><img src="https://cinnamuff.neocities.org/cinnamuffbtn.png"></a>
-        <a href="https://rabbitnet.neocities.org"><img src="/media/buttons/Rabbitnetskybutton.gif"></a>
-        <a target="_blank" href="https://berii.neocities.org"><img src="https://berii.neocities.org/button2.gif"></a>
+      <header>
+        <div class="box lessvis">
+          <h2 id="theart">ART iTSELF</h2>
+        </div>
+      </header>
+      <div class="box">
+        <p>every site is a piece of art unless its not, but these sites definitely feel like an art project.</p>
+        <div class="buttonhell">
+          <a href="https://psychicnewborn.neocities.org" target="_blank"><img loading="lazy" src="button/psychic.gif"></a>
+        </div>
       </div>
     </div>
     <div id="urls">
@@ -264,7 +326,7 @@
         </div>
       </header>
       <div class="box">
-        <p>noooo! how am i going to want to visit a site without any flashy pictures?!?!?</p>
+        <p>what if cheese was real</p>
       </div>
       <header>
         <div class="box lessvis">
@@ -273,17 +335,17 @@
       </header>
       <table>
         <tr>
-          <td class="icon"><img src="ficon/game/ywot.png"></td>
+          <td class="icon"><img loading="lazy" src="ficon/game/ywot.png"></td>
           <td><a href="https://yourworldoftext.com" target="_blank">Your World of Text</a></td>
           <td>Infinite text grid that anybody can edit</td>
         </tr>
         <tr>
-          <td class="icon"><img src="ficon/game/e4494s.png"></td>
+          <td class="icon"><img loading="lazy" src="ficon/game/e4494s.png"></td>
           <td><a href="https://e4494s.neocities.org" target="_blank">e4494s</a></td>
           <td>Simulators, generative art, games, and some other math related stuff. Highly recommend this one.</td>
         </tr>
         <tr>
-          <td class="icon"><img src="ficon/game/craft.png"></td>
+          <td class="icon"><img loading="lazy" src="ficon/game/craft.png"></td>
           <td><a href="https://neal.fun/infinite-craft/" target="_blank">Infinite Craft</a></td>
           <td>imagine Little Alchemy but with ai, so you can make whatever</td>
         </tr>
@@ -300,12 +362,12 @@
           <td>4 cornered gradient generator with distortion tools</td>
         </tr>
         <tr>
-          <td class="icon"><img src="ficon/art/ditherit.png"></td>
+          <td class="icon"><img loading="lazy" src="ficon/art/ditherit.png"></td>
           <td><a href="https://ditherit.com" target="_blank">Dither It!</a></td>
           <td>dithering tool that dithers images in a way that makes me happy</td>
         </tr>
         <tr>
-          <td class="icon"><img src="ficon/art/meyerweb.ico"></td>
+          <td class="icon"><img loading="lazy" src="ficon/art/meyerweb.ico"></td>
           <td><a href="https://meyerweb.com/eric/tools/color-blend/" target="_blank">Color Blend</a></td>
           <td>select 2 colors and get a list of colors that go between them</td>
         </tr>
@@ -317,8 +379,9 @@
       </header>
       <table>
         <tr>
-          <td class="icon"><img src="ficon/art/goerge.png"></td>
-          <td><a href="https://dhampyr.neocities.org" target="_blank">dhampyr</a></td>
+          <td class="icon"><img loading="lazy" src="ficon/art/plorg.ico"></td>
+          <td><a href="https://dhampyr.neocities.org" target="_blank">Poorly Planned Comics Archive</a></td>
+          <td>archive of the most interesting comic i have ever read</td>
         </tr>
       </table>
       <header>
@@ -331,7 +394,7 @@
       </div>
       <table>
         <tr>
-          <td class="icon"><img src="ficon/devtools/m3.png"></td>
+          <td class="icon"><img loading="lazy" src="ficon/devtools/m3.png"></td>
           <td><a href="https://m3.material.io/theme-builder#/custom" target="_blank">Material Theme Builder</a></td>
           <td>i really like how colors in material 3 look, so i use this alot. its good for choosing colors for your site</td>
         </tr>
@@ -353,7 +416,7 @@
       </header>
       <table>
         <tr>
-          <td class="icon"><img src="about:blank"></td>
+          <td class="icon"><img loading="lazy" src="about:blank"></td>
           <td><a href="http://toastytech.com/index.html" target="_blank">Nathan's Toasty Technology page</a></td>
           <td>Cool screenshots of various operating systems, as well as an entire section dedicated to hating on Internet Explorer</td>
         </tr>
@@ -363,7 +426,7 @@
           <td>A gallery of various GUI interface elements from many different operating systems</td>
         </tr>
         <tr>
-          <td class="icon"><img src="ficon/tech/infmac.ico"></td>
+          <td class="icon"><img loading="lazy" src="ficon/tech/infmac.ico"></td>
           <td><a href="https://infinitemac.org" target="_blank">Infinite Mac</a></td>
           <td>A Mac computer you can use in the browser, all the way up to Mac OS 9.0</td>
         </tr>
@@ -402,7 +465,7 @@
       </header>
       <table>
         <tr>
-          <td class="icon"><img src="ficon/music/last/stats.ico"></td>
+          <td class="icon"><img loading="lazy" src="ficon/music/last/stats.ico"></td>
           <td><a href="https://lastfmstats.com" target="_blank">Last.fm stats</a></td>
           <td>By far the best website for last.fm stats. It has an overwhelming amount of information and graphs</td>
         </tr>
@@ -427,17 +490,17 @@
       </header>
       <table>
         <tr>
-          <td class="icon"><img src="ficon/other/cari.png"></td>
+          <td class="icon"><img loading="lazy" src="ficon/other/cari.png"></td>
           <td><a href="https://cari.institute" target="_blank">Consumer Aesthetics Research Institute</a></td>
           <td>A database of actual aesthetics, none of that "Frutiger Metro" or "webcore" crap.</td>
         </tr>
         <tr>
-          <td class="icon"><img src="ficon/other/twc.ico"></td>
+          <td class="icon"><img loading="lazy" src="ficon/other/twc.ico"></td>
           <td><a href="https://twcclassics.com" target="_blank">twc classics</a></td>
           <td>Many old screencaps and videos of The Weather Channel.</td>
         </tr>
         <tr>
-          <td class="icon"><img src="ficon/other/google.ico"></td>
+          <td class="icon"><img loading="lazy" src="ficon/other/google.ico"></td>
           <td><a href="https://www.google.com" target="_blank">Google</a></td>
           <td>This website is so crazy. You can type in almost anything and instantly find related images and websites.</td>
         </tr>
@@ -454,17 +517,17 @@
       </header>
       <table>
         <tr>
-          <td class="icon"><img src="https://64.media.tumblr.com/avatar_002c6d11213c_64.pnj"></td>
+          <td class="icon"><img loading="lazy" src="https://64.media.tumblr.com/avatar_002c6d11213c_64.pnj"></td>
           <td><a href="https://oneterabyteofkilobyteage.tumblr.com" target="_blank">One Terabyte of Kilobyte Age</a></td>
           <td>Tumblr blog that automatically posts screenshots from random sites on the Geocities archive</td>
         </tr>
         <tr>
-          <td class="icon"><img src="https://64.media.tumblr.com/avatar_4691f8d9c906_128.pnj"></td>
+          <td class="icon"><img loading="lazy" src="https://64.media.tumblr.com/avatar_4691f8d9c906_128.pnj"></td>
           <td><a href="https://www.suppermariobroth.com" target="_blank">Supper Mario Broth</a></td>
           <td>Tumblr blog that posts obscure information about the Mario franchise. HIGHLY recommend this one. They also have a <a href="https://twitter.com/MarioBrothBlog" target="_blank">Twitter</a> with more.</td>
         </tr>
         <tr>
-          <td class="icon"><img src="ficon/blog/twt.png"></td>
+          <td class="icon"><img loading="lazy" src="ficon/blog/twt.png"></td>
           <td><a href="https://twitter.com/depthsofwiki" target="_blank">depths of wikipedia</a></td>
           <td>Interesting facts about Wikipedia history, as well as out of context screenshots</td>
         </tr>
