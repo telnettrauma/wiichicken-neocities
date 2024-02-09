@@ -76,10 +76,18 @@
 				color: #dde2f9;
 			}
 			.auto {flex-wrap: nowrap !important;}
+			#links {margin-right: 2px;}
 			#links a {
 				display: flex;
 				padding: 5px;
 				margin-bottom: 10px;
+				border: 1px solid white;
+				box-shadow: 2px 2px;
+			}
+			#links a:hover {text-shadow: 0 0 10px;}
+			#links a:active {
+				box-shadow: none !important;
+				transform: translate(2px, 2px);
 			}
 			#helloGames {
 				width: 1050px;
@@ -98,7 +106,6 @@
 			}
 			.row {
 				display: flex;
-				width: 612px;
 				flex-wrap: wrap;
 				justify-content: space-between;
 			}
@@ -124,7 +131,10 @@
 				image-rendering: pixelated;
 				margin-bottom: 3px;
 			}
-			#buttons a {background-color: unset;}
+			#buttons a {
+				background-color: unset;
+				display: flex;
+			}
 			#scatterbox {
 				display: flex;
 				justify-content: center;
@@ -183,15 +193,29 @@
 				.hideMob {display: none !important;}
 				.row .box {width: auto;}
 				.yourMarginSucks {margin-right: 0 !important;}
-				#theGoofyRow {display: flex !important;}
+				#theGoofyRow {
+					display: flex !important;
+				}
 				.main {
 					display: flex;
 					flex-wrap: wrap;
+				}
+				#buttonbar {width: 100% !important;}
+				#buttons {
+					flex-direction: row;
+					align-content: space-around;
+					flex-wrap: wrap;
+					justify-content: space-evenly;
 				}
 			}
 			::-webkit-scrollbar {width: 5px;}
 			::-webkit-scrollbar-track {background: #573e5c;}
 			::-webkit-scrollbar-thumb {background: #fad8fd;}
+			@media (prefers-reduced-motion) {
+				* {animation: none !important;}
+				#buttonbar {display: none;}
+				.main {width: 615px;}
+			}
 		</style>
 		<div id="heightCheck"></div>
 		<div class="heading" id="poopBlock"></div>
@@ -244,28 +268,22 @@
 						</div>
 						<div class="auto" style="grid-column: 2/3; grid-row: 1/2;">
 							<header style="width: auto;">
-								<h1 id="aboutme">ABOUT ME</h1>
-							</header>
-							<header style="width: auto;">
 								<h2>ME</h2>
 							</header>
 							<div class="box">
 								<p>Hello, my name is WiiCHiCKEN. The name comes from when my friend sent me this picture with just the caption "wii chicken":</p>
 							</div>
 							<div class="box">
-								<img src="https://i.ytimg.com/vi/mTRyL5Kl8zg/maxresdefault.jpg" style="width: 254px;">
+								<img src="https://i.ytimg.com/vi/mTRyL5Kl8zg/maxresdefault.jpg" style="width: 100%;">
 							</div>
 							<div class="box">
-								<p>The styilization of capitilizing every letter but the letter "i" is because I like how LiDAR is styilized.</p>
+								<p>The styilization of my name (capitilizing every letter except for "i") was inspired by "LiDAR", because I thought it looked cool.</p>
 							</div>
 						</div>
 					</div>
 					<div class="box">
 						<p>I am from American.</p>
 						<p>I have been interested in technology for almost my whole life, ever since I got my first Windows XP laptop when I was, I don't know, 7? I used that laptop to make PowerPoint presentations, check the weather online, read my email, listen to the huge iTunes library my father gave me (remember when you didn't have to pay for iTunes Radio?), watch Minecraft videos, and look at Magic: The Gathering cards. Unrestricted internet access did not completely ruin me as a person, like it did for everyone else.</p>
-					</div>
-					<div class="box">
-						<p>if you wanna see some buttons i made check out <a href="creative\graphics\buttons\index.html" target="_blank">this page</a></p>
 					</div>
 					<header>
 						<h2>HOBBiES</h2>
@@ -353,13 +371,15 @@
 						<h1 id="follow">FOLLOW ME</h1>
 					</header>
 					<div class="box">
-						<p>in case for some reason you need more of me in your life.</p>
+						<p>in case you need more of me in your life, for some reason</p>
 					</div>
 					<div class="row" id="links">
-						<a href="https://www.youtube.com/channel/UCBfjBEKsW8ChxbX3MEGrx2Q" target="_blank" style="background-color: #410000; color: #ffdad4; border: 1px solid red;">youtube</a>
-						<a href="https://letterboxd.com/wiichicken/" target="_blank" style="background-color: #002106; color: #6cff80; border: 1px solid #6cff80;">letterboxd</a>
-						<a href="https://www.backloggd.com/u/wiichicken/" target="_blank" style="background-color: #3f001b; color: #ffd9e1; border: 1px solid #ea377a;">backloggd</a>
-						<a href="https://neocities.org/site/wiichicken" target="_blank" style="background-color: #2c1600; color: #ffdcbd; border: 1px solid orange;">neocities</a>
+						<a href="https://www.youtube.com/channel/UCBfjBEKsW8ChxbX3MEGrx2Q" target="_blank" style="background-color: #410000; color: #ffdad4; border-color: red; box-shadow: 2px 2px 0 0 red;">youtube</a>
+						<a href="https://www.last.fm/user/wiichicken" target="_blank" style="background-color: #410E0B; color: #F2B8B5; border-color: red; box-shadow: 2px 2px 0 0 red;">last.fm</a>
+						<a href="https://neocities.org/site/wiichicken" target="_blank" style="background-color: #2c1600; color: #ffdcbd; border-color: orange; box-shadow: 2px 2px 0 0 orange;">neocities</a>
+						<a href="https://letterboxd.com/wiichicken/" target="_blank" style="background-color: #002106; color: #6cff80; border-color: #6cff80; box-shadow: 2px 2px 0 0 #6cff80;">letterboxd</a>
+						<a href="https://www.backloggd.com/u/wiichicken/" target="_blank" style="background-color: #3f001b; color: #ffd9e1; border-color: #ea377a; box-shadow: 2px 2px 0 0 #ea377a;">backloggd</a>
+						
 					</div>
 					<header>
 						<h2 id="contact">CONTACT ME</h2>
@@ -374,7 +394,7 @@
 						<h1 id="site">THiS SiTE</h1>
 					</header>
 					<div class="box">
-						<p>The reason I discovered Neocities was Cookie Clicker. The old school I attended blocked Cookie Clicker, but someone hosted the whole game on Neocities, albeit an older version. I got bored and decided to check the homepage of Neocities, and tried making another page for students to play games on at school. That page has been lost to time.<br>Recently I started getting really into website designing again. I found it is much more fun being able to have control of almost everything instead of just posting pictures and videos to a static feed. I hope that the content of my site makes up for the lack of effects and styling on it.</p>
+						<p>The reason I discovered Neocities was Cookie Clicker. The old school I attended blocked Cookie Clicker, but someone hosted the whole game on Neocities, albeit an older version. I got bored and decided to check the homepage of Neocities, and tried making another page for students to play games on at school. That page hasn't been lost to time, but rather lost to memory.<br>Recently I started getting really into website designing again. I found it is much more fun being able to have control of almost everything instead of just posting pictures and videos to a static feed. I hope that the content of my site makes up for the lack of effects and styling on it.</p>
 						<p>I am hoping that soon this site can become a hub for my works and projects. I don't want things to be consistent across pages, I want it to be obvious how my design style has evolved (or devolved) over time.</p>
 					</div>
 					<div class="box">
@@ -467,17 +487,19 @@
 						<p>Written by Joshua McKenzie (<a href="https://codepen.io/iautomation">@iautomation</a>)<br><a href="https://codepen.io/iautomation/pen/VYexBz">https://codepen.io/iautomation/pen/VYexBz</a></p>
 					</div>
 				</div>
-				<div class="box" style="width: 86px; height: 100%; min-height: 100%; grid-column: 2/3;">
+				<div class="box" id="buttonbar" style="width: 86px; height: 100%; min-height: 100%; grid-column: 2/3;">
 					<div id="buttons">
-						<img src="resources/about/img/butt/markdown.png">
-						<img src="resources/about/img/butt/nonazi.gif">
-						<img src="resources/about/img/butt/1920.gif">
-						<img src="creative/graphics/buttons/tech/mobile/ios/jailbreak/sidestore.PNG">
-						<img src="creative/graphics/buttons/tech/mobile/ios/jailbreak/altstore.PNG">
-						<img src="resources/about/img/butt/3ds.png">
-						<a href="https://archive.org" target="_blank"><img src="resources/about/img/butt/internetarchive.gif"></a>
-						<img src="resources/about/img/butt/ifranview.gif">
-						<a href="https://yesterweb.org/no-to-web3/" target="_blank"><img src="resources/about/img/butt/keepfree.gif"></a>
+						<marquee style="background-color: #c4c5dd;"><a href="creative\graphics\buttons\index.html" target="_blank" style="color: #2d2f42;">click here to see buttons i made!</a></marquee>
+						<img src="resources/about/img/butt/markdown.png" loading="lazy">
+						<img src="resources/about/img/butt/nonazi.gif" loading="lazy">
+						<img src="resources/about/img/butt/1920.gif" loading="lazy">
+						<img src="creative/graphics/buttons/tech/mobile/ios/jailbreak/sidestore.PNG" loading="lazy">
+						<img src="creative/graphics/buttons/tech/mobile/ios/jailbreak/altstore.PNG" loading="lazy">
+						<img src="resources/about/img/butt/3ds.png" loading="lazy">
+						<a href="https://archive.org" target="_blank"><img src="resources/about/img/butt/internetarchive.gif" loading="lazy"></a>
+						<img src="resources/about/img/butt/ifranview.gif" loading="lazy">
+						<a href="https://yesterweb.org/no-to-web3/" target="_blank"><img src="resources/about/img/butt/keepfree.gif" loading="lazy"></a>
+						<img src="resources/about/img/butt/ezgif.gif" loading="lazy">
 					</div>
 				</div>
 			</div>
