@@ -4,157 +4,17 @@
     <title>WiiCHiCKEN'S iNTERNET DiRECTORY</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="sites.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
   <style>
-    body {
-      background-color: #000e11;
-      font-family: 'PT Sans', sans-serif;
-      margin-top: 10px;
-    }
-    #flex {
-      display: flex;
-      width: 900px;
-      margin: auto;
-    }
-    h1, h2, h3, .noth1 {
-      font-family: 'Martian Mono', monospace;
-      margin-block-start: 0;
-		  margin-block-end: 0;
-    }
-    a {
-      text-decoration: none;
-      background-color: #b3ebff;
-      color: #00677d;
-    }
-    img {image-rendering: pixelated;}
-    #chewTooth {
-      position: fixed;
-      background-image: url('https://api.mapbox.com/styles/v1/wiichicken/clsd8mma9031j01qq8uqdcxe7/static/28.5539,0,0.54,0/1280x1280@2x?access_token=pk.eyJ1Ijoid2lpY2hpY2tlbiIsImEiOiJjbHNkOHZmcG4wcTg5MmtzYjgweTE0ZHVsIn0.EvdZamD3MyA9v5sPV6fzyw');
-      background-size: cover;
-      left: 0;
-      right: 0;
-      z-index: -1;
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-    table {border-collapse: collapse;}
-    td {border: 1px solid #5ad5f9;}
-    th {
-      border: 1px solid #5ad5f9;
-      font-size: x-large;
-      font-family: 'Martian Mono', monospace;
-      overflow: hidden;
-    }
-    th p {
-      display: inline-block;
-      margin-right: 20px;
-    }
-    #urls table {
-      max-width: 747px;
-      width: 100%;
-      text-indent: initial;
-      margin-bottom: 10px;
-      background-color: #001f27;
-      color: #b4ebff;
-    }
-    tr {height: 16px;}
-    td {font-size: 13px;}
-    .icon {
-      width: 16px;
-      height: 16px;
-    }
-    .icon img {
-      display: flex;
-      width: 16px;
-      height: 16px;
-    }
     .buttonhell a {background: none;}
-    .sidebar {
-      margin-top: 50px;
-      margin-right: 15px;
-      width: 150px;
-      background-color: #3a4857;
-      color: #d5e4f7;
-      order: 1;
-    }
-    .sidebar a {
-      background-color: #233240;
-      color: #b9c8da;
-    }
-    .sidebar ul {
-      list-style-type: none;
-      margin: 3px;
-      padding-left: 5px;
-    }
-    .main {
-      margin-left: 150px;
-      max-width: 700px;
-      margin: auto;
-      order: 2;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-    }
-    header .box {
-      display: inline-block;
-      width: auto;
-    }
-    header .box, .box {
-      background-color: #00677d;
-      color: #b3ebff;
-      padding: 5px;
-      box-shadow: 0px 0px 15px 0px #b3ebff;
-      margin-bottom: 5px;
-      border: 1px solid #5ad5f9;
-    }
-    .box {
-      box-shadow: none;
-      background-color: #001f27;
-      color: #b4ebff;
-      width: 100%;
-      margin-bottom: 10px;
-      max-width: 688px;
-    }
-    header .lessvis {
-      background-color: #004e5f !important;
-      color: #b4ebff !important;
-      box-shadow: none;
-    }
-    .noth1 {font-size: 2em;}
-    .adder {
-      box-shadow: none !important;
-      opacity: 0.5;
-      background-color: unset;
-      width: 38px !important;
-      height: 38px !important;
-      text-align: center;
-    }
     .buttonhell {
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
     }
-    .glow {
-      box-shadow: 0px 0px 8px 1px #c1c4eb;
-      transition-duration: 0.5s;
-    }
-    .glow:hover {filter: blur(5px);}
-    @media only screen and (min-width: 900px) {
-      .main {flex: 1;}
-    }
-    @media only screen and (max-width: 900px) {
-      body, .main {width: 100%;}
-      #flex {flex-wrap: wrap;}
-      .sidebar {
-        width: 100%;
-        margin-top: 0;
-      }
-	  }
   </style>
   <div id="chewTooth"></div>
   <div id="flex">
@@ -204,24 +64,10 @@
   </table>
   </nav>
   <div class="main">
-    <header>
-      <div>
-        <div class="box" style="width: auto;">
-          <h1>DiRECTORY</h1>
-        </div>
-        <div class="box adder">
-          <p class="noth1">+</p>
-        </div>
-      </div>
-      <div>
-        <div class="box adder">
-          <p class="noth1">_</p>
-        </div>
-        <div class="box adder">
-          <p class="noth1">X</p>
-        </div>
-      </div>
-    </header>
+    <div id="directoryNav">
+      <a class="active mainnav" style="margin-right: 10px;">DiRECTORY</a>
+      <a class="mainnav" href="downloads.html" style="margin-right: 2px;">DOWNLOADS</a>
+    </div>
     <div class="box" style="padding: 0; display: flex; background-color: #352500; border-color: #f6be14; max-width: 698px;">
       <iframe src="sotfp/widget.html" style="width: 100%; height: 100px; border: none;"></iframe>
     </div>
@@ -322,7 +168,7 @@
         <p>websites with a lot of art (of any type of medium) in them. this doesn't do a good job at describing this category but trust me you'll quickly get the vibe</p>
         <div class="buttonhell">
           <a href="https://vidapon.net/"><img loading="lazy" alt="Vidapon's Artbox!" src="https://vidapon.net/global/netgraphics/Astertrail_button.gif"></a>
-          <a href="https://ninacti0n.neocities.org" target="_blank"><img loading="lazy" src="https://ninacti0n.neocities.org/assets/RS%20animated%20button.gif" alt="Ninacti0n's lab"></a>
+          <a href="https://ninacti0n.neocities.org" target="_blank"><img loading="lazy" src="button/artists/ninacti0n.gif" alt="Ninacti0n's lab"></a>
           <a href="https://38cautionzone.com" title="this site may contain mild nudity and blood"><img loading="lazy" class="glow" src="https://38cautionzone.com/88x31-38Caution.gif"></a>
           <a href="https://azoart-nexus.neocities.org"><img loading="lazy" src="https://azoart-nexus.neocities.org/img/azobutton.gif"></a>
           <a href="https://cinnamuff.neocities.org/"><img loading="lazy" src="https://cinnamuff.neocities.org/cinnamuffbtn.png"></a>

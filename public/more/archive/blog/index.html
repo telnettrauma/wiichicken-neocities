@@ -8,7 +8,12 @@
   </head>
   <body>
     <style>
-      body {background-color: #092017; margin: 0; font-family: 'PT Sans', sans-serif;}
+      body {
+        background-color: #092017;
+        margin: 0;
+        font-family: 'PT Sans', sans-serif;
+        overflow: hidden;
+      }
       a {
         text-decoration: none;
         background-color: #6bdbad;
@@ -62,6 +67,13 @@
         background-color: white;
         color: #88f8c8;
         height: 100vh;
+      }
+      button {
+        background-color: #001f2b;
+        color: #c0e8ff;
+        padding: 3px;
+        border: 1px solid #6fd2ff;
+        box-shadow: 2px 2px 0 0 #6fd2ff;
       }
       .popup {
         z-index: 1;
@@ -151,6 +163,7 @@
         <aside>
           <a href="/index.html">Home</a>
           <a onclick="changeSite('welcome.html')">Blog Home</a>
+          <br>
           <button onclick="shareCopyLink()">copy article url</button>
           <button id="myMixify" onclick="toggleFallingRocks()">show concepts</button>
           <div class="line"></div>
@@ -171,6 +184,7 @@
           </details>
           <h3 id="24m2">Feburary</h3>
           <ul>
+            <li class="social"><a onclick="changeSite('2024/2/artists.html')">10. why don't artists have sites</a> <span class="socialBadge">#social</span></li>
             <li><a onclick="changeSite('2024/2/headset.html')">6. the apple headset will die in a week</a></li>
             <li class="meta"><a onclick="changeSite('2024/2/4.html')">4. SAME SH!T, NOW ON GiT</a> <span class="metaBadge">#meta</span></li>
             <li class="meta code"><a onclick="changeSite('2024/2/git.html')">2. trying to use Git on my site</a> <span class="metaBadge">#meta</span><span class="codeBadge">#code</span></li>
@@ -213,6 +227,8 @@
             <li class="meta"><a onclick="changeSite('2023/november/30.html')">30. ALL ABOUT ME</a> <span class="metaBadge">#meta</span></li>
             <li class="meta"><a onclick="changeSite('2023/november/26.html')">26. HOMEPAGE REDESiGN</a> <span class="metaBadge">#meta</span></li>
           </ul>
+          <div class="line"></div>
+          <a onclick="changeSite('hell.html')">hell</a>
         </aside>
         <script>
           function changeSite(newSite) {
