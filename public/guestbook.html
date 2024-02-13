@@ -45,6 +45,9 @@
   }
   .home-desc {display: none;}
   #comments_list {width: 100%;}
+  #hcb_form_name::before {content: 'Name:';}
+  #hcb_form_website::before {content: 'Website:';}
+  #hcb_form_website::after {content: ' (optional)';}
 </style>
 <div id="heightCheck"></div>
 <div class="heading" id="poopBlock"></div>
@@ -53,14 +56,7 @@
 <script src="resources/nav/navbar.js"></script>
 <main>
   <div class="box">
-    <a href="index.html">RETURN</a>
     <h1>GUESTBOOK</h1>
-    <p>Fields:</p>
-    <ul>
-      <li>Name</li>
-      <li>Website (optional)</li>
-      <li>Message</li>
-    </ul>
   </div>
   <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
