@@ -94,7 +94,6 @@
 		mix-blend-mode: color-burn;
 	}
 	.blox a:hover::after {transform: scaleX(1);}
-	.blox a:hover {box-shadow: 0px 0px 10px 0px rgba(0, 255, 204, 0.50);}
 	.sidebox {
 		border: 1px solid red;
 		background-color: #2c151299;
@@ -211,8 +210,14 @@
 		96% {background-color: #570066; color:#faabff;}
 		100% {background-color: #690100; color:#ffb4a8;}
 	}
-	#messageTxt:hover {
+	#messageTxt:hover, #cornerInBox a:hover {
 		color: white;
+		box-shadow: none;
+	}
+	#cornerInBox a {
+		color: gray;
+		background-color: unset;
+		margin: 5px;
 	}
 	#navibox {
 		display: flex;
@@ -897,14 +902,20 @@
 			</div>
 			<div class="blox" style="background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,134,255,1) 100%); color: #bfe9ff; border: none; overflow: visible; height: 54px; padding: 1px;">
 				<div style="background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,134,255,1) 100%); filter: blur(10px); width: 100%; height: 54px;"></div>
-				<div class="middleBoy" style="position: relative; transform: translateY(-54px); background-color: black; height: 54px;">
-					<div class="square" style="background-color: red;"></div>
-					<div>
-						<p class="nomarblock" style="text-align: center;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
-						<p onclick="setRandomMessage()" id="messageTxt" class="nomarblock" style="font-size: 10px; text-align: center; cursor: pointer;">lorem ipsum i want to buy a car</p>
-						<script src="resources/widgets/home/msg.js"></script>
+				<div style="position: relative; transform: translateY(-54px); background-color: black; height: 54px; display: flex;" id="bottomOver">
+					<div class="middleBoy" style="width: 100%;">
+						<div class="square" style="background-color: red;"></div>
+						<div>
+							<p class="nomarblock" style="text-align: center;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
+							<p onclick="setRandomMessage()" id="messageTxt" class="nomarblock" style="font-size: 10px; text-align: center; cursor: pointer;">lorem ipsum i want to buy a car</p>
+							<script src="resources/widgets/home/msg.js"></script>
+						</div>
+						<div class="square" style="background-color: #00a2ff;"></div>
 					</div>
-					<div class="square" style="background-color: #00a2ff;"></div>
+					<div id="cornerInBox" style="width: 0%; display: flex; align-items: flex-end; justify-content: flex-end;">
+						<a href="credits.html">credits</a>
+						<a href="sitemap.html">sitemap</a>
+					</div>
 				</div>
 			</div>
 		</main>

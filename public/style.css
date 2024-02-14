@@ -25,7 +25,7 @@ a {text-decoration: none;}
   background: linear-gradient(0deg, rgba(0,212,255,0) 0%, rgba(0,0,0,1) 100%);
   pointer-events: none;
 }
-#heightCheck {height: 20px;}
+#heightCheck {height: 30px;}
 #inHead {
   display: flex;
   justify-content: center;
@@ -123,6 +123,7 @@ a {text-decoration: none;}
   z-index: 24;
   margin: 10px;
   display: flex;
+  top: 0;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -143,6 +144,7 @@ a {text-decoration: none;}
   animation: slideLeft 0.5s;
   flex-direction: column;
   justify-content: space-between;
+  top: 0;
 }
 #overSide a {
   margin: 25px;
@@ -188,7 +190,7 @@ a {text-decoration: none;}
 }
 @media only screen and (max-width: 650px) {
   #poopBlock {display: none;}
-  #heightCheck {height: 1px;}
+  #heightCheck {height: 75px;}
 }
 @media only screen and (max-height: 750px) {
   #overSide a {margin: 10px 25px 10px 25px !important;}
