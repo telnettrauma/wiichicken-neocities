@@ -152,6 +152,9 @@
 		right: 0;
 		background-color: #e2e2e5;
 		color: #1a1c1e;
+		margin: 2px;
+		border: 1px solid #1a1c1e;
+		box-shadow: 1px 1px 0 0;
 	}
 	#fri2 {display: none;}
 	@media only screen and (min-width: 900px) {
@@ -218,6 +221,7 @@
 		color: gray;
 		background-color: unset;
 		margin: 5px;
+		margin-left: 0;
 	}
 	#navibox {
 		display: flex;
@@ -388,14 +392,51 @@
 		box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50);
 		animation: glowy 10s infinite;
 	}
+	.clicky:active {
+		box-shadow: unset;
+		transform: translateY(2px);
+	}
+	.bring, #neorings-neoring-container a {
+		padding: 0 2px 0 2px;
+		font-family: 'Martian Mono', monospace;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-width: 12px;
+		font-weight: bold;
+	}
+	.bring {
+		background-color: #201a19 !important;
+		color: #ede0dd !important;
+		border: 1px solid #a08c89;
+		padding: 0 2px 0 2px;
+		font-family: 'Martian Mono', monospace;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-width: 12px;
+		box-shadow: 2px 2px 0 0 #a08c89;
+	}
+	.bring:hover {
+		background-color: #ede0dd !important;
+		border: 1px solid white;
+		color: #201a19 !important;
+		box-shadow: 0px 0px 3px 1px #ede0dd;
+	}
 	#neorings-neoring-container {
 		display: flex;
 		justify-content: center;
 	}
 	#neorings-neoring-container a {
-		background-color: #ffade4;
-		color: #5f0050;
+		background-color: #5f0050;
+		color: #ffade4;
 		margin: 2px;
+		border: 1px solid #af0095;
+		box-shadow: 2px 2px 0 0 #af0095;
+	}
+	#neorings-neoring-container a:active {
+		box-shadow: unset;
+		transform: translate(2px, 2px);
 	}
 	.animal {
 		width: 100%;
@@ -435,23 +476,6 @@
 		transition-duration: 0.2s;
 	}
 	.favrow a {background: none;}
-	.bring {
-		background-color: #201a19 !important;
-		color: #ede0dd !important;
-		border: 1px solid #a08c89;
-		padding: 0 2px 0 2px;
-		font-family: 'Martian Mono', monospace;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		width: 12px;
-	}
-	.bring:hover {
-		background-color: #ede0dd !important;
-		border: 1px solid white;
-		color: #201a19 !important;
-		box-shadow: 0px 0px 3px 1px #ede0dd;
-	}
 	#googgo div {display: flex;}
 	#googgo a {background: none !important;}
 	#mainsection {
@@ -692,10 +716,10 @@
 				</div>
 				<div class="sidebox-content">
 					<div id=neorings-neoring-container style="text-align: center;">
-						<a class="bring" href="https://neorings.org/api/webring/1/previous?via=https%3A%2F%2Fwiichicken.neocities.org"><strong>&lt;</strong></a>
+						<a class="bring" href="https://neorings.org/api/webring/1/previous?via=https%3A%2F%2Fwiichicken.neocities.org">&lt;</a>
 						<a href="https://neorings.org/webring/1/">Neoring</a>
 						<a id="randring" style="padding-left: 2px;" href="https://neorings.org/api/webring/1/random" title="Random">?</a>
-						<a class="bring" href="https://neorings.org/api/webring/1/next?via=https%3A%2F%2Fwiichicken.neocities.org"><strong>&gt;</strong></a>
+						<a class="bring" href="https://neorings.org/api/webring/1/next?via=https%3A%2F%2Fwiichicken.neocities.org">&gt;</a>
 					</div>
 				</div>
 			</div>
@@ -724,7 +748,7 @@
 			</div>
 			<nav id="youWillScroll">
 				<div class="row">
-					<div class="blox noblur" style="padding: 0; width: 80%; border-color: #bfbfbf;" id="navig">
+					<div class="blox noblur" style="padding: 1px; width: 80%; border: none;" id="navig">
 						<a id="a1" href="aboutme.html">ABOUT</a>
 						<a id="a2" href="creative/index.html">ART</a>
 						<a id="a3" href="more/archive/blog/index.html">BLOG</a>
@@ -939,7 +963,7 @@
 			</div>
 			<div class="sidebox reducedHidden" id="rateyourmom" style="background-color: #001a4099; border: 1px solid #2f5ea9;">
 				<div class="sidehead" style="background: linear-gradient(45deg, rgba(8,69,143,1) 0%, rgba(86,8,143,1) 100%); color: #d7e2ff;">
-					<p><strong>REVIEWS</strong></p>
+					<p><strong>REViEWS</strong></p>
 				</div>
 				<div class="sidebox-content" style="margin: 0px; padding: 0; display: flex; flex-direction: column;">
 					<iframe src="resources/widgets/rym.html" style="margin: 0; padding: 0; padding-top: 5px;" width="100%" height="20px" scrolling="no"></iframe>
