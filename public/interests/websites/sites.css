@@ -130,11 +130,7 @@ header .lessvis {
   color: #b4ebff !important;
   box-shadow: none;
 }
-.glow {
-  box-shadow: 0px 0px 8px 1px #c1c4eb;
-  transition-duration: 0.5s;
-}
-.glow:hover {filter: blur(5px);}
+.glow {box-shadow: 0px 0px 8px 1px #c1c4eb;}
 @media only screen and (min-width: 900px) {
   .main {flex: 1;}
 }
