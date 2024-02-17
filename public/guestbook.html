@@ -4,13 +4,13 @@
   <title>WiiCHiCKEN GUESTBOOK</title>
   <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="resources/nav/navbar.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
 <style>
   body {
     color: white;
-    background-color: black;
+    background-color: #001f2a;
     font-family: 'PT Sans', sans-serif;
   }
   h1, h2, .author-name {font-family: 'Martian Mono', monospace !important;}
@@ -31,6 +31,7 @@
     padding: 5px;
     border: 1px solid #bfe9ff;
     margin-bottom: 5px !important;
+    backdrop-filter: blur(5px);
   }
   #hcb_form_name_container input, .commentbox {
     background-color: #94ccff;
@@ -53,7 +54,7 @@
 <div class="heading" id="poopBlock"></div>
 <div id="sideButton" onclick="openSidey()"></div>
 <div id="overSide"></div>
-<script src="resources/nav/navbar.js"></script>
+<div id="chewTooth"></div>
 <main>
   <div class="box">
     <h1>GUESTBOOK</h1>
@@ -63,5 +64,6 @@
  <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24yGx%2F%2FtvDLdZd36wJD%2FW8V1"+"&opts=17414&num=10&ts=1705250630299");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
   <!-- end www.htmlcommentbox.com -->
 </main>
+<script src="resources/nav/navbar.js"></script>
 </body>
 </html>

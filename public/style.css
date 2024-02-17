@@ -3,12 +3,24 @@
 body {
   margin: 0;
   font-family: 'PT Sans', sans-serif;
+  animation: lessJarringLoading 0.3s;
 }
 h1, h2, h3, h4, h5, h6 {font-family: 'Martian Mono', monospace;}
 a {text-decoration: none;}
 .nomarblock {
   margin-block-start: 0;
   margin-block-end: 0;
+}
+#chewTooth {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  display: block;
+  background-image: url(/starry.gif);
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: luminosity;
 }
 
 /* navigation styles */

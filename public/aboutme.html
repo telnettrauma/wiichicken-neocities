@@ -4,13 +4,13 @@
 		<title>ALL ABOUT WiiCHiCKEN</title>
 		<link rel="icon" type="image/x-icon" href="/favicon.ico">
 		<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
-		<link href="resources/nav/navbar.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
 		<style>
 			body {
-				background-color: #001117;
+				background-color: #005f81;
 				margin: 0;
 				font-family: 'PT Sans', sans-serif;
 			}
@@ -62,9 +62,10 @@
 			}
 			header, .box {
 				width: auto;
-				background-color: #2a2e4d;
+				background-color: #2a2e4dcc;
 				color: #c1c4eb;
 				padding: 5px;
+				backdrop-filter: blur(5px);
 				box-shadow: 0px 0px 15px 0px #c1c4eb;
 				border: 1px solid #c1c4eb;
 				margin-bottom: 10px;
@@ -72,7 +73,7 @@
 			}
 			.box {
 				box-shadow: none;
-				background-color: #151b2c;
+				background-color: #151b2ccc;
 				color: #dde2f9;
 			}
 			.auto {flex-wrap: nowrap !important;}
@@ -159,7 +160,8 @@
 			}
 			.doTheThing p {
 				position: relative;
-				background-color: rgb(51, 51, 51);
+				background-color: #333333cc;
+				backdrop-filter: blur(5px);
 				border: 1px solid white;
 				color: white;
 				padding: 0.5vw;
@@ -221,7 +223,7 @@
 		<div class="heading" id="poopBlock"></div>
 		<div id="sideButton" onclick="openSidey()"></div>
 		<div id="overSide"></div>
-		<script src="resources/nav/navbar.js"></script>
+		<div id="chewTooth"></div>
 		<div id="getPaid" style="width: 100%; height: 100%; margin: 10px; max-width: 98vw; max-height: 95vh;">
 			<div id="scatterbox" class="doTheThing">
 				<p>W</p>
@@ -452,39 +454,6 @@
 							<p>you mean, the players? Do they have laptops?</p>
 						</div>
 					</div>
-					<header>
-						<h1 id="cred">CREDiTS</h1>
-					</header>
-					<div class="box">
-						<p>My website would of been possible without you, but you helped make it much cooler.</p>
-					</div>
-					<div class="box">
-						<h2>last.fm Now Playing Widget</h2>
-						<p>Created by septic (<a href="https://septic.lol/?z=/code/widgets.html">septic.lol</a>)<br>Code from: <a href="https://septic.lol/code/lastfm.js">https://septic.lol/code/lastfm.js</a></p>
-					</div>
-					<div class="box">
-						<h2>sadgrl.online</h2>
-						<p><strong>Sadgrl's layout builder</strong></p>
-						<p><a href="https://sadgrl.online/projects/layout-builder/">https://sadgrl.online/projects/layout-builder/</a><br>Parts of code generated with this tool are used throughout my site.</p>
-						<p><strong>Display last update and visitor count on Neocities</strong></p>
-						<p><a href="https://sadgrl.online/learn/articles/last-update-visitors" target="_blank">https://sadgrl.online/learn/articles/last-update-visitors</a><br>Used for visitor count and last updated widgets on the homepage</p>
-					</div>
-					<div class="box">
-						<h2>Bloople RSS 2 HTML</h2>
-						<p>Created by Brenton Fletcher (<a href="https://bloople.net">bloople.net</a>)<br>Used for widgets on the homepage, including recent blip, last Rate Your Music review, and last Letterboxd review.</p>
-					</div>
-					<div class="box">
-						<h2>HTML Analog Clock</h2>
-						<p>Written by imsushant12<br><a href="https://www.geeksforgeeks.org/how-to-create-analog-clock-using-html-css-and-javascript/" target="_blank">https://www.geeksforgeeks.org/how-to-create-analog-clock-using-html-css-and-javascript/</a></p>
-					</div>
-					<div class="box">
-						<h2>Using CSS to create a CRT</h2>
-						<p><a href="https://aleclownes.com/2017/02/01/crt-display.html" target="_blank">https://aleclownes.com/2017/02/01/crt-display.html</a></p>
-					</div>
-					<div class="box">
-						<h2>Pure css3 snowflakes animation</h2>
-						<p>Written by Joshua McKenzie (<a href="https://codepen.io/iautomation">@iautomation</a>)<br><a href="https://codepen.io/iautomation/pen/VYexBz">https://codepen.io/iautomation/pen/VYexBz</a></p>
-					</div>
 				</div>
 				<div class="box" id="buttonbar" style="width: 86px; height: 100%; min-height: 100%; grid-column: 2/3;">
 					<div id="buttons">
@@ -503,5 +472,6 @@
 				</div>
 			</div>
 		</div>
+		<script src="resources/nav/navbar.js"></script>
 	</body>
 </html>
