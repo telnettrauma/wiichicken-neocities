@@ -318,22 +318,19 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
 	}
 	#wiiLogo {
 		width: 416px;
 		height: 76px;
 	}
-	#line {
-		width: 100%;
-		height: 5px;
-		margin: 0px;
-		background: linear-gradient(270deg, #ff0000, #00a2ff);
-		background-size: 400% 400%;
-		animation: liner 10s ease infinite;
-	}
 	#alerta {
 		display: none;
-		background-color: red;
+		background-color: #750000;
 	}
 	#navig {
 		display: flex;
@@ -385,6 +382,12 @@
 		box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50);
 		animation: glowy 10s infinite;
 	}
+	#babyHello {
+		width: 100%;
+		height: 98px;
+		display: block;
+	}
+	#thisIsMyName {text-shadow: 0 0 10px black;}
 	.bring, #neorings-neoring-container a {
 		padding: 0 2px 0 2px;
 		font-family: 'Martian Mono', monospace;
@@ -486,11 +489,6 @@
 		background-color: #051f22;
 		color: #94f1ff;
 		padding: 5px;
-	}
-	@keyframes liner {
-		0%{background-position:0% 50%}
-		50%{background-position:100% 50%}
-		100%{background-position:0% 50%}
 	}
 	.img-marg {padding: 4px 4px 0 4px;}
 	.bilbo {
@@ -602,12 +600,16 @@
 		#personSighted {display: flex;}
 		#moresites, #webr {margin-right: 10px !important;}
 		#webr {margin-top: 0;}
+		#babyHello {height: 93px !important;}
 	}
 	.reducedVisible {display: none;}
 	@media (prefers-reduced-motion) {
 		.reducedHidden {display: none !important;}
 		.reducedVisible {display: block;}
 		* {animation: none !important;}
+		#babyHello {display: none;}
+		#tittle {position: fixed;}
+		.head {height: 100px;}
 	}
 	@media (prefers-reduced-transparency) {
 		.blox, .sidebox {backdrop-filter: blur(0px);}
@@ -730,26 +732,53 @@
 		</aside>
 		<main>
 			<div class="blox head">
+				<!-- background where the gradient is changing color and its awesome ooo -->
+				<svg id="babyHello" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<filter id="pixelate" x="0" y="0">
+						<feFlood x="5" y="5" height="4" width="8"/>    
+						<feComposite width="25" height="25"/>
+						<feTile result="a"/>
+						<feComposite in="SourceGraphic" in2="a" operator="in"/>
+						<feMorphology operator="dilate" radius="15"/>
+					</filter>
+					<defs>
+						<linearGradient id="Gradient1" x1="0" x2="1" y1="0" y2="1">
+							<stop class="stop1" offset="0%">
+								<animate attributeName="stop-color" values="red;orange;yellow;green;blue;indigo;violet;red" dur="10s" repeatCount="indefinite" />
+							</stop>
+							<stop class="stop2" offset="100%">
+								<animate attributeName="stop-color" values="blue;indigo;violet;red;orange;yellow;green;blue" dur="10s" repeatCount="indefinite" />
+							</stop>
+						</linearGradient>
+					</defs>
+					<style>
+						#rect1 {fill: url(#Gradient1);}
+						.stop1 {stop-color: red;}
+						.stop2 {stop-color: blue;}
+					</style>
+					<rect id="rect1" width="100%" height="100%" filter="url(#pixelate)" />
+				</svg>
 				<div id="tittle">
 					<div id="logocontent">
-						<p class="nomarblock mobileVisible headText" style="color: white;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN</p>
+						<p id="thisIsMyName" class="nomarblock mobileVisible headText" style="color: white;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN</p>
 						<div id="wiiLogo" class="mobileHidden" style="image-rendering: pixelated;">
 							<img src="logo.png">
 						</div>
 					</div>
 				</div>
-				<script>
-					const alertaChance = Math.floor(Math.random() * 5);
-					if (alertaChance === 3) {
-						const alertList = [ "THE NATIONAL WEATHER SERVICE HAS ISSUED A SEVERE THUNDERSTORM WARNING IN EFFECT FROM 12:23 PM UNTIL 2:00 PM. FOR YOUR PROTECTION MOVE TO AN INTERIOR ROOM ON THE LOWEST FLOOR OF A BUILDING.", "THE NATIONAL WEATHER SERVICE IN BIRMINGHAM HAS ISSUED A TORNADO WARNING UNTIL 2:45 AM. AT 2:06 AM CST...THE NATIONAL WEATHER SERVICE INDICATED A SEVERE THUNDERSTORM CAPABLE OF PRODUCING A TORNADO. THIS DANGEROUS STORM WAS LOCATED NEAR MEMPHIS...OR 8 MILES SOUTHWEST OF PICKENSVILLE... AND MOVING NORTHEAST AT 45 MPH. TORNADOES ARE DIFFICULT TO SEE AND CONFIRM AT NIGHT. TAKE COVER NOW.", "THE NATIONAL WEATHER SERVICE HAS ISSUED A SPECIAL MARINE WARNING UNTIL 9:15 AM. AT 7:13 AM EDT...DOPPLER RADAR INDICATED A LINE OF THUNDERSTORMS... CAPABLE OF PRODUCING DANGEROUS WINDS IN EXCESS OF 50 KNOTS AND LARGE HAIL FROM 24 NM NORTHWEST OF ALABASTER TO 43 NM SOUTHWEST OF ALABASTER...MOVING EAST AT 35 KNOTS. MARINERS CAN EXPECT GUSTY WINDS...LARGE HAIL...HIGH WAVES...DANGEROUS LIGHTNING...AND HEAVY RAINS. BOATERS SHOULD SEEK SAFE HARBOR IMMEDIATELY...UNTIL THESE STORMS PASS." ];
-						const selectedAlert = alertList[Math.floor(Math.random() * alertList.length)];
-						document.getElementById("alerta").innerHTML = "<marquee scrollamount='10'>" + selectedAlert + "</marquee>";
-						document.getElementById("alerta").style.display = "block";
-					}
-				</script>
-				<div id="alerta"><marquee>emergency alerts free</marquee></div>
-				<div id="line"></div>
 			</div>
+			<div id="alerta" class="blox" style="padding: 0; border-color: red; color: white;">
+				<marquee>emergency alerts free</marquee>
+			</div>
+			<script>
+				const alertaChance = Math.floor(Math.random() * 5);
+				if (alertaChance === 3) {
+					const alertList = [ "THE NATIONAL WEATHER SERVICE HAS ISSUED A SEVERE THUNDERSTORM WARNING IN EFFECT FROM 12:23 PM UNTIL 2:00 PM. FOR YOUR PROTECTION MOVE TO AN INTERIOR ROOM ON THE LOWEST FLOOR OF A BUILDING.", "THE NATIONAL WEATHER SERVICE IN BIRMINGHAM HAS ISSUED A TORNADO WARNING UNTIL 2:45 AM. AT 2:06 AM CST...THE NATIONAL WEATHER SERVICE INDICATED A SEVERE THUNDERSTORM CAPABLE OF PRODUCING A TORNADO. THIS DANGEROUS STORM WAS LOCATED NEAR MEMPHIS...OR 8 MILES SOUTHWEST OF PICKENSVILLE... AND MOVING NORTHEAST AT 45 MPH. TORNADOES ARE DIFFICULT TO SEE AND CONFIRM AT NIGHT. TAKE COVER NOW.", "THE NATIONAL WEATHER SERVICE HAS ISSUED A SPECIAL MARINE WARNING UNTIL 9:15 AM. AT 7:13 AM EDT...DOPPLER RADAR INDICATED A LINE OF THUNDERSTORMS... CAPABLE OF PRODUCING DANGEROUS WINDS IN EXCESS OF 50 KNOTS AND LARGE HAIL FROM 24 NM NORTHWEST OF ALABASTER TO 43 NM SOUTHWEST OF ALABASTER...MOVING EAST AT 35 KNOTS. MARINERS CAN EXPECT GUSTY WINDS...LARGE HAIL...HIGH WAVES...DANGEROUS LIGHTNING...AND HEAVY RAINS. BOATERS SHOULD SEEK SAFE HARBOR IMMEDIATELY...UNTIL THESE STORMS PASS." ];
+					const selectedAlert = alertList[Math.floor(Math.random() * alertList.length)];
+					document.getElementById("alerta").innerHTML = "<marquee scrollamount='10'>" + selectedAlert + "</marquee>";
+					document.getElementById("alerta").style.display = "block";
+				}
+			</script>
 			<nav id="youWillScroll">
 				<div class="row">
 					<div class="blox noblur" style="padding: 1px; width: 80%; border: none;" id="navig">
