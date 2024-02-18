@@ -462,9 +462,24 @@
 		width: 16px;
 		height: 16px;
 		image-rendering: pixelated;
-		transition-duration: 0.2s;
 	}
 	.favrow a {background: none;}
+	.favrow a img {
+		position: relative;
+		transition: 0.15s;
+		transform-origin: center;
+		pointer-events: none;
+	}
+	.favrow a:hover {
+		max-width: 16px;
+		max-height: 16px;
+	}
+	.favrow a:hover img {
+		pointer-events: none;
+		transform: scale(4);
+		filter: drop-shadow(0 0 10px black);
+		z-index: 3;
+	}
 	#googgo div {display: flex;}
 	#googgo a {background: none !important;}
 	#mainsection {
@@ -498,7 +513,7 @@
 	}
 	@keyframes glowy {
 		0%{box-shadow: 0px 0px 200px 50px rgba(0, 255, 161, 0.75); border: 1px solid rgba(0, 255, 161);}
-		50%{box-shadow: 0px 0px 200px 50px rgba(0, 126, 255. 0.75); border: 1px solid rgb(0, 126, 255);}
+		50%{box-shadow: 0px 0px 200px 50px rgba(0, 126, 255, 0.75); border: 1px solid rgb(0, 126, 255);}
 		100%{box-shadow: 0px 0px 200px 50px rgba(0, 255, 161, 0.75); border: 1px solid rgba(0, 255, 161);}
 	}
 	.accordion {cursor: pointer;}
@@ -916,6 +931,7 @@
 					<div id="cornerInBox" style="width: 0%; display: flex; align-items: flex-end; justify-content: flex-end;">
 						<a href="credits.html">credits</a>
 						<a href="sitemap.html">sitemap</a>
+						<a href="https://cd5k.net/tau/">&tau;</a>
 					</div>
 				</div>
 			</div>
