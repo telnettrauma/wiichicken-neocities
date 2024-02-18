@@ -48,14 +48,27 @@ th p {
   width: 100%;
   text-indent: initial;
   margin-bottom: 10px;
-  background-color: #001f27;
   color: #b4ebff;
 }
-tr {height: 16px;}
-td {font-size: 13px;}
+tr {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2px;
+}
+td {
+  font-size: 13px;
+  display: block;
+  margin-left: 2px;
+  background-color: #001f27;
+}
+/* the first element in a table will not have padding */
+tr td:first-child {margin-left: 0 !important;}
+tr td:nth-child(3n) {width: 100%;}
 .icon {
+  margin-left: 0;
   width: 16px;
-  height: 16px;
+  display: flex;
+  align-items: center;
 }
 .icon img {
   display: flex;
@@ -68,7 +81,9 @@ td {font-size: 13px;}
   width: 150px;
   background-color: #3a4857;
   color: #d5e4f7;
+  border: 1px solid #d5e4f7;
   order: 1;
+  padding-left: 5px;
 }
 .sidebar a {
   background-color: #233240;
