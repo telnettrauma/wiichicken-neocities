@@ -1,0 +1,48 @@
+<head>
+	<link href="/style.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<script>
+		// code generated with the MERP feed embed https://merp.ichi.city/feed-embed/
+		fetch("https://wiggle.monster/more/archive/blog/feed.xml")
+		.then(r => r.text())
+		.then(s => new DOMParser().parseFromString(s, "text/xml"))
+		.then(doc => {
+		title = doc.querySelector('title').textContent
+		posts = []
+		doc.querySelectorAll('item').forEach( e => {
+			posts.push({
+				title: e.querySelector('title').textContent,
+				link: e.querySelector('link').textContent
+			})
+		})
+		const feed = document.querySelector("#feed")
+		const ul = document.createElement('ul')
+		posts.forEach(p => {
+			const li = document.createElement('li')
+			const a = document.createElement('a')
+			a.appendChild(document.createTextNode(p.title))
+			a.href = p.link
+			a.target = '_blank';
+			li.appendChild(a)
+			ul.appendChild(li)
+		})
+		feed.appendChild(ul)
+	});
+	</script>
+	<style>
+		body {margin: 0;}
+		ul {
+			margin-block-start: 0;
+			margin-block-end: 0;
+			padding-inline-start: 0;
+		}
+		li {display: block;}
+		a {
+			color: #cde5ff;
+			text-decoration: none;
+		}
+	</style>
+	<div id="feed"></div>
+</body>

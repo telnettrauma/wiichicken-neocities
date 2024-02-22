@@ -408,13 +408,27 @@
 		justify-content: space-between;
 		min-width: 12px;
 		box-shadow: 2px 2px 0 0 #a08c89;
+		transition-duration: 0s !important;
+		position: relative;
+		width: auto;
+	}
+	.bring:hover, .bring:active {
+		background-color: #ede0dd !important;
+		border: 1px solid white;
+		color: #201a19 !important;
 	}
 	.bring:hover {
 		background-color: #ede0dd !important;
 		border: 1px solid white;
 		color: #201a19 !important;
-		box-shadow: 0px 0px 3px 1px #ede0dd;
+		box-shadow: 1px 1px 0 0 #a08c89 !important;
+		transform: translate(1px, 1px);
 	}
+	.bring:active {
+		transform: translate(2px, 2px);
+		box-shadow: 0 0 !important;
+	}
+	.bring::after {display: none;}
 	#neorings-neoring-container {
 		display: flex;
 		justify-content: center;
@@ -816,10 +830,20 @@
 						<img src="media/home/status.png" class="blurry" style="height: 200px; width: 200px; bottom: 0;">
 					</div>
 				</div>
-				<div class="blox" style="grid-column: 2 / 2; grid-row: 1; margin-bottom: 0;">
-					<p>hello! welcome to my brand new shiny website! a lot of the subpages are still a work in progress, but don't let that stop you from having a look around!</p>
+				<div class="blox" style="grid-column: 2/3; grid-row: 1; margin-bottom: 0; padding: 0; border-color: #E6E1E5; background-color: #1C1B1Fcc;">
+					<div id="clockContainer">
+						<div id="thatThingInTheCenterOfaClock"></div>
+						<div id="hour"></div>
+						<div id="minute"></div>
+						<div id="second"></div>
+					</div>
+					<script src="resources/widgets/home/clock.js"></script>
+					<link href="resources/widgets/home/clock.css" rel="stylesheet" type="text/css" media="all">
 				</div>
-				<div class="blox" style="grid-column: 2 / 2; grid-row: 2;">
+				<div class="blox" style="grid-column: 3 / 4; grid-row: 1; margin-bottom: 0;">
+					<p class="nomarblock">hello! welcome to my brand new shiny website! a lot of the subpages are still a work in progress, but don't let that stop you from having a look around!</p>
+				</div>
+				<div class="blox" style="grid-column: 2 / 4; grid-row: 2;">
 					<h1>aboutMe</h1>
 					<ul>
 						<li>i am born and raised american. sad, i know</li>
@@ -844,7 +868,7 @@
 						<div style="width: 100%;">
 							<h2 style="margin: 0;">FACE ID</h2>
 							<p class="nomarblock">A series of abstract, colorful wallpapers that I made for my phone.</p>
-							<a href="creative/gallery/faceid.html">View</a>
+							<a class="bring" style="width: min-content;" href="creative/gallery/faceid.html">View</a>
 						</div>
 					</div>
 				</div>
@@ -856,7 +880,7 @@
 						<div style="width: 100%;">
 							<p class="headText nomarblock" style="font-size: 17px;">Kingdom Hearts Key</p>
 							<p class="nomarblock" style="font-size: 20px;">JPEGMAFIA</p>
-							<a href="interests/music/favarchive.html">Current Fav Song Archive</a>
+							<a class="bring" href="interests/music/favarchive.html">Current Fav Song Archive</a>
 						</div>
 					</div>
 				</div>
@@ -899,7 +923,7 @@
 			</div>
 			<div class="blox" id="whatsheader" style="border: 1px solid #3978c6;">
 				<div class="accordion">
-					<h1>WHAT'S NEW</h1>
+					<h1>siteUpdates</h1>
 					<div>
 						<h3 style="margin: 0; font-size: 15px;"><strong>EL DiRECTORY</strong></h3>
 						<p style="margin-top: 0; margin-bottom: 2px;"><strong>Feburary 16, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
@@ -928,11 +952,16 @@
 					});
 				}
 			</script>
+			<!-- TODO: make this better and less out of place in the bento layout -->
+			<div class="blox" style="height: 100px;">
+				<h2>blogPosts</h2>
+				<iframe src="resources/widgets/home/newposts.html" style="width: 100%; height: 200px;"></iframe>
+			</div>
 			<div id="mybum" class="blox" style="border: 1px solid #9462bd;">
 				<h1>MY BUTTON</h1>
 				<img src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
 				<textarea rows="2"><a href="https://wiichicken.neocities.org/"><img src="https://wiichicken.neocities.org/button.gif" style="image-rendering: pixelated;" alt="Visit wiichicken's website"></a></textarea>
-				<p style="margin-block-start: 0; margin-block-end: 0;">please hotlink, unless you really dont want to!</p>
+				<p style="margin-block-start: 0; margin-block-end: 0;">hotlink, or don't hotlink! the choice is yours!</p>
 			</div>
 			<div id="signguest" class="blox" style="border: 1px solid #ff8875;">
 				<p>Remember to <a style="cursor: pointer !important;" href="guestbook.html">sign the guestbook</a> before you go!</p>
@@ -966,14 +995,6 @@
 			</div>
 		</main>
 		<aside id="rightSidebar">
-			<div class="sidebox" id="piclog">
-				<div class="sidehead">
-					<p><strong>PICLOG</strong></p>
-				</div>
-				<div class="sidebox-content" style="display: flex; padding: 0;">
-					<a href="https://piclog.blue/profile.php?id=312"><img src="https://piclog.blue/latest.php?id=312" style="max-width: 200px;"></a>
-				</div>
-			</div>
 			<!-- last.fm scrobble widget -->
 			<div class="sidebox" id="scrobblebox" style="color: white;">
 				<div class="sidehead">
@@ -1001,13 +1022,6 @@
 				</div>
 				<div class="sidebox" id="lastUpdated" style="overflow: visible; margin: 0; border-color: #f5ddda;">
 					<div class="sidehead" style="display: flex; background: linear-gradient(90deg, #534341 0%, #665949 100%); color: #f5ddda;">
-						<div id="clockContainer">
-							<div id="hour"></div>
-							<div id="minute"></div>
-							<div id="second"></div>
-						</div>
-						<script src="resources/widgets/home/clock.js"></script>
-						<link href="resources/widgets/home/clock.css" rel="stylesheet" type="text/css" media="all">
 						<p style="display: inline-block; padding-left: 4px;">UPDATED</p>
 					</div>
 					<div class="sidebox-content" style="text-align: center; padding: 0;">

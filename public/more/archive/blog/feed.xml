@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<atom:link href="https://wiggle.monster/more/archive/blog/feed.xml" rel="self" type="application/rss+xml"/>
+		<title>WiiCHiCKEN'S AWESOME BLOG</title>
+		<link>https://wiggle.monster</link>
+		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
+		<language>en-us</language>
+		<item>
+			<title>EL DiRECTORY</title>
+			<pubDate>Fri, 16 Feb 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/2/16.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/2/16.html</guid>
+			<description>I have given the website directory a huge update. Not only is there now a ton more links, but there are...</description>
+		</item>
+		<item>
+			<title>why instagram keeps coming back</title>
+			<pubDate>Thu, 15 Feb 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/2/insta.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/2/insta.html</guid>
+			<description>Almost everyone can agree that Instagram is the worst social networking platform. So many...</description>
+		</item>
+		<item>
+			<title>the apple headset will die in a week</title>
+			<pubDate>Tue, 6 Feb 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/2/headset.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/2/headset.html</guid>
+			<description>Wearing the Apple Vision Pro is like wearing a Rolex. Yeah, it has a function, but do you really care about that?</description>
+		</item>
+	</channel>
+</rss>
