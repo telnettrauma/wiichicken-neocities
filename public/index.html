@@ -69,21 +69,31 @@
 	.lefty {margin-left: 10px;}
 	.blox a {
 		color: #d3bfe6;
+		position: relative;
+	}
+	.blox a::after {
+		content: '';
 		background: linear-gradient(90deg, #00639b 0%, #7e525e 100%);
+		height: 1px;
+		width: 100%;
 		background-position: bottom;
 		background-size: 100% 1px;
 		background-repeat: no-repeat;
+		position: absolute;
+		bottom: 0;
+		left: 0;
 	}
-	.blox a:hover {animation: happyHover 0.3s;}
+	.blox a:hover::after {animation: happyHover 0.3s;}
 	@keyframes happyHover {
 		0% {background-size: 100% 1px; background-position: 100% 100%;}
 		50% {background-size: 0% 1px; background-position: 100% 100%;}
 		51% {background-position: 0% 100%;}
 		100% {background-size: 100% 1px; background-position: 0% 100%;}
 	}
-	.noBg {background: none !important;}
-	.blox h1, .blox h2 {background: linear-gradient(90deg, rgba(205,229,255,1) 0%, rgba(238,220,255,1) 100%);}
-	.gradientText, .blox h1, .blox h2 {
+	.noBg::after {display: none
+		;}
+	.blox h1, .blox h2, .blox h3 {background: linear-gradient(90deg, rgba(205,229,255,1) 0%, rgba(238,220,255,1) 100%);}
+	.gradientText, .blox h1, .blox h2, .blox h3 {
 		background-clip: text !important;
 		color: transparent;
 	}
@@ -820,7 +830,7 @@
 				<div class="blox" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
 					<div style="display: flex; flex-wrap: wrap;" id="statusCard">
 						<div id="statuscafe" style="padding: 5px; background-color: #94ccff; width: 100%; min-height: 85px;">
-							<a href="https://status.cafe/users/cringe" target="_blank">
+							<a href="https://status.cafe/users/cringe" class="noBg" target="_blank">
 								<div id="statuscafe-username"></div>
 								<div id="statuscafe-content"></div>
 							</a>
@@ -845,7 +855,7 @@
 					<p class="nomarblock">hello! welcome to my brand new shiny website! a lot of the subpages are still a work in progress, but don't let that stop you from having a look around!</p>
 				</div>
 				<div class="blox" style="grid-column: 2 / 4; grid-row: 2;">
-					<h1>aboutMe</h1>
+					<h2>aboutMe</h2>
 					<ul>
 						<li>i am born and raised american. sad, i know</li>
 						<li>my favorite color is <span style="color: #00ffcc;">aquamarine</span>, but i also like using <span style="color: red;">red</span> and <span style="color: #00ccff;">blue</span> gradients, in a non-patriotic way</li>
@@ -859,7 +869,7 @@
 			</div>
 			<div class="row">
 				<div class="blox" style="width: 50%;">
-					<h1>latestArt</h1>
+					<h2>latestArt</h2>
 					<div style="display: flex; margin-left: 5px;">
 						<div style="display: flex; align-items: center; margin-right: 10px;">
 							<img id="artfeat" src="https://i.imgur.com/6TeRXJd.png" width="100px" height="100px" style="image-rendering: pixelated; display: inline-block; box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);">
@@ -867,14 +877,14 @@
 							<div class="afterfeat" style="height: 90px; width: 2px; background: linear-gradient(45deg, rgba(189,0,128,1) 0%, rgba(0,232,179,1) 100%);"></div>
 						</div>
 						<div style="width: 100%;">
-							<h2 style="margin: 0;">FACE ID</h2>
+							<h3 style="margin: 0;">FACE ID</h3>
 							<p class="nomarblock">A series of abstract, colorful wallpapers that I made for my phone.</p>
 							<a class="bring" style="width: min-content;" href="creative/gallery/faceid.html">View</a>
 						</div>
 					</div>
 				</div>
 				<div class="blox lefty" style="width: 50%;">
-					<h1>curr.FavSong</h1>
+					<h2>curr.FavSong</h2>
 					<div style="display: flex; margin: 0 0 0 5px;">
 						<img src="https://lastfm.freetls.fastly.net/i/u/500x500/1c8c36ec7bddcbd34bb4b2de8849c37e.jpg" width="100px" height="100px" style="margin-right: 10px; border: 1px solid #cde5ff; z-index: 1;">
 						<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/500x500/1c8c36ec7bddcbd34bb4b2de8849c37e.jpg" width="100px" height="100px" style="margin-right: 10px; border: 1px solid #cde5ff; mix-blend-mode: screen;">
@@ -887,7 +897,7 @@
 				</div>
 			</div>
 			<div class="blox">
-				<h1>toDo</h1>
+				<h2>toDo</h2>
 				<ul>
 					<li>style subpages
 						<ul>
@@ -904,7 +914,7 @@
 			</div>
 			<div class="row">
 				<div class="blox" style="width: 100%;">
-					<h1>contactMe</h1>
+					<h2>contactMe</h2>
 					<ul>
 						<li><strong>discord</strong>: wiichicken#0040 <a href="https://discord.gg/aeYHWsw" target="_blank">server</a> (don't join it sucks)</li>
 						<li><strong>email</strong>: <a href="mailto:vimeoofficial@gmail.com" target="_blank">vimeoofficial@gmail.com</a></li>
@@ -924,13 +934,11 @@
 			</div>
 			<div class="blox" id="whatsheader" style="border: 1px solid #3978c6;">
 				<div class="accordion">
-					<h1 class="gradientText" style="background: linear-gradient(90deg, rgba(193,232,255,1) 0%, rgba(229,222,255,1) 100%);">siteUpdates</h1>
-					<div>
-						<h3 style="margin: 0; font-size: 15px;"><strong>EL DiRECTORY</strong></h3>
-						<p style="margin-top: 0; margin-bottom: 2px;"><strong>Feburary 16, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
-					</div>
+					<h2 class="gradientText" style="background: linear-gradient(90deg, rgba(193,232,255,1) 0%, rgba(229,222,255,1) 100%);">siteUpdates</h2>
+					<h3 style="margin: 0; font-size: 15px;"><strong>EL DiRECTORY</strong></h3>
+					<p style="margin-top: 0; margin-bottom: 2px;"><strong>Feburary 16, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
 				</div>
-				<div class="panel" style="padding: 5px;">
+				<div class="panel">
 					<h2 style="margin-bottom: 2px;">EL DiRECTORY</h2>
 					<p id="updatedate">Feburary 16, 2024</p>
 					<p>I have given the website directory a huge update. Not only is there now a ton more links, but there are also work in progress pages for browsers and iOS apps (include sideloaded ones). I am working on expanding the page slowly but surely, but so far I'm proud of how it's came along.<br>As an experimental way of featuring sites, I have also launched "Site of the fiscal period", which is actually just updated whenever I feel like it. It's just a way for me to feature sites that I think you should check out. I don't know how this will go along with buttons and favicons on the homepage, but I don't think about anything.<br>So, anyways, I'm just working on adding more and more stuff. I think next I will work on adding doodles and stuff to the art page, I don't know yet. I might also start committing less, but still updating the site alot.<br>That is all I have to say for now. Remember to complete your daily Wordle.</p>
@@ -954,20 +962,20 @@
 				}
 			</script>
 			<div id="mybum" class="blox" style="border: 1px solid #9462bd;">
-				<h1 class="gradientText" style="background: linear-gradient(90deg, rgba(233,221,255,1) 0%, rgba(255,217,226,1) 100%);">myButton</h1>
-				<img src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
-				<textarea rows="2"><a href="https://wiichicken.neocities.org/"><img src="https://wiichicken.neocities.org/button.gif" style="image-rendering: pixelated;" alt="Visit wiichicken's website"></a></textarea>
+				<h2 class="gradientText" style="background: linear-gradient(90deg, rgba(233,221,255,1) 0%, rgba(255,217,226,1) 100%);">myButton</h2>
+				<img loading="lazy" alt="" src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
+				<textarea rows="2"><a href="https://wiichicken.neocities.org/"><img loading="lazy" src="https://wiichicken.neocities.org/button.gif" style="image-rendering: pixelated;" alt="Visit wiichicken's website"></a></textarea>
 				<p style="margin-block-start: 0; margin-block-end: 0;">hotlink, or don't hotlink! the choice is yours!</p>
 			</div>
 			<div id="signguest" class="blox" style="border: 1px solid #ff8875;">
-				<p>Remember to <a style="cursor: pointer !important;" href="guestbook.html">sign the guestbook</a> before you go!</p>
+				<p>Remember to <a class="noBg" style="cursor: pointer !important;" href="guestbook.html">sign the guestbook</a> before you go!</p>
 			</div>
 			<div class="row" id="littleBuddies">
-				<div style="background-color: #001f279b; border: 1px solid #00bbff;" class="blox animal">
-					<a href="https://wobble.town/visit/1517"><img src="https://wobble.town/visit/1517/wobble.gif"></a>
+				<div style="background-color: #0021119b; border: 1px solid #75daa2;" class="blox animal">
+					<a class="noBg" href="https://wobble.town/visit/1517"><img loading="lazy" src="https://wobble.town/visit/1517/wobble.gif" alt="Wobble"></a>
 				</div>
-				<div class="blox animal lefty" style="background-color: #1619379b; border-color: #5a5cd6;">
-					<a href="https://tamanotchi.world/9395c"><img src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!"></a>
+				<div class="blox animal lefty">
+					<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!"></a>
 				</div>
 			</div>
 			<div class="blox" style="background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,134,255,1) 100%); color: #bfe9ff; border: none; overflow: visible; height: 54px; padding: 1px;">
