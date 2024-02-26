@@ -3,7 +3,6 @@
 body {
   margin: 0;
   font-family: 'PT Sans', sans-serif;
-  animation: lessJarringLoading 0.3s;
 }
 h1, h2, h3, h4, h5, h6 {font-family: 'Martian Mono', monospace;}
 a {
