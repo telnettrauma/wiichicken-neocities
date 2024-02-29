@@ -32,6 +32,10 @@ a {
   height: 100%;
   mix-blend-mode: luminosity;
 }
+::selection {
+  background-color: var(--dark-tertiary);
+  color: var(--dark-on-tertiary);
+}
 
 /* navigation styles */
 

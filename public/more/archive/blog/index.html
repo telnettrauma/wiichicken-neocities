@@ -10,6 +10,10 @@
 	</head>
 	<body>
 		<style>
+			* {
+				--dark-tertiary: #f6b8ae;
+				--dark-on-tertiary: #4c2520;
+			}
 			body {
 				background-color: #350040;
 				font-family: 'PT Sans', sans-serif;
@@ -127,26 +131,30 @@
 			</div>
 			<div class="box">
 				<details>
-					<summary>Jump to year:</summary>
-					<ul>
-						<li><a href="#24">2024</a></li>
-						<li><a href="#23">2023</a></li>
-					</ul>
+					<summary>Jump to:</summary>
+					<details>
+						<summary>2024</summary>
+						<ul>
+							<li><a href="#24m1">January</a></li>
+							<li><a href="#24m2">Feburary</a></li>
+						</ul>
+					</details>
+					<details>
+						<summary>2023</summary>
+						<ul>
+							<li><a href="#23m11">November</a></li>
+							<li><a href="#23m12">December</a></li>
+						</ul>
+					</details>
 				</details>
 			</div>
 			<div class="box">
 				<h2 id="24">2024</h2>
-				<details>
-					<summary>Jump to month:</summary>
-					<ul>
-						<li><a href="#24m1">January</a></li>
-						<li><a href="#24m2">Feburary</a></li>
-					</ul>
-				</details>
 			</div>
 			<div class="box">
 				<h3 id="24m2">Feburary</h3>
 				<ul>
+					<li class="rant social"><a target="_blank" href="2024/2/x.html">29. i updated Twitter to X</a> <span class="rantBadge">#rant</span><span class="socialBadge">#social</span></li>
 					<li><a target="_blank" href="2024/2/neko.html">25. NekoWeb</a></li>
 					<li class="meta"><a target="_blank" href="2024/2/16.html">16. EL DiRECTORY</a> <span class="metaBadge">#meta</span></li>
 					<li class="concept"><a target="_blank" href="concepts/2024/2/mew.html">15. New window Functions Coming to Javascript</a></li>
@@ -175,13 +183,6 @@
 			</div>
 			<div class="box">
 				<h2 id="23">2023</h2>
-				<details>
-					<summary>Jump to month:</summary>
-					<ul>
-						<li><a href="#23m12">December</a></li>
-						<li><a href="#23m11">November</a></li>
-					</ul>
-				</details>
 			</div>
 			<div class="box">
 				<h3 id="23m12">December</h3>

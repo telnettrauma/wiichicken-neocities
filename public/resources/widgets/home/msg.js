@@ -51,7 +51,14 @@ var messageList = [ 'lorem ipsum i want to buy a car',
 'what if imoji were real',
 'ur finger is bleeding',
 'wth is a framework',
-'oo oo, temu temu'
+'oo oo, temu temu',
+'gen z\'s cancelling spongebob? oh, honey...',
+'Click to add text',
+'la la poopsie',
+'eating granola, ama',
+'i need a 6 month fishing trip twice a year',
+'gmail has gone woke?!',
+'i .gitignore my wife'
 ]
 function setRandomMessage() {
   document.getElementById('messageTxt').innerHTML = messageList[Math.floor(Math.random() * messageList.length)];

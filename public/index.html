@@ -11,6 +11,10 @@
 </head>
 <body>
 <style>
+	* {
+		--dark-tertiary: #d2bfe7;
+		--dark-on-tertiary: #382a49;
+	}
 	body {
 		background-color: black;
 		color: white;
@@ -21,10 +25,7 @@
 		animation: dcAnim 10s linear infinite;
 		mix-blend-mode: unset !important;
 	}
-	h1, h2, h3, h4 {
-		font-family: 'Martian Mono', monospace;
-		margin: 0;
-	}
+	h1, h2, h3, h4 {margin: 0;}
 	a {text-decoration: none;}
 	aside {
 		width: 300px;
@@ -963,7 +964,7 @@
 			<div id="mybum" class="blox" style="border: 1px solid #9462bd;">
 				<h2 class="gradientText" style="background: linear-gradient(90deg, rgba(233,221,255,1) 0%, rgba(255,217,226,1) 100%);">myButton</h2>
 				<img loading="lazy" alt="" src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
-				<textarea rows="2"><a href="https://wiichicken.neocities.org/"><img loading="lazy" src="https://wiichicken.neocities.org/button.gif" style="image-rendering: pixelated;" alt="Visit wiichicken's website"></a></textarea>
+				<textarea rows="2"><a href="https://wiggle.monster"><img loading="lazy" src="https://wiggle.monster/button.gif" style="image-rendering: pixelated;" alt="Visit wiichicken's website"></a></textarea>
 				<p style="margin-block-start: 0; margin-block-end: 0;">hotlink, or don't hotlink! the choice is yours!</p>
 			</div>
 			<div id="signguest" class="blox" style="border: 1px solid #ff8875;">
@@ -980,14 +981,14 @@
 			<div class="blox" style="background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,134,255,1) 100%); color: #bfe9ff; border: none; overflow: visible; height: 54px; padding: 1px;">
 				<div style="background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,134,255,1) 100%); filter: blur(10px); width: 100%; height: 54px;"></div>
 				<div style="position: relative; transform: translateY(-54px); background-color: black; height: 54px; display: flex;" id="bottomOver">
-					<div class="middleBoy" style="width: 100%;">
-						<div class="square" style="background-color: red;"></div>
-						<div>
+					<div class="middleBoy" style="width: 100%; flex-direction: column;">
+						<div style="display: flex;">
+							<div class="square" style="background-color: red;"></div>
 							<p class="nomarblock" style="text-align: center;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
-							<p onclick="setRandomMessage()" id="messageTxt" class="nomarblock" style="font-size: 10px; text-align: center; cursor: pointer;">lorem ipsum i want to buy a car</p>
-							<script src="resources/widgets/home/msg.js"></script>
+							<div class="square" style="background-color: #00a2ff;"></div>
 						</div>
-						<div class="square" style="background-color: #00a2ff;"></div>
+						<p onclick="setRandomMessage()" id="messageTxt" class="nomarblock" style="font-size: 10px; text-align: center; cursor: pointer;">lorem ipsum i want to buy a car</p>
+						<script src="resources/widgets/home/msg.js"></script>
 					</div>
 					<div id="cornerInBox" style="width: 0%; display: flex; align-items: flex-end; justify-content: flex-end;">
 						<a class="noBg" href="credits.html">credits</a>
