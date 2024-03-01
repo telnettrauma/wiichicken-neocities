@@ -1,32 +1,32 @@
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 </head>
 <div class="content" id="moneyOnMind" style="margin: 0; overflow: hidden; position: relative;">
-  <!-- now playing script from https://septic.lol/?z=/code/widgets.html -->       
-  <div style="position: relative; background-color: rgba(49, 49, 49, 0.4); padding: 5px;" id="hiPoopFart">
-    <section id="listen" user="wiichicken">CANT FETCH last listened to</section>
-    <a href="https://www.last.fm/user/wiichicken" id="artworklink" target="_blank" style="background: none !important; display: flex; align-items: center;">
-      <div id="coverart" style="display: flex; align-items: center;">
-        <img id="artwork" src="" style="display: inline-block; width: 40px; height: 40px; box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);" onError="this.onerror=null;this.src='med/blank.png';">
-        <img id="artwork1" class="afterfeat" src="" style="width: 3px; height: 35px;">
-        <img id="artwork2" class="afterfeat" src="" style="width: 2px; height: 30px;">
-        <img id="artwork3" class="afterfeat" src="" style="height: 25px; width: 1px;">
-        <img id="artwork4" class="afterfeat" src="" style="height: 20px; width: 1px;">
-      </div>
-      <p id="track" style="color: white; white-space: nowrap; overflow: hidden; margin: 0; padding-left: 2px;"></p>
-    </a>
-  </div>
+	<!-- now playing script from https://septic.lol/?z=/code/widgets.html -->       
+	<div style="position: relative; background-color: rgba(49, 49, 49, 0.4); padding: 5px;" id="hiPoopFart">
+		<section id="listen" user="wiichicken">CANT FETCH last listened to</section>
+		<a href="https://www.last.fm/user/wiichicken" id="artworklink" target="_blank" style="background: none !important; display: flex; align-items: center;">
+			<div id="coverart" style="display: flex; align-items: center;">
+				<img id="artwork" src="" style="display: inline-block; width: 40px; height: 40px; box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);" onError="this.onerror=null;this.src='med/blank.png';">
+				<img id="artwork1" class="afterfeat" src="" style="width: 3px; height: 35px;">
+				<img id="artwork2" class="afterfeat" src="" style="width: 2px; height: 30px;">
+				<img id="artwork3" class="afterfeat" src="" style="height: 25px; width: 1px;">
+				<img id="artwork4" class="afterfeat" src="" style="height: 20px; width: 1px;">
+			</div>
+			<p id="track" style="color: white; white-space: nowrap; overflow: hidden; margin: 0; padding-left: 2px;"></p>
+		</a>
+	</div>
 </div>
 <style>
-  body {
-    font-family: 'PT Sans', sans-serif;
-    margin: 0;
-    color: white;
-  }
-  p {text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);}
-  #listen {text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);}
-  a {text-decoration: none;}
-  #coverart {transition-duration: 0.5s;}
+	body {
+		font-family: 'PT Sans', sans-serif;
+		margin: 0;
+		color: white;
+	}
+	p {text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);}
+	#listen {text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);}
+	a {text-decoration: none;}
+	#coverart {transition-duration: 0.5s;}
 	#coverart:hover {margin-right: 10px;}
 	#coverart:hover .afterfeat {
 		width: 30px !important;
@@ -41,12 +41,12 @@
 		transition-duration: 0.5s;
 		object-fit: cover;
 	}
-  #moneyOnMind {
+	#moneyOnMind {
 		background-size: cover;
 		background-repeat: repeat;
 		animation: nowBack 120s linear infinite;
 	}
-  #listenglow {
+	#listenglow {
 		text-shadow: white 0 0 10px;
 		font-weight: bold;
 	}
@@ -54,7 +54,7 @@
 		backdrop-filter: blur(30px);
 		-webkit-backdrop-filter: blur(30px); 
 	}
-  @keyframes nowBack {
+	@keyframes nowBack {
 		0% {background-position-y: 0%; background-position-x: 0%;}
 		20% {background-position-x: 113%; background-position-y: 213%;}
 		40% {background-position-x: 226%; background-position-y: 426%;}
@@ -62,9 +62,9 @@
 		80% {background-position-x: 452%; background-position-y: 852%;}
 		100% {background-position-y: 1065%; background-position-x: 565%;}
 	}
-  @media (prefers-reduced-motion) {
-    * {animation: none !important;}
-  }
+	@media (prefers-reduced-motion) {
+		* {animation: none !important;}
+	}
 	@media (prefers-reduced-transparency) {
 		.content {background-image: none !important;}
 		#hiPoopFart {
@@ -75,7 +75,7 @@
 	}
 </style>
 <script>
-  // Code from https://septic.lol/?z=/code/widgets.html
+	// Code from https://septic.lol/?z=/code/widgets.html
 document.addEventListener('DOMContentLoaded', function() {
 	var user = document.getElementById("listen").getAttribute("user");
 	var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" + user + "&api_key=afc213709a996ae561e307f596c9952b&format=json";

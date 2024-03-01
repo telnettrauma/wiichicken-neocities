@@ -61,6 +61,6 @@ var messageList = [ 'lorem ipsum i want to buy a car',
 'i .gitignore my wife'
 ]
 function setRandomMessage() {
-  document.getElementById('messageTxt').innerHTML = messageList[Math.floor(Math.random() * messageList.length)];
+	document.getElementById('messageTxt').innerHTML = messageList[Math.floor(Math.random() * messageList.length)];
 }
 setRandomMessage();
