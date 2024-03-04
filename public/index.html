@@ -916,7 +916,7 @@
 				<div class="blox" style="width: 100%;">
 					<h2>contactMe</h2>
 					<ul>
-						<li><strong>discord</strong>: wiichicken#0040 <a href="https://discord.gg/aeYHWsw" target="_blank">server</a> (don't join it sucks)</li>
+						<li><strong>discord</strong>: wiichicken#0040</li>
 						<li><strong>email</strong>: <a href="mailto:vimeoofficial@gmail.com" target="_blank">vimeoofficial@gmail.com</a></li>
 						<li><a href="https://neocities.org/site/wiichicken" target="_blank">neocities profile</a></li>
 						<li>if you NEED to know my socials, go to the <a href="aboutme.html">about me</a> page</li>
@@ -963,8 +963,19 @@
 			</script>
 			<div id="mybum" class="blox" style="border: 1px solid #9462bd;">
 				<h2 class="gradientText" style="background: linear-gradient(90deg, rgba(233,221,255,1) 0%, rgba(255,217,226,1) 100%);">myButton</h2>
-				<img loading="lazy" alt="" src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
-				<textarea rows="2"><a href="https://wiggle.monster"><img loading="lazy" src="https://wiggle.monster/button.gif" style="image-rendering: pixelated;" alt="Visit wiichicken's website"></a></textarea>
+				<div style="display: flex; align-items: center;">
+					<img loading="lazy" alt="" src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
+					<div style="margin-left: 5px;">
+						<button id="copyLink" onclick="copyLinkToPage();" class="bring" style="margin-bottom: 5px;">copyToClipboard</button>
+						<a class="bring" href="resources/widgets/home/med/embed.txt" target="_blank" style="font-size: 13.3px;">scriptNotWorking?</a>
+					</div>
+				</div>
+				<script>
+					async function copyLinkToPage() {
+						await navigator.clipboard.writeText('<a href="https://wiggle.monster"><img loading="lazy" src="https://wiggle.monster/button.gif" style="image-rendering: pixelated;" alt="Visit wiichicken\'s website"></a>');
+						window.alert('done!');
+					}
+				</script>
 				<p style="margin-block-start: 0; margin-block-end: 0;">hotlink, or don't hotlink! the choice is yours!</p>
 			</div>
 			<div id="signguest" class="blox" style="border: 1px solid #ff8875;">
