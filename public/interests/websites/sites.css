@@ -1,166 +1,167 @@
 body {
-  background-color: #000e11;
-  font-family: 'PT Sans', sans-serif;
-  margin: 0;
-  margin-top: 10px;
+	background-color: #000e11;
+	font-family: 'PT Sans', sans-serif;
+	margin: 0;
+	margin-top: 10px;
 }
 #flex {
-  display: flex;
-  width: 900px;
-  margin: auto;
+	display: flex;
+	width: 900px;
+	margin: auto;
 }
 h1, h2, h3, .mainnav {
-  font-family: 'Martian Mono', monospace;
-  margin-block-start: 0;
-  margin-block-end: 0;
+	font-family: 'Martian Mono', monospace;
+	margin-block-start: 0;
+	margin-block-end: 0;
 }
 a {
-  text-decoration: none;
-  background-color: #b3ebff;
-  color: #00677d;
+	text-decoration: none;
+	background-color: #b3ebff;
+	color: #00677d;
 }
 img {image-rendering: pixelated;}
 #chewTooth {
-  position: fixed;
-  background-image: url('https://api.mapbox.com/styles/v1/wiichicken/clsd8mma9031j01qq8uqdcxe7/static/28.5539,0,0.54,0/1280x1280@2x?access_token=pk.eyJ1Ijoid2lpY2hpY2tlbiIsImEiOiJjbHNkOHZmcG4wcTg5MmtzYjgweTE0ZHVsIn0.EvdZamD3MyA9v5sPV6fzyw');
-  background-size: cover;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  display: block;
-  width: 100%;
-  height: 100%;
+	position: fixed;
+	background-image: url('https://api.mapbox.com/styles/v1/wiichicken/clsd8mma9031j01qq8uqdcxe7/static/28.5539,0,0.54,0/1280x1280@2x?access_token=pk.eyJ1Ijoid2lpY2hpY2tlbiIsImEiOiJjbHNkOHZmcG4wcTg5MmtzYjgweTE0ZHVsIn0.EvdZamD3MyA9v5sPV6fzyw');
+	background-size: cover;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 table {border-collapse: collapse;}
 td {border: 1px solid #5ad5f9;}
 th {
-  border: 1px solid #5ad5f9;
-  font-size: x-large;
-  font-family: 'Martian Mono', monospace;
-  overflow: hidden;
+	border: 1px solid #5ad5f9;
+	font-size: x-large;
+	font-family: 'Martian Mono', monospace;
+	overflow: hidden;
 }
 th p {
-  display: inline-block;
-  margin-right: 20px;
+	display: inline-block;
+	margin-right: 20px;
 }
 #urls table {
-  max-width: 747px;
-  width: 100%;
-  text-indent: initial;
-  margin-bottom: 10px;
-  color: #b4ebff;
+	max-width: 747px;
+	width: 100%;
+	text-indent: initial;
+	margin-bottom: 10px;
+	color: #b4ebff;
 }
 tr {
-  display: flex;
-  width: 100%;
-  margin-bottom: 2px;
+	display: flex;
+	width: 100%;
+	margin-bottom: 2px;
 }
 td {
-  font-size: 13px;
-  display: block;
-  margin-left: 2px;
-  background-color: #001f27;
+	font-size: 13px;
+	display: block;
+	margin-left: 2px;
+	background-color: #001f27;
 }
 /* the first element in a table will not have padding */
 tr td:first-child {margin-left: 0 !important;}
 tr td:nth-child(3n) {width: 100%;}
-.icon {
-  margin-left: 0;
-  width: 16px;
-  display: flex;
-  align-items: center;
+#urls table tr td:first-child {
+	margin-left: 0;
+	width: 16px;
+	display: flex;
+	align-items: center;
+	/* background: linear-gradient(180deg, rgba(0,31,39,1) 0%, rgba(54,65,152,1) 100%); */
 }
-.icon img {
-  display: flex;
-  width: 16px;
-  height: 16px;
+#urls table tr td:first-child img {
+	display: flex;
+	width: 16px;
+	height: 16px;
 }
 .sidebar {
-  margin-top: 50px;
-  margin-right: 15px;
-  width: 150px;
-  background-color: #3a4857;
-  color: #d5e4f7;
-  border: 1px solid #d5e4f7;
-  order: 1;
-  padding-left: 5px;
+	margin-top: 50px;
+	margin-right: 15px;
+	width: 150px;
+	background-color: #3a4857;
+	color: #d5e4f7;
+	border: 1px solid #d5e4f7;
+	order: 1;
+	padding-left: 5px;
 }
 .sidebar a {
-  background-color: #233240;
-  color: #b9c8da;
+	background-color: #233240;
+	color: #b9c8da;
 }
 .sidebar ul {
-  list-style-type: none;
-  margin: 3px;
-  padding-left: 5px;
+	list-style-type: none;
+	margin: 3px;
+	padding-left: 5px;
 }
 .main {
-  margin-left: 150px;
-  max-width: 700px;
-  margin: auto;
-  order: 2;
+	margin-left: 150px;
+	max-width: 700px;
+	margin: auto;
+	order: 2;
 }
 header, #directoryNav {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
 }
 header .box {
-  display: inline-block;
-  width: auto;
+	display: inline-block;
+	width: auto;
 }
 .mainnav {
-  box-shadow: 2px 2px 0 0 !important;
-  width: 50%;
-  background-color: #001f27bd !important;
-  color: #b4ebff !important;
-  font-size: 1.5em;
-  margin-right: 10px;
-  margin-bottom: 10px;
+	box-shadow: 2px 2px 0 0 !important;
+	width: 50%;
+	background-color: #001f27bd !important;
+	color: #b4ebff !important;
+	font-size: 1.5em;
+	margin-right: 10px;
+	margin-bottom: 10px;
 }
 #directoryNav .active {
-  box-shadow: inset 0 -2px 0 0 !important;
-  background-color: #00677d !important;
-  color: #b3ebff !important;
-  text-shadow: 0 0 15px;
+	box-shadow: inset 0 -2px 0 0 !important;
+	background-color: #00677d !important;
+	color: #b3ebff !important;
+	text-shadow: 0 0 15px;
 }
 header .box, .box, .mainnav, .app img, .app div {
-  background-color: #00677d;
-  color: #b3ebff;
-  padding: 5px;
-  box-shadow: 0px 0px 15px 0px #b3ebff;
-  border: 1px solid #5ad5f9;
+	background-color: #00677d;
+	color: #b3ebff;
+	padding: 5px;
+	box-shadow: 0px 0px 15px 0px #b3ebff;
+	border: 1px solid #5ad5f9;
 }
 .box, .app img, .app div {
-  box-shadow: none;
-  background-color: #001f27bd;
-  backdrop-filter: blur(5px);
-  color: #b4ebff;
-  width: 100%;
-  margin-bottom: 10px;
-  max-width: 688px;
+	box-shadow: none;
+	background-color: #001f27bd;
+	backdrop-filter: blur(5px);
+	color: #b4ebff;
+	width: 100%;
+	margin-bottom: 10px;
+	max-width: 688px;
 }
 header .lessvis {
-  background-color: #004e5f !important;
-  color: #b4ebff !important;
-  box-shadow: none;
+	background-color: #004e5f !important;
+	color: #b4ebff !important;
+	box-shadow: none;
 }
 .glow {box-shadow: 0px 0px 8px 1px #c1c4eb;}
 @media only screen and (min-width: 900px) {
-  .main {flex: 1;}
+	.main {flex: 1;}
 }
 @media only screen and (max-width: 900px) {
-  body, .main {width: 100%;}
-  .main, #urls table {max-width: unset;}
-  .box, header {width: auto;}
-  #flex {
-    flex-wrap: wrap;
-    width: auto;
-  }
-  nav {
-    width: 100%;
-    margin-top: 0;
-  }
-  .mainnav {font-size: 0.8em;}
-  .box, .app img, .app div {margin-bottom: 5px;}
+	body, .main {width: 100%;}
+	.main, #urls table {max-width: unset;}
+	.box, header {width: auto;}
+	#flex {
+		flex-wrap: wrap;
+		width: auto;
+	}
+	nav {
+		width: 100%;
+		margin-top: 0;
+	}
+	.mainnav {font-size: 0.8em;}
+	.box, .app img, .app div {margin-bottom: 5px;}
 }

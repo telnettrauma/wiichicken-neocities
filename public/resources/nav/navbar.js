@@ -7,7 +7,9 @@ function openSidey() {document.getElementById('overSide').style.display = 'flex'
 function closeSidey() {document.getElementById('overSide').style.display = 'none';}
 flipTheScript();
 function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms || DEF_DELAY));}
+// determines if you have opera or not
 var whatIsOpera = (navigator.userAgent.match(/Opera|OPR\//) ? true : false);
+// blocks opera browsers, mainly opera gx, from loading the page
 async function banOpera() {
 	if (whatIsOpera === true) {
 		await sleep(100);
@@ -15,3 +17,7 @@ async function banOpera() {
 	}
 }
 banOpera();
+async function shareCopyLink(toCopy) {
+  await navigator.clipboard.writeText(toCopy);
+  window.alert('done!');
+}

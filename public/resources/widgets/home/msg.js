@@ -58,7 +58,8 @@ var messageList = [ 'lorem ipsum i want to buy a car',
 'eating granola, ama',
 'i need a 6 month fishing trip twice a year',
 'gmail has gone woke?!',
-'i .gitignore my wife'
+'i .gitignore my wife',
+'tortilla attack'
 ]
 function setRandomMessage() {
 	document.getElementById('messageTxt').innerHTML = messageList[Math.floor(Math.random() * messageList.length)];
