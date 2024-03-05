@@ -375,6 +375,13 @@
 		background-color: #175b7aaa;
 		color: #c3e8fe;
 	}
+	#emojiFart {
+		display: none;
+		position: relative;
+	}
+	.hasDrop:hover #emojiFart {
+		display: block !important;
+	}
 	.panel {
 		display: none;
 		overflow: hidden;
@@ -759,27 +766,27 @@
 			<div class="blox head">
 				<!-- background where the gradient is changing color and its awesome ooo -->
 				<svg id="babyHello" version="1.1" xmlns="http://www.w3.org/2000/svg">
-					<filter id="pixelate" x="0" y="0">
-						<feFlood x="5" y="5" height="4" width="8"/>    
-						<feComposite width="25" height="25"/>
-						<feTile result="a"/>
-						<feComposite in="SourceGraphic" in2="a" operator="in"/>
-						<feMorphology operator="dilate" radius="15"/>
-					</filter>
 					<defs>
-						<linearGradient id="Gradient1" x1="0" x2="1" y1="0" y2="1">
-							<stop class="stop1" offset="0%">
-								<animate attributeName="stop-color" values="red;orange;yellow;green;blue;indigo;violet;red" dur="10s" repeatCount="indefinite" />
-							</stop>
-							<stop class="stop2" offset="100%">
-								<animate attributeName="stop-color" values="blue;indigo;violet;red;orange;yellow;green;blue" dur="10s" repeatCount="indefinite" />
-							</stop>
+							<filter id="pixelate" x="0" y="0">
+									<feFlood x="5" y="5" height="4" width="8"/>
+									<feComposite width="25" height="25"/>
+									<feTile result="a"/>
+									<feComposite in="SourceGraphic" in2="a" operator="in"/>
+									<feMorphology operator="dilate" radius="15"/>
+							</filter>
+							<linearGradient id="Gradient1" x1="0" x2="1" y1="0" y2="1">
+								<stop class="stop1" offset="0">
+										<animate attributeName="stop-color" values="red;orange;yellow;green;blue;indigo;violet;red" dur="10s" repeatCount="indefinite" />
+								</stop>
+								<stop class="stop2" offset="100%">
+										<animate attributeName="stop-color" values="blue;indigo;violet;red;orange;yellow;green;blue" dur="10s" repeatCount="indefinite" />
+								</stop>
 						</linearGradient>
 					</defs>
 					<style>
-						#rect1 {fill: url(#Gradient1);}
-						.stop1 {stop-color: red;}
-						.stop2 {stop-color: blue;}
+						#rect1 { fill: url(#Gradient1); }
+						.stop1 { stop-color: red; }
+						.stop2 { stop-color: blue; }
 					</style>
 					<rect id="rect1" width="100%" height="100%" filter="url(#pixelate)" />
 				</svg>
@@ -810,7 +817,7 @@
 						<a class="noBg" id="a1" href="aboutme.html">ABOUT</a>
 						<a class="noBg" id="a2" href="creative/index.html">ART</a>
 						<a class="noBg" id="a3" href="more/archive/blog/index.html">BLOG</a>
-						<a class="noBg" id="a4" href="interests/index.html">MEDiA</a>
+						<a class="noBg hasDrop" id="a4" href="interests/index.html">MEDiA</a>
 						<a class="noBg" id="a5" href="more/index.html">MORE</a>
 					</div>
 					<div class="blox noblur" style="padding: 0; width: 20%; margin-left: 10px; background-color: #bfbfbf; border-color: #bfbfbf;" id="lonelyNav">
@@ -972,7 +979,7 @@
 				</div>
 				<script>
 					async function copyLinkToPage() {
-						await navigator.clipboard.writeText('<a href="https://wiggle.monster"><img loading="lazy" src="https://wiggle.monster/button.gif" style="image-rendering: pixelated;" alt="Visit wiichicken\'s website"></a>');
+						await navigator.clipboard.writeText('<a href="https://wiggle.monster"><img loading="lazy" src="https://wiggle.monster/button.gif" style="image-rendering: pixelated;" alt="Visit WiiCHiCKEN\'s website"></a>');
 						window.alert('done!');
 					}
 				</script>
