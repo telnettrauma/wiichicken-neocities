@@ -15,7 +15,7 @@
 				--dark-on-tertiary: #3f2e04;
 			}
 			body {
-				background-color: #410002;
+				background-color: #1f0001;
 				font-family: 'PT Sans', sans-serif;
 				margin: 0;
 			}
@@ -26,7 +26,7 @@
 			h1, h2, h3 {font-family: 'Martian Mono', monospace;}
 			a {
 				background-color: #8d1033;
-				color: #ffd9dc;
+				color: var(--box-color);
 				text-decoration: none;
 				position: relative;
 				transition-duration: 0.4s;
@@ -52,14 +52,17 @@
 			.box a:hover::after {transform: scaleX(1);}
 			.box, header {
 				padding: 5px;
-				border: 1px solid #93000a;
+				--box-border: red;
+				border: 1px solid var(--box-border);
 				margin-bottom: 10px;
 				backdrop-filter: blur(5px);
 				width: -webkit-fill-available;
 			}
 			.box {
-				background-color: #690005d0;
-				color: #ffb4ab;
+				--box-bg: #410002d0;
+				--box-color: #ffb4ab;
+				background-color: var(--box-bg);
+				color: var(--box-color);
 			}
 			.row {
 				display: flex;
@@ -88,14 +91,14 @@
 						<p>my slowly growing archive of things</p>
 					</a>
 				</div>
-				<div class="box lefty">
+				<div class="box lefty" style="--box-bg: #2f1500d0; --box-color: #ffdcc3; --box-border: #ff8800;">
 					<a href="idle_file/versions.html">
 						<h3>idle file</h3>
 						<p>idle game i abandoned before it got good</p>
 					</a>
 				</div>
 			</div>
-			<div class="box">
+			<div class="box" style="--box-bg: #271900d0; --box-color: #ffdea9; --box-border: yellow;">
 				<a href="https://aisites.neocities.org" target="_blank">
 					<h3>aisites</h3>
 					<p>back when generative ai wasn't that good i made this for comedic purposes. i stopped work on it because ai suddenly got good, causing the project to no longer be funny, and because i felt bad about stealing code, even if it wasn't for profit.</p>
