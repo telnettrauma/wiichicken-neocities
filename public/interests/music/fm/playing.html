@@ -1,0 +1,142 @@
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+	<title>CURRENTLY LiSTENiNG TO</title>
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<link href="/style.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div class="content" style="margin: 0; position: relative; overflow: hidden;">
+	<div id="moneyOnMind"></div>     
+	<div id="hiPoopFart">
+		<p id="listen" user="wiichicken">CANT FETCH last listened to</p>
+		<div id="artworklink" target="_blank" style="background: none !important; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+			<img id="artwork" src="" onError="this.onerror=null;this.src='/med/blank.png';">
+			<p id="track" style="color: white; text-align: center; font-size: 20px;"></p>
+		</div>
+	</div>
+</div>
+<style>
+	* {
+		::-webkit-scrollbar {width: 0;}
+	}
+	body {
+		font-family: 'PT Sans', sans-serif;
+		margin: 0;
+		color: white;
+		overflow-x: hidden;
+	}
+	p {text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);}
+	#listen {
+		text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+		font-family: 'Martian Mono', monospace;
+		font-size: 20px;
+	}
+	a {text-decoration: none;}
+	#coverart {transition-duration: 0.5s;}
+	#coverart:hover {margin-right: 10px;}
+	#coverart:hover .afterfeat {
+		width: 30px !important;
+		height: 30px !important;
+		transform: translate(5px, 0px) !important;
+		margin: 3px;
+	}
+	.afterfeat {
+		margin: 0px;
+		width: 3px;
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+		transition-duration: 0.5s;
+		object-fit: cover;
+	}
+	#moneyOnMind {
+		width: 100vw;
+		height: 100vw;
+		position: absolute;
+		z-index: 0;
+		background-size: cover;
+		background-repeat: repeat;
+		animation: nowBack 60s linear infinite;
+		scale: 1.5;
+	}
+	#artwork {
+		display: inline-block;
+		box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.7);
+		border: 1px solid white;
+	}
+	#listenglow {
+		text-shadow: white 0 0 10px, 0px 0px 5px rgba(0, 0, 0, 0.6);
+		font-weight: bold;
+	}
+	#hiPoopFart {
+		backdrop-filter: blur(80px) saturate(2);
+		position: relative;
+		z-index: 1;
+		background-color: rgba(49, 49, 49, 0.4);
+		width: 100vw;
+		height: 100vh;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+	@keyframes nowBack {
+		0% {background-position-y: 0%; background-position-x: 0%; transform: rotate(0deg);}
+		20% {background-position-x: 113%; background-position-y: 213%;}
+		40% {background-position-x: 226%; background-position-y: 426%;}
+		60% {background-position-x: 339%; background-position-y: 639%;}
+		80% {background-position-x: 452%; background-position-y: 852%;}
+		100% {background-position-y: 1065%; background-position-x: 565%; transform: rotate(360deg);}
+	}
+	@media (prefers-reduced-motion) {
+		* {animation: none !important;}
+	}
+	@media (prefers-reduced-transparency) {
+		.content {background-image: none !important;}
+		#hiPoopFart {
+			backdrop-filter: blur(0px) !important;
+			-webkit-backdrop-filter: blur(0px); 
+			background-color: black;
+		}
+	}
+</style>
+<script>
+	function getNowPlaying() {
+		var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=wiichicken&api_key=afc213709a996ae561e307f596c9952b&limit=1&format=json";
+		var request = new XMLHttpRequest();
+		request.open('GET', url, true);
+
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = JSON.parse(request.responseText);
+				var artist = data.recenttracks.track[0].artist["#text"];
+				var song = data.recenttracks.track[0]["name"];
+				var artwork = data.recenttracks.track[0].image[3]["#text"];
+				var tinyArtwork = data.recenttracks.track[0].image[3]["#text"];
+
+				var artworkImg = document.getElementById("artwork");
+				artworkImg.setAttribute("src", artwork);
+				var fakeBlur = document.getElementById('moneyOnMind');
+				fakeBlur.style.backgroundImage = `url(${tinyArtwork})`;
+
+				var trackInfo = document.getElementById("track");
+				trackInfo.innerHTML = "\
+					<strong style='font-size: 25px;'>"+song+"</strong><br />\
+					"+artist+"\
+				";
+
+				if (typeof data.recenttracks.track[0]["@attr"] !== "undefined"){
+					var listenInfo = document.getElementById("listen");
+					listenInfo.innerHTML = '<span id="listenglow">LiSTENiNG</span> TO:';
+				} else {
+					var listenInfo = document.getElementById("listen");
+					listenInfo.innerHTML = 'last <span>listened</span> to:';
+					console.log("false");
+				}
+			} else {console.error("Error fetching data from server.");}
+		};
+		request.onerror = function() {console.error("Connection error.");};
+		request.send();
+	}
+	document.addEventListener('DOMContentLoaded', getNowPlaying());
+	setInterval(function(){getNowPlaying()}, 15000);
+</script>
