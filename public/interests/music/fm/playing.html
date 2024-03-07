@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <div class="content" style="margin: 0; position: relative; overflow: hidden;">
-	<div id="moneyOnMind"></div>     
+	<div id="moneyOnMind" class="moneyOnMind"></div>
+	<div class="moneyOnMind" id="fartOnMind" style="animation: nowFront 75s linear infinite; opacity: 0.5; z-index: 1;"></div>   
 	<div id="hiPoopFart">
 		<p id="listen" user="wiichicken">CANT FETCH last listened to</p>
 		<div id="artworklink" target="_blank" style="background: none !important; display: flex; align-items: center; justify-content: center; flex-direction: column;">
@@ -47,12 +48,12 @@
 		transition-duration: 0.5s;
 		object-fit: cover;
 	}
-	#moneyOnMind {
-		width: 100vw;
-		height: 100vw;
+	.moneyOnMind {
+		width: 100vmax;
+		height: 100vmax;
 		position: absolute;
 		z-index: 0;
-		background-size: cover;
+		background-size: 50vmax;
 		background-repeat: repeat;
 		animation: nowBack 60s linear infinite;
 		scale: 1.5;
@@ -73,6 +74,7 @@
 		background-color: rgba(49, 49, 49, 0.4);
 		width: 100vw;
 		height: 100vh;
+		object-fit: contain;
 		margin: 0;
 		display: flex;
 		justify-content: center;
@@ -86,6 +88,14 @@
 		60% {background-position-x: 339%; background-position-y: 639%;}
 		80% {background-position-x: 452%; background-position-y: 852%;}
 		100% {background-position-y: 1065%; background-position-x: 565%; transform: rotate(360deg);}
+	}
+	@keyframes nowFront {
+		0% {background-position-y: 0%; background-position-x: 0%; transform: rotateY(360deg);}
+		20% {background-position-x: -113%; background-position-y: -213%;}
+		40% {background-position-x: -226%; background-position-y: -426%;}
+		60% {background-position-x: -339%; background-position-y: -639%;}
+		80% {background-position-x: -452%; background-position-y: -852%;}
+		100% {background-position-y: -1065%; background-position-x: -565%; transform: rotateY(0deg);}
 	}
 	@media (prefers-reduced-motion) {
 		* {animation: none !important;}
@@ -111,12 +121,13 @@
 				var artist = data.recenttracks.track[0].artist["#text"];
 				var song = data.recenttracks.track[0]["name"];
 				var artwork = data.recenttracks.track[0].image[3]["#text"];
-				var tinyArtwork = data.recenttracks.track[0].image[3]["#text"];
+				var tinyArtwork = data.recenttracks.track[0].image[0]["#text"];
 
 				var artworkImg = document.getElementById("artwork");
 				artworkImg.setAttribute("src", artwork);
 				var fakeBlur = document.getElementById('moneyOnMind');
 				fakeBlur.style.backgroundImage = `url(${tinyArtwork})`;
+				document.getElementById('fartOnMind').style.backgroundImage = `url(${tinyArtwork})`;
 
 				var trackInfo = document.getElementById("track");
 				trackInfo.innerHTML = "\
