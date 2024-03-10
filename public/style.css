@@ -31,7 +31,7 @@ a {
 	display: block;
 	background-image: url(/starry.gif);
 	width: 100%;
-	height: 100%;
+	height: 120%;
 	mix-blend-mode: luminosity;
 	transition-duration: 0.05s;
 	image-rendering: pixelated;
