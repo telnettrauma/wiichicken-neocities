@@ -61,7 +61,9 @@ var messageList = [ 'lorem ipsum i want to buy a car',
 'i .gitignore my wife',
 'tortilla attack',
 'oh to be a navbar with 3 items',
-'i must now enter windows recovery to feel an emotion'
+'i must now enter windows recovery to feel an emotion',
+'internet explorer is safe... so far',
+'magical pudding'
 ]
 function setRandomMessage() {
 	document.getElementById('messageTxt').innerHTML = messageList[Math.floor(Math.random() * messageList.length)];
