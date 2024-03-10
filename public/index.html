@@ -20,7 +20,6 @@
 	body {
 		background-color: black;
 		color: white;
-		background-attachment: fixed;
 	}
 	h1, h2, h3, h4 {margin: 0;}
 	a {text-decoration: none;}
@@ -321,11 +320,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
 	}
 	#wiiLogo {
 		width: 416px;
@@ -626,6 +620,7 @@
 		#moresites, #webr {margin-right: 10px !important;}
 		#webr {margin-top: 0;}
 		#babyHello {height: 93px !important;}
+		#lonelyNav {margin-left: 0 !important;}
 	}
 	.reducedVisible {display: none;}
 	@media (prefers-reduced-motion) {
@@ -757,32 +752,6 @@
 		</aside>
 		<main>
 			<div class="blox head">
-				<!-- background where the gradient is changing color and its awesome ooo -->
-				<svg id="babyHello" version="1.1" xmlns="http://www.w3.org/2000/svg">
-					<defs>
-							<filter id="pixelate" x="0" y="0">
-									<feFlood x="5" y="5" height="4" width="8"/>
-									<feComposite width="25" height="25"/>
-									<feTile result="a"/>
-									<feComposite in="SourceGraphic" in2="a" operator="in"/>
-									<feMorphology operator="dilate" radius="15"/>
-							</filter>
-							<linearGradient id="Gradient1" x1="0" x2="1" y1="0" y2="1">
-								<stop class="stop1" offset="0">
-										<animate attributeName="stop-color" values="red;orange;yellow;green;blue;indigo;violet;red" dur="10s" repeatCount="indefinite" />
-								</stop>
-								<stop class="stop2" offset="100%">
-										<animate attributeName="stop-color" values="blue;indigo;violet;red;orange;yellow;green;blue" dur="10s" repeatCount="indefinite" />
-								</stop>
-						</linearGradient>
-					</defs>
-					<style>
-						#rect1 { fill: url(#Gradient1); }
-						.stop1 { stop-color: red; }
-						.stop2 { stop-color: blue; }
-					</style>
-					<rect id="rect1" width="100%" height="100%" filter="url(#pixelate)" />
-				</svg>
 				<div id="tittle">
 					<div id="logocontent">
 						<p id="thisIsMyName" class="nomarblock mobileVisible headText" style="color: white;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN</p>
@@ -1052,9 +1021,7 @@ window.addEventListener('scroll', () => {
 		});
 		if (alpha === 1) {
 			return `rgba(${r}, ${g}, ${b}, 0.7)`;
-		} else {
-			return `rgb(${r}, ${g}, ${b})`;
-		}
+		} else {return `rgb(${r}, ${g}, ${b})`;}
 	}
 	document.documentElement.style.setProperty("--main-background-color", calculateBetween([65, 0, 2], [0, 29, 50], 1));
 	document.documentElement.style.setProperty("--border-color", calculateBetween([255, 0, 0], [0, 168, 255], 0));
