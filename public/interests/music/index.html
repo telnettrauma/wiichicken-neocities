@@ -3,63 +3,12 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
 		<title>music - WiiCHiCKEN</title>
-		<link href="interests/crumb.css" rel="stylesheet">
+		<link href="/interests/crumb.css" rel="stylesheet">
 		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link href="/style.css" rel="stylesheet">
 	</head>
 	<body>
-		<!-- remember to remove this eventually -->
-		<style>
-			body {margin: 0;}
-.breadcrumb {
-	margin: 0;
-	background-color: white;
-	overflow: hidden;
-	position: fixed;
-	width: 100%;
-	top: 0;
-}
-.breadcrumb p {
-	margin-left: 10px;
-	margin-bottom: 2px;
-	margin-top: 2px;
-}
-.breadcrumb a {
-	text-decoration: none;
-	background: none;
-}
-.breadcrumb #line {
-	width: 100%;
-	height: 5px;
-	margin: 0px;
-	background: linear-gradient(270deg, #ff0000, #0032ff);
-	background-size: 400% 400%;
-	animation: breadcrumbAnim 10s ease infinite;
-}
-body {
-	background-color: var(--bg);
-	color: var(--main);
-	font-family: 'PT Sans', sans-serif;
-}
-h1, h2, h3 {font-family: 'Martian Mono', monospace;}
-hr {
-	height: 0px;
-	color: var(--accent);
-	border: 1px solid var(--accent);
-}
-a {
-	background-color: var(--sub);
-	color: var(--bg);
-	text-decoration: none;
-}
-#main {margin-left: 75px;}
-@keyframes breadcrumbAnim {
-	0%{background-position:0% 50%}
-	50%{background-position:100% 50%}
-	100%{background-position:0% 50%}
-}
-		</style>
 		<style>
 			@keyframes nowBack {
 				0% {background-position-y: 0%;}
@@ -94,155 +43,147 @@ a {
 				margin-block-end: 0;
 			}
 		</style>
+		<div id="heightCheck"></div>
+		<div class="heading" id="poopBlock"></div>
+		<div id="sideButton" onclick="openSidey()"></div>
+		<div id="overSide"></div>
+		<div id="chewTooth"></div>
 		<div id="container">
-			<div id="flex">
-				<aside id="leftSidebar">
-					<a href="/index.html">home</a>
-					<hr>
-					<a href="/interests/music/index.html">music</a>
-					<a>films</a>
-					<a>games</a>
-					<a href="/interests/websites/index.html">websites</a>
-				</aside>
-				<main>
-					<div class="card" style="padding: 0;">
-						<script src="res/np.js"></script>
-						<div id="dontWannaDoThis">
-							<div class="content" id="thisHurts">
-								<section id="listen" user="wiichicken" style="text-align: center; color: white;">CANT FETCH last listened to</section>
-								<a href="" id="artworklink" target="_blank" style="display: flex; background: none;">
-									<img id="artwork" src="" onError="this.onerror=null;this.src='https://sep7ic.github.io/code/cover.png';">
-									<p id="track" class="nomarblock" style="display: block; color: white;"></p>
-								</a>
-							</div>
+			<main>
+				<div class="card" style="padding: 0;">
+					<script src="res/np.js"></script>
+					<div id="dontWannaDoThis">
+						<div class="content" id="thisHurts">
+							<section id="listen" user="wiichicken" style="text-align: center; color: white;">CANT FETCH last listened to</section>
+							<a href="" id="artworklink" target="_blank" style="display: flex; background: none;">
+								<img id="artwork" src="" onError="this.onerror=null;this.src='https://sep7ic.github.io/code/cover.png';">
+								<p id="track" class="nomarblock" style="display: block; color: white;"></p>
+							</a>
 						</div>
 					</div>
+				</div>
+				<div class="card">
+					<h2>pages</h2>
+					<ul>
+						<li><a href="favsongs.html">favorite songs</a></li>
+						<li><a href="favarchive.html">current favorite song archive</a></li>
+						<li><a href="albums/favalbums.html">albums i really like</a></li>
+						<li><a href="albums/favarchive.html">albums that were at one point my favorite album</a> (wip)</li>
+						<li><a href="fm/playing.html">last.fm now playing screen</a></li>
+					</ul>
+				</div>
+				<div class="card">
+					<h1>ALBUMS</h1>
+				</div>
+				<div class="section">
 					<div class="card">
-						<h2>pages</h2>
-						<ul>
-							<li><a href="favsongs.html">favorite songs</a></li>
-							<li><a href="favarchive.html">current favorite song archive</a></li>
-							<li><a href="albums/favalbums.html">albums i really like</a></li>
-							<li><a href="albums/favarchive.html">albums that were at one point my favorite album</a> (wip)</li>
-							<li><a href="fm/playing.html">last.fm now playing screen</a></li>
-						</ul>
-					</div>
-					<div class="card">
-						<h1>ALBUMS</h1>
-					</div>
-					<div class="section">
-						<div class="card">
-							<h2>MONTH</h2>
-							<div class="albumDisp">
-								<img id="monthAlbum0">
-								<div>
-									<p><strong><span id="monthAlbumName0"></span></strong><br><span id="monthAlbumArtist0"></span><br><span id="monthAlbumPlay0"></span> plays</p>
-								</div>
+						<h2>MONTH</h2>
+						<div class="albumDisp">
+							<img id="monthAlbum0">
+							<div>
+								<p><strong><span id="monthAlbumName0"></span></strong><br><span id="monthAlbumArtist0"></span><br><span id="monthAlbumPlay0"></span> plays</p>
 							</div>
-							<div class="albumDisp">
-								<img id="monthAlbum1">
-								<div>
-									<p><strong><span id="monthAlbumName1"></span></strong><br><span id="monthAlbumArtist1"></span><br><span id="monthAlbumPlay1"></span> plays</p>
-								</div>
-							</div>
-							<div class="albumDisp">
-								<img id="monthAlbum2">
-								<div>
-									<p><strong><span id="monthAlbumName2"></span></strong><br><span id="monthAlbumArtist2"></span><br><span id="monthAlbumPlay2"></span> plays</p>
-								</div>
-							</div>
-							<script src="res/albumonth.js"></script>
 						</div>
-						<div class="card">
-							<h2>YEAR</h2>
-							<div class="albumDisp">
-								<img id="yearAlbum0">
-								<div>
-									<p><strong><span id="yearAlbumName0"></span></strong><br><span id="yearAlbumArtist0"></span><br><span id="yearAlbumPlay0"></span> plays</p>
-								</div>
+						<div class="albumDisp">
+							<img id="monthAlbum1">
+							<div>
+								<p><strong><span id="monthAlbumName1"></span></strong><br><span id="monthAlbumArtist1"></span><br><span id="monthAlbumPlay1"></span> plays</p>
 							</div>
-							<div class="albumDisp">
-								<img id="yearAlbum1">
-								<div>
-									<p><strong><span id="yearAlbumName1"></span></strong><br><span id="yearAlbumArtist1"></span><br><span id="yearAlbumPlay1"></span> plays</p>
-								</div>
-							</div>
-							<div class="albumDisp">
-								<img id="yearAlbum2">
-								<div>
-									<p><strong><span id="yearAlbumName2"></span></strong><br><span id="yearAlbumArtist2"></span><br><span id="yearAlbumPlay2"></span> plays</p>
-								</div>
-							</div>
-							<script src="res/albumyear.js"></script>
 						</div>
+						<div class="albumDisp">
+							<img id="monthAlbum2">
+							<div>
+								<p><strong><span id="monthAlbumName2"></span></strong><br><span id="monthAlbumArtist2"></span><br><span id="monthAlbumPlay2"></span> plays</p>
+							</div>
+						</div>
+						<script src="res/albumonth.js"></script>
 					</div>
 					<div class="card">
-						<h1>MiCROBLOG POSTS</h1>
+						<h2>YEAR</h2>
+						<div class="albumDisp">
+							<img id="yearAlbum0">
+							<div>
+								<p><strong><span id="yearAlbumName0"></span></strong><br><span id="yearAlbumArtist0"></span><br><span id="yearAlbumPlay0"></span> plays</p>
+							</div>
+						</div>
+						<div class="albumDisp">
+							<img id="yearAlbum1">
+							<div>
+								<p><strong><span id="yearAlbumName1"></span></strong><br><span id="yearAlbumArtist1"></span><br><span id="yearAlbumPlay1"></span> plays</p>
+							</div>
+						</div>
+						<div class="albumDisp">
+							<img id="yearAlbum2">
+							<div>
+								<p><strong><span id="yearAlbumName2"></span></strong><br><span id="yearAlbumArtist2"></span><br><span id="yearAlbumPlay2"></span> plays</p>
+							</div>
+						</div>
+						<script src="res/albumyear.js"></script>
 					</div>
-					<div class="card">
-						<ul>
-							<li><a href="/more/archive/blog/2024/1/spotify.html">Spotify Sucks!!</a></li>
-						</ul>
-					</div>
-					<style>
-						* {
-							margin-block-start: 0;
-							margin-block-end: 0;
-						}
-						:root {
-							--accent: #a04100;
-							--main: #ffdbcc;
-							--sub: #ffb693;
-							--bg : #351000;
-						}
-						.section {
-							display: flex;
-							justify-content: space-between;
-							max-width: 600px;
-						}
-						.card {
-							width: 100%;
-							background-color: #562000;
-							border: 1px solid #a04100;
-							max-width: 598px;
-						}
-						.content {background-color: rgba(0, 0, 0, 0.3);}
-						#artwork {
-							box-shadow: 0px 0px 15px 5px black;
-							margin: 5px;
-						}
-						#flex {display: flex;}
-						#container {
-							max-width: 700px;
-							margin: 5px auto;
-						}
-						.albumDisp {
-							display: flex;
-							align-items: center;
-						}
-						.albumDisp img {
-							width: 65px;
-							height: 65px;
-							margin: 3px;
-						}
-						.albumDisp p {
-							margin-block-start: 0;
-							margin-block-end: 0;
-						}
-						aside {
-							width: 60px;
-							order: 1;
-							border: 1px solid var(--accent);
-							height: 120px;
-							margin: 10px;
-						}
-						main {
-							flex: 1;
-							order: 2;
-						}
-					</style>
-				</main>
-			</div>
+				</div>
+				<div class="card">
+					<h1>MiCROBLOG POSTS</h1>
+				</div>
+				<div class="card">
+					<ul>
+						<li><a href="/more/archive/blog/2024/1/spotify.html">Spotify Sucks!!</a></li>
+					</ul>
+				</div>
+				<style>
+					* {
+						margin-block-start: 0;
+						margin-block-end: 0;
+					}
+					:root {
+						--accent: #a04100;
+						--main: #ffdbcc;
+						--sub: #ffb693;
+						--bg : #351000;
+					}
+					.section {
+						display: flex;
+						justify-content: space-between;
+						max-width: 600px;
+					}
+					.card {
+						width: 100%;
+						background-color: #562000;
+						border: 1px solid #a04100;
+						max-width: 598px;
+					}
+					.content {background-color: rgba(0, 0, 0, 0.3);}
+					#artwork {
+						box-shadow: 0px 0px 15px 5px black;
+						margin: 5px;
+					}
+					#flex {display: flex;}
+					#container {
+						max-width: 700px;
+						margin: auto;
+					}
+					.albumDisp {
+						display: flex;
+						align-items: center;
+					}
+					.albumDisp img {
+						width: 65px;
+						height: 65px;
+						margin: 3px;
+					}
+					.albumDisp p {
+						margin-block-start: 0;
+						margin-block-end: 0;
+					}
+					aside {
+						width: 60px;
+						order: 1;
+						border: 1px solid var(--accent);
+						height: 120px;
+						margin: 10px;
+					}
+				</style>
+			</main>
 		</div>
+		<script src="../intnav.js"></script>
 	</body>
 </html>
