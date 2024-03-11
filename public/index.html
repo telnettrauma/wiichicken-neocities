@@ -164,9 +164,8 @@
 		#webr {animation: pooFart 1.3s ease-out;}
 		#piclog {animation: fartPoo 1.1s ease-out;}
 		#scrobblebox {animation: fartPoo 1.2s ease-out;}
-		#rateyourmom {animation: fartPoo 1.3s ease-out;}
-		#visitorcount {animation: fartPoo 1.4s ease-out;}
-		#lastUpdated {animation: fartPoo 1.5s ease-out;}
+		#visitorcount {animation: fartPoo 1.3s ease-out;}
+		#lastUpdated {animation: fartPoo 1.4s ease-out;}
 	}
 	@keyframes pooFart {
 		from {transform: translateX(-1000px)}
@@ -621,6 +620,10 @@
 		#webr {margin-top: 0;}
 		#babyHello {height: 93px !important;}
 		#lonelyNav {margin-left: 0 !important;}
+		#alibaba {
+			align-items: flex-start;
+			margin-left: 5px;
+		}
 	}
 	.reducedVisible {display: none;}
 	@media (prefers-reduced-motion) {
@@ -952,7 +955,7 @@
 			<div class="blox" style="background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,134,255,1) 100%); color: #bfe9ff; border: none; overflow: visible; height: 54px; padding: 1px;">
 				<div style="background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,134,255,1) 100%); filter: blur(10px); width: 100%; height: 54px;"></div>
 				<div style="position: relative; transform: translateY(-54px); background-color: black; height: 54px; display: flex;" id="bottomOver">
-					<div class="middleBoy" style="width: 100%; flex-direction: column;">
+					<div class="middleBoy" id="alibaba" style="width: 100%; flex-direction: column;">
 						<div style="display: flex;">
 							<div class="square" style="background-color: red;"></div>
 							<p class="nomarblock" style="text-align: center;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
@@ -977,15 +980,6 @@
 				</div>
 				<div class="sidebox-content" style="padding: 0; overflow: hidden;">
 					<iframe src="resources/widgets/home/np.html" id="scrobbleWidget" scrolling="no"></iframe>
-				</div>
-			</div>
-			<div class="sidebox reducedHidden" id="rateyourmom" style="--side-bg: #001a4099; --side-border: #2f5ea9;">
-				<div class="sidehead" style="background: linear-gradient(45deg, rgba(8,69,143,1) 0%, rgba(86,8,143,1) 100%); color: #d7e2ff;">
-					<p><strong>REViEWS</strong></p>
-				</div>
-				<div class="sidebox-content" style="margin: 0px; padding: 0; display: flex; flex-direction: column;">
-					<iframe src="resources/widgets/rym.html" style="margin: 0; padding: 0; padding-top: 5px;" width="100%" height="20px" scrolling="no"></iframe>
-					<iframe src="resources/widgets/boxd.html" style="margin: 0; padding: 0;" width="100%" height="20px" scrolling="no"></iframe>
 				</div>
 			</div>
 			<div id="hiSide">
