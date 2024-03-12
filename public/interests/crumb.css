@@ -42,14 +42,8 @@ a {
 	color: var(--bg);
 	text-decoration: none;
 }
-.sidebar {
-	width: 60px;
-	border: 1px solid var(--accent);
-	position: fixed;
-}
-#main {
-	margin-left: 75px;
-}
+#inHead {justify-content: flex-start !important;}
+.topLinks a {padding: 0 !important;}
 @keyframes breadcrumbAnim {
 	0%{background-position:0% 50%}
 	50%{background-position:100% 50%}

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-	var user = document.getElementById("listen").getAttribute("user");
+	var user = 'wiichicken';
 	var url = "http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&period=12month&user=" + user + "&api_key=afc213709a996ae561e307f596c9952b&format=json";
 	var request = new XMLHttpRequest();
 	request.open('GET', url, true);
