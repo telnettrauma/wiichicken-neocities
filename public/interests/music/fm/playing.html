@@ -12,7 +12,7 @@
 		<p id="listen" user="wiichicken">CANT FETCH last listened to</p>
 		<div id="artworklink" target="_blank">
 			<img id="artwork" src="" onError="this.onerror=null;this.src='/med/blank.png';">
-			<p id="track" style="color: white; font-size: 4vmin;"></p>
+			<p id="track"></p>
 		</div>
 	</div>
 </div>
@@ -35,6 +35,8 @@
 		text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
 		font-family: 'Martian Mono', monospace;
 		font-size: 20px;
+		margin-block-start: 0;
+		margin-block-end: 5px;
 	}
 	a {text-decoration: none;}
 	#coverart {transition-duration: 0.5s;}
@@ -136,7 +138,11 @@
 	.active-button {filter: brightness(2) drop-shadow(0 0 5px #CAC4D0);}
 	/* styles for when in portrait */
 	.portrait #hiPoopFart #artworklink {flex-direction: column;}
-	.portrait #hiPoopFart #artworklink #track {text-align: center;}
+	.portrait #hiPoopFart #artworklink #track {
+		text-align: center;
+		font-size: 4vmin;
+	}
+	.portrait #hiPoopFart #artworklink #track strong {font-size: 5vmin;}
 	/* styles for when in landscape */
 	.landscape #hiPoopFart #artworklink {
 		flex-direction: row;
@@ -146,11 +152,14 @@
 		margin-block-end: 0;
 		margin-left: 15px;
 		text-align: left;
+		font-size: 2.5vmax;
 	}
+	.landscape #hiPoopFart #artworklink #track strong {font-size: 3vmax;}
 	.landscape #hiPoopFart {
 		align-items: flex-start;
 		padding: 15px;
 	}
+	.landscape #hiPoopFart #artworklink #artwork {width: 20vmax;}
 	@media (prefers-reduced-motion) {
 		* {animation: none !important;}
 	}
@@ -187,7 +196,7 @@
 
 				var trackInfo = document.getElementById("track");
 				trackInfo.innerHTML = "\
-					<strong style='font-size: 5vmin;'>"+song+"</strong><br />\
+					<strong>"+song+"</strong><br />\
 					"+artist+"\
 				";
 
