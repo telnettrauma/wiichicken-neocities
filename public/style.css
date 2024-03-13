@@ -65,7 +65,6 @@ a {
 .heading:hover {
 	height: 60px;
 	transition-duration: 0.3s;
-	backdrop-filter: blur(10px);
 }
 #heightCheck {height: 30px;}
 #inHead {
