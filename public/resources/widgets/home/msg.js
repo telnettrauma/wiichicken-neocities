@@ -65,7 +65,13 @@ var messageList = [ 'lorem ipsum i want to buy a car',
 'internet explorer is safe... so far',
 'magical pudding',
 'unimused',
-'/me wants to kill you'
+'/me wants to kill you',
+'THiS iS A POOP ALERT',
+'you arent meant to downgrade',
+'what if emoji... came to life',
+'you win parking',
+'born to walk, forced to drive',
+'goverment.gov/hack'
 ]
 function setRandomMessage() {
 	document.getElementById('messageTxt').innerHTML = messageList[Math.floor(Math.random() * messageList.length)];

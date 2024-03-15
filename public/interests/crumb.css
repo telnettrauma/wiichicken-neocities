@@ -17,6 +17,7 @@ a {
 	color: var(--bg);
 	text-decoration: none;
 }
+.headerVisible {transform: translateY(0px) !important;}
 #inHead {justify-content: flex-start !important;}
 .topLinks a {padding: 0 !important;}
 .heading {

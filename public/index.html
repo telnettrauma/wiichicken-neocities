@@ -28,16 +28,13 @@
 		padding: 0;
 	}
 	iframe {border: none;}
+	#leftSidebar, #rightSidebar {transition-duration: 0.5s;}
 	#leftSidebar {
 		order: 1;
 		z-index: 1;
-		transition-duration: 0.5s;
 	}
 	#leftSidebar .sidebox {margin: 10px 0 10px 10px;}
-	#rightSidebar {
-		order: 3;
-		transition-duration: 0.5s;
-	}
+	#rightSidebar {order: 3;}
 	#rightSidebar .sidebox {margin: 10px 10px 10px 0;}
 	.main {
 		width: 650px;
@@ -538,9 +535,7 @@
 		background: linear-gradient(45deg, rgba(0,33,22,0.5) 0%, rgba(0,32,34,0.5) 100%);
 		backdrop-filter: blur(5px);
 	}
-	::-webkit-scrollbar-thumb {
-		background: linear-gradient(45deg, rgba(132,248,204,1) 0%, rgba(112,245,255,1) 100%);
-	}
+	::-webkit-scrollbar-thumb {background: linear-gradient(45deg, rgba(132,248,204,1) 0%, rgba(112,245,255,1) 100%);}
 	.mobileVisible {display: none;}
 	/* do you have a computer */
 	@media only screen and (min-width: 900px) {
