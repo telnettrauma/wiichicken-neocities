@@ -3,17 +3,17 @@
 </head>
 <div class="content" id="moneyOnMind" style="margin: 0; overflow: hidden; position: relative;">
 	<!-- now playing script from https://septic.lol/?z=/code/widgets.html -->       
-	<div style="position: relative; background-color: rgba(49, 49, 49, 0.4); padding: 5px;" id="hiPoopFart">
+	<div style="position: relative; background-color: rgba(49, 49, 49, 0.4); padding: 5px; transition-duration: 0.5s;" id="hiPoopFart">
 		<section id="listen" user="wiichicken">CANT FETCH last listened to</section>
 		<a href="https://www.last.fm/user/wiichicken" id="artworklink" target="_blank" style="background: none !important; display: flex; align-items: center;">
 			<div id="coverart" style="display: flex; align-items: center;">
-				<img id="artwork" src="" style="display: inline-block; width: 40px; height: 40px; box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);" onError="this.onerror=null;this.src='med/blank.png';">
-				<img id="artwork1" class="afterfeat" src="" style="width: 3px; height: 35px;">
-				<img id="artwork2" class="afterfeat" src="" style="width: 2px; height: 30px;">
-				<img id="artwork3" class="afterfeat" src="" style="height: 25px; width: 1px;">
-				<img id="artwork4" class="afterfeat" src="" style="height: 20px; width: 1px;">
+				<img id="artwork" src="" style="display: inline-block; width: 40px; height: 40px;" onError="this.onerror=null;this.src='med/blank.png';">
+				<img id="artwork1" class="afterfeat" src="" style="width: 3px; height: 35px; opacity: 0.8;">
+				<img id="artwork2" class="afterfeat" src="" style="width: 2px; height: 30px; opacity: 0.6;">
+				<img id="artwork3" class="afterfeat" src="" style="height: 25px; width: 1px; opacity: 0.4;">
+				<img id="artwork4" class="afterfeat" src="" style="height: 20px; width: 1px; opacity: 0.2;">
 			</div>
-			<p id="track" style="color: white; white-space: nowrap; overflow: hidden; margin: 0; padding-left: 2px;"></p>
+			<p id="track" style="color: white; white-space: nowrap; overflow: hidden; margin: 0; padding-left: 4px; width: 100%;" onmouseover="enterTitle()" onmouseleave="exitTitle()"></p>
 		</a>
 	</div>
 </div>
@@ -33,21 +33,25 @@
 		height: 30px !important;
 		transform: translate(5px, 0px) !important;
 		margin: 3px;
+		opacity: 1 !important;
+	}
+	.afterfeat, #artwork {
+		transition-duration: 0.5s;
+		object-fit: cover;
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
 	}
 	.afterfeat {
 		margin: 0px;
 		width: 3px;
-		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
-		transition-duration: 0.5s;
-		object-fit: cover;
 	}
+	.track-hover .afterfeat {width: 0px !important;}
 	#moneyOnMind {
 		background-size: cover;
 		background-repeat: repeat;
 		animation: nowBack 120s linear infinite;
 	}
 	#listenglow {
-		text-shadow: white 0 0 10px;
+		text-shadow: white 0 0 10px, 0 0 5px rgba(0, 0, 0, 0.6);
 		font-weight: bold;
 	}
 	#hiPoopFart {
@@ -75,6 +79,16 @@
 	}
 </style>
 <script>
+	function enterTitle() {
+		document.getElementById('coverart').classList.add('track-hover');
+		document.getElementById('artwork').style.width = '4px';
+		document.getElementById('hiPoopFart').style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+	}
+	function exitTitle() {
+		document.getElementById('coverart').classList.remove('track-hover');
+		document.getElementById('artwork').style.width = '40px';
+		document.getElementById('hiPoopFart').style.backgroundColor = 'rgba(49, 49, 49, 0.4)';
+	}
 	// Code from https://septic.lol/?z=/code/widgets.html
 document.addEventListener('DOMContentLoaded', function() {
 	var user = document.getElementById("listen").getAttribute("user");
