@@ -44,9 +44,12 @@
 				color: #50145b;
 			}
 			.box, header, .grid .box ul li, .grid .box h2, .grid .box h3 {
-				background-color: #6a2e73cc;
-				color: #ffd6fe;
-				border: 1px solid #f7adfd;
+				--bg: #6a2e73cc;
+				--text: #ffd6fe;
+				--border: #f7adfd;
+				background-color: var(--bg);
+				color: var(--text);
+				border: 1px solid var(--border);
 				padding: 5px;
 				margin-bottom: 10px;
 				width: -webkit-fill-available;
@@ -77,20 +80,49 @@
 				margin: 5px;
 				padding: 5px;
 				width: 100%;
+				background-color: var(--text);
+				color: var(--bg);
 			}
 			.grid .box h2, .grid .box h3 {backdrop-filter: blur(5px);}
+			.grid .box ul .meta {
+				--bg: #012200cc;
+				--text: #a8f692;
+				--border: #8dd979;
+			}
+			.grid .box ul .code {
+				--bg: #131f00cc;
+				--text: #caef86;
+				--border: #afd36d;
+			}
+			.grid .box ul .design {
+				--bg: #360f00cc;
+				--text: #ffdbcd;
+				--border: #99461c;
+			}
+			.grid .box ul .rant {
+				--bg: #410000cc;
+				--text: #ffdad4;
+				--border: #b62316;
+			}
+			.grid .box ul .social {
+				--bg: #000f5dcc;
+				--text: #dee0ff;
+				--border: #344ddc;
+			}
 			/* the styling for grid mode ended btw */
 			#toggle-switch {
 				position: absolute;
-				top: 5px;
+				top: 0;
 				right: 5px;
 				display: flex;
+				align-items: center;
 			}
-			#toggle-switch button {margin-left: 5px;}
+			#toggle-switch button {margin: 5px;}
 			#toggle-switch .active {background-color: #350040;}
 			header {
 				background-color: #ffd6fecc;
 				color: #6a2e73;
+				backdrop-filter: blur(5px);
 			}
 			button {
 				background-color: #6a2e73;
@@ -99,6 +131,7 @@
 				border: 1px solid #f7adfd;
 				box-shadow: 2px 2px 0 0 #f7adfd;
 				cursor: pointer;
+				margin: 2px;
 			}
 			button:hover {
 				box-shadow: 1px 1px 0 0 #f7adfd;
@@ -150,6 +183,9 @@
 				84% {background-color: #d5bbff; color: #41008b;}
 				96% {background-color: #faabff; color: #570066;}
 				100% {background-color: #ffb4a8; color: #690100;}
+			}
+			@media only screen and (max-width: 900px) {
+				.grid .box ul {grid-template-columns: repeat(2, 1fr);}
 			}
 		</style>
 		<div id="heightCheck"></div>
