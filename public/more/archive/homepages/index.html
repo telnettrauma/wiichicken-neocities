@@ -1,19 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>WiiCHiCKEN HOMEPAGE ARCHiVE</title>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    </head>
-    <body>
-        <a href="/index.html">RETURN HOME</a>
-        <h1>WiiCHiCKEN HOMEPAGE ARCHiVE</h1>
-        <p>This is an archive of what my homepage looked like over the years. Some things, such as links, may not work properly.</p>
-        <div id="buttons">
-            <button onclick="document.getElementById('appleframe').src = '/more/archive/homepages/2021april/index.html'">April 2021</button>
-            <button onclick="document.getElementById('appleframe').src = '/more/archive/homepages/2023april/index.html'">April 2023</button>
-        </div>
-        <iframe src="" id="appleframe" width="100%" height="600px" style="border: none;"></iframe>
-        <h2>CREDiTS</h2>
-        <p>Thanks <a href="https://sep7ic.github.io/" target="_blank">septic</a> for the idea!<br>Archives are from the <a href="https://web.archive.org" target="_blank">Internet Archive</a>.</p>
-    </body>
+	<head>
+		<title>WiiCHiCKEN HOMEPAGE ARCHiVE</title>
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link href="/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<style>
+			* {
+				--dark-tertiary: #a0cfd4;
+				--dark-on-tertiary: #00363b;
+				--bg-1: #8fd88a;
+				--bg-2: #a0cfd4;
+			}
+			main {margin: 0 10px 0 10px;}
+			a {
+				background-color: #b9ccb3;
+				color: #253423;
+			}
+			button {
+				background-color: #055315;
+				color: #aaf5a4;
+				border: 1px solid #aaf5a4;
+				padding: 3px;
+				box-shadow: 2px 2px 0 0;
+			}
+			button:hover {
+				box-shadow: 1px 1px 0 0;
+				transform: translate(1px, 1px);
+			}
+			button:active {
+				box-shadow: none;
+				transform: translate(2px, 2px);
+			}
+			.box {
+				background-color: #002204cc;
+				color: #aaf5a4;
+				border: 1px solid #8fd88a;
+			}
+		</style>
+		<div id="heightCheck"></div>
+		<nav>
+			<div class="heading" id="poopBlock"></div>
+			<div id="sideButton" onclick="openSidey()"></div>
+			<div id="overSide"></div>
+		</nav>
+		<div id="chewTooth"></div>
+		<main>
+			<div class="box">
+				<h1>HOMEPAGE ARCHiVE</h1>
+				<p>This is an archive of what my homepage looked like over the years. Some things, such as links, may not work properly.</p>
+			</div>
+			<div class="box" id="buttons">
+				<button onclick="document.getElementById('appleframe').src = '/more/archive/homepages/2021april/index.html'">April 2021</button>
+				<button onclick="document.getElementById('appleframe').src = '/more/archive/homepages/2023april/index.html'">April 2023</button>
+			</div>
+			<iframe src="" id="appleframe" width="100%" height="600px" style="border: 1px solid #424940; background-color: #dee5d8; margin-bottom: 10px;"></iframe>
+			<div class="box">
+				<h2>CREDiTS</h2>
+				<p>Thanks <a href="https://sep7ic.github.io/" target="_blank">septic</a> for the idea!<br>Archives are from the <a href="https://web.archive.org" target="_blank">Internet Archive</a>, however I'm working on hosting everything here so I'm not just hotlinking to them.</p>
+			</div>
+		</main>
+		<script src="/resources/nav/navbar.js"></script>
+	</body>
 </html>
