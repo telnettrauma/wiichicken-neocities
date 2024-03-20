@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="--main-background-color: rgba(65, 0, 2, 0.7); --border-color: rgb(255, 0, 0); --texty-color: rgb(255, 218, 214);">
+<html style="--main-background-color: rgba(65, 0, 2, 0.7); --border-color: rgb(255, 0, 0); --texty-color: rgb(255, 218, 214); --linky-color: #dec48c; --linky-color2: #93000a;">
 <head>
 	<title>WiiCHiCKEN i AM AWESOME</title>
 	<link href="style.css" rel="stylesheet">
@@ -65,12 +65,12 @@
 	}
 	.lefty {margin-left: 10px;}
 	.blox a {
-		color: #d3bfe6;
+		color: var(--linky-color);
 		position: relative;
 	}
 	.blox a::after {
 		content: '';
-		background: linear-gradient(90deg, #00639b 0%, #7e525e 100%);
+		background: linear-gradient(90deg, var(--linky-color) 0%, var(--linky-color2) 100%);
 		height: 1px;
 		width: 100%;
 		background-position: bottom;
@@ -1010,10 +1010,9 @@ window.addEventListener('scroll', () => {
 	document.documentElement.style.setProperty("--main-background-color", calculateBetween([65, 0, 2], [0, 29, 50], 1));
 	document.documentElement.style.setProperty("--border-color", calculateBetween([255, 0, 0], [0, 168, 255], 0));
 	document.documentElement.style.setProperty("--texty-color", calculateBetween([255, 218, 214], [205, 229, 255], 0));
+	document.documentElement.style.setProperty("--linky-color", calculateBetween([222, 196, 140], [211, 191, 230]));
+	document.documentElement.style.setProperty("--linky-color2", calculateBetween([147, 0, 10], [0, 99, 155]));
 });
-document.documentElement.style.setProperty("--main-background-color", 'rgba(65, 0, 2, 0.7);');
-document.documentElement.style.setProperty("--border-color", 'rgb(255, 0, 0);');
-document.documentElement.style.setProperty("--texty-color", 'rgb(255, 218, 214);');
 </script>
 </body>
 </html>
