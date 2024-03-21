@@ -626,7 +626,6 @@
 		.reducedVisible {display: block;}
 		* {animation: none !important;}
 		#babyHello {display: none;}
-		#tittle {position: fixed;}
 		.head {height: 100px;}
 	}
 	@media (prefers-reduced-transparency) {
@@ -995,23 +994,29 @@
 	</div>
 </div>
 <script>
+const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+isReducedMotion.addEventListener('change', () => {
+	console.log(isReducedMotion.media, isReducedMotion.matches);
+});
 window.addEventListener('scroll', () => {
-  let scrollProgress = (window.scrollY || window.pageYOffset) / (document.body.scrollHeight - window.innerHeight);
-  scrollProgress = Math.min(1, Math.max(0, scrollProgress));
+	let scrollProgress = (window.scrollY || window.pageYOffset) / (document.body.scrollHeight - window.innerHeight);
+	scrollProgress = Math.min(1, Math.max(0, scrollProgress));
 	function calculateBetween(initialColor, finalColor, alpha) {
 		const [r, g, b] = initialColor.map((channel, index) => {
 			const delta = finalColor[index] - channel;
-    	return Math.round(channel + delta * scrollProgress);
+			return Math.round(channel + delta * scrollProgress);
 		});
 		if (alpha === 1) {
 			return `rgba(${r}, ${g}, ${b}, 0.7)`;
 		} else {return `rgb(${r}, ${g}, ${b})`;}
 	}
-	document.documentElement.style.setProperty("--main-background-color", calculateBetween([65, 0, 2], [0, 29, 50], 1));
-	document.documentElement.style.setProperty("--border-color", calculateBetween([255, 0, 0], [0, 168, 255], 0));
-	document.documentElement.style.setProperty("--texty-color", calculateBetween([255, 218, 214], [205, 229, 255], 0));
-	document.documentElement.style.setProperty("--linky-color", calculateBetween([222, 196, 140], [211, 191, 230]));
-	document.documentElement.style.setProperty("--linky-color2", calculateBetween([147, 0, 10], [0, 99, 155]));
+	if (!isReducedMotion.matches) {
+		document.documentElement.style.setProperty("--main-background-color", calculateBetween([65, 0, 2], [0, 29, 50], 1));
+		document.documentElement.style.setProperty("--border-color", calculateBetween([255, 0, 0], [0, 168, 255], 0));
+		document.documentElement.style.setProperty("--texty-color", calculateBetween([255, 218, 214], [205, 229, 255], 0));
+		document.documentElement.style.setProperty("--linky-color", calculateBetween([222, 196, 140], [211, 191, 230]));
+		document.documentElement.style.setProperty("--linky-color2", calculateBetween([147, 0, 10], [0, 99, 155]));
+	}
 });
 </script>
 </body>

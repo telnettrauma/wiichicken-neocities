@@ -26,8 +26,14 @@ async function shareCopyLink(toCopy) {
   await navigator.clipboard.writeText(toCopy);
   window.alert('done!');
 }
+const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+mediaQuery.addEventListener('change', () => {
+	console.log(mediaQuery.media, mediaQuery.matches);
+});
 window.addEventListener('scroll', () => {
-	const chewTooth = document.getElementById('chewTooth');
-	const scrollPosition = window.scrollY;
-	chewTooth.style.backgroundPositionY = `${scrollPosition * -0.2}px`;
+	if (!mediaQuery.matches) {
+		const chewTooth = document.getElementById('chewTooth');
+		const scrollPosition = window.scrollY;
+		chewTooth.style.backgroundPositionY = `${scrollPosition * -0.2}px`;
+	}
 });
