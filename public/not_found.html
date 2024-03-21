@@ -13,54 +13,40 @@
 			}
 			body {
 				font-family: VCR;
-				text-align: center;
 				background-color: black;
 			}
+			body, h1, #datentime p {text-align: center;}
 			main {
 				max-width: 800px;
 				max-height: 600px;
 				margin: auto;
 				aspect-ratio: 4 / 3;
 			}
-			div {margin: 0;}
+			div, p, h1, h2, .divider, #datentime, #datentime p {margin: 0;}
 			p {
 				font-size: 30px;
 				padding-top: 5px;
 				padding-bottom: 10px;
-				margin: 0;
 			}
 			h1 {
-				font-family: VCR;
 				background-color: red;
-				text-align: center;
 				padding: 2%;
 				color: white;
 				font-size: 3em;
-				margin: 0px;
 			}
 			h2 {
-				font-family: VCR;
 				font-size: 2em;
 				padding-top: 5px;
 				padding-bottom: 10px;
-				margin: 0;
 			}
-			.divider {
-				padding: 1px;
-				margin: 0px;
-			}
+			.divider, #datentime, #datentime p {padding: 0;}
 			#datentime {
 				font-size: 35px;
-				margin: 0px;
-				padding: 0px;
 				background-color: blue;
 			}
 			#datentime p {
 				display: inline-table;
-				text-align: center;
 				width: 50%;
-				padding: 0px;
-				margin: 0px;
 				color: white;
 			}
 			/* https://aleclownes.com/2017/02/01/crt-display.html */
@@ -296,22 +282,18 @@
 			<!-- Footer -->
 			<div id="scrollingfooter">
 				<style>
+					#scrollingfooter marquee, #scrollingfooter a, #scrollingfooter {margin: 0;}
 					#scrollingfooter marquee {
 						font-size: 35px;
 						background-color: green;
 						color: white;
-						margin: 0px;
 						padding-top: 5px;
 						padding-bottom: 10px;
 					}
 					#scrollingfooter a {
 						padding: 0px;
-						margin: 0px;
 						color: purple;
 						text-decoration: none;
-					}
-					#scrollingfooter {
-						margin: 0px;
 					}
 				</style>
 				<p style="background-color: pink; margin: 0px;"><a href="index.html">RETURN HOME</a></p>
