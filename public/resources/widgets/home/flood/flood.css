@@ -52,3 +52,6 @@
 		transform: translate3d(85px, 0, 0);
 	}
 }
+@media only screen and (max-width: 650px) {
+	#side-flood {display: none !important;}
+}
