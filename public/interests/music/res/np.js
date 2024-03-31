@@ -1,4 +1,4 @@
-// Code from https://septic.lol/?z=/code/widgets.html
+// Code from https://sep.neocities.org/?z=/code/widgets.html
 document.addEventListener('DOMContentLoaded', function() {
 var user = 'wiichicken';
 var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" + user + "&api_key=afc213709a996ae561e307f596c9952b&format=json";
