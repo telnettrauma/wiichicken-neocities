@@ -530,6 +530,16 @@
 		50%{box-shadow: 0px 0px 200px 50px rgba(0, 126, 255, 0.75); border: 1px solid rgb(0, 126, 255);}
 		100%{box-shadow: 0px 0px 200px 50px rgba(0, 255, 161, 0.75); border: 1px solid rgba(0, 255, 161);}
 	}
+	#sepbut {display: flex !important;}
+	#sepbut img {filter: grayscale(1);}
+	#sepbut::after {
+		content: '404';
+		position: absolute;
+		font-family: 'Martian Mono', monospace;
+		font-size: 18px;
+		text-shadow: red 2px 0 0, blue -2px 0 0;
+		color: black;
+	}
 	.accordion {cursor: pointer;}
 	::-webkit-scrollbar {width: 5px;}
 	::-webkit-scrollbar-track {
@@ -660,7 +670,7 @@
 					<div class="sidebox-content">
 						<div id="fri1">
 							<div class="dabuttons">
-							<a href="https://sep7ic.github.io/" target="_blank"><img src="https://sep7ic.github.io/images/sep.gif"></a>
+							<a href="https://sep7ic.github.io/" target="_blank" id="sepbut" class="middleBoy"><img src="interests/websites/img/button/sep.gif"></a>
 							<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
 							</div>
 						</div>
