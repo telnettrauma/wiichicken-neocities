@@ -21,6 +21,7 @@ a {
 	color: var(--dark-on-primary-container);
 	background-color: var(--light-on-primary-container);
 	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
 	margin-bottom: 10px;
 }
 #chewTooth {
@@ -160,6 +161,7 @@ a {
 	min-height: 50px;
 	background-color: #000000a4;
 	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
 	border: 1px solid white;
 	z-index: 24;
 	margin: 10px;
@@ -192,6 +194,7 @@ a {
 	background-color: #051c3599;
 	border: 1px solid #4cdadc;
 	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
 	font-size: 30px;
 	font-family: 'Martian Mono', monospace;
 	color: #6ff6f9;

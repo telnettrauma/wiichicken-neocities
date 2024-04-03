@@ -60,6 +60,7 @@
 				background-color: #00000000;
 				border: none;
 				backdrop-filter: unset;
+				-webkit-backdrop-filter: unset;
 			}
 			.grid .box ul {
 				display: grid;
@@ -72,6 +73,7 @@
 				padding: 0;
 				flex-wrap: wrap;
 				backdrop-filter: blur(5px);
+				-webkit-backdrop-filter: blur(5px);
 				margin-bottom: 0;
 			}
 			.grid .box ul li a {
@@ -82,7 +84,10 @@
 				background-color: var(--text);
 				color: var(--bg);
 			}
-			.grid .box h2, .grid .box h3 {backdrop-filter: blur(5px);}
+			.grid .box h2, .grid .box h3 {
+				backdrop-filter: blur(5px);
+				-webkit-backdrop-filter: blur(5px);
+			}
 			.grid .box ul .meta {
 				--bg: #012200cc;
 				--text: #a8f692;
@@ -122,6 +127,7 @@
 				background-color: #ffd6fecc;
 				color: #6a2e73;
 				backdrop-filter: blur(5px);
+				-webkit-backdrop-filter: blur(5px);
 			}
 			button {
 				background-color: #6a2e73;
