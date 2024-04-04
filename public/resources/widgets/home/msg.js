@@ -71,9 +71,15 @@ var messageList = [ 'lorem ipsum i want to buy a car',
 'what if emoji... came to life',
 'you win parking',
 'born to walk, forced to drive',
-'goverment.gov/hack'
+'goverment.gov/hack',
+'unhealthy intake of playdoh',
+'not meant to go back',
+'"pocket lint ahh hair"',
+'how was i supposed to know that',
+'can facebook just die already',
+'reaching my training cutoff',
+'welcome to 2020! they finally invented slime that cleans anything',
+'Gigglehurts'
 ]
-function setRandomMessage() {
-	document.getElementById('messageTxt').innerHTML = messageList[Math.floor(Math.random() * messageList.length)];
-}
+function setRandomMessage() {document.getElementById('messageTxt').innerHTML = messageList[Math.floor(Math.random() * messageList.length)];}
 setRandomMessage();
