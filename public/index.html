@@ -532,6 +532,16 @@
 		filter: blur(25px);
 		object-fit: cover;
 	}
+	#sepbut {display: flex !important;}
+	#sepbut img {filter: grayscale(1);}
+	#sepbut::after {
+		content: '404';
+		position: absolute;
+		font-family: 'Martian Mono', monospace;
+		font-size: 18px;
+		text-shadow: red 2px 0 0, blue -2px 0 0;
+		color: black;
+	}
 	@keyframes glowy {
 		0%{box-shadow: 0px 0px 200px 50px rgba(0, 255, 161, 0.75); border: 1px solid rgba(0, 255, 161);}
 		50%{box-shadow: 0px 0px 200px 50px rgba(0, 126, 255, 0.75); border: 1px solid rgb(0, 126, 255);}
@@ -720,7 +730,7 @@
 							<a href="https://divsel.neocities.org" target="_blank"><img id="divsel" src="interests/websites/img/button/divsel.png"></a>
 							<iframe src="https://incr.easrng.net/badge?key=wiichicken" title="increment badge" width="88" height="31" frameborder="0" style="padding: 2px;"></iframe>
 							<a href="https://catbyte.site/" target="_blank"><img src="interests/websites/img/button/catbyte.png"></a>
-							<a href="https://dabric.neocities.org" target="_blank"><img src="https://dabric.neocities.org/butt.png" alt="dabric"></a>
+							<a href="https://dabric.xyz" target="_blank"><img src="https://dabric.xyz/butt.png" alt="dabric"></a>
 							<a href="https://gradientos.neocities.org" target="_blank"><img src="https://gradientos.neocities.org/bsab/badge0.gif" alt="GradientOS"></a>
 							<a href="https://wi-fi.neocities.org/" target="_blank"><img src="interests/websites/img/button/needwifi.png"></a>
 						</div>

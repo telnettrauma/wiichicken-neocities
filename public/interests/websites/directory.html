@@ -28,6 +28,7 @@
 			transform: translateX(-30px);
 			filter: drop-shadow(0 0 15px black);
 		}
+		.listhell table tr td:nth-child(2n) {width: 100%;}
 	</style>
 	<div id="heightCheck"></div>
 	<div class="heading" id="poopBlock"></div>
@@ -76,35 +77,82 @@
 					<h1>BUTTONS!</h1>
 				</div>
 			</header>
-			<div class="box" style="background-color: #690005; color: #ffb4ab; border-color: red;">
-				<p><a onclick="scrollAway();" style="background-color: #ffb4ab; color: #93000a; cursor: pointer;">click here</a> to scroll past and hide buttons (for those with epilepsy)</p>
-				<script>
-					function scrollAway() {
-						document.getElementById('butterball').style.display = 'none';
-						document.getElementById('urls').scrollIntoView();
-					}
-				</script>
+			<div class="box">
+				<p>display as:</p>
+				<button>list</button>
+				<button>button</button>
+				<button>button (zoomed)</button>
 			</div>
 			<header>
 				<div class="box lessvis">
 					<h2 id="ps">UNCATEGORiZED</h2>
 				</div>
 			</header>
-			<div class="box">
-				<div class="buttonhell">
-					<a target="_blank" href="https://melonking.net"><img loading="lazy" alt="Visit Melonking.Net!" src="https://melonking.net/images/badges/MELON-BADGE-2.GIF" style="image-rendering: pixelated"></a>
-					<a href="https://afellowu.neocities.org/" target="_blank"><img loading="lazy" src="img/button/mebi_county.gif"></a>
-					<a href="https://nerucom.neocities.org"><img loading="lazy" src="https://nerucom.neocities.org/images/neruconc/nerucom.gif"></a>
-					<a target="_blank" href="http://devils.neocities.org"><img loading="lazy" src="https://66.media.tumblr.com/b9e32e17568f6e8b052011afb9ccfae4/tumblr_inline_ps5cezThgH1w1xdc5_540.gif"></a>
-					<a href="https://4ivilo.neocities.org/"><img loading="lazy" src="https://4ivilo.neocities.org/buttons/4ivilos_button.gif"/></a>
-					<a href="https://josef.neocities.org/home"><img loading="lazy" src="img/button/alulabutton.gif"></a>
-					<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif" loading="lazy"></a>
-					<a target="_blank" href="https://encounters-ltd.neocities.org"><img src="img/button/artists/encounters.gif" loading="lazy"></a>
-					<a href="https://neonriser.neocities.org" target="_blank"><img src="img/button/more/neonriser.png" loading="lazy"></a>
-					<a href="https://bruno-rubim.neocities.org" target="_blank"><img src="img/button/bruno-button.gif" loading="lazy"></a>
-					<a target="_blank" href="https://momg.neocities.org/"><img loading="lazy" alt="Visit the Gif Gallery!" src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
-					<a href="https://blinkies.cafe/" target="_blank"><img src="img/button/tools/blinkcafe.gif" loading="lazy"></a>
-				</div>
+			<div class="box buttonhell">
+				<a target="_blank" href="https://melonking.net"><img loading="lazy" alt="Visit Melonking.Net!" src="https://melonking.net/images/badges/MELON-BADGE-2.GIF" style="image-rendering: pixelated"></a>
+				<a href="https://afellowu.neocities.org/" target="_blank"><img loading="lazy" src="img/button/mebi_county.gif"></a>
+				<a href="https://nerucom.neocities.org"><img loading="lazy" src="https://nerucom.neocities.org/images/neruconc/nerucom.gif"></a>
+				<a target="_blank" href="http://devils.neocities.org"><img loading="lazy" src="https://66.media.tumblr.com/b9e32e17568f6e8b052011afb9ccfae4/tumblr_inline_ps5cezThgH1w1xdc5_540.gif"></a>
+				<a href="https://4ivilo.neocities.org/"><img loading="lazy" src="https://4ivilo.neocities.org/buttons/4ivilos_button.gif"/></a>
+				<a href="https://josef.neocities.org/home"><img loading="lazy" src="img/button/alulabutton.gif"></a>
+				<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif" loading="lazy"></a>
+				<a target="_blank" href="https://encounters-ltd.neocities.org"><img src="img/button/artists/encounters.gif" loading="lazy"></a>
+				<a href="https://neonriser.neocities.org" target="_blank"><img src="img/button/more/neonriser.png" loading="lazy"></a>
+				<a href="https://bruno-rubim.neocities.org" target="_blank"><img src="img/button/bruno-button.gif" loading="lazy"></a>
+				<a target="_blank" href="https://momg.neocities.org/"><img loading="lazy" alt="Visit the Gif Gallery!" src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
+				<a href="https://blinkies.cafe/" target="_blank"><img src="img/button/tools/blinkcafe.gif" loading="lazy"></a>
+			</div>
+			<div class="urls listhell">
+				<table>
+					<tr>
+						<td><img src="img/ficon/cities/melonking.png" loading="lazy"></td>
+						<td><a href="https://melonking.net/" target="_blank">Melonking</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/mebi.png" loading="lazy"></td>
+						<td><a href="https://afellowu.neocities.org/" target="_blank">Mebi County</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/nerucom.gif" loading="lazy"></td>
+						<td><a href="https://nerucom.neocities.org" target="_blank">nerucom - elio's web hangout</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/devils.png" loading="lazy"></td>
+						<td><a href="https://devils.neocities.org" target="_blank">devils</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/4ivil.png" loading="lazy"></td>
+						<td><a href="https://4ivilo.neocities.org" target="_blank">4ivilO'S cube realm</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/default.png" loading="lazy"></td>
+						<td><a href="https://josef.neocities.org" target="_blank">josef's neocities zone</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/sunnyshines.png" loading="lazy"></td>
+						<td><a href="https://sunnyshines.neocities.org" target="_blank">sunny's website</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/encounters.ico" loading="lazy"></td>
+						<td><a href="https://encounters-ltd.neocities.org" target="_blank">Encounters LTD</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/neonriser.png" loading="lazy"></td>
+						<td><a href="https://neonriser.neocities.org" target="_blank">Neonriser</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/bruno.png" loading="lazy"></td>
+						<td><a href="https://bruno-rubim.neocities.org" target="_blank">Bruno Rubim</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/momg.png" loading="lazy"></td>
+						<td><a href="https://momg.neocities.org" target="_blank">MoMG</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/blinkie.png" loading="lazy"></td>
+						<td><a href="https://blinkies.cafe/" target="_blank">Blinkies Cafe</a></td>
+					</tr>
+				</table>
 			</div>
 			<header>
 				<div class="box lessvis">
@@ -113,11 +161,27 @@
 			</header>
 			<div class="box">
 				<p>my inspirations for this site, yay. you are such a cool person =)</p>
-				<div class="buttonhell">
-					<a href="https://sep.neocities.org" target="_blank"><img src="img/button/sep.gif" loading="lazy"></a>
-					<a href="https://catbyte.site" target="_blank"><img src="img/button/catbyte.png" loading="lazy"></a>
-					<a href="https://dabric.neocities.org"><img loading="lazy" src="https://dabric.neocities.org/butt.png" alt="dabric"></a>
-				</div>
+			</div>
+			<div class="buttonhell box">
+				<a href="https://sep.neocities.org" target="_blank"><img src="img/button/sep.gif" loading="lazy"></a>
+				<a href="https://catbyte.site" target="_blank"><img src="img/button/catbyte.png" loading="lazy"></a>
+				<a href="https://dabric.xyz"><img loading="lazy" src="https://dabric.xyz/butt.png" alt="dabric"></a>
+			</div>
+			<div class="urls listhell">
+				<table>
+					<tr>
+						<td><img src="img/ficon/default.png" loading="lazy"></td>
+						<td><a href="https://sep.neocities.org" target="_blank">septic.lol</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/default.png" loading="lazy"></td>
+						<td><a href="https://catbyte.site/home" target="_blank">the web site of cat byte</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/dabric.png" loading="lazy"></td>
+						<td><a href="https://dabric.xyz" target="_blank">Dabric</a></td>
+					</tr>
+				</table>
 			</div>
 			<header>
 				<div class="box lessvis">
@@ -160,7 +224,7 @@
 				<p>you can find a complete A-Z button-based neocities directory over at <a href="https://neonaut.neocities.org/cyber/88x31" target="_blank">Neonaut</a></p>
 			</div>
 		</div>
-		<div id="urls">
+		<div class="urls">
 			<header>
 				<div class="box">
 					<h1>UNiFORM RESOURCE LOCATORS</h1>
