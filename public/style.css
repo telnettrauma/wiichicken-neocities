@@ -11,6 +11,7 @@ a {
 	text-decoration: none;
 	color: var(--dark-secondary);
 }
+img {image-rendering: pixelated;}
 .nomarblock {
 	margin-block-start: 0;
 	margin-block-end: 0;
