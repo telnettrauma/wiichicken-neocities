@@ -680,12 +680,13 @@
 						<script>
 							function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms || DEF_DELAY));}
 							async function flipTheScript(buttono, elemento, side1, side2, mainColor, bgColor) {
+								console.log('hi charlie');
 								var friHelp = document.getElementById(buttono);
 								var frens = document.getElementById(elemento);
 								frens.style.transitionDuration = '0.2s';
 								frens.style.transform = 'rotateY(90deg)';
 								await sleep(200);
-								if (document.getElementById(side1).style.display === 'block') {
+								if (window.getComputedStyle(document.getElementById(side1)).display === 'block') {
 									document.getElementById(side1).style.display = 'none';
 									document.getElementById(side2).style.display = 'block';
 									friHelp.style.backgroundColor = bgColor;

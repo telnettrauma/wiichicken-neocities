@@ -1,4 +1,4 @@
-function flipTheScript() {
+function addTheFart() {
 	const poopBlock = document.getElementById('poopBlock');
 	const sideButton = document.getElementById('sideButton');
 	const overSide = document.getElementById('overSide');
@@ -12,7 +12,7 @@ function flipTheScript() {
 }
 function openSidey() {document.getElementById('overSide').style.display = 'flex';}
 function closeSidey() {document.getElementById('overSide').style.display = 'none';}
-flipTheScript();
+addTheFart();
 function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms || DEF_DELAY));}
 var whatIsOpera = (navigator.userAgent.match(/Opera|OPR\//) ? true : false);
 async function banOpera() {
