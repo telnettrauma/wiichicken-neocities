@@ -10,6 +10,21 @@
 	</head>
 	<body>
 	<style>
+		button {
+			background-color: #464364;
+			color: #e3dfff;
+			border: 1px solid #c6c2ea;
+			box-shadow: 2px 2px 0 0 #c6c2ea;
+			cursor: pointer;
+		}
+		button:hover {
+			transform: translate(1px, 1px);
+			box-shadow: 1px 1px 0 0;
+		}
+		button:active {
+			transform: translate(2px, 2px);
+			box-shadow: unset;
+		}
 		.buttonhell a {background: none;}
 		.buttonhell {
 			display: flex;
@@ -95,10 +110,7 @@
 				</div>
 			</header>
 			<div class="box">
-				<p>display as:</p>
-				<button id="set-list" onclick="document.getElementById('butterball').className = 'list';">list</button>
-				<button id="set-grid" onclick="document.getElementById('butterball').className = 'grid';">button</button>
-				<button id="zoom-grid" onclick="document.getElementById('butterball').className = 'grid zoom';">button (zoomed)</button>
+				<p>display as: <button id="set-list" onclick="document.getElementById('butterball').className = 'list';">list</button> <button id="set-grid" onclick="document.getElementById('butterball').className = 'grid';">buttons</button> <button id="zoom-grid" onclick="document.getElementById('butterball').className = 'grid zoom';">buttons (large)</button></p>
 			</div>
 			<header>
 				<div class="box lessvis">
