@@ -29,6 +29,23 @@
 			filter: drop-shadow(0 0 15px black);
 		}
 		.listhell table tr td:nth-child(2n) {width: 100%;}
+		.list .listhell {display: block;}
+		.grid .buttonhell {display: flex;}
+		.list .buttonhell, .grid .listhell {display: none;}
+		.zoom .buttonhell a:hover {
+			max-width: 176px !important;
+			max-height: 62px !important;
+		}
+		.zoom .buttonhell img {
+			width: 176px;
+			height: 62px;
+		}
+		.zoom .buttonhell a:hover img {
+			width: 352px;
+			height: 124px;
+			transform: translate(-80px, -30px);
+			filter: drop-shadow(0 0 15px black);
+		}
 	</style>
 	<div id="heightCheck"></div>
 	<div class="heading" id="poopBlock"></div>
@@ -71,7 +88,7 @@
 		<div class="box" id="sofp" style="padding: 0; display: flex; background-color: #352500; border-color: #f6be14; max-width: 698px;">
 			<iframe src="sotfp/widget.html" style="width: 100%; height: 100px; border: none;"></iframe>
 		</div>
-		<div id="butterball">
+		<div id="butterball" class="grid">
 			<header>
 				<div class="box" style="width: auto;">
 					<h1>BUTTONS!</h1>
@@ -79,9 +96,9 @@
 			</header>
 			<div class="box">
 				<p>display as:</p>
-				<button>list</button>
-				<button>button</button>
-				<button>button (zoomed)</button>
+				<button id="set-list" onclick="document.getElementById('butterball').className = 'list';">list</button>
+				<button id="set-grid" onclick="document.getElementById('butterball').className = 'grid';">button</button>
+				<button id="zoom-grid" onclick="document.getElementById('butterball').className = 'grid zoom';">button (zoomed)</button>
 			</div>
 			<header>
 				<div class="box lessvis">
