@@ -1,6 +1,4 @@
-#flood, .wave {
-	cursor: url("https://melonking.net/images/ui/bucket.png"), pointer !important;
-}
+#flood, .wave {cursor: url("https://melonking.net/images/ui/bucket.png"), pointer !important;}
 #flood {
 	display: none;
 	position: fixed;
@@ -45,13 +43,7 @@
 	animation-duration: 40s;
 }
 @keyframes slide {
-	0% {
-		transform: translate3d(-90px, 0, 0);
-	}
-	100% {
-		transform: translate3d(85px, 0, 0);
-	}
+	0% {transform: translate3d(-90px, 0, 0);}
+	100% {transform: translate3d(85px, 0, 0);}
 }
-@media only screen and (max-width: 650px) {
-	#side-flood {display: none !important;}
-}
+@media only screen and (max-width: 650px) {#side-flood {display: none !important;}}
