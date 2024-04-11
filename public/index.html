@@ -892,6 +892,9 @@
 				</ul>
 				<p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
 			</div>
+			<div class="blox">
+				<p>what are you supposed to put on your homepage</p>
+			</div>
 			<div class="row">
 				<div class="blox" style="width: 100%;">
 					<h2>contactMe</h2>
@@ -1051,6 +1054,10 @@ window.addEventListener('scroll', () => {
 		document.documentElement.style.setProperty("--linky-color", calculateBetween([222, 196, 140], [211, 191, 230]));
 		document.documentElement.style.setProperty("--linky-color2", calculateBetween([147, 0, 10], [0, 99, 155]));
 	}
+});
+document.addEventListener('DOMContentLoaded', function() {
+	document.getElementById('fakeLogo').removeAttribute('href');
+	document.getElementById('fakeLogo').setAttribute('onclick', "window.scrollTo({top: 0, behavior: 'smooth'});");
 });
 </script>
 <script src="resources/widgets/home/flood/flood.js"></script>
