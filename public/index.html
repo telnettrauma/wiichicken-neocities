@@ -137,8 +137,6 @@
 	.helpbutt {
 		float: right;
 		padding: 0px 5px 0 5px;
-		background-color: #eddcff;
-		color: #7d24e4;
 		cursor: pointer;
 	}
 	#navlink {
@@ -423,17 +421,10 @@
 		transition-duration: 0s !important;
 		position: relative;
 		width: auto;
-	}
-	.bring:hover, .bring:active {
-		background-color: #ede0dd !important;
-		border: 1px solid white;
-		color: #201a19 !important;
+		margin: 1px;
 	}
 	.bring:hover {
-		background-color: #ede0dd !important;
-		border: 1px solid white;
-		color: #201a19 !important;
-		box-shadow: 1px 1px 0 0 #a08c89 !important;
+		box-shadow: 1px 1px 0 0 #a08c89;
 		transform: translate(1px, 1px);
 	}
 	.bring:active {
@@ -452,7 +443,11 @@
 		border: 1px solid #af0095;
 		box-shadow: 2px 2px 0 0 #af0095;
 	}
-	#neorings-neoring-container a:active {
+	#neorings-neoring-container a:hover, #neorings-neoring-container .bring:hover {
+		box-shadow: 1px 1px #af0095;
+		transform: translate(1px, 1px);
+	}
+	#neorings-neoring-container a:active, #neorings-neoring-container .bring:active {
 		box-shadow: unset;
 		transform: translate(2px, 2px);
 	}
@@ -686,7 +681,7 @@
 				<div class="sidebox" id="frens" style="--side-bg: #29005599; --side-text: #eddcff; --side-border: #7d24e4;">
 					<div class="sidehead" style="color: #eddcff;">
 						<p style="background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(138,0,189,1) 100%);"><strong>FRiENDS</strong></p>
-						<span class="helpbutt" id="frihelp" onclick="flipTheScript('frihelp', 'frens', 'fri2', 'fri1', '#7d24e4', '#eddcff')">?</span>
+						<span class="helpbutt" id="frihelp" onclick="flipTheScript('frihelp', 'frens', 'fri2', 'fri1', '#4b252d', '#f2b7c2')" style="color: #4b252d; background-color: #f2b7c2; border-color: #7f525b;">?</span>
 					</div>
 					<div class="sidebox-content">
 						<div id="fri1">
@@ -696,7 +691,7 @@
 							</div>
 						</div>
 						<div id="fri2">
-							<p class="nomarblock">If we are friends, just contact me to get your button added here (we're friends, so you should have contact with me). If I only know you on Neocities, I may still add you, but don't feel upset if I don't!</p>
+							<p class="nomarblock">If we are friends, just contact me to get your button added here (we're friends, so you should have contact with me). If I only know you on Neocities, I may still add you, but don't feel upset if I don't! <img src="media/emoji/sweat.gif" loading="lazy"></p>
 						</div>
 						<script>
 							function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms || DEF_DELAY));}
@@ -966,7 +961,7 @@
 			</div>
 			<div class="row" id="littleBuddies">
 				<div style="background-color: #0021119b; border: 1px solid #75daa2;" class="blox animal">
-					<a class="noBg" href="https://wobble.town/visit/1517"><img loading="lazy" src="https://wobble.town/visit/1517/wobble.gif" alt="Wobble"></a>
+					<p>everytime i make a wobble, it gets deleted for some reason. so, no more <img src="media/emoji/disappointed.gif" loading="lazy"></p>
 				</div>
 				<div class="blox animal lefty">
 					<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!"></a>
