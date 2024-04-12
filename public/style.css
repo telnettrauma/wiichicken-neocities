@@ -50,6 +50,11 @@ img {image-rendering: pixelated;}
 /* navigation styles */
 
 /* navbar */
+#poopBlock iframe {
+	width: 100%;
+	height: 30px;
+	border: none;
+}
 .heading {
 	width: 100%;
 	z-index: 10;
