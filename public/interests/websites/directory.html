@@ -10,6 +10,21 @@
 	</head>
 	<body>
 	<style>
+		button {
+			background-color: #464364;
+			color: #e3dfff;
+			border: 1px solid #c6c2ea;
+			box-shadow: 2px 2px 0 0 #c6c2ea;
+			cursor: pointer;
+		}
+		button:hover {
+			transform: translate(1px, 1px);
+			box-shadow: 1px 1px 0 0;
+		}
+		button:active {
+			transform: translate(2px, 2px);
+			box-shadow: unset;
+		}
 		.buttonhell a {background: none;}
 		.buttonhell {
 			display: flex;
@@ -28,6 +43,24 @@
 			transform: translateX(-30px);
 			filter: drop-shadow(0 0 15px black);
 		}
+		.listhell table tr td:nth-child(2n) {width: 100%;}
+		.list .listhell {display: block;}
+		.grid .buttonhell {display: flex;}
+		.list .buttonhell, .grid .listhell {display: none;}
+		.zoom .buttonhell a:hover {
+			max-width: 176px !important;
+			max-height: 62px !important;
+		}
+		.zoom .buttonhell img {
+			width: 176px;
+			height: 62px;
+		}
+		.zoom .buttonhell a:hover img {
+			width: 352px;
+			height: 124px;
+			transform: translate(-80px, -30px);
+			filter: drop-shadow(0 0 15px black);
+		}
 	</style>
 	<div id="heightCheck"></div>
 	<div class="heading" id="poopBlock"></div>
@@ -44,11 +77,8 @@
 		<ul>
 			<li><a href="#ps">uncategorized</a></li>
 			<li><a href="#inspo">inspiration</a></li>
-			<li><a href="#ol">graphics</a></li>
 			<li><a href="#btech">tech</a></li>
-			<li><a href="#btools">tools</a></li>
 			<li><a href="#arts">artists</a></li>
-			<li><a href="#theart">art</a></li>
 		</ul>
 		<h2>SiTES</h2>
 		<ul>
@@ -73,39 +103,85 @@
 		<div class="box" id="sofp" style="padding: 0; display: flex; background-color: #352500; border-color: #f6be14; max-width: 698px;">
 			<iframe src="sotfp/widget.html" style="width: 100%; height: 100px; border: none;"></iframe>
 		</div>
-		<div id="butterball">
+		<div id="butterball" class="grid">
 			<header>
 				<div class="box" style="width: auto;">
 					<h1>BUTTONS!</h1>
 				</div>
 			</header>
-			<div class="box" style="background-color: #690005; color: #ffb4ab; border-color: red;">
-				<p><a onclick="scrollAway();" style="background-color: #ffb4ab; color: #93000a; cursor: pointer;">click here</a> to scroll past and hide buttons (for those with epilepsy)</p>
-				<script>
-					function scrollAway() {
-						document.getElementById('butterball').style.display = 'none';
-						document.getElementById('urls').scrollIntoView();
-					}
-				</script>
+			<div class="box">
+				<p>display as: <button id="set-list" onclick="document.getElementById('butterball').className = 'list';">list</button> <button id="set-grid" onclick="document.getElementById('butterball').className = 'grid';">buttons</button> <button id="zoom-grid" onclick="document.getElementById('butterball').className = 'grid zoom';">buttons (large)</button></p>
 			</div>
 			<header>
 				<div class="box lessvis">
 					<h2 id="ps">UNCATEGORiZED</h2>
 				</div>
 			</header>
-			<div class="box">
-				<div class="buttonhell">
-					<a target="_blank" href="https://melonking.net"><img loading="lazy" alt="Visit Melonking.Net!" src="https://melonking.net/images/badges/MELON-BADGE-2.GIF" style="image-rendering: pixelated"></a>
-					<a href="https://afellowu.neocities.org/" target="_blank"><img loading="lazy" src="img/button/mebi_county.gif"></a>
-					<a href="https://nerucom.neocities.org"><img loading="lazy" src="https://nerucom.neocities.org/images/neruconc/nerucom.gif"></a>
-					<a target="_blank" href="http://devils.neocities.org"><img loading="lazy" src="https://66.media.tumblr.com/b9e32e17568f6e8b052011afb9ccfae4/tumblr_inline_ps5cezThgH1w1xdc5_540.gif"></a>
-					<a href="https://4ivilo.neocities.org/"><img loading="lazy" src="https://4ivilo.neocities.org/buttons/4ivilos_button.gif"/></a>
-					<a href="https://josef.neocities.org/home"><img loading="lazy" src="img/button/alulabutton.gif"></a>
-					<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif" loading="lazy"></a>
-					<a target="_blank" href="https://encounters-ltd.neocities.org"><img src="img/button/artists/encounters.gif" loading="lazy"></a>
-					<a href="https://neonriser.neocities.org" target="_blank"><img src="img/button/more/neonriser.png" loading="lazy"></a>
-					<a href="https://bruno-rubim.neocities.org" target="_blank"><img src="img/button/bruno-button.gif" loading="lazy"></a>
-				</div>
+			<div class="box buttonhell">
+				<a target="_blank" href="https://melonking.net"><img loading="lazy" alt="Visit Melonking.Net!" src="https://melonking.net/images/badges/MELON-BADGE-2.GIF" style="image-rendering: pixelated"></a>
+				<a href="https://afellowu.neocities.org/" target="_blank"><img loading="lazy" src="img/button/mebi_county.gif"></a>
+				<a href="https://nerucom.neocities.org"><img loading="lazy" src="https://nerucom.neocities.org/images/neruconc/nerucom.gif"></a>
+				<a target="_blank" href="http://devils.neocities.org"><img loading="lazy" src="https://66.media.tumblr.com/b9e32e17568f6e8b052011afb9ccfae4/tumblr_inline_ps5cezThgH1w1xdc5_540.gif"></a>
+				<a href="https://4ivilo.neocities.org/"><img loading="lazy" src="https://4ivilo.neocities.org/buttons/4ivilos_button.gif"/></a>
+				<a href="https://josef.neocities.org/home"><img loading="lazy" src="img/button/alulabutton.gif"></a>
+				<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif" loading="lazy"></a>
+				<a target="_blank" href="https://encounters-ltd.neocities.org"><img src="img/button/artists/encounters.gif" loading="lazy"></a>
+				<a href="https://neonriser.neocities.org" target="_blank"><img src="img/button/more/neonriser.png" loading="lazy"></a>
+				<a href="https://bruno-rubim.neocities.org" target="_blank"><img src="img/button/bruno-button.gif" loading="lazy"></a>
+				<a target="_blank" href="https://momg.neocities.org/"><img loading="lazy" alt="Visit the Gif Gallery!" src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
+				<a href="https://blinkies.cafe/" target="_blank"><img src="img/button/tools/blinkcafe.gif" loading="lazy"></a>
+			</div>
+			<div class="urls listhell">
+				<table>
+					<tr>
+						<td><img src="img/ficon/cities/melonking.png" loading="lazy"></td>
+						<td><a href="https://melonking.net/" target="_blank">Melonking</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/mebi.png" loading="lazy"></td>
+						<td><a href="https://afellowu.neocities.org/" target="_blank">Mebi County</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/nerucom.gif" loading="lazy"></td>
+						<td><a href="https://nerucom.neocities.org" target="_blank">nerucom - elio's web hangout</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/devils.png" loading="lazy"></td>
+						<td><a href="https://devils.neocities.org" target="_blank">devils</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/4ivil.png" loading="lazy"></td>
+						<td><a href="https://4ivilo.neocities.org" target="_blank">4ivilO'S cube realm</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/default.png" loading="lazy"></td>
+						<td><a href="https://josef.neocities.org" target="_blank">josef's neocities zone</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/sunnyshines.png" loading="lazy"></td>
+						<td><a href="https://sunnyshines.neocities.org" target="_blank">sunny's website</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/encounters.ico" loading="lazy"></td>
+						<td><a href="https://encounters-ltd.neocities.org" target="_blank">Encounters LTD</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/neonriser.png" loading="lazy"></td>
+						<td><a href="https://neonriser.neocities.org" target="_blank">Neonriser</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/bruno.png" loading="lazy"></td>
+						<td><a href="https://bruno-rubim.neocities.org" target="_blank">Bruno Rubim</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/momg.png" loading="lazy"></td>
+						<td><a href="https://momg.neocities.org" target="_blank">MoMG</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/blinkie.png" loading="lazy"></td>
+						<td><a href="https://blinkies.cafe/" target="_blank">Blinkies Cafe</a></td>
+					</tr>
+				</table>
 			</div>
 			<header>
 				<div class="box lessvis">
@@ -113,23 +189,28 @@
 				</div>
 			</header>
 			<div class="box">
-				<p>my inspirations for this site, yay. you are such a cool person =)</p>
-				<div class="buttonhell">
-					<a href="https://sep.neocities.org" target="_blank"><img src="img/button/sep.gif" loading="lazy"></a>
-					<a href="https://catbyte.site" target="_blank"><img src="img/button/catbyte.png" loading="lazy"></a>
-					<a href="https://dabric.neocities.org"><img loading="lazy" src="https://dabric.neocities.org/butt.png" alt="dabric"></a>
-				</div>
+				<p>my inspirations for this site, yay. you are such a cool person <img src="/media/emoji/smile.gif" loading="lazy"></p>
 			</div>
-			<header>
-				<div class="box lessvis">
-					<h2 id="ol">GRAPHiCS</h2>
-				</div>
-			</header>
-			<div class="box">
-				<p>i like looking at images</p>
-				<div class="buttonhell">
-					<a target="_blank" href="https://momg.neocities.org/"><img loading="lazy" alt="Visit the Gif Gallery!" src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
-				</div>
+			<div class="buttonhell box">
+				<a href="https://sep.neocities.org" target="_blank"><img src="img/button/sep.gif" loading="lazy"></a>
+				<a href="https://catbyte.site" target="_blank"><img src="img/button/catbyte.png" loading="lazy"></a>
+				<a href="https://dabric.xyz" target="_blank"><img loading="lazy" src="https://dabric.xyz/butt.png" alt="dabric"></a>
+			</div>
+			<div class="urls listhell">
+				<table>
+					<tr>
+						<td><img src="img/ficon/default.png" loading="lazy"></td>
+						<td><a href="https://sep.neocities.org" target="_blank">septic.lol</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/default.png" loading="lazy"></td>
+						<td><a href="https://catbyte.site/home" target="_blank">the web site of cat byte</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/dabric.png" loading="lazy"></td>
+						<td><a href="https://dabric.xyz" target="_blank">Dabric</a></td>
+					</tr>
+				</table>
 			</div>
 			<header>
 				<div class="box lessvis">
@@ -138,25 +219,38 @@
 			</header>
 			<div class="box">
 				<p>computer nerd stuff that a computer nerd would start nerding out all nerdver. this includes neocities meta</p>
-				<div class="buttonhell">
-					<a target="_blank" href="https://neonaut.neocities.org/"><img loading="lazy" src="https://neonaut.neocities.org/images/buttons/neonaut-banner.png"></a>
-					<a href="https://dabric.neocities.org"><img loading="lazy" src="https://dabric.neocities.org/butt.png" alt="dabric"></a>
-					<a href="https://divsel.neocities.org" target="_blank"><img loading="lazy" src="img/button/divsel.png"></a>
-					<a href="https://federiefederi.neocities.org" target="_blank"><img src="img/button/federiefederi.gif" loading="lazy"></a>
-					<a href="https://gradientos.neocities.org" target="_blank"><img src="https://gradientos.neocities.org/bsab/badge0.gif" alt="GradientOS" loading="lazy"></a>
-					<a href="https://wi-fi.neocities.org/" target="_blank"><img src="img/button/needwifi.png" loading="lazy"></a>
-				</div>
 			</div>
-			<header>
-				<div class="box lessvis">
-					<h2 id="btools">TOOLS</h2>
-				</div>
-			</header>
-			<div class="box">
-				<p>this is like news you can use but instead of news its tools</p>
-				<div class="buttonhell">
-					<a href="https://blinkies.cafe/" target="_blank"><img src="img/button/tools/blinkcafe.gif" loading="lazy"></a>
-				</div>
+			<div class="buttonhell box">
+				<a target="_blank" href="https://neonaut.neocities.org/"><img loading="lazy" src="https://neonaut.neocities.org/images/buttons/neonaut-banner.png"></a>
+				<a href="https://dabric.neocities.org"><img loading="lazy" src="https://dabric.neocities.org/butt.png" alt="dabric"></a>
+				<a href="https://divsel.neocities.org" target="_blank"><img loading="lazy" src="img/button/divsel.png"></a>
+				<a href="https://federiefederi.neocities.org" target="_blank"><img src="img/button/federiefederi.gif" loading="lazy"></a>
+				<a href="https://gradientos.neocities.org" target="_blank"><img src="https://gradientos.neocities.org/bsab/badge0.gif" alt="GradientOS" loading="lazy"></a>
+				<a href="https://wi-fi.neocities.org/" target="_blank"><img src="img/button/needwifi.png" loading="lazy"></a>
+			</div>
+			<div class="urls listhell">
+				<table>
+					<tr>
+						<td><img src="img/ficon/cities/neonaut.ico" loading="lazy"></td>
+						<td><a href="https://neonaut.neocities.org" target="_blank">neonaut</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/dabric.png" loading="lazy"></td>
+						<td><a href="https://dabric.xyz" target="_blank">Dabric</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/divsel.ico" loading="lazy"></td>
+						<td><a href="https://divsel.neocities.org/" target="_blank">divsel.neocities.org</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/feder.png" loading="lazy"></td>
+						<td><a href="https://federiefederi.neocities.org/" target="_blank">Federie + Federi</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/default.png" loading="lazy"></td>
+						<td><a href="https://wi-fi.neocities.org" target="_blank">need... Wi-Fi?</a></td>
+					</tr>
+				</table>
 			</div>
 			<header>
 				<div class="box lessvis">
@@ -165,35 +259,73 @@
 			</header>
 			<div class="box">
 				<p>websites with a lot of art (of any type of medium) in them. this doesn't do a good job at describing this category but trust me you'll quickly get the vibe</p>
-				<div class="buttonhell">
-					<a href="https://vidapon.net/"><img loading="lazy" alt="Vidapon's Artbox!" src="https://vidapon.net/global/netgraphics/Astertrail_button.gif"></a>
-					<a href="https://ninacti0n.neocities.org" target="_blank"><img loading="lazy" src="img/button/artists/ninacti0n.gif" alt="Ninacti0n's lab"></a>
-					<a href="https://azoart-nexus.neocities.org"><img loading="lazy" src="https://azoart-nexus.neocities.org/img/azobutton.gif"></a>
-					<a href="https://cinnamuff.neocities.org/"><img loading="lazy" src="https://cinnamuff.neocities.org/cinnamuffbtn.png"></a>
-					<a href="https://rabbitnet.neocities.org"><img loading="lazy" src="img/button/Rabbitnetskybutton.gif"></a>
-					<a target="_blank" href="https://berii.neocities.org"><img loading="lazy" src="https://berii.neocities.org/button2.gif"></a>
-					<a href="https://charpine.neocities.org" target="_blank"><img src="img/button/artists/charpine.gif" loading="lazy"></a>
-					<a href="https://dhampyr.neocities.org/" target="_blank"><img src="https://dhampyr.neocities.org/buttons/dhampyr.gif" loading="lazy"></a> 
-					<a href="https://dimwit.neocities.org" target="_blank"><img src="img/button/artists/dimwit.gif" loading="lazy"></a>
-					<a href="https://cypherine.neocities.org" target="_blank"><img src="img/button/artists/cybutton.gif" loading="lazy"></a>
-				</div>
 			</div>
-			<header>
-				<div class="box lessvis">
-					<h2 id="theart">ART iTSELF</h2>
-				</div>
-			</header>
-			<div class="box">
-				<p>every site is a piece of art unless its not, but these sites definitely feel like an art project.</p>
-				<div class="buttonhell">
-					<a href="https://psychicnewborn.neocities.org" target="_blank"><img loading="lazy" src="img/button/psychic.gif"></a>
-				</div>
+			<div class="buttonhell box">
+				<a href="https://vidapon.net/" target="_blank"><img loading="lazy" alt="Vidapon's Artbox!" src="https://vidapon.net/global/netgraphics/Astertrail_button.gif"></a>
+				<a href="https://ninacti0n.neocities.org" target="_blank"><img loading="lazy" src="img/button/artists/ninacti0n.gif" alt="Ninacti0n's lab"></a>
+				<a href="https://azoart-nexus.neocities.org" target="_blank"><img loading="lazy" src="https://azoart-nexus.neocities.org/img/azobutton.gif"></a>
+				<a href="https://cinnamuff.neocities.org/" target="_blank"><img loading="lazy" src="https://cinnamuff.neocities.org/cinnamuffbtn.png"></a>
+				<a href="https://rabbitnet.neocities.org" target="_blank"><img loading="lazy" src="img/button/Rabbitnetskybutton.gif"></a>
+				<a target="_blank" href="https://berii.neocities.org"><img loading="lazy" src="https://berii.neocities.org/button2.gif"></a>
+				<a href="https://charpine.neocities.org" target="_blank"><img src="img/button/artists/charpine.gif" loading="lazy"></a>
+				<a href="https://dhampyr.neocities.org/" target="_blank"><img src="https://dhampyr.neocities.org/buttons/dhampyr.gif" loading="lazy"></a> 
+				<a href="https://dimwit.neocities.org" target="_blank"><img src="img/button/artists/dimwit.gif" loading="lazy"></a>
+				<a href="https://cypherine.neocities.org" target="_blank"><img src="img/button/artists/cybutton.gif" loading="lazy"></a>
+				<a href="https://psychicnewborn.neocities.org" target="_blank"><img loading="lazy" src="img/button/psychic.gif"></a>
+			</div>
+			<div class="urls listhell">
+				<table>
+					<tr>
+						<td><img src="img/ficon/cities/vidapon.png" loading="lazy"></td>
+						<td><a href="https://vidapon.net" target="_blank">Vidapon's Artbox!</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/ninacti0n.png" loading="lazy"></td>
+						<td><a href="https://ninacti0n.neocities.org" target="_blank">Ninacti0n's lab</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/azoart.png" loading="lazy"></td>
+						<td><a href="https://azoart-nexus.neocities.org/" target="_blank">Azoart Nexus</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/default.png" loading="lazy"></td>
+						<td><a href="https://www.cinnamuff.space" target="_blank">Cinnamuff</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/rabbitnet.png" loading="lazy"></td>
+						<td><a href="https://rabbitnet.neocities.org" target="_blank">RabbitNET</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/berii.png" loading="lazy"></td>
+						<td><a href="https://berii.neocities.org" target="_blank">Berii</a></td>
+					</tr>
+					<tr>
+						<td><img src="/media/buttons/favicon/charpine.png" loading="lazy"></td>
+						<td><a href="https://charpine.neocities.org" target="_blank">the 100% official charpine website</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/dhampyr.png" loading="lazy"></td>
+						<td><a href="https://dhampyr.neocities.org" target="_blank">dhampyr</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/dimwit.png" loading="lazy"></td>
+						<td><a href="https://dimwit.neocities.org" target="_blank">dimwit</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/cypherine.png" loading="lazy"></td>
+						<td><a href="https://cypherine.neocities.org/" target="_blank">Cypherine</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/newborn.png" loading="lazy"></td>
+						<td><a href="https://psychicnewborn.neocities.org/" target="_blank">Psychic Newborn</a></td>
+					</tr>
+				</table>
 			</div>
 			<div class="box">
 				<p>you can find a complete A-Z button-based neocities directory over at <a href="https://neonaut.neocities.org/cyber/88x31" target="_blank">Neonaut</a></p>
 			</div>
 		</div>
-		<div id="urls">
+		<div class="urls">
 			<header>
 				<div class="box">
 					<h1>UNiFORM RESOURCE LOCATORS</h1>
@@ -266,6 +398,11 @@
 					<td><img loading="lazy" src="img/ficon/art/plorg.ico"></td>
 					<td><a href="https://dhampyr.neocities.org" target="_blank">Poorly Planned Comics Archive</a></td>
 					<td>archive of the most interesting comic i have ever read</td>
+				</tr>
+				<tr>
+					<td><img loading="lazy" src="img/ficon/default.png"></td>
+					<td><a href="https://kasiapluto.neocities.org" target="_blank">Kasia Pluto</a></td>
+					<td>"Artist from Philadelphia, PA."</td>
 				</tr>
 			</table>
 			<header>
@@ -470,7 +607,7 @@
 				<tr>
 					<td><img loading="lazy" src="img/ficon/blog/twt.png"></td>
 					<td><a href="https://twitter.com/depthsofwiki" target="_blank">depths of wikipedia</a></td>
-					<td>Interesting facts about Wikipedia history, as well as out of context screenshots</td>
+					<td>Interesting facts about Wikipedia history, as well as out of context screenshots. You can also find them on <a href="https://www.instagram.com/depthsofwikipedia/" target="_blank">Instagram</a> and <a href="https://www.tiktok.com/@depthsofwikipedia" target="_blank">TikTok</a></td>
 				</tr>
 			</table>
 		</div>

@@ -4,8 +4,10 @@
 		<title>WiiCHiCKEN'S WORKS OF ART</title>
 		<link href="https://fonts.googleapis.com/css2?family=Barlow&family=Martian+Mono:wght@400;700&display=swap" rel="stylesheet">
 		<link href="/style.css" rel="stylesheet">
-		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#e0bbdd">
+		<noscript><style>#poopBlock iframe {display: block !important;}</style></noscript>
 	</head>
 	<body>
 		<style>
@@ -75,13 +77,15 @@
 			}
 		</style>
 		<div id="heightCheck"></div>
-		<div class="heading" id="poopBlock"></div>
+		<div class="heading" id="poopBlock" style="pointer-events: all;">
+			<iframe src="/resources/nav/fallback.html" loading="lazy"></iframe>
+		</div>
 		<div id="sideButton" onclick="openSidey()"></div>
 		<div id="overSide"></div>
 		<div id="chewTooth"></div>
 		<div id="main">
-			<div class="box" style="padding: 0;">
-				<h1 style="text-align: center;">MY WORKS</h1>
+			<div class="box">
+				<h1>MY WORKS</h1>
 			</div>
 			<main>
 				<div class="box">
@@ -92,16 +96,16 @@
 						<a id="gallery" style="background: none; display: flex; justify-content: center; align-items: center; flex-direction: column;" href="gallery/index.html"><span style="font-size: 30px;"><strong>GALLERY</strong></span><br>look at the drawings i have made</a>
 					</div>
 					<div style="display: flex; flex-wrap: wrap; max-width: 144px;">
-						<div class="box square" style="padding: 0; margin: 0 0 10px 10px;">
+						<div class="box square" style="padding: 0; margin: 0 0 10px 10px; border-color: #8a938b;">
 							<a href="https://www.deviantart.com/wechicken" target="_blank" title="DeviantArt"><img src="res/da.png"></a>
 						</div>
-						<div class="box square" style="padding: 0;height: 60px; margin: 0 0 10px 10px;">
+						<div class="box square" style="padding: 0;height: 60px; margin: 0 0 10px 10px; border-color: #757780;">
 							<a href="https://wiichicken.tumblr.com" target="_blank" title="Art tumblr"><img src="res/tumblr.png"></a>
 						</div>
-						<div class="box square" style="padding: 0;height: 60px; margin-left: 10px; margin: 0 0 0 10px;">
+						<div class="box square" style="padding: 0;height: 60px; margin-left: 10px; margin: 0 0 0 10px; border-color: #717971;">
 							<a href="https://toyhou.se/wiichicken" target="_blank" title="Toyhouse (Major work in progress!)"><img src="res/th.png"></a>
 						</div>
-						<div class="box square" style="padding: 0;height: 60px; margin-left: 10px; margin: 0 0 0 10px;">
+						<div class="box square" style="padding: 0;height: 60px; margin-left: 10px; margin: 0 0 0 10px; border-color: #827568;">
 							<a href="https://wiichicken.newgrounds.com" target="_blank" title="Newgrounds"><img src="res/ng.png"></a>
 						</div>
 					</div>

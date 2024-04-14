@@ -16,9 +16,7 @@
 				--sub: #ffb693;
 				--bg : #351000;
 			}
-			body {
-				background-color: #351000;
-			}
+			body {background-color: #351000;}
 			@keyframes nowBack {
 				0% {background-position-y: 0%;}
 				100% {background-position-y: 168%;}
@@ -69,6 +67,22 @@
 				margin: 3px;
 			}
 			#inHead {justify-content: center !important;}
+			#links {margin-right: 2px;}
+			#links a {
+				display: flex;
+				padding: 5px;
+				margin-bottom: 10px;
+				border: 1px solid var(--link-color);
+				box-shadow: 2px 2px 0 0 var(--link-color);
+			}
+			#links a:hover {
+				box-shadow: 1px 1px 0 0 var(--link-color);
+				transform: translate(1px, 1px);
+			}
+			#links a:active {
+				box-shadow: none !important;
+				transform: translate(2px, 2px);
+			}
 		</style>
 		<div id="heightCheck"></div>
 		<div class="heading" id="poopBlock"></div>
@@ -80,13 +94,18 @@
 				<iframe src="fm/playing.html" style="width: 100%; height: 220px; border: none;"></iframe>
 			</div>
 			<div class="card">
-				<h2>pages</h2>
+				<h2>PROJECTS</h2>
+				<ul>
+					<li><a href="fm/playing.html">last.fm now playing screen</a></li>
+				</ul>
+			</div>
+			<div class="card">
+				<h2>PAGES</h2>
 				<ul>
 					<li><a href="favsongs.html">favorite songs</a></li>
 					<li><a href="favarchive.html">current favorite song archive</a></li>
 					<li><a href="albums/favalbums.html">albums i really like</a></li>
 					<li><a href="albums/favarchive.html">albums that were at one point my favorite album</a> (wip)</li>
-					<li><a href="fm/playing.html">last.fm now playing screen</a></li>
 				</ul>
 			</div>
 			<div class="card">
@@ -140,11 +159,16 @@
 			</div>
 			<div class="card">
 				<h1>MiCROBLOG POSTS</h1>
+				<ul>
+					<li><a href="/more/archive/blog/2024/1/spotify.html" target="_blank">Spotify Sucks!!</a></li>
+				</ul>
 			</div>
 			<div class="card">
-				<ul>
-					<li><a href="/more/archive/blog/2024/1/spotify.html">Spotify Sucks!!</a></li>
-				</ul>
+				<h1>PLACES i AM</h1>
+			</div>
+			<div id="links">
+				<a href="https://www.last.fm/user/wiichicken" target="_blank" style="background-color: #410E0B; color: #F2B8B5; --link-color: red;">last.fm</a>
+				<a href="https://rateyourmusic.com/~wiichicken" target="_blank" style="background-color: #001b3f; color: #d7e2ff; --link-color: #005dbf;">rate your music</a>
 			</div>
 		</main>
 		<script src="res/np.js"></script>

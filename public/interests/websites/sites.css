@@ -43,7 +43,7 @@ th p {
 	display: inline-block;
 	margin-right: 20px;
 }
-#urls table {
+.urls table {
 	max-width: 747px;
 	width: 100%;
 	text-indent: initial;
@@ -64,14 +64,14 @@ td {
 /* the first element in a table will not have padding */
 tr td:first-child {margin-left: 0 !important;}
 tr td:nth-child(3n) {width: 100%;}
-#urls table tr td:first-child {
+.urls table tr td:first-child {
 	margin-left: 0;
 	width: 16px;
 	display: flex;
 	align-items: center;
 	/* background: linear-gradient(180deg, rgba(0,31,39,1) 0%, rgba(54,65,152,1) 100%); */
 }
-#urls table tr td:first-child img {
+.urls table tr td:first-child img {
 	display: flex;
 	width: 16px;
 	height: 16px;
@@ -154,7 +154,7 @@ header .lessvis {
 }
 @media only screen and (max-width: 900px) {
 	body, .main {width: 100%;}
-	.main, #urls table {max-width: unset;}
+	.main, .urls table {max-width: unset;}
 	.box, header {width: auto;}
 	#flex {
 		flex-wrap: wrap;

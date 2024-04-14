@@ -3,8 +3,13 @@
 <head>
 	<title>WiiCHiCKEN GUESTBOOK</title>
 	<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
-	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/x-icon" href="media/guesticon.ico">
 	<link href="style.css" rel="stylesheet">
+	<noscript>
+		<style>
+			#no-script {display: block !important;}
+		</style>
+	</noscript>
 </head>
 <body>
 <style>
@@ -54,6 +59,7 @@
 	#hcb_form_name::before {content: 'Name:';}
 	#hcb_form_website::before {content: 'Website:';}
 	#hcb_form_website::after {content: ' (optional)';}
+	#no-script {display: none}
 </style>
 <div id="heightCheck"></div>
 <div class="heading" id="poopBlock"></div>
@@ -80,6 +86,9 @@
 		<p><a href="media/home/thanks.html" target="_blank" style="background-color: unset;">thank you</a> for your time <img src="media/emoji/hug.gif"></p>
 	</div>
 </main>
+<div class="box" id="no-script">
+	<p>the guestbook requires javascript, you silly goose! <a href="index.html">return home</a></p>
+</div>
 <script src="resources/nav/navbar.js"></script>
 </body>
 </html>

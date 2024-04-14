@@ -8,6 +8,11 @@
 	<meta name="description" content="WiiCHiCKEN i am awesome and i will be the most awesome person in the whole world forever.">
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<meta name="theme-color" content="#00ffb1">
+	<noscript>
+		<style>
+			#noscript-error {display: block !important;}
+		</style>
+	</noscript>
 </head>
 <body>
 <style>
@@ -93,34 +98,37 @@
 		color: transparent;
 	}
 	.sidebox {
-		border: 1px solid var(--side-border);
-		background-color: var(--side-bg);
-		backdrop-filter: blur(5px);
-		-webkit-backdrop-filter: blur(5px);
 		color: var(--side-text);
 		width: 200px;
-		overflow: hidden;
+	}
+	.sidehead, .sidebox-content, .sidehead p {
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
 		transition-duration: 0.5s;
 	}
-	.sidebox:hover {box-shadow: 0px 0px 10px 1px var(--side-border);}
+	.sidebox-content, .sidehead p, .sidehead .helpbutt {border: 1px solid var(--side-border);}
+	.sidebox:hover .sidehead p {box-shadow: 0 0 20px 1px var(--side-border);}
 	.sidehead {
-		background: linear-gradient(45deg, rgba(147,0,6,1) 0%, rgba(116,59,0,1) 100%);
 		color: #ffdad5;
-		margin: 0 !important;
+		background-color: unset;
+		margin: 0;
+		margin-bottom: 2px;
 		font-family: 'Martian Mono', monospace;
 		font-size: 20px;
+		display: flex;
 	}
 	.sidehead p {
+		background: linear-gradient(45deg, rgba(147,0,6,1) 0%, rgba(116,59,0,1) 100%);
 		margin-block-start: 0;
 		margin-block-end: 0;
 		padding-left: 3px;
-		display: inline-block;
+		width: 100%;
 	}
-	.sidehead img {
-		transform: translateY(2px);
-		image-rendering: pixelated;
+	.sidehead .helpbutt {margin-left: 2px;}
+	.sidebox-content {
+		padding: 5px;
+		background-color: var(--side-bg);
 	}
-	.sidebox-content {padding: 5px;}
 	.sidebox-content a:not(:has(img)) {
 		background-color: #ffb4aa;
 		color: #690003;
@@ -134,8 +142,6 @@
 	.helpbutt {
 		float: right;
 		padding: 0px 5px 0 5px;
-		background-color: #eddcff;
-		color: #7d24e4;
 		cursor: pointer;
 	}
 	#navlink {
@@ -420,17 +426,10 @@
 		transition-duration: 0s !important;
 		position: relative;
 		width: auto;
-	}
-	.bring:hover, .bring:active {
-		background-color: #ede0dd !important;
-		border: 1px solid white;
-		color: #201a19 !important;
+		margin: 1px;
 	}
 	.bring:hover {
-		background-color: #ede0dd !important;
-		border: 1px solid white;
-		color: #201a19 !important;
-		box-shadow: 1px 1px 0 0 #a08c89 !important;
+		box-shadow: 1px 1px 0 0 #a08c89;
 		transform: translate(1px, 1px);
 	}
 	.bring:active {
@@ -449,7 +448,11 @@
 		border: 1px solid #af0095;
 		box-shadow: 2px 2px 0 0 #af0095;
 	}
-	#neorings-neoring-container a:active {
+	#neorings-neoring-container a:hover, #neorings-neoring-container .bring:hover {
+		box-shadow: 1px 1px #af0095;
+		transform: translate(1px, 1px);
+	}
+	#neorings-neoring-container a:active, #neorings-neoring-container .bring:active {
 		box-shadow: unset;
 		transform: translate(2px, 2px);
 	}
@@ -461,6 +464,14 @@
 	}
 	.animal a {background: none;}
 	.animal a:hover {box-shadow: none;}
+	#statuscafe {color: #001d32 !important;}
+	#statuscafe-username {
+		text-align: center;
+		font-weight: bold;
+		font-family: 'Martian Mono', monospace;
+	}
+	#statuscafe-username a {display: none;}
+	#statuscafe-username, #statuscafe-content {color: #001d32 !important;}
 	.dabuttons {
 		display: flex;
 		justify-items: center;
@@ -532,6 +543,16 @@
 		filter: blur(25px);
 		object-fit: cover;
 	}
+	#sepbut {display: flex !important;}
+	#sepbut img {filter: grayscale(1);}
+	#sepbut::after {
+		content: '404';
+		position: absolute;
+		font-family: 'Martian Mono', monospace;
+		font-size: 18px;
+		text-shadow: red 2px 0 0, blue -2px 0 0;
+		color: black;
+	}
 	@keyframes glowy {
 		0%{box-shadow: 0px 0px 200px 50px rgba(0, 255, 161, 0.75); border: 1px solid rgba(0, 255, 161);}
 		50%{box-shadow: 0px 0px 200px 50px rgba(0, 126, 255, 0.75); border: 1px solid rgb(0, 126, 255);}
@@ -550,7 +571,7 @@
 	@media only screen and (min-width: 900px) {
 		#hiSide {
 			display: flex;
-			width: 202px;
+			width: 200px;
 		}
 		#hitcount {
 			text-orientation: sideways;
@@ -663,9 +684,9 @@
 		<aside id="leftSidebar">
 			<div id="personSighted">
 				<div class="sidebox" id="frens" style="--side-bg: #29005599; --side-text: #eddcff; --side-border: #7d24e4;">
-					<div class="sidehead" style="background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(138,0,189,1) 100%); color: #eddcff;">
-						<p><strong>FRiENDS</strong></p>
-						<span class="helpbutt" id="frihelp" onclick="flipTheScript('frihelp', 'frens', 'fri2', 'fri1', '#7d24e4', '#eddcff')">?</span>
+					<div class="sidehead" style="color: #eddcff;">
+						<p style="background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(138,0,189,1) 100%);"><strong>FRiENDS</strong></p>
+						<span class="helpbutt" id="frihelp" onclick="flipTheScript('frihelp', 'frens', 'fri2', 'fri1', '#4b252d', '#f2b7c2')" style="color: #4b252d; background-color: #f2b7c2; border-color: #7f525b;">?</span>
 					</div>
 					<div class="sidebox-content">
 						<div id="fri1">
@@ -675,7 +696,7 @@
 							</div>
 						</div>
 						<div id="fri2">
-							<p class="nomarblock">If we are friends, just contact me to get your button added here (we're friends, so you should have contact with me). If I only know you on Neocities, I may still add you, but don't feel upset if I don't!</p>
+							<p class="nomarblock">If we are friends, just contact me to get your button added here (we're friends, so you should have contact with me). If I only know you on Neocities, I may still add you, but don't feel upset if I don't! <img src="media/emoji/sweat.gif" loading="lazy"></p>
 						</div>
 						<script>
 							function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms || DEF_DELAY));}
@@ -710,8 +731,8 @@
 					</div>
 				</div>
 				<div class="sidebox" id="moresites" style="--side-bg: #001e3399; --side-text: #cee5ff; --side-border: #00a6ff;">
-					<div class="sidehead" style="background: linear-gradient(45deg, rgba(0,74,119,1) 0%, rgba(0,105,119,1) 100%); color: #cee5ff;">
-						<p><strong>MORE SiTES</strong></p>
+					<div class="sidehead" style="color: #cee5ff;">
+						<p style="background: linear-gradient(45deg, rgba(0,74,119,1) 0%, rgba(0,105,119,1) 100%);"><strong>MORE SiTES</strong></p>
 					</div>
 					<div class="sidebox-content" style="padding: 0;">
 						<div class="dabuttons">
@@ -720,7 +741,7 @@
 							<a href="https://divsel.neocities.org" target="_blank"><img id="divsel" src="interests/websites/img/button/divsel.png"></a>
 							<iframe src="https://incr.easrng.net/badge?key=wiichicken" title="increment badge" width="88" height="31" frameborder="0" style="padding: 2px;"></iframe>
 							<a href="https://catbyte.site/" target="_blank"><img src="interests/websites/img/button/catbyte.png"></a>
-							<a href="https://dabric.neocities.org" target="_blank"><img src="https://dabric.neocities.org/butt.png" alt="dabric"></a>
+							<a href="https://dabric.xyz" target="_blank"><img src="https://dabric.xyz/butt.png" alt="dabric"></a>
 							<a href="https://gradientos.neocities.org" target="_blank"><img src="https://gradientos.neocities.org/bsab/badge0.gif" alt="GradientOS"></a>
 							<a href="https://wi-fi.neocities.org/" target="_blank"><img src="interests/websites/img/button/needwifi.png"></a>
 						</div>
@@ -741,8 +762,8 @@
 				</div>
 			</div>
 			<div class="sidebox" id="webr" style="--side-bg: #3a0030cc; --side-text: #ffd8ee; --side-border: #af0095;">
-				<div class="sidehead" style="background: linear-gradient(90deg, #77009a 0%, #510097 100%); color: #ffade4;">
-					<p><strong>WEBRiNG</strong></p>
+				<div class="sidehead" style="color: #ffade4;">
+					<p style="background: linear-gradient(90deg, #77009a 0%, #510097 100%);"><strong>WEBRiNG</strong></p>
 				</div>
 				<div class="sidebox-content">
 					<div id='neorings-neoring-container' style="text-align: center;">
@@ -797,6 +818,10 @@
 				<h2 class="nomarblock">REDUCED MOTiON</h2>
 				<p class="nomarblock">Reduced motion, an experimental site feature, has been enabled, because reduced motion is enabled in your device settings. Some widgets may be hidden.</p>
 			</div>
+			<div class="section blox" style="background-color: #2a1800; color: #ffddb6; padding: 5px; border-color: #ffb956; display: none;" id="noscript-error">
+				<h2 class="nomarblock">NOSCRiPT</h2>
+				<p class="nomarblock">uh, oh! it looks like you don't have javascript support! no worries, i have made some small changes to make your browsing experience slightly better. i love you too.<br>note that some things still may not work.</p>
+			</div>
 			<div class="row" id="infamous" style="display: grid; gap: 10px;">
 				<div class="blox" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
 					<div style="display: flex; flex-wrap: wrap;" id="statusCard">
@@ -806,7 +831,6 @@
 								<div id="statuscafe-content"></div>
 							</a>
 						</div>
-						<link href="resources/widgets/home/statuscafe.css" rel="stylesheet">
 						<script src="https://status.cafe/current-status.js?name=cringe" defer></script>
 						<img src="media/home/status.png" width="200" height="220" style="z-index: 1;" onmouseover="this.src ='media/home/statusy.png'" onmouseleave="this.src = 'media/home/status.png'">
 						<img src="media/home/status.png" class="blurry" style="height: 200px; width: 200px; bottom: 0;">
@@ -859,7 +883,7 @@
 						<img src="https://lastfm.freetls.fastly.net/i/u/500x500/d0b3bd702e02aba050814d33a9960a40.jpg" width="100px" height="100px" style="margin-right: 10px; border: 1px solid #cde5ff; z-index: 1;">
 						<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/500x500/d0b3bd702e02aba050814d33a9960a40.jpg" width="100px" height="100px" style="margin-right: 10px; border: 1px solid #cde5ff; mix-blend-mode: screen;">
 						<div style="width: 100%;">
-							<p class="headText nomarblock" style="font-size: 17px;">No Idols</p>
+							<p class="headText nomarblock" style="font-size: 17px;">All Alone</p>
 							<p class="nomarblock" style="font-size: 20px;">Domo Genesis</p>
 							<a class="bring" href="interests/music/favarchive.html">Current Fav Song Archive</a>
 						</div>
@@ -874,6 +898,9 @@
 					<li>create complete archive</li>
 				</ul>
 				<p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
+			</div>
+			<div class="blox">
+				<p>what are you supposed to put on your homepage</p>
 			</div>
 			<div class="row">
 				<div class="blox" style="width: 100%;">
@@ -898,13 +925,20 @@
 			<div class="blox" id="whatsheader" style="border: 1px solid #3978c6;">
 				<div class="accordion">
 					<h2 class="gradientText" style="background: linear-gradient(90deg, rgba(193,232,255,1) 0%, rgba(229,222,255,1) 100%);">siteUpdates</h2>
-					<h3 style="margin: 0; font-size: 15px;"><strong>NEW BUTOTN AGAIN</strong></h3>
-					<p style="margin-top: 0; margin-bottom: 2px;"><strong>March 29, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
+					<h3 style="margin: 0; font-size: 15px;"><strong>STAGGERiNG</strong></h3>
+					<p style="margin-top: 0; margin-bottom: 2px;"><strong>April 14, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
 				</div>
 				<div class="panel">
-					<h2 style="margin-bottom: 2px;">NEW BUTOTN AGAIN</h2>
-					<p id="updatedate">March 29, 2024</p>
-					<p><strong>alarma</strong>: i have changed the button for this site again. i'm really proud of this new button, i think it looks a lot better, is more updated (new domain), and conveys much more personality. now my little dude is doing more than just standing there, he's got a cool saw.<br>overall, im happy with the result, especially after 9 hours of work, but if you're not, you can still visit the <a href="/creative/graphics/buttons/index.html" target="_blank">buttons page</a> and download the old one.</p>
+					<h2 style="margin-bottom: 2px;">STAGGERiNG</h2>
+					<p id="updatedate">April 14, 2024</p>
+					<p>i am now experimenting with making updates live at the end of the week, instead of with every commit. timely content like blog posts will still be published when they happen, but things like new pages, layout updates, features, and whatever won't be updated until the end of the week.<br>anyways, this is what is new this week:</p>
+					<ul>
+						<li>button directory has new views; list, button, and large button. please use them. it took forever to add and was really boring.</li>
+						<li>each top level page now has its gradient displayed in the favicon. i will add more pages to this later.</li>
+						<li>clicking the home button while on the homepage now scrolls to the top of the page. fun.</li>
+						<li>most pages should still slightly work, even if you have javascript disabled. how long i will continue to provide support for people living in 1996, i dunno!</li>
+					</ul>
+					<p>also, i hit 50,000 hits! woohoo! i am so thankful that there are people online who are willing to look at my goofy website. so, i would just like to say, thank you <img src="/media/emoji/rofl.gif" loading="lazy"></p>
 					<a href="more/archive/blog/index.html">BLOG ARCHiVE</a>
 				</div>
 			</div>
@@ -916,11 +950,7 @@
 					acc[i].addEventListener("click", function() {
 						this.classList.toggle("active");
 						var panel = this.nextElementSibling;
-						if (panel.style.display === "block") {
-							panel.style.display = "none";
-						} else {
-							panel.style.display = "block";
-						}
+						if (panel.style.display === "block") {panel.style.display = "none";} else {panel.style.display = "block";}
 					});
 				}
 			</script>
@@ -947,7 +977,7 @@
 			</div>
 			<div class="row" id="littleBuddies">
 				<div style="background-color: #0021119b; border: 1px solid #75daa2;" class="blox animal">
-					<a class="noBg" href="https://wobble.town/visit/1517"><img loading="lazy" src="https://wobble.town/visit/1517/wobble.gif" alt="Wobble"></a>
+					<p>everytime i make a wobble, it gets deleted for some reason. so, no more <img src="media/emoji/disappointed.gif" loading="lazy"></p>
 				</div>
 				<div class="blox animal lefty">
 					<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!"></a>
@@ -991,20 +1021,20 @@
 					</div>
 				</div>
 				<div class="sidebox" id="lastUpdated" style="overflow: visible; margin: 0; --side-border: #f5ddda;">
-					<div class="sidehead" style="display: flex; background: linear-gradient(90deg, #534341 0%, #665949 100%); color: #f5ddda;">
-						<p style="display: inline-block; padding-left: 4px;">UPDATED</p>
+					<div class="sidehead" style="display: flex; color: #f5ddda;">
+						<p style="display: inline-block; padding-left: 4px; background: linear-gradient(90deg, #534341 0%, #665949 100%);">UPDATED</p>
 					</div>
 					<div class="sidebox-content" style="text-align: center; padding: 0;">
 						<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;"></p>
 						<p class="headText nomarblock" id="upDate" style="background-color: #ede0dd; color: #201a19; font-size: 50px;"></p>
-						<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341;"></p>
+						<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;"></p>
 						<script src="resources/widgets/home/lastupdate.js"></script>
 					</div>
 				</div>
 			</div>
 			<div class="sidebox" style="--side-bg: #001f23cc; --side-text: #8ef2ff; --side-border: #4ed8e8;" id="side-flood">
-				<div class="sidehead" style="background: linear-gradient(90deg, #006972 0%, #4a6366 100%); color: #98f5ff;">
-					<p><strong>FLOOD</strong></p>
+				<div class="sidehead">
+					<p style="background: linear-gradient(90deg, #006972 0%, #4a6366 100%); color: #98f5ff;"><strong>FLOOD</strong></p>
 					<a href="https://melonking.net/free/software/flood" target="_blank" class="helpbutt" id="flood-info">&#x1FAA3;</a>
 				</div>
 				<div class="sidebox-content" id="flood-inner" style="height: 100px; padding: 0;">
@@ -1038,6 +1068,10 @@ window.addEventListener('scroll', () => {
 		document.documentElement.style.setProperty("--linky-color", calculateBetween([222, 196, 140], [211, 191, 230]));
 		document.documentElement.style.setProperty("--linky-color2", calculateBetween([147, 0, 10], [0, 99, 155]));
 	}
+});
+document.addEventListener('DOMContentLoaded', function() {
+	document.getElementById('fakeLogo').removeAttribute('href');
+	document.getElementById('fakeLogo').setAttribute('onclick', "window.scrollTo({top: 0, behavior: 'smooth'});");
 });
 </script>
 <script src="resources/widgets/home/flood/flood.js"></script>

@@ -2,10 +2,12 @@
 <html lang="en">
 	<head>
 		<title>ALL ABOUT WiiCHiCKEN</title>
-		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link rel="icon" type="image/x-icon" href="media/abouticon.ico">
 		<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
 		<link href="style.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#e5bad7;">
+		<noscript><style>#poopBlock iframe {display: block !important;}</style></noscript>
 	</head>
 	<body>
 		<style>
@@ -91,10 +93,13 @@
 				display: flex;
 				padding: 5px;
 				margin-bottom: 10px;
-				border: 1px solid white;
-				box-shadow: 2px 2px;
+				border: 1px solid var(--link-color);
+				box-shadow: 2px 2px 0 0 var(--link-color);
 			}
-			#links a:hover {text-shadow: 0 0 10px;}
+			#links a:hover {
+				box-shadow: 1px 1px 0 0 var(--link-color);
+				transform: translate(1px, 1px);
+			}
 			#links a:active {
 				box-shadow: none !important;
 				transform: translate(2px, 2px);
@@ -228,7 +233,9 @@
 			}
 		</style>
 		<div id="heightCheck"></div>
-		<div class="heading" id="poopBlock"></div>
+		<div class="heading" id="poopBlock" style="pointer-events: all;">
+			<iframe src="/resources/nav/fallback.html" loading="lazy"></iframe>
+		</div>
 		<div id="sideButton" onclick="openSidey()"></div>
 		<div id="overSide"></div>
 		<div id="chewTooth"></div>
@@ -394,11 +401,11 @@
 					<p>in case you need more of me in your life, for some reason</p>
 				</div>
 				<div class="row" id="links">
-					<a href="https://www.youtube.com/channel/UCBfjBEKsW8ChxbX3MEGrx2Q" target="_blank" style="background-color: #410000; color: #ffdad4; border-color: red; box-shadow: 2px 2px 0 0 red;">youtube</a>
-					<a href="https://www.last.fm/user/wiichicken" target="_blank" style="background-color: #410E0B; color: #F2B8B5; border-color: red; box-shadow: 2px 2px 0 0 red;">last.fm</a>
-					<a href="https://neocities.org/site/wiichicken" target="_blank" style="background-color: #2c1600; color: #ffdcbd; border-color: orange; box-shadow: 2px 2px 0 0 orange;">neocities</a>
-					<a href="https://letterboxd.com/wiichicken/" target="_blank" style="background-color: #002106; color: #6cff80; border-color: #6cff80; box-shadow: 2px 2px 0 0 #6cff80;">letterboxd</a>
-					<a href="https://www.backloggd.com/u/wiichicken/" target="_blank" style="background-color: #3f001b; color: #ffd9e1; border-color: #ea377a; box-shadow: 2px 2px 0 0 #ea377a;">backloggd</a>
+					<a href="https://www.youtube.com/channel/UCBfjBEKsW8ChxbX3MEGrx2Q" target="_blank" style="background-color: #410000; color: #ffdad4; --link-color: red;">youtube</a>
+					<a href="https://www.last.fm/user/wiichicken" target="_blank" style="background-color: #410E0B; color: #F2B8B5; --link-color: red;">last.fm</a>
+					<a href="https://neocities.org/site/wiichicken" target="_blank" style="background-color: #2c1600; color: #ffdcbd; --link-color: orange;">neocities</a>
+					<a href="https://letterboxd.com/wiichicken/" target="_blank" style="background-color: #002106; color: #6cff80; --link-color: #6cff80;">letterboxd</a>
+					<a href="https://www.backloggd.com/u/wiichicken/" target="_blank" style="background-color: #3f001b; color: #ffd9e1; --link-color: #ea377a;">backloggd</a>
 				</div>
 				<header>
 					<h2 id="contact">CONTACT ME</h2>
@@ -414,7 +421,7 @@
 					<h1 id="site">THiS SiTE</h1>
 				</header>
 				<div class="blox">
-					<p>The reason I discovered Neocities was Cookie Clicker. The old school I attended blocked Cookie Clicker, but someone hosted the whole game on Neocities, albeit an older version. I got bored and decided to check the homepage of Neocities, and tried making another page for students to play games on at school. That page hasn't been lost to time, but rather lost to memory.<br>Recently I started getting really into website designing again. I found it is much more fun being able to have control of almost everything instead of just posting pictures and videos to a static feed. I hope that the content of my site makes up for the lack of effects and styling on it <img src="media/emoji/smile.gif"></p>
+					<p>Cookie Clicker was the reason I discovered Neocities. The old school I attended blocked Cookie Clicker, but someone hosted the whole game on Neocities, albeit an older version. I got bored and decided to check the homepage of Neocities, and tried making another page for students to play games on at school. That page hasn't been lost to time, but rather lost to memory.<br>Recently I started getting really into website designing again. I found it is much more fun being able to have control of almost everything instead of just posting pictures and videos to a static feed. I hope that the content of my site makes up for the lack of effects and styling on it <img src="media/emoji/smile.gif"></p>
 					<p>I am hoping that soon this site can become a hub for my works and projects. I don't want things to be consistent across pages, I want it to be obvious how my design style has evolved (or devolved) over time (i have not been that good in doing this).</p>
 				</div>
 				<div class="blox">

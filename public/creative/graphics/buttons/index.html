@@ -6,10 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/x-icon" href="/favicon.ico">
 		<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+		<noscript><style>#poopBlock iframe {display: block !important;}</style></noscript>
 	</head>
 	<body>
 		<div id="heightCheck"></div>
-		<div class="heading" id="poopBlock"></div>
+		<div class="heading" id="poopBlock" style="pointer-events: all;">
+			<iframe src="/resources/nav/fallback.html" loading="lazy"></iframe>
+		</div>
 		<div id="sideButton" onclick="openSidey()"></div>
 		<div id="overSide"></div>
 		<script src="/resources/nav/navbar.js"></script>
@@ -107,6 +110,12 @@
 					<p>this is the current button i am using for my site. you can hotlink this button, so that way it will automatically update! the embed code can be found at the bottom of the <a href="/index.html">main page</a>.</p>
 					<div class="butt">
 						<a onclick="popUp('current button', 'you already read the text above', '/button.gif', 'isaidyoucouldjusthotlinkit.gif')"><img src="/button.gif" loading="lazy"></a>
+					</div>
+				</div>
+				<div class="box">
+					<h3><span class="less">linkToMe/</span>present</h3>
+					<div class="butt">
+						<a onclick="popUp('april 2024 static', 'humpty dumpty on the wall and off the motion', 'mine/24aprilstatic.png', 'freezetag.gif')"><img src="mine/24aprilstatic.png" loading="lazy"></a>
 					</div>
 				</div>
 				<div class="box">

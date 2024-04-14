@@ -2,10 +2,16 @@
 <html lang="en">
 	<head>
 		<title>iNTERESTS</title>
-		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
 		<link href="/style.css" rel="stylesheet">
+		<meta name="theme-color" content="#e9bf8f">
+		<noscript>
+			<style>
+				#poopBlock iframe {display: block !important;}
+			</style>
+		</noscript>
 	</head>
 	<body>
 		<style>
@@ -44,15 +50,15 @@
 				text-align: center;
 				margin-bottom: 10px;
 			}
-			#whitepages .box a:hover {
-				text-shadow: 0 0 10px;
-			}
+			#whitepages .box a:hover {text-shadow: 0 0 10px;}
 			@media only screen and (max-width: 900px) {
 				main {width: auto;}
 			}
 		</style>
 		<div id="heightCheck"></div>
-		<div class="heading" id="poopBlock"></div>
+		<div class="heading" id="poopBlock" style="pointer-events: all;">
+			<iframe src="/resources/nav/fallback.html" loading="lazy"></iframe>
+		</div>
 		<div id="sideButton" onclick="openSidey()"></div>
 		<div id="overSide"></div>
 		<div id="chewTooth"></div>
