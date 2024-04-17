@@ -19,20 +19,20 @@ flood.maxLevel = 100; // Server - Do not Edit.
 flood.bilgeDelay = 10000; // Server - Do not Edit.
 flood.changeStep = 0.1;
 flood.includeInfo = false; // Returns a list of all sites who are flooded.
-flood.disableInFrames = false; // Stop the script running in frames
+flood.disableInFrames = true; // Stop the script running in frames
 flood.disableMessages = false; // Hides the info message.
 
 flood.msg = {};
 flood.msg.info = "&#x1FAA3;";
-flood.msg.rising = "its going up...";
-flood.msg.falling = "yay, the remedy is under control";
+flood.msg.rising = "alarma: its draiing";
+flood.msg.falling = "yeah baby! keep injecting me with that water!";
 flood.msg.toosoon = "nice try, but try gooder";
-flood.msg.one = "here's the leaks";
-flood.msg.two = "uh oh, its flooding";
-flood.msg.three = "oh me oh my, its flooded in here";
-flood.msg.four = "ahh okay its floody";
-flood.msg.five = "ahhh! clean it up.";
-flood.msg.six = "houstom, we have a problem";
+flood.msg.one = "thats a lot of water!";
+flood.msg.two = "i was thirsty";
+flood.msg.three = "ok wtf my water is draiing";
+flood.msg.four = "wheres my water free download";
+flood.msg.five = "its giving flint michigan";
+flood.msg.six = "can't even have water in detroit";
 
 // Active vars, do not edit! i wont!
 flood.updateLoop = undefined;
@@ -54,17 +54,17 @@ flood.audio.clunk = undefined;
 
 // Setup event!
 window.addEventListener("DOMContentLoaded", async () => {
-    if (flood.disableInFrames && window !== window.parent) {
-        updateFloodLevel(false, false);
-        flood.updateLoop = setInterval(updateFloodLevel, flood.updateSpeed);
-        console.log("Flood render disabled becouse of the frame!");
-        return;
-    }
+		if (flood.disableInFrames && window !== window.parent) {
+				updateFloodLevel(false, false);
+				flood.updateLoop = setInterval(updateFloodLevel, flood.updateSpeed);
+				console.log("Flood render disabled becouse of the frame!");
+				return;
+		}
 		var innerFloodBox = document.getElementById('flood-inner');
 
-    innerFloodBox.insertAdjacentHTML(
-        "beforeend",
-        `
+		innerFloodBox.insertAdjacentHTML(
+				"beforeend",
+				`
 	<svg id="flood" viewBox="0 24 150 450" preserveAspectRatio="none" shape-rendering="auto">
 		<defs>
 			<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v450h-352z" />
@@ -82,89 +82,88 @@ window.addEventListener("DOMContentLoaded", async () => {
 	<div id="flood-menu">
 		<span id="flood-message"></span>
 	</div>`
-    );
+		);
 
-    flood.html.flood = document.getElementById("flood");
-    flood.html.menu = document.getElementById("flood-menu");
-    flood.html.message = document.getElementById("flood-message");
+		flood.html.flood = document.getElementById("flood");
+		flood.html.menu = document.getElementById("flood-menu");
+		flood.html.message = document.getElementById("flood-message");
 
-    flood.audio.flush = new Audio(flood.drainSound);
-    flood.audio.clunk = new Audio(flood.drainTooSoonSound);
+		flood.audio.flush = new Audio(flood.drainSound);
+		flood.audio.clunk = new Audio(flood.drainTooSoonSound);
 
-    if (flood.disableMessages) {
-        flood.html.message.style.display = "none";
-    }
+		if (flood.disableMessages) {
+				flood.html.message.style.display = "none";
+		}
 
-    await updateFloodLevel(false, true);
-    flood.updateLoop = setInterval(updateFloodLevel, flood.updateSpeed);
-    flood.renderLoop = setInterval(renderWater, flood.renderSpeed);
-    // Make the flood visible now that its working
-    flood.html.flood.style.display = "block";
-    flood.html.menu.style.display = "block";
+		await updateFloodLevel(false, true);
+		flood.updateLoop = setInterval(updateFloodLevel, flood.updateSpeed);
+		flood.renderLoop = setInterval(renderWater, flood.renderSpeed);
+		// Make the flood visible now that its working
+		flood.html.flood.style.display = "block";
+		flood.html.menu.style.display = "block";
 
-    flood.html.flood.addEventListener("click", async () => {
-        doBilge();
-    });
+		document.getElementById('flood-fill-water').setAttribute('onclick', 'doBilge();');
 });
 
 // Issue a bilge request!
-function doBilge() {
-    if (Date.now() - flood.lastBilge < flood.bilgeDelay) {
-        // Its too soon to bilge again!
-        flood.audio.clunk.currentTime = 0;
-        flood.audio.clunk.play();
-        flood.html.message.innerHTML = flood.msg.toosoon;
-        return;
-    }
-    flood.lastBilge = Date.now();
-    updateFloodLevel(true, false);
-    flood.audio.flush.currentTime = 0;
-    flood.audio.flush.play();
+async function doBilge() {
+		if (Date.now() - flood.lastBilge < flood.bilgeDelay) {
+				// Its too soon to bilge again!
+				flood.audio.clunk.currentTime = 0;
+				flood.html.message.innerHTML = flood.msg.toosoon;
+				return;
+		}
+		flood.lastBilge = Date.now();
+		updateFloodLevel(true, false);
+		flood.audio.flush.currentTime = 0;
+		document.getElementById('flood-fill-water').classList = 'bring flood-unavailable';
+		await sleep(10000);
+		document.getElementById('flood-fill-water').classList.remove('flood-unavailable');
 }
 
 // Communicate with the flood server!
 async function updateFloodLevel(doBilge = false, doQuickUpdate = false) {
-    let path = window.location.pathname;
-    fetch(flood.serverURL + "/flood?bilge=" + doBilge + "&info=" + flood.includeInfo + "&path=" + path)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (jsonResponse) {
-            flood.levelCache = flood.level;
-            flood.level = jsonResponse.level;
-            flood.info = jsonResponse.info;
-            if (doQuickUpdate) {
-                flood.html.flood.style.top = flood.maxLevel - flood.level + "%";
-            }
-        });
+		let path = window.location.pathname;
+		fetch(flood.serverURL + "/flood?bilge=" + doBilge + "&info=" + flood.includeInfo + "&path=" + path)
+				.then(function (response) {
+						return response.json();
+				})
+				.then(function (jsonResponse) {
+						flood.levelCache = flood.level;
+						flood.level = jsonResponse.level;
+						flood.info = jsonResponse.info;
+						if (doQuickUpdate) {
+								flood.html.flood.style.top = flood.level + "%";
+						}
+				});
 }
 
 // Update the visuals
 function renderWater() {
-    if (flood.logicLevel == flood.level) {
-        return; // Save the processing time, nothing to do!
-    }
-    let renderLevel = Number(flood.html.flood.style.top.replace("%", "")); // 0 is top
-    flood.logicLevel = flood.maxLevel - renderLevel; // 100 is top e.g. equal to servers 100% full
-    if (flood.level > flood.logicLevel) {
-        flood.html.flood.style.top = renderLevel - flood.changeStep + "%";
-        flood.html.message.innerHTML = flood.msg.rising;
-    } else if (flood.level < flood.logicLevel) {
-        flood.html.flood.style.top = renderLevel + flood.changeStep + "%";
-        flood.html.message.innerHTML = flood.msg.falling;
-    } else {
-        if (flood.level > 90) {
-            flood.html.message.innerHTML = flood.msg.six;
-        } else if (flood.level > 70) {
-            flood.html.message.innerHTML = flood.msg.five;
-        } else if (flood.level > 50) {
-            flood.html.message.innerHTML = flood.msg.four;
-        } else if (flood.level > 30) {
-            flood.html.message.innerHTML = flood.msg.three;
-        } else if (flood.level > 10) {
-            flood.html.message.innerHTML = flood.msg.two;
-        } else {
-            flood.html.message.innerHTML = flood.msg.one;
-        }
-    }
+		if (flood.logicLevel == flood.level) {
+				return; // Save the processing time, nothing to do!
+		}
+		let renderLevel = Number(flood.html.flood.style.top.replace("%", "")); // 0 is top
+		flood.logicLevel = renderLevel; // 100 is top e.g. equal to servers 100% full
+		if (flood.level > flood.logicLevel) {
+				flood.html.flood.style.top = renderLevel + flood.changeStep + "%";
+				flood.html.message.innerHTML = flood.msg.rising;
+		} else if (flood.level < flood.logicLevel) {
+				flood.html.flood.style.top = renderLevel - flood.changeStep + "%";
+				flood.html.message.innerHTML = flood.msg.falling;
+		} else {
+				if (flood.level > 90) {
+						flood.html.message.innerHTML = flood.msg.six;
+				} else if (flood.level > 70) {
+						flood.html.message.innerHTML = flood.msg.five;
+				} else if (flood.level > 50) {
+						flood.html.message.innerHTML = flood.msg.four;
+				} else if (flood.level > 30) {
+						flood.html.message.innerHTML = flood.msg.three;
+				} else if (flood.level > 10) {
+						flood.html.message.innerHTML = flood.msg.two;
+				} else {
+						flood.html.message.innerHTML = flood.msg.one;
+				}
+		}
 }

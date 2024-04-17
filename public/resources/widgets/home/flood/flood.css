@@ -1,4 +1,3 @@
-#flood, .wave {cursor: url("https://melonking.net/images/ui/bucket.png"), pointer !important;}
 #flood {
 	display: none;
 	position: fixed;
@@ -25,6 +24,16 @@
 #flood-info {
 	font-size: 18px;
 	background-color: #d9e2ff;
+}
+#flood-fill-water {
+	position: absolute;
+	bottom: 0;
+	margin: 5px;
+	z-index: 1001;
+}
+.flood-unavailable {
+	opacity: 0.5;
+	cursor: not-allowed;
 }
 .wave > use {
 	animation: slide 40s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
