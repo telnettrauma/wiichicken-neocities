@@ -57,8 +57,7 @@
 	}
 	.blox {
 		margin-bottom: 10px;
-		border: 1px solid #00a8ff;
-		border-color: var(--border-color);
+		border: 1px solid var(--border-color);
 		background-color: #001d31b3;
 		background-color: var(--main-background-color);
 		color: #cde5ff;
@@ -560,12 +559,8 @@
 	}
 	.accordion {cursor: pointer;}
 	::-webkit-scrollbar {width: 5px;}
-	::-webkit-scrollbar-track {
-		background: linear-gradient(45deg, rgba(0,33,22,0.5) 0%, rgba(0,32,34,0.5) 100%);
-		backdrop-filter: blur(5px);
-		-webkit-backdrop-filter: blur(5px);
-	}
-	::-webkit-scrollbar-thumb {background: linear-gradient(45deg, rgba(132,248,204,1) 0%, rgba(112,245,255,1) 100%);}
+	::-webkit-scrollbar-track {background-color: black;}
+	::-webkit-scrollbar-thumb {background: linear-gradient(45deg, blue 0%, red 100%);}
 	.mobileVisible {display: none;}
 	/* i hate my life and i wanan die, i aint got no iphone */
 	@media only screen and (min-width: 900px) {
