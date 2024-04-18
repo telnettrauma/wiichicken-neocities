@@ -31,35 +31,39 @@
 			justify-content: space-evenly;
 			flex-wrap: wrap;
 		}
-		.buttonhell a:hover {
-			max-width: 88px;
-			max-height: 31px;
-		}
-		.buttonhell a:hover img {
-			position: relative;
-			width: 176px;
-			height: 62px;
-			pointer-events: none;
-			transform: translateX(-30px);
-			filter: drop-shadow(0 0 15px black);
-		}
 		.listhell table tr td:nth-child(2n) {width: 100%;}
 		.list .listhell {display: block;}
 		.grid .buttonhell {display: flex;}
 		.list .buttonhell, .grid .listhell {display: none;}
-		.zoom .buttonhell a:hover {
-			max-width: 176px !important;
-			max-height: 62px !important;
+		@media (prefers-reduced-motion = no-preference) {
+			.buttonhell a:hover {
+				max-width: 88px;
+				max-height: 31px;
+				cursor: none;
+				z-index: 20;
+			}
+			.buttonhell a:hover img {
+				position: relative;
+				width: 176px;
+				height: 62px;
+				pointer-events: none;
+				transform: translate(-30px, -10px);
+				filter: drop-shadow(0 0 15px black);
+			}
+			.zoom .buttonhell a:hover {
+				max-width: 176px !important;
+				max-height: 62px !important;
+			}
+			.zoom .buttonhell a:hover img {
+				width: 352px;
+				height: 124px;
+				transform: translate(-80px, -30px);
+				filter: drop-shadow(0 0 15px black);
+			}
 		}
 		.zoom .buttonhell img {
 			width: 176px;
 			height: 62px;
-		}
-		.zoom .buttonhell a:hover img {
-			width: 352px;
-			height: 124px;
-			transform: translate(-80px, -30px);
-			filter: drop-shadow(0 0 15px black);
 		}
 	</style>
 	<div id="heightCheck"></div>
@@ -117,13 +121,35 @@
 					<h2 id="ps">UNCATEGORiZED</h2>
 				</div>
 			</header>
+			<script>
+				const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+				document.addEventListener("DOMContentLoaded", function() {
+					if (!prefersReducedMotion) {
+						const elementsWithImages = document.querySelectorAll(".buttonhell");
+						elementsWithImages.forEach(element => {
+							const images = element.querySelectorAll("a");
+							images.forEach(image => {
+								image.addEventListener("mousemove", e => {
+									const rect = image.getBoundingClientRect();
+									const mouseX = e.clientX - rect.left;
+									const mouseY = e.clientY - rect.top;
+									const moveX = (mouseX - rect.width / 2) * 0.1;
+									const moveY = (mouseY - rect.height / 2) * 0.1;
+									image.style.transform = `translate(${moveX}px, ${moveY}px)`;
+								});
+								image.addEventListener("mouseleave", () => {image.style.transform = "translate(0, 0)";});
+							});
+						});
+					}
+				});
+				if (prefersReducedMotion) {document.getElementById('butterball').className = 'list';}
+			</script>
 			<div class="box buttonhell">
 				<a target="_blank" href="https://melonking.net"><img loading="lazy" alt="Visit Melonking.Net!" src="https://melonking.net/images/badges/MELON-BADGE-2.GIF" style="image-rendering: pixelated"></a>
 				<a href="https://afellowu.neocities.org/" target="_blank"><img loading="lazy" src="img/button/mebi_county.gif"></a>
 				<a href="https://nerucom.neocities.org"><img loading="lazy" src="https://nerucom.neocities.org/images/neruconc/nerucom.gif"></a>
 				<a target="_blank" href="http://devils.neocities.org"><img loading="lazy" src="https://66.media.tumblr.com/b9e32e17568f6e8b052011afb9ccfae4/tumblr_inline_ps5cezThgH1w1xdc5_540.gif"></a>
 				<a href="https://4ivilo.neocities.org/"><img loading="lazy" src="https://4ivilo.neocities.org/buttons/4ivilos_button.gif"/></a>
-				<a href="https://josef.neocities.org/home"><img loading="lazy" src="img/button/alulabutton.gif"></a>
 				<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif" loading="lazy"></a>
 				<a target="_blank" href="https://encounters-ltd.neocities.org"><img src="img/button/artists/encounters.gif" loading="lazy"></a>
 				<a href="https://neonriser.neocities.org" target="_blank"><img src="img/button/more/neonriser.png" loading="lazy"></a>
@@ -152,10 +178,6 @@
 					<tr>
 						<td><img src="img/ficon/cities/4ivil.png" loading="lazy"></td>
 						<td><a href="https://4ivilo.neocities.org" target="_blank">4ivilO'S cube realm</a></td>
-					</tr>
-					<tr>
-						<td><img src="img/ficon/default.png" loading="lazy"></td>
-						<td><a href="https://josef.neocities.org" target="_blank">josef's neocities zone</a></td>
 					</tr>
 					<tr>
 						<td><img src="img/ficon/cities/sunnyshines.png" loading="lazy"></td>
@@ -224,7 +246,6 @@
 				<a target="_blank" href="https://neonaut.neocities.org/"><img loading="lazy" src="https://neonaut.neocities.org/images/buttons/neonaut-banner.png"></a>
 				<a href="https://dabric.neocities.org"><img loading="lazy" src="https://dabric.neocities.org/butt.png" alt="dabric"></a>
 				<a href="https://divsel.neocities.org" target="_blank"><img loading="lazy" src="img/button/divsel.png"></a>
-				<a href="https://federiefederi.neocities.org" target="_blank"><img src="img/button/federiefederi.gif" loading="lazy"></a>
 				<a href="https://gradientos.neocities.org" target="_blank"><img src="https://gradientos.neocities.org/bsab/badge0.gif" alt="GradientOS" loading="lazy"></a>
 				<a href="https://wi-fi.neocities.org/" target="_blank"><img src="img/button/needwifi.png" loading="lazy"></a>
 			</div>
@@ -241,10 +262,6 @@
 					<tr>
 						<td><img src="img/ficon/cities/divsel.ico" loading="lazy"></td>
 						<td><a href="https://divsel.neocities.org/" target="_blank">divsel.neocities.org</a></td>
-					</tr>
-					<tr>
-						<td><img src="img/ficon/cities/feder.png" loading="lazy"></td>
-						<td><a href="https://federiefederi.neocities.org/" target="_blank">Federie + Federi</a></td>
 					</tr>
 					<tr>
 						<td><img src="img/ficon/default.png" loading="lazy"></td>
@@ -560,6 +577,11 @@
 					<td><a href="https://weather.im/iembot/" target="_blank">IEMBot Monitor</a></td>
 					<td>my favorite thing to watch during severe weather. a bunch of bots that post weather alerts and updates. you can <a href="https://mesonet.agron.iastate.edu/projects/iembot/#bots" target="_blank">subscribe to updates</a> on twitter (no longer active due to api changes) and mastodon</td>
 				</tr>
+				<tr>
+					<td><img src="img/ficon/util/monkeytype.png" loading="lazy"></td>
+					<td><a href="https://monkeytype.com" target="_blank">Monkeytype</a></td>
+					<td>highly customizable typing test (overwhelming amount of settings). you can make an account to track performance overtime.</td>
+				</tr>
 			</table>
 			<header>
 				<div class="box lessvis">
@@ -610,6 +632,9 @@
 					<td>Interesting facts about Wikipedia history, as well as out of context screenshots. You can also find them on <a href="https://www.instagram.com/depthsofwikipedia/" target="_blank">Instagram</a> and <a href="https://www.tiktok.com/@depthsofwikipedia" target="_blank">TikTok</a></td>
 				</tr>
 			</table>
+		</div>
+		<div class="box">
+			<p><a href="graveyard.html">website graveyard</a></p>
 		</div>
 	</div>
 	</div>

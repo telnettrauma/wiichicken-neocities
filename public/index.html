@@ -57,8 +57,7 @@
 	}
 	.blox {
 		margin-bottom: 10px;
-		border: 1px solid #00a8ff;
-		border-color: var(--border-color);
+		border: 1px solid var(--border-color);
 		background-color: #001d31b3;
 		background-color: var(--main-background-color);
 		color: #cde5ff;
@@ -560,12 +559,8 @@
 	}
 	.accordion {cursor: pointer;}
 	::-webkit-scrollbar {width: 5px;}
-	::-webkit-scrollbar-track {
-		background: linear-gradient(45deg, rgba(0,33,22,0.5) 0%, rgba(0,32,34,0.5) 100%);
-		backdrop-filter: blur(5px);
-		-webkit-backdrop-filter: blur(5px);
-	}
-	::-webkit-scrollbar-thumb {background: linear-gradient(45deg, rgba(132,248,204,1) 0%, rgba(112,245,255,1) 100%);}
+	::-webkit-scrollbar-track {background-color: black;}
+	::-webkit-scrollbar-thumb {background: linear-gradient(45deg, blue 0%, red 100%);}
 	.mobileVisible {display: none;}
 	/* i hate my life and i wanan die, i aint got no iphone */
 	@media only screen and (min-width: 900px) {
@@ -737,13 +732,13 @@
 					<div class="sidebox-content" style="padding: 0;">
 						<div class="dabuttons">
 							<a href="https://afellowu.neocities.org/" target="_blank"><img src="interests/websites/img/button/mebi_county.gif"></a>
-							<a href="https://federiefederi.neocities.org" target="_blank"><img src="interests/websites/img/button/federiefederi.gif"></a>
 							<a href="https://divsel.neocities.org" target="_blank"><img id="divsel" src="interests/websites/img/button/divsel.png"></a>
 							<iframe src="https://incr.easrng.net/badge?key=wiichicken" title="increment badge" width="88" height="31" frameborder="0" style="padding: 2px;"></iframe>
 							<a href="https://catbyte.site/" target="_blank"><img src="interests/websites/img/button/catbyte.png"></a>
 							<a href="https://dabric.xyz" target="_blank"><img src="https://dabric.xyz/butt.png" alt="dabric"></a>
 							<a href="https://gradientos.neocities.org" target="_blank"><img src="https://gradientos.neocities.org/bsab/badge0.gif" alt="GradientOS"></a>
 							<a href="https://wi-fi.neocities.org/" target="_blank"><img src="interests/websites/img/button/needwifi.png"></a>
+							<a href="https://bruno-rubim.neocities.org/" target="_blank"><img src="interests/websites/img/button/bruno-button.gif" loading="lazy" alt="Bruno Rubim"></a>
 						</div>
 						<div class="favrow">
 							<a href="https://charpine.neocities.org" target="_blank"><img src="media/buttons/favicon/charpine.png"></a>
@@ -1039,6 +1034,7 @@
 				</div>
 				<div class="sidebox-content" id="flood-inner" style="height: 100px; padding: 0; overflow: hidden;">
 					<link href="resources/widgets/home/flood/flood.css" rel="stylesheet" type="text/css" media="all"/>
+					<button id="flood-fill-water" class="bring">FiLL</button>
 				</div>
 			</div>
 		</aside>

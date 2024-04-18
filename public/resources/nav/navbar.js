@@ -32,8 +32,8 @@ mediaQuery.addEventListener('change', () => {
 	console.log(mediaQuery.media, mediaQuery.matches);
 });
 window.addEventListener('scroll', () => {
-	if (!mediaQuery.matches) {
-		const chewTooth = document.getElementById('chewTooth');
+	const chewTooth = document.getElementById('chewTooth');
+	if (!mediaQuery.matches && chewTooth) {
 		const scrollPosition = window.scrollY;
 		chewTooth.style.backgroundPositionY = `${scrollPosition * -0.2}px`;
 	}
