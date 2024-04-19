@@ -79,7 +79,8 @@ var messageList = [ 'lorem ipsum i want to buy a car',
 'can facebook just die already',
 'reaching my training cutoff',
 'welcome to 2020! they finally invented slime that cleans anything',
-'Gigglehurts'
+'Gigglehurts',
+'super monkey ball is life'
 ]
 function setRandomMessage() {document.getElementById('messageTxt').innerHTML = messageList[Math.floor(Math.random() * messageList.length)];}
 setRandomMessage();
