@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>the secret page</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link href="/style.css" rel="stylesheet">
+		<meta name="robots" content="noindex">
+	</head>
+	<body>
+		<style>
+			* {
+				--dark-tertiary: #b3c5ff;
+				--dark-on-tertiary: #002a77;
+				--dark-secondary: #b0cccb;
+				--dark-on-primary-container: #6ff6f8;
+				--light-on-primary-container: #004f50;
+				--border: #4cdadb;
+			}
+		</style>
+		<div id="chewTooth"></div>
+		<main>
+			<div class="box">
+				<h1>wonderful secret world</h1>
+			</div>
+			<div class="box">
+				<p>Welcome to crosh, the ChromeOS developer shell! If you got here by mistake, don't panic! Just <a href="/index.html">go home</a> and carry on.</p>
+			</div>
+		</main>
+		<script>
+			window.onkeydown = function(leButton) {
+				if (leButton.keyCode === 69) {document.location='emoji.html';}
+			}
+		</script>
+	</body>
+</html>
