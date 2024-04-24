@@ -11,6 +11,7 @@
 	<noscript>
 		<style>
 			#noscript-error {display: block !important;}
+			.noscript-hidden {display: none !important;}
 		</style>
 	</noscript>
 </head>
@@ -818,7 +819,7 @@
 				<p class="nomarblock">uh, oh! it looks like you don't have javascript support! no worries, i have made some small changes to make your browsing experience slightly better. i love you too.<br>note that some things still may not work.</p>
 			</div>
 			<div class="row" id="infamous" style="display: grid; gap: 10px;">
-				<div class="blox" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
+				<div class="blox noscript-hidden" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
 					<div style="display: flex; flex-wrap: wrap;" id="statusCard">
 						<div id="statuscafe" style="padding: 5px; background-color: #94ccff; width: 100%; min-height: 85px;">
 							<a href="https://status.cafe/users/cringe" class="noBg" target="_blank">
@@ -831,7 +832,7 @@
 						<img src="media/home/status.png" class="blurry" style="height: 200px; width: 200px; bottom: 0;">
 					</div>
 				</div>
-				<div class="blox mobileHidden" style="grid-column: 2/3; grid-row: 1; margin-bottom: 0; padding: 0; border-color: #E6E1E5; background-color: #1C1B1Fcc;">
+				<div class="blox mobileHidden noscript-hidden" style="grid-column: 2/3; grid-row: 1; margin-bottom: 0; padding: 0; border-color: #E6E1E5; background-color: #1C1B1Fcc;">
 					<div id="clockContainer">
 						<div id="thatThingInTheCenterOfaClock"></div>
 						<div id="hour"></div>
@@ -907,7 +908,7 @@
 						<li>if you NEED to know my socials, go to the <a href="aboutme.html">about me</a> page</li>
 					</ul>
 				</div>
-				<div class="blox lefty mobileHidden reducedHidden" id="navlink" style="padding: 0; border: 1px solid #bec9c8;">
+				<div class="blox lefty mobileHidden reducedHidden noscript-hidden" id="navlink" style="padding: 0; border: 1px solid #bec9c8;">
 					<span class="helpbutt" id="adHelp" onclick="flipTheScript('adHelp', 'navlink', 'nava2', 'nava1', '#1a1c1e', '#e2e2e5')">?</span>
 					<div id="nava1">
 						<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
@@ -954,7 +955,7 @@
 				<div style="display: flex; align-items: center;">
 					<img loading="lazy" alt="" src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
 					<div style="margin-left: 5px;">
-						<button id="copyLink" onclick="copyLinkToPage();" class="bring" style="margin-bottom: 5px;">copyToClipboard</button>
+						<button id="copyLink" onclick="copyLinkToPage();" class="bring noscript-hidden" style="margin-bottom: 5px;">copyToClipboard</button>
 						<a class="bring" href="resources/widgets/home/med/embed.txt" target="_blank" style="font-size: 13.3px; margin-bottom: 5px;">scriptNotWorking?</a>
 						<a class="bring" href="creative/graphics/buttons/index.html" target="_blank" style="font-size: 13.3px;">moreOfMyButtons</a>
 					</div>
@@ -998,7 +999,7 @@
 				</div>
 			</div>
 		</main>
-		<aside id="rightSidebar">
+		<aside id="rightSidebar" class="noscript-hidden">
 			<!-- last.fm scrobble widget -->
 			<div class="sidebox" id="scrobblebox" style="--side-border: red; --side-bg: #2c151299;">
 				<div class="sidehead">
