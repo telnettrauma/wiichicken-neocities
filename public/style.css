@@ -29,6 +29,30 @@ img {image-rendering: pixelated;}
 	-webkit-backdrop-filter: blur(5px);
 	margin-bottom: 10px;
 }
+.box a:not(:has(img)) {
+	position: relative;
+	color: var(--dark-tertiary);
+}
+.box a:not(:has(img))::after {
+	content: '';
+	background: linear-gradient(90deg, var(--light-primary) 0%, var(--dark-tertiary) 100%);
+	height: 1px;
+	width: 100%;
+	background-position: bottom;
+	background-size: 100% 1px;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.box a:not(:has(img)):hover::after {animation: happyHover 0.3s;}
+@keyframes happyHover {
+	0% {background-size: 100% 1px; background-position: 100% 100%;}
+	50% {background-size: 0% 1px; background-position: 100% 100%;}
+	51% {background-position: 0% 100%;}
+	100% {background-size: 100% 1px; background-position: 0% 100%;}
+}
+.noline::after {display: none;}
 #chewTooth {
 	position: fixed;
 	left: 0;
