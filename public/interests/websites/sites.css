@@ -21,7 +21,7 @@ h1, h2, h3, .mainnav {
 a {
 	text-decoration: none;
 	background-color: #b3ebff;
-	color: #00677d;
+	color: #00677d !important;
 }
 img {image-rendering: pixelated;}
 button {
@@ -99,7 +99,7 @@ tr td:nth-child(3n) {width: 100%;}
 }
 .sidebar a {
 	background-color: #233240;
-	color: #b9c8da;
+	color: #b9c8da !important;
 }
 .sidebar ul {
 	list-style-type: none;
