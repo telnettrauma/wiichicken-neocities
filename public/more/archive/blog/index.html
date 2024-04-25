@@ -6,7 +6,14 @@
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
 		<link rel="alternate" type="application/rss+xml" href="feed.xml" title="RSS">
 		<link href="/style.css" rel="stylesheet">
-		<noscript><style>#poopBlock iframe {display: block !important;}</style></noscript>
+		<noscript>
+			<style>
+				#poopBlock iframe {display: block !important;}
+				#concept-box {display: none;}
+				#toggle-switch {display: none;}
+				.concept {display: list-item !important;}
+			</style>
+		</noscript>
 	</head>
 	<body>
 		<style>
@@ -226,7 +233,7 @@
 				<p><span class="rantBadge">#rant</span> - me complaining</p>
 				<p><span class="socialBadge">#social</span> - all about social media and the like</p>
 			</div>
-			<div class="box">
+			<div class="box" id="concept-box">
 				<h2>CONCEPTS</h2>
 				<p>concepts are exactly what they sound like. extremely unfinsihed works of my brain that i may or may not use later.<br>to make concepts appear, click the "show concepts" button. i don't want them to clutter up too much as they're kinda low quality.</p>
 				<button id="myMixify" onclick="toggleFallingRocks()">show concepts</button>

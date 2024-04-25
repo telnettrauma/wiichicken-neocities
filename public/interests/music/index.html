@@ -7,6 +7,11 @@
 		<link href="/interests/crumb.css" rel="stylesheet">
 		<link rel="icon" type="image/x-icon" href="/favicon.ico">
 		<link href="/style.css" rel="stylesheet">
+		<noscript>
+			<style>
+				.noscript-bye, #nowplayingbox {display: none !important;}
+			</style>
+		</noscript>
 	</head>
 	<body>
 		<style>
@@ -90,7 +95,7 @@
 		<div id="overSide"></div>
 		<div id="chewTooth"></div>
 		<main>
-			<div class="card" style="padding: 0; max-width: 698px; display: flex; border-color: white;">
+			<div id="nowplayingbox" class="card" style="padding: 0; max-width: 698px; display: flex; border-color: white;">
 				<iframe src="fm/playing.html" style="width: 100%; height: 220px; border: none;"></iframe>
 			</div>
 			<div class="card">
@@ -108,53 +113,55 @@
 					<li><a href="albums/favarchive.html">albums that were at one point my favorite album</a> (wip)</li>
 				</ul>
 			</div>
-			<div class="card">
-				<h1>ALBUMS</h1>
-			</div>
-			<div class="section">
+			<div class="noscript-bye">
 				<div class="card">
-					<h2>MONTH</h2>
-					<div class="albumDisp">
-						<img id="monthAlbum0">
-						<div>
-							<p><strong><span id="monthAlbumName0"></span></strong><br><span id="monthAlbumArtist0"></span><br><span id="monthAlbumPlay0"></span> plays</p>
-						</div>
-					</div>
-					<div class="albumDisp">
-						<img id="monthAlbum1">
-						<div>
-							<p><strong><span id="monthAlbumName1"></span></strong><br><span id="monthAlbumArtist1"></span><br><span id="monthAlbumPlay1"></span> plays</p>
-						</div>
-					</div>
-					<div class="albumDisp">
-						<img id="monthAlbum2">
-						<div>
-							<p><strong><span id="monthAlbumName2"></span></strong><br><span id="monthAlbumArtist2"></span><br><span id="monthAlbumPlay2"></span> plays</p>
-						</div>
-					</div>
-					<script src="res/albumonth.js"></script>
+					<h1>ALBUMS</h1>
 				</div>
-				<div class="card" style="margin-right: 0;">
-					<h2>YEAR</h2>
-					<div class="albumDisp">
-						<img id="yearAlbum0">
-						<div>
-							<p><strong><span id="yearAlbumName0"></span></strong><br><span id="yearAlbumArtist0"></span><br><span id="yearAlbumPlay0"></span> plays</p>
+				<div class="section">
+					<div class="card">
+						<h2>MONTH</h2>
+						<div class="albumDisp">
+							<img id="monthAlbum0">
+							<div>
+								<p><strong><span id="monthAlbumName0"></span></strong><br><span id="monthAlbumArtist0"></span><br><span id="monthAlbumPlay0"></span> plays</p>
+							</div>
 						</div>
-					</div>
-					<div class="albumDisp">
-						<img id="yearAlbum1">
-						<div>
-							<p><strong><span id="yearAlbumName1"></span></strong><br><span id="yearAlbumArtist1"></span><br><span id="yearAlbumPlay1"></span> plays</p>
+						<div class="albumDisp">
+							<img id="monthAlbum1">
+							<div>
+								<p><strong><span id="monthAlbumName1"></span></strong><br><span id="monthAlbumArtist1"></span><br><span id="monthAlbumPlay1"></span> plays</p>
+							</div>
 						</div>
-					</div>
-					<div class="albumDisp">
-						<img id="yearAlbum2">
-						<div>
-							<p><strong><span id="yearAlbumName2"></span></strong><br><span id="yearAlbumArtist2"></span><br><span id="yearAlbumPlay2"></span> plays</p>
+						<div class="albumDisp">
+							<img id="monthAlbum2">
+							<div>
+								<p><strong><span id="monthAlbumName2"></span></strong><br><span id="monthAlbumArtist2"></span><br><span id="monthAlbumPlay2"></span> plays</p>
+							</div>
 						</div>
+						<script src="res/albumonth.js"></script>
 					</div>
-					<script src="res/albumyear.js"></script>
+					<div class="card" style="margin-right: 0;">
+						<h2>YEAR</h2>
+						<div class="albumDisp">
+							<img id="yearAlbum0">
+							<div>
+								<p><strong><span id="yearAlbumName0"></span></strong><br><span id="yearAlbumArtist0"></span><br><span id="yearAlbumPlay0"></span> plays</p>
+							</div>
+						</div>
+						<div class="albumDisp">
+							<img id="yearAlbum1">
+							<div>
+								<p><strong><span id="yearAlbumName1"></span></strong><br><span id="yearAlbumArtist1"></span><br><span id="yearAlbumPlay1"></span> plays</p>
+							</div>
+						</div>
+						<div class="albumDisp">
+							<img id="yearAlbum2">
+							<div>
+								<p><strong><span id="yearAlbumName2"></span></strong><br><span id="yearAlbumArtist2"></span><br><span id="yearAlbumPlay2"></span> plays</p>
+							</div>
+						</div>
+						<script src="res/albumyear.js"></script>
+					</div>
 				</div>
 			</div>
 			<div class="card">
