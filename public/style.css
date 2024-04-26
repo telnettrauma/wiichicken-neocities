@@ -120,16 +120,16 @@ img {image-rendering: pixelated;}
 	margin: 2px;
 	transition-duration: 0.3s;
 }
+.topLinks, .topLinks a, #fakeLogo, .square {pointer-events: all;}
 .topLinks a {
 	font-weight: bold;
 	font-size: 15px;
-	color: white;
+	color: white !important;
 	padding: 0 10px 0 10px;
 	transition-duration: 0.3s;
 	text-shadow: 0 0 5px black;
 	opacity: 0.7;
 	background-color: unset !important;
-	pointer-events: all;
 }
 .topLinks a:hover {
 	opacity: 1;
