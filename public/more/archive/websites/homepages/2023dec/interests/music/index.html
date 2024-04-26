@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>music - WiiCHiCKEN</title>
+	</head>
+	<body>
+		<style>
+			body {margin: 0;}
+.breadcrumb {
+	margin: 0;
+	background-color: white;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+.breadcrumb p {
+	margin-left: 10px;
+	margin-bottom: 2px;
+	margin-top: 2px;
+}
+.breadcrumb a {
+	text-decoration: none;
+	background: none;
+}
+.breadcrumb #line {
+	width: 100%;
+	height: 5px;
+	margin: 0px;
+	background: linear-gradient(270deg, #ff0000, #0032ff);
+	background-size: 400% 400%;
+	animation: breadcrumbAnim 10s ease infinite;
+}
+body {
+	background-color: var(--bg);
+	color: var(--main);
+}
+hr {
+	height: 0px;
+	color: var(--accent);
+	border: 1px solid var(--accent);
+}
+a {
+	background-color: var(--sub);
+	color: var(--bg);
+	text-decoration: none;
+}
+#main {margin-left: 75px;}
+@keyframes breadcrumbAnim {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
+		</style>
+		<div id="container">
+			<div id="flex">
+				<aside id="leftSidebar">
+					<a href="../../index.html">home</a>
+					<hr>
+					<a href="index.html">music</a>
+					<a>films</a>
+					<a>games</a>
+					<a href="/more/archive/websites/homepages/2023dec/interests/websites/index.html">websites</a>
+				</aside>
+				<main>
+					<ul>
+						<div id="lfm">
+							<li><a style="display: inline-block;" href="https://www.last.fm/user/wiichicken" target="_blank">last.fm</a>
+							<div style="display: inline-block;" id="recents">
+								<div class="test1">
+								<div class="crop">
+									<img style="margin-top: -55px; margin-left: -13px;" src="https://lastfm-recently-played.vercel.app/api?user=wiichicken">
+								</div>
+								<div class="crop">
+									<img style="margin-top: -112px; margin-left: -13px; opacity: 0.90;" src="https://lastfm-recently-played.vercel.app/api?user=wiichicken">
+								</div>
+								<div class="crop">
+									<img style="margin-top: -170px; margin-left: -13px; opacity: 0.80;" src="https://lastfm-recently-played.vercel.app/api?user=wiichicken">
+								</div>
+								<div class="crop">
+									<img style="margin-top: -227px; margin-left: -13px; opacity: 0.70;" src="https://lastfm-recently-played.vercel.app/api?user=wiichicken">
+								</div>
+								<div class="crop">
+									<img style="margin-top: -284px; margin-left: -13px; opacity: 0.60;" src="https://lastfm-recently-played.vercel.app/api?user=wiichicken">
+								</div>
+								<div class="crop">
+									<img style="margin-top: -341px; margin-left: -13px; opacity: 0.50" src="https://lastfm-recently-played.vercel.app/api?user=wiichicken&amp;count=10">
+								</div>
+								<div class="crop">
+									<img style="margin-top: -398px; margin-left: -13px; opacity: 0.40;" src="https://lastfm-recently-played.vercel.app/api?user=wiichicken&amp;count=10">
+								</div>
+								<div class="crop">
+									<img style="margin-top: -455px; margin-left: -13px; opacity: 0.30;" src="https://lastfm-recently-played.vercel.app/api?user=wiichicken&amp;count=10">
+								</div>
+								<div class="crop">
+									<img style="margin-top: -512px; margin-left: -13px; opacity: 0.20;" src="https://lastfm-recently-played.vercel.app/api?user=wiichicken&amp;count=10">
+								</div>
+								<div class="crop">
+									<img style="margin-top: -569px; margin-left: -13px; opacity: 0.10;" src="https://lastfm-recently-played.vercel.app/api?user=wiichicken&amp;count=10">
+								</div>
+							</div></li>
+						</div>
+						<li><a href="https://rateyourmusic.com/~wiichicken" target="_blank">rate your music</a></li>
+					</ul>
+					<h2>pages</h2>
+					<h3>favorites</h3>
+					<ul>
+						<li><a>favorite songs</a></li>
+						<li><a>favorite albums</a> (under construction)</li>
+					</ul>
+					<h1>music</h1>
+					<style>
+						:root {
+							--accent: #a04100;
+							--main: #ffdbcc;
+							--sub: #ffb693;
+							--bg : #351000;
+						}
+						.crop {
+							width: 30px;
+							height: 30px;
+							overflow: hidden;
+							display: inline-block;
+						}
+						body {margin: 0;}
+						#flex {display: flex;}
+						#container {
+							max-width: 700px;
+							margin: 0 auto;
+						}
+						aside {
+							width: 60px;
+							order: 1;
+							border: 1px solid var(--accent);
+							height: 120px;
+							margin: 10px;
+						}
+						main {
+							flex: 1;
+							order: 2;
+							background-color: #562000;
+						}
+						.crop img {background-color: grey;}
+						.crop img:hover {opacity: 1 !important;}
+					</style>
+					<h2>last.fm</h2>
+					<div class="content" style="margin: 0; padding: 5px">                
+						<section id="listen" user="wiichicken">CANT FETCH last listened to</section>
+						<a href="" id="artworklink" target="_blank" style="display: flex; background: none;">
+							<img id="artwork" src="" style="padding: 2px; padding-right: 6px; display: inline-block; width: 50px; height: 50px;" onerror="this.onerror=null;this.src='https://sep7ic.github.io/code/cover.png';">
+							<p id="track" style="color: #ffdad5; white-space: nowrap; overflow: hidden;"></p>
+						</a>
+					</div>
+					<script>
+						// Code from https://septic.lol/?z=/code/widgets.html
+						document.addEventListener('DOMContentLoaded', function() {
+						var user = document.getElementById("listen").getAttribute("user");
+						var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" + user + "&api_key=afc213709a996ae561e307f596c9952b&format=json";
+						var request = new XMLHttpRequest();
+						request.open('GET', url, true);
+		
+						request.onload = function() {
+							if (request.status >= 200 && request.status < 400) {
+								
+								var data = JSON.parse(request.responseText);
+								var artist = data.recenttracks.track[0].artist["#text"];
+								var song = data.recenttracks.track[0]["name"];
+								var artwork = data.recenttracks.track[0].image[1]["#text"];
+								var link = data.recenttracks.track[0]["url"];
+		
+								var artworkImg = document.getElementById("artwork");
+								artworkImg.setAttribute("src", artwork);
+		
+								var trackInfo = document.getElementById("track");
+								trackInfo.innerHTML = "\
+									<strong>"+song+"</strong><br />\
+									"+artist+"\
+								";
+		
+								var artworkLink = document.getElementById("artworklink");
+								artworkLink.setAttribute("href", link);
+		
+								if (typeof data.recenttracks.track[0]["@attr"] !== "undefined"){
+									var listenInfo = document.getElementById("listen");
+									listenInfo.innerHTML = '<span>listening</span> to:';
+								} else {
+									var listenInfo = document.getElementById("listen");
+									listenInfo.innerHTML = 'last <span>listened</span> to:';
+									console.log("false");
+								}
+							} else {
+								console.error("Error fetching data from server.");
+							}
+						};
+		
+						request.onerror = function() {
+							console.error("Connection error.");
+						};
+		
+						request.send();
+						});
+					</script>
+				</main>
+			</div>
+		</div>
+	</body>
+</html>
