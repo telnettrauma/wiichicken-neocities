@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>WiiCHiCKEN world</title>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="theme-color" content="#00ffb1">
+		<meta name="robots" content="noindex">
+	</head>
+	<style>
+		body {
+			margin: 0;
+			background-color: black;
+			color: white;
+			background-image: url('/starry.gif');
+		}
+		@media (max-width: 800px) {body {width: 100%;}}
+		h1 {font-family: 'Martian Mono', monospace;}
+		h2 {font-family: 'Martian Mono', monospace;}
+		h3 {font-family: 'Martian Mono', monospace;}
+		h4 {font-family: 'Martian Mono', monospace;}
+		a {text-decoration: none;}
+		aside {
+			width: 300px;
+			padding: 0;
+			order: 2;
+		}
+		.main {
+			width: 800px;
+			margin: auto;
+		}
+		main {
+			order: 1;
+			flex: 1;
+			width: 800px;
+		}
+		.section a {
+			background-color: #00ffcc;
+			color: #002118;
+			transition-duration: 0.3s;
+		}
+		.section a:hover {
+			box-shadow: 0px 0px 10px 0px rgba(0, 255, 204, 0.50);;
+		}
+		.sidebox {
+			margin: 10px;
+			border: 1px solid red;
+			background-color: #2c1512;
+			color: #ffdad5;
+			width: 200px;
+			transition-duration: 0.5s;
+		}
+		.sidebox:hover {
+			box-shadow: 0px 0px 10px 1px red;
+		}
+		.sidehead {
+			background: linear-gradient(45deg, rgba(147,0,6,1) 0%, rgba(116,59,0,1) 100%);
+			color: #ffdad5;
+			margin: 0 !important;
+			font-family: 'Martian Mono', monospace;
+			font-size: 30px;
+		}
+		.sidehead p {
+			margin-block-start: 0;
+			margin-block-end: 0;
+		}
+		.sidebox-content {
+			padding: 5px;
+		}
+		.sidebox-content a {
+			background-color: #ffb4aa;
+			color: #690003;
+		}
+		#blipbox:hover {
+			box-shadow: 0px 0px 10px 1px #1DA1F2;
+		}
+		#visitorcount:hover {
+			box-shadow: 0px 0px 10px 1px #55dbc7;
+		}
+		#lastdate:hover {
+			box-shadow: 0px 0px 10px 1px #00ff64;
+		}
+		#flex {display: flex;}
+		#nav {display: flex;}
+		#nav a {
+			background-color: none;
+			width: 33.333%;
+			text-align: center;
+			text-decoration: none;
+			font-size: 30px;
+			padding: auto;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			display: inline-block;
+			margin: 0;
+			font-family: 'Martian Mono', monospace;
+		}
+		#tittle {
+			background: linear-gradient(45deg, rgba(36,0,0,1) 0%, rgba(0,6,31,1) 100%);
+			color: white;
+			height: 100px;
+			margin: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#gnav {
+			background-color: #260000;
+			color: red;
+			border: 3px solid #6C0D0D;
+		}
+		#gnav:hover {
+			background-color: #690100;
+			color: red;
+			border: 3px solid #930100;
+		}
+		#cnav {
+			background-color: #1A002D;
+			color: #BE68FF;
+			border: 3px solid #330D6C;
+		}
+		#cnav:hover {
+			background-color: #4c007b;
+			color: #BE68FF;
+			border: 3px solid #6d00ac;
+		}
+		#mnav {
+			background-color: #00013D;
+			color: #2587FF;
+			border: 3px solid #0D2B6C;
+		}
+		#mnav:hover {
+			background-color: #002f64;
+			color: #2587FF;
+			border: 3px solid #00458e;
+		}
+		#line {
+			width: 100%;
+			height: 5px;
+			margin: 0px;
+			background: linear-gradient(270deg, #ff0000, #0032ff);
+			background-size: 400% 400%;
+			animation: liner 10s ease infinite;
+		}
+		#alerta {
+			display: none;
+			background-color: red;
+		}
+		#whatsheader {
+			background-color: #274b5d;
+			color: #c3e8fe;
+		}
+		#whatsheader:hover {
+			background-color: #175b7a;
+			color: #c3e8fe;
+		}
+		#lastfmrecent {
+			padding: 5px 5px 0px 5px;
+			background-color: #212121;
+		}
+		#lastfmrecent:hover {background-color: rgb(63, 63, 63);}
+		.panel {
+			display: none;
+			overflow: hidden;
+		}
+		.head {margin: 0px;}
+		.section {padding: 0px;}
+		#mainsection {
+			background-color: #051f22;
+			color: #94f1ff;
+			padding: 5px;
+		}
+		@keyframes liner {
+			0%{background-position:0% 50%}
+			50%{background-position:100% 50%}
+			100%{background-position:0% 50%}
+		}
+		.crop {
+			width: 30px;
+			height: 30px;
+			overflow: hidden;
+			display: inline-block;
+		}
+		.crop img {margin-left: -13px;}
+		.crop img:hover {opacity: 1 !important;}
+		.img-marg {
+			padding: 4px 4px 0 4px;
+		}
+		.bilbo {
+			display: inline-block;
+			padding: 5px;
+		}
+		.bilbo img {
+			margin-left: 8px;
+			margin-right: 8px;
+		}
+		/* Code from: https://www.myoussouf.com/blog/horizontal-scrolling-text-css */
+		.marquee {
+			display: flex;
+			overflow: hidden;
+			width: 100%;
+			white-space: nowrap;
+		}
+		.innermarq {
+			animation: marquee 10s linear infinite;
+		}
+		@keyframes marquee {
+			0% {transform: translateX(0%);}
+			100% {transform: translateX(-100%);}
+		}
+		.innermarq h1 {
+			margin: 0 20px 0px 0px;
+			display: inline-block;
+		}
+		#buttons img {image-rendering: pixelated;}
+		@keyframes glowy {
+			0%{box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50)}
+			50%{box-shadow: 0px 0px 200px 10px #007EFF}
+			100%{box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50)}
+		}
+		.accordion {cursor: pointer;}
+	</style>
+	<div class="main">
+		<div style="box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50); animation: glowy 10s infinite;">
+			<div class="head">
+				<div id="tittle">
+					<svg style="display: inline-block; background-color: black;" version="1.2" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 2195 380" width="439" height="76">
+						<style>
+							.s0 { fill: #ffffff } 
+							.s1 { fill: #ff0000 } 
+							.s2 { fill: #0000ff } 
+						</style>
+						<g id="Background">
+							<path id="Path 0" fill-rule="evenodd" class="s0" d="m0 0h2195v380h-2195zm5 375h340v-370h-110v250h-5v-250h-110v250h-5v-250h-110zm575 0h220v-180h-110v-5h110v-185h-220zm225 0h110v-120h5v120h110v-370h-110v125h-5v-125h-110zm230-250h110v-120h-110zm115 250h220v-180h-110v-5h110v-185h-220zm225 0h120v-120h5v120h120v-180h-125v-5h125v-185h-120v125h-5v-125h-120zm250 0h220v-120h-110v-5h110v-120h-110v-5h110v-120h-220zm225 0h110v-245h5v245h225v-370h-110v250h-5v-250h-225zm-815 0h110v-245h-110z"/>
+							<path id="Path 1" class="s1" d="m350 65v60h110v-120h-110zm0 187.5v122.5h110v-245h-110z"/>
+							<path id="Path 2" class="s2" d="m465 65v60h110v-120h-110zm0 187.5v122.5h110v-245h-110z"/>
+						</g>
+					</svg>
+					<p style="display: inline-block; font-family: 'Martian Mono', monospace; padding-top: 62px; opacity: 0.50;">.neocities.org</p>
+				</div>
+				<div id="nav">
+					<a id="gnav" href="creative.html">ART</a>
+					<a id="cnav" href="interests/index.html">MEDiA</a>
+					<a id="mnav" href="more.html">MORE</a>
+				</div>
+				<div id="alerta"><marquee>emergency alerts free</marquee></div>
+				<script>
+					const alertaChance = Math.floor(Math.random() * 5);
+					if (alertaChance === 3) {
+						const alertList = [ "THE NATIONAL WEATHER SERVICE HAS ISSUED A SEVERE THUNDERSTORM WARNING IN EFFECT FROM 12:23 PM UNTIL 2:00 PM. FOR YOUR PROTECTION MOVE TO AN INTERIOR ROOM ON THE LOWEST FLOOR OF A BUILDING.", "THE NATIONAL WEATHER SERVICE IN BIRMINGHAM HAS ISSUED A TORNADO WARNING UNTIL 2:45 AM. AT 2:06 AM CST...THE NATIONAL WEATHER SERVICE INDICATED A SEVERE THUNDERSTORM CAPABLE OF PRODUCING A TORNADO. THIS DANGEROUS STORM WAS LOCATED NEAR MEMPHIS...OR 8 MILES SOUTHWEST OF PICKENSVILLE... AND MOVING NORTHEAST AT 45 MPH. TORNADOES ARE DIFFICULT TO SEE AND CONFIRM AT NIGHT. TAKE COVER NOW.", "THE NATIONAL WEATHER SERVICE HAS ISSUED A SPECIAL MARINE WARNING UNTIL 9:15 AM. AT 7:13 AM EDT...DOPPLER RADAR INDICATED A LINE OF THUNDERSTORMS... CAPABLE OF PRODUCING DANGEROUS WINDS IN EXCESS OF 50 KNOTS AND LARGE HAIL FROM 24 NM NORTHWEST OF ALABASTER TO 43 NM SOUTHWEST OF ALABASTER...MOVING EAST AT 35 KNOTS. MARINERS CAN EXPECT GUSTY WINDS...LARGE HAIL...HIGH WAVES...DANGEROUS LIGHTNING...AND HEAVY RAINS. BOATERS SHOULD SEEK SAFE HARBOR IMMEDIATELY...UNTIL THESE STORMS PASS." ];
+						const selectedAlert = alertList[Math.floor(Math.random() * alertList.length)];
+						document.getElementById("alerta").innerHTML = "<marquee scrollamount='10'>" + selectedAlert + "</marquee>";
+						document.getElementById("alerta").style.display = "block";
+					}
+				</script>
+				<div id="line"></div>
+			</div>
+			<div id="flex">
+				<main>
+					<div class="section" id="mainsection">
+						<p>woohoo! this is so awesome! i just switched to a brand new homepage! everything is broken, but who cares?! this is the future!</p>
+						<h1>ABOUT ME</h1>
+						<ul>
+							<li>hello, i am wiichicken. welcome to my website</li>
+							<li>i am american. sad, i know</li>
+							<li>my favorite color is <span style="color: #00ffcc;">aquamarine</span>, but i also like using <span style="color: red;">red</span> and <span style="color: #00ccff;">blue</span> gradients, in a non-patriotic way</li>
+							<li>my hobbies include looking at GPS maps and everything apart of television except for the shows themselves (<a href="peepeepoopoo.html">see my 404 page</a>)</li>
+							<li>i have assburgers (ive spelled it like that my whole life im not stopping now)</li>
+							<li><a href="aboutme.html">see my full about me page</a></li>
+						</ul>
+						<h1>FOLLOW ME</h1>
+						<p><a style="background-color: #410000; color: #ffdad4;">youtube</a> <a style="background-color: #002106; color: #6cff80;">letterboxd</a> <a style="background-color: #3f001b; color: #ffd9e1;">backloggd</a> <a style="background-color: #2c1600; color: #ffdcbd;">neocities</a></p>
+						<h2>CONTACT ME</h2>
+						<ul>
+							<li><strong>discord</strong>: wiichicken#0040</li>
+							<li><strong>email</strong>: <a href="mailto:vimeoofficial@gmail.com" target="_blank">vimeoofficial@gmail.com</a></li>
+						</ul>
+						<p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
+						<h1>TO-DO</h1>
+						<ul>
+							<li>improve navigation (i tried doing this but it broke everything)</li>
+							<li>style subpages
+								<ul>
+									<li>art page (also add content there)</li>
+									<li>interests pages (also add more interests)</li>
+								</ul>
+							</li>
+							<li>add things in margins so this isn't just one long page</li>
+							<li>create archive</li>
+							<li>add a visitor counter</li>
+						</ul>
+					</div>
+					<div id="whatsheader" class="section">
+						<div class="accordion">
+							<div class="marquee">
+								<div class="innermarq">
+									<h1 style="display: inline-block; white-space: pre;">WHAT'S NEW WHAT'S NEW WHAT'S NEW WHAT'S NEW WHAT'S NEW WHAT'S NEW</h1>
+								</div>
+								<div style="display: inline-block;" class="innermarq">
+									<h1 style="display: inline-block; white-space: pre;">WHAT'S NEW WHAT'S NEW WHAT'S NEW WHAT'S NEW WHAT'S NEW WHAT'S NEW</h1>
+								</div>
+							</div>
+							<div style="padding: 5px;">
+								<h3 style="margin: 0; font-size: 15px;"><strong>ALL ABOUT ME</strong></h3>
+								<p style="margin-top: 0; margin-bottom: 2px;"><strong>November 30, 2023</strong> &#8226; <strong>[Click to expand]</strong></p>
+							</div>
+						</div>
+						<div class="panel" style="padding: 5px;">
+							<h2 style="margin-bottom: 2px;">ALL ABOUT ME</h2>
+							<p id="updatedate">November 30, 2023</p>
+							<p>I finally made an all about me page! You can find it by simply clicking on the "see full about me" page in the "about me" section on the homepage. This is exciting because now I have a proper about me page. I will add more to it, because its currently a little bare-bones, but other than that, I am happy with it. I even actually added some less-lazy-than-usual theming to it.<br>I still am working on something big behind the scenes. I started editing my websites in VS:Code instead of the Neocities editor, so that's why you aren't seeing any updates for it. I kind of like writing here better, but having to keep the files consistent between 2 different sites is annoying, but it makes up for it immediately whenever something breaks and I can quickly revert to the live version.<br>I am working on expanding the navigation and making it better. I tried yesturday to add dropdown menus, and that broke the navigation bar completely, no matter what I did, so I have scrapped that for now. I still want to add actual features to make navigating this site easier, because I currently feel like it could really benefit from some.<br>In a week or two from me writing this, site updates may slow down, because I'm going to start working again. yay.<br>Anyway, that is all for now. I actually got featured on another site, which I think is really cool! Also, thanks for 5 followers. I didn't know that people actually followed and commented on pages here, but that's cool nonetheless.<br>Don't wanna get carpool tunnel, so I'm going to cut it here.</p>
+							<a href="/more/archive/blog/2023/november/26.html">previous update (full archive coming when i feel like it)</a>
+							<a>homepage archive</a>
+							<style>
+								#updatedate {
+									font-size: 10px;
+									margin-bottom: 2px;
+									margin-top: 2px;
+								}
+							</style>
+						</div>
+					</div>
+					<script>
+						// code stolen from https://www.w3schools.com/howto/howto_js_accordion.asp
+						var acc = document.getElementsByClassName("accordion");
+						var i;
+						for (i = 0; i < acc.length; i++) {
+							acc[i].addEventListener("click", function() {
+								this.classList.toggle("active");
+								var panel = this.nextElementSibling;
+								if (panel.style.display === "block") {
+									panel.style.display = "none";
+								} else {
+									panel.style.display = "block";
+								}
+							});
+						}
+					</script>
+					<div id="buttons" style="background-color: black;">
+						<img src="/creative/graphics/buttons/mine/first.gif" style="image-rendering: pixelated;">
+						<textarea rows="1"><a href="https://wiichicken.neocities.org/"><img src="https://wiichicken.neocities.org/button.gif" style="image-rendering: pixelated;" alt="Visit wiichicken's website"></a></textarea>
+						<p>feel free to add my button to your website if you think this website is cool enought to warrant that</p>
+						<div style="display: flex;">
+							<div class="bilbo" style="width: 30%; background-color: #002023; color: #84f3ff;">
+								<h3>HELLO FRiENDS</h3>
+								<a href="https://sep7ic.github.io/" target="_blank"><img src="media/button/sep.png"></a>
+								<a target="_blank" href="https://sunnyshines.neocities.org/"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
+							</div>
+							<div class="bilbo" style="width: 70%; background-color: #0b1b36; color: #d7e2ff;">
+								<h3>OTHER SiTES</h3>
+								<a target="_blank" href="https://melonking.net/"><img alt="Visit Melonking.Net!" src="https://melonking.net/images/badges/MELON-BADGE-2.GIF" style="image-rendering: pixelated"></a>
+								<a href="https://dannarchy.com/" target="_blank"><img src="https://dannarchy.com/images/d_now.gif"></a>
+								<a href="https://nerucom.neocities.org/"><img src="https://nerucom.neocities.org/images/neruconc/nerucom.gif"></a>
+								<a href="https://afellowu.neocities.org/" target="_blank"><img src="https://afellowu.neocities.org/images/buttons/mebi_county.gif"></a>
+								<a target="_blank" href="https://momg.neocities.org/"><img alt="Visit the Gif Gallery!" src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
+								<a href="https://vidapon.net/"><img alt="Vidapon's Artbox!" src="https://vidapon.net/global/netgraphics/Astertrail_button.gif"></a>
+								<a href="https://ninacti0n.neocities.org/" target="_blank"><img src="media/button/ninaold.gif" alt="Ninacti0n's lab"></a>
+							</div>
+						</div>
+					</div>
+				</main>
+				<aside id="rightSidebar">
+					<div class="sidebox" style="border: 1px solid #1DA1F2;" id="blipbox">
+						<div class="sidehead" style="background: linear-gradient(45deg, rgba(0,74,117,1) 0%, rgba(0,97,116,1) 100%); color: #95ccff;">
+							<p><strong>BLiP</strong></p>
+						</div>
+						<div class="sidebox-content" style="padding: 0; height: 28px;">
+							<iframe src="resources/widgets/blips.html" style="border: none; margin: 0; padding: 0;" width="100%" height="28px" scrolling="no"></iframe>
+						</div>
+					</div>
+					<div class="sidebox" id="statusbox">
+						<div class="sidehead">
+							<p><strong>STATUS</strong></p>
+						</div>
+						<div class="sidebox-content">
+							<div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=cringe" defer></script>
+						</div>
+					</div>
+					<div class="sidebox" id="scrobblebox">
+						<div class="sidehead">
+							<p><strong>SCROBBLES</strong></p>
+						</div>
+						<div class="sidebox-content" style="padding: 0;">
+							<div class="content" style="margin: 0; padding: 5px">                
+								<section id="listen" user="wiichicken">CANT FETCH last listened to</section>
+								<a href="" id="artworklink" target="_blank" style="display: flex; background-color: #2c1512;">
+									<img id="artwork" src="" style="padding: 2px; padding-right: 6px; display: inline-block; width: 50px; height: 50px;" onerror="this.onerror=null;this.src='https://sep7ic.github.io/code/cover.png';">
+									<p id="track" style="color: #ffdad5; white-space: nowrap; overflow: hidden;"></p>
+								</a>
+							</div>
+							<div style="justify-content: center; display: flex; margin-top: 0;">
+								<div class="img-marg">
+									<div class="crop">
+										<img style="margin-top: -112px; margin-left: -13px;" src="https://lastfm-recently-played.vercel.app/api?user=wiichicken">
+									</div>
+								</div>
+								<div class="img-marg">
+									<div class="crop">
+										<img style="margin-top: -170px; margin-left: -13px; opacity: 0.85;" src="https://lastfm-recently-played.vercel.app/api?user=wiichicken">
+									</div>
+								</div>
+								<div class="img-marg">
+									<div class="crop">
+										<img style="margin-top: -227px; margin-left: -13px; opacity: 0.70;" src="https://lastfm-recently-played.vercel.app/api?user=wiichicken">
+									</div>
+								</div>
+								<div class="img-marg">
+									<div class="crop">
+										<img style="margin-top: -284px; margin-left: -13px; opacity: 0.55;" src="https://lastfm-recently-played.vercel.app/api?user=wiichicken">
+									</div>
+								</div>
+								<div class="img-marg">
+									<div class="crop">
+										<img style="margin-top: -341px; margin-left: -13px; opacity: 0.30" src="https://lastfm-recently-played.vercel.app/api?user=wiichicken&amp;count=6">
+									</div>
+								</div>
+							</div>
+							<a href="https://last.fm/user/wiichicken" target="_blank" style="width: 196px; display: flex; margin: 0; justify-content: center; padding: 2px;"><strong>PROFiLE</strong></a>
+						</div>
+						<script>
+							// Code from https://septic.lol/?z=/code/widgets.html
+							document.addEventListener('DOMContentLoaded', function() {
+							var user = document.getElementById("listen").getAttribute("user");
+							var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" + user + "&api_key=afc213709a996ae561e307f596c9952b&format=json";
+							var request = new XMLHttpRequest();
+							request.open('GET', url, true);
+	
+							request.onload = function() {
+								if (request.status >= 200 && request.status < 400) {
+									
+									var data = JSON.parse(request.responseText);
+									var artist = data.recenttracks.track[0].artist["#text"];
+									var song = data.recenttracks.track[0]["name"];
+									var artwork = data.recenttracks.track[0].image[1]["#text"];
+									var link = data.recenttracks.track[0]["url"];
+	
+									var artworkImg = document.getElementById("artwork");
+									artworkImg.setAttribute("src", artwork);
+	
+									var trackInfo = document.getElementById("track");
+									trackInfo.innerHTML = "\
+										<strong>"+song+"</strong><br />\
+										"+artist+"\
+									";
+	
+									var artworkLink = document.getElementById("artworklink");
+									artworkLink.setAttribute("href", link);
+	
+									if (typeof data.recenttracks.track[0]["@attr"] !== "undefined"){
+										var listenInfo = document.getElementById("listen");
+										listenInfo.innerHTML = '<span>listening</span> to:';
+									} else {
+										var listenInfo = document.getElementById("listen");
+										listenInfo.innerHTML = 'last <span>listened</span> to:';
+										console.log("false");
+									}
+								} else {
+									console.error("Error fetching data from server.");
+								}
+							};
+	
+							request.onerror = function() {
+								console.error("Connection error.");
+							};
+	
+							request.send();
+							});
+						</script>
+					</div>
+					<div class="sidebox" style="background-color: #00201c; color: #75f8e3; border: 1px solid #55dbc7;" id="visitorcount">
+						<div class="sidehead" style="background: linear-gradient(45deg, rgba(0,80,71,1) 0%, rgba(0,60,80,1) 100%); color: #75f8e3;">
+							<p><strong>VISiTOR</strong></p>
+						</div>
+						<div class="sidebox-content">
+							<p style="margin-top: 0; margin-bottom: 0;">you are the <span id="hitcount"></span>th person to visit my site!<br>oops! it broke! oh wlel..</p>
+						</div>
+						<script>
+							// Code from https://dannarchy.com/tut/tut_002
+							var xhttp = new XMLHttpRequest();
+							xhttp.onreadystatechange = function() {
+								if (this.readyState == 4 && this.status == 200) {
+									var site_data = JSON.parse(this.responseText);
+									var num_arr = site_data.info.views.toString().split("");
+									var num_str = "";
+									for (i = 0; i < num_arr.length; i++) {
+										num_str += num_arr[i];
+										if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ) {num_str += ",";}
+									}
+									document.getElementById("hitcount").innerHTML = num_str;
+								}
+							};
+							xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://neocities.org/api/info?sitename=wiichicken", true);
+							xhttp.send();
+						</script>
+					</div>
+					<div class="sidebox" id="lastdate" style="background-color: #002106; color: #6cff82; border: 1px solid #00ff64;">
+						<div class="sidehead" style="background: linear-gradient(45deg, rgba(0,82,41,1) 0%, rgba(51,82,0,1) 100%); color: #6cff82;">
+							<p><strong>UPDATED</strong></p>
+						</div>
+						<div class="sidebox-content">
+							<p style="margin-top: 0; margin-bottom: 0;">site last updated on <span id="lastupdate"></span></p>
+						</div>
+						<script>
+							var xhttp = new XMLHttpRequest();
+							xhttp.onreadystatechange = function() {
+								if (this.readyState == 4 && this.status == 200) {
+									var site_data = JSON.parse(this.responseText);
+						
+									var date_obj = new Date(site_data.info.last_updated);
+									var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+									var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+									document.getElementById("lastupdate").innerHTML = days[date_obj.getDay()] + months[date_obj.getMonth()] + " " + date_obj.getDate() + ", " + date_obj.getFullYear();
+								}
+							};
+							xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=wiichicken", true);
+							xhttp.send();
+						</script>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

@@ -10,7 +10,10 @@
 	<meta name="theme-color" content="#00ffb1">
 	<noscript>
 		<style>
-			#noscript-error {display: block !important;}
+			#noscript-error, #infamous, #whatsheader .panel {display: block !important;}
+			.noscript-hidden, #signguest, #lonelyNav {display: none !important;}
+			#infamous .blox {margin-bottom: 10px !important;}
+			#navig {width: 100% !important;}
 		</style>
 	</noscript>
 </head>
@@ -818,7 +821,7 @@
 				<p class="nomarblock">uh, oh! it looks like you don't have javascript support! no worries, i have made some small changes to make your browsing experience slightly better. i love you too.<br>note that some things still may not work.</p>
 			</div>
 			<div class="row" id="infamous" style="display: grid; gap: 10px;">
-				<div class="blox" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
+				<div class="blox noscript-hidden" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
 					<div style="display: flex; flex-wrap: wrap;" id="statusCard">
 						<div id="statuscafe" style="padding: 5px; background-color: #94ccff; width: 100%; min-height: 85px;">
 							<a href="https://status.cafe/users/cringe" class="noBg" target="_blank">
@@ -831,7 +834,7 @@
 						<img src="media/home/status.png" class="blurry" style="height: 200px; width: 200px; bottom: 0;">
 					</div>
 				</div>
-				<div class="blox mobileHidden" style="grid-column: 2/3; grid-row: 1; margin-bottom: 0; padding: 0; border-color: #E6E1E5; background-color: #1C1B1Fcc;">
+				<div class="blox mobileHidden noscript-hidden" style="grid-column: 2/3; grid-row: 1; margin-bottom: 0; padding: 0; border-color: #E6E1E5; background-color: #1C1B1Fcc;">
 					<div id="clockContainer">
 						<div id="thatThingInTheCenterOfaClock"></div>
 						<div id="hour"></div>
@@ -907,7 +910,7 @@
 						<li>if you NEED to know my socials, go to the <a href="aboutme.html">about me</a> page</li>
 					</ul>
 				</div>
-				<div class="blox lefty mobileHidden reducedHidden" id="navlink" style="padding: 0; border: 1px solid #bec9c8;">
+				<div class="blox lefty mobileHidden reducedHidden noscript-hidden" id="navlink" style="padding: 0; border: 1px solid #bec9c8;">
 					<span class="helpbutt" id="adHelp" onclick="flipTheScript('adHelp', 'navlink', 'nava2', 'nava1', '#1a1c1e', '#e2e2e5')">?</span>
 					<div id="nava1">
 						<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
@@ -920,20 +923,21 @@
 			<div class="blox" id="whatsheader" style="border: 1px solid #3978c6;">
 				<div class="accordion">
 					<h2 class="gradientText" style="background: linear-gradient(90deg, rgba(193,232,255,1) 0%, rgba(229,222,255,1) 100%);">siteUpdates</h2>
-					<h3 style="margin: 0; font-size: 15px;"><strong>WELL, THAT HAPPENED</strong></h3>
-					<p style="margin-top: 0; margin-bottom: 2px;"><strong>April 21, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
+					<h3 style="margin: 0; font-size: 15px;"><strong>DO YOU HATE ME YET?</strong></h3>
+					<p style="margin-top: 0; margin-bottom: 2px;"><strong>April 28, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
 				</div>
 				<div class="panel">
-					<h2 style="margin-bottom: 2px;">WELL, THAT HAPPENED</h2>
-					<p id="updatedate">April 21, 2024</p>
-					<p>something happened, and i accidentally pushed the work in progress version of the site on thursday, instead of sunday. my bad. oh well, i guess you get a little sneak peak. anyways, here are the changes that i made:</p>
+					<h2 style="margin-bottom: 2px;">DO YOU HATE ME YET?</h2>
+					<p id="updatedate">April 28, 2024</p>
+					<p>We swept under the rug, dusted the pottery, and squashed some bugs. For the best experience, make sure your app is always up to date.</p>
 					<ul>
-						<li>new <a href="/interests/websites/graveyard.html" target="_blank">graveyard</a> for websites that no longer exist in the directory</li>
-						<li>photography page is now a thing. im not happy with it, sorry. <img src='/media/emoji/down.gif' loading='lazy'></li>
-						<li>flood widget changed. instead of draining the flood, you fill it</li>
-						<li>dude, i dont know</li>
+						<li>added the original version of my late 2023 site redesign to the <a href="/more/archive/websites/homepages/index.html" target="_blank">website archive</a>. my goal was to kind of keep the design how it was at the start for subpages, but that clearly hasn't happened.</li>
+						<li>fixed a bug where the navbar just didn't work. like at all. i think it's fixed. i HOPE its fixed</li>
+						<li>much better noscript support. indicators of pages that won't work will appear when no javascript is available, as well as lots of elements that don't work with javascript will just vanish. i still have some work to do, but the experience isn't too compromising yet</li>
+						<li>added what the kids call a shrine, but in reality its just a wiki that has 3 pages and none of them are finished</li>
+						<li>do you like how on the homepage links have an underline instead of a highlight? no? well too bad, im adding this to more pages. this definitely doesn't go against my philosophy of "don't update the design of old pages"</li>
 					</ul>
-					<p>dshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
+					<p>also, we hit 50 followers on neocities! that is cool i think, but followers dont matter. but hey, thanks anyways! to celebrate, this update log will be in a slight yellow</p>
 					<a href="more/archive/blog/index.html">BLOG ARCHiVE</a>
 				</div>
 			</div>
@@ -954,7 +958,7 @@
 				<div style="display: flex; align-items: center;">
 					<img loading="lazy" alt="" src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
 					<div style="margin-left: 5px;">
-						<button id="copyLink" onclick="copyLinkToPage();" class="bring" style="margin-bottom: 5px;">copyToClipboard</button>
+						<button id="copyLink" onclick="copyLinkToPage();" class="bring noscript-hidden" style="margin-bottom: 5px;">copyToClipboard</button>
 						<a class="bring" href="resources/widgets/home/med/embed.txt" target="_blank" style="font-size: 13.3px; margin-bottom: 5px;">scriptNotWorking?</a>
 						<a class="bring" href="creative/graphics/buttons/index.html" target="_blank" style="font-size: 13.3px;">moreOfMyButtons</a>
 					</div>
@@ -987,7 +991,7 @@
 							<p class="nomarblock" style="text-align: center;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
 							<div class="square" style="background-color: #00a2ff;"></div>
 						</div>
-						<p onclick="setRandomMessage()" id="messageTxt" class="nomarblock" style="font-size: 10px; text-align: center; cursor: pointer;">lorem ipsum i want to buy a car</p>
+						<p onclick="setRandomMessage()" id="messageTxt" class="nomarblock" style="font-size: 10px; text-align: center; cursor: pointer;">she no till i script</p>
 						<script src="resources/widgets/home/msg.js"></script>
 					</div>
 					<div id="cornerInBox" style="width: 0%; display: flex; align-items: flex-end; justify-content: flex-end;">
@@ -998,7 +1002,7 @@
 				</div>
 			</div>
 		</main>
-		<aside id="rightSidebar">
+		<aside id="rightSidebar" class="noscript-hidden">
 			<!-- last.fm scrobble widget -->
 			<div class="sidebox" id="scrobblebox" style="--side-border: red; --side-bg: #2c151299;">
 				<div class="sidehead">

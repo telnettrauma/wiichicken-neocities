@@ -1,0 +1,55 @@
+body {margin: 0;}
+#themachine {
+	margin: 5px;
+	margin-top: 30px;
+}
+.breadcrumb {
+	margin: 0;
+	background-color: white;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+.breadcrumb p {
+	margin-left: 10px;
+	margin-bottom: 2px;
+	margin-top: 2px;
+}
+.breadcrumb a {
+	text-decoration: none;
+	background: none;
+}
+.breadcrumb #line {
+	width: 100%;
+	height: 5px;
+	margin: 0px;
+	background: linear-gradient(270deg, #ff0000, #0032ff);
+	background-size: 400% 400%;
+	animation: breadcrumbAnim 10s ease infinite;
+}
+body {
+	background-color: var(--bg);
+	color: var(--main);
+}
+hr {
+	height: 0px;
+	color: var(--accent);
+	border: 1px solid var(--accent);
+}
+a {
+	background-color: var(--sub);
+	color: var(--bg);
+	text-decoration: none;
+}
+.sidebar {
+	width: 60px;
+	border: 1px solid var(--accent);
+	position: fixed;
+}
+#main {margin-left: 75px;}
+@keyframes breadcrumbAnim {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
