@@ -12,7 +12,7 @@
 		</noscript>
 		<style>
 			.shelf {
-				background: linear-gradient(180deg, rgba(0,31,38,1) 0%, #334a50 100%);
+				background-image: linear-gradient(180deg, rgba(0,31,38,1) 0%, #334a50 100%);
 				background-color: unset;
 				display: flex;
 				flex-wrap: wrap;
@@ -27,13 +27,14 @@
 				flex-direction: column;
 				padding: 5px;
 				margin: 10px 15px 0 15px;
+				box-shadow: 2px 2px 10px 0 black;
 			}
 			.blog {
 				max-width: 100px;
 				height: 150px;
 			}
 			.micro {
-				width: 160px;
+				width: 180px;
 				height: 100px;
 			}
 			.blog img, .micro img {
@@ -56,20 +57,6 @@
 	<div id="overSide"></div>
 	<div id="chewTooth"></div>
 	<div id="flex">
-	<nav>
-	<div class="sidebar">
-		<ul>
-			<li><a href="/interests/websites/index.html">return</a></li>
-		</ul>
-		<h2>BUTTONS</h2>
-		<ul>
-			<li><a href="#ps">uncategorized</a></li>
-			<li><a href="#inspo">inspiration</a></li>
-			<li><a href="#btech">tech</a></li>
-			<li><a href="#arts">artists</a></li>
-		</ul>
-	</div>
-	</nav>
 	<div class="main">
 		<div class="box">
 			<h1>READS</h1>
@@ -79,7 +66,7 @@
 			<h2>BLOGS</h2>
 			<p>proper blogs</p>
 		</div>
-		<div class="box shelf">
+		<div class="box shelf" style="background-size: 170px;">
 			<a class="blog" href="https://solar.lowtechmagazine.com" target="_blank" style="--fg: #22191c; --bg: #d5c2c6;">
 				<img src="img/ficon/default.png" loading="lazy">
 				<h4>Low Tech Magazine</h4>
@@ -89,11 +76,21 @@
 			<h2>MiCROBLOGS</h2>
 			<p>blogs that don't have posts that are as long, but may still be worth a peep. includes twitter pages.</p>
 		</div>
-		<div class="box shelf">
-			<a class="micro" href="https://oneterabyteofkilobyteage.tumblr.com" target="_blank">
+		<div class="box shelf" style="background-size: 120px;">
+			<a class="micro" href="https://oneterabyteofkilobyteage.tumblr.com" target="_blank" style="--bg: #ffb3b0; --fg: #571d1e;">
 				<img src="https://64.media.tumblr.com/avatar_002c6d11213c_64.pnj" loading="lazy">
 				<h4>One Terabyte of Kilobyte Age</h4>
-				<p>Tumblr blog that automatically posts screenshots from random sites on the Geocities archive</p>
+				<p>Automatically posts screenshots of random sites on the Geocities archive</p>
+			</a>
+			<a class="micro" href="https://www.suppermariobroth.com/" target="_blank" style="--bg: #ffb4a6; --fg: #561e15;">
+				<img src="https://64.media.tumblr.com/avatar_4691f8d9c906_128.pnj" loading="lazy">
+				<h4>Supper Mario Broth</h4>
+				<p>Obscure information about the Mario franchise</p>
+			</a>
+			<a class="micro" href="https://twitter.com/depthsofwiki" target="_blank" style="--bg: #9ccbfb; --fg: #003354;">
+				<img src="img/ficon/blog/twt.png" loading="lazy">
+				<h4>depths of wikipedia</h4>
+				<p>Fun facts about Wikipedia and out of context screenshots</p>
 			</a>
 		</div>
 	</div>
