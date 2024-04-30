@@ -16,9 +16,10 @@
 				background-color: unset;
 				display: flex;
 				flex-wrap: wrap;
-				padding: 0;
+				padding: 0 !important;
 				max-width: 698px;
 				justify-content: space-around;
+				overflow: hidden;
 			}
 			.blog, .micro {
 				display: flex;
@@ -27,8 +28,10 @@
 				flex-direction: column;
 				padding: 5px;
 				margin: 10px 15px 0 15px;
-				box-shadow: 2px 2px 10px 0 black;
+				box-shadow: 2px 2px 10px 0 black, inset 15px -10px 40px 0px #00000080, inset 0px 20px 20px 0px rgba(255, 255, 255, 0.3);
+				transition-duration: 0.5s;
 			}
+			.blog:hover, .micro:hover {box-shadow: 2px 2px 10px 0 black, inset 15px -10px 40px 0px #00000049, inset 0px 20px 20px 0px rgba(255, 255, 255, 0.5);}
 			.blog {
 				max-width: 100px;
 				height: 150px;
@@ -47,21 +50,33 @@
 				margin-block-start: 0;
 				margin-block-end: 0;
 			}
-			.stack {
-				width: 33%;
+			.stack {display: flex;}
+			.book {
 				display: flex;
 				flex-direction: column;
-				align-items: baseline;
+				height: 208px;
 			}
-			.stack a {
-				background-color: var(--bg);
+			.book a {
 				font-family: 'Martian Mono', monospace;
 				padding: 2px;
-				text-align: center;
+			}
+			.book a:first-child {
+				background-color: var(--bg);
 				color: var(--fg) !important;
 				font-size: 12px;
+				text-orientation: sideways;
+				writing-mode: tb;
+				min-height: 190px;
+				max-height: 190px;
+				box-shadow: inset 15px -10px 20px 0px #00000054;
+			}
+			.book a:nth-child(2) {
+				font-size: 8px;
+				background-color: #f6fafe;
+				color: #171c1f !important;
 			}
 			.blog p, .micro p {font-size: 10px;}
+			#bookshelf {overflow-x: scroll;}
 			.box a:not(:has(img))::after {display: none;}
 		</style>
 	</head>
@@ -110,13 +125,22 @@
 		</div>
 		<div class="box">
 			<h2>ARTiCLES</h2>
-			<p>individual articles that i think are worth a reading</p>
+			<p>individual articles and blog posts that i think are worth a reading. click the "iA" button under a "book" to view it on the internet archive</p>
 		</div>
-		<div class="box shelf">
+		<div class="box shelf" id="bookshelf">
 			<div class="stack">
-				<a href="https://bytemoth.tumblr.com/post/674671055813640192/paradigm-adrift-prokopetz-im-pretty-convinced" target="_blank" style="--bg: #a3d397; --fg: #0e380d;">Google Search is Useless</a>
-				<a href="https://abowlofpetuniasandawhale.tumblr.com/post/686420958466162688/honestly-the-worst-thing-about-adhd-for-me-is-that" target="_blank" style="--bg: #ffb3b4; --fg: #561d22;">worst thing about adhd</a>
-				<a href="https://mortimermcmirestinks.tumblr.com/post/680612356771971072/wikia-is-not-good-wikia-is-a-hypercapitalist" target="_blank" style="--bg: #e7c26c; --fg: #3f2e00;">wikia is not good</a>
+				<div class="book">
+					<a href="https://bytemoth.tumblr.com/post/674671055813640192/paradigm-adrift-prokopetz-im-pretty-convinced" target="_blank" style="--bg: #a3d397; --fg: #0e380d;">Google Search is Useless</a>
+					<a href="https://web.archive.org/web/20240429194358/https://bytemoth.tumblr.com/post/674671055813640192/paradigm-adrift-prokopetz-im-pretty-convinced" target="_blank">iA</a>
+				</div>
+				<div class="book">
+					<a href="https://abowlofpetuniasandawhale.tumblr.com/post/686420958466162688/honestly-the-worst-thing-about-adhd-for-me-is-that" target="_blank" style="--bg: #ffb3b4; --fg: #561d22;">worst thing about adhd</a>
+					<a>ADD</a>
+				</div>
+				<div class="book">
+					<a href="https://mortimermcmirestinks.tumblr.com/post/680612356771971072/wikia-is-not-good-wikia-is-a-hypercapitalist" target="_blank" style="--bg: #e7c26c; --fg: #3f2e00;">wikia is not good</a>
+					<a>ADD</a>
+				</div>
 			</div>
 		</div>
 	</div>

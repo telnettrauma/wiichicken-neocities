@@ -1,8 +1,11 @@
 * {
 	--dark-tertiary: #c1c4eb;
 	--dark-on-tertiary: #2b2e4d;
+	--bg-1: #86d1ea;
+	--bg-2: #c1c4eb;
 }
 body {
+	background: unset;
 	background-color: #000e11 !important;
 	font-family: 'PT Sans', sans-serif;
 	margin: 0;
