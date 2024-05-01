@@ -1,5 +1,6 @@
 /* general styles */
 @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap');
+* {box-sizing: border-box;}
 body {
 	margin: 0;
 	font-family: 'PT Sans', sans-serif;

@@ -15,7 +15,7 @@ hr {
 }
 a {
 	background-color: var(--sub);
-	color: var(--bg);
+	color: var(--bg) !important;
 	text-decoration: none;
 }
 .headerVisible {transform: translateY(0px) !important;}
