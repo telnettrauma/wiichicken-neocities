@@ -17,14 +17,14 @@
 	</div>
 </div>
 <div id="controls">
-	<img src="media/np/horizontal.png" onclick="enableHorizontal();" id="en-hor" title="Display in horizontal mode">
-	<img src="media/np/vertical.png" onclick="enableVertical()" id="en-vert" title="Display in vertical mode">
-	<button onclick="setUser()" title="Set username">user</button>
+	<img src="media/np/horizontal.png" onclick="enableHorizontal();" id="en-hor" title="Horizontal mode">
+	<img src="media/np/vertical.png" onclick="enableVertical()" id="en-vert" title="Vertical mode">
+	<img src="media/np/listener.png" onclick="setUser()" title="Set username" style="padding: 1px 6px 1px 6px;">
 </div>
 <div id="enter-name">
-	<form>
-		<input type="text" id="set-username" name="set-username">
-		<button onclick="confirmUser()">🡲</button>
+	<form onsubmit="event.preventDefault(); confirmUser()">
+		<input type="text" id="username" name="username">
+		<img src="media/np/continue.png" onclick="confirmUser()" title="Confirm">
 	</form>
 </div>
 <style>
@@ -81,7 +81,7 @@
 		max-width: 300px;
 	}
 	#listenglow {
-		text-shadow: white 0 0 10px, 0px 0px 5px rgba(0, 0, 0, 0.6);
+		text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6), white 0 0 10px;
 		font-weight: bold;
 	}
 	#artworklink {
@@ -140,7 +140,7 @@
 		bottom: 15px;
 		display: flex;
 		justify-content: center;
-		max-width: 70px;
+		max-width: 100px;
 		opacity: 0.3;
 		transition-duration: 0.5s;
 	}
@@ -154,7 +154,7 @@
 		height: 22px;
 		display: none;
 	}
-	#set-username {
+	#username {
 		background: none;
 		border: none;
 		border-bottom: 1px solid #CAC4D0;
@@ -259,10 +259,10 @@
 	}
 	function setUser() {
 		document.getElementById('enter-name').style.display = 'block';
-		document.getElementById('set-username').value = user;
+		document.getElementById('username').value = user;
 	}
 	function confirmUser() {
-		user = document.getElementById('set-username').value;
+		user = document.getElementById('username').value;
 		document.getElementById('enter-name').style.display = 'none';
 		getNowPlaying();
 	}
