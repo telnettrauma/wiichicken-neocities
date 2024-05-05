@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name         'Post to X' to 'Tweet'
+// @namespace    com.github.wiichicken.tweetbutton
 // @homepage     https://wiggle.monster/more/tools/userscripts/tweetbutton
 // @version      2024-05-05
 // @description  replaces all post buttons with tweet buttons
