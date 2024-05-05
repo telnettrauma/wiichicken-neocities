@@ -147,13 +147,12 @@
 				box-shadow: none;
 				transform: translate(2px, 2px);
 			}
-			.concept {display: none;}
 			ul {padding-left: 25px;}
 			h1, h2, h3 {
 				margin: 0;
 				font-family: 'Martian Mono', monospace;
 			}
-			.metaBadge, .designBadge, .rantBadge, .socialBadge, .concept::after, .codeBadge {padding: 0 2px 0 2px;}
+			.metaBadge, .designBadge, .rantBadge, .socialBadge, .codeBadge {padding: 0 2px 0 2px;}
 			.metaBadge {
 				background-color: #035300;
 				color: #77ff60;
@@ -177,11 +176,6 @@
 			.aiBadge {
 				background-color: #3e1c6f;
 				color: #d6baff;
-			}
-			.concept {opacity: 0.7;}
-			.concept::after {
-				animation: rainbow 10s linear infinite;
-				content: '#concept';
 			}
 			@keyframes rainbow {
 				0% {background-color: #ffb4a8; color: #690100;}
@@ -207,7 +201,7 @@
 		<div id="chewTooth"></div>
 		<main>
 			<header>
-				<h1>BLOG</h1>
+				<h1>MiCROBLOG</h1>
 			</header>
 			<div class="box">
 				<p>this is where i store my site update logs, as well as original pieces of rambling. (this just in, the kids call it "yapping" now)<br>You can also view my <a href="https://cringepoop.tumblr.com" target="_blank">tumblr</a> blog, where I post these updates and more (that's a lie, i completely forgot to). If you want to use tumblr but only see things posted here, view <a href="https://cringepoop.tumblr.com/tagged/neocitiesblog" target="_blank">my tag</a>.</p>
@@ -217,16 +211,11 @@
 				<p><span class="aiBadge">#ai</span> - definitely a rant</p>
 				<p><span class="codeBadge">#code</span> - coding and other techy stuff. does not mean that a page will contain code snippets</p>
 				<p><span class="designBadge">#design</span> - me talking about ui/ux design</p>
-				<p><span class="metaBadge">#meta</span> - updates about this website. the most recent meta post is also on the homepage</p>
+				<p><span class="metaBadge">#meta</span> - stuff about this website. older update posts are kept here, but new ones are put on the <a href="updates.html" target="_blank">updates page</a>.</p>
 				<p><span class="rantBadge">#rant</span> - me complaining</p>
 				<p><span class="socialBadge">#social</span> - all about social media and the like</p>
 			</div>
-			<div class="box" id="concept-box">
-				<h2>CONCEPTS</h2>
-				<p>concepts are exactly what they sound like. extremely unfinsihed works of my brain that i may or may not use later.<br>to make concepts appear, click the "show concepts" button. i don't want them to clutter up too much as they're kinda low quality.</p>
-				<button id="myMixify" onclick="toggleFallingRocks()">show concepts</button>
-			</div>
-			<div class="box" style="min-height: 33px;">
+			<div class="box" style="min-height: 45px;">
 				<details>
 					<summary>Jump to:</summary>
 					<details style="margin-left: 10px;">
@@ -236,6 +225,7 @@
 							<li><a href="#24m2">Feburary</a></li>
 							<li><a href="#24m3">March</a></li>
 							<li><a href="#24m4">April</a></li>
+							<li><a href="#24m5">May</a></li>
 						</ul>
 					</details>
 					<details style="margin-left: 10px;">
@@ -258,9 +248,15 @@
 					<h2 id="24">2024</h2>
 				</div>
 				<div class="box">
+					<h3 id="24m5">May</h3>
+					<ul>
+						<li class="ai"><a href="2024/5/usingai.html" target="_blank">2. what will we actually use ai for?</a> <span class="aiBadge">#ai</span></li>
+					</ul>
+				</div>
+				<div class="box">
 					<h3 id="24m4">April</h3>
 					<ul>
-						<li class="meta"><a href="2024/4/28.html" target="_blank">28. DO YOU HATE ME YET?</a></li>
+						<li class="meta"><a href="2024/4/28.html" target="_blank">28. DO YOU HATE ME YET?</a> <span class="metaBadge">#meta</span></li>
 						<li class="ai social rant"><a href="2024/4/metasearch.html" target="_blank">24. Meta AI: a case study on how NOT to introduce a gimmick</a> <span class="aiBadge">#ai</span> <span class="socialBadge">#social</span> <span class="rantBadge">#rant</span></li>
 						<li class="meta"><a href="2024/4/21.html" target="_blank">21. WELL, THAT HAPPENED</a> <span class="metaBadge">#meta</span></li>
 						<li><a href="2024/4/infotainment.html" target="_blank">18. replacing my infotainment system</a></li>
@@ -282,20 +278,16 @@
 						<li class="rant social"><a target="_blank" href="2024/2/x.html">29. i updated Twitter to X</a> <span class="rantBadge">#rant</span><span class="socialBadge">#social</span></li>
 						<li><a target="_blank" href="2024/2/neko.html">25. NekoWeb</a></li>
 						<li class="meta"><a target="_blank" href="2024/2/16.html">16. EL DiRECTORY</a> <span class="metaBadge">#meta</span></li>
-						<li class="concept"><a target="_blank" href="concepts/2024/2/mew.html">15. New window Functions Coming to Javascript</a></li>
 						<li class="social"><a target="_blank" href="2024/2/insta.html">15. why instagram keeps coming back</a> <span class="socialBadge">#social</span></li>
 						<li><a target="_blank" href="2024/2/headset.html">6. the apple headset will die in a week</a></li>
 						<li class="meta"><a target="_blank" href="2024/2/4.html">4. SAME SH!T, NOW ON GiT</a> <span class="metaBadge">#meta</span></li>
 						<li class="meta code"><a target="_blank" href="2024/2/git.html">2. trying to use Git on my site</a> <span class="metaBadge">#meta</span><span class="codeBadge">#code</span></li>
-						<li class="concept"><a target="_blank" href="concepts/2024/2/meandmachine.html">1. me and the machine</a></li>
 					</ul>
 				</div>
 				<div class="box">
 					<h3 id="24m1">January</h3>
 					<ul>
 						<li class="rant"><a target="_blank" href="2024/1/headempty.html">31. Click to add text</a> <span class="rantBadge">#rant</span></li>
-						<li class="concept"><a target="_blank" href="concepts/2024/1/comic.html">30. comic</a></li>
-						<li class="concept"><a target="_blank" href="concepts/2024/1/pinto.html">30. pinto</a></li>
 						<li class="design"><a target="_blank" href="2024/1/start.html">28. lock the taskbar</a> <span class="designBadge">#design</span></li>
 						<li class="rant"><a target="_blank" href="2024/1/spotify.html">26. Spotify Sucks!!</a> <span class="rantBadge">#rant</span></li>
 						<li class="social"><a target="_blank" href="2024/1/follow.html">25. i DONT WANT TO BE YOUR FRiEND</a> <span class="socialBadge">#social</span></li>
@@ -340,25 +332,6 @@
 			</div>
 		</main>
 		<script>
-			let conceptsAvailable = 0;
-			// i dont know who wrote this code im just borrowing it from an old site i made but i know i didnt write it
-			function toggleFallingRocks() {
-				var arrayOfElements=document.getElementsByClassName('concept');
-				var lengthOfArray=arrayOfElements.length;
-				if (conceptsAvailable === 0) {
-					for (var i=0; i<lengthOfArray; i++) {
-						arrayOfElements[i].style.display = 'list-item';
-					}
-					conceptsAvailable = 1;
-					document.getElementById('myMixify').innerHTML = 'hide concepts';
-				} else {
-					for (var i=0; i<lengthOfArray; i++) {
-						arrayOfElements[i].style.display = 'none';
-					}
-					conceptsAvailable = 0;
-					document.getElementById('myMixify').innerHTML = 'show concepts';
-				}
-			}
 			function listView() {
 				document.getElementById('link-list').classList.replace('grid', 'list');
 				document.getElementById('en-list').classList.add('active');

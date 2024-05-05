@@ -1,5 +1,6 @@
 /* general styles */
 @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap');
+* {box-sizing: border-box;}
 body {
 	margin: 0;
 	font-family: 'PT Sans', sans-serif;
@@ -16,6 +17,10 @@ a {
 	color: var(--dark-secondary);
 }
 img {image-rendering: pixelated;}
+button {
+	cursor: pointer;
+	font-family: 'PT Sans', sans-serif;
+}
 .nomarblock {
 	margin-block-start: 0;
 	margin-block-end: 0;
@@ -64,11 +69,6 @@ img {image-rendering: pixelated;}
 	height: 120%;
 	mix-blend-mode: luminosity;
 	image-rendering: pixelated;
-	animation: zoomSauce 1s;
-}
-@keyframes zoomSauce {
-	0% {scale: 1.1; filter: blur(5px);}
-	100% {scale: 1;}
 }
 ::selection {
 	background-color: var(--dark-tertiary);
@@ -95,15 +95,8 @@ img {image-rendering: pixelated;}
 	position: fixed;
 	transition-duration: 0.5s;
 	height: 35px;
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,0.5) 100%);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-	mask-image: linear-gradient(rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 70%, rgba(0, 0, 0, 0) 100%);
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,1) 100%);
 	pointer-events: none;
-}
-.heading:hover {
-	height: 60px;
-	transition-duration: 0.3s;
 }
 #heightCheck {height: 30px;}
 #inHead {

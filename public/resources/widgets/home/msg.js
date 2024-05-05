@@ -80,7 +80,17 @@ var messageList = [ 'lorem ipsum i want to buy a car',
 'reaching my training cutoff',
 'welcome to 2020! they finally invented slime that cleans anything',
 'Gigglehurts',
-'super monkey ball is life'
+'super monkey Ball is Life',
+'cashapp when cashprocess walks into the room',
+'why must you hate everything',
+'debbie downers DNI',
+'made u look made u look now ur in the baby book',
+'i love reddit its so great its giggling',
+'Sorry For Party Rockin\'',
+'You are so good at posting. I love you.',
+'r u raising ur hand or just stretching',
+'the wordle is slosh',
+'do not use this website around pacemakers'
 ]
 function setRandomMessage() {document.getElementById('messageTxt').innerHTML = messageList[Math.floor(Math.random() * messageList.length)];}
 setRandomMessage();

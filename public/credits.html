@@ -28,6 +28,8 @@
 				--dark-primary: #dee3e5;
 				--dark-tertiary: #bbc5ea;
 				--dark-on-tertiary: #252f4d;
+				--bg-1: #f5fafc;
+				--bg-2: #fcf8ff;
 			}
 			body {
 				background-color: #051f23;
@@ -56,6 +58,18 @@
 				box-shadow: none;
 				background-color: #1c3438cc;
 				color: #cde7ec;
+			}
+			.three {
+				display: flex;
+				gap: 10px;
+				margin-bottom: 10px;
+			}
+			.three .box {
+				width: 33%;
+				margin-bottom: 0;
+			}
+			@media only screen and (max-width: 900px) {
+				.three .box {width: 100% !important;}
 			}
 		</style>
 		<main>
@@ -99,17 +113,19 @@
 			<header>
 				<h2>FONTS</h2>
 			</header>
-			<div class="box">
-				<h3 style="font-family: 'PT Sans', sans-serif;">PT Sans</h3>
-				<a href="https://fonts.google.com/specimen/PT+Sans/" target="_blank">Google Fonts Page</a>
-			</div>
-			<div class="box">
-				<h3>Martian Mono</h3>
-				<a href="https://fonts.google.com/specimen/Martian+Mono" target="_blank">Google Fonts Page</a> <a href="https://github.com/evilmartians/mono" target="_blank">GitHub</a>
-			</div>
-			<div class="box">
-				<h3 style="font-family: 'VCR';">VCR OSD Mono</h3>
-				<a href="https://www.dafont.com/vcr-osd-mono.font" target="_blank">Dafont Page</a>
+			<div class="three">
+				<div class="box">
+					<h3 style="font-family: 'PT Sans', sans-serif;">PT Sans</h3>
+					<a href="https://fonts.google.com/specimen/PT+Sans/" target="_blank">Google Fonts Page</a>
+				</div>
+				<div class="box">
+					<h3>Martian Mono</h3>
+					<a href="https://fonts.google.com/specimen/Martian+Mono" target="_blank">Google Fonts Page</a> <a href="https://github.com/evilmartians/mono" target="_blank">GitHub</a>
+				</div>
+				<div class="box">
+					<h3 style="font-family: 'VCR';">VCR OSD Mono</h3>
+					<a href="https://www.dafont.com/vcr-osd-mono.font" target="_blank">Dafont Page</a>
+				</div>
 			</div>
 			<header>
 				<h2>PACKAGES</h2>

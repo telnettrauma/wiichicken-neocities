@@ -2,6 +2,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 	<title>CURRENTLY LiSTENiNG TO</title>
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <div class="content" style="margin: 0; position: relative; overflow: hidden;" id="main">
@@ -16,8 +17,15 @@
 	</div>
 </div>
 <div id="controls">
-	<img src="media/np/horizontal.png" onclick="enableHorizontal();" id="en-hor">
-	<img src="media/np/vertical.png" onclick="enableVertical()" id="en-vert">
+	<img src="media/np/horizontal.png" onclick="enableHorizontal();" id="en-hor" title="Horizontal mode">
+	<img src="media/np/vertical.png" onclick="enableVertical()" id="en-vert" title="Vertical mode">
+	<img src="media/np/listener.png" onclick="setUser()" title="Set username" style="padding: 1px 6px 1px 6px;">
+</div>
+<div id="enter-name">
+	<form onsubmit="event.preventDefault(); confirmUser()">
+		<input type="text" id="username" name="username">
+		<img src="media/np/continue.png" onclick="confirmUser()" title="Confirm">
+	</form>
 </div>
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap');
@@ -73,7 +81,7 @@
 		max-width: 300px;
 	}
 	#listenglow {
-		text-shadow: white 0 0 10px, 0px 0px 5px rgba(0, 0, 0, 0.6);
+		text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6), white 0 0 10px;
 		font-weight: bold;
 	}
 	#artworklink {
@@ -120,23 +128,38 @@
 		0% {transform: rotate(360deg);}
 		100% {transform: rotate(0deg);}
 	}
-	#controls {
-		position: absolute;
-		right: 15px;
-		bottom: 15px;
+	#controls, #enter-name {
 		background-color: #79747e6f;
 		padding: 5px;
 		border: 1px solid #CAC4D0;
 		z-index: 10;
+	}
+	#controls {
+		position: absolute;
+		right: 15px;
+		bottom: 15px;
 		display: flex;
 		justify-content: center;
-		max-width: 70px;
+		max-width: 100px;
 		opacity: 0.3;
 		transition-duration: 0.5s;
 	}
 	#controls:hover {opacity: 1;}
 	#controls img:hover {filter: brightness(2) drop-shadow(0 0 5px #CAC4D0);}
 	.active-button {filter: brightness(2) drop-shadow(0 0 5px #CAC4D0);}
+	#enter-name {
+		position: absolute;
+		bottom: 65px;
+		right: 10px;
+		height: 22px;
+		display: none;
+	}
+	#username {
+		background: none;
+		border: none;
+		border-bottom: 1px solid #CAC4D0;
+		color: #CAC4D0;
+	}
 	/* styles for when in portrait */
 	.portrait #hiPoopFart #artworklink {flex-direction: column;}
 	.portrait #hiPoopFart #artworklink #track {
@@ -233,6 +256,15 @@
 		mainElement.classList.replace('landscape', 'portrait');
 		document.getElementById('en-vert').classList.add('active-button');
 		document.getElementById('en-hor').classList.remove('active-button');
+	}
+	function setUser() {
+		document.getElementById('enter-name').style.display = 'block';
+		document.getElementById('username').value = user;
+	}
+	function confirmUser() {
+		user = document.getElementById('username').value;
+		document.getElementById('enter-name').style.display = 'none';
+		getNowPlaying();
 	}
 	detectSize();
 	setInterval(function(){getNowPlaying()}, 15000);
