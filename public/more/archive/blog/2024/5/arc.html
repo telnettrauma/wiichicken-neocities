@@ -24,10 +24,20 @@
 			background-color: #ffdad9;
 			color: #3b080e;
 			border-radius: 10px;
-			max-width: 80vw;
+			width: 80vw;
 			margin-left: auto;
 		}
-		section {padding: 10px;}
+		section {
+			padding: 10px;
+			max-width: 800px;
+			margin: auto;
+		}
+		section img {
+			max-width: 800px;
+			border: 5px dashed white;
+			border-radius: 10px;
+			padding: 10px;
+		}
 		blockquote {
 			font-size: 20px;
 			background-color: #ffb3b3;
@@ -58,6 +68,7 @@
 			background-color: #3139fb;
 			padding: 10px;
 			color: white;
+			width: 100%;
 		}
 		.wavy {
 			height: 40px;
@@ -66,8 +77,10 @@
 		}
 		@media only screen and (max-width: 900px) {
 			main {flex-direction: column;}
-			article {max-width: 100vw;}
+			article {width: 100vw;}
 		}
+		::-webkit-scrollbar {width: 5px;}
+		::-webkit-scrollbar-thumb {background-color: #3b080e;}
 	</style>
 </head>
 <body>
@@ -101,7 +114,7 @@
 					<li>currently has less features than the PS5 has games (and the ps5 has like 4)</li>
 					<li>buggy and has some weird ui choices</li>
 				</ul>
-				<h3>interface</h3>
+				<h3>tabs</h3>
 				<p>the mac version of arc uses an interface that is almost identical to this <a href="https://www.chromium.org/chromium-os/user-experience/window-ui/#sidetab-navigation" target="_blank">proposed sidebar design</a> from the early days of chrome os:</p>
 				<img src="https://i.imgur.com/e9QanGA.png" loading="lazy">
 				<p>this works well because on a mac, the window buttons are docked on the left side of a window. on windows, however, the window buttons are on the right side of the screen. the arc team made a lot of designs to try and deal with this, but in the end they added a status bar to the top of the screen. i'll get back to that.<br>the main gimmick of arc is the sidebar, the place where everything happens. if you've used microsoft edge vertical tabs, that's basically how the entire browser functions.</p>
@@ -113,7 +126,28 @@
 					<li>tab folders (folders can be nested inside each other)</li>
 					<li>unpinned tabs</li>
 				</ul>
-				<p>spaces are basically different windows, but located inside the same window. the current space can be switched by swiping through them with touch gestures, or clicking a dot on a page indicator. once again, mac focused browser.</p>
+				<p>spaces are basically different windows, but located inside the same window. the current space can be switched by swiping through them with touch gestures, or clicking a dot on a page indicator. once again, mac focused browser. each space can be assigned a theme and a profile. a profile is basically a new browser profile, or new user. a different set of cookies, logins, extensions, you know. if you have used account containers in firefox, you will know this is actually really useful. profiles can be used by more than one space.</p>
+				<p>first off, there are favorited sites. favorited sites are persistent across the profile you're using, so they appear on all spaces in the profile. these appear in a grid at the top of the sidebar, and they are for tabs you frequently access. this is where you put your github, gmail, calendar, etc.</p>
+				<p>below favorited pages lies the rest of your tabs. each space has its own set of tabs. you can also create folders for tabs to better organize them. tabs can be pinned to the top of a space. a cool thing about a pinned tab is that you can click its favicon to return to the page it was set to when you pinned it. for example, if i pinned google documents, i could open a document, and i could click the favicon to return to the google docs homepage.</p>
+				<p>the important thing about tabs in arc is that unpinned tabs are automatically archived (that's the arc term for closing a tab) after a duration set by you. the idea is that if you want to save something for later, you should pin it. on top of that, there is also a button to quickly close all unpinned tabs in a space.</p>
+				<p>closed tabs are stored in the archive, which currently is just a list of recently closed tabs.</p>
+				<p>themes are a fun feature. you can assign each space a theme, which consists of a color. the windows version of arc also supports showing gradient themes, although you cannot set them unless you have a mac and sync the browser data to windows. one thing i really don't like is the quirky color picker for choosing the theme color. this is one of the literal definitions of change for the sake of change.</p>
+				<img src="insert">
+				<p>you change the color by dragging inside of the "touch area". for some reason the touch area is a solid color, despite offering a wide spectrum of colors. this forces you to guess what color you're selecting, unless you use a preset. another fun thing is that the selection area is a square, but the color selector itself is a circle. confused yet?</p>
+				<h3>tab views</h3>
+				<p>aside from the standard tab view, there are also 2 different ways to view tabs:</p>
+				<ul>
+					<li><strong>popup</strong> - if you open a tab with a <code>_blank</code> attribute (opens in a new tab) from a pinned or favorited tab, the opened tab will appear as a popup. from here, you can browse the page, add the tab to the sidebar, or open it in a split view with the current tab. i really like this actually, but most of the time i just end up opening the tab in the sidebar</li>
+					<li><strong>split view</strong> - split view allows you to have 2 tabs open at once, and they appear side by side. imagine opening 2 windows and putting them side by side, but now its in the same window. vivaldi has a similar feature (but better), and microsoft edge recently copied this feature. the main difference with this and the vivaldi implementation is that in arc, both tabs take up the same spot in the sidebar. you can also only have a vertical split.</li>
+				</ul>
+				<h3>features</h3>
+				<p>i already went through all of them except sync. there is a settings menu, where you can configure sync, view a member card it generates for you, and change the window material to mica to acrylic. it's nice this is an option, but it's such a weird thing for an initial release, especially when it's one of 2 settings.</p>
+				<p>other settings do exist, but they're just the chromium default settings, inside of the chromium default settings page.</p>
+				<h3>design quirks</h3>
+				<p>there are some things about the arc browser that you have to get used to. the first is that there is no new tab page. when you click new tab, a command bar is opened, where you can type your url or search. whenever im not doing anything in the browser, i like to keep it on the new tab page. this is a habit i have had for almost my entire life, so getting used to this is frustrating, but i can manage.</p>
+				<p>another thing is the status bar. this is where the page url and other buttons live. instead of an omnibox, the top level domain is displayed at the top of the page. clicking it will open the same command bar as opening a new tab, but instead it will be filled with the page url. this is especially annoying because it adds 1 extra step to changing a url, and due to the smaller size of the command bar, longer urls are harder to see.</p>
+				<p>i've been really negative of this browser so far, but i will say, it does a really good job at looking like a windows app. i really respect the arc team for this, instead of using their own design. they went all out for this, and it looks beautiful. it looks more like a windows app than windows apps.</p>
+				<p>with that said, the signature charm from the mac version is completely missing from the windows version. the closest thing to charm arc for windows has (in my opinion) is that holding on the refresh icon does an animation where it abruptly spins 90 degrees. this animation is too long to see when just clicking the icon.</p>
 			</section>
 		</article>
 	</main>
