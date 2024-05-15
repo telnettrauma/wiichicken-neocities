@@ -40,22 +40,23 @@
 			button {
 				background-color: #353117;
 				color: #cfc7a2;
-				border: 1px solid #655f41;
-				transition-duration: 0.3s;
+				border: 1px solid #cfc7a2;
+				box-shadow: 2px 2px 0 0;
+				font-family: 'Martian Mono', monospace;
+				margin: 2px;
 			}
 			button:hover {
-				color: #353117;
-				background-color: #cfc7a2;
-				box-shadow: 0 0 20px 5px #cfc7a2;
+				box-shadow: 1px 1px 0 0;
+				transform: translate(1px, 1px);
+			}
+			button:active {
+				box-shadow: none;
+				transform: translate(2px, 2px);
 			}
 			#downloadButt {
-				color: #353117;
-				background-color: #cfc7a2;
-			}
-			#downloadButt:hover {
-				box-shadow: 0 0 20px 5px #cfc7a2;
-				background-color: #353117;
-				color: #cfc7a2;
+				color: #a7d0b7;
+				border: 1px solid #a7d0b7;
+				background-color: #113725;
 			}
 			.butt {
 				display: flex;
@@ -135,7 +136,6 @@
 				<h1>MY BUTTONS</h1>
 			</div>
 			<div class="box">
-				<p>if the logo is still spinning, sorry. i got distracted</p>
 				<p>Look at these awesome buttons that I made. You can use these in your site as long as you <strong>don't hotlink them</strong>. Credit isn't required, but is appreciated.<br>Click on a button for more information, as well as to download it.</p>
 			</div>
 			<div class="box">
@@ -150,7 +150,7 @@
 				<div class="box">
 					<h3><span class="less">linkToMe/</span>present</h3>
 					<div class="butt">
-						<a onclick="popUp('april 2024 static', 'humpty dumpty on the wall and off the motion', 'mine/24aprilstatic.png', 'freezetag.gif')"><img src="mine/24aprilstatic.png" loading="lazy"></a>
+						<a onclick="popUp('april 2024 static', 'humpty dumpty fell on the wall and off the motion', 'mine/24aprilstatic.png', 'freezetag.gif')"><img src="mine/24aprilstatic.png" loading="lazy"></a>
 					</div>
 				</div>
 				<div class="box">
@@ -210,7 +210,7 @@
 		</main>
 		<div class="modal" id="helloNeighbor">
 			<div class="modalbox">
-				<img id="buttPrev">
+				<img id="buttPrev" style="height: 62px; width: 176px;"><img id="small-preview" style="margin-left: 5px;">
 				<h2 id="buttTitle">Title</h2>
 				<p id="buttDesc"></p>
 				<div>
@@ -252,6 +252,7 @@
 				downloadURL = uniSource;
 				downloadName = fileName;
 				document.getElementById('buttPrev').src = uniSource;
+				document.getElementById('small-preview').src = uniSource;
 				document.getElementById('buttTitle').innerHTML = title;
 				document.getElementById('buttDesc').innerHTML = desc;
 				var downButt = document.getElementById('downloadButt');
