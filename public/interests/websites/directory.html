@@ -126,7 +126,7 @@
 			<script>
 				const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 				document.addEventListener("DOMContentLoaded", function() {
-					if (!prefersReducedMotion) {
+					if (!prefersReducedMotion && screen.width >= 900) {
 						const elementsWithImages = document.querySelectorAll(".buttonhell");
 						elementsWithImages.forEach(element => {
 							const images = element.querySelectorAll("a");
@@ -224,6 +224,7 @@
 				<a href="https://sep.neocities.org" target="_blank"><img src="img/button/sep.gif" loading="lazy"></a>
 				<a href="https://catbyte.site" target="_blank"><img src="img/button/catbyte.png" loading="lazy"></a>
 				<a href="https://dabric.xyz" target="_blank"><img loading="lazy" src="https://dabric.xyz/butt.png" alt="dabric"></a>
+				<a href="https://bruno-rubim.neocities.org" target="_blank"><img src="img/button/bruno-button.gif" loading="lazy"></a>
 			</div>
 			<div class="urls listhell">
 				<table>
@@ -238,6 +239,10 @@
 					<tr>
 						<td><img src="img/ficon/cities/dabric.png" loading="lazy"></td>
 						<td><a href="https://dabric.xyz" target="_blank">Dabric</a></td>
+					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/bruno.png" loading="lazy"></td>
+						<td><a href="https://bruno-rubim.neocities.org" target="_blank">Bruno Rubim</a></td>
 					</tr>
 				</table>
 			</div>
@@ -432,6 +437,11 @@
 					<td><img loading="lazy" src="img/ficon/art/plorg.ico"></td>
 					<td><a href="https://plorg.neocities.org/" target="_blank">Poorly Planned Comics Archive</a></td>
 					<td>archive of the most interesting comic i have ever read</td>
+				</tr>
+				<tr>
+					<td><img src="img/ficon/default.png" loading="lazy"></td>
+					<td><a href="https://castlezzt-archive.neocities.org" target="_blank">castleZZT archive</a></td>
+					<td>archive of more comics created by Jack Masters, the creator of the comic linked above</td>
 				</tr>
 				<tr>
 					<td><img loading="lazy" src="img/ficon/default.png"></td>
