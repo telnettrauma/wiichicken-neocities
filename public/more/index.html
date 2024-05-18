@@ -59,6 +59,15 @@
 				background-color: var(--box-bg);
 				color: var(--box-color);
 			}
+			.fake-button {box-shadow: 2px 2px 0 0 var(--box-border);}
+			.fake-button:hover {
+				box-shadow: 1px 1px 0 0 var(--box-border);
+				transform: translate(1px, 1px);
+			}
+			.fake-button:active {
+				box-shadow: none;
+				transform: translate(2px, 2px);
+			}
 			.row {
 				display: flex;
 				width: 100%;
@@ -87,20 +96,20 @@
 				<h1>MORE PROJECTS</h1>
 			</header>
 			<div class="row">
-				<div class="box">
+				<div class="box fake-button">
 					<a class="noline" href="archive/index.html">
 						<h3>ARCHiVE</h3>
 						<p>my slowly growing archive of things</p>
 					</a>
 				</div>
-				<div class="box lefty" style="--box-bg: #2f1500d0; --box-color: #ffdcc3; --box-border: #ff8800;">
+				<div class="box lefty fake-button" style="--box-bg: #2f1500d0; --box-color: #ffdcc3; --box-border: #ff8800;">
 					<a class="noline" href="idle_file/versions.html">
 						<h3>idle file</h3>
 						<p>idle game i abandoned before it got good <span class="jsalert">requires javascript</span></p>
 					</a>
 				</div>
 			</div>
-			<div class="box" style="--box-bg: #271900d0; --box-color: #ffdea9; --box-border: yellow;">
+			<div class="box fake-button" style="--box-bg: #271900d0; --box-color: #ffdea9; --box-border: yellow;">
 				<a class="noline" href="https://aisites.neocities.org" target="_blank">
 					<h3>aisites</h3>
 					<p>back when generative ai wasn't that good i made this for comedic purposes. i stopped work on it because ai suddenly got good, causing the project to no longer be funny, and because i felt bad about stealing code, even if it wasn't for profit.</p>

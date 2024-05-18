@@ -90,7 +90,15 @@ var messageList = [ 'lorem ipsum i want to buy a car',
 'You are so good at posting. I love you.',
 'r u raising ur hand or just stretching',
 'the wordle is slosh',
-'do not use this website around pacemakers'
+'do not use this website around pacemakers',
+'Nintendo is bombing America!!!',
+'humpty dumpty brapped on a wall',
+'Nooo!!! I have the HelloFresh virus! Just kidding!',
+'this fish is delish',
+'Snapchat for Seniors',
+'Smile! You\'re on <i>Old Navy</i> TV!',
+'my name is Google Toolbar.',
+'new low score'
 ]
 function setRandomMessage() {document.getElementById('messageTxt').innerHTML = messageList[Math.floor(Math.random() * messageList.length)];}
 setRandomMessage();
