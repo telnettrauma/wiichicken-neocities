@@ -17,7 +17,7 @@ body {
 	width: 900px;
 	margin: auto;
 }
-h1, h2, h3, .mainnav {
+h1, h2, h3, h4, .mainnav {
 	font-family: 'Martian Mono', monospace;
 	margin-block-start: 0;
 	margin-block-end: 0;
@@ -81,7 +81,6 @@ tr td:first-child {margin-left: 0 !important;}
 tr td:nth-child(3n) {width: 100%;}
 .urls table tr td:first-child {
 	margin-left: 0;
-	width: 16px;
 	display: flex;
 	align-items: center;
 	/* background: linear-gradient(180deg, rgba(0,31,39,1) 0%, rgba(54,65,152,1) 100%); */
@@ -126,16 +125,18 @@ header .box {
 	width: auto;
 }
 .mainnav {
-	box-shadow: 2px 2px 0 0 #5ad5f9;
+	box-shadow: 2px 2px 0 0 #dfe0ff;
 	width: 50%;
-	background-color: #001f27bd !important;
-	color: #b4ebff !important;
+	background-color: #151937bd !important;
+	color: #dfe0ff !important;
 	font-size: 1.2em;
 	margin-right: 10px;
 	margin-bottom: 10px;
+	border: 1px solid #dfe0ff;
+	padding: 5px;
 }
 .mainnav:hover {
-	box-shadow: 1px 1px 0 0 #5ad5f9;
+	box-shadow: 1px 1px 0 0 #dfe0ff;
 	transform: translate(1px, 1px);
 }
 .mainnav:active {
@@ -144,11 +145,10 @@ header .box {
 }
 #directoryNav .active {
 	box-shadow: inset 0 -2px 0 0 !important;
-	background-color: #00677d !important;
-	color: #b3ebff !important;
-	text-shadow: 0 0 15px;
+	background-color: #c1c4eb !important;
+	color: #2b2e4d !important;
 }
-header .box, .box, .mainnav, .app img, .app div {
+header .box, .box, .app img, .app div {
 	background-color: #00677d;
 	color: #b3ebff;
 	padding: 5px;
@@ -178,6 +178,11 @@ header .lessvis {
 	body, .main {width: 100%;}
 	.main, .urls table {max-width: unset;}
 	.box, header {width: auto;}
+	button {
+		width: 100%;
+		margin-top: 5px;
+		font-size: 20px;
+	}
 	#flex {
 		flex-wrap: wrap;
 		width: auto;
@@ -195,4 +200,19 @@ header .lessvis {
 		max-width: 100vw;
 		flex-direction: column;
 	}
+	.urls table tr td:first-child {
+		margin-right: 2px;
+	}
+	.urls table tr td:first-child img {
+		width: 32px;
+		height: 32px;
+	}
+	.urls table tr {flex-wrap: wrap;}
+	.urls table tr td {
+		margin-left: 0;
+		margin-bottom: 2px;
+		font-size: 16px;
+	}
+	.urls table tr td:nth-child(2) {width: fit-content;}
+	.urls table tr td:nth-child(2) a {font-size: 26px;}
 }

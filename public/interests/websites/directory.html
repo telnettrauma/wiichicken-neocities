@@ -103,13 +103,16 @@
 			<a class="mainnav" href="reading.html">READiNG</a>
 			<a class="mainnav" href="app/iphone.html" style="margin-right: 2px;">iPHONE APPS</a>
 		</div>
+		<div class="box">
+			<h1>DiRECTORY</h1>
+		</div>
 		<div class="box" id="sofp" style="padding: 0; display: flex; background-color: #352500; border-color: #f6be14; max-width: 700px;">
 			<iframe src="sotfp/widget.html" style="width: 100%; height: 100px; border: none;"></iframe>
 		</div>
 		<div id="butterball" class="grid">
 			<header>
 				<div class="box" style="width: auto;">
-					<h1>BUTTONS!</h1>
+					<h2>BUTTONS!</h2>
 				</div>
 			</header>
 			<div class="box noscript-bye">
@@ -117,13 +120,13 @@
 			</div>
 			<header>
 				<div class="box lessvis">
-					<h2 id="ps">UNCATEGORiZED</h2>
+					<h3 id="ps">UNCATEGORiZED</h3>
 				</div>
 			</header>
 			<script>
 				const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 				document.addEventListener("DOMContentLoaded", function() {
-					if (!prefersReducedMotion) {
+					if (!prefersReducedMotion && screen.width >= 900) {
 						const elementsWithImages = document.querySelectorAll(".buttonhell");
 						elementsWithImages.forEach(element => {
 							const images = element.querySelectorAll("a");
@@ -147,7 +150,6 @@
 				<a target="_blank" href="https://melonking.net"><img loading="lazy" alt="Visit Melonking.Net!" src="https://melonking.net/images/badges/MELON-BADGE-2.GIF" style="image-rendering: pixelated"></a>
 				<a href="https://afellowu.neocities.org/" target="_blank"><img loading="lazy" src="img/button/mebi_county.gif"></a>
 				<a href="https://nerucom.neocities.org"><img loading="lazy" src="https://nerucom.neocities.org/images/neruconc/nerucom.gif"></a>
-				<a target="_blank" href="http://devils.neocities.org"><img loading="lazy" src="https://66.media.tumblr.com/b9e32e17568f6e8b052011afb9ccfae4/tumblr_inline_ps5cezThgH1w1xdc5_540.gif"></a>
 				<a href="https://4ivilo.neocities.org/"><img loading="lazy" src="https://4ivilo.neocities.org/buttons/4ivilos_button.gif"/></a>
 				<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif" loading="lazy"></a>
 				<a target="_blank" href="https://encounters-ltd.neocities.org"><img src="img/button/artists/encounters.gif" loading="lazy"></a>
@@ -156,6 +158,7 @@
 				<a target="_blank" href="https://momg.neocities.org/"><img loading="lazy" alt="Visit the Gif Gallery!" src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
 				<a href="https://blinkies.cafe/" target="_blank"><img src="img/button/tools/blinkcafe.gif" loading="lazy"></a>
 				<a href="https://jackofall.neocities.org/" target="_blank"><img src="https://jackofall.neocities.org/jako-button.gif" loading="lazy"></a>
+				<a href="https://saddleblasters.neocities.org" target="_blank"><img src="img/button/saddle.png" loading="lazy"></a>
 			</div>
 			<div class="urls listhell">
 				<table>
@@ -170,10 +173,6 @@
 					<tr>
 						<td><img src="img/ficon/cities/nerucom.gif" loading="lazy"></td>
 						<td><a href="https://nerucom.neocities.org" target="_blank">nerucom - elio's web hangout</a></td>
-					</tr>
-					<tr>
-						<td><img src="img/ficon/cities/devils.png" loading="lazy"></td>
-						<td><a href="https://devils.neocities.org" target="_blank">devils</a></td>
 					</tr>
 					<tr>
 						<td><img src="img/ficon/cities/4ivil.png" loading="lazy"></td>
@@ -207,11 +206,15 @@
 						<td><img src="img/ficon/cities/jako.png" loading="lazy"></td>
 						<td><a href="https://jackofall.neocities.org" target="_blank">Jako's Trades</a></td>
 					</tr>
+					<tr>
+						<td><img src="img/ficon/default.png" loading="lazy"></td>
+						<td><a href="https://saddleblasters.neocities.org" target="_blank">saddleblasters</a></td>
+					</tr>
 				</table>
 			</div>
 			<header>
 				<div class="box lessvis">
-					<h2 id="inspo">MY iNSPiRATiON</h2>
+					<h3 id="inspo">MY iNSPiRATiON</h3>
 				</div>
 			</header>
 			<div class="box">
@@ -221,6 +224,7 @@
 				<a href="https://sep.neocities.org" target="_blank"><img src="img/button/sep.gif" loading="lazy"></a>
 				<a href="https://catbyte.site" target="_blank"><img src="img/button/catbyte.png" loading="lazy"></a>
 				<a href="https://dabric.xyz" target="_blank"><img loading="lazy" src="https://dabric.xyz/butt.png" alt="dabric"></a>
+				<a href="https://bruno-rubim.neocities.org" target="_blank"><img src="img/button/bruno-button.gif" loading="lazy"></a>
 			</div>
 			<div class="urls listhell">
 				<table>
@@ -236,11 +240,15 @@
 						<td><img src="img/ficon/cities/dabric.png" loading="lazy"></td>
 						<td><a href="https://dabric.xyz" target="_blank">Dabric</a></td>
 					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/bruno.png" loading="lazy"></td>
+						<td><a href="https://bruno-rubim.neocities.org" target="_blank">Bruno Rubim</a></td>
+					</tr>
 				</table>
 			</div>
 			<header>
 				<div class="box lessvis">
-					<h2 id="btech">TECH</h2>
+					<h3 id="btech">TECH</h3>
 				</div>
 			</header>
 			<div class="box">
@@ -275,7 +283,7 @@
 			</div>
 			<header>
 				<div class="box lessvis">
-					<h2 id="arts">ARTiSTS</h2>
+					<h3 id="arts">ARTiSTS</h3>
 				</div>
 			</header>
 			<div class="box">
@@ -293,6 +301,7 @@
 				<a href="https://dimwit.neocities.org" target="_blank"><img src="img/button/artists/dimwit.gif" loading="lazy"></a>
 				<a href="https://cypherine.neocities.org" target="_blank"><img src="img/button/artists/cybutton.gif" loading="lazy"></a>
 				<a href="https://psychicnewborn.neocities.org" target="_blank"><img loading="lazy" src="img/button/psychic.gif"></a>
+				<a href="https://moondvsted.neocities.org/" target="_blank"><img src="https://f2.toyhou.se/file/f2-toyhou-se/images/47052159_rd5iWTFAMmQWrMr.gif" loading="lazy"></a>
 			</div>
 			<div class="urls listhell">
 				<table>
@@ -340,6 +349,10 @@
 						<td><img src="img/ficon/cities/newborn.png" loading="lazy"></td>
 						<td><a href="https://psychicnewborn.neocities.org/" target="_blank">Psychic Newborn</a></td>
 					</tr>
+					<tr>
+						<td><img src="img/ficon/cities/moondv.png" loading="lazy"></td>
+						<td><a href="https://moondvsted.neocities.org" target="_blank">moondvsted</a></td>
+					</tr>
 				</table>
 			</div>
 			<div class="box">
@@ -349,7 +362,7 @@
 		<div class="urls">
 			<header>
 				<div class="box">
-					<h1>UNiFORM RESOURCE LOCATORS</h1>
+					<h2>UNiFORM RESOURCE LOCATORS</h2>
 				</div>
 			</header>
 			<div class="box">
@@ -357,7 +370,7 @@
 			</div>
 			<header>
 				<div class="box lessvis">
-					<h2 id="vg">ViDEO GAMES AND iNTERACTiVE WEBTOYS!!!</h2>
+					<h3 id="vg">ViDEO GAMES AND iNTERACTiVE WEBTOYS!!!</h3>
 				</div>
 			</header>
 			<table>
@@ -376,10 +389,15 @@
 					<td><a href="https://neal.fun/infinite-craft/" target="_blank">Infinite Craft</a></td>
 					<td>imagine Little Alchemy but with ai, so you can make whatever</td>
 				</tr>
+				<tr>
+					<td><img loading="lazy" src="img/ficon/game/pictochat.png"></td>
+					<td><a href="https://pict.chat" target="_blank">PictoChat Online</a></td>
+					<td>pictochat, but it runs inside the browser</td>
+				</tr>
 			</table>
 			<header>
 				<div class="box lessvis">
-					<h2 id="art">ART/DESIGN</h2>
+					<h3 id="art">ART/DESIGN</h3>
 				</div>
 			</header>
 			<table>
@@ -411,7 +429,7 @@
 			</table>
 			<header>
 				<div class="box lessvis">
-					<h2 id="artist">ARTiSTS</h2>
+					<h3 id="artist">ARTiSTS</h3>
 				</div>
 			</header>
 			<table>
@@ -421,6 +439,11 @@
 					<td>archive of the most interesting comic i have ever read</td>
 				</tr>
 				<tr>
+					<td><img src="img/ficon/default.png" loading="lazy"></td>
+					<td><a href="https://castlezzt-archive.neocities.org" target="_blank">castleZZT archive</a></td>
+					<td>archive of more comics created by Jack Masters, the creator of the comic linked above</td>
+				</tr>
+				<tr>
 					<td><img loading="lazy" src="img/ficon/default.png"></td>
 					<td><a href="https://kasiapluto.neocities.org" target="_blank">Kasia Pluto</a></td>
 					<td>"Artist from Philadelphia, PA."</td>
@@ -428,7 +451,7 @@
 			</table>
 			<header>
 				<div class="box lessvis">
-					<h2 id="dev">DEVTOOLS</h2>
+					<h3 id="dev">DEVTOOLS</h3>
 				</div>
 			</header>
 			<div class="box">
@@ -453,7 +476,7 @@
 			</table>
 			<header>
 				<div class="box lessvis">
-					<h2 id="tech">TECH</h2>
+					<h3 id="tech">TECH</h3>
 				</div>
 			</header>
 			<table>
@@ -475,7 +498,7 @@
 			</table>
 			<header>
 				<div class="box lessvis">
-					<h2 id="music">MUSiC</h2>
+					<h3 id="music">MUSiC</h3>
 				</div>
 			</header>
 			<table>
@@ -512,14 +535,14 @@
 			</table>
 			<header>
 				<div class="box lessvis">
-					<h3>last.fm</h3>
+					<h4>last.fm</h4>
 				</div>
 			</header>
 			<table>
 				<tr>
 					<td><img src="img/ficon/blog/reddit.png" loading="lazy"></td>
-					<td><a href="https://old.reddit.com/r/lastfm/comments/htzomy/list_of_spotifylastfm_stats_websites_and_not_just/" target="_blank">Last of Spotify/last.fm websites (Reddit post)</a></td>
-					<td>reddit post with a pretty good list of sites that can be used with last.fm. most of these sites were taken directly from that post</td>
+					<td><a href="https://old.reddit.com/r/lastfm/comments/htzomy/list_of_spotifylastfm_stats_websites_and_not_just/" target="_blank">Last of Spotify/last.fm websites</a></td>
+					<td><strong>reddit post</strong> with a pretty good list of sites that can be used with last.fm. most of these sites were taken directly from that post</td>
 				</tr>
 				<tr>
 					<td><img loading="lazy" src="img/ficon/music/last/stats.ico"></td>
@@ -549,7 +572,7 @@
 			</table>
 			<header>
 				<div class="box lessvis">
-					<h2 id="pp">PERSONAL PAGES</h2>
+					<h3 id="pp">PERSONAL PAGES</h3>
 				</div>
 			</header>
 			<div class="box">
@@ -557,7 +580,7 @@
 			</div>
 			<header>
 				<div class="box lessvis">
-					<h2 id="util">UTiLiTiES</h2>
+					<h3 id="util">UTiLiTiES</h3>
 				</div>
 			</header>
 			<table>
@@ -589,7 +612,7 @@
 			</table>
 			<header>
 				<div class="box lessvis">
-					<h2 id="misc">MiSC</h2>
+					<h3 id="misc">MiSC</h3>
 				</div>
 			</header>
 			<table>
