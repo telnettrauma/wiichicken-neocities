@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>MAKE A LiST</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link href="/style.css" rel="stylesheet">
+		<noscript><style>#poopBlock iframe {display: block !important;}</style></noscript>
+	</head>
+	<body>
+		<style>
+			* {
+				--dark-primary: #xxxxxx;
+				--dark-tertiary: #xxxxxx;
+				--dark-on-tertiary: #xxxxxx;
+				--dark-on-primary-container: #1f1b13;
+				--bg-1: #e9e2d4;
+				--bg-2: #e9e2d4;
+			}
+			ul {padding-inline-start: 0;}
+			li {
+				padding: 5px;
+				border-radius: 5px;
+				margin-bottom: 5px;
+				display: block;
+				border: 1px solid black;
+			}
+			ul li:first-child {border-radius: 10px 10px 5px 5px;}
+			ul li:last-child {border-radius: 5px 5px 10px 10px;}
+			#main-event {
+				display: flex;
+				gap: 10px;
+			}
+			nav {width: 40%;}
+			#happy {width: 60%;}
+		</style>
+		<div id="heightCheck"></div>
+		<div class="heading" id="poopBlock" style="pointer-events: all;">
+			<iframe src="/resources/nav/fallback.html" loading="lazy"></iframe>
+		</div>
+		<div id="sideButton" onclick="openSidey()"></div>
+		<div id="overSide"></div>
+		<main>
+			<h1>LiSTS</h1>
+			<p>making lists is cool, so i made a page for them. enjoy.</p>
+			<div id="main-event">
+				<nav>
+					<ul>
+						<li>demo list</li>
+					</ul>
+				</nav>
+				<div id="happy">
+					<p>iframe goes here eventually</p>
+				</div>
+			</div>
+			<ul id="testgradient">
+				<li>object 1</li>
+				<li>object 2</li>
+				<li>object 3</li>
+				<li>object 3</li>
+				<li>object 3</li>
+				<li>object 3</li>
+			</ul>
+			<div class="box">
+				<p>concept inspired by <a href="https://saddleblasters.neocities.org/lists/" target="_blank">saddleblasters</a></p>
+				<a href="https://saddleblasters.neocities.org/lists/" target="_blank"><img src="/interests/websites/img/button/saddle.png" loading="lazy"></a>
+				<p>design inspired by <a href="https://www.useclear.com" target="_blank">Clear Lists</a></p>
+			</div>
+		</main>
+		<script src="listy/listcolor.js"></script>
+		<script>
+			createGradient('#ffb4ab', '#bec2ff', '#690005', '#272b60', '#ff0000', '#0000ff', 'testgradient');
+		</script>
+		<script src="/resources/nav/navbar.js"></script>
+	</body>
+</html>
