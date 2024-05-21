@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans+Caption:wght@400;700&display=swap');
 body {font-family: "PT Sans Caption", sans-serif;}
-h2 {
+h1, h2 {
 	font-family: "Arvo", serif;
 	font-weight: bold;
 }
@@ -22,3 +22,14 @@ li {
 }
 ul li:first-child {border-radius: 15px 15px 5px 5px;}
 ul li:last-child {border-radius: 5px 5px 15px 15px;}
+#the-list li {
+	opacity: 0;
+	transform: translateY(100px);
+	animation: riseAndFade 1s forwards;
+}
+@keyframes riseAndFade {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

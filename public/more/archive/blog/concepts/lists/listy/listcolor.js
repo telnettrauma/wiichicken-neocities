@@ -37,6 +37,7 @@ function createGradient(startBgColor, endBgColor, startTextColor, endTextColor, 
 		let textB = Math.round(startTextRGB[2] + ratio * (endTextRGB[2] - startTextRGB[2]));
 		let intermediateTextColor = rgbToHex(textR, textG, textB);
 
+		// border color calculation
 		let borderR = Math.round(startBorderRGB[0] + ratio * (endBorderRGB[0] - startBorderRGB[0]));
 		let borderG = Math.round(startBorderRGB[1] + ratio * (endBorderRGB[1] - startBorderRGB[1]));
 		let borderB = Math.round(startBorderRGB[2] + ratio * (endBorderRGB[2] - startBorderRGB[2]));
@@ -48,3 +49,11 @@ function createGradient(startBgColor, endBgColor, startTextColor, endTextColor, 
 		listItems[i].style.borderColor = intermediateBorderColor;
 	}
 }
+document.addEventListener("DOMContentLoaded", function() {
+	const spookyList = document.getElementById('the-list');
+	const listItems = spookyList.getElementsByTagName('li');
+	for (let i = 0; i < listItems.length; i++) {
+		let delay = i * 0.05;
+		listItems[i].style.animationDelay = `${delay}s`;
+	}
+});
