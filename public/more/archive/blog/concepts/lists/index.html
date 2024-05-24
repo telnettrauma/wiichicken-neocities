@@ -5,51 +5,95 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/x-icon" href="/favicon.ico">
-		<link href="/style.css" rel="stylesheet">
 		<noscript><style>#poopBlock iframe {display: block !important;}</style></noscript>
 		<link href="listy/common.css" rel="stylesheet">
 	</head>
 	<body>
 		<style>
-			* {
-				--dark-primary: #6e5d0e;
-				--dark-tertiary: #44664e;
-				--dark-on-tertiary: #ffffff;
-				--dark-on-primary-container: #1f1b13;
-				--bg-1: #e9e2d4;
-				--bg-2: #e9e2d4;
+			body {
+				margin: 0;
+				margin-top: 10px;
+				background-color: #e9e2d4;
+				color: #1e1c13;
 			}
-			.heading {background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,0.7) 100%);}
-			main {max-width: 1000px;}
+			main {
+				max-width: 1000px;
+				margin: auto;
+			}
+			.square {
+				width: 20px;
+				height: 20px;
+				border-radius: 5px;
+			}
+			p {
+				margin-block-start: 0;
+				margin-block-end: 0;
+			}
+			#s1 {
+				border-radius: 10px 5px 5px 10px;
+				margin-right: 5px;
+			}
+			#poopBlock, #fakeLogo, #inHead {display: flex;}
+			#inHead {
+				justify-content: space-between;
+				width: 100%;
+				gap: 10px;
+				margin-left: 10px;
+			}
+			#inHead a {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				padding: 10px;
+				justify-content: center;
+				text-decoration: none;
+				font-weight: bold;
+				color: #1e1c13;
+			}
 			#main-event {
 				display: flex;
 				gap: 10px;
 				max-width: 1000px;
 				height: 80vh;
 			}
-			nav, #happy, .block {
+			nav, #happy, .block, #poopBlock a {
 				background-color: #f4eddf;
 				border-radius: 20px;
 				border: 1px solid #7c7767;
 				margin-bottom: 10px;
 			}
+			#poopBlock a {
+				background-color: #ede2bc;
+				color: #201b04;
+			}
+			#fakeLogo {
+				background-color: unset;
+				background: linear-gradient(90deg, rgba(255,218,212,1) 0%, rgba(190,194,255,1) 100%);
+			}
 			.block, nav {padding: 10px}
 			nav {width: 40%;}
 			#happy {width: 60%;}
-			a {color: #44664e;}
 			li {
 				background-color: #efe2bc;
 				color: #211b04;
 			}
 			li a {text-decoration: none;}
 		</style>
-		<div id="heightCheck"></div>
-		<div class="heading" id="poopBlock" style="pointer-events: all;">
-			<iframe src="/resources/nav/fallback.html" loading="lazy"></iframe>
-		</div>
-		<div id="sideButton" onclick="openSidey()"></div>
-		<div id="overSide"></div>
 		<main>
+			<div class="heading" id="poopBlock">
+				<a id="fakeLogo" class="block" href="/index.html">
+					<div class="square" id="s1" style="background-color: red;"></div>
+					<div class="square" id="s2" style="background-color: #00a2ff; margin-right: 0; border-radius: 5px 10px 10px 5px;"></div>
+				</a>
+				<div id="inHead">
+					<a href="/aboutme.html">ABOUT ME</a>
+					<a href="/creative/index.html">ART</a>
+					<a href="/more/archive/blog/index.html">BLOG</a>
+					<a href="/interests/index.html">iNTERESTS</a>
+					<a href="/more/index.html">MORE</a>
+					<a href="/guestbook.html">GUESTBOOK</a>
+				</div>
+			</div>
 			<div class="block">
 				<h1>LiSTS</h1>
 				<p>making lists is cool, so i made a page for them. enjoy.</p>
@@ -68,7 +112,6 @@
 				<iframe src="listy/example.html" name="listarea" id="happy"></iframe>
 			</div>
 		</main>
-		<script src="/resources/nav/navbar.js"></script>
 		<script src="listy/listcolor.js"></script>
 		<script>
 			createGradient('#efe2bc', '#c5eccd', '#211b04', '#00210f', '#211b04', '#00210f', 'navlist');
