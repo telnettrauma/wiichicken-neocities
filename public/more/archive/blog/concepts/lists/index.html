@@ -49,6 +49,7 @@
 				text-decoration: none;
 				font-weight: bold;
 				color: #1e1c13;
+				white-space: nowrap;
 			}
 			#main-event {
 				display: flex;
@@ -78,6 +79,10 @@
 				color: #211b04;
 			}
 			li a {text-decoration: none;}
+			@media only screen and (max-width: 800px) {
+				body {margin: 10px;}
+				#poopBlock {overflow-y: scroll;}
+			}
 		</style>
 		<main>
 			<div class="heading" id="poopBlock">
@@ -87,10 +92,10 @@
 				</a>
 				<div id="inHead">
 					<a href="/aboutme.html">ABOUT ME</a>
-					<a href="/creative/index.html">ART</a>
-					<a href="/more/archive/blog/index.html">BLOG</a>
-					<a href="/interests/index.html">iNTERESTS</a>
-					<a href="/more/index.html">MORE</a>
+					<a href="/creative/">ART</a>
+					<a href="/more/archive/blog/">BLOG</a>
+					<a href="/interests/">iNTERESTS</a>
+					<a href="/more/">MORE</a>
 					<a href="/guestbook.html">GUESTBOOK</a>
 				</div>
 			</div>
