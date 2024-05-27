@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans+Caption:wght@400;700&display=swap');
 body {font-family: "PT Sans Caption", sans-serif;}
-h1, h2 {
+h1, h2, h3 {
 	font-family: "Arvo", serif;
 	font-weight: bold;
 }
@@ -8,7 +8,7 @@ li a {
 	color: unset;
 	text-decoration: underline;
 }
-ul, h2 {
+ul, h2, h3, li {
 	padding-inline-start: 0;
 	margin-block-start: 0;
 	margin-block-end: 0;
