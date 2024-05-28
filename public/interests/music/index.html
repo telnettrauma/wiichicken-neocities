@@ -45,6 +45,7 @@
 			a {
 				background-color: var(--sub);
 				color: var(--bg);
+				cursor: pointer;
 			}
 			.section {
 				display: flex;
@@ -104,6 +105,7 @@
 				background-color: #ffdbcc;
 				color: #351000;
 				box-shadow: 0 0 20px 0px black;
+				animation: open-sesame 1s;
 			}
 			#list-view {
 				height: 80vh;
@@ -128,7 +130,7 @@
 			}
 			@media only screen and (min-width: 900px) {
 				#floaters {
-					right: 10px;
+					right: 15%;
 					top: 40px;
 				}
 			}
@@ -146,6 +148,19 @@
 				#close-list {
 					font-size: 40px;
 					margin-right: 10px;
+				}
+			}
+			@keyframes open-sesame {
+				0% {
+					transform: translateX(400px);
+					opacity: 0;
+					border-right: 30px solid #a08d85;
+				}
+				30% {border-right: 30px solid #a08d85;}
+				100% {
+					transform: translateX(0px);
+					opacity: 1;
+					border-right: 1px solid #a08d85;
 				}
 			}
 		</style>
