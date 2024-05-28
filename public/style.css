@@ -8,7 +8,7 @@ body {
 	background-color: var(--bg-1);
 }
 main {
-	max-width: 800px;
+	max-width: 600px;
 	margin: auto;
 }
 h1, h2, h3, h4, h5, h6 {font-family: 'Martian Mono', monospace;}
