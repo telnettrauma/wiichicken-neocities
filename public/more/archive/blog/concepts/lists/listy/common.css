@@ -33,3 +33,4 @@ ul li:last-child {border-radius: 5px 5px 15px 15px;}
 		transform: translateY(0);
 	}
 }
+::-webkit-scrollbar {width: 0px;}

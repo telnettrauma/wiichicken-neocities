@@ -92,6 +92,62 @@
 				box-shadow: none !important;
 				transform: translate(2px, 2px);
 			}
+			#floaters {
+				position: fixed;
+				height: 80vh;
+				display: flex;
+				align-items: flex-end;
+				gap: 10px;
+			}
+			#list-view, #close-list {
+				border: 1px solid #a08d85;
+				background-color: #ffdbcc;
+				color: #351000;
+				box-shadow: 0 0 20px 0px black;
+			}
+			#list-view {
+				height: 80vh;
+				border-radius: 20px;
+			}
+			#close-list {
+				font-family: 'Martain Mono', monospace;
+				font-weight: bold;
+				font-size: 20px;
+				border-radius: 30px;
+				background-color: #ede4a9;
+				color: #1f1c00;
+				box-shadow: 2px 2px 0 0 #a08d85;
+			}
+			#close-list:hover {
+				box-shadow: 1px 1px 0 0 #a08d85;
+				transform: translate(1px, 1px);
+			}
+			#close-list:active {
+				box-shadow: unset;
+				transform: translate(2px, 2px);
+			}
+			@media only screen and (min-width: 900px) {
+				#floaters {
+					right: 10px;
+					top: 40px;
+				}
+			}
+			@media only screen and (max-width: 900px) {
+				#floaters {
+					top: 70px;
+					margin: 10px;
+					flex-direction: column-reverse;
+					width: 100vw;
+				}
+				#list-view {
+					width: 100%;
+					margin-right: 10px;
+				}
+				#close-list {
+					font-size: 40px;
+					margin-right: 10px;
+				}
+			}
 		</style>
 		<div id="heightCheck"></div>
 		<div class="heading" id="poopBlock"></div>
@@ -174,6 +230,13 @@
 					<li><a href="/more/archive/blog/2024/1/spotify.html" target="_blank">Spotify Sucks!!</a></li>
 				</ul>
 			</div>
+			<div class="card noscript-bye">
+				<h1>LiSTS</h1>
+				<ul>
+					<li><a onclick="openList('/more/archive/blog/concepts/lists/listy/music/fsfaailtatwt.html')">favorite song from an album i listened to all the way through</a></li>
+					<li><a onclick="openList('/more/archive/blog/concepts/lists/listy/music/tolisten.html')">to listen</a></li>
+				</ul>
+			</div>
 			<div class="card">
 				<h1>PLACES i AM</h1>
 			</div>
@@ -182,6 +245,16 @@
 				<a href="https://rateyourmusic.com/~wiichicken" target="_blank" style="background-color: #001b3f; color: #d7e2ff; --link-color: #005dbf;">rate your music</a>
 			</div>
 		</main>
+		<div id="floaters" style="display: none;">
+			<iframe name="viewlist" id="list-view"></iframe>
+			<button id="close-list" onclick="document.getElementById('floaters').style.display = 'none';">X</button>
+		</div>
+		<script>
+			function openList(toOpen) {
+				document.getElementById('floaters').style.display = 'flex';
+				document.getElementById('list-view').src = toOpen;
+			}
+		</script>
 		<script src="res/np.js"></script>
 		<script src="../intnav.js"></script>
 	</body>
