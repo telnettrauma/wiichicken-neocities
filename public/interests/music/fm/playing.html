@@ -7,9 +7,9 @@
 </head>
 <div class="content" style="margin: 0; position: relative; overflow: hidden;" id="main">
 	<div id="moneyOnMind" class="moneyOnMind"></div>
-	<div class="moneyOnMind" id="fartOnMind" style="animation: otherRotate 75s linear infinite; opacity: 0.5; z-index: 1;"></div>   
+	<div class="moneyOnMind" id="fartOnMind" style="animation: otherRotate 75s linear infinite; opacity: 0.75; z-index: 1; mix-blend-mode: multiply;"></div>   
 	<div id="hiPoopFart">
-		<p id="listen" user="wiichicken">CANT FETCH last listened to</p>
+		<p id="listen" user="wiichicken">CANT FETCH (TRY REFRESHiNG)</p>
 		<div id="artworklink" target="_blank">
 			<img id="artwork" src="" onError="this.onerror=null;this.src='/med/blank.png';">
 			<p id="track"></p>
@@ -70,7 +70,7 @@
 		z-index: 0;
 		background-size: 80vmax;
 		background-repeat: repeat;
-		animation: rotate 60s linear infinite;
+		animation: rotate 45s linear infinite;
 		scale: 1.5;
 	}
 	#artwork {
@@ -121,12 +121,12 @@
 		100% {background-position-y: -1065%; background-position-x: -565%; transform: rotateY(0deg);}
 	}
 	@keyframes rotate {
-		0% {transform: rotate(0deg);}
-		100% {transform: rotate(360deg);}
-	}
-	@keyframes otherRotate {
 		0% {transform: rotate(360deg);}
 		100% {transform: rotate(0deg);}
+	}
+	@keyframes otherRotate {
+		0% {transform: rotate3d(0, 0, 0, 0deg);}
+		100% {transform: rotate3d(2, 5, 8, 359deg);}
 	}
 	#controls, #enter-name {
 		background-color: #79747e6f;

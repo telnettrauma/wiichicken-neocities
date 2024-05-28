@@ -100,18 +100,18 @@
 				align-items: flex-end;
 				gap: 10px;
 			}
-			#list-view, #close-list {
+			#list-view, #close-list, #inside-more {
 				border: 1px solid #a08d85;
 				background-color: #ffdbcc;
 				color: #351000;
 				box-shadow: 0 0 20px 0px black;
-				animation: open-sesame 1s;
 			}
+			#list-view, #close-list, #more-lists, #inside-more {animation: open-sesame 1s;}
 			#list-view {
 				height: 80vh;
 				border-radius: 20px;
 			}
-			#close-list {
+			#floaters button {
 				font-family: 'Martain Mono', monospace;
 				font-weight: bold;
 				font-size: 20px;
@@ -120,18 +120,31 @@
 				color: #1f1c00;
 				box-shadow: 2px 2px 0 0 #a08d85;
 			}
-			#close-list:hover {
+			#floaters button:hover {
 				box-shadow: 1px 1px 0 0 #a08d85;
 				transform: translate(1px, 1px);
 			}
-			#close-list:active {
+			#floaters button:active {
 				box-shadow: unset;
 				transform: translate(2px, 2px);
+			}
+			#list-buttons {
+				display: flex;
+				gap: 10px;
 			}
 			@media only screen and (min-width: 900px) {
 				#floaters {
 					right: 15%;
 					top: 40px;
+				}
+				#list-buttons {
+					flex-direction: column-reverse;
+					align-items: flex-start;
+				}
+				#more-lists {border-right: unset !important;}
+				#inside-more {
+					text-orientation: sideways;
+					writing-mode: tb;
 				}
 			}
 			@media only screen and (max-width: 900px) {
@@ -145,9 +158,10 @@
 					width: 100%;
 					margin-right: 10px;
 				}
-				#close-list {
-					font-size: 40px;
-					margin-right: 10px;
+				#floaters button {font-size: 40px;}
+				#list-buttons {
+					flex-direction: row-reverse;
+					margin-right: 20px;
 				}
 			}
 			@keyframes open-sesame {
@@ -262,7 +276,12 @@
 		</main>
 		<div id="floaters" style="display: none;">
 			<iframe name="viewlist" id="list-view"></iframe>
-			<button id="close-list" onclick="document.getElementById('floaters').style.display = 'none';">X</button>
+			<div id="list-buttons">
+				<button id="close-list" onclick="document.getElementById('floaters').style.display = 'none';">X</button>
+				<a id="more-lists" style="background-color: unset;" href="/more/archive/blog/concepts/lists/" target="_blank">
+					<button id="inside-more">MORE LiSTS</button>
+				</a>
+			</div>
 		</div>
 		<script>
 			function openList(toOpen) {
