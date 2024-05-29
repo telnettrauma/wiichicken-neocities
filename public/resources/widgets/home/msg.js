@@ -98,7 +98,8 @@ var messageList = [ 'lorem ipsum i want to buy a car',
 'Snapchat for Seniors',
 'Smile! You\'re on <i>Old Navy</i> TV!',
 'my name is Google Toolbar.',
-'new low score'
+'new low score',
+'DUDE, DATS A BUTTERFLY'
 ]
 function setRandomMessage() {document.getElementById('messageTxt').innerHTML = messageList[Math.floor(Math.random() * messageList.length)];}
 setRandomMessage();
