@@ -22,8 +22,7 @@
 				color: #d9e2ff;
 				font-family: 'PT Sans', sans-serif;
 			}
-			h1 {font-family: 'Martian Mono', monospace;}
-			h2 {font-family: 'Martian Mono', monospace;}
+			h1, h2 {font-family: 'Martian Mono', monospace;}
 			#gallery {
 				animation: rainbow 10s infinite;
 				width: 100%;
@@ -44,6 +43,23 @@
 			#main {
 				margin: auto;
 				max-width: 600px;
+			}
+			button {
+				background-color: #293042;
+				color: #c0c6dc;
+				border: 1px solid #c0c6dc;
+				font-family: 'Martian Mono', monospace;
+				font-weight: bold;
+				margin: 2px;
+				box-shadow: 2px 2px 0 #c0c6dc;
+			}
+			button:hover {
+				box-shadow: 1px 1px 0 #c0c6dc;
+				transform: translate(1px, 1px);
+			}
+			button:active {
+				box-shadow: none;
+				transform: translate(2px, 2px);
 			}
 			.box {
 				padding: 5px;
@@ -73,6 +89,17 @@
 				background-color: unset;
 			}
 			.head {box-shadow: 0 0 150px 20px #0064ef;}
+			#scatterblop {
+				min-width: 200px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			#scatterblop img {
+				position: absolute;
+				width: 176px;
+				box-shadow: 0 0 10px 0 #0000009e;
+			}
 		</style>
 		<div id="heightCheck"></div>
 		<div class="heading" id="poopBlock" style="pointer-events: all;">
@@ -106,6 +133,18 @@
 						<div class="box square" style="padding: 0;height: 60px; margin-left: 10px; margin: 0 0 0 10px; border-color: #827568;">
 							<a href="https://wiichicken.newgrounds.com" target="_blank" title="Newgrounds"><img src="res/ng.png"></a>
 						</div>
+					</div>
+				</div>
+				<div class="row" style="margin-bottom: 0;">
+					<div class="box">
+						<h3>BUTTONS</h3>
+						<p>yeah, i have made some buttons that you are free to put on your website.</p>
+						<a href="graphics/buttons/index.html" class="noline"><button>ViEW</button></a>
+					</div>
+					<div id="scatterblop" class="box" style="margin-left: 10px;">
+						<img style="transform: rotate(352deg);" src="graphics/buttons/tech/mobile/android/3button.PNG" loading="lazy">
+						<img style="transform: rotate(5deg);" src="graphics/buttons/gaming/nintendo/3ds/netpass.png" loading="lazy">
+						<img src="graphics/buttons/life/100000miles.PNG" loading="lazy">
 					</div>
 				</div>
 				<div class="box">
