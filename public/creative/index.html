@@ -61,7 +61,7 @@
 				box-shadow: none;
 				transform: translate(2px, 2px);
 			}
-			.box {
+			.box, h1, h2, h3 {
 				padding: 5px;
 				margin-bottom: 10px;
 				border: 1px solid #0064ef;
@@ -73,14 +73,16 @@
 				display: flex;
 				margin-bottom: 10px;
 			}
-			.nomarblock {
+			.nomarblock, h1, h2, h3 {
 				margin-block-start: 0;
 				margin-block-end: 0;
 			}
+			h2, h3 {margin-bottom: 5px;}
 			.square {
 				width: 60px;
 				height: 60px;
-				margin-bottom: 0;
+				padding: 0;
+				margin: 0 0 5px 5px;
 			}
 			.square img {width: 58px;}
 			.square a {
@@ -88,7 +90,10 @@
 				box-shadow: none;
 				background-color: unset;
 			}
-			.head {box-shadow: 0 0 150px 20px #0064ef;}
+			.head {
+				box-shadow: 0 0 150px 20px #0064ef;
+				margin-bottom: 10px;
+			}
 			#scatterblop {
 				min-width: 200px;
 				display: flex;
@@ -100,6 +105,12 @@
 				width: 176px;
 				box-shadow: 0 0 10px 0 #0000009e;
 			}
+			@media only screen and (max-width: 900px) {
+				button {
+					width: 100%;
+					font-size: 20px;
+				}
+			}
 		</style>
 		<div id="heightCheck"></div>
 		<div class="heading" id="poopBlock" style="pointer-events: all;">
@@ -109,57 +120,52 @@
 		<div id="overSide"></div>
 		<div id="chewTooth"></div>
 		<div id="main">
-			<div class="box head">
-				<h1>MY WORKS</h1>
-			</div>
+			<h1 class="head">MY WORKS OF ART</h1>
 			<main>
-				<div class="box">
-					<h2 class="nomarblock">ART</h2>
-				</div>
+				<h2>ART</h2>
 				<div class="row" style="display: flex;">
-					<div class="box" style="padding: 0; width: 100%; height: 134px; margin-bottom: 0;">
-						<a id="gallery" style="background: none; display: flex; justify-content: center; align-items: center; flex-direction: column;" href="gallery/index.html"><span style="font-size: 30px;"><strong>GALLERY</strong></span><br>look at the drawings i have made</a>
+					<div class="box" style="padding: 0; width: 100%; height: 125px; margin-bottom: 0;">
+						<a id="gallery" style="background: none; display: flex; justify-content: center; align-items: center; flex-direction: column;" href="gallery/index.html"><span style="font-size: 30px;"><strong style="font-family: 'Martian Mono', monospace;">GALLERY</strong></span><br>look at the drawings i have made</a>
 					</div>
-					<div style="display: flex; flex-wrap: wrap; max-width: 144px;">
-						<div class="box square" style="padding: 0; margin: 0 0 10px 10px; border-color: #8a938b;">
+					<div id="link-grid" style="display: flex; flex-wrap: wrap; max-width: 130px;">
+						<div class="box square" style="border-color: #8a938b;">
 							<a href="https://www.deviantart.com/wechicken" target="_blank" title="DeviantArt"><img src="res/da.png"></a>
 						</div>
-						<div class="box square" style="padding: 0;height: 60px; margin: 0 0 10px 10px; border-color: #757780;">
+						<div class="box square" style="border-color: #757780;">
 							<a href="https://wiichicken.tumblr.com" target="_blank" title="Art tumblr"><img src="res/tumblr.png"></a>
 						</div>
-						<div class="box square" style="padding: 0;height: 60px; margin-left: 10px; margin: 0 0 0 10px; border-color: #717971;">
+						<div class="box square" style="border-color: #717971;">
 							<a href="https://toyhou.se/wiichicken" target="_blank" title="Toyhouse (Major work in progress!)"><img src="res/th.png"></a>
 						</div>
-						<div class="box square" style="padding: 0;height: 60px; margin-left: 10px; margin: 0 0 0 10px; border-color: #827568;">
+						<div class="box square" style="border-color: #827568;">
 							<a href="https://wiichicken.newgrounds.com" target="_blank" title="Newgrounds"><img src="res/ng.png"></a>
 						</div>
 					</div>
 				</div>
 				<div class="row" style="margin-bottom: 0;">
-					<div class="box">
+					<div>
 						<h3>BUTTONS</h3>
-						<p>buttons that i made that you can put on your website, because i love you <img src='/media/emoji/grin.gif' loading='lazy' alt=''></p>
-						<a href="graphics/buttons/index.html" class="noline"><button>ViEW BUTTONS</button></a>
+						<div class="box" style="margin-bottom: 5px;">
+							<p><code>88</code>x<code>31</code> buttons i made that you can put on your website, because i love you <img src='/media/emoji/grin.gif' loading='lazy' alt=''></p>
+						</div>
 					</div>
-					<div id="scatterblop" class="box" style="margin-left: 10px;">
+					<div id="scatterblop" class="box" style="margin-left: 5px; margin-bottom: 5px;">
 						<img style="transform: rotate(352deg);" id="but1" src="graphics/buttons/tech/mobile/android/3button.PNG" loading="lazy">
 						<img style="transform: rotate(5deg);" id="but2" src="graphics/buttons/gaming/nintendo/3ds/netpass.png" loading="lazy">
 						<img src="graphics/buttons/life/100000miles.png" id="but3" loading="lazy">
 					</div>
 				</div>
+				<a href="graphics/buttons/index.html" class="noline"><button style="width: 100%; font-size: 30px; margin: 0 2px 10px 0;">ViEW BUTTONS</button></a>
+				<h2>PHOTOGRAPHY</h2>
 				<div class="box">
-					<p>i also made some buttons. <a href="graphics/buttons/index.html">check em out!</a><br>there is also a <a href="photos.html">photo gallery</a>. you can tell im not proud of it because im putting the link as text</p>
+					<p>there is also a <a href="photos.html">photo gallery</a>. you can tell im not proud of it because im putting the link as text</p>
 				</div>
-				<div class="box">
-					<h2 class="nomarblock">MUSiC</h2>
-				</div>
-				<div class="box">
+				<h2>MUSiC</h2>
+				<div class="box" style="margin-bottom: 5px;">
 					<p>i don't actually make music, sorry! <img src="/media/emoji/sweat.gif"> but i do have a bandcamp that i released music i made in 5th grade to.</p>
 				</div>
 				<iframe style="border: 0; width: 100%; height: 42px; margin-bottom: 8px;" src="https://bandcamp.com/EmbeddedPlayer/album=1030405553/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://wiichicken.bandcamp.com/album/really-bad-music-i-made-on-a-music-making-app-in-2017">really bad music i made on a music making app in 2017 by wiichicken</a></iframe>
-				<div class="box">
-					<h2 class="nomarblock">MORE</h2>
-				</div>
+				<h2>MORE</h2>
 				<div class="box">
 					<p>nothing else... <a href="nostart.html" target="_blank" style="background-color: unset; color: #d9e2ff;">yet</a></p>
 				</div>
