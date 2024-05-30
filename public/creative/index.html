@@ -138,13 +138,13 @@
 				<div class="row" style="margin-bottom: 0;">
 					<div class="box">
 						<h3>BUTTONS</h3>
-						<p>yeah, i have made some buttons that you are free to put on your website.</p>
-						<a href="graphics/buttons/index.html" class="noline"><button>ViEW</button></a>
+						<p>buttons that i made that you can put on your website, because i love you <img src='/media/emoji/grin.gif' loading='lazy' alt=''></p>
+						<a href="graphics/buttons/index.html" class="noline"><button>ViEW BUTTONS</button></a>
 					</div>
 					<div id="scatterblop" class="box" style="margin-left: 10px;">
-						<img style="transform: rotate(352deg);" src="graphics/buttons/tech/mobile/android/3button.PNG" loading="lazy">
-						<img style="transform: rotate(5deg);" src="graphics/buttons/gaming/nintendo/3ds/netpass.png" loading="lazy">
-						<img src="graphics/buttons/life/100000miles.PNG" loading="lazy">
+						<img style="transform: rotate(352deg);" id="but1" src="graphics/buttons/tech/mobile/android/3button.PNG" loading="lazy">
+						<img style="transform: rotate(5deg);" id="but2" src="graphics/buttons/gaming/nintendo/3ds/netpass.png" loading="lazy">
+						<img src="graphics/buttons/life/100000miles.png" id="but3" loading="lazy">
 					</div>
 				</div>
 				<div class="box">
@@ -152,6 +152,8 @@
 				</div>
 				<div class="box">
 					<h2 class="nomarblock">MUSiC</h2>
+				</div>
+				<div class="box">
 					<p>i don't actually make music, sorry! <img src="/media/emoji/sweat.gif"> but i do have a bandcamp that i released music i made in 5th grade to.</p>
 				</div>
 				<iframe style="border: 0; width: 100%; height: 42px; margin-bottom: 8px;" src="https://bandcamp.com/EmbeddedPlayer/album=1030405553/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://wiichicken.bandcamp.com/album/really-bad-music-i-made-on-a-music-making-app-in-2017">really bad music i made on a music making app in 2017 by wiichicken</a></iframe>
@@ -163,6 +165,22 @@
 				</div>
 			</main>
 		</div>
+		<script>
+			function dynamicButtons() {
+				var button1 = document.getElementById('but1');
+				var button2 = document.getElementById('but2');
+				var button3 = document.getElementById('but3');
+				var buttons1 = ['graphics/buttons/tech/mobile/android/3button.PNG', 'graphics/buttons/tech/mobile/android/gestures.PNG', 'graphics/buttons/tech/mobile/ios/lowpower.PNG'];
+				var buttons2 = ['graphics/buttons/tech/mobile/ios/jailbreak/sidestore.PNG', 'graphics/buttons/tech/mobile/ios/noise/transparency.PNG', 'graphics/buttons/tech/mobile/ios/noise/adaptive.PNG', 'graphics/buttons/tech/mobile/ios/noise/cancelling.PNG', 'graphics/buttons/tech/mobile/1111.PNG'];
+				var buttons3 = ['graphics/buttons/tech/mobile/ios/jailbreak/altstore.PNG', 'graphics/buttons/tech/mobile/ios/dnd.PNG', 'graphics/buttons/life/100000miles.PNG', 'graphics/buttons/gaming/nintendo/3ds/netpass.png'];
+				button1.src = buttons1[Math.floor(Math.random() * buttons1.length)];
+				button2.src = buttons2[Math.floor(Math.random() * buttons2.length)];
+				button3.src = buttons3[Math.floor(Math.random() * buttons3.length)];
+				button1.style.transform = 'rotate(35' + Math.floor(Math.random() * 8) + 'deg)';
+				button2.style.transform = 'rotate(' + (Math.floor(Math.random() * 5) + 3) + 'deg)';
+			}
+			dynamicButtons();
+		</script>
 		<script src="/resources/nav/navbar.js"></script>
 	</body>
 </html>
