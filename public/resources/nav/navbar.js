@@ -31,10 +31,10 @@ const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 mediaQuery.addEventListener('change', () => {
 	console.log(mediaQuery.media, mediaQuery.matches);
 });
-window.addEventListener('scroll', () => {
-	const chewTooth = document.getElementById('chewTooth');
-	if (!mediaQuery.matches && chewTooth) {
-		const scrollPosition = window.scrollY;
-		chewTooth.style.backgroundPositionY = `${scrollPosition * -0.2}px`;
-	}
-});
+// window.addEventListener('scroll', () => {
+// 	const chewTooth = document.getElementById('chewTooth');
+// 	if (!mediaQuery.matches && chewTooth) {
+// 		const scrollPosition = window.scrollY;
+// 		chewTooth.style.backgroundPositionY = `${scrollPosition * -0.2}px`;
+// 	}
+// });

@@ -70,6 +70,17 @@ button {
 	mix-blend-mode: luminosity;
 	image-rendering: pixelated;
 }
+@supports (animation-timeline: view()) {
+	@keyframes scrolly {
+		from {background-position-y: 0%;}
+		to {background-position-y: -20%;}
+	}
+	#chewTooth {
+		animation: scrolly linear;
+		animation-timeline: scroll();
+		animation-range: 0% 100%;
+	}
+}
 ::selection {
 	background-color: var(--dark-tertiary);
 	color: var(--dark-on-tertiary);
