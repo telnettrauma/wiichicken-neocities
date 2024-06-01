@@ -1,0 +1,30 @@
+body {
+	font-family: 'PT Sans', sans-serif;
+	color: #f9e466;
+}
+h1, button {font-family: 'Martian Mono', monospace;}
+button {
+	margin: 2px;
+	margin-top: 3px;
+	background-color: #123725;
+	color: #a8d0b6;
+	border: 1px solid #a8d0b6;
+	box-shadow: 2px 2px 0 0;
+	cursor: pointer;
+}
+button:hover {
+	box-shadow: 1px 1px 0 0;
+	transform: translate(1px, 1px);
+}
+button:active {
+	box-shadow: none;
+	transform: translate(2px, 2px);
+}
+input {
+	background-color: #353117;
+	color: #cfc7a2;
+	border: 1px solid #cfc7a2;
+	box-shadow: 2px 2px 0 0;
+	border-radius: 0px;
+	margin-bottom: 5px;
+}
