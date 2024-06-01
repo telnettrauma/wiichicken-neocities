@@ -19,29 +19,23 @@
 		const canvas = document.getElementById('awesome');
 		const ctx = canvas.getContext('2d');
 		const numberInput = document.getElementById('numberInput');
-
 		function drawNumberAndText(number) {
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			ctx.fillStyle = '#323437';
 			ctx.fillRect(0, 0, canvas.width, canvas.height);
-
 			ctx.font = '35px monospace';
 			ctx.fillStyle = '#e2b714';
 			ctx.fillText(number.padStart(3, '0'), 0, 29);
-
 			ctx.font = '10px monospace';
 			ctx.fillStyle = '#646669';
 			ctx.fillText("best", 60, 21);
 			ctx.fillText("wpm", 60, 28);
 		}
-
 		numberInput.addEventListener('input', () => {
 			let num = numberInput.value;
 			drawNumberAndText(num);
 		});
-
-		drawNumberAndText('000'); // initial draw
-
+		drawNumberAndText('000');
 		function downloadCanvas() {
 			const link = document.createElement('a');
 			link.download = 'canvas-image.png';
