@@ -73,7 +73,7 @@ button {
 @supports (animation-timeline: view()) {
 	@keyframes scrolly {
 		from {background-position-y: 0%;}
-		to {background-position-y: -20%;}
+		to {background-position-y: -25%;}
 	}
 	#chewTooth {
 		animation: scrolly linear;
