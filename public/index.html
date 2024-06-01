@@ -26,7 +26,7 @@
 		--bg-2: blue;
 	}
 	body {
-		background-color: black;
+		background: linear-gradient(0deg, rgba(141,0,255,1) 0%, rgba(141,0,255,1) 17%, rgba(0,39,255,1) 17%, rgba(0,39,255,1) 34%, rgba(0,255,72,1) 34%, rgba(0,255,72,1) 51%, rgba(245,255,0,1) 51%, rgba(245,255,0,1) 68%, rgba(255,115,0,1) 68%, rgba(255,115,0,1) 85%, rgba(255,24,0,1) 85%, rgba(255,24,0,1) 100%);
 		color: white;
 	}
 	h1, h2, h3, h4 {margin: 0;}
@@ -95,6 +95,11 @@
 		100% {background-size: 100% 1px; background-position: 0% 100%;}
 	}
 	.noBg::after {display: none;}
+	.compat-error {
+		background-color: #2a1800;
+		color: #ffddb6;
+		border-color: #ffb956;
+	}
 	.gradientText {
 		background-clip: text !important;
 		color: transparent;
@@ -393,7 +398,8 @@
 	.head {
 		padding: 0;
 		/* background: linear-gradient(45deg, rgb(70, 0, 0) 0%, rgb(0, 14, 70)100%); */
-		background-image: url(media/home/ditty.png);
+		/* background-image: url(media/home/ditty.png); */
+		background-image: url(media/home/pride.png);
 		image-rendering: pixelated;
 		box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50);
 		animation: glowy 10s infinite;
@@ -668,6 +674,9 @@
 		}
 		.blurry {display: none;}
 	}
+	@supports (animation-timeline: view()) {
+		#parallax-thing {display: none;}
+	}
 </style>
 <div class="heading headerInvisible" id="poopBlock"></div>
 <div id="sideButton" onclick="openSidey()"></div>
@@ -813,17 +822,21 @@
 					</div>
 				</div>
 			</nav>
-			<div class="mobileVisible section blox" style="background-color: #2a1800; color: #ffddb6; padding: 5px; border-color: #ffb956;">
+			<div class="mobileVisible section blox compat-error">
 				<h2 class="nomarblock">MOBiLE MODE</h2>
 				<p class="nomarblock">Because you are on a small screen, a few adjustments have been made for mobile. This site is still desktop designed, but your experience on a mobile device should hopefully still be less malarky.</p>
 			</div>
-			<div class="reducedVisible section blox" style="background-color: #2a1800; color: #ffddb6; padding: 5px; border-color: #ffb956;">
+			<div class="reducedVisible section blox compat-error">
 				<h2 class="nomarblock">REDUCED MOTiON</h2>
 				<p class="nomarblock">Reduced motion, an experimental site feature, has been enabled, because reduced motion is enabled in your device settings. Some widgets may be hidden. I don't think this changes anything outside of the homepage.</p>
 			</div>
-			<div class="section blox" style="background-color: #2a1800; color: #ffddb6; padding: 5px; border-color: #ffb956; display: none;" id="noscript-error">
+			<div class="section blox compat-error" style="display: none;" id="noscript-error">
 				<h2 class="nomarblock">NOSCRiPT</h2>
 				<p class="nomarblock">uh oh! it looks like you don't have javascript support! no worries, i have made some small changes to make your browsing experience slightly better. i love you too.<br>note that some things still may not work.</p>
+			</div>
+			<div class="section blox compat-error" id="parallax-thing">
+				<h2 class="nomarblock">CSS ERROR</h2>
+				<p class="nomarblock">it appears that your browser does not support all of the css used. this should only affect appearance, not functionality.</p>
 			</div>
 			<div class="row" id="infamous" style="display: grid; gap: 10px;">
 				<div class="blox noscript-hidden" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
