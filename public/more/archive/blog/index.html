@@ -38,7 +38,7 @@
 				margin: auto;
 			}
 			.box, header, .grid .box ul li, .grid .box h2, .grid .box h3 {
-				--bg: #6a2e73cc;
+				--bg: #310938cc;
 				--text: #ffd6fe;
 				--border: #f7adfd;
 				background-color: var(--bg);
@@ -47,6 +47,8 @@
 				padding: 5px;
 				margin-bottom: 10px;
 				width: -webkit-fill-available;
+				backdrop-filter: blur(5px);
+				-webkit-backdrop-filter: blur(5px);
 			}
 			/* styling for grid mode */
 			.grid .box {
@@ -124,12 +126,7 @@
 			}
 			#toggle-switch button {margin: 5px;}
 			#toggle-switch .active {background-color: #350040;}
-			header {
-				background-color: #ffd6fecc;
-				color: #6a2e73;
-				backdrop-filter: blur(5px);
-				-webkit-backdrop-filter: blur(5px);
-			}
+			header {box-shadow: 0 0 150px 20px #f7adfd;}
 			button {
 				background-color: #6a2e73;
 				color: #ffd6fe;

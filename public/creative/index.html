@@ -22,8 +22,7 @@
 				color: #d9e2ff;
 				font-family: 'PT Sans', sans-serif;
 			}
-			h1 {font-family: 'Martian Mono', monospace;}
-			h2 {font-family: 'Martian Mono', monospace;}
+			h1, h2 {font-family: 'Martian Mono', monospace;}
 			#gallery {
 				animation: rainbow 10s infinite;
 				width: 100%;
@@ -45,34 +44,72 @@
 				margin: auto;
 				max-width: 600px;
 			}
-			.box {
+			button {
+				background-color: #293042;
+				color: #c0c6dc;
+				border: 1px solid #c0c6dc;
+				font-family: 'Martian Mono', monospace;
+				font-weight: bold;
+				margin: 2px;
+				box-shadow: 2px 2px 0 #c0c6dc;
+			}
+			button:hover {
+				box-shadow: 1px 1px 0 #c0c6dc;
+				transform: translate(1px, 1px);
+			}
+			button:active {
+				box-shadow: none;
+				transform: translate(2px, 2px);
+			}
+			.box, h1, h2, h3 {
 				padding: 5px;
 				margin-bottom: 10px;
 				border: 1px solid #0064ef;
 				backdrop-filter: blur(5px);
 				-webkit-backdrop-filter: blur(5px);
-				background-color: #00429f8e;
+				background-color: #0018478e;
 			}
 			.row {
 				display: flex;
 				margin-bottom: 10px;
 			}
-			.nomarblock {
+			.nomarblock, h1, h2, h3 {
 				margin-block-start: 0;
 				margin-block-end: 0;
 			}
+			h2, h3 {margin-bottom: 5px;}
 			.square {
 				width: 60px;
 				height: 60px;
-				margin-bottom: 0;
+				padding: 0;
+				margin: 0 0 5px 5px;
 			}
-			.square img {
-				width: 58px;
-			}
+			.square img {width: 58px;}
 			.square a {
 				display: flex;
 				box-shadow: none;
 				background-color: unset;
+			}
+			.head {
+				box-shadow: 0 0 150px 20px #0064ef;
+				margin-bottom: 10px;
+			}
+			#scatterblop {
+				min-width: 200px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			#scatterblop img {
+				position: absolute;
+				width: 176px;
+				box-shadow: 0 0 10px 0 #0000009e;
+			}
+			@media only screen and (max-width: 900px) {
+				button {
+					width: 100%;
+					font-size: 20px;
+				}
 			}
 		</style>
 		<div id="heightCheck"></div>
@@ -83,48 +120,73 @@
 		<div id="overSide"></div>
 		<div id="chewTooth"></div>
 		<div id="main">
-			<div class="box">
-				<h1>MY WORKS</h1>
-			</div>
+			<h1 class="head">MY WORKS OF ART</h1>
 			<main>
-				<div class="box">
-					<h2 class="nomarblock">ART</h2>
-				</div>
+				<h2>ART</h2>
 				<div class="row" style="display: flex;">
-					<div class="box" style="padding: 0; width: 100%; height: 134px; margin-bottom: 0;">
-						<a id="gallery" style="background: none; display: flex; justify-content: center; align-items: center; flex-direction: column;" href="gallery/index.html"><span style="font-size: 30px;"><strong>GALLERY</strong></span><br>look at the drawings i have made</a>
+					<div class="box" style="padding: 0; width: 100%; height: 125px; margin-bottom: 0;">
+						<a id="gallery" style="background: none; display: flex; justify-content: center; align-items: center; flex-direction: column;" href="gallery/index.html"><span style="font-size: 30px;"><strong style="font-family: 'Martian Mono', monospace;">GALLERY</strong></span><br>look at the drawings i have made</a>
 					</div>
-					<div style="display: flex; flex-wrap: wrap; max-width: 144px;">
-						<div class="box square" style="padding: 0; margin: 0 0 10px 10px; border-color: #8a938b;">
+					<div id="link-grid" style="display: flex; flex-wrap: wrap; max-width: 130px;">
+						<div class="box square" style="border-color: #8a938b;">
 							<a href="https://www.deviantart.com/wechicken" target="_blank" title="DeviantArt"><img src="res/da.png"></a>
 						</div>
-						<div class="box square" style="padding: 0;height: 60px; margin: 0 0 10px 10px; border-color: #757780;">
+						<div class="box square" style="border-color: #757780;">
 							<a href="https://wiichicken.tumblr.com" target="_blank" title="Art tumblr"><img src="res/tumblr.png"></a>
 						</div>
-						<div class="box square" style="padding: 0;height: 60px; margin-left: 10px; margin: 0 0 0 10px; border-color: #717971;">
+						<div class="box square" style="border-color: #717971;">
 							<a href="https://toyhou.se/wiichicken" target="_blank" title="Toyhouse (Major work in progress!)"><img src="res/th.png"></a>
 						</div>
-						<div class="box square" style="padding: 0;height: 60px; margin-left: 10px; margin: 0 0 0 10px; border-color: #827568;">
+						<div class="box square" style="border-color: #827568;">
 							<a href="https://wiichicken.newgrounds.com" target="_blank" title="Newgrounds"><img src="res/ng.png"></a>
 						</div>
 					</div>
 				</div>
-				<div class="box">
-					<p>i also made some buttons. <a href="graphics/buttons/index.html">check em out!</a><br>there is also a <a href="photos.html">photo gallery</a>. you can tell im not proud of it because im putting the link as text</p>
+				<div class="row" style="margin-bottom: 0;">
+					<div>
+						<h3>BUTTONS</h3>
+						<div class="box" style="margin-bottom: 5px;">
+							<p><code>88</code>x<code>31</code> buttons i made that you can put on your website, because i love you <img src='/media/emoji/grin.gif' loading='lazy' alt=''></p>
+						</div>
+					</div>
+					<div id="scatterblop" class="box" style="margin-left: 5px; margin-bottom: 5px;">
+						<img style="transform: rotate(352deg);" id="but1" src="graphics/buttons/tech/mobile/android/3button.PNG" loading="lazy">
+						<img style="transform: rotate(5deg);" id="but2" src="graphics/buttons/gaming/nintendo/3ds/netpass.png" loading="lazy">
+						<img src="graphics/buttons/life/100000miles.png" id="but3" loading="lazy">
+					</div>
 				</div>
+				<a href="graphics/buttons/index.html" class="noline"><button style="width: 100%; font-size: 30px; margin: 0 2px 10px 0;">ViEW BUTTONS</button></a>
+				<h2>PHOTOGRAPHY</h2>
 				<div class="box">
-					<h2 class="nomarblock">MUSiC</h2>
+					<p>there is also a <a href="photos.html">photo gallery</a>. you can tell im not proud of it because im putting the link as text</p>
+				</div>
+				<h2>MUSiC</h2>
+				<div class="box" style="margin-bottom: 5px;">
 					<p>i don't actually make music, sorry! <img src="/media/emoji/sweat.gif"> but i do have a bandcamp that i released music i made in 5th grade to.</p>
 				</div>
 				<iframe style="border: 0; width: 100%; height: 42px; margin-bottom: 8px;" src="https://bandcamp.com/EmbeddedPlayer/album=1030405553/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://wiichicken.bandcamp.com/album/really-bad-music-i-made-on-a-music-making-app-in-2017">really bad music i made on a music making app in 2017 by wiichicken</a></iframe>
-				<div class="box">
-					<h2 class="nomarblock">MORE</h2>
-				</div>
+				<h2>MORE</h2>
 				<div class="box">
 					<p>nothing else... <a href="nostart.html" target="_blank" style="background-color: unset; color: #d9e2ff;">yet</a></p>
 				</div>
 			</main>
 		</div>
+		<script>
+			function dynamicButtons() {
+				var button1 = document.getElementById('but1');
+				var button2 = document.getElementById('but2');
+				var button3 = document.getElementById('but3');
+				var buttons1 = ['graphics/buttons/tech/mobile/android/3button.PNG', 'graphics/buttons/tech/mobile/android/gestures.PNG', 'graphics/buttons/tech/mobile/ios/lowpower.PNG'];
+				var buttons2 = ['graphics/buttons/tech/mobile/ios/jailbreak/sidestore.PNG', 'graphics/buttons/tech/mobile/ios/noise/transparency.PNG', 'graphics/buttons/tech/mobile/ios/noise/adaptive.PNG', 'graphics/buttons/tech/mobile/ios/noise/cancelling.PNG', 'graphics/buttons/tech/mobile/1111.PNG', 'graphics/buttons/gaming/playstation/ps5/nogames.gif'];
+				var buttons3 = ['graphics/buttons/tech/mobile/ios/jailbreak/altstore.PNG', 'graphics/buttons/tech/mobile/ios/dnd.PNG', 'graphics/buttons/life/100000miles.PNG', 'graphics/buttons/gaming/nintendo/3ds/netpass.png'];
+				button1.src = buttons1[Math.floor(Math.random() * buttons1.length)];
+				button2.src = buttons2[Math.floor(Math.random() * buttons2.length)];
+				button3.src = buttons3[Math.floor(Math.random() * buttons3.length)];
+				button1.style.transform = 'rotate(35' + Math.floor(Math.random() * 8) + 'deg)';
+				button2.style.transform = 'rotate(' + (Math.floor(Math.random() * 5) + 3) + 'deg)';
+			}
+			dynamicButtons();
+		</script>
 		<script src="/resources/nav/navbar.js"></script>
 	</body>
 </html>

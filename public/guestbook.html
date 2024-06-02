@@ -35,7 +35,7 @@
 		width: 600px;
 		margin: auto;
 	}
-	.box, #HCB_comment_form_box, .comment {
+	.box, #HCB_comment_form_box, .comment, header {
 		background-color: #001f2a88;
 		color: #bfe9ff;
 		padding: 5px;
@@ -44,6 +44,7 @@
 		backdrop-filter: blur(5px);
 		-webkit-backdrop-filter: blur(5px);
 	}
+	header {box-shadow: 0 0 150px 20px #bfe9ff;}
 	#hcb_form_name_container input, .commentbox {
 		background-color: #94ccff;
 		color: #003352;
@@ -55,9 +56,7 @@
 		border: 1px solid #cde5ff !important;
 		cursor: pointer;
 	}
-	.btn {
-		box-shadow: 2px 2px 0 0 #cde5ff !important;
-	}
+	.btn {box-shadow: 2px 2px 0 0 #cde5ff !important;}
 	.btn:hover {
 		box-shadow: 1px 1px 0 0 #cde5ff !important;
 		transform: translate(1px, 1px) !important;
@@ -79,9 +78,9 @@
 <div id="overSide"></div>
 <div id="chewTooth"></div>
 <main>
-	<div class="box">
+	<header class="box">
 		<h1>GUESTBOOK</h1>
-	</div>
+	</header>
 	<div class="box">
 		<p>these are the fields</p>
 		<ul>
@@ -91,8 +90,8 @@
 		</ul>
 	</div>
 	<!-- begin wwww.htmlcommentbox.com -->
- <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
- <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24yGx%2F%2FtvDLdZd36wJD%2FW8V1"+"&opts=17414&num=10&ts=1705250630299");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+	<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
+	<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24yGx%2F%2FtvDLdZd36wJD%2FW8V1"+"&opts=17414&num=10&ts=1705250630299");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
 	<!-- end www.htmlcommentbox.com -->
 	<div class="box">
 		<p><a href="media/home/thanks.html" target="_blank" style="background-color: unset;">thank you</a> for your time <img src="media/emoji/hug.gif"></p>

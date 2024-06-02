@@ -32,6 +32,10 @@
 				max-width: 800px;
 				margin: auto;
 			}
+			iframe {
+				border: none;
+				height: 400px;
+			}
 			h1, h2, h3, h4, h5 {
 				font-family: 'Martian Mono', monospace;
 				margin-block-start: 0;
@@ -96,6 +100,17 @@
 				padding: 5px;
 				box-shadow: 0 0 200px 5px yellow;
 				max-width: 600px;
+				animation: goCrazy 0.5s;
+			}
+			@keyframes goCrazy {
+				0% {
+					box-shadow: 0 0 0 0 yellow;
+					opacity: 0;
+				}
+				100% {
+					box-shadow: 0 0 200px 5px yellow;
+					opacity: 1;
+				}
 			}
 			.downloading {background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 255, 179, 0.8) 100%);}
 			.downloading #inHead .topLinks:first-child a:first-child, .downloading #inHead .topLinks:nth-child(3) a:nth-child(3) {animation: pulse 2s linear infinite;}
@@ -139,6 +154,13 @@
 				<p>Look at these awesome buttons that I made. You can use these in your site as long as you <strong>don't hotlink them</strong>. Credit isn't required, but is appreciated.<br>You can click on a button for more information, a bigger view, and to download it.</p>
 			</div>
 			<div class="box">
+				<h2>customizable</h2>
+				<p>buttons that YOU can customize.</p>
+				<div class="butt">
+					<a onclick="customizeButton('customizable/wpm.html');"><img src="customizable/thumb/wpm.png" loading="lazy" title="best wpm"></a>
+				</div>
+			</div>
+			<div class="box">
 				<h2>linkToMe</h2>
 				<div class="box">
 					<h3><span class="less">linkToMe/</span>current</h3>
@@ -156,7 +178,8 @@
 				<div class="box">
 					<h3><span class="less">linkToMe/</span>older</h3>
 					<div class="butt">
-						<a onclick="popUp('babies first button', 'the first button that i made for this site. they grow up so fast', 'mine/first.gif', 'wiichicken.gif')"><img src="mine/first.gif" loading="lazy"></a>
+						<a onclick="popUp('babies first button', 'the first button that i made for this site. they grow up so fast', 'mine/first/first.gif', 'wiichicken.gif')"><img src="mine/first/first.gif" loading="lazy"></a>
+						<a onclick="popUp('babies first button (static)', 'yeah. if you wanna.', 'mine/first/firststatic.gif', 'minionfreezegun.png')"><img src="mine/first/firststatic.png" loading="lazy"></a>
 					</div>
 				</div>
 			</div>
@@ -165,10 +188,19 @@
 				<div class="box">
 					<h3><span class="less">gaming/</span>nintendo</h3>
 					<div class="box">
-						<h3><span class="less">gaming/nintendo/</span>3ds</h>
+						<h4><span class="less">gaming/nintendo/</span>3ds</h4>
 							<div class="butt">
 								<a onclick="popUp('netpass', 'remove the sonder from your 3ds!', 'gaming/nintendo/3ds/netpass.png', 'gummyinmytummy.png')"><img src="gaming/nintendo/3ds/netpass.png" loading="lazy"></a>
 							</div>
+					</div>
+				</div>
+				<div class="box">
+					<h3><span class="less">gaming/</span>playstation</h3>
+					<div class="box">
+						<h4><span class="less">gaming/playstation/</span>ps5</h4>
+						<div class="butt">
+							<a onclick="popUp('more games than ps5', 'not as hard of an accomplishment as you think it is', 'gaming/playstation/ps5/nogames.gif', 'hilariousjoke.gif')"><img src="gaming/playstation/ps5/nogames.gif" loading="lazy"></a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -231,6 +263,12 @@
 				</div>
 			</div>
 		</div>
+		<div class="modal" id="custom-button">
+			<div class="modalbox">
+				<iframe id="customize"></iframe><br>
+				<button onclick="document.getElementById('custom-button').style.display = 'none';">CLOSE</button>
+			</div>
+		</div>
 		<div class="box" id="secret" style="display: none;">
 			<h2>Super Secret Settings</h2>
 			<p>fuck</p>
@@ -269,6 +307,10 @@
 				document.getElementById('buttDesc').innerHTML = desc;
 				var downButt = document.getElementById('downloadButt');
 				helloNabbit.style.display = 'flex';
+			}
+			function customizeButton(thePage) {
+				document.getElementById('customize').src = thePage;
+				document.getElementById('custom-button').style.display = 'flex';
 			}
 			window.onclick = function(event) {
 				if (event.target === helloNabbit) {
