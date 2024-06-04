@@ -57,7 +57,7 @@
 				max-width: 1000px;
 				height: 80vh;
 			}
-			nav, #happy, .block, #poopBlock a {
+			nav, #mainframe, .block, #poopBlock a {
 				background-color: #f4eddf;
 				border-radius: 20px;
 				border: 1px solid #7c7767;
@@ -73,7 +73,7 @@
 			}
 			.block, nav {padding: 10px}
 			nav {width: 40%;}
-			#happy {width: 60%;}
+			#mainframe {width: 60%;}
 			li {
 				background-color: #efe2bc;
 				color: #211b04;
@@ -119,13 +119,15 @@
 						<li><a href="listy/credits.html" target="listarea">List Page Credits</a></li>
 					</ul>
 				</nav>
-				<iframe src="listy/example.html" name="listarea" id="happy"></iframe>
+				<iframe src="listy/example.html" name="listarea" id="mainframe"></iframe>
 			</div>
 		</main>
 		<script src="listy/listcolor.js"></script>
+		<script src="/resources/scripts/frame-link.js"></script>
 		<script>
+			updateTitle = false;
+			basePath = '/more/archive/blog/concepts/lists/listy/';
 			createGradient('#efe2bc', '#c5eccd', '#211b04', '#00210f', '#211b04', '#00210f', 'navlist');
 		</script>
-		<script src="/resources/scripts/frame-link.js"></script>
 	</body>
 </html>
