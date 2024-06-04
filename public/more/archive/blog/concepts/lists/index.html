@@ -78,7 +78,10 @@
 				background-color: #efe2bc;
 				color: #211b04;
 			}
-			li a {text-decoration: none;}
+			li a {
+				text-decoration: none;
+				font-weight: bold;
+			}
 			@media only screen and (max-width: 800px) {
 				body {margin: 10px;}
 				#poopBlock {overflow-y: scroll;}
@@ -106,7 +109,8 @@
 			<div id="main-event">
 				<nav>
 					<ul id="navlist">
-						<li>choose a list from this sidebar!</li>
+						<li><h2>LiST OF LiSTS</h2>choose a list from this list of lists!</li>
+						<li><a href="listy/advice.html" target="listarea">advice for the future generation</a></li>
 						<li><a href="listy/music/tolisten.html" target="listarea">album backlog</a></li>
 						<li><a href="listy/music/fsfaailtatwt.html" target="listarea">fsfaailtatwt</a></li>
 						<li><a href="listy/example.html" target="listarea">Example</a></li>
@@ -122,5 +126,6 @@
 		<script>
 			createGradient('#efe2bc', '#c5eccd', '#211b04', '#00210f', '#211b04', '#00210f', 'navlist');
 		</script>
+		<script src="/resources/scripts/frame-link.js"></script>
 	</body>
 </html>
