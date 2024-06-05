@@ -2,7 +2,6 @@ var messageList = [ 'lorem ipsum i want to buy a car',
 'You will never be mod',
 'Nothing beats a <code>gentle poop</code>',
 'Updated <code>index.html</code>',
-'this site isnt even 2MB',
 'coded on a best buy kiosk macbook',
 'pocket lint ahh hair',
 'This is a text',
@@ -99,7 +98,9 @@ var messageList = [ 'lorem ipsum i want to buy a car',
 'Smile! You\'re on <i>Old Navy</i> TV!',
 'my name is Google Toolbar.',
 'new low score',
-'DUDE, DATS A BUTTERFLY'
+'DUDE, DATS A BUTTERFLY',
+'big fan of Globus Sensation',
+'they call me the sandwich'
 ]
 function setRandomMessage() {document.getElementById('messageTxt').innerHTML = messageList[Math.floor(Math.random() * messageList.length)];}
 setRandomMessage();
