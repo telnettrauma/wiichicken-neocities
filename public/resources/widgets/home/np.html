@@ -80,17 +80,17 @@
 	}
 </style>
 <script>
-	function enterTitle() {
-		document.getElementById('coverart').classList.add('track-hover');
-		document.getElementById('artwork').style.width = '4px';
-		document.getElementById('hiPoopFart').style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-	}
-	function exitTitle() {
-		document.getElementById('coverart').classList.remove('track-hover');
-		document.getElementById('artwork').style.width = '40px';
-		document.getElementById('hiPoopFart').style.backgroundColor = 'rgba(49, 49, 49, 0.4)';
-	}
-	// Code from https://sep.neocities.org/?z=/code/widgets.html
+function enterTitle() {
+	document.getElementById('coverart').classList.add('track-hover');
+	document.getElementById('artwork').style.width = '4px';
+	document.getElementById('hiPoopFart').style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+}
+function exitTitle() {
+	document.getElementById('coverart').classList.remove('track-hover');
+	document.getElementById('artwork').style.width = '40px';
+	document.getElementById('hiPoopFart').style.backgroundColor = 'rgba(49, 49, 49, 0.4)';
+}
+// Code from https://sep.neocities.org/?z=/code/widgets.html
 document.addEventListener('DOMContentLoaded', function() {
 	var user = document.getElementById("listen").getAttribute("user");
 	var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" + user + "&api_key=afc213709a996ae561e307f596c9952b&limit=5&format=json";
@@ -117,21 +117,27 @@ document.addEventListener('DOMContentLoaded', function() {
 			var artwork3 = data.recenttracks.track[3].image[1]["#text"];
 			var artwork4 = data.recenttracks.track[4].image[1]["#text"];
 
+			// blocks any death grips cover arts from appearing
+			function checkGrips(fartist, elemental, coverart) {
+				if (fartist.includes('Death Grips')) {document.getElementById(elemental).src = 'med/blocked.png';}
+				else {document.getElementById(elemental).src = coverart;}
+			}
+			checkGrips(artist, 'artwork', artwork);
 			var artworkImg = document.getElementById("artwork");
 			artworkImg.setAttribute("src", artwork);
 			var fakeBlur = document.getElementById('moneyOnMind');
 			fakeBlur.style.backgroundImage = `url(${artwork})`;
+			checkGrips(artist1, 'artwork1', artwork1);
+			checkGrips(artist2, 'artwork2', artwork2);
+			checkGrips(artist3, 'artwork3', artwork3);
+			checkGrips(artist4, 'artwork4', artwork4);
 			var art1 = document.getElementById('artwork1');
 			var art2 = document.getElementById('artwork2');
 			var art3 = document.getElementById('artwork3');
 			var art4 = document.getElementById('artwork4');
-			art1.setAttribute('src', artwork1);
 			art1.setAttribute('title', `${song1} - ${artist1}`);
-			art2.setAttribute('src', artwork2);
 			art2.setAttribute('title', `${song2} - ${artist2}`);
-			art3.setAttribute('src', artwork3);
 			art3.setAttribute('title', `${song3} - ${artist3}`);
-			art4.setAttribute('src', artwork4);
 			art4.setAttribute('title', `${song4} - ${artist4}`);
 
 			var trackInfo = document.getElementById("track");
