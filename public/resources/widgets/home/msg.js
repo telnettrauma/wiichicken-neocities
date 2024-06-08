@@ -100,7 +100,8 @@ var messageList = [ 'lorem ipsum i want to buy a car',
 'new low score',
 'DUDE, DATS A BUTTERFLY',
 'big fan of Globus Sensation',
-'they call me the sandwich'
+'they call me the sandwich',
+'the happy kitty will remain cheerful indefinitely'
 ]
 function setRandomMessage() {document.getElementById('messageTxt').innerHTML = messageList[Math.floor(Math.random() * messageList.length)];}
 setRandomMessage();
