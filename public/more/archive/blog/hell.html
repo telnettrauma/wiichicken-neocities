@@ -1,80 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>FiLE HELL!!!!!!</title>
+		<title>abandomed city</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/x-icon" href="/favicon.ico">
 		<meta charset="UTF-8">
-		<noscript>
-			<style>
-				#no-script {display: block !important;}
-			</style>
-		</noscript>
 	</head>
 	<body>
 		<style>
-			.sticky {
-				width: 150px;
-				height: 150px;
-				position: absolute;
-				text-decoration: none;
-				color: black;
-				text-align: center;
-				padding: 10px;
-				font-family: Arial, Helvetica, sans-serif;
-				box-shadow: 0 0 15px 1px black;
+			main {
+				max-width: 600px;
+				margin: auto;
 			}
+			nav {
+				display: flex;
+				justify-content: space-between;
+			}
+			td {border: 1px solid black;}
 		</style>
-		<h1>WELCOME TO FILE HELL!!!</h1>
-		<p>if i was wriitng something and i decided it was no good and lost all motivation to finish writing it, it will probably go here. this page is still buggy but eh, its hell</p>
-		<p id="no-script" style="display: none;">sorry, i think this requires javascript, for now. oops!</p>
-		<script>
-			var pageTitles = ["why don't artists have sites?", "VEGAS SUCKS!"];
-			var pageLinks = ["2024/2/artists.html", "2023/december/vegas.html"];
-			// can you tell i didnt write this function
-			function getRandomRgb() {
-				const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
-				const r = randomBetween(100, 255);
-				const g = randomBetween(100, 255);
-				const b = randomBetween(100, 255);
-				return `rgb(${r},${g},${b})`;
-			}
-			// or this one
-			function startDrag(e) {
-				e.preventDefault();
-				const element = e.target;
-				const initialX = e.clientX - element.getBoundingClientRect().left;
-				const initialY = e.clientY - element.getBoundingClientRect().top;
-				function handleMouseMove(e) {
-					const newX = e.clientX - initialX;
-					const newY = e.clientY - initialY;
-					element.style.transform = `translate(${newX}px, ${newY}px)`;
-				}
-				function handleMouseUp() {
-					document.removeEventListener('mousemove', handleMouseMove);
-					document.removeEventListener('mouseup', handleMouseUp);
-				}
-				function handleClick() {
-					window.location.href = element.getAttribute('href');
-				}
-				document.addEventListener('mousemove', handleMouseMove);
-				document.addEventListener('mouseup', handleMouseUp);
-				element.addEventListener('click', handleClick);
-			}
-			function stickySitch() {
-				for (var y=0; y<pageTitles.length; y++) {
-					var newElement = document.createElement("a");
-					newElement.classList.add('sticky');
-					var allowedHeight = document.documentElement.scrollHeight - 250;
-					newElement.style.transform = `translate(${Math.floor(Math.random() * document.documentElement.scrollWidth) - 50}px, ${Math.floor(Math.random() * allowedHeight)}px)`;
-					newElement.addEventListener('mousedown', startDrag);
-					newElement.setAttribute('href', pageLinks[y]);
-					newElement.innerHTML = pageTitles[y];
-					newElement.style.backgroundColor = getRandomRgb();
-					document.body.appendChild(newElement);
-				}
-			}
-			stickySitch();
-		</script>
+		<main>
+			<nav>
+				<a href="/aboutme.html">ABOUT ME</a>
+				<a href="/creative/">ART</a>
+				<a href="/more/archive/blog/">BLOG</a>
+				<a href="/">🟥🟦</a>
+				<a href="/interests/">iNTERESTS</a>
+				<a href="/more/">MORE</a>
+				<a href="/guestbook.html">GUESTBOOK</a>
+			</nav>
+			<table>
+				<tr>
+					<td><h1>ABANDOMED CiTY</h1></td>
+				</tr>
+				<tr>
+					<td><p>this is where everything on my site that i have abandoned goes to rest in shame. just because a page is here doesn't mean that i am forever done with it, as i may come back, but its basically dead.</p></td>
+				</tr>
+				<tr>
+					<td>
+						<h2>PROJECTS</h2>
+						<ul>
+							<li><a href="/creative/characters/" target="_blank">characters</a> - i wish i had ideas dawg. but ive basically been using the same character for 3 years with no other characters. and i haven't even came up with a name for him</li>
+							<li><a href="/creative/comic/comic/act1/1.html" target="_blank">comic</a> - comic that i felt was going nowhere. to be honest it could of been good if it wasn't for this boo-hoo self aware intro, but i never got past that part</li>
+							<li><a href="/more/tools/todo/" target="_blank">todo</a> - this was supposed to be a proof of concept of a todo list for seniors. became overwhelmed and binned it</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h2>ARTiCLES</h2>
+						<ul>
+							<li><a href="2024/2/artists.html" target="_blank">why don't artists have sites?</a></li>
+							<li><a href="2023/december/vegas.html" target="_blank">VEGAS SUCKS!</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</main>
 	</body>
 </html>
