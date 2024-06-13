@@ -12,16 +12,20 @@
 			margin: auto;
 			font-family: Arial, Helvetica, sans-serif;
 		}
-		header, .textblock {
+		header, .textblock, img {
 			background-color: rgba(32, 32, 32, 0.75);
 			backdrop-filter: blur(5px);
 			-webkit-backdrop-filter: blur(5px);
 			color: white;
-			padding: 20px;
 			border-radius: 10px;
 			margin-bottom: 20px;
 		}
+		header, .textblock {padding: 20px;}
 		p {font-size: 18px;}
+		img {
+			max-height: 600px;
+			max-width: 100%;
+		}
 	</style>
 </head>
 <body>
@@ -32,6 +36,18 @@
 		</header>
 		<div class="textblock">
 			<p>apple announced ios 18, along with some ai features. i downloaded the beta and jumped in completely blind, not looking at the keynote or twitter, and these are my thoughts:<br>this update is kinda stupid. it has a lot of good ideas, but it does a really bad job at actually implementing them</p>
+		</div>
+		<div class="textblock">
+			<h2>control center</h2>
+			<p>so they decided to "redesign" control center. all they did was make it uglier, and customizable. the customization is kinda cool, but confusing. a lot of the buttons can be resized, but resizing them only makes them bigger. there is no added functionality, even in places where there should be. you can now also have multiple pages, which is cool i think, but at the same time, you could just scroll. plus, scrolling is vertical, which is kinda hard when a lot of the controls are also vertical.<br>my biggest gripe is that control center now uses a mix of circles and rectangles, as well as a lot of colors, resulting in a messy look.</p>
+		</div>
+		<img src="https://i.imgur.com/bppHAoY.png" loading="lazy">
+		<div class="textblock">
+			<p>the "+" button at the top of the page is especially confusing to me. tapping it doesn't even add a new object, it just begins customization. and why is the button always there? there is nothing like this in the rest of the ui.</p>
+		</div>
+		<div class="textblock">
+			<h2>customization</h2>
+			<p>apple saw dynamic color with material you, and decided to emulate it on the home screen. now you can change the color of all the app icons. apps still have to manually support it, but the operating system can automatically detect app icons if they are on a flat colored background</p>
 		</div>
 	</main>
 </body>
