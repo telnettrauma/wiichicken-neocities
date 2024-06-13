@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.node {
+			fill: white;
+			stroke: black;
+			stroke-width: 1px;
+		}
+		.link {
+			stroke: black;
+			stroke-width: 1px;
+		}
+		text { fill: black; font-family: Arial, sans-serif; font-size: 12px; }
+	</style>
+</head>
+<body>
+	<svg width="960" height="600">
+		<defs>
+      <filter id="drop-shadow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="0" result="blur" />
+        <feOffset in="blur" dx="2" dy="2" result="offsetBlur" />
+        <feMerge>
+          <feMergeNode in="offsetBlur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+	</svg>
+	<script>
+		var nodes = [
+			{ id: "start here", x: 480, y: 300, url: "https://example.com/start", class: "custom-class-1" },
+			{ id: "backlinks", x: 300, y: 150, url: "https://example.com/backlinks", class: "custom-class-2" },
+			{ id: "list of plugins", x: 480, y: 100, url: "https://example.com/plugins", class: "custom-class-3" },
+			{ id: "daily notes", x: 660, y: 150, url: "https://example.com/daily-notes", class: "" },
+			{ id: "command panel", x: 200, y: 400, url: "https://example.com/command-panel", class: "custom-class-1" },
+			{ id: "tag pane", x: 480, y: 500, url: "https://example.com/tag-pane", class: "custom-class-2" },
+			{ id: "custom css", x: 760, y: 400, url: "https://example.com/custom-css", class: "custom-class-3" },
+			{ id: "audio recorder", x: 480, y: 700, url: "https://example.com/audio-recorder", class: "" }
+			// add more nodes as needed
+		];
+	
+		var links = [
+			{ source: "list of plugins", target: "start here" },
+			{ source: "list of plugins", target: "backlinks" },
+			{ source: "list of plugins", target: "daily notes" },
+			{ source: "list of plugins", target: "command panel" },
+			{ source: "list of plugins", target: "tag pane" },
+			{ source: "list of plugins", target: "custom css" },
+			{ source: "list of plugins", target: "audio recorder" }
+			// add more links as needed
+		];
+	</script>
+	
+
+	<script>
+		var svg = document.querySelector("svg");
+	
+		// draw links
+		links.forEach(function(link) {
+			var sourceNode = nodes.find(node => node.id === link.source);
+			var targetNode = nodes.find(node => node.id === link.target);
+	
+			var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+			line.setAttribute("x1", sourceNode.x);
+			line.setAttribute("y1", sourceNode.y);
+			line.setAttribute("x2", targetNode.x);
+			line.setAttribute("y2", targetNode.y);
+			line.setAttribute("class", "link");
+			svg.appendChild(line);
+		});
+	
+		// draw nodes
+		nodes.forEach(function(node) {
+			var link = document.createElementNS("http://www.w3.org/2000/svg", "a");
+			link.setAttribute("href", node.url);
+			link.setAttribute("class", "node-link");
+	
+			var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+			rect.setAttribute("x", node.x - 10);
+			rect.setAttribute("y", node.y - 10);
+			rect.setAttribute("width", 20);
+			rect.setAttribute("height", 20);
+			rect.setAttribute("class", `node ${node.class}`);
+			rect.setAttribute("filter", "url(#drop-shadow)");
+			link.appendChild(rect);
+	
+			svg.appendChild(link);
+		});
+	</script>
+
+	
+</body>
+</html>
