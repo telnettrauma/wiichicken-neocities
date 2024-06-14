@@ -58,39 +58,45 @@
 			{source: "interests", target: "websites"}
 		];
 	</script>
-	<script>
-		var svg = document.querySelector("svg");
-	
-		// draw links
-		links.forEach(function(link) {
-			var sourceNode = nodes.find(node => node.id === link.source);
-			var targetNode = nodes.find(node => node.id === link.target);
-	
-			var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-			line.setAttribute("x1", sourceNode.x);
-			line.setAttribute("y1", sourceNode.y);
-			line.setAttribute("x2", targetNode.x);
-			line.setAttribute("y2", targetNode.y);
-			line.setAttribute("class", "link");
-			svg.appendChild(line);
-		});
-	
-		// draw nodes
-		nodes.forEach(function(node) {
-			var link = document.createElementNS("http://www.w3.org/2000/svg", "a");
-			link.setAttribute("href", node.url);
-			link.setAttribute("class", "node-link");
-	
-			var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-			rect.setAttribute("x", node.x - 5);
-			rect.setAttribute("y", node.y - 5);
-			rect.setAttribute("width", 10);
-			rect.setAttribute("height", 10);
-			rect.setAttribute("class", `node ${node.class}`);
-			link.appendChild(rect);
-	
-			svg.appendChild(link);
-		});
-	</script>
+<script>
+	var svg = document.querySelector("svg");
+
+	// draw links
+	links.forEach(function(link) {
+		var sourceNode = nodes.find(node => node.id === link.source);
+		var targetNode = nodes.find(node => node.id === link.target);
+
+		var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+		line.setAttribute("x1", sourceNode.x);
+		line.setAttribute("y1", sourceNode.y);
+		line.setAttribute("x2", targetNode.x);
+		line.setAttribute("y2", targetNode.y);
+		line.setAttribute("class", "link");
+		svg.appendChild(line);
+	});
+
+	// draw nodes
+	nodes.forEach(function(node) {
+		var link = document.createElementNS("http://www.w3.org/2000/svg", "a");
+		link.setAttribute("href", node.url);
+		link.setAttribute("class", "node-link");
+
+		var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+		rect.setAttribute("x", node.x - 5);
+		rect.setAttribute("y", node.y - 5);
+		rect.setAttribute("width", 10);
+		rect.setAttribute("height", 10);
+		rect.setAttribute("class", `node ${node.class}`);
+		rect.setAttribute("filter", "url(#drop-shadow)");
+		link.appendChild(rect);
+
+		// add title for hover effect
+		var title = document.createElementNS("http://www.w3.org/2000/svg", "title");
+		title.textContent = node.id;
+		rect.appendChild(title);
+
+		svg.appendChild(link);
+	});
+</script>
 </body>
 </html>
