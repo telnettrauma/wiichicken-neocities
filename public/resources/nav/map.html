@@ -33,12 +33,17 @@
 			{id: "buttons", x: 540, y: 295, url: "/creative/graphics/buttons/", class: "color2"},
 			{id: "photogal", x: 540, y: 275, url: "/creative/photos.html", class: "color2"},
 			{id: "music", x: 420, y: 355, url: "/interests/music/", class: "color4"},
-			{id: "nowplaying", x: 360, y: 385, url: "/interests/music/fm/playing.html", class: "color4"},
-			{id: "favsongs", x: 380, y: 383, url: "/interests/music/favsongs.html", class: "color4"},
-			{id: "favarchive", x: 400, y: 381, url: "/interests/music/favarchive.html", class: "color4"},
-			{id: "favalbums", x: 420, y: 379, url: "/interests/music/albums/favalbums.html", class: "color4"},
-			{id: "onepointfav", x: 440, y: 377, url: "/interests/music/albums/favarchive.html", class: "color4"},
-			{id: "websites", x: 480, y: 345, url: "/interests/websites/", class: "color4"}
+			{id: "nowplaying", x: 400, y: 345, url: "/interests/music/fm/playing.html", class: "color4"},
+			{id: "favsongs", x: 400, y: 365, url: "/interests/music/favsongs.html", class: "color4"},
+			{id: "favarchive", x: 405, y: 380, url: "/interests/music/favarchive.html", class: "color4"},
+			{id: "favalbums", x: 420, y: 375, url: "/interests/music/albums/favalbums.html", class: "color4"},
+			{id: "onepointfav", x: 440, y: 370, url: "/interests/music/albums/favarchive.html", class: "color4"},
+			{id: "websites", x: 480, y: 345, url: "/interests/websites/", class: "color4"},
+			{id: "directory", x: 500, y: 355, url: "/interests/websites/directory.html", class: "color4"},
+			{id: "graveyard", x: 520, y: 365, url: "/interests/websites/graveyard.html", class: "color4"},
+			{id: "reading", x: 480, y: 365, url: "/interests/websites/reading.html", class: "color4"},
+			{id: "downloads", x: 495, y: 370, url: "/interests/websites/downloads.html", class: "color4"},
+			{id: "iphone apps", x: 465, y: 355, url: "/interests/websites/app/iphone.html", class: "color4"}
 		];
 		var links = [
 			{source: "home", target: "about"},
@@ -55,7 +60,12 @@
 			{source: "music", target: "favarchive"},
 			{source: "music", target: "favalbums"},
 			{source: "music", target: "onepointfav"},
-			{source: "interests", target: "websites"}
+			{source: "interests", target: "websites"},
+			{source: "websites", target: "directory"},
+			{source: "directory", target: "graveyard"},
+			{source: "websites", target: "reading"},
+			{source: "websites", target: "downloads"},
+			{source: "websites", target: "iphone apps"}
 		];
 	</script>
 <script>
