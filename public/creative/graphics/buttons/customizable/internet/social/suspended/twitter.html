@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex">
+	<style>
+		body {background-color: white;}
+		#canvas-container {
+			position: relative;
+			width: 88px;
+			height: 31px;
+		}
+		#myCanvas {
+			width: 88px;
+			height: 31px;
+		}
+		.controls {
+			margin-top: 20px;
+		}
+		.controls .color-option {
+			display: inline-block;
+			text-align: center;
+			margin-right: 10px;
+		}
+		.controls .color-option input {
+			display: block;
+			margin: 0 auto;
+		}
+		.controls .color-option label {display: block;}
+		.color-1d9bf0 {background-color: #1d9bf0;}
+		.color-ffd400 {background-color: #ffd400;}
+		.color-f91880 {background-color: #f91880;}
+		.color-7856ff {background-color: #7856ff;}
+		.color-ff7a00 {background-color: #ff7a00;}
+		.color-00ba7c {background-color: #00ba7c;}
+		.color-black {background-color: black; color: white;}
+		.color-white {background-color: white;}
+	</style>
+</head>
+<body>
+	<!-- ok yeah i had chatgpt write this one. give me a break. idk why it wrote all the comments in spanish -->
+	<div id="canvas-container">
+		<canvas id="myCanvas" width="88" height="31"></canvas>
+	</div>
+	<div class="controls">
+		<p>background color:</p>
+		<div class="color-option color-black">
+			<input type="radio" id="blackBg" name="bgColor" value="black">
+			<label for="blackBg">Black</label>
+		</div>
+		<div class="color-option color-white">
+			<input type="radio" id="whiteBg" name="bgColor" value="white">
+			<label for="whiteBg">White</label>
+		</div>
+		<div class="color-option color-1d9bf0">
+			<input type="radio" id="1d9bf0Bg" name="bgColor" value="#1d9bf0" checked>
+			<label for="1d9bf0Bg">#1d9bf0</label>
+		</div>
+		<div class="color-option color-ffd400">
+			<input type="radio" id="ffd400Bg" name="bgColor" value="#ffd400">
+			<label for="ffd400Bg">#ffd400</label>
+		</div>
+		<div class="color-option color-f91880">
+			<input type="radio" id="f91880Bg" name="bgColor" value="#f91880">
+			<label for="f91880Bg">#f91880</label>
+		</div>
+		<div class="color-option color-7856ff">
+			<input type="radio" id="7856ffBg" name="bgColor" value="#7856ff">
+			<label for="7856ffBg">#7856ff</label>
+		</div>
+		<div class="color-option color-ff7a00">
+			<input type="radio" id="ff7a00Bg" name="bgColor" value="#ff7a00">
+			<label for="ff7a00Bg">#ff7a00</label>
+		</div>
+		<div class="color-option color-00ba7c">
+			<input type="radio" id="00ba7cBg" name="bgColor" value="#00ba7c">
+			<label for="00ba7cBg">#00ba7c</label>
+		</div>
+	</div>
+
+	<div class="controls" id="imageControls">
+		<p>foreground color:</p>
+		<div class="color-option color-black">
+			<input type="radio" id="blackImg" name="image" value="black">
+			<label for="blackImg">Black</label>
+		</div>
+		<div class="color-option color-white">
+			<input type="radio" id="whiteImg" name="image" value="white" checked>
+			<label for="whiteImg">White</label>
+		</div>
+		<div class="color-option color-1d9bf0">
+			<input type="radio" id="1d9bf0Img" name="image" value="1d9bf0">
+			<label for="1d9bf0Img">#1d9bf0</label>
+		</div>
+		<div class="color-option color-ffd400">
+			<input type="radio" id="ffd400Img" name="image" value="ffd400">
+			<label for="ffd400Img">#ffd400</label>
+		</div>
+		<div class="color-option color-f91880">
+			<input type="radio" id="f91880Img" name="image" value="f91880">
+			<label for="f91880Img">#f91880</labe>
+		</div>
+		<div class="color-option color-7856ff">
+			<input type="radio" id="7856ffImg" name="image" value="7856ff">
+			<label for="7856ffImg">#7856ff</label>
+		</div>
+		<div class="color-option color-ff7a00">
+			<input type="radio" id="ff7a00Img" name="image" value="ff7a00">
+			<label for="ff7a00Img">#ff7a00</label>
+		</div>
+		<div class="color-option color-00ba7c">
+			<input type="radio" id="00ba7cImg" name="image" value="00ba7c">
+			<label for="00ba7cImg">#00ba7c</label>
+		</div>    
+	</div>
+	<button onclick="downloadCanvas()">Save</button>
+
+	<script>
+		const canvas = document.getElementById('myCanvas');
+		const ctx = canvas.getContext('2d');
+		const bgColorRadios = document.querySelectorAll('input[name="bgColor"]');
+		const imageControls = document.getElementById('imageControls');
+		const imageRadioButtons = imageControls.querySelectorAll('input[name="image"]');
+
+		let images = {
+			black: 'twitter/black.png',
+			white: 'twitter/white.png',
+			'1d9bf0': 'twitter/1d9bf0.png',
+			ffd400: 'twitter/ffd400.png',
+			f91880: 'twitter/f91880.png',
+			'7856ff': 'twitter/7856ff.png',
+			ff7a00: 'twitter/ff7a00.png',
+			'00ba7c': 'twitter/00ba7c.png'
+		};
+
+		let selectedImage = 'white';
+
+		// función para dibujar el canvas con el fondo y la imagen
+		function drawCanvas(backgroundColor, imageKey) {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+			// dibujar el fondo
+			ctx.fillStyle = backgroundColor;
+			ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+			// dibujar la imagen
+			let image = new Image();
+			image.src = images[imageKey];
+			image.onload = () => {
+				ctx.drawImage(image, 0, 0, 88, 31);
+			};
+		}
+
+		// función para cambiar el color de fondo del canvas
+		function setBackgroundColor(color) {
+			drawCanvas(color, selectedImage);
+			
+			if (color === 'black' || color === 'white') {
+				imageRadioButtons.forEach(button => {
+					if (button.value === color) {
+						button.disabled = true;
+						if (button.checked) {
+							selectedImage = color === 'black' ? 'white' : 'black';
+							document.getElementById(selectedImage + 'Img').checked = true;
+						}
+					} else {
+						button.disabled = false;
+					}
+				});
+			} else {
+				imageRadioButtons.forEach(button => {
+					if (button.value !== 'black' && button.value !== 'white') {
+						button.disabled = true;
+						if (button.checked) {
+							selectedImage = 'black';
+							document.getElementById('blackImg').checked = true;
+						}
+					} else {
+						button.disabled = false;
+					}
+				});
+			}
+			drawCanvas(color, selectedImage);
+		}
+
+		// función para cambiar la imagen del canvas
+		function setImage(imageKey) {
+			selectedImage = imageKey;
+			drawCanvas(document.querySelector('input[name="bgColor"]:checked').value, selectedImage);
+		}
+
+		bgColorRadios.forEach(radio => {
+			radio.addEventListener('change', (e) => {
+				setBackgroundColor(e.target.value);
+			});
+		});
+
+		imageRadioButtons.forEach(button => {
+			button.addEventListener('change', (e) => {
+				setImage(e.target.value);
+			});
+		});
+
+		// inicializar canvas
+		window.onload = () => {
+			setBackgroundColor(document.querySelector('input[name="bgColor"]:checked').value);
+		};
+		function downloadCanvas() {
+			const link = document.createElement('a');
+			link.download = 'canvas-image.png';
+			link.href = canvas.toDataURL();
+			link.click();
+		}
+	</script>
+</body>
+</html>
