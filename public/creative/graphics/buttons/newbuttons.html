@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>BUTTONZ PARA TI - WiiCHiCKEN</title>
+		<!-- <link href="/style.css" rel="stylesheet"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+		<noscript><style>#poopBlock iframe {display: block !important;}</style></noscript>
+	</head>
+	<body>
+		<style>
+			* {
+				--bg-1: #6a5f11;
+				--bg-2: #416651;
+				--dark-primary: #d7c770;
+				--dark-tertiary: #a7d0b7;
+				--dark-on-tertiary: #113726;
+				box-sizing: border-box;
+			}
+			body {
+				color: #f9e466;
+				font-family: 'PT Sans', sans-serif;
+				margin: 5px;
+				background-color: black;
+			}
+			main {
+				display: flex;
+				gap: 10px;
+				max-width: 100vw;
+			}
+			nav {
+				max-width: 300px;
+			}
+			iframe {
+				border: none;
+				height: 400px;
+			}
+			h1, h2, h3, h4, h5 {font-family: 'Martian Mono', monospace;}
+			p, h1, h2, h3, h4, h5 {
+				margin-block-start: 0;
+				margin-block-end: 0;
+			}
+			button {
+				background-color: #353117;
+				color: #cfc7a2;
+				border: 1px solid #cfc7a2;
+				box-shadow: 2px 2px 0 0;
+				font-family: 'Martian Mono', monospace;
+				margin: 2px;
+			}
+			button:hover {
+				box-shadow: 1px 1px 0 0;
+				transform: translate(1px, 1px);
+			}
+			button:active {
+				box-shadow: none;
+				transform: translate(2px, 2px);
+			}
+			#downloadButt {
+				color: #a7d0b7;
+				border: 1px solid #a7d0b7;
+				background-color: #113725;
+			}
+			.butt {
+				display: flex;
+				justify-content: space-evenly;
+			}
+			.butt img {cursor: pointer;}
+			img {
+				width: 88px;
+				height: 31px;
+				image-rendering: pixelated;
+			}
+			.box, nav {
+				border: 1px solid yellow;
+				background-color: #3830004d;
+				backdrop-filter: blur(5px);
+				-webkit-backdrop-filter: blur(5px);
+				padding: 5px;
+			}
+			.less {opacity: 0.3;}
+			.modal {
+				display: none;
+				position: fixed;
+				z-index: 150;
+				width: 100%;
+				height: 100%;
+				background-color: #161300de;
+				top: 0;
+				left: 0;
+				justify-content: center;
+				align-content: center;
+				align-items: center;
+			}
+			.modalbox {
+				background-color: #201c00;
+				border: 1px solid yellow;
+				padding: 5px;
+				box-shadow: 0 0 200px 5px yellow;
+				max-width: 600px;
+				animation: goCrazy 0.5s;
+			}
+			@keyframes goCrazy {
+				0% {
+					box-shadow: 0 0 0 0 yellow;
+					opacity: 0;
+				}
+				100% {
+					box-shadow: 0 0 200px 5px yellow;
+					opacity: 1;
+				}
+			}
+			.downloading {background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 255, 179, 0.8) 100%);}
+			.downloading #inHead .topLinks:first-child a:first-child, .downloading #inHead .topLinks:nth-child(3) a:nth-child(3) {animation: pulse 2s linear infinite;}
+			.downloading #inHead .topLinks:first-child a:nth-child(2), .downloading #inHead .topLinks:nth-child(3) a:nth-child(2) {animation: pulse 2s linear 0.3s infinite;}
+			.downloading #inHead .topLinks:first-child a:nth-child(3), .downloading #inHead .topLinks:nth-child(3) a:first-child {animation: pulse 2s linear 0.6s infinite;}
+			@keyframes pulse {
+				0% {opacity: 0.7;}
+				44% {opacity: 0.7;}
+				45% {opacity: 1;}
+				55% {opacity: 1;}
+				56% {opacity: 0.7;}
+				100% {opacity: 0.7;}
+			}
+			.downloading #inHead #fakeLogo #s1 {
+				animation: shrinky 2s infinite;
+				width: 20px; height: 20px;
+			}
+			.downloading #inHead #fakeLogo #s2 {
+				animation: growy 2s infinite;
+				width: 10px; height: 10px;
+			}
+			@keyframes growy {
+				0% {width: 10px; height: 10px;}
+				20% {width: 20px; height: 20px;}
+				40% {width: 10px; height: 10px;}
+				100% {width: 10px; height: 10px;}
+			}
+			@keyframes shrinky {
+				0% {width: 20px; height: 20px;}
+				20% {width: 10px; height: 10px;}
+				40% {width: 20px; height: 20px;}
+				100% {width: 20px; height: 20px;}
+			}
+			#mainwin {
+				flex: 1;
+			}
+			.breadcrumb {
+				border-bottom: 1px solid yellow;
+				padding: 3px;
+			}
+			.explore {
+				padding: 10px;
+				width: 100%;
+			}
+			.files {
+				display: grid;
+				gap: 5px;
+				grid-template-columns: repeat(5, 1fr);
+			}
+			.folders {
+				display: grid;
+				grid-template-columns: repeat(5, 1fr);
+				gap: 5px;
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+				border-bottom: 1px solid yellow;
+			}
+			.folders a, .files a {
+				padding: 5px;
+				border: 1px solid yellow;
+				box-shadow: 2px 2px 0 0 yellow;
+			}
+			.files a {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			#mainwin [id] {display: none;}
+			#mainwin [id]:target {display: block;}
+		</style>
+		<div id="chewTooth"></div>
+		<main>
+			<nav>
+				<ul>
+					<li>
+						<a href="#home">buttons</a>
+						<ul>
+							<li>customizable</li>
+							<li>linkToMe
+								<ul>
+									<li>current</li>
+									<li>present</li>
+									<li>older</li>
+								</ul>
+							</li>
+							<li>gaming
+								<ul>
+									<li>nintendo
+										<ul>
+											<li>3ds</li>
+										</ul>
+									</li>
+									<li>playstation
+										<ul>
+											<li>ps5</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>life</li>
+							<li>tech
+								<ul>
+									<li>mobile
+										<ul>
+											<li>android</li>
+											<li>ios
+												<ul>
+													<li>jailbreak</li>
+													<li>noise</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<div id="mainwin" class="box" style="padding: 0;">
+				<div id="home" class="page">
+					<p class="breadcrumb">example</p>
+					<div class="explore">
+						<div class="folders">
+							<a>customizable</a>
+							<a>linkToMe</a>
+							<a>gaming</a>
+							<a>internet</a>
+							<a>life</a>
+							<a>tech</a>
+						</div>
+						<div class="files">
+							<a onclick="popUp('suspended from instagram (colorful)', 'ive heard its quite easy', 'internet/socialmedia/suspended/instagram/colorful.png', 'woogoo.png')">
+								<img src="internet/socialmedia/suspended/instagram/colorful.png" loading="lazy">
+								<p>colorful.png</p>
+							</a>
+							<a onclick="popUp('suspended from instagram (colorful)', 'ive heard its quite easy', 'internet/socialmedia/suspended/instagram/colorful.png', 'woogoo.png')">
+								<img src="internet/socialmedia/suspended/instagram/colorful.png" loading="lazy">
+								<p>colorful.png</p>
+							</a>
+							<a onclick="popUp('suspended from instagram (colorful)', 'ive heard its quite easy', 'internet/socialmedia/suspended/instagram/colorful.png', 'woogoo.png')">
+								<img src="internet/socialmedia/suspended/instagram/colorful.png" loading="lazy">
+								<p>colorful.png</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<div class="modal" id="helloNeighbor">
+			<div class="modalbox">
+				<img id="buttPrev" style="height: 62px; width: 176px;"><img id="small-preview" style="margin-left: 5px;">
+				<h2 id="buttTitle">Title</h2>
+				<p id="buttDesc"></p>
+				<div>
+					<button id="downloadButt" onclick="downloadFile();">Download</button>
+					<button onclick="document.getElementById('helloNeighbor').style.display = 'none';">Close</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal" id="custom-button">
+			<div class="modalbox">
+				<iframe id="customize"></iframe><br>
+				<button onclick="document.getElementById('custom-button').style.display = 'none';">CLOSE</button>
+			</div>
+		</div>
+		<div class="box" id="secret" style="display: none;">
+			<h2>Super Secret Settings</h2>
+			<p>fuck</p>
+			<form>
+				<label for="nameYourChild">name:</label>
+				<input type="text" id="nameYourChild" name="nameYourChild"><br>
+				<label for="pagecont">dexcriptuon:</label>
+				<input type="text" id="pagecont" name="pagecont" style="width: 100%; height: 300px;"><br>
+				<label for="link1">one direction photobooth for fans new:</label>
+				<input type="text" id="link1" name="link1" style="width: 400px;"><br>
+				<label for="link2">baby name generator 3837 leaked now:</label>
+				<input type="text" id="link2" name="link2"><br>
+			</form>
+			<button onclick="generateNew()">get cookin'</button>
+			<p id="outputhtml">since you poop out solid corn, if you eat so much corn theres no poop, does that mean you can just eat the corn you poop out for the rest of your life?</p>
+			<p id="byeBye">look.</p>
+		</div>
+		<script>
+			var helloNabbit = document.getElementById('helloNeighbor');
+			let downloadURL, downloadName;
+			function downloadFile() {
+				document.getElementById('poopBlock').classList.add('downloading');
+				var link = document.createElement("a");
+				link.download = downloadName;
+				link.href = downloadURL;
+				link.target = '_blank';
+				link.click();
+				document.getElementById('helloNeighbor').style.display = 'none';
+			}
+			function popUp(title, desc, uniSource, fileName) {
+				downloadURL = uniSource;
+				downloadName = fileName;
+				document.getElementById('buttPrev').src = uniSource;
+				document.getElementById('small-preview').src = uniSource;
+				document.getElementById('buttTitle').innerHTML = title;
+				document.getElementById('buttDesc').innerHTML = desc;
+				var downButt = document.getElementById('downloadButt');
+				helloNabbit.style.display = 'flex';
+			}
+			function customizeButton(thePage) {
+				document.getElementById('customize').src = thePage;
+				document.getElementById('custom-button').style.display = 'flex';
+			}
+			window.onclick = function(event) {
+				if (event.target === helloNabbit) {
+					helloNabbit.style.display = 'none';
+				}
+			}
+			window.addEventListener('focus', function () {
+				document.getElementById('poopBlock').classList.remove('downloading');
+			});
+			function generateNew() {
+				var happyBirthday = document.getElementById("nameYourChild").value;
+				var poopCont = document.getElementById("pagecont").value;
+				var linkNo1 = document.getElementById("link1").value;
+				var linkNo2 = document.getElementById("link2").value;
+				let newGen = `&lt;a onclick="popUp('${happyBirthday}', '${poopCont}', '${linkNo1}', '${linkNo2}')"&gt;&lt;img src="${linkNo1}" loading="lazy"&gt;&lt;/a&gt;`;
+				let yourBabyDied = `<a onclick="popUp('${happyBirthday}', '${poopCont}', '${linkNo1}', '${linkNo2}')"><img src="${linkNo1}" loading="lazy"></a>`;
+				document.getElementById("outputhtml").innerHTML = newGen;
+				document.getElementById("byeBye").innerHTML = yourBabyDied;
+			}
+			function superSecretSettings() {document.getElementById('secret').style.display = 'block';}
+		</script>
+	</body>
+</html>
