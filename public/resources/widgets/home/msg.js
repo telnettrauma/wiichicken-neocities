@@ -125,7 +125,10 @@ var messageList = [ 'lorem ipsum i want to buy a car',
 'my son plays with linkedin logs',
 'a little giggle would go a long way',
 'i just cant help it!',
-'watch out for tickles. theyre deadly.'
+'watch out for tickles. theyre deadly.',
+'free for 7 days',
+'we built this city on poop and pee',
+'like transformers, but funnier'
 ]
 function setRandomMessage() {document.getElementById('messageTxt').innerHTML = messageList[Math.floor(Math.random() * messageList.length)];}
 setRandomMessage();
