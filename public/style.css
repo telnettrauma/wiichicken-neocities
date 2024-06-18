@@ -6,6 +6,7 @@ body {
 	font-family: 'PT Sans', sans-serif;
 	background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2));
 	background-color: var(--bg-1);
+	cursor: url(/media/home/cursor.png), default;
 }
 main {
 	max-width: 600px;
