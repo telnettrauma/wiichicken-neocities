@@ -21,15 +21,20 @@
 			body {
 				color: #f9e466;
 				font-family: 'PT Sans', sans-serif;
-				margin: 5px;
+				margin: 0;
 				background-color: black;
 			}
 			main {
 				display: flex;
 				gap: 10px;
+				padding: 10px;
 				max-width: 100vw;
+				height: 100vh;
 			}
-			nav {max-width: 300px;}
+			nav {
+				max-width: 300px;
+				overflow-y: scroll;
+			}
 			iframe {
 				border: none;
 				height: 400px;
@@ -59,10 +64,6 @@
 				color: #a7d0b7;
 				border: 1px solid #a7d0b7;
 				background-color: #113725;
-			}
-			.butt {
-				display: flex;
-				justify-content: space-evenly;
 			}
 			.butt img {cursor: pointer;}
 			img {
@@ -141,7 +142,10 @@
 				40% {width: 20px; height: 20px;}
 				100% {width: 20px; height: 20px;}
 			}
-			#mainwin {flex: 1;}
+			#mainwin {
+				flex: 1;
+				overflow-y: scroll;
+			}
 			a {
 				text-decoration: none;
 				color: #e7e4bf;
@@ -181,6 +185,16 @@
 				border: 1px solid yellow;
 				box-shadow: 2px 2px 0 0 yellow;
 			}
+			.folders a:hover, .files a:hover {
+				cursor: pointer;
+				box-shadow: 1px 1px 0 0 yellow;
+				transform: translate(1px, 1px);
+			}
+			.folders a:active, .files a:active {
+				cursor: pointer;
+				box-shadow: none;
+				transform: translate(2px, 2px);
+			}
 			.files a {
 				display: flex;
 				flex-direction: column;
@@ -192,64 +206,65 @@
 		<div id="chewTooth"></div>
 		<main>
 			<nav>
+				<h4>BUTTONS</h4>
 				<ul style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid yellow;">
-					<li><a href="/">HOME</a></li>
-					<li><a href="/aboutme.html">ABOUT ME</a></li>
-					<li><a href="/creative/">ART</a></li>
-					<li><a href="/more/archive/blog/">BLOG</a></li>
-					<li><a href="/interests/">iNTERESTS</a></li>
-					<li><a href="/more/">MORE</a></li>
-					<li><a href="/guestbook.html">GUESTBOOK</a></li>
-				</ul>
-				<ul>
 					<li>
 						<a href="#home">buttons</a>
 						<ul>
 							<li><a href="#customizable">customizable</a></li>
-							<li>linkToMe
+							<li>
+								<a href="#linktome">linkToMe</a>
 								<ul>
-									<li>present</li>
-									<li>older</li>
+									<li><a href="#linktome-present">present</li>
+									<li><a href="#linktome-older">older</a></li>
 								</ul>
 							</li>
-							<li>gaming
+							<li>
+								<a href="#gaming">gaming</a>
 								<ul>
-									<li>nintendo
+									<li><a href="#gaming-nintendo">nintendo</a>
 										<ul>
-											<li>3ds</li>
+											<li><a href="#gaming-nintendo-3ds">3ds</a></li>
 										</ul>
 									</li>
-									<li>playstation
+									<li>
+										<a href="#gaming-playstation">playstation</a>
 										<ul>
-											<li>ps5</li>
+											<li><a href="#gaming-playstation-ps5">ps5</a></li>
 										</ul>
 									</li>
 								</ul>
 							</li>
-							<li>internet
+							<li>
+								<a href="#internet">internet</a>
 								<ul>
-									<li>socialmedia
+									<li>
+										<a href="#internet-socialmedia">socialmedia</a>
 										<ul>
-											<li>suspended
+											<li>
+												<a href="#internet-socialmedia-suspended">suspended</a>
 												<ul>
-													<li>instagram</li>
-													<li>twitter</li>
+													<li><a href="#internet-socialmedia-suspended-instagram">instagram</a></li>
+													<li><a href="#internet-socialmedia-suspended-twitter">twitter</a></li>
 												</ul>
 											</li>
 										</ul>
 									</li>
 								</ul>
 							</li>
-							<li>life</li>
-							<li>tech
+							<li><a href="#life">life</a></li>
+							<li>
+								<a href="#tech">tech</a>
 								<ul>
-									<li>mobile
+									<li>
+										<a href="#tech-mobile">mobile</a>
 										<ul>
-											<li>android</li>
-											<li>ios
+											<li><a href="#tech-mobile-android">android</a></li>
+											<li>
+												<a href="#tech-mobile-ios">ios</a>
 												<ul>
-													<li>jailbreak</li>
-													<li>noise</li>
+													<li><a href="#tech-mobile-ios-jailbreak">jailbreak</a></li>
+													<li><a href="#tech-mobile-ios-noise">noise</a></li>
 												</ul>
 											</li>
 										</ul>
@@ -259,13 +274,29 @@
 						</ul>
 					</li>
 				</ul>
+				<ul style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid yellow;">
+					<li><a href="#help">help</a></li>
+				</ul>
+				<h4>WEBSiTE</h4>
+				<ul>
+					<li><a href="/">HOME</a></li>
+					<li><a href="/aboutme.html">ABOUT ME</a></li>
+					<li><a href="/creative/">ART</a></li>
+					<li><a href="/more/archive/blog/">BLOG</a></li>
+					<li><a href="/interests/">iNTERESTS</a></li>
+					<li><a href="/more/">MORE</a></li>
+					<li><a href="/guestbook.html">GUESTBOOK</a></li>
+				</ul>
 			</nav>
 			<div id="mainwin" class="box" style="padding: 0;">
-				<div id="help" class="page" style="padding: 5px;">
+				<div id="help" class="page">
 					<p class="breadcrumb"><a href="#home">buttons</a>/help</p>
 					<div class="explore">
 						<h2>HELP</h2>
-						<p>this works like any other file explorer.</p>
+						<p>this works like any other file explorer. you can use the sidebar to navigate, or use the breadcrumb at the top of the page to go back. try it, click "buttons" to go back</p>
+						<h3>NAQ</h3>
+						<p><strong>the older layout was better</strong><br>yeah.</p>
+						<p><strong>why is everything overorganized?</strong><br>it needs to be. its scary when its not.</p>
 					</div>
 				</div>
 				<!-- root (/) -->
@@ -281,18 +312,7 @@
 							<a href="#tech">tech</a>
 						</div>
 						<div class="files">
-							<a onclick="popUp('suspended from instagram (colorful)', 'ive heard its quite easy', 'internet/socialmedia/suspended/instagram/colorful.png', 'woogoo.png')">
-								<img src="internet/socialmedia/suspended/instagram/colorful.png" loading="lazy">
-								<p>colorful.png</p>
-							</a>
-							<a onclick="popUp('suspended from instagram (colorful)', 'ive heard its quite easy', 'internet/socialmedia/suspended/instagram/colorful.png', 'woogoo.png')">
-								<img src="internet/socialmedia/suspended/instagram/colorful.png" loading="lazy">
-								<p>colorful.png</p>
-							</a>
-							<a onclick="popUp('suspended from instagram (colorful)', 'ive heard its quite easy', 'internet/socialmedia/suspended/instagram/colorful.png', 'woogoo.png')">
-								<img src="internet/socialmedia/suspended/instagram/colorful.png" loading="lazy">
-								<p>colorful.png</p>
-							</a>
+							<a href="#help">help.html</a>
 						</div>
 					</div>
 				</div>
@@ -510,6 +530,84 @@
 								<p>1111.png</p>
 							</a>
 						</div>
+					</div>
+				</div>
+				<!-- tech/mobile/android -->
+				<div id="tech-mobile-android" class="page">
+					<p class="breadcrumb"><a href="#home">buttons</a>/<a href="#tech">tech</a>/<a href="#tech-mobile">mobile</a>/android</p>
+					<div class="explore">
+						<div class="files">
+							<a onclick="popUp('i use 3 button navigation', 'the only way to use a phone', 'tech/mobile/android/3button.PNG', 'dog-with-a-blog.png');">
+								<img src="tech/mobile/android/3button.PNG" loading="lazy">
+								<p>3button.png</p>
+							</a>
+							<a onclick="popUp('i use 2 button navigation', 'this was kinda a cool feature i think', 'tech/mobile/android/2button.PNG', 'ever-played-cuphead.png');">
+								<img src="tech/mobile/android/2button.PNG" loading="lazy">
+								<p>2button.png</p>
+							</a>
+							<a onclick="popUp('i use gesture navigation', 'sorry i dont really like this one', 'tech/mobile/android/gestures.PNG', 'poop-emoji-hq.png');">
+								<img src="tech/mobile/android/gestures.PNG" loading="lazy">
+								<p>gestures.png</p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- tech/mobile/ios -->
+				<div id="tech-mobile-ios" class="page">
+					<p class="breadcrumb"><a href="#home">buttons</a>/<a href="#tech">tech</a>/<a href="#tech-mobile">mobile</a>/ios</p>
+					<div class="explore">
+						<div class="folders">
+							<a href="#tech-mobile-ios-jailbreak">jailbreak</a>
+							<a href="#tech-mobile-ios-noise">noise</a>
+						</div>
+						<div class="files">
+							<a onclick="popUp('do not disturb', 'admit it, this is me when my boss calls at 5:03 PM on a friday', 'tech/mobile/ios/dnd.PNG', 'dungeons-and-dragons.png')">
+								<img src="tech/mobile/ios/dnd.PNG" loading="lazy">
+								<p>dnd.png</p>
+							</a>
+							<a onclick="popUp('what does low power mode do?', 'erm it stops your email from refreshing in the background and thats about it', 'tech/mobile/ios/lowpower.PNG', 'kanye-west-power-128kbps.png')">
+								<img src="tech/mobile/ios/lowpower.PNG" loading="lazy">
+								<p>lowpower.png</p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- tech/mobile/ios/jailbreak -->
+				<div id="tech-mobile-ios-jailbreak" class="page">
+					<p class="breadcrumb"><a href="#home">buttons</a>/<a href="#tech">tech</a>/<a href="#tech-mobile">mobile</a>/<a href="#tech-mobile-ios">ios</a>/jailbreak</p>
+					<div class="explore">
+						<div class="files">
+							<a onclick="popUp('AltStore', 'my favorite excuse to let my laptop gain an outstanding uptime of 34 hours', 'tech/mobile/ios/jailbreak/altstore.PNG', 'littleBabyBum.png')">
+								<img src="tech/mobile/ios/jailbreak/altstore.PNG" loading="lazy">
+								<p>altstore.png</p>
+							</a>
+							<a onclick="popUp('SideStore', 'its like altstore but better', 'tech/mobile/ios/jailbreak/sidestore.PNG', 'granolaFun.png')">
+								<img src="tech/mobile/ios/jailbreak/sidestore.PNG" loading="lazy">
+								<p>sidestore.png</p>
+							</a>
+						</div>
+						<p>do you guys remember when jailbreaking was a thing haha we should bring that back</p>
+					</div>
+				</div>
+				<!-- tech/mobile/ios/noise -->
+				<div id="tech-mobile-ios-noise" class="page">
+					<p class="breadcrumb"><a href="#home">buttons</a>/<a href="#tech">tech</a>/<a href="#tech-mobile">mobile</a>/<a href="#tech-mobile-ios">ios</a>/noise</p>
+					<div class="explore">
+						<div class="files">
+							<a onclick="popUp('Transparency', 'wow this is like if you were wearing nothing', 'tech/mobile/ios/noise/transparency.PNG', 'flubberInHindi.png')">
+								<img src="tech/mobile/ios/noise/transparency.PNG" loading="lazy">
+								<p>transparency.png</p>
+							</a>
+							<a onclick="popUp('Adaptive', 'the rainbow gradient should spin. @apple make it happen', 'tech/mobile/ios/noise/adaptive.PNG', 'tiredOfNamingThese.png')">
+								<img src="tech/mobile/ios/noise/adaptive.PNG" loading="lazy">
+								<p>adaptive.png</p>
+							</a>
+							<a onclick="popUp('Noise Cancelling', 'you can basically be in your own world but it feels like youre head is being shoved underwater so is it really worth it', 'tech/mobile/ios/noise/cancelling.PNG', 'theseButtonsSuckBeHonest.png')">
+								<img src="tech/mobile/ios/noise/cancelling.PNG" loading="lazy">
+								<p>cancelling.png</p>
+							</a>
+						</div>
+						<p>buttons inspired by the different noise cancellation modes you get on airpod pros. ain't nobody usin these.</p>
 					</div>
 				</div>
 			</div>
