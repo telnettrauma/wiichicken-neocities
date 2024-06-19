@@ -146,6 +146,8 @@
 				text-decoration: none;
 				color: #e7e4bf;
 			}
+			ul {padding-inline-start: 10px;}
+			li {display: block;}
 			.breadcrumb {
 				border-bottom: 1px solid yellow;
 				padding: 3px;
@@ -164,6 +166,7 @@
 				display: grid;
 				gap: 5px;
 				grid-template-columns: repeat(5, 1fr);
+				margin-bottom: 10px;
 			}
 			.folders {
 				display: grid;
@@ -244,17 +247,24 @@
 				</ul>
 			</nav>
 			<div id="mainwin" class="box" style="padding: 0;">
+				<div id="help" class="page" style="padding: 5px;">
+					<p class="breadcrumb"><a href="#home">buttons</a>/help</p>
+					<div class="explore">
+						<h2>HELP</h2>
+						<p>this works like any other file explorer.</p>
+					</div>
+				</div>
 				<!-- root (/) -->
 				<div id="home" class="page">
 					<p class="breadcrumb">buttons</p>
 					<div class="explore">
 						<div class="folders">
 							<a href="#customizable">customizable</a>
-							<a>linkToMe</a>
-							<a>gaming</a>
-							<a>internet</a>
-							<a>life</a>
-							<a>tech</a>
+							<a href="#linktome">linkToMe</a>
+							<a href="#gaming">gaming</a>
+							<a href="#internet">internet</a>
+							<a href="#life">life</a>
+							<a href="#tech">tech</a>
 						</div>
 						<div class="files">
 							<a onclick="popUp('suspended from instagram (colorful)', 'ive heard its quite easy', 'internet/socialmedia/suspended/instagram/colorful.png', 'woogoo.png')">
@@ -283,6 +293,103 @@
 							</a>
 						</div>
 						<p>buttons that YOU can customize.</p>
+					</div>
+				</div>
+				<!-- linkToMe -->
+				<div id="linktome" class="page">
+					<p class="breadcrumb"><a href="#home">buttons</a>/linkToMe</p>
+					<div class="explore">
+						<div class="folders">
+							<a href="#linktome-present">present</a>
+							<a href="#linktome-older">older</a>
+						</div>
+						<div class="files">
+							<a onclick="popUp('current button', 'you already read the text above', '/button.gif', 'isaidyoucouldjusthotlinkit.gif')">
+								<img src="/button.gif" loading="lazy">
+								<p>current.gif</p>
+							</a>
+						</div>
+						<p>this is the current button i am using for my site. you can hotlink this button, so that way it will automatically update! the embed code can be found at the bottom of the <a href="/">main page</a>.</p>
+					</div>
+				</div>
+				<!-- linkToMe/present -->
+				<div id="linktome-present" class="page">
+					<p class="breadcrumb"><a href="#home">buttons</a>/<a href="#linktome">linkToMe</a>/present</p>
+					<div class="explore">
+						<div class="files">
+							<a onclick="popUp('april 2024 static', 'humpty dumpty fell on the wall and off the motion', 'mine/24aprilstatic.png', 'freezetag.png')">
+								<img src="mine/24aprilstatic.png" loading="lazy">
+								<p>24aprilstatic.png</p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- linkToMe/older -->
+				<div id="linktome-older" class="page">
+					<p class="breadcrumb"><a href="#home">buttons</a>/<a href="#linktome">linkToMe</a>/older</p>
+					<div class="explore">
+						<div class="files">
+							<a onclick="popUp('babies first button', 'the first button that i made for this site. they grow up so fast', 'mine/first/first.gif', 'wiichicken.gif')">
+									<img src="mine/first/first.gif" loading="lazy">
+									<p>first.gif</p>
+							</a>
+							<a onclick="popUp('babies first button (static)', 'yeah. if you wanna.', 'mine/first/firststatic.gif', 'minionfreezegun.png')">
+								<img src="mine/first/firststatic.png" loading="lazy">
+								<p>firststatic.png</p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- gaming -->
+				<div id="gaming" class="page">
+					<p class="breadcrumb"><a href="#home">buttons</a>/gaming</p>
+					<div class="explore">
+						<div class="folders">
+							<a href="#gaming-nintendo">nintendo</a>
+							<a href="#gaming-playstation">playstation</a>
+						</div>
+					</div>
+				</div>
+				<!-- gaming/nintendo -->
+				<div id="gaming-nintendo" class="page">
+					<p class="breadcrumb"><a href="#home">buttons</a>/<a href="#gaming">gaming</a>/nintendo</p>
+					<div class="explore">
+						<div class="folders">
+							<a href="#gaming-nintendo-3ds">3ds</a>
+						</div>
+					</div>
+				</div>
+				<!-- gaming/nintendo/3ds -->
+				<div id="gaming-nintendo-3ds" class="page">
+					<p class="breadcrumb"><a href="#home">buttons</a>/<a href="#gaming">gaming</a>/<a href="#gaming-nintendo">nintendo</a>/3ds</p>
+					<div class="explore">
+						<div class="files">
+							<a onclick="popUp('netpass', 'remove the sonder from your 3ds!', 'gaming/nintendo/3ds/netpass.png', 'gummyinmytummy.png')">
+								<img src="gaming/nintendo/3ds/netpass.png" loading="lazy">
+								<p>netpass.png</p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- gaming/playstation -->
+				<div id="gaming-playstation" class="page">
+					<p class="breadcrumb"><a href="#home">buttons</a>/<a href="#gaming">gaming</a>/playstation</p>
+					<div class="explore">
+						<div class="folders">
+							<a href="#gaming-playstation-ps5">ps5</a>
+						</div>
+					</div>
+				</div>
+				<!-- gaming/playstation/ps5 -->
+				<div id="gaming-playstation-ps5" class="page">
+					<p class="breadcrumb"><a href="#home">buttons</a>/<a href="#gaming">gaming</a>/<a href="#gaming-playstation">playstation</a>/ps5</p>
+					<div class="explore">
+						<div class="files">
+							<a onclick="popUp('more games than ps5', 'not as hard of an accomplishment as you think it is', 'gaming/playstation/ps5/nogames.gif', 'hilariousjoke.gif')">
+								<img src="gaming/playstation/ps5/nogames.gif" loading="lazy">
+								<p>nogames.gif</p>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
