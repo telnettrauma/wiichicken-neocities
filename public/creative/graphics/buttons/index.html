@@ -202,6 +202,17 @@
 			}
 			#mainwin [id] {display: none;}
 			#mainwin [id]:target {display: block;}
+			::-webkit-scrollbar {width: 5px;}
+			::-webkit-scrollbar-track {background-color: #110e00;}
+			::-webkit-scrollbar-thumb {background-color: yellow;}
+			::-webkit-scrollbar-button {color: yellow;}
+			::-webkit-scrollbar-corner {background-color: #110e00;}
+			@media only screen and (max-width: 900px) {
+				.files, .folders {
+					display: flex;
+					flex-wrap: wrap;
+				}
+			}
 		</style>
 		<main>
 			<nav>
