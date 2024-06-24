@@ -1,6 +1,8 @@
 100000miles.png - life
 1111.png - tech/mobile
 24aprilstatic.png - linktome/present
+2button.png - tech/mobile/android
+3button.png - tech/mobile/android
 adaptive.png - tech/mobile/ios/noise
 altstore.png - tech/mobile/ios/jailbreak
 brat.png - music
