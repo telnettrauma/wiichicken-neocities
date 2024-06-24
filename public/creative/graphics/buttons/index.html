@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/x-icon" href="/favicon.ico">
 		<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
-		<noscript><style>#poopBlock iframe {display: block !important;}</style></noscript>
 	</head>
 	<body>
 		<style>
@@ -694,7 +693,6 @@
 			var helloNabbit = document.getElementById('helloNeighbor');
 			let downloadURL, downloadName;
 			function downloadFile() {
-				document.getElementById('poopBlock').classList.add('downloading');
 				var link = document.createElement("a");
 				link.download = downloadName;
 				link.href = downloadURL;
@@ -721,20 +719,6 @@
 					helloNabbit.style.display = 'none';
 				}
 			}
-			window.addEventListener('focus', function () {
-				document.getElementById('poopBlock').classList.remove('downloading');
-			});
-			function generateNew() {
-				var happyBirthday = document.getElementById("nameYourChild").value;
-				var poopCont = document.getElementById("pagecont").value;
-				var linkNo1 = document.getElementById("link1").value;
-				var linkNo2 = document.getElementById("link2").value;
-				let newGen = `&lt;a onclick="popUp('${happyBirthday}', '${poopCont}', '${linkNo1}', '${linkNo2}')"&gt;&lt;img src="${linkNo1}" loading="lazy"&gt;&lt;/a&gt;`;
-				let yourBabyDied = `<a onclick="popUp('${happyBirthday}', '${poopCont}', '${linkNo1}', '${linkNo2}')"><img src="${linkNo1}" loading="lazy"></a>`;
-				document.getElementById("outputhtml").innerHTML = newGen;
-				document.getElementById("byeBye").innerHTML = yourBabyDied;
-			}
-			function superSecretSettings() {document.getElementById('secret').style.display = 'block';}
 		</script>
 	</body>
 </html>
