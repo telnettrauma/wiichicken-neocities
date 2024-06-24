@@ -1,22 +1,24 @@
 100000miles.png - life
 1111.png - tech/mobile
 24aprilstatic.png - linktome/present
+adaptive.png - tech/mobile/ios/noise
 altstore.png - tech/mobile/ios/jailbreak
 brat.png - music
+cancelling.png - tech/mobile/ios/noise
 colorful.png - internet/socialmedia/suspended/instagram
 current.gif - linktome
-dnd.png
-first.gif
-firststatic.png
-gestures.png
-lowpower.png
-netpass.png
-nogames.gif
-sidestore.png
-sticker.png
-transparency.png
-twtblu.png
-twtblackwhite.png
-twtwhiteblack.png
-twitter.exe
-wpm.exe
+dnd.png - tech/mobile/ios
+first.gif - mine/first
+firststatic.png - mine/first
+gestures.png - tech/mobile/android
+lowpower.png - tech/mobile/ios
+netpass.png - gaming/nintendo/3ds
+nogames.gif - gaming/playstation/ps5
+sidestore.png - tech/mobile/ios/jailbreak
+sticker.png - internet/socialmedia/suspended/instagram
+transparency.png - tech/mobile/ios/noise
+twtblu.png - internet/socialmedia/suspended/twitter
+twtblackwhite.png - internet/socialmedia/suspended/twitter
+twtwhiteblack.png - internet/socialmedia/suspended/twitter
+twitter.exe - internet/socialmedia/suspended/twitter
+wpm.exe - customizable
