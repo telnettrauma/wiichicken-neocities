@@ -13,6 +13,7 @@ dnd.png - tech/mobile/ios
 first.gif - mine/first
 firststatic.png - mine/first
 gestures.png - tech/mobile/android
+loveambientmode.gif - internet/socialmedia/youtube
 lowpower.png - tech/mobile/ios
 netpass.png - gaming/nintendo/3ds
 nogames.gif - gaming/playstation/ps5
