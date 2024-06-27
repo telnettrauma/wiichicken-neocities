@@ -101,6 +101,7 @@ button {
 	font-family: 'Martian Mono', monospace;
 	font-weight: bold;
 	padding: 10px;
+	color: white;
 }
 .inner-footer p {text-align: center;}
 #random-message {
@@ -108,6 +109,11 @@ button {
 	cursor: pointer;
 	font-family: 'PT Sans', sans-serif;
 	font-weight: normal;
+	color: gray;
+}
+#random-message:hover {
+	color: white;
+	box-shadow: none;
 }
 
 /* navigation styles */

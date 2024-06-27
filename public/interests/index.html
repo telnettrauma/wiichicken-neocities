@@ -18,8 +18,11 @@
 			* {
 				--dark-tertiary: #e9bf8f;
 				--dark-on-tertiary: #442b07;
+				--bg-1: red;
+				--bg-2: yellow;
 			}
 			body {
+				background: unset;
 				background-color: #400011;
 				color: #ffd9dc;
 				font-family: 'PT Sans', sans-serif;
@@ -80,7 +83,20 @@
 			<div class="box">
 				<p>yes, i know its ironic that i called this section media. maybe when i can find i way to fit "interests" into the navbar that can change</p>
 			</div>
+			<div class="footer">
+				<div class="inner-footer">
+					<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
+					<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
+				</div>
+			</div>
 		</main>
+		<script>
+			function setRandomMessage() {
+				var msgList = ['i keep giving bad people good ideas', 'must be a pibby glitch', 'putting the X (formerly Twitter) in xtreme', 'Woodpecker is the best BBC2 ident', 'StreetPass me sometime!', 'refunded Undertale and OMORI', 'they should make instagram 2', '<span style="animation: rainbow 1s linear infinite;">Merry Christmas Xbox</span>', 'I have an angry bird', 'isnt it nice to have a computer', 'i love posting on X about shows on MAX', 'pizza > homework', 'netflix and kill', 'can facebook just die already', 'Sorry For Party Rockin\'', 'the wordle is slosh', 'Nintendo is bombing America!!!'];
+				document.getElementById('random-message').innerHTML = msgList[Math.floor(Math.random() * msgList.length)];
+			}
+			setRandomMessage();
+		</script>
 		<script src="/resources/nav/navbar.js"></script>
 	</body>
 </html>
