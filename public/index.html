@@ -1024,7 +1024,6 @@
 							<div class="square" style="background-color: #00a2ff;"></div>
 						</div>
 						<p onclick="setRandomMessage()" id="messageTxt" class="nomarblock" style="font-size: 10px; text-align: center; cursor: pointer;">she no till i script</p>
-						<script src="resources/widgets/home/msg.js"></script>
 					</div>
 					<div id="cornerInBox" style="width: 0%; display: flex; align-items: flex-end; justify-content: flex-end;">
 						<a class="noBg" href="credits.html">credits</a>
@@ -1105,6 +1104,11 @@ document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById('fakeLogo').removeAttribute('href');
 	document.getElementById('fakeLogo').setAttribute('onclick', "window.scrollTo({top: 0, behavior: 'smooth'});");
 });
+function setRandomMessage() {
+	var msgList = ['Updated <code>index.html</code>', 'coded on a best buy kiosk macbook', 'jobs near me that pay trillion/hour', 'TV explodes in 30 seconds if not powered off', 'can we get a "woot woot"', 'anti-anti-aliasing', 'bring back parallax', 'wth is a framework', 'oh to be a navbar with 3 items', 'internet explorer is safe... so far', 'THiS iS A POOP ALERT', 'debbie downers DNI', 'do not use this website around pacemakers', 'Smile! You\'re on <i>Old Navy</i> TV!', 'one of the greatest', 'keep this place our secret', 'Thanks SiriusXM for making this possible!', 'not the best thing to show to an employer', 'awwwards are impractical anyways', 'dm for proto', 'it takes a village and a half', 'we bought a zoo', 'free for 7 days', 'like transformers, but funnier'];
+	document.getElementById('messageTxt').innerHTML = msgList[Math.floor(Math.random() * msgList.length)];
+}
+setRandomMessage();
 </script>
 <script src="resources/widgets/home/flood/flood.js"></script>
 <script src="resources/nav/navbar.js"></script>
