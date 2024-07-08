@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamepad Vibration</title>
+</head>
+<body>
+
+  <button id="vibrateButton">Vibrate!</button>
+  <br>
+  <label for="intensitySlider">Vibration Intensity:</label>
+  <input type="range" id="intensitySlider" min="0" max="1" step="0.1" value="1">
+
+  <script>
+    let vibrating = false;
+    let gamepadIndex = null;
+    let vibrationInterval = null;
+
+    const button = document.getElementById('vibrateButton');
+    const intensitySlider = document.getElementById('intensitySlider');
+
+    function startVibrating(gamepad) {
+      const intensity = parseFloat(intensitySlider.value);
+      gamepad.vibrationActuator.playEffect('dual-rumble', {
+        startDelay: 0,
+        duration: 450,  // short vibration
+        weakMagnitude: intensity,
+        strongMagnitude: intensity
+      });
+    }
+
+    button.addEventListener('click', () => {
+      if (gamepadIndex !== null) {
+        const gamepad = navigator.getGamepads()[gamepadIndex];
+        if (gamepad && gamepad.vibrationActuator) {
+          if (vibrating) {
+            clearInterval(vibrationInterval);
+            gamepad.vibrationActuator.playEffect('dual-rumble', {
+              startDelay: 0,
+              duration: 0,  // stop the vibration
+              weakMagnitude: 0,
+              strongMagnitude: 0
+            });
+            button.textContent = 'Vibrate!';
+          } else {
+            startVibrating(gamepad);
+            vibrationInterval = setInterval(() => startVibrating(gamepad), 300);  // repeat every 300ms
+            button.textContent = 'Stop!';
+          }
+          vibrating = !vibrating;
+        } else {
+          console.log('Vibration not supported on this gamepad.');
+        }
+      } else {
+        console.log('No gamepad connected.');
+      }
+    });
+
+    window.addEventListener('gamepadconnected', (event) => {
+      console.log('Gamepad connected:', event.gamepad);
+      gamepadIndex = event.gamepad.index;
+    });
+
+    window.addEventListener('gamepaddisconnected', (event) => {
+      console.log('Gamepad disconnected:', event.gamepad);
+      if (gamepadIndex === event.gamepad.index) {
+        clearInterval(vibrationInterval);
+        gamepadIndex = null;
+        vibrating = false;
+        button.textContent = 'Vibrate!';
+      }
+    });
+  </script>
+
+</body>
+</html>
