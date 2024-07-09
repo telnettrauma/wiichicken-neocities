@@ -16,6 +16,7 @@
     let vibrating = false;
     let gamepadIndex = null;
     let vibrationInterval = null;
+    let dpadIntensityAdjustInterval = null;
 
     const button = document.getElementById('vibrateButton');
     const intensitySlider = document.getElementById('intensitySlider');
@@ -24,10 +25,16 @@
       const intensity = parseFloat(intensitySlider.value);
       gamepad.vibrationActuator.playEffect('dual-rumble', {
         startDelay: 0,
-        duration: 450,  // short vibration
+        duration: 500,  // short vibration
         weakMagnitude: intensity,
         strongMagnitude: intensity
       });
+    }
+
+    function adjustIntensity(delta) {
+      let newIntensity = parseFloat(intensitySlider.value) + delta;
+      newIntensity = Math.min(Math.max(newIntensity, 0), 1);
+      intensitySlider.value = newIntensity;
     }
 
     button.addEventListener('click', () => {
@@ -57,15 +64,30 @@
       }
     });
 
+    function checkDpadInput() {
+      const gamepads = navigator.getGamepads();
+      if (gamepads[gamepadIndex]) {
+        const gamepad = gamepads[gamepadIndex];
+        if (gamepad.buttons[14].pressed) { // D-pad left
+          adjustIntensity(-0.1);
+        }
+        if (gamepad.buttons[15].pressed) { // D-pad right
+          adjustIntensity(0.1);
+        }
+      }
+    }
+
     window.addEventListener('gamepadconnected', (event) => {
       console.log('Gamepad connected:', event.gamepad);
       gamepadIndex = event.gamepad.index;
+      dpadIntensityAdjustInterval = setInterval(checkDpadInput, 100);  // check for d-pad input every 100ms
     });
 
     window.addEventListener('gamepaddisconnected', (event) => {
       console.log('Gamepad disconnected:', event.gamepad);
       if (gamepadIndex === event.gamepad.index) {
         clearInterval(vibrationInterval);
+        clearInterval(dpadIntensityAdjustInterval);
         gamepadIndex = null;
         vibrating = false;
         button.textContent = 'Vibrate!';
