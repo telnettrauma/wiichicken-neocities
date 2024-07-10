@@ -1,18 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>WORDSOUP</title>
+		<title>WordSoup</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
 	</head>
 	<body>
 		<style>
+			* {
+				margin-block-start: 0;
+				margin-block-end: 0;
+				box-sizing: border-box;
+			}
+			body {
+				margin: 10px;
+			}
 			main {
 				max-width: 600px;
 				margin: auto;
 			}
+			header {
+				background-color: orange;
+				padding: 10px;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
+			}
+			#main {display: flex;}
+			aside, #page {padding: 5px;}
+			aside {
+				width: 150px;
+				background-color: #e6e6e6;
+			}
+			#page {width: 450px;}
 		</style>
 		<main>
+			<header>
+				<div id="header-left">
+					<h1>WordSoup</h1>
+					<p>Alphabet soup for the soul</p>
+				</div>
+				<div id="header-right">
+					<a href="login.html">Login</a>
+					<a href="signup.html">Sign Up</a>
+				</div>
+			</header>
+			<div id="main">
+				<aside>
+					<h3>Recently Active</h3>
+				</aside>
+				<div id="page">
+					<h2>Welcome to WordSoup!</h2>
+					<p>WordSoup is a platform that puts the power of blogging in your hands. It's easy to use and is completely customizable. And the best part? It's completely free!</p>
+				</div>
+			</div>
 		</main>
 	</body>
 </html>
