@@ -27,12 +27,23 @@
 				align-items: flex-end;
 			}
 			#main {display: flex;}
-			aside, #page {padding: 5px;}
+			aside h3, #page {padding: 5px;}
 			aside {
 				width: 150px;
 				background-color: #e6e6e6;
 			}
 			#page {width: 450px;}
+			#users {padding-inline-start: 0;}
+			#users li {
+				display: block;
+				background: linear-gradient(180deg, #e6e6e6 0%, #808080 100%);
+			}
+			#users li a {
+				color: black;
+				font-weight: bold;
+				text-decoration: none;
+				padding-left: 10px;
+			}
 		</style>
 		<main>
 			<header>
@@ -48,6 +59,9 @@
 			<div id="main">
 				<aside>
 					<h3>Recently Active</h3>
+					<ul id="users">
+						<li><a href="site/kip/index.html">kip</a></li>
+					</ul>
 					<h3>Site News</h3>
 				</aside>
 				<div id="page">
@@ -56,6 +70,14 @@
 					<h2>Featured Articles</h2>
 					<h2>Being Viewed</h2>
 					<h2>Recently Created</h2>
+					<h2>Tell Me More...</h2>
+					<p>WordSoup is a text based blogging platform that puts the power of blogging into the hands of everyone. Completely for free, anybody can create a text blog. You can easily customize your blog however you like. The only limit is that of your imagination!</p>
+					<h3>Why No Images?</h3>
+					<p>Images are slow and take up a lot of space. Why not just allow your words to speak for themselves?</p>
+					<h3>How Much Does it Cost?</h3>
+					<p>Free!</p>
+					<h3>So How Do You Make Money?</h3>
+					<p>You can upgrade for a monthly subscription for more features such as images, advanced analytics, and custom domains.</p>
 				</div>
 			</div>
 		</main>
