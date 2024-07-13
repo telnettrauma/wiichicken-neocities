@@ -3,8 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
   <title>Gamepad Vibration</title>
   <style>
+		body {
+			font-family: 'PT Sans', sans-serif;
+			background-color: black;
+		}
+		h1, h2, h3, h4 {
+			font-family: 'Martian Mono', monospace;
+			color: var(--bright);
+		}
     #controls {
       margin-top: 10px;
     }
@@ -12,99 +21,128 @@
       display: none;
       margin-top: 5px;
     }
+		#waiter {
+			--bright: #ffee00;
+			--bg: #1d1c14;
+			--color: #ede68c;
+		}
+		main {
+			width: 300px;
+			height: 500px;
+			border: 1px solid var(--bright);
+			background-color: var(--bg);
+			color: var(--color)
+		}
+		.mainer {
+			display: none;
+			height: 100%;
+		}
+		#waiting {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			text-align: center;
+			padding: 5px;
+		}
   </style>
 </head>
 <body>
-
-  <button id="vibrateButton">Vibrate!</button>
-  <br>
-  <label for="intensitySlider">Vibration Intensity:</label>
-  <input type="range" id="intensitySlider" min="0" max="1" step="0.1" value="1">
-  <br>
-  <div id="controls">
-    <label>
-      <input type="radio" name="mode" value="normal" checked>
-      Normal Vibration Mode
-    </label>
-    <br>
-    <label>
-      <input type="radio" name="mode" value="surprise">
-      Surprise Vibration Mode
-    </label>
-    <div id="surpriseSettings" class="mode-settings">
-      <label for="surpriseInterval">Interval (ms):</label>
-      <input type="number" id="surpriseInterval" value="2000">
-    </div>
-    <br>
-    <label>
-      <input type="radio" name="mode" value="oscillate">
-      Oscillating Vibration Mode
-    </label>
-    <div id="oscillateSettings" class="mode-settings">
-      <label for="oscillateSpeed">Speed:</label>
-      <input type="number" id="oscillateSpeed" value="100">
-    </div>
-    <br>
-    <label>
-      <input type="radio" name="mode" value="random">
-      Random Vibration Mode
-    </label>
-    <br>
-    <label>
-      <input type="radio" name="mode" value="heartbeat">
-      Heartbeat Vibration Mode
-    </label>
-    <br>
-    <label>
-      <input type="radio" name="mode" value="sos">
-      SOS Vibration Mode
-    </label>
-    <br>
-    <label>
-      <input type="radio" name="mode" value="wave">
-      Wave Vibration Mode
-    </label>
-    <br>
-    <label>
-      <input type="radio" name="mode" value="pulse">
-      Pulse Vibration Mode
-    </label>
-    <div id="pulseSettings" class="mode-settings">
-      <label for="pulseDuration">Pulse Duration (ms):</label>
-      <input type="number" id="pulseDuration" value="50">
-    </div>
-    <br>
-    <label>
-      <input type="radio" name="mode" value="crescendo">
-      Crescendo Vibration Mode
-    </label>
-    <br>
-    <label>
-      <input type="radio" name="mode" value="pattern">
-      Pattern Vibration Mode
-    </label>
-    <br>
-    <label>
-      <input type="radio" name="mode" value="alarm">
-      Alarm Vibration Mode
-    </label>
-    <br>
-    <label>
-      <input type="radio" name="mode" value="echo">
-      Echo Vibration Mode
-    </label>
-    <br>
-    <label>
-      <input type="radio" name="mode" value="randomPulse">
-      Random Pulse Vibration Mode
-    </label>
-    <br>
-    <label>
-      <input type="radio" name="mode" value="stutter">
-      Stutter Vibration Mode
-    </label>
-  </div>
-
+	<main id="waiter">
+		<div id="waiting" class="mainer">
+			<h2>PLEASE CONNECT CONTROLLER</h2>
+			<p>If controller is connected, press any button on the controller.</p>
+		</div>
+		<div id="interface" class="mainer">
+			<button id="vibrateButton">Vibrate!</button>
+			<br>
+			<label for="intensitySlider">Vibration Intensity:</label>
+			<input type="range" id="intensitySlider" min="0" max="1" step="0.1" value="1">
+			<br>
+			<div id="controls">
+				<label>
+					<input type="radio" name="mode" value="normal" checked>
+					Normal Vibration Mode
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="surprise">
+					Surprise Vibration Mode
+				</label>
+				<div id="surpriseSettings" class="mode-settings">
+					<label for="surpriseInterval">Interval (ms):</label>
+					<input type="number" id="surpriseInterval" value="2000">
+				</div>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="oscillate">
+					Oscillating Vibration Mode
+				</label>
+				<div id="oscillateSettings" class="mode-settings">
+					<label for="oscillateSpeed">Speed:</label>
+					<input type="number" id="oscillateSpeed" value="100">
+				</div>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="random">
+					Random Vibration Mode
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="heartbeat">
+					Heartbeat Vibration Mode
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="sos">
+					SOS Vibration Mode
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="wave">
+					Wave Vibration Mode
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="pulse">
+					Pulse Vibration Mode
+				</label>
+				<div id="pulseSettings" class="mode-settings">
+					<label for="pulseDuration">Pulse Duration (ms):</label>
+					<input type="number" id="pulseDuration" value="50">
+				</div>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="crescendo">
+					Crescendo Vibration Mode
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="pattern">
+					Pattern Vibration Mode
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="alarm">
+					Alarm Vibration Mode
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="echo">
+					Echo Vibration Mode
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="randomPulse">
+					Random Pulse Vibration Mode
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="stutter">
+					Stutter Vibration Mode
+				</label>
+			</div>
+		</div>
+	</main>
   <script>
     let vibrating = false;
     let gamepadIndex = null;
