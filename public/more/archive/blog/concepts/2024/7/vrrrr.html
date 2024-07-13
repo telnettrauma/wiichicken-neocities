@@ -21,10 +21,15 @@
       display: none;
       margin-top: 5px;
     }
-		#waiter {
+		.waiter {
 			--bright: #ffee00;
 			--bg: #1d1c14;
 			--color: #ede68c;
+		}
+		#error {
+			--bright: red;
+			--bg: #231918;
+			--color: #ffdad4;
 		}
 		main {
 			width: 300px;
@@ -37,20 +42,24 @@
 			display: none;
 			height: 100%;
 		}
-		#waiting {
-			display: flex;
+		.informal {
 			flex-direction: column;
 			justify-content: space-around;
 			text-align: center;
 			padding: 5px;
 		}
+		#waiting {display: flex;}
   </style>
 </head>
 <body>
-	<main id="waiter">
-		<div id="waiting" class="mainer">
+	<main id="main" class="waiter">
+		<div id="waiting" class="mainer informal">
 			<h2>PLEASE CONNECT CONTROLLER</h2>
-			<p>If controller is connected, press any button on the controller.</p>
+			<p>if your controller is connected, just press a button on it. any ol' button will do</p>
+		</div>
+		<div id="unsupported" class="mainer informal">
+			<h2>CONTROLLER UNSUPPORTED</h2>
+			<p>this controller just isn't supported, sorry =(</p>
 		</div>
 		<div id="interface" class="mainer">
 			<button id="vibrateButton">Vibrate!</button>
