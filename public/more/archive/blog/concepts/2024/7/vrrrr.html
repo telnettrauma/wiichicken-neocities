@@ -27,10 +27,24 @@
 			--bg: #1d1c14;
 			--color: #ede68c;
 		}
-		#error {
+		.error {
 			--bright: red;
 			--bg: #231918;
 			--color: #ffdad4;
+		}
+		.success {
+			--bright: #00ff00;
+			--bg: #181d18;
+			--color: #b6f1bb;
+			--light: #285020;
+			--on-light: #a5d395;
+			--dark: #002200;
+			--on-dark: #c0efb0;
+		}
+		.disconnected {
+			--bright: #ff8c00;
+			--bg: #211a14;
+			--color: #ffdcbc;
 		}
 		main {
 			width: 300px;
@@ -39,17 +53,42 @@
 			background-color: var(--bg);
 			color: var(--color)
 		}
+		button {
+			font-family: 'Martian Mono', monospace;
+			border: 1px solid var(--bright);
+			background-color: var(--light);
+			color: var(--on-light);
+		}
 		.mainer {
 			display: none;
 			height: 100%;
 		}
+		.waiter #waiting, .error #unsupported, .success #interface, .disconnected #disconnect {display: flex;}
 		.informal {
 			flex-direction: column;
 			justify-content: space-around;
 			text-align: center;
 			padding: 5px;
 		}
-		#waiting {display: flex;}
+		#interface {flex-direction: column;}
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+		#selections {
+			display: none;
+			position: absolute;
+			z-index: 1;
+			background-color: var(--dark);
+			border: 1px solid var(--bright);
+		}
+		#selections a {
+			display: block;
+			font-size: 16px;
+			padding-bottom: 5px;
+			font-family: 'Martian Mono', monospace;
+			color: var(--on-dark);
+		}
   </style>
 </head>
 <body>
@@ -62,18 +101,35 @@
 			<h2>CONTROLLER UNSUPPORTED</h2>
 			<p>this controller just isn't supported, sorry =(</p>
 		</div>
+		<div id="disconnect" class="mainer informal">
+			<h2>CONTROLLER DiSCONNECTED!</h2>
+			<p>it appears that your controller has been disconnected. reconnect that baby!</p>
+		</div>
 		<div id="interface" class="mainer">
 			<button id="vibrateButton">Vibrate!</button>
-			<br>
-			<label for="intensitySlider">Vibration Intensity:</label>
-			<input type="range" id="intensitySlider" min="0" max="1" step="0.1" value="1">
-			<br>
+			<div>
+				<input type="range" id="intensitySlider" min="0" max="1" step="0.1" value="1">
+			</div>
+			<div class="dropdown">
+				<button id="dropdownbutton" onclick="toggleDropdown()">Select Mode</button>
+				<div id="selections">
+					<a>Normal</a>
+					<a>Oscillating</a>
+					<a>Random</a>
+					<a>Heartbeat</a>
+					<a>Wave</a>
+					<a>Pulse</a>
+					<a>Crescendo</a>
+					<a>Echo</a>
+					<a>Random Pulse</a>
+					<a>Stutter</a>
+				</div>
+			</div>
 			<div id="controls">
 				<label>
 					<input type="radio" name="mode" value="normal" checked>
 					Normal Vibration Mode
 				</label>
-				<br>
 				<br>
 				<label>
 					<input type="radio" name="mode" value="oscillate">
@@ -133,6 +189,7 @@
 	</main>
   <script>
     let vibrating = false;
+		let vibrationMode = 'normal';
     let gamepadIndex = null;
     let vibrationInterval = null;
     let dpadIntensityAdjustInterval = null;
@@ -143,7 +200,6 @@
     const button = document.getElementById('vibrateButton');
     const intensitySlider = document.getElementById('intensitySlider');
     const modeRadios = document.querySelectorAll('input[name="mode"]');
-    const surpriseIntervalInput = document.getElementById('surpriseInterval');
     const oscillateSpeedInput = document.getElementById('oscillateSpeed');
     const pulseDurationInput = document.getElementById('pulseDuration');
 
@@ -215,19 +271,6 @@
       strongVibration(gamepad);
       setTimeout(() => lightVibration(gamepad, intensity), 300);
       setTimeout(() => strongVibration(gamepad), 600);
-    }
-
-    function sosVibration(gamepad) {
-      const intensity = parseFloat(intensitySlider.value);
-      vibrate(gamepad, intensity, intensity, 100);
-      setTimeout(() => vibrate(gamepad, intensity, intensity, 100), 200);
-      setTimeout(() => vibrate(gamepad, intensity, intensity, 100), 400);
-      setTimeout(() => vibrate(gamepad, intensity, intensity, 300), 600);
-      setTimeout(() => vibrate(gamepad, intensity, intensity, 300), 1000);
-      setTimeout(() => vibrate(gamepad, intensity, intensity, 300), 1400);
-      setTimeout(() => vibrate(gamepad, intensity, intensity, 100), 1800);
-      setTimeout(() => vibrate(gamepad, intensity, intensity, 100), 2000);
-      setTimeout(() => vibrate(gamepad, intensity, intensity, 100), 2200);
     }
 
     function waveVibration(gamepad) {
@@ -312,18 +355,13 @@ button.addEventListener('click', () => {
         const selectedMode = getSelectedMode();
         if (selectedMode === 'normal') {
           vibrationInterval = setInterval(() => lightVibration(gamepad, parseFloat(intensitySlider.value)), 100);
-        } else if (selectedMode === 'surprise') {
-          continuousSurpriseVibration(gamepad);
-          vibrationInterval = setInterval(() => continuousSurpriseVibration(gamepad), 100);
         } else {
           vibrationInterval = setInterval(() => vibrationModes[selectedMode](gamepad), 100);
         }
         button.textContent = 'Stop!';
       }
       vibrating = !vibrating;
-    } else {
-      console.log('Vibration not supported on this gamepad.');
-    }
+    } else {document.getElementById('main').classList = 'error';}
   } else {
     console.log('No gamepad connected.');
   }
@@ -350,12 +388,14 @@ function checkDpadInput() {
 
 window.addEventListener('gamepadconnected', (event) => {
   console.log('Gamepad connected:', event.gamepad);
+	document.getElementById('main').classList = 'success';
   gamepadIndex = event.gamepad.index;
   dpadIntensityAdjustInterval = setInterval(checkDpadInput, 100);
 });
 
 window.addEventListener('gamepaddisconnected', (event) => {
   console.log('Gamepad disconnected:', event.gamepad);
+	document.getElementById('main').classList = 'disconnected';
   if (gamepadIndex === event.gamepad.index) {
     clearInterval(vibrationInterval);
     clearInterval(dpadIntensityAdjustInterval);
@@ -380,6 +420,13 @@ modeRadios.forEach((radio) => {
     }
   });
 });
+//toggle dropdown
+function toggleDropdown() {
+	var ddown = document.getElementById('selections');
+	if (ddown.style.display === 'block') {
+		ddown.style.display = 'none';
+	} else {ddown.style.display = 'block';}
+}
 </script>
 </body>
 </html>
