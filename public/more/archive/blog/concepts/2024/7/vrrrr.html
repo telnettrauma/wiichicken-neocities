@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
   <title>Gamepad Vibration</title>
+	<meta name="robots" content="noindex">
   <style>
 		body {
 			font-family: 'PT Sans', sans-serif;
@@ -73,14 +74,6 @@
 					Normal Vibration Mode
 				</label>
 				<br>
-				<label>
-					<input type="radio" name="mode" value="surprise">
-					Surprise Vibration Mode
-				</label>
-				<div id="surpriseSettings" class="mode-settings">
-					<label for="surpriseInterval">Interval (ms):</label>
-					<input type="number" id="surpriseInterval" value="2000">
-				</div>
 				<br>
 				<label>
 					<input type="radio" name="mode" value="oscillate">
@@ -101,10 +94,6 @@
 					Heartbeat Vibration Mode
 				</label>
 				<br>
-				<label>
-					<input type="radio" name="mode" value="sos">
-					SOS Vibration Mode
-				</label>
 				<br>
 				<label>
 					<input type="radio" name="mode" value="wave">
@@ -123,16 +112,6 @@
 				<label>
 					<input type="radio" name="mode" value="crescendo">
 					Crescendo Vibration Mode
-				</label>
-				<br>
-				<label>
-					<input type="radio" name="mode" value="pattern">
-					Pattern Vibration Mode
-				</label>
-				<br>
-				<label>
-					<input type="radio" name="mode" value="alarm">
-					Alarm Vibration Mode
 				</label>
 				<br>
 				<label>
@@ -305,16 +284,12 @@ function stutterVibration(gamepad) {
 
 const vibrationModes = {
   normal: lightVibration,
-  surprise: continuousSurpriseVibration,
   oscillate: oscillateVibration,
   random: randomVibration,
   heartbeat: heartbeatVibration,
-  sos: sosVibration,
   wave: waveVibration,
   pulse: pulseVibration,
   crescendo: crescendoVibration,
-  pattern: patternVibration,
-  alarm: alarmVibration,
   echo: echoVibration,
   randomPulse: randomPulseVibration,
   stutter: stutterVibration
