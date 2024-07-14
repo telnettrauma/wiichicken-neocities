@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+  <title>Gamepad Vibration</title>
+	<meta name="robots" content="noindex">
+  <style>
+		body {
+			font-family: 'PT Sans', sans-serif;
+			background-color: black;
+		}
+		h1, h2, h3, h4 {
+			font-family: 'Martian Mono', monospace;
+			color: var(--bright);
+		}
+    #controls {
+      margin-top: 10px;
+    }
+    .mode-settings {
+      display: none;
+      margin-top: 5px;
+    }
+		.waiter {
+			--bright: #ffee00;
+			--bg: #1d1c14;
+			--color: #ede68c;
+		}
+		#error {
+			--bright: red;
+			--bg: #231918;
+			--color: #ffdad4;
+		}
+		main {
+			width: 300px;
+			height: 500px;
+			border: 1px solid var(--bright);
+			background-color: var(--bg);
+			color: var(--color)
+		}
+		.mainer {
+			display: none;
+			height: 100%;
+		}
+		.informal {
+			flex-direction: column;
+			justify-content: space-around;
+			text-align: center;
+			padding: 5px;
+		}
+		#waiting {display: flex;}
+  </style>
+</head>
+<body>
+	<main id="main" class="waiter">
+		<div id="waiting" class="mainer informal">
+			<h2>PLEASE CONNECT CONTROLLER</h2>
+			<p>if your controller is connected, just press a button on it. any ol' button will do</p>
+		</div>
+		<div id="unsupported" class="mainer informal">
+			<h2>CONTROLLER UNSUPPORTED</h2>
+			<p>this controller just isn't supported, sorry =(</p>
+		</div>
+		<div id="interface" class="mainer">
+			<button id="vibrateButton">Vibrate!</button>
+			<br>
+			<label for="intensitySlider">Vibration Intensity:</label>
+			<input type="range" id="intensitySlider" min="0" max="1" step="0.1" value="1">
+			<br>
+			<div id="controls">
+				<label>
+					<input type="radio" name="mode" value="normal" checked>
+					Normal Vibration Mode
+				</label>
+				<br>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="oscillate">
+					Oscillating Vibration Mode
+				</label>
+				<div id="oscillateSettings" class="mode-settings">
+					<label for="oscillateSpeed">Speed:</label>
+					<input type="number" id="oscillateSpeed" value="100">
+				</div>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="random">
+					Random Vibration Mode
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="heartbeat">
+					Heartbeat Vibration Mode
+				</label>
+				<br>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="wave">
+					Wave Vibration Mode
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="pulse">
+					Pulse Vibration Mode
+				</label>
+				<div id="pulseSettings" class="mode-settings">
+					<label for="pulseDuration">Pulse Duration (ms):</label>
+					<input type="number" id="pulseDuration" value="50">
+				</div>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="crescendo">
+					Crescendo Vibration Mode
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="echo">
+					Echo Vibration Mode
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="randomPulse">
+					Random Pulse Vibration Mode
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="mode" value="stutter">
+					Stutter Vibration Mode
+				</label>
+			</div>
+		</div>
+	</main>
+  <script>
+    let vibrating = false;
+    let gamepadIndex = null;
+    let vibrationInterval = null;
+    let dpadIntensityAdjustInterval = null;
+    let oscillationValue = 0;
+    let increasing = true;
+    let crescendoValue = 0;
+
+    const button = document.getElementById('vibrateButton');
+    const intensitySlider = document.getElementById('intensitySlider');
+    const modeRadios = document.querySelectorAll('input[name="mode"]');
+    const surpriseIntervalInput = document.getElementById('surpriseInterval');
+    const oscillateSpeedInput = document.getElementById('oscillateSpeed');
+    const pulseDurationInput = document.getElementById('pulseDuration');
+
+    function getSelectedMode() {
+      let selectedMode = 'normal';
+      modeRadios.forEach((radio) => {
+        if (radio.checked) {
+          selectedMode = radio.value;
+        }
+      });
+      return selectedMode;
+    }
+
+    function vibrate(gamepad, weakMagnitude, strongMagnitude, duration = 300) {
+      gamepad.vibrationActuator.playEffect('dual-rumble', {
+        startDelay: 0,
+        duration: duration,
+        weakMagnitude: weakMagnitude,
+        strongMagnitude: strongMagnitude
+      });
+    }
+
+    function lightVibration(gamepad, intensity) {
+      vibrate(gamepad, intensity, intensity);
+    }
+
+    function strongVibration(gamepad) {
+      vibrate(gamepad, 1.0, 1.0, 100);
+    }
+
+    function continuousSurpriseVibration(gamepad) {
+      const intensity = parseFloat(intensitySlider.value);
+      const interval = parseInt(surpriseIntervalInput.value);
+      lightVibration(gamepad, intensity);
+      setTimeout(() => {
+        strongVibration(gamepad);
+        setTimeout(() => {
+          lightVibration(gamepad, intensity);
+        }, 100);
+      }, Math.random() * interval + interval);
+    }
+
+    function oscillateVibration(gamepad) {
+      const baseIntensity = parseFloat(intensitySlider.value);
+      const speed = parseInt(oscillateSpeedInput.value);
+      const intensity = baseIntensity * (oscillationValue / 100);
+      lightVibration(gamepad, intensity);
+
+      if (increasing) {
+        oscillationValue += 1;
+        if (oscillationValue >= 100) {
+          increasing = false;
+        }
+      } else {
+        oscillationValue -= 1;
+        if (oscillationValue <= 0) {
+          increasing = true;
+        }
+      }
+    }
+
+    function randomVibration(gamepad) {
+      const intensity = Math.random();
+      lightVibration(gamepad, intensity);
+    }
+
+    function heartbeatVibration(gamepad) {
+      const intensity = parseFloat(intensitySlider.value);
+      strongVibration(gamepad);
+      setTimeout(() => lightVibration(gamepad, intensity), 300);
+      setTimeout(() => strongVibration(gamepad), 600);
+    }
+
+    function sosVibration(gamepad) {
+      const intensity = parseFloat(intensitySlider.value);
+      vibrate(gamepad, intensity, intensity, 100);
+      setTimeout(() => vibrate(gamepad, intensity, intensity, 100), 200);
+      setTimeout(() => vibrate(gamepad, intensity, intensity, 100), 400);
+      setTimeout(() => vibrate(gamepad, intensity, intensity, 300), 600);
+      setTimeout(() => vibrate(gamepad, intensity, intensity, 300), 1000);
+      setTimeout(() => vibrate(gamepad, intensity, intensity, 300), 1400);
+      setTimeout(() => vibrate(gamepad, intensity, intensity, 100), 1800);
+      setTimeout(() => vibrate(gamepad, intensity, intensity, 100), 2000);
+      setTimeout(() => vibrate(gamepad, intensity, intensity, 100), 2200);
+    }
+
+    function waveVibration(gamepad) {
+      const baseIntensity = parseFloat(intensitySlider.value);
+      const intensity = (Math.sin(Date.now() / 1000) + 1) / 2 * baseIntensity;
+      lightVibration(gamepad, intensity);
+    }
+
+    function pulseVibration(gamepad) {
+      const intensity = parseFloat(intensitySlider.value);
+      const duration = parseInt(pulseDurationInput.value);
+      vibrate(gamepad, intensity, intensity, duration);
+    }
+
+    function crescendoVibration(gamepad) {
+      const baseIntensity = parseFloat(intensitySlider.value);
+      const intensity = crescendoValue / 100 * baseIntensity;
+      lightVibration(gamepad, intensity);
+
+      crescendoValue += 1;
+      if (crescendoValue > 100) {
+        crescendoValue = 0;
+      }
+    }
+
+    function patternVibration(gamepad) {
+      const intensity = parseFloat(intensitySlider.value);
+      vibrate(gamepad, intensity, intensity, 100);
+      setTimeout(() => vibrate(gamepad, 0, 0, 100), 200);
+      setTimeout(() => vibrate(gamepad, intensity, intensity, 200), 300);
+    }
+
+    function alarmVibration(gamepad) {
+      const intensity = parseFloat(intensitySlider.value);
+      vibrate(gamepad, intensity, intensity, 100);
+      setTimeout(() => vibrate(gamepad, 0, 0, 100), 200);
+    }
+
+    function echoVibration(gamepad) {
+      const intensity = parseFloat(intensitySlider.value);
+      vibrate(gamepad, intensity, intensity, 100);
+      setTimeout(() => vibrate(gamepad, intensity * 0.5, intensity * 0.5, 
+			100), 200);
+setTimeout(() => vibrate(gamepad, intensity * 0.25, intensity * 0.25, 100), 400);
+}function randomPulseVibration(gamepad) {
+  const intensity = Math.random();
+  vibrate(gamepad, intensity, intensity, 100);
+}
+
+function stutterVibration(gamepad) {
+  const intensity = parseFloat(intensitySlider.value);
+  vibrate(gamepad, intensity, intensity, 20);
+}
+
+const vibrationModes = {
+  normal: lightVibration,
+  oscillate: oscillateVibration,
+  random: randomVibration,
+  heartbeat: heartbeatVibration,
+  wave: waveVibration,
+  pulse: pulseVibration,
+  crescendo: crescendoVibration,
+  echo: echoVibration,
+  randomPulse: randomPulseVibration,
+  stutter: stutterVibration
+};
+
+button.addEventListener('click', () => {
+  if (gamepadIndex !== null) {
+    const gamepad = navigator.getGamepads()[gamepadIndex];
+    if (gamepad && gamepad.vibrationActuator) {
+      if (vibrating) {
+        clearInterval(vibrationInterval);
+        gamepad.vibrationActuator.playEffect('dual-rumble', {
+          startDelay: 0,
+          duration: 0,
+          weakMagnitude: 0,
+          strongMagnitude: 0
+        });
+        button.textContent = 'Vibrate!';
+      } else {
+        const selectedMode = getSelectedMode();
+        if (selectedMode === 'normal') {
+          vibrationInterval = setInterval(() => lightVibration(gamepad, parseFloat(intensitySlider.value)), 100);
+        } else if (selectedMode === 'surprise') {
+          continuousSurpriseVibration(gamepad);
+          vibrationInterval = setInterval(() => continuousSurpriseVibration(gamepad), 100);
+        } else {
+          vibrationInterval = setInterval(() => vibrationModes[selectedMode](gamepad), 100);
+        }
+        button.textContent = 'Stop!';
+      }
+      vibrating = !vibrating;
+    } else {
+      console.log('Vibration not supported on this gamepad.');
+    }
+  } else {
+    console.log('No gamepad connected.');
+  }
+});
+
+function adjustIntensity(delta) {
+  let newIntensity = parseFloat(intensitySlider.value) + delta;
+  newIntensity = Math.min(Math.max(newIntensity, 0), 1);
+  intensitySlider.value = newIntensity;
+}
+
+function checkDpadInput() {
+  const gamepads = navigator.getGamepads();
+  if (gamepads[gamepadIndex]) {
+    const gamepad = gamepads[gamepadIndex];
+    if (gamepad.buttons[14].pressed) {
+      adjustIntensity(-0.1);
+    }
+    if (gamepad.buttons[15].pressed) {
+      adjustIntensity(0.1);
+    }
+  }
+}
+
+window.addEventListener('gamepadconnected', (event) => {
+  console.log('Gamepad connected:', event.gamepad);
+  gamepadIndex = event.gamepad.index;
+  dpadIntensityAdjustInterval = setInterval(checkDpadInput, 100);
+});
+
+window.addEventListener('gamepaddisconnected', (event) => {
+  console.log('Gamepad disconnected:', event.gamepad);
+  if (gamepadIndex === event.gamepad.index) {
+    clearInterval(vibrationInterval);
+    clearInterval(dpadIntensityAdjustInterval);
+    gamepadIndex = null;
+    vibrating = false;
+    button.textContent = 'Vibrate!';
+  }
+});
+
+// Show/hide mode-specific settings
+modeRadios.forEach((radio) => {
+  radio.addEventListener('change', () => {
+    const selectedMode = getSelectedMode();
+    const modeSettings = document.querySelectorAll('.mode-settings');
+    modeSettings.forEach((settings) => {
+      settings.style.display = 'none';
+    });
+
+    const specificSettings = document.getElementById(`${selectedMode}Settings`);
+    if (specificSettings) {
+      specificSettings.style.display = 'block';
+    }
+  });
+});
+</script>
+</body>
+</html>

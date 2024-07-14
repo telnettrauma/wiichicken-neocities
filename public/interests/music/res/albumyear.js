@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 	var user = 'wiichicken';
-	var url = "http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&period=12month&user=" + user + "&api_key=afc213709a996ae561e307f596c9952b&format=json";
+	var url = "http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&period=12month&user=" + user + "&api_key=93016c14b5580e5f2a72cdc9413cfa36&format=json";
 	var request = new XMLHttpRequest();
 	request.open('GET', url, true);
 	
