@@ -11,7 +11,7 @@
 			<style>.noscript-bye {display: none !important;}</style>
 		</noscript>
 		<style>
-			.shelf {
+			.shelf, .row {
 				background-image: linear-gradient(180deg, rgba(0,31,38,1) 0%, #334a50 100%);
 				background-color: unset;
 				display: flex;
@@ -79,6 +79,7 @@
 			.blog p, .micro p {font-size: 10px;}
 			#bookshelf {overflow-x: scroll;}
 			.box a:not(:has(img))::after {display: none;}
+			.row {width: 100%;}
 		</style>
 	</head>
 	<body>
@@ -118,21 +119,30 @@
 			<p>blogs that don't have posts that are as long, but may still be worth a peep. includes twitter pages or other social medias</p>
 		</div>
 		<div class="box shelf" style="background-size: 120px;">
-			<a class="micro" href="https://oneterabyteofkilobyteage.tumblr.com" target="_blank" style="--bg: #ffb3b0; --fg: #571d1e;">
-				<img src="https://64.media.tumblr.com/avatar_002c6d11213c_64.pnj" loading="lazy">
-				<h4>One Terabyte of Kilobyte Age</h4>
-				<p>Automatically posts screenshots of random sites on the Geocities archive</p>
-			</a>
-			<a class="micro" href="https://www.suppermariobroth.com/" target="_blank" style="--bg: #ffb4a6; --fg: #561e15;">
-				<img src="https://64.media.tumblr.com/avatar_4691f8d9c906_128.pnj" loading="lazy">
-				<h4>Supper Mario Broth</h4>
-				<p>Obscure information about the Mario franchise</p>
-			</a>
-			<a class="micro" href="https://twitter.com/depthsofwiki" target="_blank" style="--bg: #9ccbfb; --fg: #003354;">
-				<img src="img/ficon/blog/twt.png" loading="lazy">
-				<h4>depths of wikipedia</h4>
-				<p>Fun facts about Wikipedia and out of context screenshots</p>
-			</a>
+			<div class="row">
+				<a class="micro" href="https://oneterabyteofkilobyteage.tumblr.com" target="_blank" style="--bg: #ffb3b0; --fg: #571d1e;">
+					<img src="https://64.media.tumblr.com/avatar_002c6d11213c_64.pnj" loading="lazy">
+					<h4>One Terabyte of Kilobyte Age</h4>
+					<p>Automatically posts screenshots of random sites on the Geocities archive</p>
+				</a>
+				<a class="micro" href="https://www.suppermariobroth.com/" target="_blank" style="--bg: #ffb4a6; --fg: #561e15;">
+					<img src="https://64.media.tumblr.com/avatar_4691f8d9c906_128.pnj" loading="lazy">
+					<h4>Supper Mario Broth</h4>
+					<p>Obscure information about the Mario franchise</p>
+				</a>
+				<a class="micro" href="https://twitter.com/depthsofwiki" target="_blank" style="--bg: #9ccbfb; --fg: #003354;">
+					<img src="img/ficon/blog/twt.png" loading="lazy">
+					<h4>depths of wikipedia</h4>
+					<p>Fun facts about Wikipedia and out of context screenshots</p>
+				</a>
+			</div>
+			<div class="row">
+				<a class="micro" href="https://text-mode.org" target="_blank" style="--fg: #22191c; --bg: #d5c2c6;">
+					<img src="img/ficon/default.png" loading="lazy">
+					<h4>text-mode</h4>
+					<p>art composed of text</p>
+				</a>
+			</div>
 		</div>
 		<div class="box">
 			<h2>ARTiCLES</h2>
