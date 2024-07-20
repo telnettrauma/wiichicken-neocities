@@ -521,8 +521,13 @@
 		filter: drop-shadow(0 0 10px black);
 		z-index: 3;
 	}
-	#googgo div {display: flex;}
 	#googgo a {background: none !important;}
+	#hitcount {
+		background: linear-gradient(90deg, #75f8e3 0%, #75f89c 100%);
+		background-clip: text;
+		color: transparent;
+		text-shadow: 0 0 15px #75f8e380;
+	}
 	#mainsection {
 		background-color: #051f22;
 		color: #94f1ff;
@@ -568,21 +573,7 @@
 	::-webkit-scrollbar-thumb {background: linear-gradient(45deg, blue 0%, red 100%);}
 	.mobileVisible {display: none;}
 	/* i hate my life and i wanan die, i aint got no iphone */
-	@media only screen and (min-width: 900px) {
-		#hiSide {
-			display: flex;
-			width: 200px;
-		}
-		#hitcount {
-			text-orientation: sideways;
-			writing-mode: tb;
-			background: linear-gradient(180deg, #75f8e3 0%, #75f89c 100%);
-			background-clip: text;
-			color: transparent;
-			text-shadow: 0 0 15px #75f8e380;
-		}
-		#visitorcount {width: 40px;}
-	}
+	/* @media only screen and (min-width: 900px) {} */
 	/* wow iphone */
 	@media only screen and (max-width: 900px) {
 		#flex, aside {flex-wrap: wrap;}
@@ -1025,23 +1016,23 @@
 					<iframe src="resources/widgets/home/np.html" id="scrobbleWidget" scrolling="no"></iframe>
 				</div>
 			</div>
-			<div id="hiSide">
-				<div class="sidebox" style="--side-bg: #00201c99; --side-text: #75f8e3; --side-border: #55dbc7; overflow: visible; margin: 0 10px 0 0;" id="visitorcount">
-					<div class="sidebox-content middleBoy" id="googgo" style="flex-wrap: wrap; padding: 2px;">
-						<p class="nomarblock" style="font-size: 12px;">Visitor</p>
-						<p class="nomarblock headText" id="hitcount" style="font-size: 35px;">00000</p>
-					</div>
+			<div class="sidebox" style="--side-bg: #00201c99; --side-text: #75f8e3; --side-border: #55dbc7;" id="visitorcount">
+				<div class="sidehead" style="color: #83d5c6;">
+					<p style="background: linear-gradient(90deg, #005047 0%, #00502b 100%);">ViSiTOR #</p>
 				</div>
-				<div class="sidebox" id="lastUpdated" style="overflow: visible; margin: 0; --side-border: #f5ddda;">
-					<div class="sidehead" style="display: flex; color: #f5ddda;">
-						<p style="display: inline-block; padding-left: 4px; background: linear-gradient(90deg, #534341 0%, #665949 100%);">UPDATED</p>
-					</div>
-					<div class="sidebox-content" style="text-align: center; padding: 0;">
-						<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;"></p>
-						<p class="headText nomarblock" id="upDate" style="background-color: #ede0dd; color: #201a19; font-size: 50px;"></p>
-						<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;"></p>
-						<script src="resources/widgets/home/lastupdate.js"></script>
-					</div>
+				<div class="sidebox-content middleBoy" id="googgo" style="flex-wrap: wrap; padding: 2px;">
+					<p class="nomarblock headText" id="hitcount" style="font-size: 35px;">00000</p>
+				</div>
+			</div>
+			<div class="sidebox" id="lastUpdated" style="overflow: visible; margin: 0; --side-border: #f5ddda;">
+				<div class="sidehead" style="display: flex; color: #f5ddda;">
+					<p style="display: inline-block; padding-left: 4px; background: linear-gradient(90deg, #534341 0%, #665949 100%);">UPDATED</p>
+				</div>
+				<div class="sidebox-content" style="text-align: center; padding: 0;">
+					<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;"></p>
+					<p class="headText nomarblock" id="upDate" style="background-color: #ede0dd; color: #201a19; font-size: 50px;"></p>
+					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;"></p>
+					<script src="resources/widgets/home/lastupdate.js"></script>
 				</div>
 			</div>
 			<div class="sidebox" style="--side-bg: #001f23cc; --side-text: #8ef2ff; --side-border: #4ed8e8;" id="side-flood">
