@@ -521,8 +521,13 @@
 		filter: drop-shadow(0 0 10px black);
 		z-index: 3;
 	}
-	#googgo div {display: flex;}
 	#googgo a {background: none !important;}
+	#hitcount {
+		background: linear-gradient(90deg, #75f8e3 0%, #75f89c 100%);
+		background-clip: text;
+		color: transparent;
+		text-shadow: 0 0 15px #75f8e380;
+	}
 	#mainsection {
 		background-color: #051f22;
 		color: #94f1ff;
@@ -547,16 +552,6 @@
 		filter: blur(25px);
 		object-fit: cover;
 	}
-	#sepbut {display: flex !important;}
-	#sepbut img {filter: grayscale(1);}
-	#sepbut::after {
-		content: '404';
-		position: absolute;
-		font-family: 'Martian Mono', monospace;
-		font-size: 18px;
-		text-shadow: red 2px 0 0, blue -2px 0 0;
-		color: black;
-	}
 	@keyframes glowy {
 		0%{box-shadow: 0px 0px 200px 50px rgba(0, 255, 161, 0.75); border: 1px solid rgba(0, 255, 161);}
 		50%{box-shadow: 0px 0px 200px 50px rgba(0, 126, 255, 0.75); border: 1px solid rgb(0, 126, 255);}
@@ -568,21 +563,7 @@
 	::-webkit-scrollbar-thumb {background: linear-gradient(45deg, blue 0%, red 100%);}
 	.mobileVisible {display: none;}
 	/* i hate my life and i wanan die, i aint got no iphone */
-	@media only screen and (min-width: 900px) {
-		#hiSide {
-			display: flex;
-			width: 200px;
-		}
-		#hitcount {
-			text-orientation: sideways;
-			writing-mode: tb;
-			background: linear-gradient(180deg, #75f8e3 0%, #75f89c 100%);
-			background-clip: text;
-			color: transparent;
-			text-shadow: 0 0 15px #75f8e380;
-		}
-		#visitorcount {width: 40px;}
-	}
+	/* @media only screen and (min-width: 900px) {} */
 	/* wow iphone */
 	@media only screen and (max-width: 900px) {
 		#flex, aside {flex-wrap: wrap;}
@@ -699,8 +680,8 @@
 					<div class="sidebox-content">
 						<div id="fri1">
 							<div class="dabuttons">
-							<a href="https://sep.neocities.org/" target="_blank" id="sepbut" class="middleBoy"><img src="interests/websites/img/button/sep.gif"></a>
-							<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
+								<a href='https://char42.neocities.org' target="_blank"><img src="interests/websites/img/button/naybor/char42.png" loading="lazy"></a>
+								<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
 							</div>
 						</div>
 						<div id="fri2">
@@ -873,7 +854,7 @@
 			</div>
 			<div class="blox" style="background-color: #141f00ab; color: #d4ec9d; border-color: #b3ff00;">
 				<h3>iM ON ARTFiGHT!</h3>
-				<p>i am on team seafoam! i will try to attack everyone that i can back! if you would like to follow me, use this link</p>
+				<p>i am on team seafoam! i will try to attack everyone that i can back (not a guarantee)! if you would like to follow me, use this link</p>
 				<a href="https://artfight.net/~wiichicken" target="_blank" class="noBg"><button class="bring">ARTFiGHT PROFiLE</button></a>
 			</div>
 			<div class="blox" style="padding: 0; display: flex; border-color: #f6be14; background-color: #352500ab">
@@ -917,7 +898,6 @@
 					</li>
 					<li>dig through my bookmarks to add to the directory</li>
 					<li>make a guestbook archive</li>
-
 				</ul>
 				<p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
 			</div>
@@ -947,13 +927,19 @@
 			<div class="blox" id="whatsheader" style="border: 1px solid #3978c6;">
 				<div class="accordion">
 					<h2 class="gradientText" style="background: linear-gradient(90deg, rgba(193,232,255,1) 0%, rgba(229,222,255,1) 100%);">siteUpdates</h2>
-					<h3 style="margin: 0; font-size: 15px;"><strong>AND, WERE BACK</strong></h3>
-					<p style="margin-top: 0; margin-bottom: 2px;"><strong>July 14, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
+					<h3 style="margin: 0; font-size: 15px;"><strong>12:00:21</strong></h3>
+					<p style="margin-top: 0; margin-bottom: 2px;"><strong>July 21, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
 				</div>
 				<div class="panel">
-					<h2 style="margin-bottom: 2px;">AND, WERE BACK</h2>
-					<p id="updatedate">July 14, 2024</p>
-					<p>after not updating last week, we return to your regularly scheduled programming. all that's new are really some styling changes, and some secrets... if you know where to look</p>
+					<h2 style="margin-bottom: 2px;">12:00:21</h2>
+					<p id="updatedate">July 21, 2024</p>
+					<p>do you like the name of this update? i named it that because that is the time as of me writing the title.</p>
+					<ul>
+						<li>wrote a new article for the first time in forever. tyhats a song from frozen i think</li>
+						<li>a little update for the website graveyard</li>
+						<li>since im approaching visitor #100,000, i had to adjust the look of the visitor count widget because it would not fit 6 digits</li>
+					</ul>
+					<p>is it normal to vomit string</p>
 				</div>
 			</div>
 			<script>
@@ -1026,23 +1012,23 @@
 					<iframe src="resources/widgets/home/np.html" id="scrobbleWidget" scrolling="no"></iframe>
 				</div>
 			</div>
-			<div id="hiSide">
-				<div class="sidebox" style="--side-bg: #00201c99; --side-text: #75f8e3; --side-border: #55dbc7; overflow: visible; margin: 0 10px 0 0;" id="visitorcount">
-					<div class="sidebox-content middleBoy" id="googgo" style="flex-wrap: wrap; padding: 2px;">
-						<p class="nomarblock" style="font-size: 12px;">Visitor</p>
-						<p class="nomarblock headText" id="hitcount" style="font-size: 35px;">00000</p>
-					</div>
+			<div class="sidebox" style="--side-bg: #00201c99; --side-text: #75f8e3; --side-border: #55dbc7;" id="visitorcount">
+				<div class="sidehead" style="color: #83d5c6;">
+					<p style="background: linear-gradient(90deg, #005047 0%, #00502b 100%);">ViSiTOR #</p>
 				</div>
-				<div class="sidebox" id="lastUpdated" style="overflow: visible; margin: 0; --side-border: #f5ddda;">
-					<div class="sidehead" style="display: flex; color: #f5ddda;">
-						<p style="display: inline-block; padding-left: 4px; background: linear-gradient(90deg, #534341 0%, #665949 100%);">UPDATED</p>
-					</div>
-					<div class="sidebox-content" style="text-align: center; padding: 0;">
-						<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;"></p>
-						<p class="headText nomarblock" id="upDate" style="background-color: #ede0dd; color: #201a19; font-size: 50px;"></p>
-						<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;"></p>
-						<script src="resources/widgets/home/lastupdate.js"></script>
-					</div>
+				<div class="sidebox-content middleBoy" id="googgo" style="flex-wrap: wrap; padding: 2px;">
+					<p class="nomarblock headText" id="hitcount" style="font-size: 35px;">00000</p>
+				</div>
+			</div>
+			<div class="sidebox" id="lastUpdated" style="overflow: visible; margin: 0; --side-border: #f5ddda;">
+				<div class="sidehead" style="display: flex; color: #f5ddda;">
+					<p style="display: inline-block; padding-left: 4px; background: linear-gradient(90deg, #534341 0%, #665949 100%);">UPDATED</p>
+				</div>
+				<div class="sidebox-content" style="text-align: center; padding: 0;">
+					<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;"></p>
+					<p class="headText nomarblock" id="upDate" style="background-color: #ede0dd; color: #201a19; font-size: 50px;"></p>
+					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;"></p>
+					<script src="resources/widgets/home/lastupdate.js"></script>
 				</div>
 			</div>
 			<div class="sidebox" style="--side-bg: #001f23cc; --side-text: #8ef2ff; --side-border: #4ed8e8;" id="side-flood">
