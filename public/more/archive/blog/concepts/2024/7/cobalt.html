@@ -19,13 +19,15 @@
 </head>
 <body>
 	<main>
-		<h1>cobalt minus cat</h1>
-		<div>
+		<div id="maincontrols">
 			<input type="text" id="dl-url" name="dl">
 			<button onclick="submitReply();">Download</button>
 			<div>
 				<button onclick="toggleAudio();" id="toggle-audio" class="is-video">downloading as video</button>
 			</div>
+		</div>
+		<div id="dl-confirm" style="display: none;">
+			<h2>downloading...</h2>
 		</div>
 	</main>
 	<script>
@@ -39,7 +41,8 @@
 				method: "POST",
 				body: JSON.stringify({ 
 					url: document.getElementById('dl-url').value,
-					isAudioOnly: audioOnly
+					isAudioOnly: audioOnly,
+					filenamePattern: 'nerdy'
 				}),
 				headers: leHeader,
 			});
@@ -62,6 +65,18 @@
 				toggleAudioButton.innerHTML = 'downloading as video';
 			}
 		}
+		async function setMainFrame() {
+			let params = new URLSearchParams(window.location.search);
+			let page = params.get('dl');
+			if (page === 'true') {
+				let isAudio = params.get('audio') === 'true';
+				document.getElementById('dl-url').value = params.get('url');
+				document.getElementById('maincontrols').style.display = 'none';
+				document.getElementById('dl-confirm').style.display = 'block';
+				submitReply();
+			}
+		}
+		setMainFrame();
 	</script>
 </body>
 </html>
