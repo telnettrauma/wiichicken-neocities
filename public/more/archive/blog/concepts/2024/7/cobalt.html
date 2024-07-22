@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>video downloader</title>
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/style.css" rel="stylesheet">
+	<meta charset="UTF-8">
+</head>
+<body>
+	<main>
+		<h1>cobalt minus cat</h1>
+		<div>
+			<input type="text" id="dl-url" name="dl">
+			<button onclick="submitReply();">Download</button>
+		</div>
+	</main>
+	<script>
+		const leHeader = new Headers();
+		leHeader.append("Accept", "application/json");
+		leHeader.append("Content-Type", "application/json");
+		let response;
+		async function submitReply() {
+			response = await fetch('https://api.cobalt.tools/api/json/', {
+				method: "POST",
+				body: JSON.stringify({ url: document.getElementById('dl-url').value }),
+				headers: leHeader,
+			});
+		}
+	</script>
+</body>
+</html>
