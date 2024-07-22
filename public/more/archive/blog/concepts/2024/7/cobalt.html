@@ -6,6 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/style.css" rel="stylesheet">
 	<meta charset="UTF-8">
+	<style>
+		.is-video {
+			background-color: #dfb8f7;
+			color: #412356;
+		}
+		.is-audio {
+			background-color: #f6bc70;
+			color: #462a00;
+		}
+	</style>
 </head>
 <body>
 	<main>
@@ -13,6 +23,9 @@
 		<div>
 			<input type="text" id="dl-url" name="dl">
 			<button onclick="submitReply();">Download</button>
+			<div>
+				<button onclick="toggleAudio();" id="toggle-audio" class="is-video">downloading as video</button>
+			</div>
 		</div>
 	</main>
 	<script>
@@ -20,12 +33,34 @@
 		leHeader.append("Accept", "application/json");
 		leHeader.append("Content-Type", "application/json");
 		let response;
+		let audioOnly = false;
 		async function submitReply() {
 			response = await fetch('https://api.cobalt.tools/api/json/', {
 				method: "POST",
-				body: JSON.stringify({ url: document.getElementById('dl-url').value }),
+				body: JSON.stringify({ 
+					url: document.getElementById('dl-url').value,
+					isAudioOnly: audioOnly
+				}),
 				headers: leHeader,
 			});
+			var parsedJSON = await response.json();
+			downloadUrl(parsedJSON.url);
+		}
+		function downloadUrl(url) {
+			var link = document.createElement('a');
+			link.href = url;
+			link.click();
+		}
+		function toggleAudio() {
+			const toggleAudioButton = document.getElementById('toggle-audio');
+			toggleAudioButton.classList.toggle('is-audio');
+			if (toggleAudioButton.classList.contains('is-audio')) {
+				audioOnly = true;
+				toggleAudioButton.innerHTML = 'downloading as audio';
+			} else {
+				audioOnly = false;
+				toggleAudioButton.innerHTML = 'downloading as video';
+			}
 		}
 	</script>
 </body>
