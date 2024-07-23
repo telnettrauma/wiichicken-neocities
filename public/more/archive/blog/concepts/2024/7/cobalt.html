@@ -7,24 +7,62 @@
 	<link href="/style.css" rel="stylesheet">
 	<meta charset="UTF-8">
 	<style>
+		body {
+			background-color: #101417;
+			color: #e0e3e8;
+		}
+		#maincontrols {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			min-height: 80vh;
+		}
+		#header, footer {min-height: 10vh;}
+		#control-center {min-height: 60vh;}
+		button {
+			background-color: var(--button-bg);
+			color: var(--button-fg);
+			border: 1px solid var(--button-border);
+			box-shadow: 2px 2px 0 0 var(--button-border);
+			margin-top: 3px;
+		}
+		button:hover {
+			box-shadow: 1px 1px 0 0 var(--button-border);
+			transform: translate(1px, 1px);
+		}
+		button:active {
+			box-shadow: none;
+			transform: translate(2px, 2px);
+		}
 		.is-video {
-			background-color: #dfb8f7;
-			color: #412356;
+			--button-fg: #dfb8f7;
+			--button-bg: #412356;
+			--button-border: #9500ff;
 		}
 		.is-audio {
-			background-color: #f6bc70;
-			color: #462a00;
+			--button-fg: #f6bc70;
+			--button-bg: #462a00;
+			--button-border: #ff9100;
 		}
 	</style>
 </head>
 <body>
 	<main>
 		<div id="maincontrols">
-			<input type="text" id="dl-url" name="dl">
-			<button onclick="submitReply();">Download</button>
-			<div>
-				<button onclick="toggleAudio();" id="toggle-audio" class="is-video">downloading as video</button>
+			<div id="header">
+				<h1>ViDEO DOWNLOADER</h1>
 			</div>
+			<div id="control-center">
+				<input type="text" id="dl-url" name="dl">
+				<button onclick="submitReply();">Download</button>
+				<div>
+					<button onclick="toggleAudio();" id="toggle-audio" class="is-video">downloading as video</button>
+				</div>
+			</div>
+			<footer>
+				<p>Powered by <a href="https://cobalt.tools" target="_blank">Cobalt</a> (<a href="https://github.com/imputnet/cobalt" target="_blank">GitHub</a>)</p>
+			</footer>
 		</div>
 		<div id="dl-confirm" style="display: none;">
 			<h2>downloading...</h2>
