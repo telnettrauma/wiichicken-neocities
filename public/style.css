@@ -4,13 +4,20 @@
 body {
 	margin: 0;
 	font-family: 'PT Sans', sans-serif;
-	background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2));
-	background-color: var(--bg-1);
+	background-color: black;
 	cursor: url(/media/home/cursor.png), default;
 }
 main {
+	background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2));
 	max-width: 600px;
 	margin: auto;
+	background-image: url('/starry.gif');
+	padding: 10px;
+	border: 1px solid var(--bg-1);
+	background-color: var(--bg-1);
+	border-radius: 20px;
+	overflow: hidden;
+	margin-bottom: 10px;
 }
 h1, h2, h3, h4, h5, h6 {font-family: 'Martian Mono', monospace;}
 a {
@@ -61,7 +68,7 @@ button {
 }
 .noline::after {display: none;}
 #chewTooth {
-	position: fixed;
+	/* position: fixed; */
 	left: 0;
 	top: 0;
 	z-index: -1;
@@ -106,7 +113,6 @@ button {
 .footer {
 	background: linear-gradient(45deg, var(--bg-2) 0%, var(--bg-1) 100%);
 	padding: 1px;
-	margin-bottom: 10px;
 }
 .inner-footer {
 	background-color: black;
@@ -313,6 +319,7 @@ button {
 /* other */
 @media only screen and (min-width: 650px) {
 	#sideButton, #overSide {display: none !important;}
+	main {box-shadow: 0 0 100px 0 var(--bg-1);}
 }
 @media only screen and (max-width: 650px) {
 	#poopBlock {display: none;}
