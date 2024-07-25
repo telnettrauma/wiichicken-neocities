@@ -72,16 +72,16 @@ button {
 	mix-blend-mode: luminosity;
 	image-rendering: pixelated;
 }
-.page-top {border-radius: 10px 10px 0 0;}
-.page-bottom {border-radius: 0 0 10px 10px;}
-.sec-tl {border-radius: 5px 0 0 0;}
-.sec-tr {border-radius: 0 5px 0 0;}
-.sec-br {border-radius: 0 0 5px 0;}
-.sec-bl {border-radius: 0 0 0 5px;}
-.sec-l {border-radius: 5px 0 0 5px;}
-.sec-r {border-radius: 0 5px 5px 0;}
-.sec-t {border-radius: 5px 5px 0 0;}
-.sec-b {border-radius: 0 0 5px 5px;}
+.page-top {border-radius: 10px 10px 2px 2px !important;}
+.page-bottom {border-radius: 2px 2px 10px 10px !important;}
+.sec-tl {border-radius: 5px 2px 2px 2px !important;}
+.sec-tr {border-radius: 2px 5px 2px 2px !important;}
+.sec-br {border-radius: 2px 2px 5px 2px !important;}
+.sec-bl {border-radius: 2px 2px 2px 5px !important;}
+.sec-l {border-radius: 5px 2px 2px 5px !important;}
+.sec-r {border-radius: 2px 5px 5px 2px !important;}
+.sec-t {border-radius: 5px 5px 2px 2px !important;}
+.sec-b {border-radius: 2px 2px 5px 5px !important;}
 .sec-full {border-radius: 5px;}
 @supports (animation-timeline: view()) {
 	@keyframes scrolly {

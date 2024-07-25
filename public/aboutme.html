@@ -84,13 +84,12 @@
 				overflow: hidden;
 			}
 			h2, h3 {margin-bottom: 5px;}
-			.row .blox {
-				margin-bottom: 5px;
-			}
-			.blox {
+			.row .blox {margin-bottom: 5px;}
+			.blox, h3 {
 				box-shadow: none;
 				background-color: #151b2ccc;
 				color: #dde2f9;
+				border-radius: 2px;
 			}
 			.auto {flex-wrap: nowrap !important;}
 			#links {margin-right: 2px;}
@@ -249,7 +248,7 @@
 		<div id="chewTooth"></div>
 		<div id="getPaid" style="width: 100%; height: 100%; margin: 10px; max-width: 98vw; max-height: 95vh;">
 			<div id="scatterbox" class="doTheThing">
-				<p>W</p>
+				<p class="sec-l">W</p>
 				<p style="background-color: #410E0B; color: red; border-color: red;">i</p>
 				<p style="background-color: #001e2e; color: #86cfff; border-color: #86cfff;">i</p>
 				<p>C</p>
@@ -258,7 +257,7 @@
 				<p>C</p>
 				<p>K</p>
 				<p>E</p>
-				<p>N</p>
+				<p class="sec-r">N</p>
 			</div>
 		</div>
 		<div id="helloGames">
@@ -286,26 +285,24 @@
 			</table>
 			<div class="main">
 				<div class="row" style="display: grid; gap: 5px;" id="theGoofyRow">
-					<div class="blox hideMob" style="padding: 0; display: flex; width: 250px; grid-column: 1/2; grid-row: 1/2;">
+					<div class="blox hideMob sec-tl" style="padding: 0; display: flex; width: 250px; grid-column: 1/2; grid-row: 1/2;">
 						<img src="resources/about/img/hello.png" style="image-rendering: pixelated;">
 					</div>
 					<div class="auto" style="grid-column: 2/3; grid-row: 1/2;">
-						<h2 id="aboutme">ME</h2>
+						<h2 id="aboutme" class="sec-tr">ME</h2>
 						<div class="blox">
 							<p>Hello, my name is WiiCHiCKEN. The name comes from when my friend sent me this picture with just the caption "wii chicken":</p>
 						</div>
-						<div class="blox" style="padding: 0;">
-							<img src="https://i.ytimg.com/vi/mTRyL5Kl8zg/maxresdefault.jpg" style="width: 100%;" loading="lazy">
-						</div>
+						<img src="https://i.ytimg.com/vi/mTRyL5Kl8zg/maxresdefault.jpg" style="width: 100%; border: 1px solid #dde2f9;" loading="lazy">
 						<div class="blox">
 							<p>The styilization of my name (capitilizing every letter except for "i") was inspired by "LiDAR", because I thought it looked cool.</p>
 						</div>
 					</div>
 				</div>
-				<div class="blox">
+				<div class="blox sec-b">
 					<p>I am from American.<br>I have been interested in technology for almost my whole life, ever since I got my first Windows XP laptop when I was, I don't know, 7? I used that laptop to make PowerPoint presentations, check the weather online, read my email, listen to the huge iTunes library my father gave me (remember when you didn't have to pay for iTunes Radio?), watch Minecraft videos, and look at Magic: The Gathering cards. Unrestricted internet access did not completely ruin me as a person, like it did for everyone else. <img src="media/emoji/bulge.gif" alt=""></p>
 				</div>
-				<div class="blox" id="buttons">
+				<div class="blox sec-full" id="buttons">
 					<img src="resources/about/img/butt/markdown.png" loading="lazy">
 					<img src="resources/about/img/butt/nonazi.gif" loading="lazy">
 					<img src="resources/about/img/butt/1920.gif" loading="lazy">
@@ -318,7 +315,7 @@
 					<img src="resources/about/img/butt/ezgif.gif" loading="lazy">
 					<a href="https://monkeytype.com/profile/WiCKEN" target="_blank"><img src="resources/about/img/butt/132wpm.png" loading="lazy" alt="132 best wpm"></a>
 				</div>
-				<h2><img src="media/emoji/heart.gif" style="height: 30px;">HOBBiES</h2>
+				<h2 class="sec-t"><img src="media/emoji/heart.gif" style="height: 30px;">HOBBiES</h2>
 				<div class="blox" style="margin-bottom: 5px;">
 					<p>Unfourtanately, I don't have too many hobbies. <img src="media/emoji/eh.gif" alt=""> I was born with aspburgers (I have spelled it assburgers my whole life), and as apart of that, I feel like I don't really have many hobbies, except for ones I picked up when I was young.</p>
 				</div>
@@ -340,10 +337,10 @@
 						<img class="blurry" src="resources/about/img/lazymap.png" width="150" height="150" style="filter: blur(10px);">
 					</div>
 				</div>
-				<div class="blox">
+				<div class="blox sec-b">
 					<p><img src="media/emoji/note.gif"> <strong>listening to music</strong> - I really like listening to music. I try to listen to a large variety of genres. You can check my last.fm or Rate Your Music if you want to, or you can view the music pages I have on this site</p>
 				</div>
-				<h2><img src="media/emoji/star.gif">FAVORiTES</h2>
+				<h2 class="sec-t"><img src="media/emoji/star.gif">FAVORiTES</h2>
 				<div class="blox">
 					<p>you can find more of my interests on the <a href="interests/index.html">interests</a> page. these aren't in any particular order, btw.</p>
 				</div>
@@ -374,7 +371,7 @@
 				</div>
 				<h3>MUSiC</h3>
 				<div class="row" style="flex-wrap: nowrap; margin-bottom: 5px;">
-					<div class="blox yourMarginSucks">
+					<div class="blox yourMarginSucks sec-bl">
 						<h4><img src="media/emoji/note.gif">ARTiSTS</h4>
 						<ul>
 							<li><a href="https://www.last.fm/music/Pond" target="_blank">POND</a></li>
@@ -384,7 +381,7 @@
 							<li><a href="https://www.last.fm/music/Mike" target="_blank">MIKE</a></li>
 						</ul>
 					</div>
-					<div class="blox">
+					<div class="blox sec-br">
 						<h4><img src="media/emoji/microphone.gif">SONGS</h4>
 						<p>you can also find an archive of my favorite songs on my <a href="https://www.last.fm/user/wiichicken/obsessions" target="_blank">last.fm obsessions</a> page or on this site's <a href="/interests/music/favsongs.html">favorite songs</a> page.</p>
 						<ul>
@@ -398,34 +395,34 @@
 						</ul>
 					</div>
 				</div>
-				<h2 id="follow">FOLLOW ME</h2>
+				<h2 id="follow" class="sec-t">FOLLOW ME</h2>
 				<div class="blox">
 					<p>in case you need more of me in your life, for some reason</p>
 				</div>
 				<div class="row" id="links">
-					<a href="https://www.youtube.com/channel/UCBfjBEKsW8ChxbX3MEGrx2Q" target="_blank" style="background-color: #410000; color: #ffdad4; --link-color: red;">youtube</a>
+					<a href="https://www.youtube.com/channel/UCBfjBEKsW8ChxbX3MEGrx2Q" target="_blank" style="background-color: #410000; color: #ffdad4; --link-color: red;" class="sec-bl">youtube</a>
 					<a href="https://www.last.fm/user/wiichicken" target="_blank" style="background-color: #410E0B; color: #F2B8B5; --link-color: red;">last.fm</a>
 					<a href="https://neocities.org/site/wiichicken" target="_blank" style="background-color: #2c1600; color: #ffdcbd; --link-color: orange;">neocities</a>
 					<a href="https://letterboxd.com/wiichicken/" target="_blank" style="background-color: #002106; color: #6cff80; --link-color: #6cff80;">letterboxd</a>
-					<a href="https://www.backloggd.com/u/wiichicken/" target="_blank" style="background-color: #3f001b; color: #ffd9e1; --link-color: #ea377a;">backloggd</a>
+					<a href="https://www.backloggd.com/u/wiichicken/" target="_blank" style="background-color: #3f001b; color: #ffd9e1; --link-color: #ea377a;" class="sec-br">backloggd</a>
 				</div>
-				<h2 id="contact">CONTACT ME</h2>
-				<div class="blox">
+				<h2 id="contact" class="sec-t">CONTACT ME</h2>
+				<div class="blox sec-b">
 					<ul>
 						<li><strong>discord</strong>: @bbctwo (wiichicken#0040) <a href="https://discord.gg/aeYHWsw" target="_blank">server</a> (sam told me to add this link, but don't join it sucks)</li>
 						<li><strong>email</strong>: <a href="mailto:vimeoofficial@gmail.com" target="_blank">vimeoofficial@gmail.com</a></li>
 						<li><a href="https://neocities.org/site/wiichicken" target="_blank">neocities page</a></li>
 					</ul>
 				</div>
-				<h2 id="site">THiS SiTE</h2>
+				<h2 id="site" class="sec-t">THiS SiTE</h2>
 				<div class="blox">
 					<p>Cookie Clicker was the reason I discovered Neocities. The old school I attended blocked Cookie Clicker, but someone hosted the whole game on Neocities, albeit an older version. I got bored and decided to check the homepage of Neocities, and tried making another page for students to play games on at school. That page hasn't been lost to time, but rather lost to memory.<br>Recently I started getting really into website designing again. I found it is much more fun being able to have control of almost everything instead of just posting pictures and videos to a static feed. I hope that the content of my site makes up for the lack of effects and styling on it <img src="media/emoji/smile.gif"></p>
 					<p>I am hoping that soon this site can become a hub for my works and projects. I don't want things to be consistent across pages, I want it to be obvious how my design style has evolved (or devolved) over time (i have not been that good in doing this).</p>
 				</div>
-				<div class="blox">
+				<div class="blox sec-b">
 					<p>As much as I don't like big tech and social media, this site wasn't made as a big middle finger towards them. Instead, this site is a creation of my own. It's something that I can look at and say "I made this" with pride. I feel alot of people forget about that when they start making their own websites. Making websites as protest is cool, but making websites for fun is also cool. <img src="media/emoji/glasses.gif"> I highly recommend you read the <a href="https://sadgrl.online/cyberspace/internet-manifesto" target="_blank">sadgrl.online Internet Manifesto</a>, as I strongly agree with what it says.</p>
 				</div>
-				<h2 id="naq">NEVER ASKED QUESTiONS</h2>
+				<h2 id="naq" class="sec-t">NEVER ASKED QUESTiONS</h2>
 				<div class="row" id="qanda" style="margin-bottom: 10px;">
 					<div class="blox">
 						<p><strong>How can I contact you?</strong></p>
@@ -471,13 +468,13 @@
 						<p><strong>what up what you doing</strong></p>
 						<p>just watching my game. You?</p>
 					</div>
-					<div class="blox">
+					<div class="blox sec-b">
 						<p><strong>do yall got lap tops</strong></p>
 						<p>you mean, the players? Do they have laptops?</p>
 					</div>
 				</div>
-				<div class="footer">
-					<div class="inner-footer">
+				<div class="footer page-bottom">
+					<div class="inner-footer page-bottom">
 						<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
 						<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
 					</div>
