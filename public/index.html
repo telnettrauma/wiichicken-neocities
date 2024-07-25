@@ -120,6 +120,7 @@
 		font-family: 'Martian Mono', monospace;
 		font-size: 20px;
 		display: flex;
+		border-radius: 5px 5px 2px 2px;
 	}
 	.sidehead p {
 		background: linear-gradient(45deg, rgba(147,0,6,1) 0%, rgba(116,59,0,1) 100%);
@@ -127,11 +128,13 @@
 		margin-block-end: 0;
 		padding-left: 3px;
 		width: 100%;
+		border-radius: 5px 5px 2px 2px;
 	}
 	.sidehead .helpbutt {margin-left: 2px;}
 	.sidebox-content {
 		padding: 5px;
 		background-color: var(--side-bg);
+		border-radius: 2px 2px 5px 5px;
 	}
 	.sidebox-content a:not(:has(img)) {
 		background-color: #ffb4aa;
@@ -147,6 +150,7 @@
 		float: right;
 		padding: 0px 5px 0 5px;
 		cursor: pointer;
+		border-radius: 2px;
 	}
 	#navlink {
 		width: 180px;
@@ -674,8 +678,8 @@
 			<div id="personSighted">
 				<div class="sidebox" id="frens" style="--side-bg: #29005599; --side-text: #eddcff; --side-border: #7d24e4;">
 					<div class="sidehead" style="color: #eddcff;">
-						<p style="background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(138,0,189,1) 100%);"><strong>FRiENDS</strong></p>
-						<span class="helpbutt" id="frihelp" onclick="flipTheScript('frihelp', 'frens', 'fri2', 'fri1', '#4b252d', '#f2b7c2')" style="color: #4b252d; background-color: #f2b7c2; border-color: #7f525b;">?</span>
+						<p style="background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(138,0,189,1) 100%); border-radius: 5px 2px 2px 2px;"><strong>FRiENDS</strong></p>
+						<span class="helpbutt" id="frihelp" onclick="flipTheScript('frihelp', 'frens', 'fri2', 'fri1', '#4b252d', '#f2b7c2')" style="color: #4b252d; background-color: #f2b7c2; border-color: #7f525b; border-radius: 2px 5px 2px 2px;">?</span>
 					</div>
 					<div class="sidebox-content">
 						<div id="fri1">
@@ -1033,8 +1037,8 @@
 			</div>
 			<div class="sidebox" style="--side-bg: #001f23cc; --side-text: #8ef2ff; --side-border: #4ed8e8;" id="side-flood">
 				<div class="sidehead">
-					<p style="background: linear-gradient(90deg, #006972 0%, #4a6366 100%); color: #98f5ff;"><strong>FLOOD</strong></p>
-					<a href="https://melonking.net/free/software/flood" target="_blank" class="helpbutt" id="flood-info" style="--side-border: #515e7d;">&#x1FAA3;</a>
+					<p style="background: linear-gradient(90deg, #006972 0%, #4a6366 100%); color: #98f5ff; border-radius: 5px 2px 2px 2px;"><strong>FLOOD</strong></p>
+					<a href="https://melonking.net/free/software/flood" target="_blank" class="helpbutt" id="flood-info" style="--side-border: #515e7d; border-radius: 2px 5px 2px 2px;">&#x1FAA3;</a>
 				</div>
 				<div class="sidebox-content" id="flood-inner" style="height: 100px; padding: 0; overflow: hidden;">
 					<link href="resources/widgets/home/flood/flood.css" rel="stylesheet" type="text/css" media="all"/>
