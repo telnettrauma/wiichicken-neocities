@@ -14,15 +14,15 @@
 				--main: #b3ebff;
 				--sub: #00677d;
 				--bg : #001f27;
-				--bg-1: #86d1ea;
-				--bg-2: #c1c4eb;
+				--bg-1: #00bfff;
+				--bg-2: #0011ff;
 				--dark-primary: #00bbff;
 				--dark-tertiary: #c1c4eb;
 				--dark-on-tertiary: #2b2e4d;
 			}
 			main {
 				max-width: 700px;
-				margin: auto;
+				margin: 10px;
 			}
 			.box {
 				border: 1px solid var(--accent);
@@ -35,43 +35,73 @@
 				margin-bottom: 10px;
 			}
 			#inHead {justify-content: center !important;}
+			#page {
+				display: flex;
+				margin: auto;
+				justify-content: center;
+			}
+			nav {
+				text-align: right;
+				color: #b4ebff;
+				position: sticky;
+			}
+			nav ul li {
+				display: block;
+			}
+			@media only screen and (max-width: 650px) {
+				nav {display: none;}
+			}
 		</style>
 		<div id="heightCheck"></div>
 		<div class="heading" id="poopBlock"></div>
 		<div id="sideButton" onclick="openSidey()"></div>
 		<div id="overSide"></div>
 		<div id="chewTooth"></div>
-		<main>
-			<div class="box">
-				<h1>NEOMALiES</h1>
-			</div>
-			<div class="box">
-				<p>ever find a website on neocities that clearly has a purpose, but you cannot figure out what it is? this is a page where i will try to find a backstory and context to these websites.</p>
-			</div>
-			<div class="box">
-				<h2>bbynews</h2>
-				<p>URL: <a href="https://bbynews.neocities.org" target="_blank">https://bbynews.neocities.org</a></p>
-				<p>bbynews is a news aggregator for news posts on 5channel, a bulletin board like fourm thats a sequel to 2channel. 5channel is basically the japanese version of 4chan. for more information about 5channel and 2channel, check out the <a href="https://en.wikipedia.org/wiki/2channel" target="_blank">wikipedia article</a>. on bbynews, you can click on a link to go to the 5channel post for it. it takes news posts from the following boards/categories:</p>
+		<div id="page">
+			<nav>
 				<ul>
-					<li>速 - breaking news</li>
-					<li>芸 - art and culture (entertainment, music, sports)</li>
-					<li>東 - east asian</li>
-					<li>ビ - business</li>
-					<li>科 - science</li>
-					<li>萌 - moe/otaku (okaku basically means "nerd")</li>
-					<li>政 - political</li>
-					<li>国 - international news from twitter</li>
-					<li>実 - commentary (the majority of posts are self-posts)</li>
-					<li>痛 - painful/emotional news</li>
+					<li><a href="#bbynews">bbynews</a></li>
+					<li><a href="#neofood">NeoFoodClub</a></li>
 				</ul>
-				<p>note that i am not fluent in japanese, so i had to use translation software and vibes, so these categories may not be 100% accurate</p>
-			</div>
-			<div class="box">
-				<h2>NeoFoodClub</h2>
-				<p>URL: <a href="https://foodclub.neocities.org" target="_blank">https://foodclub.neocities.org</a></p>
-				<p>NeoFoodClub is a tool for the <a href="https://youtu.be/4K-rzdZ3A4U" target="_blank">Food Club NeoPets</a> minigame. the minigame is basically a gambling game, where you can bet NeoPet currency (i obviously don't play neopets) on eating contests. this gives you an interface with more stats and advanced features, and then generates a link which you can use to place bets in the actual NeoPets game.</p>
-			</div>
-		</main>
+				<ul>
+					<li><a href="directory.html">directory</a></li>
+					<li><a href="downloads.html">external downloads</a></li>
+					<li><a href="app/iphone.html">iphone apps</a></li>
+					<li><a style="font-weight: bold;">neomalies</a></li>
+				</ul>
+			</nav>
+			<main>
+				<div class="box page-top">
+					<h1>NEOMALiES</h1>
+				</div>
+				<div class="box">
+					<p>ever find a website on neocities that clearly has a purpose, but you cannot figure out what it is? this is a page where i will try to find a backstory and context to these websites.</p>
+				</div>
+				<div class="box">
+					<h2 id="bbynews">bbynews</h2>
+					<p>URL: <a href="https://bbynews.neocities.org" target="_blank">https://bbynews.neocities.org</a></p>
+					<p>bbynews is a news aggregator for news posts on 5channel, a bulletin board like fourm thats a sequel to 2channel. 5channel is basically the japanese version of 4chan. for more information about 5channel and 2channel, check out the <a href="https://en.wikipedia.org/wiki/2channel" target="_blank">wikipedia article</a>. on bbynews, you can click on a link to go to the 5channel post for it. it takes news posts from the following boards/categories:</p>
+					<ul>
+						<li>速 - breaking news</li>
+						<li>芸 - art and culture (entertainment, music, sports)</li>
+						<li>東 - east asian</li>
+						<li>ビ - business</li>
+						<li>科 - science</li>
+						<li>萌 - moe/otaku (okaku basically means "nerd")</li>
+						<li>政 - political</li>
+						<li>国 - international news from twitter</li>
+						<li>実 - commentary (the majority of posts are self-posts)</li>
+						<li>痛 - painful/emotional news</li>
+					</ul>
+					<p>note that i am not fluent in japanese, so i had to use translation software and vibes, so these categories may not be 100% accurate</p>
+				</div>
+				<div class="box page-bottom" style="margin-bottom: 0;">
+					<h2 id="neofood">NeoFoodClub</h2>
+					<p>URL: <a href="https://foodclub.neocities.org" target="_blank">https://foodclub.neocities.org</a></p>
+					<p>NeoFoodClub is a tool for the <a href="https://youtu.be/4K-rzdZ3A4U" target="_blank">Food Club NeoPets</a> minigame. the minigame is basically a gambling game, where you can bet NeoPet currency (i obviously don't play neopets) on eating contests. this gives you an interface with more stats and advanced features, and then generates a link which you can use to place bets in the actual NeoPets game.</p>
+				</div>
+			</main>
+		</div>
 		<script src="/interests/intnav.js"></script>
 	</body>
 </html>
