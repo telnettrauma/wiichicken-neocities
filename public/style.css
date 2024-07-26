@@ -9,7 +9,7 @@ body {
 }
 main {
 	background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2));
-	max-width: 600px;
+	max-width: 610px;
 	margin: auto;
 	background-image: url('/starry.gif');
 	padding: 10px;
@@ -319,7 +319,7 @@ button {
 /* other */
 @media only screen and (min-width: 650px) {
 	#sideButton, #overSide {display: none !important;}
-	main {box-shadow: 0 0 100px 0 var(--bg-1);}
+	main {box-shadow: -20px -20px 100px 0 var(--bg-1), 20px 20px 100px 0 var(--bg-2);}
 }
 @media only screen and (max-width: 650px) {
 	#poopBlock {display: none;}
