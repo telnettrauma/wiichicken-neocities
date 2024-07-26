@@ -89,7 +89,7 @@ button {
 .sec-r {border-radius: 2px 5px 5px 2px !important;}
 .sec-t {border-radius: 5px 5px 2px 2px !important;}
 .sec-b {border-radius: 2px 2px 5px 5px !important;}
-.sec-full {border-radius: 5px;}
+.sec-full {border-radius: 5px !important;}
 @supports (animation-timeline: view()) {
 	@keyframes scrolly {
 		from {background-position-y: 0%;}

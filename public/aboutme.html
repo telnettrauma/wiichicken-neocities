@@ -62,12 +62,12 @@
 				margin: 3px;
 				padding: 0;
 			}
-			.main {
-				margin-left: 100px;
+			main {
+				max-width: 700px;
 				width: 700px;
 				margin: auto;
 			}
-			.main a {
+			main a {
 				background-color: #dfe0ff;
 				color: #404565;
 			}
@@ -113,11 +113,6 @@
 				margin: auto;
 				margin-top: 10px;
 				animation: whatTheBalls 2s;
-			}
-			@keyframes whatTheBalls {
-				0% {transform: translateY(100vh);}
-				50% {transform: translateY(100vh);}
-				100% {transform: translateY(0);}
 			}
 			.nomarblock {
 				margin-block-start: 0;
@@ -177,11 +172,6 @@
 				max-height: 95vh;
 				animation: iAmCool 2.5s;
 			}
-			@keyframes iAmCool {
-				0% {margin: 45vh 0 45vh 0;}
-				50% {margin: 45vh 0 45vh 0;}
-				100% {margin: 10px 10px 10px 10px;}
-			}
 			.doTheThing p {
 				position: relative;
 				background-color: #333333cc;
@@ -198,6 +188,7 @@
 				animation: doTheEffect 1s;
 				transition-duration: 0.15s;
 				opacity: 0.7;
+				border-radius: 2px;
 			}
 			#scatterbox p:hover {
 				margin: 0 1vw 0 1vw;
@@ -212,7 +203,7 @@
 			.yourMarginSucks {margin-right: 5px;}
 			@media only screen and (max-width: 1050px) {
 				.sidebar {position: static;}
-				article, .row, #helloGames, .main, .blox, header, #qanda .blox {width: -webkit-fill-available;}
+				article, .row, #helloGames, main, .blox, header, #qanda .blox {width: -webkit-fill-available;}
 				.row {
 					flex-wrap: wrap;
 					flex-direction: column;
@@ -221,7 +212,7 @@
 				.row .blox {width: auto;}
 				.yourMarginSucks {margin-right: 0 !important;}
 				#theGoofyRow {display: flex !important;}
-				.main {
+				main {
 					display: flex;
 					flex-wrap: wrap;
 				}
@@ -236,7 +227,7 @@
 			@media (prefers-reduced-motion) {
 				* {animation: none !important;}
 				#buttonbar {display: none;}
-				.main {width: 615px;}
+				main {width: 615px;}
 			}
 		</style>
 		<div id="heightCheck"></div>
@@ -283,13 +274,13 @@
 					</td>
 				</tr>
 			</table>
-			<div class="main">
+			<main>
 				<div class="row" style="display: grid; gap: 5px;" id="theGoofyRow">
-					<div class="blox hideMob sec-tl" style="padding: 0; display: flex; width: 250px; grid-column: 1/2; grid-row: 1/2;">
+					<div class="blox hideMob" style="padding: 0; display: flex; width: 250px; grid-column: 1/2; grid-row: 1/2; border-radius: 10px 2px 2px 2px;">
 						<img src="resources/about/img/hello.png" style="image-rendering: pixelated;">
 					</div>
 					<div class="auto" style="grid-column: 2/3; grid-row: 1/2;">
-						<h2 id="aboutme" class="sec-tr">ME</h2>
+						<h2 id="aboutme" style="border-radius: 2px 10px 2px 2px;">ME</h2>
 						<div class="blox">
 							<p>Hello, my name is WiiCHiCKEN. The name comes from when my friend sent me this picture with just the caption "wii chicken":</p>
 						</div>
