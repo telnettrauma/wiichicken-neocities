@@ -13,7 +13,10 @@ main {
 	margin: auto;
 	background-image: url('/starry.gif');
 	padding: 10px;
-	border: 1px solid var(--bg-1);
+	border-top: 1px solid var(--bg-1);
+	border-left: 1px solid var(--bg-1);
+	border-bottom: 1px solid var(--bg-2);
+	border-right: 1px solid var(--bg-2);
 	background-color: var(--bg-1);
 	border-radius: 20px;
 	overflow: hidden;
@@ -80,7 +83,7 @@ button {
 	image-rendering: pixelated;
 }
 .page-top {border-radius: 10px 10px 2px 2px !important;}
-.page-bottom {border-radius: 2px 2px 10px 10px !important;}
+.page-bottom {border-radius: 2px 2px 10px 10px !important; margin-bottom: 0 !important;}
 .sec-tl {border-radius: 5px 2px 2px 2px !important;}
 .sec-tr {border-radius: 2px 5px 2px 2px !important;}
 .sec-br {border-radius: 2px 2px 5px 2px !important;}
@@ -232,6 +235,9 @@ button {
 	font-size: 20px;
 	filter: contrast(1);
 }
+#s1 {background-color: red;}
+#s2 {background-color: #00a2ff;}
+
 #fakeLogo:active #s1 {margin-left: 12px;}
 #fakeLogo:active #s2 {margin-right: 10px !important;}
 .square {
