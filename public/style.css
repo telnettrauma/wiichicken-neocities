@@ -4,23 +4,50 @@
 body {
 	margin: 0;
 	font-family: 'PT Sans', sans-serif;
-	background-color: black;
+	background-color: var(--bg-1);
 	cursor: url(/media/home/cursor.png), default;
+	background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2));
 }
 main {
-	background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2));
 	max-width: 610px;
 	margin: auto;
-	background-image: url('/starry.gif');
 	padding: 10px;
-	border-top: 1px solid var(--bg-1);
+	/* border-top: 1px solid var(--bg-1);
 	border-left: 1px solid var(--bg-1);
 	border-bottom: 1px solid var(--bg-2);
-	border-right: 1px solid var(--bg-2);
-	background-color: var(--bg-1);
-	border-radius: 20px;
+	border-right: 1px solid var(--bg-2); */
+	/* border-radius: 20px; */
 	overflow: hidden;
 	margin-bottom: 10px;
+	position: relative;
+}
+main:before {
+	--p: 1;
+	--pixel: calc(var(--p) * 1px); /* don't change this */
+	--s: calc(var(--pixel) * 20); /* size of the cut. you can change the number on the right of the asterisk for a deeper or shallower cut */
+	content:"";
+	position:absolute;
+	inset:0;
+	z-index: -1;
+	background: linear-gradient(45deg,var(--bg-1),var(--bg-2));
+	--g1:#000 var(--pixel),#0000 0 calc(100% - var(--pixel)),#000 0;
+	--g2:#0000   calc(0.707*var(--s)), 
+				#000  0 calc(0.707*var(--s) + var(--pixel)),
+				#0000 0 calc(100% - 0.707*var(--s) - var(--pixel)),
+				#000  0 calc(100% - 0.707*var(--s)),
+				#0000 0;
+}
+main, main::before {
+	-webkit-mask:
+		linear-gradient(45deg ,var(--g2)),
+		linear-gradient(-45deg,var(--g2)),
+		linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+		linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
+	mask:
+		linear-gradient(45deg ,var(--g2)),
+		linear-gradient(-45deg,var(--g2)),
+		linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+		linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
 }
 h1, h2, h3, h4, h5, h6 {font-family: 'Martian Mono', monospace;}
 a {
@@ -38,13 +65,40 @@ button {
 }
 .box {
 	padding: 5px;
-	border: 1px solid var(--border);
+	/* border: 1px solid var(--border); */
 	color: var(--dark-on-primary-container);
 	background-color: var(--light-on-primary-container);
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
 	margin-bottom: 10px;
 	border-radius: 2px;
+	--p: 1;
+	--b-radius: 3;
+}
+.box:before {
+	--pixel: calc(var(--p) * 1px); /* don't change this */
+	--s: calc(var(--pixel) * var(--b-radius)); /* size of the cut. you can change the number on the right of the asterisk for a deeper or shallower cut */
+	content:"";
+	position:absolute;
+	inset:0;
+	z-index: -1;
+	background: linear-gradient(45deg,var(--border),var(--border));
+	--g1:#000 var(--pixel),#0000 0 calc(100% - var(--pixel)),#000 0;
+	--g2:#0000   calc(0.707*var(--s)), 
+				#000  0 calc(0.707*var(--s) + var(--pixel)),
+				#0000 0 calc(100% - 0.707*var(--s) - var(--pixel)),
+				#000  0 calc(100% - 0.707*var(--s)),
+				#0000 0;
+	-webkit-mask:
+		linear-gradient(45deg ,var(--g2)),
+		linear-gradient(-45deg,var(--g2)),
+		linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+		linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
+	mask:
+		linear-gradient(45deg ,var(--g2)),
+		linear-gradient(-45deg,var(--g2)),
+		linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+		linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
 }
 .box a:not(:has(img)) {
 	position: relative;
@@ -71,7 +125,7 @@ button {
 }
 .noline::after {display: none;}
 #chewTooth {
-	/* position: fixed; */
+	position: fixed;
 	left: 0;
 	top: 0;
 	z-index: -1;
@@ -325,7 +379,8 @@ button {
 /* other */
 @media only screen and (min-width: 650px) {
 	#sideButton, #overSide {display: none !important;}
-	main {box-shadow: -20px -20px 100px 0 var(--bg-1), 20px 20px 100px 0 var(--bg-2);}
+	/* main {box-shadow: -20px -20px 100px 0 var(--bg-1), 20px 20px 100px 0 var(--bg-2);} */
+	/* main {filter: drop-shadow(0 0 100px var(--bg-1));} */
 }
 @media only screen and (max-width: 650px) {
 	#poopBlock {display: none;}
