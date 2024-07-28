@@ -14,16 +14,11 @@ main {
 	--s-main: calc(var(--pixel) * 20); /* size of the cut. you can change the number on the right of the asterisk for a deeper or shallower cut */
 	max-width: 610px;
 	margin: auto;
-	background-image: url(button.gif);
 	padding: 10px;
-	/* border-top: 1px solid var(--bg-1);
-	border-left: 1px solid var(--bg-1);
-	border-bottom: 1px solid var(--bg-2);
-	border-right: 1px solid var(--bg-2); */
-	/* border-radius: 20px; */
 	overflow: hidden;
 	margin-bottom: 10px;
 	position: relative;
+	backdrop-filter: blur(5px);
 	clip-path: polygon(
 		var(--s-main) 0%, 
 		calc(100% - var(--s-main)) 0%, 
@@ -73,7 +68,7 @@ button {
 :root {
 	--p: 1;
 	--pixel: calc(var(--p) * 1px); /* don't change this */
-	--b-radius: 10;
+	--b-radius: 15;
   --s: calc(var(--pixel) * var(--b-radius));
 }
 .box {
@@ -146,9 +141,10 @@ button {
 	mix-blend-mode: luminosity;
 	image-rendering: pixelated;
 }
-.page-top {border-radius: 10px 10px 2px 2px !important;}
-.page-bottom {border-radius: 2px 2px 10px 10px !important; margin-bottom: 0 !important;}
-.sec-tl {border-radius: 5px 2px 2px 2px !important;}
+/* .page-top {border-radius: 10px 10px 2px 2px !important;}
+.page-bottom {border-radius: 2px 2px 10px 10px !important; margin-bottom: 0 !important;} */
+.page-bottom {margin-bottom: 0 !important;}
+/* .sec-tl {border-radius: 5px 2px 2px 2px !important;}
 .sec-tr {border-radius: 2px 5px 2px 2px !important;}
 .sec-br {border-radius: 2px 2px 5px 2px !important;}
 .sec-bl {border-radius: 2px 2px 2px 5px !important;}
@@ -156,7 +152,7 @@ button {
 .sec-r {border-radius: 2px 5px 5px 2px !important;}
 .sec-t {border-radius: 5px 5px 2px 2px !important;}
 .sec-b {border-radius: 2px 2px 5px 5px !important;}
-.sec-full {border-radius: 5px !important;}
+.sec-full {border-radius: 5px !important;} */
 @supports (animation-timeline: view()) {
 	@keyframes scrolly {
 		from {background-position-y: 0%;}
