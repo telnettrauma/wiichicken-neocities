@@ -9,8 +9,12 @@ body {
 	background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2));
 }
 main {
+	--p: 1;
+	--pixel: calc(var(--p) * 1px); /* don't change this */
+	--s-main: calc(var(--pixel) * 20); /* size of the cut. you can change the number on the right of the asterisk for a deeper or shallower cut */
 	max-width: 610px;
 	margin: auto;
+	background-image: url(button.gif);
 	padding: 10px;
 	/* border-top: 1px solid var(--bg-1);
 	border-left: 1px solid var(--bg-1);
@@ -20,34 +24,37 @@ main {
 	overflow: hidden;
 	margin-bottom: 10px;
 	position: relative;
+	clip-path: polygon(
+		var(--s-main) 0%, 
+		calc(100% - var(--s-main)) 0%, 
+		100% var(--s-main), 100% calc(100% - var(--s-main)), 
+		calc(100% - var(--s-main)) 100%, 
+		var(--s-main) 100%, 
+		0% calc(100% - var(--s-main)), 
+		0% var(--s-main));
 }
 main:before {
-	--p: 1;
-	--pixel: calc(var(--p) * 1px); /* don't change this */
-	--s: calc(var(--pixel) * 20); /* size of the cut. you can change the number on the right of the asterisk for a deeper or shallower cut */
 	content:"";
 	position:absolute;
 	inset:0;
 	z-index: -1;
 	background: linear-gradient(45deg,var(--bg-1),var(--bg-2));
 	--g1:#000 var(--pixel),#0000 0 calc(100% - var(--pixel)),#000 0;
-	--g2:#0000   calc(0.707*var(--s)), 
-				#000  0 calc(0.707*var(--s) + var(--pixel)),
-				#0000 0 calc(100% - 0.707*var(--s) - var(--pixel)),
-				#000  0 calc(100% - 0.707*var(--s)),
-				#0000 0;
-}
-main, main::before {
+	--g2:#0000   calc(0.707*var(--s-main)), 
+		#000  0 calc(0.707*var(--s-main) + var(--pixel)),
+		#0000 0 calc(100% - 0.707*var(--s-main) - var(--pixel)),
+		#000  0 calc(100% - 0.707*var(--s-main)),
+		#0000 0;
 	-webkit-mask:
-		linear-gradient(45deg ,var(--g2)),
-		linear-gradient(-45deg,var(--g2)),
-		linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
-		linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
-	mask:
-		linear-gradient(45deg ,var(--g2)),
-		linear-gradient(-45deg,var(--g2)),
-		linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
-		linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
+	linear-gradient(45deg ,var(--g2)),
+	linear-gradient(-45deg,var(--g2)),
+	linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s-main)) no-repeat,
+	linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s-main)) 100% no-repeat;
+mask:
+	linear-gradient(45deg ,var(--g2)),
+	linear-gradient(-45deg,var(--g2)),
+	linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s-main)) no-repeat,
+	linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s-main)) 100% no-repeat;
 }
 h1, h2, h3, h4, h5, h6 {font-family: 'Martian Mono', monospace;}
 a {
@@ -63,32 +70,35 @@ button {
 	margin-block-start: 0;
 	margin-block-end: 0;
 }
-.box {
-	padding: 5px;
-	/* border: 1px solid var(--border); */
-	color: var(--dark-on-primary-container);
-	background-color: var(--light-on-primary-container);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-	margin-bottom: 10px;
-	border-radius: 2px;
+:root {
 	--p: 1;
-	--b-radius: 3;
+	--pixel: calc(var(--p) * 1px); /* don't change this */
+	--b-radius: 10;
+  --s: calc(var(--pixel) * var(--b-radius));
+}
+.box {
+  padding: 5px;
+  color: var(--dark-on-primary-container);
+  background-color: var(--light-on-primary-container);
+  backdrop-filter: blur(5px);
+  position: relative;
+  -webkit-backdrop-filter: blur(5px);
+  margin-bottom: 10px;
+  overflow: hidden;
+	clip-path: polygon(var(--s) 0%, calc(100% - var(--s)) 0%, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, var(--s) 100%, 0% calc(100% - var(--s)), 0% var(--s));
 }
 .box:before {
-	--pixel: calc(var(--p) * 1px); /* don't change this */
-	--s: calc(var(--pixel) * var(--b-radius)); /* size of the cut. you can change the number on the right of the asterisk for a deeper or shallower cut */
 	content:"";
 	position:absolute;
 	inset:0;
 	z-index: -1;
-	background: linear-gradient(45deg,var(--border),var(--border));
+	background-color: var(--border);
 	--g1:#000 var(--pixel),#0000 0 calc(100% - var(--pixel)),#000 0;
 	--g2:#0000   calc(0.707*var(--s)), 
-				#000  0 calc(0.707*var(--s) + var(--pixel)),
-				#0000 0 calc(100% - 0.707*var(--s) - var(--pixel)),
-				#000  0 calc(100% - 0.707*var(--s)),
-				#0000 0;
+		#000  0 calc(0.707*var(--s) + var(--pixel)),
+		#0000 0 calc(100% - 0.707*var(--s) - var(--pixel)),
+		#000  0 calc(100% - 0.707*var(--s)),
+		#0000 0;
 	-webkit-mask:
 		linear-gradient(45deg ,var(--g2)),
 		linear-gradient(-45deg,var(--g2)),
