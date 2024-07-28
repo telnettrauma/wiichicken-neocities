@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
-	<title>Gamepad Vibration</title>
 	<meta name="robots" content="noindex">
 	<style>
 		* {box-sizing: border-box;}
@@ -226,7 +225,7 @@ function randomVibration(gamepad) {
 function heartbeatVibration(gamepad) {
 	const intensity = parseFloat(intensitySlider.value);
 	vibrate(gamepad, 1.0, 100);
-	setTimeout(() => vibrate(gamepad, intensity, 300), 300);
+	setTimeout(() => vibrate(gamepad, intensity, 200), 300);
 	setTimeout(() => vibrate(gamepad, 1.0, 100), 600);
 }
 function waveVibration(gamepad) {
@@ -272,9 +271,17 @@ function setVibrationMode(mode) {
 	vibrationMode = mode;
 	document.getElementById('selections').style.display = 'none';
 	document.getElementById('dropdownbutton').innerHTML = `MODE: ${mode}`;
+	const gamepad = navigator.getGamepads()[gamepadIndex];
+	if (gamepad && gamepad.vibrationActuator) {
+		if (vibrating) {
+			toggleVib();
+			toggleVib();
+		}
+	}
 }
 
-button.addEventListener('click', () => {
+button.addEventListener('click', () => {toggleVib();});
+function toggleVib() {
 	if (gamepadIndex !== null) {
 		const gamepad = navigator.getGamepads()[gamepadIndex];
 		if (gamepad && gamepad.vibrationActuator) {
@@ -294,8 +301,7 @@ button.addEventListener('click', () => {
 			vibrating = !vibrating;
 		} else {document.getElementById('main').classList = 'error';}
 	} else {console.log('No gamepad connected.');}
-});
-
+}
 function adjustIntensity(delta) {
 	let newIntensity = parseFloat(intensitySlider.value) + delta;
 	newIntensity = Math.min(Math.max(newIntensity, 0), 1);
