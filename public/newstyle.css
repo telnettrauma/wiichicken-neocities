@@ -3,23 +3,53 @@
 * {box-sizing: border-box;}
 body {
 	margin: 0;
-	background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2));
-	background-color: var(--bg-1);
 	font-family: 'PT Sans', sans-serif;
-	background-color: black;
+	background-color: var(--bg-1);
 	cursor: url(/media/home/cursor.png), default;
+	background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2));
 }
 main {
+	--p: 1;
+	--pixel: calc(var(--p) * 1px); /* don't change this */
+	--s-main: calc(var(--pixel) * 20); /* size of the cut. you can change the number on the right of the asterisk for a deeper or shallower cut */
 	max-width: 610px;
 	margin: auto;
 	padding: 10px;
-	border-top: 1px solid var(--bg-1);
-	border-left: 1px solid var(--bg-1);
-	border-bottom: 1px solid var(--bg-2);
-	border-right: 1px solid var(--bg-2);
-	border-radius: 20px;
 	overflow: hidden;
 	margin-bottom: 10px;
+	position: relative;
+	backdrop-filter: blur(5px);
+	clip-path: polygon(
+		var(--s-main) 0%, 
+		calc(100% - var(--s-main)) 0%, 
+		100% var(--s-main), 100% calc(100% - var(--s-main)), 
+		calc(100% - var(--s-main)) 100%, 
+		var(--s-main) 100%, 
+		0% calc(100% - var(--s-main)), 
+		0% var(--s-main));
+}
+main:before {
+	content:"";
+	position:absolute;
+	inset:0;
+	z-index: -1;
+	background: linear-gradient(45deg,var(--bg-2),var(--bg-1));
+	--g1:#000 var(--pixel),#0000 0 calc(100% - var(--pixel)),#000 0;
+	--g2:#0000   calc(0.707*var(--s-main)), 
+		#000  0 calc(0.707*var(--s-main) + var(--pixel)),
+		#0000 0 calc(100% - 0.707*var(--s-main) - var(--pixel)),
+		#000  0 calc(100% - 0.707*var(--s-main)),
+		#0000 0;
+	-webkit-mask:
+	linear-gradient(45deg ,var(--g2)),
+	linear-gradient(-45deg,var(--g2)),
+	linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s-main)) no-repeat,
+	linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s-main)) 100% no-repeat;
+mask:
+	linear-gradient(45deg ,var(--g2)),
+	linear-gradient(-45deg,var(--g2)),
+	linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s-main)) no-repeat,
+	linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s-main)) 100% no-repeat;
 }
 h1, h2, h3, h4, h5, h6 {font-family: 'Martian Mono', monospace;}
 a {
@@ -35,15 +65,45 @@ button {
 	margin-block-start: 0;
 	margin-block-end: 0;
 }
+:root {
+	--p: 1;
+	--pixel: calc(var(--p) * 1px); /* don't change this */
+}
 .box {
-	padding: 5px;
-	border: 1px solid var(--border);
-	color: var(--dark-on-primary-container);
-	background-color: var(--light-on-primary-container);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-	margin-bottom: 10px;
-	border-radius: 2px;
+	--b-radius: 15;
+  --s: calc(var(--pixel) * var(--b-radius));
+  padding: 5px;
+  color: var(--dark-on-primary-container);
+  background-color: var(--light-on-primary-container);
+  backdrop-filter: blur(5px);
+  position: relative;
+  -webkit-backdrop-filter: blur(5px);
+  margin-bottom: 10px;
+  overflow: hidden;
+	clip-path: polygon(var(--s) 0%, calc(100% - var(--s)) 0%, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, var(--s) 100%, 0% calc(100% - var(--s)), 0% var(--s));
+}
+.box:before {
+	content:"";
+	position:absolute;
+	inset:0;
+	z-index: -1;
+	background-color: var(--border);
+	--g1:#000 var(--pixel),#0000 0 calc(100% - var(--pixel)),#000 0;
+	--g2:#0000   calc(0.707*var(--s)), 
+		#000  0 calc(0.707*var(--s) + var(--pixel)),
+		#0000 0 calc(100% - 0.707*var(--s) - var(--pixel)),
+		#000  0 calc(100% - 0.707*var(--s)),
+		#0000 0;
+	-webkit-mask:
+		linear-gradient(45deg ,var(--g2)),
+		linear-gradient(-45deg,var(--g2)),
+		linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+		linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
+	mask:
+		linear-gradient(45deg ,var(--g2)),
+		linear-gradient(-45deg,var(--g2)),
+		linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+		linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
 }
 .box a:not(:has(img)) {
 	position: relative;
@@ -81,9 +141,10 @@ button {
 	mix-blend-mode: luminosity;
 	image-rendering: pixelated;
 }
-.page-top {border-radius: 10px 10px 2px 2px !important;}
-.page-bottom {border-radius: 2px 2px 10px 10px !important; margin-bottom: 0 !important;}
-.sec-tl {border-radius: 5px 2px 2px 2px !important;}
+/* .page-top {border-radius: 10px 10px 2px 2px !important;}
+.page-bottom {border-radius: 2px 2px 10px 10px !important; margin-bottom: 0 !important;} */
+.page-bottom {margin-bottom: 0 !important;}
+/* .sec-tl {border-radius: 5px 2px 2px 2px !important;}
 .sec-tr {border-radius: 2px 5px 2px 2px !important;}
 .sec-br {border-radius: 2px 2px 5px 2px !important;}
 .sec-bl {border-radius: 2px 2px 2px 5px !important;}
@@ -91,7 +152,7 @@ button {
 .sec-r {border-radius: 2px 5px 5px 2px !important;}
 .sec-t {border-radius: 5px 5px 2px 2px !important;}
 .sec-b {border-radius: 2px 2px 5px 5px !important;}
-.sec-full {border-radius: 5px !important;}
+.sec-full {border-radius: 5px !important;} */
 @supports (animation-timeline: view()) {
 	@keyframes scrolly {
 		from {background-position-y: 0%;}
@@ -324,7 +385,8 @@ button {
 /* other */
 @media only screen and (min-width: 650px) {
 	#sideButton, #overSide {display: none !important;}
-	main {box-shadow: -20px -20px 100px 0 var(--bg-1), 20px 20px 100px 0 var(--bg-2);}
+	/* main {box-shadow: -20px -20px 100px 0 var(--bg-1), 20px 20px 100px 0 var(--bg-2);} */
+	/* main {filter: drop-shadow(0 0 100px var(--bg-1));} */
 }
 @media only screen and (max-width: 650px) {
 	#poopBlock {display: none;}
