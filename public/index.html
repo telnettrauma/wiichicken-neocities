@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" style="--main-background-color: rgba(65, 0, 2, 0.7); --border-color: rgb(255, 0, 0); --texty-color: rgb(255, 218, 214); --linky-color: #dec48c; --linky-color2: #93000a;">
+<html lang="en" style="--main-background-color: rgba(65, 0, 2, 0.7); --border: rgb(255, 0, 0); --texty-color: rgb(255, 218, 214); --linky-color: #dec48c; --linky-color2: #93000a;">
 <head>
 	<title>WiiCHiCKEN i AM AWESOME</title>
-	<link href="style.css" rel="stylesheet">
+	<link href="newstyle.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="VY9zXKAnkuHIsHGWLKHMNuZMIg0AMjhw3Mjzs8NgdG8"/>
 	<meta name="description" content="WiiCHiCKEN i am awesome and i will be the most awesome person in the whole world forever.">
@@ -12,7 +12,7 @@
 		<style>
 			#noscript-error, #infamous, #whatsheader .panel {display: block !important;}
 			.noscript-hidden, #signguest, #lonelyNav {display: none !important;}
-			#infamous .blox {margin-bottom: 10px !important;}
+			#infamous .box {margin-bottom: 10px !important;}
 			#navig {width: 100% !important;}
 		</style>
 	</noscript>
@@ -48,31 +48,31 @@
 	main {
 		order: 2;
 		flex: 1;
-		min-width: 650px;
+		min-width: 670px;
 		margin: 10px;
 	}
 	.row {
 		display: flex;
 		width: 100%;
 	}
-	.blox {
+	.box {
 		margin-bottom: 10px;
-		border: 1px solid var(--border-color);
+		/* border: 1px solid var(--border); */
 		background-color: #001d31b3;
 		background-color: var(--main-background-color);
 		color: #cde5ff;
 		color: var(--texty-color);
 		backdrop-filter: blur(5px);
 		-webkit-backdrop-filter: blur(5px);
-		padding: 5px;
+		padding: 10px;
 		overflow: hidden;
 	}
 	.lefty {margin-left: 10px;}
-	.blox a {
+	.box a {
 		color: var(--linky-color);
 		position: relative;
 	}
-	.blox a::after {
+	.box a::after {
 		content: '';
 		background: linear-gradient(90deg, var(--linky-color) 0%, var(--linky-color2) 100%);
 		height: 1px;
@@ -84,7 +84,7 @@
 		bottom: 0;
 		left: 0;
 	}
-	.blox a:hover::after {animation: happyHover 0.3s;}
+	.box a:hover::after {animation: happyHover 0.3s;}
 	@keyframes happyHover {
 		0% {background-size: 100% 1px; background-position: 100% 100%;}
 		50% {background-size: 0% 1px; background-position: 100% 100%;}
@@ -95,7 +95,7 @@
 	.compat-error {
 		background-color: #2a1800;
 		color: #ffddb6;
-		border-color: #ffb956;
+		--border: #ffb956;
 	}
 	.gradientText {
 		background-clip: text !important;
@@ -120,6 +120,7 @@
 		font-family: 'Martian Mono', monospace;
 		font-size: 20px;
 		display: flex;
+		border-radius: 5px 5px 2px 2px;
 	}
 	.sidehead p {
 		background: linear-gradient(45deg, rgba(147,0,6,1) 0%, rgba(116,59,0,1) 100%);
@@ -127,11 +128,13 @@
 		margin-block-end: 0;
 		padding-left: 3px;
 		width: 100%;
+		border-radius: 5px 5px 2px 2px;
 	}
 	.sidehead .helpbutt {margin-left: 2px;}
 	.sidebox-content {
 		padding: 5px;
 		background-color: var(--side-bg);
+		border-radius: 2px 2px 5px 5px;
 	}
 	.sidebox-content a:not(:has(img)) {
 		background-color: #ffb4aa;
@@ -147,6 +150,7 @@
 		float: right;
 		padding: 0px 5px 0 5px;
 		cursor: pointer;
+		border-radius: 2px;
 	}
 	#navlink {
 		width: 180px;
@@ -161,7 +165,7 @@
 		background-color: #e2e2e5;
 		color: #1a1c1e;
 		margin: 2px;
-		border: 1px solid #1a1c1e;
+		--border: #1a1c1e;
 		box-shadow: 1px 1px 0 0;
 	}
 	#fri2 {display: none;}
@@ -281,7 +285,7 @@
 		display: flex;
 		justify-content: center;
 		background-color: #004a76 !important;
-		border: 1px solid #97cbff;
+		--border: #97cbff;
 		color: #cee5ff !important;
 		width: 45%;
 		margin: 2px;
@@ -347,6 +351,10 @@
 		display: flex;
 		background: linear-gradient(270deg, #ff0000, #00a2ff);
 	}
+	#navig::before {
+		background-color: unset;
+		background: linear-gradient(270deg, #ff0000, #00a2ff);
+	}
 	#navig a, #lonelyNav a {
 		font-family: 'Martian Mono', monospace;
 		padding: 5px 0 5px 0;
@@ -397,7 +405,7 @@
 		background: linear-gradient(45deg, rgb(70, 0, 0) 0%, rgb(0, 14, 70)100%);
 		background-image: url(media/home/ditty.png);
 		image-rendering: pixelated;
-		box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50);
+		/* box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50); */
 		animation: glowy 10s infinite;
 	}
 	#babyHello {
@@ -419,7 +427,7 @@
 		background: none !important;
 		background-color: #201a19 !important;
 		color: #ede0dd !important;
-		border: 1px solid #a08c89;
+		--border: #a08c89;
 		padding: 0 2px 0 2px;
 		font-family: 'Martian Mono', monospace;
 		display: flex;
@@ -553,9 +561,9 @@
 		object-fit: cover;
 	}
 	@keyframes glowy {
-		0%{box-shadow: 0px 0px 200px 50px rgba(0, 255, 161, 0.75); border: 1px solid rgba(0, 255, 161);}
-		50%{box-shadow: 0px 0px 200px 50px rgba(0, 126, 255, 0.75); border: 1px solid rgb(0, 126, 255);}
-		100%{box-shadow: 0px 0px 200px 50px rgba(0, 255, 161, 0.75); border: 1px solid rgba(0, 255, 161);}
+		0%{box-shadow: 0px 0px 200px 50px rgba(0, 255, 161, 0.75); --border: rgba(0, 255, 161);}
+		50%{box-shadow: 0px 0px 200px 50px rgba(0, 126, 255, 0.75); --border: rgb(0, 126, 255);}
+		100%{box-shadow: 0px 0px 200px 50px rgba(0, 255, 161, 0.75); --border: rgba(0, 255, 161);}
 	}
 	.accordion {cursor: pointer;}
 	::-webkit-scrollbar {width: 5px;}
@@ -600,16 +608,16 @@
 		}
 		#frens {min-width: 105px;}
 		.helpbutt {display: none;}
-		.blox {width: auto !important;}
+		.box {width: auto !important;}
 		.row {flex-direction: column;}
 		.lefty {margin: 0;}
-		nav .row .blox {
+		nav .row .box {
 			width: auto;
 			margin-left: 0;
 		}
 		#webr {width: 100%;}
 		#littleBuddies {flex-direction: row;}
-		#littleBuddies .blox {
+		#littleBuddies .box {
 			width: 100% !important;
 			height: 90px;
 		}
@@ -645,7 +653,7 @@
 		.head {height: 100px;}
 	}
 	@media (prefers-reduced-transparency) {
-		.blox, .sidebox {
+		.box, .sidebox {
 			backdrop-filter: blur(0px);
 			-webkit-backdrop-filter: blur(0px);
 		}
@@ -674,8 +682,8 @@
 			<div id="personSighted">
 				<div class="sidebox" id="frens" style="--side-bg: #29005599; --side-text: #eddcff; --side-border: #7d24e4;">
 					<div class="sidehead" style="color: #eddcff;">
-						<p style="background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(138,0,189,1) 100%);"><strong>FRiENDS</strong></p>
-						<span class="helpbutt" id="frihelp" onclick="flipTheScript('frihelp', 'frens', 'fri2', 'fri1', '#4b252d', '#f2b7c2')" style="color: #4b252d; background-color: #f2b7c2; border-color: #7f525b;">?</span>
+						<p style="background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(138,0,189,1) 100%); border-radius: 5px 2px 2px 2px;"><strong>FRiENDS</strong></p>
+						<span class="helpbutt" id="frihelp" onclick="flipTheScript('frihelp', 'frens', 'fri2', 'fri1', '#4b252d', '#f2b7c2')" style="color: #4b252d; background-color: #f2b7c2; --border: #7f525b; border-radius: 2px 5px 2px 2px;">?</span>
 					</div>
 					<div class="sidebox-content">
 						<div id="fri1">
@@ -765,7 +773,7 @@
 			</div>
 		</aside>
 		<main>
-			<div class="blox head">
+			<div class="box head page-top">
 				<div id="tittle">
 					<div id="logocontent">
 						<p id="thisIsMyName" class="nomarblock mobileVisible headText" style="color: white;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN</p>
@@ -775,7 +783,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="alerta" class="blox" style="padding: 0; border-color: red; color: white;"></div>
+			<div id="alerta" class="box sec-full" style="padding: 0; --border: red; color: white; --b-radius: 5;"></div>
 			<script>
 				const alertaChance = Math.floor(Math.random() * 5);
 				if (alertaChance === 3) {
@@ -786,37 +794,41 @@
 				}
 			</script>
 			<nav id="youWillScroll">
-				<div class="row">
-					<div class="blox noblur" style="padding: 1px; width: 80%; border: none; padding-right: 1.1px;" id="navig">
-						<a class="noBg" id="a1" href="aboutme.html">ABOUT</a>
+				<div class="row sec-l">
+					<div class="box noblur sec-l" style="padding: 1px; width: 80%; border: none; padding-right: 1.1px; --b-radius: 5;" id="navig">
+						<a class="noBg" id="a1" style="border-radius: 5px 0 0 5px;" href="aboutme.html">ABOUT</a>
 						<a class="noBg" id="a2" href="creative/index.html">ART</a>
 						<a class="noBg" id="a3" href="more/archive/blog/index.html">BLOG</a>
 						<a class="noBg hasDrop" id="a4" href="interests/index.html">MEDiA</a>
 						<a class="noBg" id="a5" href="more/index.html">MORE</a>
 					</div>
-					<div class="blox noblur" style="padding: 0; width: 20%; margin-left: 10px; background-color: #bfbfbf; border-color: #bfbfbf;" id="lonelyNav">
-						<a class="noBg" id="a7" href="guestbook.html">GUESTBOOK</a>
+					<div class="box noblur sec-r" style="padding: 0; width: 20%; margin-left: 10px; background-color: #bfbfbf; --border: #bfbfbf; --b-radius: 5;" id="lonelyNav">
+						<a class="noBg sec-r" id="a7" href="guestbook.html">GUESTBOOK</a>
 					</div>
 				</div>
 			</nav>
-			<div class="mobileVisible section blox compat-error">
+			<div class="mobileVisible section box compat-error">
 				<h2 class="nomarblock">MOBiLE MODE</h2>
 				<p class="nomarblock">Because you are on a small screen, a few adjustments have been made for mobile. This site is still desktop designed, but your experience on a mobile device should hopefully still be less malarky.</p>
 			</div>
-			<div class="reducedVisible section blox compat-error">
+			<div class="reducedVisible section box compat-error">
 				<h2 class="nomarblock">REDUCED MOTiON</h2>
 				<p class="nomarblock">Reduced motion, an experimental site feature, has been enabled, because reduced motion is enabled in your device settings. Some widgets may be hidden. I don't think this changes anything outside of the homepage.</p>
 			</div>
-			<div class="section blox compat-error" style="display: none;" id="noscript-error">
+			<div class="section box compat-error" style="display: none;" id="noscript-error">
 				<h2 class="nomarblock">NOSCRiPT</h2>
 				<p class="nomarblock">uh oh! it looks like you don't have javascript support! no worries, i have made some small changes to make your browsing experience slightly better. i love you too.<br>note that some things still may not work.</p>
 			</div>
-			<div class="section blox compat-error" id="parallax-thing">
+			<div class="section box compat-error" id="parallax-thing">
 				<h2 class="nomarblock">CSS ERROR</h2>
 				<p class="nomarblock">it appears that your browser does not support all of the css used. this should only affect appearance, not functionality.</p>
 			</div>
+			<div class="box compat-error">
+				<h2>PARDON MY DUST</h2>
+				<p>IM ADDING THESE FREAKING AWESOME CORNERS TO EVERYTHING. BELIEVE IT OR NOT, THIS IS NOT A FEATURE OF CSS AND IT IS CAUSING ME PHYSICAL PAIN. PLEASE, PARDON ME AS I WORK TO MAKE THIS SITE REALLY HARD TO MAINTAIN. BUT HEY, IT WILL LOOK REALLY COOL FOR SOME TIME.<br>THIS IS TAKING A REALLY LONG TIME BECAUSE I STILL HAVE A LOT TO FIGURE OUT, SUCH AS HOW TO MAKE THE EFFECT I WANT ACTUALLY WORK. THINGS ARE GOING TO GET UGLY.</p>
+			</div>
 			<div class="row" id="infamous" style="display: grid; gap: 10px;">
-				<div class="blox noscript-hidden" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
+				<div class="box noscript-hidden sec-l" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
 					<div style="display: flex; flex-wrap: wrap;" id="statusCard">
 						<div id="statuscafe" style="padding: 5px; background-color: #ffb4a8; width: 100%; min-height: 85px;">
 							<a href="https://status.cafe/users/cringe" class="noBg" target="_blank">
@@ -829,7 +841,7 @@
 						<img src="media/home/status.png" class="blurry" style="height: 200px; width: 200px; bottom: 0;">
 					</div>
 				</div>
-				<div class="blox mobileHidden noscript-hidden" style="grid-column: 2/3; grid-row: 1; margin-bottom: 0; padding: 0; border-color: #E6E1E5; background-color: #1C1B1Fcc;">
+				<div class="box mobileHidden noscript-hidden" style="grid-column: 2/3; grid-row: 1; margin-bottom: 0; padding: 0; --border: #E6E1E5; background-color: #1C1B1Fcc;">
 					<div id="clockContainer">
 						<div id="thatThingInTheCenterOfaClock"></div>
 						<div id="hour"></div>
@@ -839,10 +851,10 @@
 					<script src="resources/widgets/home/clock.js"></script>
 					<link href="resources/widgets/home/clock.css" rel="stylesheet" type="text/css" media="all">
 				</div>
-				<div class="blox" style="grid-column: 3 / 4; grid-row: 1; margin-bottom: 0;">
+				<div class="box sec-tr" style="grid-column: 3 / 4; grid-row: 1; margin-bottom: 0;">
 					<p class="nomarblock">hello! welcome to my brand new shiny website! a lot of the subpages are still a work in progress, but don't let that stop you from having a look around!</p>
 				</div>
-				<div class="blox" style="grid-column: 2 / 4; grid-row: 2;">
+				<div class="box sec-br" style="grid-column: 2 / 4; grid-row: 2;">
 					<h2>aboutMe</h2>
 					<ul>
 						<li>i am born and raised american. sad, i know <img src="media/emoji/tear.gif" loading="lazy" alt=""></li>
@@ -852,20 +864,20 @@
 					</ul>
 				</div>
 			</div>
-			<div class="blox" style="background-color: #141f00ab; color: #d4ec9d; border-color: #b3ff00;">
+			<div class="box sec-full" style="background-color: #141f00ab; color: #d4ec9d; --border: #b3ff00;">
 				<h3>iM ON ARTFiGHT!</h3>
 				<p>i am on team seafoam! i will try to attack everyone that i can back (not a guarantee)! if you would like to follow me, use this link</p>
 				<a href="https://artfight.net/~wiichicken" target="_blank" class="noBg"><button class="bring">ARTFiGHT PROFiLE</button></a>
 			</div>
-			<div class="blox" style="padding: 0; display: flex; border-color: #f6be14; background-color: #352500ab">
+			<div class="box sec-full" style="padding: 0; display: flex; --border: #f6be14; background-color: #352500ab">
 				<iframe src="interests/websites/sotfp/widget.html" style="width: 100%; height: 100px; border: none;"></iframe>
 			</div>
 			<div class="row">
-				<div class="blox" style="width: 50%;">
+				<div class="box sec-l" style="width: 50%;">
 					<h2>latestArt</h2>
-					<div style="display: flex; margin-left: 5px;">
+					<div style="display: flex;">
 						<div style="display: flex; align-items: center; margin-right: 10px;">
-							<img id="artfeat" src="https://i.imgur.com/s25rTzF.png" width="100px" height="100px" style="image-rendering: pixelated; display: inline-block; box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);">
+							<img id="artfeat" src="https://i.imgur.com/s25rTzF.png" width="100px" height="100px" style="image-rendering: pixelated; display: inline-block; box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7); border-radius: 0 0 0 2px;">
 							<div class="afterfeat" style="height: 95px; background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(227,232,0,1) 100%);"></div>
 							<div class="afterfeat" style="height: 90px; width: 2px; background: linear-gradient(45deg, rgba(189,0,128,1) 0%, rgba(0,232,179,1) 100%);"></div>
 						</div>
@@ -875,11 +887,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="blox lefty" style="width: 50%;">
+				<div class="box lefty sec-r" style="width: 50%;">
 					<h2>curr.FavSong</h2>
-					<div style="display: flex; margin: 0 0 0 5px;">
-						<img src="https://lastfm.freetls.fastly.net/i/u/500x500/adff38e3219e033dbc381644fa354583.jpg" width="100px" height="100px" style="margin-right: 10px; border: 1px solid #cde5ff; z-index: 1;">
-						<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/500x500/adff38e3219e033dbc381644fa354583.jpg" width="100px" height="100px" style="margin-right: 10px; border: 1px solid #cde5ff; mix-blend-mode: screen;">
+					<div style="display: flex;">
+						<img src="https://lastfm.freetls.fastly.net/i/u/500x500/adff38e3219e033dbc381644fa354583.jpg" width="100px" height="100px" style="margin-right: 10px; --border: #cde5ff; z-index: 1;">
+						<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/500x500/adff38e3219e033dbc381644fa354583.jpg" width="100px" height="100px" style="margin-right: 10px; --border: #cde5ff; mix-blend-mode: screen;">
 						<div style="width: 100%;">
 							<p class="headText nomarblock" style="font-size: 17px;">Chicago</p>
 							<p class="nomarblock" style="font-size: 20px;">Capital STEEZ Archive</p>
@@ -888,7 +900,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="blox">
+			<div class="box sec-t">
 				<h2>toDo</h2>
 				<ul>
 					<li>put all art
@@ -901,11 +913,11 @@
 				</ul>
 				<p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
 			</div>
-			<div class="blox">
+			<div class="box sec-b">
 				<p>what are you supposed to put on your homepage</p>
 			</div>
 			<div class="row">
-				<div class="blox" style="width: 100%;">
+				<div class="box sec-l" style="width: 100%;">
 					<h2>contactMe</h2>
 					<ul>
 						<li><strong>discord</strong>: @bbctwo (wiichicken#0040)</li>
@@ -914,8 +926,8 @@
 						<li>if you NEED to know my socials, go to the <a href="aboutme.html">about me</a> page</li>
 					</ul>
 				</div>
-				<div class="blox lefty mobileHidden reducedHidden noscript-hidden" id="navlink" style="padding: 0; border: 1px solid #bec9c8;">
-					<span class="helpbutt" id="adHelp" onclick="flipTheScript('adHelp', 'navlink', 'nava2', 'nava1', '#1a1c1e', '#e2e2e5')">?</span>
+				<div class="box lefty mobileHidden reducedHidden noscript-hidden sec-r" id="navlink" style="padding: 0; --border: #bec9c8;">
+					<span class="helpbutt" style="border-radius: 0 0 3px 0;" id="adHelp" onclick="flipTheScript('adHelp', 'navlink', 'nava2', 'nava1', '#1a1c1e', '#e2e2e5')">?</span>
 					<div id="nava1">
 						<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
 					</div>
@@ -924,22 +936,21 @@
 					</div>
 				</div>
 			</div>
-			<div class="blox" id="whatsheader" style="border: 1px solid #3978c6;">
+			<div class="box sec-full" id="whatsheader" style="--border: #3978c6;">
 				<div class="accordion">
 					<h2 class="gradientText" style="background: linear-gradient(90deg, rgba(193,232,255,1) 0%, rgba(229,222,255,1) 100%);">siteUpdates</h2>
-					<h3 style="margin: 0; font-size: 15px;"><strong>12:00:21</strong></h3>
-					<p style="margin-top: 0; margin-bottom: 2px;"><strong>July 21, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
+					<h3 style="margin: 0; font-size: 15px;"><strong>COMiNG THROUGH</strong></h3>
+					<p style="margin-top: 0; margin-bottom: 2px;"><strong>July 28, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
 				</div>
 				<div class="panel">
-					<h2 style="margin-bottom: 2px;">12:00:21</h2>
-					<p id="updatedate">July 21, 2024</p>
-					<p>do you like the name of this update? i named it that because that is the time as of me writing the title.</p>
+					<h2 style="margin-bottom: 2px;">COMiNG THROUGH</h2>
+					<p id="updatedate">July 28, 2024</p>
+					<p>as you may notice, the look of thr website is kinda a mess of different jumpbled corner designs. this is because i am working on making a new design. please, pardon my dust.<br>anyway, there is still more than that:</p>
 					<ul>
-						<li>wrote a new article for the first time in forever. tyhats a song from frozen i think</li>
-						<li>a little update for the website graveyard</li>
-						<li>since im approaching visitor #100,000, i had to adjust the look of the visitor count widget because it would not fit 6 digits</li>
+						<li><a href="/interests/websites/neom/" target="_blank">new page</a> where i talk about the meaning behind some sites on neocities that don't have much context to them</li>
+						<li>im working on making a video downloader using the cobalt api. i will probably be the only person who finds use from it</li>
+						<li>rounded corners and slanted corners are starting to appear all throughout the site</li>
 					</ul>
-					<p>is it normal to vomit string</p>
 				</div>
 			</div>
 			<script>
@@ -954,7 +965,7 @@
 					});
 				}
 			</script>
-			<div id="mybum" class="blox" style="border: 1px solid #9462bd;">
+			<div id="mybum" class="box sec-full" style="--border: #9462bd;">
 				<h2 class="gradientText" style="background: linear-gradient(90deg, rgba(233,221,255,1) 0%, rgba(255,217,226,1) 100%);">myButton</h2>
 				<div style="display: flex; align-items: center;">
 					<img loading="lazy" alt="" src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
@@ -972,20 +983,20 @@
 				</script>
 				<p style="margin-block-start: 0; margin-block-end: 0;">hotlink, or don't hotlink! the choice is yours!</p>
 			</div>
-			<div id="signguest" class="blox" style="border: 1px solid #ff8875;">
+			<div id="signguest" class="box sec-full" style="--border: #ff8875;">
 				<p class="middleBoy"><img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt="">Remember: <a class="noBg" style="cursor: pointer !important; margin-right: 10px;" href="guestbook.html">sign the guestbook</a> before you go<img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt=""></p>
 			</div>
 			<div class="row" id="littleBuddies">
-				<div style="background-color: #0021119b; border: 1px solid #75daa2;" class="blox animal">
+				<div style="background-color: #0021119b; --border: #75daa2;" class="box animal sec-l">
 					<p>everytime i make a wobble, it gets deleted for some reason. so... no more <img src="media/emoji/disappointed.gif" loading="lazy"></p>
 				</div>
-				<div class="blox animal lefty">
+				<div class="box animal lefty sec-r">
 					<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!"></a>
 				</div>
 			</div>
-			<div class="blox" style="background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,134,255,1) 100%); color: #bfe9ff; border: none; overflow: visible; height: 54px; padding: 1px;">
-				<div style="background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,134,255,1) 100%); filter: blur(10px); width: 100%; height: 54px;"></div>
-				<div style="position: relative; transform: translateY(-54px); background-color: black; height: 52px; display: flex;" id="bottomOver">
+			<div class="box page-bottom" style="background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,134,255,1) 100%); color: #bfe9ff; border: none; overflow: visible; height: 54px; padding: 1px;">
+				<div style="background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,134,255,1) 100%); filter: blur(10px); width: 100%; height: 54px;" class="page-bottom"></div>
+				<div style="position: relative; transform: translateY(-54px); background-color: black; height: 52px; display: flex;" class="page-bottom" id="bottomOver">
 					<div class="middleBoy" id="alibaba" style="width: 100%; flex-direction: column;">
 						<div style="display: flex;">
 							<div class="square" style="background-color: red;"></div>
@@ -1033,8 +1044,8 @@
 			</div>
 			<div class="sidebox" style="--side-bg: #001f23cc; --side-text: #8ef2ff; --side-border: #4ed8e8;" id="side-flood">
 				<div class="sidehead">
-					<p style="background: linear-gradient(90deg, #006972 0%, #4a6366 100%); color: #98f5ff;"><strong>FLOOD</strong></p>
-					<a href="https://melonking.net/free/software/flood" target="_blank" class="helpbutt" id="flood-info" style="--side-border: #515e7d;">&#x1FAA3;</a>
+					<p style="background: linear-gradient(90deg, #006972 0%, #4a6366 100%); color: #98f5ff; border-radius: 5px 2px 2px 2px;"><strong>FLOOD</strong></p>
+					<a href="https://melonking.net/free/software/flood" target="_blank" class="helpbutt" id="flood-info" style="--side-border: #515e7d; border-radius: 2px 5px 2px 2px;">&#x1FAA3;</a>
 				</div>
 				<div class="sidebox-content" id="flood-inner" style="height: 100px; padding: 0; overflow: hidden;">
 					<link href="resources/widgets/home/flood/flood.css" rel="stylesheet" type="text/css" media="all"/>
@@ -1063,7 +1074,7 @@ window.addEventListener('scroll', () => {
 	}
 	if (!isReducedMotion.matches) {
 		document.documentElement.style.setProperty("--main-background-color", calculateBetween([65, 0, 2], [0, 29, 50], 1));
-		document.documentElement.style.setProperty("--border-color", calculateBetween([255, 0, 0], [0, 168, 255], 0));
+		document.documentElement.style.setProperty("--border", calculateBetween([255, 0, 0], [0, 168, 255], 0));
 		document.documentElement.style.setProperty("--texty-color", calculateBetween([255, 218, 214], [205, 229, 255], 0));
 		document.documentElement.style.setProperty("--linky-color", calculateBetween([222, 196, 140], [211, 191, 230]));
 		document.documentElement.style.setProperty("--linky-color2", calculateBetween([147, 0, 10], [0, 99, 155]));
