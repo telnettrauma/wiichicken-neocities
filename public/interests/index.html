@@ -20,6 +20,8 @@
 				--dark-on-tertiary: #442b07;
 				--bg-1: #ff1500;
 				--bg-2: #ffaa00;
+				--border: #ff0019;
+				--light-on-primary-container: #3b0713cc;
 			}
 			body {
 				background: unset;
@@ -32,14 +34,6 @@
 			main {
 				width: 600px;
 				margin: auto;
-			}
-			.box, header {
-				background-color: #3b0713cc;
-				backdrop-filter: blur(5px);
-				-webkit-backdrop-filter: blur(5px);
-				padding: 5px;
-				border: 1px solid #ff0019;
-				margin-bottom: 10px;
 			}
 			header {
 				box-shadow: 0 0 150px 20px #8d1033;
@@ -66,17 +60,17 @@
 		<div id="overSide"></div>
 		<div id="chewTooth"></div>
 		<main>
-			<header class="page-top">
+			<header class="page-top box">
 				<h1 style="padding: 5px;">iNTERESTS</h1>
 			</header>
 			<div class="box sec-b">
 				<p>hello, welcome to my interest page.<br>this is still a major work in progress as i am not only trying to figure out what to put here, but i am still trying to figure out what my interests actually are <img src="/media/emoji/crying.gif">. as such, basically all of these pages are under construction (he said the thing! <img src="/media/emoji/nerd.gif">)<br>navigation through these pages may be a little janky! watch out! <img src="/media/emoji/whine.gif"></p>
 			</div>
 			<div id="whitepages">
-				<div class="box sec-t" style="background-color: #7a3000; border-color: #ff5e00;">
+				<div class="box sec-t" style="background-color: #7a3000; --border: #ff5e00;">
 					<a href="music/index.html" style="color: #ffb693;">MUSiC</a>
 				</div>
-				<div class="box sec-b" style="background-color: #003642; border-color: #00d0ff;">
+				<div class="box sec-b" style="background-color: #003642; --border: #00d0ff;">
 					<a href="websites/directory.html" style="color: #5ad5f9;">WEBSiTES</a>
 				</div>
 			</div>

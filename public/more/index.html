@@ -21,8 +21,11 @@
 				--dark-primary: #ffb3ad;
 				--dark-tertiary: #e0c38c;
 				--dark-on-tertiary: #3f2e04;
-				--bg-1: #ff0000;
+				--light-on-primary-container: #3a0905cc;
+				--dark-on-primary-container: #ffb4a8;
+				--bg-1: red;
 				--bg-2: #ffaa00;
+				--border: red; 
 			}
 			body {
 				background-color: #1f0001;
@@ -44,24 +47,9 @@
 				margin-block-start: 0;
 				margin-block-end: 0;
 			}
-			.box, header, h2 {
-				padding: 5px;
-				--box-border: red;
-				border: 1px solid var(--box-border);
-				margin-bottom: 10px;
-				backdrop-filter: blur(5px);
-				-webkit-backdrop-filter: blur(5px);
-				width: -webkit-fill-available;
-			}
 			h2 {
 				margin-bottom: 2px;
 				margin-block-start: 0px;
-			}
-			.box, h2 {
-				--box-bg: #410002d0;
-				--box-color: #ffb4ab;
-				background-color: var(--box-bg);
-				color: var(--box-color);
 			}
 			.fake-button {box-shadow: 2px 2px 0 0 var(--box-border);}
 			.fake-button:hover {
@@ -97,25 +85,25 @@
 			</header>
 			<div class="row">
 				<div class="box fake-button sec-tl">
-					<a class="noline" href="archive/index.html">
+					<a class="noline" href="archive/index.html" style="color: #ffdad4;">
 						<h3>ARCHiVE</h3>
-						<p>my slowly growing archive of things</p>
+						<p>my slowly ever growing archive of things</p>
 					</a>
 				</div>
-				<div class="box lefty fake-button sec-tr" style="--box-bg: #2f1500d0; --box-color: #ffdcc3; --box-border: #ff8800;">
-					<a class="noline" href="idle_file/versions.html">
+				<div class="box lefty fake-button sec-tr" style="background-color: #2f1500d0; --border: #ff8800;">
+					<a class="noline" href="idle_file/versions.html" style="color: #ffdcc3;">
 						<h3>idle file</h3>
 						<p>idle game i abandoned before it got good <span class="jsalert">requires javascript</span></p>
 					</a>
 				</div>
 			</div>
-			<div class="box fake-button sec-b" style="--box-bg: #271900d0; --box-color: #ffdea9; --box-border: yellow;">
-				<a class="noline" href="https://aisites.neocities.org" target="_blank">
+			<div class="box fake-button sec-b" style="background-color: #271900d0; --border: yellow;">
+				<a class="noline" href="https://aisites.neocities.org" target="_blank" style="color: #ffdea9;">
 					<h3>aisites</h3>
 					<p>back when generative ai wasn't that good i made this for comedic purposes. i stopped work on it because ai suddenly got good, causing the project to no longer be funny, and because i felt bad about stealing code, even if it wasn't for profit.</p>
 				</a>
 			</div>
-			<h2 class="sec-t">OTHER</h2>
+			<h2 class="sec-t box">OTHER</h2>
 			<div class="box sec-b">
 				<p>projects that aren't significant enough to go to the above section</p>
 				<ul>
@@ -124,7 +112,7 @@
 					<li><a href="tools/userscripts/tweetbutton.html">replace X 'Post' buttons with 'Tweet' buttons</a> - userscript that does exactly what it says on the tin</li>
 				</ul>
 			</div>
-			<h2 class="sec-t">OLD</h2>
+			<h2 class="sec-t box">OLD</h2>
 			<div class="box sec-b">
 				<p>these suck and lack polish, but im still including them here because why not, ya know?!?</p>
 				<ul>
@@ -134,10 +122,8 @@
 				</ul>
 			</div>
 			<div class="footer page-bottom">
-				<div class="inner-footer page-bottom">
-					<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
-					<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
-				</div>
+				<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
+				<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
 			</div>
 		</main>
 		<script>

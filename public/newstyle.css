@@ -65,15 +65,13 @@ button {
 	margin-block-start: 0;
 	margin-block-end: 0;
 }
-:root {
-  --p: 1;
-  --pixel: calc(var(--p) * 1px); /* don't change this */
-  --b-radius-tl: 15; /* top-left */
-  --b-radius-tr: 15; /* top-right */
-  --b-radius-br: 15; /* bottom-right */
-  --b-radius-bl: 15; /* bottom-left */
-}
 .box {
+	--p: 1;
+  --pixel: calc(var(--p) * 1px); /* don't change this */
+  --b-radius-tl: 5; /* top-left */
+  --b-radius-tr: 5; /* top-right */
+  --b-radius-br: 5; /* bottom-right */
+  --b-radius-bl: 5; /* bottom-left */
   --s-tl: calc(var(--pixel) * var(--b-radius-tl));
   --s-tr: calc(var(--pixel) * var(--b-radius-tr));
   --s-br: calc(var(--pixel) * var(--b-radius-br));
@@ -153,18 +151,17 @@ button {
 	mix-blend-mode: luminosity;
 	image-rendering: pixelated;
 }
-/* .page-top {border-radius: 10px 10px 2px 2px !important;}
-.page-bottom {border-radius: 2px 2px 10px 10px !important; margin-bottom: 0 !important;} */
-.page-bottom {margin-bottom: 0 !important;}
-/* .sec-tl {border-radius: 5px 2px 2px 2px !important;}
-.sec-tr {border-radius: 2px 5px 2px 2px !important;}
-.sec-br {border-radius: 2px 2px 5px 2px !important;}
-.sec-bl {border-radius: 2px 2px 2px 5px !important;}
-.sec-l {border-radius: 5px 2px 2px 5px !important;}
-.sec-r {border-radius: 2px 5px 5px 2px !important;}
-.sec-t {border-radius: 5px 5px 2px 2px !important;}
-.sec-b {border-radius: 2px 2px 5px 5px !important;}
-.sec-full {border-radius: 5px !important;} */
+.page-top {--b-radius-tl: 15 !important; --b-radius-tr: 15 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
+.page-bottom {--b-radius-tl: 5 !important; --b-radius-tr: 5 !important; --b-radius-bl: 15 !important; --b-radius-br: 15 !important; margin-bottom: 0 !important;}
+.sec-tr {--b-radius-tl: 5 !important; --b-radius-tr: 10 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
+.sec-br {--b-radius-tl: 5 !important; --b-radius-tr: 5 !important; --b-radius-bl: 5 !important; --b-radius-br: 10 !important;}
+.sec-bl {--b-radius-tl: 5 !important; --b-radius-tr: 5 !important; --b-radius-bl: 10 !important; --b-radius-br: 5 !important;}
+.sec-l {--b-radius-tl: 10 !important; --b-radius-tr: 5 !important; --b-radius-bl: 10 !important; --b-radius-br: 5 !important;}
+.sec-r {--b-radius-tl: 5 !important; --b-radius-tr: 10 !important; --b-radius-bl: 5 !important; --b-radius-br: 10 !important;}
+.sec-t {--b-radius-tl: 10 !important; --b-radius-tr: 10 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
+.sec-b {--b-radius-tl: 5 !important; --b-radius-tr: 5 !important; --b-radius-bl: 10 !important; --b-radius-br: 10 !important;}
+.sec-full {--b-radius-tl: 10 !important; --b-radius-tr: 10 !important; --b-radius-bl: 10 !important; --b-radius-br: 10 !important;}
+
 @supports (animation-timeline: view()) {
 	@keyframes scrolly {
 		from {background-position-y: 0%;}
