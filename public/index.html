@@ -99,7 +99,6 @@
 		-webkit-backdrop-filter: blur(5px);
 		transition-duration: 0.5s;
 	}
-	.sidebox-content, .sidehead p, .sidehead .helpbutt {border: 1px solid var(--side-border);}
 	.sidebox:hover .sidehead p {box-shadow: 0 0 20px 1px var(--side-border);}
 	.sidehead {
 		color: #ffdad5;
@@ -109,7 +108,6 @@
 		font-family: 'Martian Mono', monospace;
 		font-size: 20px;
 		display: flex;
-		border-radius: 5px 5px 2px 2px;
 	}
 	.sidehead p {
 		background: linear-gradient(45deg, rgba(147,0,6,1) 0%, rgba(116,59,0,1) 100%);
@@ -117,13 +115,21 @@
 		margin-block-end: 0;
 		padding-left: 3px;
 		width: 100%;
-		border-radius: 5px 5px 2px 2px;
+	}
+	.sidehead p, .sidehead a, .sidehead span {
+		--b-radius-tl: 5;
+		--b-radius-tr: 5;
+		--b-radius-bl: 2;
+		--b-radius-br: 2;
 	}
 	.sidehead .helpbutt {margin-left: 2px;}
 	.sidebox-content {
 		padding: 5px;
 		background-color: var(--side-bg);
-		border-radius: 2px 2px 5px 5px;
+		--b-radius-tl: 2;
+		--b-radius-tr: 2;
+		--b-radius-bl: 5;
+		--b-radius-br: 5;
 	}
 	.sidebox-content a:not(:has(img)) {
 		background-color: #ffb4aa;
@@ -139,7 +145,6 @@
 		float: right;
 		padding: 0px 5px 0 5px;
 		cursor: pointer;
-		border-radius: 2px;
 	}
 	#navlink {
 		width: 180px;
@@ -149,13 +154,17 @@
 	#adHelp {
 		position: absolute;
 		font-size: 10px;
-		bottom: 0;
-		right: 0;
+		bottom: 1px;
+		right: 1px;
+		padding-right: 8px;
 		background-color: #e2e2e5;
 		color: #1a1c1e;
 		margin: 2px;
 		--border: #1a1c1e;
-		box-shadow: 1px 1px 0 0;
+		--b-radius-br: 8;
+		--b-radius-tl: 0;
+		--b-radius-tr: 0;
+		--b-radius-bl: 0;
 	}
 	#fri2 {display: none;}
 	@media only screen and (min-width: 900px) {
@@ -208,15 +217,26 @@
 		96% {background-color: #570066; color:#faabff;}
 		100% {background-color: #690100; color:#ffb4a8;}
 	}
-	#messageTxt:hover, #cornerInBox a:hover {
+	#random-message:hover, #cornerInBox a:hover {
 		color: white;
 		box-shadow: none;
+	}
+	#cornerInBox {
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		position: absolute;
+		right: 10px;
+		bottom: 0;
 	}
 	#cornerInBox a {
 		color: gray;
 		background-color: unset;
 		margin: 5px;
 		margin-left: 0;
+		font-family: 'PT Sans', sans-serif;
+		font-size: 15px;
+		font-weight: 400;
 	}
 	#navibox {
 		display: flex;
@@ -339,10 +359,11 @@
 	#navig {
 		display: flex;
 		background: linear-gradient(270deg, #ff0000, #00a2ff);
+		padding: 1px;
 	}
 	#navig::before {
-		background-color: unset;
-		background: linear-gradient(270deg, #ff0000, #00a2ff);
+		background-color: unset !important;
+		background: linear-gradient(270deg, #ff0000 0%, #00a2ff 100%) !important;
 	}
 	#navig a, #lonelyNav a {
 		font-family: 'Martian Mono', monospace;
@@ -669,12 +690,12 @@
 	<div id="flex">
 		<aside id="leftSidebar">
 			<div id="personSighted">
-				<div class="sidebox" id="frens" style="--side-bg: #29005599; --side-text: #eddcff; --side-border: #7d24e4;">
+				<div class="sidebox" id="frens" style="--side-bg: #29005599; --side-text: #eddcff; --border: #7d24e4;">
 					<div class="sidehead" style="color: #eddcff;">
-						<p style="background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(138,0,189,1) 100%); border-radius: 5px 2px 2px 2px;"><strong>FRiENDS</strong></p>
-						<span class="helpbutt" id="frihelp" onclick="flipTheScript('frihelp', 'frens', 'fri2', 'fri1', '#4b252d', '#f2b7c2')" style="color: #4b252d; background-color: #f2b7c2; --border: #7f525b; border-radius: 2px 5px 2px 2px;">?</span>
+						<p class="boxy" style="background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(138,0,189,1) 100%); --b-radius-tr: 2;"><strong>FRiENDS</strong></p>
+						<span class="helpbutt boxy" id="frihelp" onclick="flipTheScript('frihelp', 'frens', 'fri2', 'fri1', '#4b252d', '#f2b7c2')" style="color: #4b252d; background-color: #f2b7c2; --border: #7f525b; --b-radius-tl: 2;">?</span>
 					</div>
-					<div class="sidebox-content">
+					<div class="sidebox-content boxy">
 						<div id="fri1">
 							<div class="dabuttons">
 								<a href='https://char42.neocities.org' target="_blank"><img src="interests/websites/img/button/naybor/char42.png" loading="lazy"></a>
@@ -716,11 +737,11 @@
 						</script>
 					</div>
 				</div>
-				<div class="sidebox" id="moresites" style="--side-bg: #001e3399; --side-text: #cee5ff; --side-border: #00a6ff;">
+				<div class="sidebox" id="moresites" style="--side-bg: #001e3399; --side-text: #cee5ff; --border: #00a6ff;">
 					<div class="sidehead" style="color: #cee5ff;">
-						<p style="background: linear-gradient(45deg, rgba(0,74,119,1) 0%, rgba(0,105,119,1) 100%);"><strong>MORE SiTES</strong></p>
+						<p class="boxy" style="background: linear-gradient(45deg, rgba(0,74,119,1) 0%, rgba(0,105,119,1) 100%);"><strong>MORE SiTES</strong></p>
 					</div>
-					<div class="sidebox-content" style="padding: 0;">
+					<div class="sidebox-content boxy" style="padding: 0;">
 						<div class="dabuttons">
 							<iframe src="https://incr.easrng.net/badge?key=wiichicken" title="increment badge" width="88" height="31" frameborder="0" style="padding: 2px; box-sizing: content-box;"></iframe>
 							<a href="https://afellowu.neocities.org/" target="_blank"><img src="interests/websites/img/button/mebi_county.gif"></a>
@@ -747,11 +768,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="sidebox" id="webr" style="--side-bg: #3a0030cc; --side-text: #ffd8ee; --side-border: #af0095;">
+			<div class="sidebox" id="webr" style="--side-bg: #3a0030cc; --side-text: #ffd8ee; --border: #af0095;">
 				<div class="sidehead" style="color: #ffade4;">
-					<p style="background: linear-gradient(90deg, #77009a 0%, #510097 100%);"><strong>WEBRiNG</strong></p>
+					<p class="boxy" style="background: linear-gradient(90deg, #77009a 0%, #510097 100%);"><strong>WEBRiNG</strong></p>
 				</div>
-				<div class="sidebox-content">
+				<div class="sidebox-content boxy">
 					<div id='neorings-neoring-container' style="text-align: center;">
 						<a class="bring" href="https://neorings.org/api/webring/1/previous?via=https%3A%2F%2Fwiichicken.neocities.org">&lt;</a>
 						<a href="https://neorings.org/webring/1/">Neoring</a>
@@ -772,7 +793,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="alerta" class="box sec-full" style="padding: 0; --border: red; color: white; --b-radius: 5;"></div>
+			<div id="alerta" class="box" style="padding: 0; --border: red; color: white; --b-radius: 5;"></div>
 			<script>
 				const alertaChance = Math.floor(Math.random() * 5);
 				if (alertaChance === 3) {
@@ -784,15 +805,15 @@
 			</script>
 			<nav id="youWillScroll">
 				<div class="row sec-l">
-					<div class="box noblur sec-l" style="padding: 1px; width: 80%; border: none; padding-right: 1.1px; --b-radius: 5;" id="navig">
-						<a class="noBg" id="a1" style="border-radius: 5px 0 0 5px;" href="aboutme.html">ABOUT</a>
-						<a class="noBg" id="a2" href="creative/index.html">ART</a>
-						<a class="noBg" id="a3" href="more/archive/blog/index.html">BLOG</a>
-						<a class="noBg hasDrop" id="a4" href="interests/index.html">MEDiA</a>
-						<a class="noBg" id="a5" href="more/index.html">MORE</a>
+					<div class="box sec-l" style="width: 80%;" id="navig">
+						<a class="noBg boxyless sec-l" style="--b-radius-tr: 0 !important; --b-radius-br: 0 !important;" id="a1" href="aboutme.html">ABOUT</a>
+						<a class="noBg" id="a2" href="creative/">ART</a>
+						<a class="noBg" id="a3" href="more/archive/blog/">BLOG</a>
+						<a class="noBg" id="a4" href="interests/">MEDiA</a>
+						<a class="noBg boxyless" id="a5" style="--b-radius-tr: 5 !important; --b-radius-br: 5 !important;" href="more">MORE</a>
 					</div>
-					<div class="box noblur sec-r" style="padding: 0; width: 20%; margin-left: 10px; background-color: #bfbfbf; --border: #bfbfbf; --b-radius: 5;" id="lonelyNav">
-						<a class="noBg sec-r" id="a7" href="guestbook.html">GUESTBOOK</a>
+					<div class="box noblur sec-r" style="padding: 1px; width: 20%; margin-left: 10px; background-color: #bfbfbf; --border: #bfbfbf;" id="lonelyNav">
+						<a class="noBg boxyless sec-r" id="a7" href="guestbook.html">GUESTBOOK</a>
 					</div>
 				</div>
 			</nav>
@@ -819,7 +840,7 @@
 			<div class="row" id="infamous" style="display: grid; gap: 10px;">
 				<div class="box noscript-hidden sec-l" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
 					<div style="display: flex; flex-wrap: wrap;" id="statusCard">
-						<div id="statuscafe" style="padding: 5px; background-color: #ffb4a8; width: 100%; min-height: 85px;">
+						<div id="statuscafe" style="padding: 5px; background-color: #ffb4a8; width: 100%; min-height: 90px;">
 							<a href="https://status.cafe/users/cringe" class="noBg" target="_blank">
 								<div id="statuscafe-username"></div>
 								<div id="statuscafe-content"></div>
@@ -853,11 +874,6 @@
 					</ul>
 				</div>
 			</div>
-			<div class="box sec-full" style="background-color: #141f00ab; color: #d4ec9d; --border: #b3ff00;">
-				<h3>iM ON ARTFiGHT!</h3>
-				<p>i am on team seafoam! i will try to attack everyone that i can back (not a guarantee)! if you would like to follow me, use this link</p>
-				<a href="https://artfight.net/~wiichicken" target="_blank" class="noBg"><button class="bring">ARTFiGHT PROFiLE</button></a>
-			</div>
 			<div class="box sec-full" style="padding: 0; display: flex; --border: #f6be14; background-color: #352500ab">
 				<iframe src="interests/websites/sotfp/widget.html" style="width: 100%; height: 100px; border: none;"></iframe>
 			</div>
@@ -866,7 +882,7 @@
 					<h2>latestArt</h2>
 					<div style="display: flex;">
 						<div style="display: flex; align-items: center; margin-right: 10px;">
-							<img id="artfeat" src="https://i.imgur.com/s25rTzF.png" width="100px" height="100px" style="image-rendering: pixelated; display: inline-block; box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7); border-radius: 0 0 0 2px;">
+							<img id="artfeat" class="boxyless" src="https://i.imgur.com/s25rTzF.png" width="100px" height="100px" style="image-rendering: pixelated; display: inline-block; box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7); --b-radius-bl: 5;">
 							<div class="afterfeat" style="height: 95px; background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(227,232,0,1) 100%);"></div>
 							<div class="afterfeat" style="height: 90px; width: 2px; background: linear-gradient(45deg, rgba(189,0,128,1) 0%, rgba(0,232,179,1) 100%);"></div>
 						</div>
@@ -916,7 +932,7 @@
 					</ul>
 				</div>
 				<div class="box lefty mobileHidden reducedHidden noscript-hidden sec-r" id="navlink" style="padding: 0; --border: #bec9c8;">
-					<span class="helpbutt" style="border-radius: 0 0 3px 0;" id="adHelp" onclick="flipTheScript('adHelp', 'navlink', 'nava2', 'nava1', '#1a1c1e', '#e2e2e5')">?</span>
+					<span class="helpbutt boxy" id="adHelp" onclick="flipTheScript('adHelp', 'navlink', 'nava2', 'nava1', '#1a1c1e', '#e2e2e5')">?</span>
 					<div id="nava1">
 						<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
 					</div>
@@ -983,60 +999,55 @@
 					<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!"></a>
 				</div>
 			</div>
-			<div class="box page-bottom" style="background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,134,255,1) 100%); color: #bfe9ff; border: none; overflow: visible; height: 54px; padding: 1px;">
-				<div style="background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,134,255,1) 100%); filter: blur(10px); width: 100%; height: 54px;" class="page-bottom"></div>
-				<div style="position: relative; transform: translateY(-54px); background-color: black; height: 52px; display: flex;" class="page-bottom" id="bottomOver">
-					<div class="middleBoy" id="alibaba" style="width: 100%; flex-direction: column;">
-						<div style="display: flex;">
-							<div class="square" style="background-color: red;"></div>
-							<p class="nomarblock" style="text-align: center;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
-							<div class="square" style="background-color: #00a2ff;"></div>
-						</div>
-						<p onclick="setRandomMessage()" id="messageTxt" class="nomarblock" style="font-size: 10px; text-align: center; cursor: pointer;">she no till i script</p>
-					</div>
-					<div id="cornerInBox" style="width: 0%; display: flex; align-items: flex-end; justify-content: flex-end;">
-						<a class="noBg" href="credits.html">credits</a>
-						<a class="noBg" href="sitemap.html">sitemap</a>
-						<a class="noBg" href="https://cd5k.net/tau/">&tau;</a>
-					</div>
+			<div class="footer page-bottom">
+				<div style="display: flex; justify-content: center;">
+					<div class="square" style="background-color: red;"></div>
+					<p class="nomarblock" style="text-align: center;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
+					<div class="square" style="background-color: #00a2ff;"></div>
+				</div>
+				<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
+				<div id="cornerInBox">
+					<a class="noBg" href="credits.html">credits</a>
+					<a class="noBg" href="sitemap.html">sitemap</a>
+					<a class="noBg" href="https://cd5k.net/tau/">&tau;</a>
 				</div>
 			</div>
 		</main>
 		<aside id="rightSidebar" class="noscript-hidden">
 			<!-- last.fm scrobble widget -->
-			<div class="sidebox" id="scrobblebox" style="--side-border: red; --side-bg: #2c151299;">
+			<div class="sidebox" id="scrobblebox" style="--border: red; --side-bg: #2c151299;">
 				<div class="sidehead">
-					<p><strong>SCROBBLES</strong></p>
+					<p class="boxy"><strong>SCROBBLES</strong></p>
 				</div>
-				<div class="sidebox-content" style="padding: 0; overflow: hidden;">
-					<iframe src="resources/widgets/home/np.html" id="scrobbleWidget" scrolling="no"></iframe>
+				<div class="sidebox-content boxy" style="padding: 0; overflow: hidden;">
+					<iframe src="resources/widgets/home/np.html" id="scrobbleWidget" scrolling="no" class="boxyless"></iframe>
 				</div>
 			</div>
-			<div class="sidebox" style="--side-bg: #00201c99; --side-text: #75f8e3; --side-border: #55dbc7;" id="visitorcount">
+			<div class="sidebox" style="--side-bg: #00201c99; --side-text: #75f8e3; --border: #55dbc7;" id="visitorcount">
 				<div class="sidehead" style="color: #83d5c6;">
-					<p style="background: linear-gradient(90deg, #005047 0%, #00502b 100%);">ViSiTOR #</p>
+					<p class="boxy" style="background: linear-gradient(90deg, #005047 0%, #00502b 100%);">ViSiTOR #</p>
 				</div>
-				<div class="sidebox-content middleBoy" id="googgo" style="flex-wrap: wrap; padding: 2px;">
+				<div class="sidebox-content boxy middleBoy" id="googgo" style="flex-wrap: wrap; padding: 2px;">
 					<p class="nomarblock headText" id="hitcount" style="font-size: 35px;">00000</p>
 				</div>
 			</div>
-			<div class="sidebox" id="lastUpdated" style="overflow: visible; margin: 0; --side-border: #f5ddda;">
+			<div class="sidebox" id="lastUpdated" style="overflow: visible; margin: 0; --border: #f5ddda;">
 				<div class="sidehead" style="display: flex; color: #f5ddda;">
-					<p style="display: inline-block; padding-left: 4px; background: linear-gradient(90deg, #534341 0%, #665949 100%);">UPDATED</p>
+					<p class="boxy" style="background: linear-gradient(90deg, #534341 0%, #665949 100%);">UPDATED</p>
 				</div>
-				<div class="sidebox-content" style="text-align: center; padding: 0;">
+				<div class="sidebox-content boxy" style="text-align: center; padding: 0;">
 					<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;"></p>
 					<p class="headText nomarblock" id="upDate" style="background-color: #ede0dd; color: #201a19; font-size: 50px;"></p>
 					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;"></p>
 					<script src="resources/widgets/home/lastupdate.js"></script>
 				</div>
 			</div>
-			<div class="sidebox" style="--side-bg: #001f23cc; --side-text: #8ef2ff; --side-border: #4ed8e8;" id="side-flood">
+			<div class="sidebox" style="--side-bg: #001f23cc; --side-text: #8ef2ff; --border: #4ed8e8;" id="side-flood">
 				<div class="sidehead">
-					<p style="background: linear-gradient(90deg, #006972 0%, #4a6366 100%); color: #98f5ff; border-radius: 5px 2px 2px 2px;"><strong>FLOOD</strong></p>
-					<a href="https://melonking.net/free/software/flood" target="_blank" class="helpbutt" id="flood-info" style="--side-border: #515e7d; border-radius: 2px 5px 2px 2px;">&#x1FAA3;</a>
+					<p class="boxy" style="background: linear-gradient(90deg, #006972 0%, #4a6366 100%); color: #98f5ff; --b-radius-tr: 2;"><strong>FLOOD</strong></p>
+					<a href="https://melonking.net/free/software/flood" target="_blank" class="helpbutt boxy" id="flood-info" style="--border: #515e7d; --b-radius-tl: 2;">&#x1FAA3;</a>
 				</div>
-				<div class="sidebox-content" id="flood-inner" style="height: 100px; padding: 0; overflow: hidden;">
+				<div class="sidebox-content boxy" id="flood-inner" style="height: 100px; padding: 0; overflow: hidden;">
 					<link href="resources/widgets/home/flood/flood.css" rel="stylesheet" type="text/css" media="all"/>
 					<button id="flood-fill-water" class="bring">FiLL</button>
 				</div>
@@ -1075,7 +1086,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 function setRandomMessage() {
 	var msgList = ['Updated <code>index.html</code>', 'coded on a best buy kiosk macbook', 'jobs near me that pay trillion/hour', 'TV explodes in 30 seconds if not powered off', 'can we get a "woot woot"', 'anti-anti-aliasing', 'bring back parallax', 'wth is a framework', 'oh to be a navbar with 3 items', 'internet explorer is safe... so far', 'THiS iS A POOP ALERT', 'debbie downers DNI', 'do not use this website around pacemakers', 'Smile! You\'re on <i>Old Navy</i> TV!', 'one of the greatest', 'keep this place our secret', 'Thanks SiriusXM for making this possible!', 'not the best thing to show to an employer', 'awwwards are impractical anyways', 'dm for proto', 'it takes a village and a half', 'we bought a zoo', 'free for 7 days', 'like transformers, but funnier'];
-	document.getElementById('messageTxt').innerHTML = msgList[Math.floor(Math.random() * msgList.length)];
+	document.getElementById('random-message').innerHTML = msgList[Math.floor(Math.random() * msgList.length)];
 }
 setRandomMessage();
 </script>
