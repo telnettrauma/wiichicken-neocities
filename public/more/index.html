@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MORE CONTENT!!! only on WiiCHiCKEN'S WEBSiTE</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+		<meta name="theme-color" content="#e0c38c">
+		<noscript>
+			<style>
+				#poopBlock iframe {display: block !important;}
+				.jsalert {display: inline !important;}
+			</style>
+		</noscript>
+	</head>
+	<body>
+		<style>
+			* {
+				--dark-primary: #ffb3ad;
+				--dark-tertiary: #e0c38c;
+				--dark-on-tertiary: #3f2e04;
+				--light-on-primary-container: #3a0905cc;
+				--dark-on-primary-container: #ffb4a8;
+				--bg-1: red;
+				--bg-2: #ffaa00;
+				--border: red; 
+			}
+			body {
+				background-color: #1f0001;
+				font-family: 'PT Sans', sans-serif;
+				margin: 0;
+			}
+			main {
+				max-width: 600px;
+				margin: auto;
+			}
+			h1, h2, h3 {font-family: 'Martian Mono', monospace;}
+			a {
+				color: var(--box-color);
+				text-decoration: none;
+				position: relative;
+				transition-duration: 0.4s;
+			}
+			h3, p, h1 {
+				margin-block-start: 0;
+				margin-block-end: 0;
+			}
+			h2 {
+				margin-bottom: 2px;
+				margin-block-start: 0px;
+			}
+			.fake-button {box-shadow: 2px 2px 0 0 var(--box-border);}
+			.fake-button:hover {
+				box-shadow: 1px 1px 0 0 var(--box-border);
+				transform: translate(1px, 1px);
+			}
+			.fake-button:active {
+				box-shadow: none;
+				transform: translate(2px, 2px);
+			}
+			.row {
+				display: flex;
+				width: 100%;
+			}
+			.lefty {margin-left: 10px;}
+			header {box-shadow: 0 0 150px 20px #93000a;}
+			.jsalert {
+				display: none;
+				background-color: #9e8e81;
+				color: #51443a;
+			}
+		</style>
+		<div id="heightCheck"></div>
+		<div class="heading" id="poopBlock" style="pointer-events: all;">
+			<iframe src="/resources/nav/fallback.html" loading="lazy"></iframe>
+		</div>
+		<div id="sideButton" onclick="openSidey()"></div>
+		<div id="overSide"></div>
+		<div id="chewTooth"></div>
+		<main>
+			<header class="box page-top">
+				<h1>MORE PROJECTS</h1>
+			</header>
+			<div class="row">
+				<div class="box fake-button sec-tl">
+					<a class="noline" href="archive/index.html" style="color: #ffdad4;">
+						<h3>ARCHiVE</h3>
+						<p>my slowly ever growing archive of things</p>
+					</a>
+				</div>
+				<div class="box lefty fake-button sec-tr" style="background-color: #2f1500d0; --border: #ff8800;">
+					<a class="noline" href="idle_file/versions.html" style="color: #ffdcc3;">
+						<h3>idle file</h3>
+						<p>idle game i abandoned before it got good <span class="jsalert">requires javascript</span></p>
+					</a>
+				</div>
+			</div>
+			<div class="box fake-button sec-b" style="background-color: #271900d0; --border: yellow;">
+				<a class="noline" href="https://aisites.neocities.org" target="_blank" style="color: #ffdea9;">
+					<h3>aisites</h3>
+					<p>back when generative ai wasn't that good i made this for comedic purposes. i stopped work on it because ai suddenly got good, causing the project to no longer be funny, and because i felt bad about stealing code, even if it wasn't for profit.</p>
+				</a>
+			</div>
+			<h2 class="sec-t box">OTHER</h2>
+			<div class="box sec-b">
+				<p>projects that aren't significant enough to go to the above section</p>
+				<ul>
+					<li><a href="archive/blog/concepts/lists/">lists</a> - exactly what it sounds like. lists of things</li>
+					<li><a href="glunk">Glunk</a> - glunk</li>
+					<li><a href="tools/userscripts/tweetbutton.html">replace X 'Post' buttons with 'Tweet' buttons</a> - userscript that does exactly what it says on the tin</li>
+				</ul>
+			</div>
+			<h2 class="sec-t box">OLD</h2>
+			<div class="box sec-b">
+				<p>these suck and lack polish, but im still including them here because why not, ya know?!?</p>
+				<ul>
+					<li><a href="gamerquiz/index.html">are U a gamer?</a> - lets see if u are! take dis quiz to find out! (disclaimer: this one isnt and never was funny) <span class="jsalert">requires javascript</span></li>
+					<li><a href="yomommamachine/yo.html">yo momma machine</a> - the machine the government doesnt want you or yo step sissy to know about <span class="jsalert">requires javascript</span></li>
+					<li><a href="randomscreenshot.html">random screenshots</a> - random screenshots uploaded to lightshot <span class="jsalert">requires javascript</span></li>
+				</ul>
+			</div>
+			<div class="footer page-bottom">
+				<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
+				<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
+			</div>
+		</main>
+		<script>
+			function setRandomMessage() {
+				var msgList = ['Nothing beats a <code>gentle poop</code>', 'This is a text', 'mao', 'floor flammable when hot', 'the wright brothers made airplane mode', 'End of slide show, click to exit', 'your lion is waiting you', 'get telnet trauma, dummy', 'Invent a hammer w/ a hammer inside!', 'just wait until youre in hummus', 'oh goody goody', 'is EURO the lastest gen z trend?', 'this really gets my goat, bahhh', 'guacamole gaming', 'what if imoji were real', 'ur finger is bleeding', 'oo oo, temu temu', 'gen z\'s cancelling spongebob? oh, honey...', 'la la poopsie', 'eating granola, ama', 'gmail has gone woke?!', 'tortilla attack', 'magical pudding', 'unimused', 'you arent meant to downgrade', 'what if emoji... came to life', 'you win parking', 'goverment.gov/hack', 'unhealthy intake of playdoh', 'not meant to go back', 'welcome to 2020! they finally invented slime that cleans anything', 'Gigglehurts', 'super monkey Ball is Life', 'cashapp when cashprocess walks into the room', 'made u look made u look now ur in the baby book', 'r u raising ur hand or just stretching', 'humpty dumpty brapped on a wall', 'Nooo!!! I have the HelloFresh virus! Just kidding!', 'this fish is delish', 'Snapchat for Seniors', 'new low score', 'DUDE, DATS A BUTTERFLY', 'the happy kitty will remain cheerful indefinitely', 'tomorrow you may cease to exist', 'iOS 7 will change the world. Be ready.', 'nothing we can do about it', 'my snippets in bio', 'okay, you a shoe', 'Watch out, vehicle stopped on shoulder ahead', 'my son plays with linkedin logs', 'a little giggle would go a long way', 'Watch out for tickles. Theyre deadly.'];
+				document.getElementById('random-message').innerHTML = msgList[Math.floor(Math.random() * msgList.length)];
+			}
+			setRandomMessage();
+		</script>
+		<script src="/resources/nav/navbar.js"></script>
+	</body>
+</html>

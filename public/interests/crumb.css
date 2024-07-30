@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap');
+body {
+	margin: 0;
+	font-family: 'PT Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {font-family: 'Martian Mono', monospace;}
+body {
+	background-color: var(--bg);
+	color: var(--main);
+}
+hr {
+	height: 0px;
+	color: var(--accent);
+	border: 1px solid var(--accent);
+}
+a {
+	background-color: var(--sub);
+	color: var(--bg);
+	text-decoration: none;
+}
+.headerVisible {transform: translateY(0px) !important;}
+#inHead {justify-content: flex-start !important;}
+.topLinks a {padding: 0 !important;}
+.heading {
+	width: 100%;
+	z-index: 10;
+	margin: 0;
+	top: 0;
+	position: fixed;
+	transition-duration: 0.5s;
+	height: 35px;
+	background: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0) 100%);
+	mask-image: linear-gradient(rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 70%, rgba(0, 0, 0, 0) 100%);
+	pointer-events: none;
+}
+#heightCheck {height: 30px;}
+#inHead {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+}
+.headerVisible {transform: translateY(0px) !important;}
+.headerInvisible {transform: translateY(-50px);}
+.square {
+	width: 15px;
+	height: 15px;
+	margin: 2px;
+	transition-duration: 0.3s;
+}
+.topLinks p {
+	margin-block-start: 0;
+	margin-block-end: 0;
+	color: grey;
+}
+.topLinks a {
+	font-weight: bold;
+	font-size: 15px;
+	color: white;
+	padding: 0 10px 0 10px;
+	transition-duration: 0.3s;
+	text-shadow: 0 0 5px black;
+	opacity: 0.7;
+	background-color: unset !important;
+	pointer-events: all;
+}
+.topLinks a:hover {
+	opacity: 1;
+	text-shadow: 0 0 10px white;
+}
+#fakeLogo {
+	display: flex;
+	align-items: center;
+	transition-duration: 0.3s;
+	cursor: pointer;
+	z-index: 2;
+	margin: 0 10px 0 0;
+	background-color: unset !important;
+	pointer-events: all;
+}
+#fakeLogo:hover #s1 {box-shadow: 0 0 100px 25px red, 42px 0 100px 25px #00a2ff;}
+#fakeLogo .square {
+	width: 15px;
+	height: 15px;
+}
+#fakeLogo p {
+	pointer-events: none;
+	font-family: 'Martian Mono', monospace;
+	margin: 0 5px 0 5px;
+	transition-duration: 0.3s;
+	opacity: 0;
+	text-shadow: 0 0 10px black;
+	filter: contrast(0.8);
+}
+#fakeLogo:active .square {transition-duration: 0.1s;}
+#s2 {mix-blend-mode: multiply;}
+#fakeLogo:hover #s2 {transform: translate(0, 0);}
+#fakeLogo:active #s2 {transform: translate(-15px, 4px);}
+.square {
+	width: 15px;
+	height: 15px;
+	margin: 2px;
+	transition-duration: 0.3s;
+}

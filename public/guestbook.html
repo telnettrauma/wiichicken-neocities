@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>WiiCHiCKEN GUESTBOOK</title>
+	<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="media/guesticon.ico">
+	<link href="style.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<noscript>
+		<style>
+			#no-script {display: block !important;}
+		</style>
+	</noscript>
+</head>
+<body>
+<style>
+	* {
+		--dark-tertiary: #c5c2ea;
+		--dark-on-tertiary: #2e2d4d;
+	}
+	body {
+		color: white;
+		background-color: #001f2a;
+		font-family: 'PT Sans', sans-serif;
+	}
+	h1, h2, .author-name {font-family: 'Martian Mono', monospace !important;}
+	p, .date, .hcb-comment-body {font-family: 'PT Sans', sans-serif !important;}
+	h3 {display: none;}
+	a:not(:has(img)) {
+		text-decoration: none;
+		background-color: #4f4061;
+		color: #eddcff;
+	}
+	main {
+		width: 600px;
+		margin: auto;
+	}
+	.box, #HCB_comment_form_box, .comment, header {
+		background-color: #001f2a88;
+		color: #bfe9ff;
+		padding: 5px;
+		border: 1px solid #bfe9ff;
+		margin-bottom: 5px !important;
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+	}
+	header {box-shadow: 0 0 150px 20px #bfe9ff;}
+	#hcb_form_name_container input, .commentbox {
+		background-color: #94ccff;
+		color: #003352;
+		border: 1px solid #cde5ff;
+	}
+	.submit, .inputfile, .btn-secondary {
+		color: #94ccff !important;
+		background-color: #003352 !important;
+		border: 1px solid #cde5ff !important;
+		cursor: pointer;
+	}
+	.btn {box-shadow: 2px 2px 0 0 #cde5ff !important;}
+	.btn:hover {
+		box-shadow: 1px 1px 0 0 #cde5ff !important;
+		transform: translate(1px, 1px) !important;
+	}
+	.btn:active {
+		box-shadow: none !important;
+		transform: translate(2px, 2px) !important;
+	}
+	.home-desc {display: none;}
+	#comments_list {width: 100%;}
+	#hcb_form_name::before {content: 'Name:';}
+	#hcb_form_website::before {content: 'Website:';}
+	#hcb_form_website::after {content: ' (optional)';}
+	#no-script {display: none}
+</style>
+<div id="heightCheck"></div>
+<div class="heading" id="poopBlock"></div>
+<div id="sideButton" onclick="openSidey()"></div>
+<div id="overSide"></div>
+<div id="chewTooth"></div>
+<main>
+	<header class="box">
+		<h1>GUESTBOOK</h1>
+	</header>
+	<div class="box">
+		<p>these are the fields</p>
+		<ul>
+			<li>Name</li>
+			<li>Website (optional)</li>
+			<li>Message</li>
+		</ul>
+	</div>
+	<!-- begin wwww.htmlcommentbox.com -->
+	<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
+	<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24yGx%2F%2FtvDLdZd36wJD%2FW8V1"+"&opts=17414&num=10&ts=1705250630299");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+	<!-- end www.htmlcommentbox.com -->
+	<div class="box">
+		<p><a href="media/home/thanks.html" target="_blank" style="background-color: unset;">thank you</a> for your time <img src="media/emoji/hug.gif"></p>
+	</div>
+</main>
+<div class="box" id="no-script">
+	<p>the guestbook requires javascript, you silly goose! <a href="index.html">return home</a></p>
+</div>
+<script src="resources/nav/navbar.js"></script>
+</body>
+</html>

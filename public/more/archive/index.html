@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>WiiCHiCKEN ARCHiVES</title>
+	<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<link href="/style.css" rel="stylesheet">
+	<noscript><style>#poopBlock iframe {display: block !important;}</style></noscript>
+</head>
+<body>
+	<style>
+		* {
+			--dark-primary: #afc6ff;
+			--dark-tertiary: #dcbce1;
+			--dark-on-tertiary: #3e2845;
+			--bg-1: #0053b9;
+			--bg-2: #7f3a96;
+			--border: #3377ff; 
+		}
+		body {
+			background-color: #131c2b;
+			color: #dae2f9;
+		}
+		main {
+			max-width: 600px;
+			margin: auto;
+		}
+		.box, header {
+			width: 100%;
+			padding: 5px;
+			margin: none;
+			margin-bottom: 10px;
+			backdrop-filter: blur(5px);
+			-webkit-backdrop-filter: blur(5px);
+		}
+		.box {
+			background-color: #002f68cc;
+			color: #acc7ff;
+		}
+		header {
+			background-color: #0a458ecc;
+			color: #d7e2ff;
+		}
+	</style>
+	<div id="heightCheck"></div>
+	<div class="heading" id="poopBlock" style="pointer-events: all;">
+		<iframe src="/resources/nav/fallback.html" loading="lazy"></iframe>
+	</div>
+	<div id="sideButton" onclick="openSidey()"></div>
+	<div id="overSide"></div>
+	<div id="chewTooth"></div>
+	<main>
+		<header class="box page-top">
+			<h1>THE ARCHiVES</h1>
+		</header>
+		<div class="box page-bottom">
+			<p>welcome to my archive of random things ive made over the years</p>
+			<ul>
+				<li>
+					<a href="blog/index.html">Blog</a> - Various blog posts I have written on this site
+					<ul>
+						<li><a href="blog/arch/wp/index.html" target="_blank">2014 WordPress</a> - A complete recreation of a WordPress blog that I had in 2014.</li>
+					</ul>
+				</li>
+				<li><a href="websites/index.html">Websites</a> - old websites i've made over the years</li>
+				<li>a lot of pages moved into the websites page, so that's why this place is suddenly so barren!</li>
+			</ul>
+		</div>
+	</main>
+	<script src="/resources/nav/navbar.js"></script>
+</body>

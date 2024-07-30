@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>WiiCHiCKEN Neocities Blog</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link rel="alternate" type="application/rss+xml" href="feed.xml" title="RSS">
+		<link href="/style.css" rel="stylesheet">
+		<noscript>
+			<style>
+				#poopBlock iframe {display: block !important;}
+				#concept-box {display: none;}
+				#toggle-switch {display: none;}
+				.concept {display: list-item !important;}
+			</style>
+		</noscript>
+	</head>
+	<body>
+		<style>
+			* {
+				--border: #f7adfd;
+				--dark-primary: #ebb5ed;
+				--dark-tertiary: #f6b8ae;
+				--dark-on-tertiary: #4c2520;
+				--bg-1: #dd00ff;
+				--bg-2: #ce6353;
+			}
+			body {
+				background-color: #350040;
+				font-family: 'PT Sans', sans-serif;
+			}
+			p {
+				margin-block-start: 0;
+				margin-block-end: 0;
+			}
+			#flex {display: flex;}
+			main {
+				max-width: 800px;
+				margin: auto;
+			}
+			.box, header, .grid .box ul li, .grid .box h2, .grid .box h3 {
+				--bg: #310938cc;
+				--text: #ffd6fe;
+				--border: #f7adfd;
+				background-color: var(--bg);
+				color: var(--text);
+				padding: 5px;
+				margin-bottom: 10px;
+				width: -webkit-fill-available;
+				backdrop-filter: blur(5px);
+				-webkit-backdrop-filter: blur(5px);
+			}
+			/* styling for grid mode */
+			.grid .box {
+				padding: 0;
+				margin-bottom: 0;
+				background-color: #00000000;
+				border: none;
+				backdrop-filter: unset;
+				-webkit-backdrop-filter: unset;
+			}
+			.grid .box ul {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-gap: 10px;
+				padding-left: 0;
+			}
+			.grid .box ul li {
+				display: flex;
+				padding: 0;
+				flex-wrap: wrap;
+				backdrop-filter: blur(5px);
+				-webkit-backdrop-filter: blur(5px);
+				margin-bottom: 0;
+			}
+			.grid .box ul li a {
+				font-size: 20px;
+				margin: 5px;
+				padding: 5px;
+				width: 100%;
+				background-color: var(--text);
+				color: var(--bg);
+			}
+			.grid .box ul li a::after {display: none;}
+			.grid .box h2, .grid .box h3 {
+				backdrop-filter: blur(5px);
+				-webkit-backdrop-filter: blur(5px);
+			}
+			.grid .box ul .meta {
+				--bg: #012200cc;
+				--text: #a8f692;
+				--border: #8dd979;
+			}
+			.grid .box ul .code {
+				--bg: #131f00cc;
+				--text: #caef86;
+				--border: #afd36d;
+			}
+			.grid .box ul .design {
+				--bg: #360f00cc;
+				--text: #ffdbcd;
+				--border: #99461c;
+			}
+			.grid .box ul .rant {
+				--bg: #410000cc;
+				--text: #ffdad4;
+				--border: #b62316;
+			}
+			.grid .box ul .social {
+				--bg: #000f5dcc;
+				--text: #dee0ff;
+				--border: #344ddc;
+			}
+			.grid .box ul .ai {
+				--bg: #270057cc;
+				--text: #ecdcff;
+				--border: #7824ff;
+			}
+			/* the styling for grid mode ended btw */
+			#toggle-switch {
+				position: absolute;
+				top: 0;
+				right: 5px;
+				display: flex;
+				align-items: center;
+			}
+			#toggle-switch button {margin: 5px;}
+			#toggle-switch .active {background-color: #350040;}
+			header {box-shadow: 0 0 150px 20px #f7adfd;}
+			button {
+				background-color: #6a2e73;
+				color: #ffd6fe;
+				padding: 3px;
+				border: 1px solid #f7adfd;
+				box-shadow: 2px 2px 0 0 #f7adfd;
+				cursor: pointer;
+				margin: 2px;
+			}
+			button:hover {
+				box-shadow: 1px 1px 0 0 #f7adfd;
+				transform: translate(1px, 1px);
+			}
+			button:active {
+				box-shadow: none;
+				transform: translate(2px, 2px);
+			}
+			ul {padding-left: 25px;}
+			h1, h2, h3 {
+				margin: 0;
+				font-family: 'Martian Mono', monospace;
+			}
+			#link-list .box {margin-bottom: 2px;}
+			.metaBadge, .designBadge, .rantBadge, .socialBadge, .codeBadge {padding: 0 2px 0 2px;}
+			.metaBadge {
+				background-color: #035300;
+				color: #77ff60;
+			}
+			.codeBadge {
+				background-color: #243600;
+				color: #afd36e;
+			}
+			.designBadge {
+				background-color: #581e00;
+				color: #ffdbcd;
+			}
+			.rantBadge {
+				background-color: #930100;
+				color: #ffb4a8;
+			}
+			.socialBadge {
+				background-color: #0e30c5;
+				color: #bbc3ff;
+			}
+			.aiBadge {
+				background-color: #3e1c6f;
+				color: #d6baff;
+			}
+			@keyframes rainbow {
+				0% {background-color: #ffb4a8; color: #690100;}
+				14% {background-color: #ffb86f; color: #4a2800;}
+				28% {background-color: #e3c600; color: #393000;}
+				42% {background-color: #77df00; color: #193800;}
+				56% {background-color: #00e1ab; color: #003828;}
+				70% {background-color: #96ccff; color: #003353;}
+				84% {background-color: #d5bbff; color: #41008b;}
+				96% {background-color: #faabff; color: #570066;}
+				100% {background-color: #ffb4a8; color: #690100;}
+			}
+			@media only screen and (max-width: 900px) {
+				.grid .box ul {grid-template-columns: repeat(2, 1fr);}
+			}
+		</style>
+		<div id="heightCheck"></div>
+		<div class="heading" id="poopBlock" style="pointer-events: all;">
+			<iframe src="/resources/nav/fallback.html" loading="lazy"></iframe>
+		</div>
+		<div id="sideButton" onclick="openSidey()"></div>
+		<div id="overSide"></div>
+		<div id="chewTooth"></div>
+		<main>
+			<header class="box page-top">
+				<h1>MiCROBLOG</h1>
+			</header>
+			<div class="box">
+				<p>this is where i store my site update logs, as well as original pieces of rambling. (this just in, the kids call it "yapping" now)<br>You can also view my <a href="https://cringepoop.tumblr.com" target="_blank">tumblr</a> blog, where I post these updates and more (that's a lie, i completely forgot to). If you want to use tumblr but only see things posted here, view <a href="https://cringepoop.tumblr.com/tagged/neocitiesblog" target="_blank">my tag</a>.</p>
+			</div>
+			<div class="box sec-b">
+				<h2>TAG GUiDE</h2>
+				<p><span class="aiBadge">#ai</span> - definitely a rant</p>
+				<p><span class="codeBadge">#code</span> - coding and other techy stuff. does not mean that a page will contain code snippets</p>
+				<p><span class="designBadge">#design</span> - me talking about ui/ux design</p>
+				<p><span class="metaBadge">#meta</span> - stuff about this website. older update posts are kept here, but new ones are put on the <a href="updates.html" target="_blank">updates page</a>.</p>
+				<p><span class="rantBadge">#rant</span> - me complaining</p>
+				<p><span class="socialBadge">#social</span> - all about social media and the like</p>
+			</div>
+			<div class="box sec-full" style="min-height: 45px;">
+				<details>
+					<summary>Jump to:</summary>
+					<details style="margin-left: 10px;">
+						<summary>2024</summary>
+						<ul>
+							<li><a href="#24m1">January</a></li>
+							<li><a href="#24m2">Feburary</a></li>
+							<li><a href="#24m3">March</a></li>
+							<li><a href="#24m4">April</a></li>
+							<li><a href="#24m5">May</a></li>
+							<li><a href="#24m6">June</a></li>
+							<li><a href="#24m7">July</a></li>
+						</ul>
+					</details>
+					<details style="margin-left: 10px;">
+						<summary>2023</summary>
+						<ul>
+							<li><a href="#23m10">October</a></li>
+							<li><a href="#23m11">November</a></li>
+							<li><a href="#23m12">December</a></li>
+						</ul>
+					</details>
+				</details>
+				<div id="toggle-switch">
+					<p>View:</p>
+					<button class="active" onclick="listView()" id="en-list" title="List view"><img src="arch/media/list.png"></button>
+					<button id="en-grid" onclick="gridView()" title="Grid view"><img src="arch/media/grid.png"></button>
+				</div>
+			</div>
+			<div id="link-list" class="list">
+				<div class="box sec-t">
+					<h2 id="24">2024</h2>
+				</div>
+				<div class="box">
+					<h3 id="24m7">July</h3>
+					<ul>
+						<li class="social"><a href="2024/7/twitterbingo.html" target="_blank">25. TWiTTER BiNGO</a> <span class="socialBadge">#social</span></li>
+						<li class="social"><a href="2024/7/instanotes.html" target="_blank">19. Instagram Notes: How Instagram Filled Everyone's* Feed With Porn</a> <span class="socialBadge">#social</span></li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3 id="24m6">June</h3>
+					<ul>
+						<li class="rant"><a href="2024/6/ios18.htm" target="_blank">13. iOS 18 is stupid</a> <span class="rantBadge">#rant</span> <span class="designBadge">#design</span></li>
+						<li class="social"><a href="2024/6/suspended.html" target="_blank">8. Your account is suspended or locked</a> <span class="socialBadge">#social</span></li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3 id="24m5">May</h3>
+					<ul>
+						<li><a href="2024/5/arc.html" target="_blank">21. using arc for windows (as a non memoji pfp)</a></li>
+						<li class="ai"><a href="2024/5/usingai.html" target="_blank">2. what will we actually use ai for?</a> <span class="aiBadge">#ai</span></li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3 id="24m4">April</h3>
+					<ul>
+						<li class="meta"><a href="2024/4/28.html" target="_blank">28. DO YOU HATE ME YET?</a> <span class="metaBadge">#meta</span></li>
+						<li class="ai social rant"><a href="2024/4/metasearch.html" target="_blank">24. Meta AI: a case study on how NOT to introduce a gimmick</a> <span class="aiBadge">#ai</span> <span class="socialBadge">#social</span> <span class="rantBadge">#rant</span></li>
+						<li class="meta"><a href="2024/4/21.html" target="_blank">21. WELL, THAT HAPPENED</a> <span class="metaBadge">#meta</span></li>
+						<li><a href="2024/4/infotainment.html" target="_blank">18. replacing my infotainment system</a></li>
+						<li class="meta"><a href="2024/4/14.html" target="_blank">14. STAGGERiNG</a> <span class="metaBadge">#meta</span></li>
+						<li class="social"><a href="2024/4/aprilfools.html" target="_blank">1. april fools (online)</a> <span class="socialBadge">#social</span></li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3 id="24m3">March</h3>
+					<ul>
+						<li class="meta"><a href="2024/3/29.html" target="_blank">29. NEW BUTOTN AGAIN</a> <span class="metaBadge">#meta</span></li>
+						<li class="meta"><a href="2024/3/21.html" target="_blank">21. 100</a> <span class="metaBadge">#meta</span></li>
+						<li class="meta"><a href="2024/3/9.html" target="_blank">9. newGizmo</a> <span class="metaBadge">#meta</span></li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3 id="24m2">Feburary</h3>
+					<ul>
+						<li class="rant social"><a target="_blank" href="2024/2/x.html">29. i updated Twitter to X</a> <span class="rantBadge">#rant</span><span class="socialBadge">#social</span></li>
+						<li><a target="_blank" href="2024/2/neko.html">25. NekoWeb</a></li>
+						<li class="meta"><a target="_blank" href="2024/2/16.html">16. EL DiRECTORY</a> <span class="metaBadge">#meta</span></li>
+						<li class="social"><a target="_blank" href="2024/2/insta.html">15. why instagram keeps coming back</a> <span class="socialBadge">#social</span></li>
+						<li><a target="_blank" href="2024/2/headset.html">6. the apple headset will die in a week</a></li>
+						<li class="meta"><a target="_blank" href="2024/2/4.html">4. SAME SH!T, NOW ON GiT</a> <span class="metaBadge">#meta</span></li>
+						<li class="meta code"><a target="_blank" href="2024/2/git.html">2. trying to use Git on my site</a> <span class="metaBadge">#meta</span><span class="codeBadge">#code</span></li>
+					</ul>
+				</div>
+				<div class="box sec-b" style="margin-bottom: 10px;">
+					<h3 id="24m1">January</h3>
+					<ul>
+						<li class="rant"><a target="_blank" href="2024/1/headempty.html">31. Click to add text</a> <span class="rantBadge">#rant</span></li>
+						<li class="design"><a target="_blank" href="2024/1/start.html">28. lock the taskbar</a> <span class="designBadge">#design</span></li>
+						<li class="rant"><a target="_blank" href="2024/1/spotify.html">26. Spotify Sucks!!</a> <span class="rantBadge">#rant</span></li>
+						<li class="social"><a target="_blank" href="2024/1/follow.html">25. i DONT WANT TO BE YOUR FRiEND</a> <span class="socialBadge">#social</span></li>
+						<li><a target="_blank" href="2024/1/bookmarks.html">23. i need BOOKMARKS Goku</a></li>
+						<li class="meta"><a target="_blank" href="2024/1/22.html">22. whereAmI</a> <span class="metaBadge">#meta</span></li>
+						<li class="design"><a target="_blank" href="2024/1/np.html">16. comparing mobile now playing widgets</a> <span class="designBadge">#design</span></li>
+						<li class="meta"><a target="_blank" href="2024/1/13.html">13. TRENDY LAYOUT</a> <span class="metaBadge">#meta</span></li>
+						<li class="meta"><a target="_blank" href="2024/1/9.html">9. THE NEW NEW</a> <span class="metaBadge">#meta</span></li>
+					</ul>
+				</div>
+				<div class="box sec-t">
+					<h2 id="23">2023</h2>
+				</div>
+				<div class="box">
+					<h3 id="23m12">December</h3>
+					<ul>
+						<li class="meta"><a target="_blank" href="2023/december/31.html">31. WiGGLE.MONSTER</a> <span class="metaBadge">#meta</span></li>
+						<li class="meta"><a target="_blank" href="2023/december/20.html">20. REDUCED MOTiON</a> <span class="metaBadge">#meta</span></li>
+						<li class="meta"><a target="_blank" href="2023/december/18.html">18. i AiNT GOT NO iPHONE</a> <span class="metaBadge">#meta</span></li>
+						<li class="meta"><a target="_blank" href="2023/december/11.html">11. iDrewThis</a> <span class="metaBadge">#meta</span></li>
+						<li class="meta"><a target="_blank" href="2023/december/8.html">8. MERRY CHRiSTMAS</a> <span class="metaBadge">#meta</span></li>
+						<li class="meta"><a target="_blank" href="2023/december/6.html">6. SiGN THE GUESTBOOK YOU DiNGUS</a> <span class="metaBadge">#meta</span></li>
+						<li class="meta"><a target="_blank" href="2023/december/4.html">4. HOUSTON, WE HAVE WiDGETS</a> <span class="metaBadge">#meta</span></li>
+					</ul>
+				</div>
+				<div class="box">
+					<h3 id="23m11">November</h3>
+					<ul>
+						<li class="meta"><a target="_blank" href="2023/november/30.html">30. ALL ABOUT ME</a> <span class="metaBadge">#meta</span></li>
+						<li class="meta"><a target="_blank" href="2023/november/26.html">26. HOMEPAGE REDESiGN</a> <span class="metaBadge">#meta</span></li>
+					</ul>
+				</div>
+				<div class="box sec-b" style="margin-bottom: 10px;">
+					<h3 id="23m10">October</h3>
+					<ul>
+						<li><a href="2023/october/todoist.html" target="_blank">4. Todoist vs. TickTick (Free Tier Review)</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="box page-bottom" style="border-radius: 5px 5px 10px 10px; margin-bottom: 0;">
+				<a target="_blank" href="hell.html">abandomed city</a>
+			</div>
+		</main>
+		<script>
+			function listView() {
+				document.getElementById('link-list').classList.replace('grid', 'list');
+				document.getElementById('en-list').classList.add('active');
+				document.getElementById('en-grid').classList.remove('active');
+			}
+			function gridView() {
+				document.getElementById('link-list').classList.replace('list', 'grid');
+				document.getElementById('en-list').classList.remove('active');
+				document.getElementById('en-grid').classList.add('active');
+			}
+		</script>
+		<script src="/resources/nav/navbar.js"></script>
+	</body>
+</html>

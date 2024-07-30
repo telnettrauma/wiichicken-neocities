@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>iNTERESTS</title>
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+		<meta name="robots" content="noindex">
+	</head>
+	<body>
+		<style>
+			body {
+				background-color: #49454F;
+				color: #CAC4D0;
+			}
+			a {text-decoration: none;}
+			h1 {font-family: 'Martian Mono', monospace;}
+			li {
+				width: 100%;
+				font-size: 60px;
+				margin-block-start: 0px;
+				margin-block-end: 0px;
+				font-family: 'Martian Mono', monospace;
+				margin-bottom: 50px;
+			}
+			li a {padding: 20px;}
+			#thesquares {
+				display: flex;
+				justify-content: center;
+			}
+			.square {
+				width: 50px;
+				height: 50px;
+				margin: 10px;
+			}
+			.square .texty {
+				visibility: hidden;
+				font-size: 40px;
+				position: absolute;
+				z-index: 1;
+				transform: translate(-20px, 50px);
+				font-family: 'Martian Mono', monospace;
+			}
+			.square:hover .texty {visibility: visible;}
+			#music {background-color: #ffb693;}
+			#music:hover {box-shadow: 0px 0px 30px 1px #ffb693;}
+			#websites {background-color: #00677d;}
+			#websites:hover {box-shadow: 0px 0px 30px 1px #00677d;}
+			#bib {display: none;}
+			@media only screen and (max-width: 900px) {
+				#bib {display: block;}
+				#thesquares {display: none;}
+			}
+		</style>
+		<a href="../index.html" style="color: white;">return home</a>
+		<h1>iNTERESTS</h1>
+		<p>click on a square to go to a section...</p>
+		<div id="thesquares">
+			<a href="music/index.html">
+				<div class="square" id="music">
+					<span style="color: #ffb693;" class="texty">music</span>
+				</div>
+			</a>
+			<a href="websites/index.html">
+				<div class="square" id="websites">
+					<span style="color: #00b6df; transform: translate(10px ,-50px);" class="texty">websites</span>
+				</div>
+			</a>
+		</div>
+		<ul id="bib">
+			<li><a href="music/index.html" style="background-color: #ffb693; color: #351000;">music</a></li>
+			<li><a href="websites/index.html" style="background-color: #00677d; color: #001f27;">websites</a></li>
+		</ul>
+		<p>hello yeah im still working on this stuff. give me time im only humax=n</p>
+	</body>
+</html>

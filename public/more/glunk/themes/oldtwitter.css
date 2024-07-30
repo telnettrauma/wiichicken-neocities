@@ -1,0 +1,135 @@
+/* theme for the OldTwitter extension */
+* {border-radius: 0px !important;}
+h1 {font-family: 'Martian Mono', monospace;}
+.profile-stat-value {font-family: 'Martian Mono', monospace;}
+div.tweet.tweet-active.tweet-top-retweet-label::after {
+    display: none;
+}
+div.tweet.tweet-active::after {
+    display: none;
+}
+.timeline {width: 610px;}
+.tweet {
+    margin: 10px 0px 10px 0px;
+    border: 1px solid var(--border);
+}
+.tweet-no-top {
+    margin: 0px;
+}
+.tweet-self-thread-continuation {
+    border-bottom: none;
+    margin: 0px;
+}
+.navbar-new-tweet-modal {
+    border-radius: 0px !important;
+}
+.navbar-new-tweet {
+    border-radius: 0px !important;
+}
+.navbar-new-tweet-text {
+    border-radius: 0px !important;
+}
+.navbar-new-tweet-avatar {
+    border-radius: 0px;
+    border: 1px solid var(--border);
+}
+.tweet-avatar {
+    border-radius: 0px;
+    border: 1px solid var(--border);
+    box-shadow: 0px 0px 5px 1px var(--border);
+}
+.tweet-body-main {margin-top: 11px;}
+.discover-follow-btn {display: none;}
+.tweet-media {border-radius: 0px !important;}
+.tweet-media-element {border-radius: 0px !important;}
+.tweet-media-video-overlay {border-radius: 0px !important;}
+.tweet-card {border-radius: 0px !important;}
+.tweet-card-link.box {border-radius: 0px !important;}
+.tweet-card-link-thumbnail {
+    border-radius: 0px !important;
+    border: 1px solid var(--border);
+}
+.tweet-body-quote {border-radius: 0px !important;}
+.tweet-avatar-quote {
+    border-radius: 0px !important;
+    border: 1px solid var(--border);
+}
+.nav-notification-list .tweet {
+    margin: 0px;
+    border-bottom: none;
+}
+#tweet-nav {margin-bottom: 0px;}
+#profile-avatar {border-radius: 0px !important;}
+#notifications-count {
+    border-radius: 0px !important;
+    padding: 2px 5px;
+    box-shadow: 0px 0px 5px 0 var(--link-color);
+    border: none;
+}
+#twitter-logo {text-shadow: var(--link-color) 0 0 5px;}
+#new-tweet {border-bottom: 1px solid var(--border);}
+#new-tweets {
+    border-top: none;
+    border-bottom: 1px solid var(--border) !important;
+}
+#navbar-user-avatar {
+    border-radius: 0px;
+    border: 1px solid var(--border) !important;
+}
+#user-avatar {border-radius: 0px;}
+.tweet-top-pinned {
+    margin-top: 0px;
+}
+.tweet-footer-favorites-img {
+    border-radius: 0px !important;
+    border: 1px solid var(--border) !important;
+}
+.list-top {border: 1px solid var(--border);}
+.notification-avatar-img {
+    border-radius: 0px !important;
+    border: 1px solid var(--border) !important;
+}
+.notifications-modal {
+    border-radius: 0px !important;
+}
+#new-tweet-text {
+    border-radius: 0px !important;
+    height: 25px;
+}
+.new-tweet-text-focused {
+    border-radius: 0px !important;
+    height: 100px !important;
+}
+
+.message-avatar {
+    border-radius: 0px !important;
+    border: 1px solid var(--border) !important;
+}
+.message-header-avatar {
+    border-radius: 0px !important;
+    border: 1px solid var(--border) !important;
+}
+.inbox-message-avatar {
+    border-radius: 0px !important;
+    border: 1px solid var(--border) !important;
+}
+.message-block-inner {
+    border-radius: 0px !important;
+}
+#user-name {font-family: 'Martian Mono', monospace;}
+.box:hover {box-shadow: 0px 0px 10px 1px var(--border);}
+.following {box-shadow: 0px 0px 10px 1px var(--link-color);}
+.tweet-interact-favorited::before {text-shadow: #ed177a 0 0 15px;}
+.tweet-interact-favorite:hover {text-shadow: #ed177a 0 0 10px;}
+.tweet-interact-retweeted::before {text-shadow: #578a38 0 0 15px;}
+.tweet-interact-retweet:hover {text-shadow: #578a38 0 0 10px;}
+.tweet-interact-reply:hover {text-shadow: var(--more-color) 0 0 10px;}
+.user-preview {box-shadow: 0px 0px 10px 1px var(--border);}
+#donate-button {animation: none !important;}
+.tweet-tombstone {
+    background-color: #690005;
+    color: #ffb4ab;
+    border: 1px solid #ba1a1a;
+    box-shadow: 0px 0px 5px 1px #ba1a1a;
+}
+#navbar {box-shadow: 0px 0px 10px 1px var(--border);}

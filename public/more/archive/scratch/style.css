@@ -1,0 +1,31 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+  margin: 0px;
+}
+h1 {
+  font-family: 'Martian Mono', monospace;
+  margin-bottom: 2px;
+  color: #462a00;
+}
+#crumble {
+  background-color: #2a1800;
+  margin: 0;
+  overflow: hidden;
+  color: #705b40;
+  width: 100%;
+  top: 0;
+  padding: 3px;
+  padding-left: 8px;
+}
+#crumble a {
+  color: #ffddb6;
+  text-decoration: none;
+}
+#sidebar {
+  width: 30%;
+  float: left;
+  margin-left: 10px;
+}
+#scratchf {
+  margin-left: 32%;
+}
