@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: text-adi/minifier-compressor-html-action@v2
+    - uses: docker://textadi/minifier-compressor-html-action:v2
       env:
         DIR: files
         DESTINATION_DIR: public
