@@ -69,8 +69,8 @@ button {
 	padding: 5px;
 	color: var(--dark-on-primary-container);
 	background-color: var(--light-on-primary-container);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
+	/* backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px); */
 	margin-bottom: 10px;
 }
 .box, .footer, .boxy, .boxyless {
