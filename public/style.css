@@ -13,8 +13,8 @@ body {
 }
 main {
 	--p: 1;
-	--pixel: calc(var(--p) * 1px); /* don't change this */
-	--s-main: calc(var(--pixel) * 20); /* size of the cut. you can change the number on the right of the asterisk for a deeper or shallower cut */
+	--pixel: calc(var(--p) * 1px);
+	--s-main: calc(var(--pixel) * 20);
 	max-width: 610px;
 	margin: auto;
 	padding: 10px;
@@ -72,8 +72,6 @@ button {
 	padding: 5px;
 	color: var(--dark-on-primary-container);
 	background-color: var(--light-on-primary-container);
-	/* backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px); */
 	margin-bottom: 10px;
 }
 .box, .footer, .boxy, .boxyless {
