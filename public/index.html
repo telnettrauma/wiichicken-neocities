@@ -669,9 +669,6 @@
 		}
 		.blurry {display: none;}
 	}
-	@supports (animation-timeline: view()) {
-		#parallax-thing {display: none;}
-	}
 </style>
 <div class="heading headerInvisible" id="poopBlock"></div>
 <div id="sideButton" onclick="openSidey()"></div>
@@ -804,16 +801,16 @@
 				}
 			</script>
 			<nav id="youWillScroll">
-				<div class="row sec-l">
-					<div class="box sec-l" style="width: 80%;" id="navig">
-						<a class="noBg boxyless sec-l" style="--b-radius-tr: 0 !important; --b-radius-br: 0 !important;" id="a1" href="aboutme.html">ABOUT</a>
+				<div class="row">
+					<div class="box d-sec-l m-sec-t" style="width: 80%; border: none;" id="navig">
+						<a class="noBg boxyless d-sec-l m-sec-t" style="--b-radius-tr: 0 !important; --b-radius-br: 0 !important;" id="a1" href="aboutme.html">ABOUT</a>
 						<a class="noBg" id="a2" href="creative/">ART</a>
 						<a class="noBg" id="a3" href="more/archive/blog/">BLOG</a>
 						<a class="noBg" id="a4" href="interests/">iNTERESTS</a>
 						<a class="noBg boxyless" id="a5" style="--b-radius-tr: 5 !important; --b-radius-br: 5 !important;" href="more">MORE</a>
 					</div>
-					<div class="box noblur sec-r" style="padding: 1px; width: 20%; margin-left: 10px; background-color: #bfbfbf; --border: #bfbfbf;" id="lonelyNav">
-						<a class="noBg boxyless sec-r" id="a7" href="guestbook.html">GUESTBOOK</a>
+					<div class="box noblur d-sec-r m-sec-b" style="padding: 1px; width: 20%; margin-left: 10px; background-color: #bfbfbf; --border: #bfbfbf; border: none;" id="lonelyNav">
+						<a class="noBg boxyless d-sec-r m-sec-b" id="a7" href="guestbook.html">GUESTBOOK</a>
 					</div>
 				</div>
 			</nav>
@@ -829,12 +826,8 @@
 				<h2 class="nomarblock">NOSCRiPT</h2>
 				<p class="nomarblock">uh oh! it looks like you don't have javascript support! no worries, i have made some small changes to make your browsing experience slightly better. i love you too.<br>note that some things still may not work.</p>
 			</div>
-			<div class="section box compat-error" id="parallax-thing">
-				<h2 class="nomarblock">CSS ERROR</h2>
-				<p class="nomarblock">it appears that your browser does not support all of the css used. this should only affect appearance, not functionality.</p>
-			</div>
 			<div class="row" id="infamous" style="display: grid; gap: 10px;">
-				<div class="box noscript-hidden sec-l" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
+				<div class="box noscript-hidden d-sec-l m-sec-t" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
 					<div style="display: flex; flex-wrap: wrap;" id="statusCard">
 						<div id="statuscafe" style="padding: 5px; background-color: #ffb4a8; width: 100%; min-height: 90px;">
 							<a href="https://status.cafe/users/cringe" class="noBg" target="_blank">
@@ -857,10 +850,10 @@
 					<script src="resources/widgets/home/clock.js"></script>
 					<link href="resources/widgets/home/clock.css" rel="stylesheet" type="text/css" media="all">
 				</div>
-				<div class="box sec-tr" style="grid-column: 3 / 4; grid-row: 1; margin-bottom: 0;">
+				<div class="box d-sec-tr" style="grid-column: 3 / 4; grid-row: 1; margin-bottom: 0;">
 					<p class="nomarblock">hello! welcome to my brand new shiny website! a lot of the subpages are still a work in progress, but don't let that stop you from having a look around!</p>
 				</div>
-				<div class="box sec-br" style="grid-column: 2 / 4; grid-row: 2;">
+				<div class="box d-sec-br m-sec-b" style="grid-column: 2 / 4; grid-row: 2;">
 					<h2>aboutMe</h2>
 					<ul>
 						<li>i am born and raised american. sad, i know <img src="media/emoji/tear.gif" loading="lazy" alt=""></li>
@@ -874,7 +867,7 @@
 				<iframe src="interests/websites/sotfp/widget.html" style="width: 100%; height: 100px; border: none;"></iframe>
 			</div>
 			<div class="row">
-				<div class="box sec-l" style="width: 50%;">
+				<div class="box d-sec-l m-sec-t" style="width: 50%;">
 					<h2>latestArt</h2>
 					<div style="display: flex;">
 						<div style="display: flex; align-items: center; margin-right: 10px;">
@@ -888,11 +881,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="box lefty sec-r" style="width: 50%;">
+				<div class="box lefty d-sec-r m-sec-b" style="width: 50%;">
 					<h2>curr.FavSong</h2>
 					<div style="display: flex;">
 						<img src="https://lastfm.freetls.fastly.net/i/u/500x500/adff38e3219e033dbc381644fa354583.jpg" width="100px" height="100px" style="margin-right: 10px; --border: #cde5ff; z-index: 1;">
-						<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/500x500/adff38e3219e033dbc381644fa354583.jpg" width="100px" height="100px" style="margin-right: 10px; --border: #cde5ff; mix-blend-mode: screen;">
+						<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/500x500/adff38e3219e033dbc381644fa354583.jpg" width="100px" height="100px" style="margin-right: 10px; opacity: 0.5;">
 						<div style="width: 100%;">
 							<p class="headText nomarblock" style="font-size: 17px;">Chicago</p>
 							<p class="nomarblock" style="font-size: 20px;">Capital STEEZ Archive</p>
@@ -918,7 +911,7 @@
 				<p>what are you supposed to put on your homepage</p>
 			</div>
 			<div class="row">
-				<div class="box sec-l" style="width: 100%;">
+				<div class="box d-sec-l m-sec-full" style="width: 100%;">
 					<h2>contactMe</h2>
 					<ul>
 						<li><strong>discord</strong>: @bbctwo (wiichicken#0040)</li>
