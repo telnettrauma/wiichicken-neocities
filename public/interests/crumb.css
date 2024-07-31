@@ -10,11 +10,10 @@ body {
 }
 hr {
 	height: 0px;
-	color: var(--accent);
-	border: 1px solid var(--accent);
+	color: var(--border);
+	border: 1px solid var(--border);
 }
 a {
-	background-color: var(--sub);
 	color: var(--bg);
 	text-decoration: none;
 }

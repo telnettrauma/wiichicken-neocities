@@ -163,7 +163,9 @@ header .box, .box, .app img, .app div {
 	width: 100%;
 	margin-bottom: 10px;
 	max-width: 700px;
+	clip-path: none;
 }
+.box::before {content: none;}
 header .lessvis {
 	background-color: #004e5f !important;
 	color: #b4ebff !important;
