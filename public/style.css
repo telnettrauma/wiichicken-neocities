@@ -3,6 +3,7 @@
 * {
 	box-sizing: border-box;
 	text-rendering: optimizeSpeed;
+	-webkit-font-smoothing: none;
 }
 body {
 	margin: 0;
