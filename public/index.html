@@ -409,8 +409,9 @@
 		background: linear-gradient(45deg, rgb(70, 0, 0) 0%, rgb(0, 14, 70)100%);
 		background-image: url(media/home/ditty.png);
 		image-rendering: pixelated;
-		/* box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50); */
-		animation: glowy 10s infinite;
+		--border: #00ffa1;
+		/* box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50);
+		animation: glowy 10s infinite; */
 	}
 	#babyHello {
 		width: 100%;
@@ -471,6 +472,46 @@
 	#neorings-neoring-container a:active, #neorings-neoring-container .bring:active {
 		box-shadow: unset;
 		transform: translate(2px, 2px);
+	}
+	#clockContainer {
+		position: relative;
+		width: 96px;
+		height: 100%;
+		display: inline-block;
+	}
+	#hour, #minute, #second, #thatThingInTheCenterOfaClock {
+		position: absolute;
+		background: #E6E1E5;
+		transform-origin: bottom;
+	}
+	#thatThingInTheCenterOfaClock {
+		width: 4%;
+		height: 4%;
+		top: 48%;
+		bottom: 50%;
+		left: 49%;
+		right: 50%;
+	}
+	#hour {
+		width: 1.8%;
+		height: 25%;
+		top: 25%;
+		left: 50%;
+		opacity: 0.8;
+	}
+	#minute {
+		width: 1.6%;
+		height: 30%;
+		top: 19%;
+		left: 50%;
+		opacity: 0.8;
+	}
+	#second {
+		width: 1%;
+		height: 40%;
+		top: 9%;
+		left: 50%;
+		opacity: 0.8;
 	}
 	.animal {
 		width: 100%;
@@ -677,7 +718,6 @@
 	}
 </script>
 <div id="chewTooth"></div>
-<script src="resources/widgets/home/konami.js"></script>
 <div class="main">
 	<div id="flex">
 		<aside id="leftSidebar">
@@ -842,8 +882,6 @@
 						<div id="minute"></div>
 						<div id="second"></div>
 					</div>
-					<script src="resources/widgets/home/clock.js"></script>
-					<link href="resources/widgets/home/clock.css" rel="stylesheet" type="text/css" media="all">
 				</div>
 				<div class="box d-sec-tr" style="grid-column: 3 / 4; grid-row: 1; margin-bottom: 0;">
 					<p class="nomarblock">hello! welcome to my brand new shiny website! a lot of the subpages are still a work in progress, but don't let that stop you from having a look around!</p>
@@ -1040,18 +1078,39 @@
 	</div>
 </div>
 <script>
-const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-isReducedMotion.addEventListener('change', () => {
-	console.log(isReducedMotion.media, isReducedMotion.matches);
-});
 document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById('fakeLogo').removeAttribute('href');
 	document.getElementById('fakeLogo').setAttribute('onclick', "window.scrollTo({top: 0, behavior: 'smooth'});");
+});
+const konamiCode = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+let userInput = [];
+document.addEventListener("keydown", (event) => {
+	userInput.push(event.key);
+	if (userInput.length > konamiCode.length) {
+		userInput.shift();
+	}
+	if (JSON.stringify(userInput) === JSON.stringify(konamiCode)) {
+		window.open("/more/glunk/gba.html", "_blank");
+		userInput = [];
+	}
 });
 function setRandomMessage() {
 	var msgList = ['Updated <code>index.html</code>', 'coded on a best buy kiosk macbook', 'jobs near me that pay trillion/hour', 'TV explodes in 30 seconds if not powered off', 'can we get a "woot woot"', 'anti-anti-aliasing', 'bring back parallax', 'wth is a framework', 'oh to be a navbar with 3 items', 'internet explorer is safe... so far', 'THiS iS A POOP ALERT', 'debbie downers DNI', 'do not use this website around pacemakers', 'Smile! You\'re on <i>Old Navy</i> TV!', 'one of the greatest', 'keep this place our secret', 'Thanks SiriusXM for making this possible!', 'not the best thing to show to an employer', 'awwwards are impractical anyways', 'dm for proto', 'it takes a village and a half', 'we bought a zoo', 'free for 7 days', 'like transformers, but funnier'];
 	document.getElementById('random-message').innerHTML = msgList[Math.floor(Math.random() * msgList.length)];
 }
+// makes the clock run
+setInterval(() => {
+	d = new Date();
+	hr = d.getHours();
+	min = d.getMinutes();
+	sec = d.getSeconds();
+	hr_rotation = 30 * hr + min / 2;
+	min_rotation = 6 * min;
+	sec_rotation = 6 * sec;
+	hour.style.transform = `rotate(${hr_rotation}deg)`;
+	minute.style.transform = `rotate(${min_rotation}deg)`;
+	second.style.transform = `rotate(${sec_rotation}deg)`;
+	}, 1000);
 setRandomMessage();
 </script>
 <script src="resources/widgets/home/flood/flood.js"></script>
