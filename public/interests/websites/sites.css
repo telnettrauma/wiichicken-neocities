@@ -37,7 +37,6 @@ button {
 }
 #chewTooth {
 	position: fixed;
-	background-image: url('https://api.mapbox.com/styles/v1/wiichicken/clsd8mma9031j01qq8uqdcxe7/static/28.5539,0,0.54,0/1280x1280@2x?access_token=pk.eyJ1Ijoid2lpY2hpY2tlbiIsImEiOiJjbHNkOHZmcG4wcTg5MmtzYjgweTE0ZHVsIn0.EvdZamD3MyA9v5sPV6fzyw') !important;
 	background-size: cover;
 	left: 0;
 	right: 0;
