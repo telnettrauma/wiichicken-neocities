@@ -144,7 +144,7 @@ function renderWater() {
 				return; // Save the processing time, nothing to do!
 		}
 		let renderLevel = Number(flood.html.flood.style.top.replace("%", "")); // 0 is top
-		flood.logicLevel = renderLevel; // 100 is top e.g. equal to servers 100% full
+		flood.logicLevel = renderLevel + 10; // 100 is top e.g. equal to servers 100% full
 		if (flood.level > flood.logicLevel) {
 				flood.html.flood.style.top = renderLevel + flood.changeStep + "%";
 				flood.html.message.innerHTML = flood.msg.rising;

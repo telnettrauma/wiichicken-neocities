@@ -10,11 +10,10 @@ body {
 }
 hr {
 	height: 0px;
-	color: var(--accent);
-	border: 1px solid var(--accent);
+	color: var(--border);
+	border: 1px solid var(--border);
 }
 a {
-	background-color: var(--sub);
 	color: var(--bg);
 	text-decoration: none;
 }
@@ -93,9 +92,6 @@ a {
 	filter: contrast(0.8);
 }
 #fakeLogo:active .square {transition-duration: 0.1s;}
-#s2 {mix-blend-mode: multiply;}
-#fakeLogo:hover #s2 {transform: translate(0, 0);}
-#fakeLogo:active #s2 {transform: translate(-15px, 4px);}
 .square {
 	width: 15px;
 	height: 15px;

@@ -23,7 +23,7 @@
 			.pibby {
 				background-color: #241a0099;
 				color: #ffe08d;
-				border-color: yellow;
+				--border: yellow;
 			}
 			.pibby a {
 				--dark-primary: #e3c36c;
@@ -31,7 +31,7 @@
 			}
 			.imgbox {
 				padding: 0;
-				border-color: white;
+				--border: white;
 			}
 			.imgbox img {width: 698px;}
 			.friends {margin-bottom: 2px;}
@@ -66,7 +66,7 @@
 		<div id="overSide"></div>
 		<div id="chewTooth"></div>
 		<main>
-			<div class="box">
+			<div class="box page-top">
 				<h1>replace X 'Post' buttons with 'Tweet' buttons</h1>
 				<p><strong>UPDATED</strong>: May 5, 2024</p>
 			</div>
@@ -77,14 +77,14 @@
 				<a href="src/tweetbutton/script.js" target="_blank" style="width: 66%; margin-right: 5px;"><button style="width: 100%; margin-left: 0;">iNSTALL</button></a>
 				<a href="https://gist.github.com/wiichicken/303bc467e38aa28600f5f2be1d1fb2f7" target="_blank" style="width: 33%; margin-right: 0;"><button style="width: 100%; background-color: #181c20; color: #f7f9ff; border-color: #f7f9ff;">GitHub Gist</button></a>
 			</div>
-			<div class="box" style="background-color: #41000299; color: #ffb4ab; border-color: red;">
+			<div class="box sec-full" style="background-color: #41000299; color: #ffb4ab; --border: red;">
 				<p>to install this, you need a userscript manager that is compatible with Greasemonkey. i recommend, <a href="https://www.tampermonkey.net/" target="_blank" style="color: #dec48c; --dark-primary: #ffb4ab; --dark-tertiary: #dec48c;">Violentmonkey</a>.<strong><br>if you use Tampermonkey, read <a href="#fixtheglitch" style="color: #dec48c; --dark-primary: #ffb4ab; --dark-tertiary: #dec48c;">this guide</a>, or else the script won't work!</strong></p>
 			</div>
-			<div class="box">
+			<div class="box sec-t">
 				<h2>ABOUT</h2>
 				<p>this is a basic userscript that does exactly what it says. any X 'Post' buttons that you see across the web will instead be replaced by the classic 'Tweet' button.<br>the code is kinda sloppy, but eh, who cares?<br>this script does <strong>NOT</strong> yet replace the logo and text on tweet embeds, only tweet buttons. also, i already know someone is going to complain about this, so i'm going to put it here. this will not change the logo on websites that have a custom share button.</p>
 			</div>
-			<div class="box">
+			<div class="box sec-b">
 				<h2>LiMiTATiONS</h2>
 				<p>i whipped this up in 1 hour, give me a break!</p>
 				<ul>
@@ -93,7 +93,7 @@
 					<li>all of the Twitter buttons display Tweet, including ones that perform a follow action or something else</li>
 				</ul>
 			</div>
-			<div class="box pibby friends" id="fixtheglitch">
+			<div class="box pibby friends sec-t" id="fixtheglitch">
 				<h2>FOR TAMPERMONKEY USERS: FiX "Blacklisted by security settings" ERROR</h2>
 				<p>You can follow this guide as a <a href="https://youtu.be/UVptMd2BiRg" target="_blank">screencast</a> if you wish.<br>Due to the way that Tampermonkey is configured by default, you will have to change some settings to make this userscript work.<br>Follow these steps to fix the issue:</p>
 				<ul>
@@ -120,7 +120,7 @@
 					<li>Hit save</li>
 				</ul>
 			</div>
-			<div class="box imgbox">
+			<div class="box imgbox page-bottom">
 				<img src="https://i.imgur.com/MEapDj6.png" loading="lazy" alt="Screenshot of '*://platform.twitter.com/widgets/*' being selected in Blacklist settings on the Tampermonkey dashboard">
 			</div>
 		</main>

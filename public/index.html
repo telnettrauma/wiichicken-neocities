@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" style="--main-background-color: rgba(65, 0, 2, 0.7); --border: rgb(255, 0, 0); --texty-color: rgb(255, 218, 214); --linky-color: #dec48c; --linky-color2: #93000a;">
+<html lang="en">
 <head>
 	<title>WiiCHiCKEN i AM AWESOME</title>
-	<link href="newstyle.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="VY9zXKAnkuHIsHGWLKHMNuZMIg0AMjhw3Mjzs8NgdG8"/>
 	<meta name="description" content="WiiCHiCKEN i am awesome and i will be the most awesome person in the whole world forever.">
@@ -19,8 +19,8 @@
 </head>
 <body>
 <style>
-	* {
-		--dark-tertiary: #d2bfe7;
+	:root {
+		--dark-tertiary: #dec48c;
 		--dark-on-tertiary: #382a49;
 		--bg-1: red;
 		--bg-2: blue;
@@ -50,6 +50,7 @@
 		flex: 1;
 		min-width: 670px;
 		margin: 10px;
+		margin-top: 0;
 	}
 	.row {
 		display: flex;
@@ -57,34 +58,16 @@
 	}
 	.box {
 		margin-bottom: 10px;
-		/* border: 1px solid var(--border); */
-		background-color: #001d31b3;
-		background-color: var(--main-background-color);
-		color: #cde5ff;
-		color: var(--texty-color);
-		backdrop-filter: blur(5px);
-		-webkit-backdrop-filter: blur(5px);
+		--border: red;
+		background-color: rgba(65, 0, 2, 0.7);
+		color: #ffdad6;
 		padding: 10px;
 		overflow: hidden;
 	}
 	.lefty {margin-left: 10px;}
-	.box a {
-		color: var(--linky-color);
-		position: relative;
-	}
-	.box a::after {
-		content: '';
-		background: linear-gradient(90deg, var(--linky-color) 0%, var(--linky-color2) 100%);
-		height: 1px;
-		width: 100%;
-		background-position: bottom;
-		background-size: 100% 1px;
-		background-repeat: no-repeat;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-	}
-	.box a:hover::after {animation: happyHover 0.3s;}
+	.box a {position: relative;}
+	.box a::after {background: linear-gradient(90deg, #dec48c 0%, #93000a 100%) !important;}
+	.box a:hover::after {animation: happyHover 0.3s !important;}
 	@keyframes happyHover {
 		0% {background-size: 100% 1px; background-position: 100% 100%;}
 		50% {background-size: 0% 1px; background-position: 100% 100%;}
@@ -110,7 +93,6 @@
 		-webkit-backdrop-filter: blur(5px);
 		transition-duration: 0.5s;
 	}
-	.sidebox-content, .sidehead p, .sidehead .helpbutt {border: 1px solid var(--side-border);}
 	.sidebox:hover .sidehead p {box-shadow: 0 0 20px 1px var(--side-border);}
 	.sidehead {
 		color: #ffdad5;
@@ -120,7 +102,6 @@
 		font-family: 'Martian Mono', monospace;
 		font-size: 20px;
 		display: flex;
-		border-radius: 5px 5px 2px 2px;
 	}
 	.sidehead p {
 		background: linear-gradient(45deg, rgba(147,0,6,1) 0%, rgba(116,59,0,1) 100%);
@@ -128,13 +109,22 @@
 		margin-block-end: 0;
 		padding-left: 3px;
 		width: 100%;
-		border-radius: 5px 5px 2px 2px;
+	}
+	.sidehead p, .sidehead a, .sidehead span {
+		--b-radius-tl: 5;
+		--b-radius-tr: 5;
+		--b-radius-bl: 2;
+		--b-radius-br: 2;
 	}
 	.sidehead .helpbutt {margin-left: 2px;}
 	.sidebox-content {
 		padding: 5px;
 		background-color: var(--side-bg);
-		border-radius: 2px 2px 5px 5px;
+		--b-radius-tl: 2;
+		--b-radius-tr: 2;
+		--b-radius-bl: 5;
+		--b-radius-br: 5;
+		background-image: url('/media/lownoise.png');
 	}
 	.sidebox-content a:not(:has(img)) {
 		background-color: #ffb4aa;
@@ -150,7 +140,6 @@
 		float: right;
 		padding: 0px 5px 0 5px;
 		cursor: pointer;
-		border-radius: 2px;
 	}
 	#navlink {
 		width: 180px;
@@ -160,13 +149,17 @@
 	#adHelp {
 		position: absolute;
 		font-size: 10px;
-		bottom: 0;
-		right: 0;
+		bottom: 1px;
+		right: 1px;
+		padding-right: 8px;
 		background-color: #e2e2e5;
 		color: #1a1c1e;
 		margin: 2px;
 		--border: #1a1c1e;
-		box-shadow: 1px 1px 0 0;
+		--b-radius-br: 8;
+		--b-radius-tl: 0;
+		--b-radius-tr: 0;
+		--b-radius-bl: 0;
 	}
 	#fri2 {display: none;}
 	@media only screen and (min-width: 900px) {
@@ -219,15 +212,26 @@
 		96% {background-color: #570066; color:#faabff;}
 		100% {background-color: #690100; color:#ffb4a8;}
 	}
-	#messageTxt:hover, #cornerInBox a:hover {
+	#random-message:hover, #cornerInBox a:hover {
 		color: white;
 		box-shadow: none;
+	}
+	#cornerInBox {
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		position: absolute;
+		right: 10px;
+		bottom: 0;
 	}
 	#cornerInBox a {
 		color: gray;
 		background-color: unset;
 		margin: 5px;
 		margin-left: 0;
+		font-family: 'PT Sans', sans-serif;
+		font-size: 15px;
+		font-weight: 400;
 	}
 	#navibox {
 		display: flex;
@@ -285,7 +289,7 @@
 		display: flex;
 		justify-content: center;
 		background-color: #004a76 !important;
-		--border: #97cbff;
+		border: 1px solid #97cbff;
 		color: #cee5ff !important;
 		width: 45%;
 		margin: 2px;
@@ -350,10 +354,11 @@
 	#navig {
 		display: flex;
 		background: linear-gradient(270deg, #ff0000, #00a2ff);
+		padding: 1px;
 	}
 	#navig::before {
-		background-color: unset;
-		background: linear-gradient(270deg, #ff0000, #00a2ff);
+		background-color: unset !important;
+		background: linear-gradient(270deg, #ff0000 0%, #00a2ff 100%) !important;
 	}
 	#navig a, #lonelyNav a {
 		font-family: 'Martian Mono', monospace;
@@ -405,8 +410,9 @@
 		background: linear-gradient(45deg, rgb(70, 0, 0) 0%, rgb(0, 14, 70)100%);
 		background-image: url(media/home/ditty.png);
 		image-rendering: pixelated;
-		/* box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50); */
-		animation: glowy 10s infinite;
+		--border: #00ffa1;
+		/* box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50);
+		animation: glowy 10s infinite; */
 	}
 	#babyHello {
 		width: 100%;
@@ -427,7 +433,7 @@
 		background: none !important;
 		background-color: #201a19 !important;
 		color: #ede0dd !important;
-		--border: #a08c89;
+		border: 1px solid #a08c89;
 		padding: 0 2px 0 2px;
 		font-family: 'Martian Mono', monospace;
 		display: flex;
@@ -467,6 +473,46 @@
 	#neorings-neoring-container a:active, #neorings-neoring-container .bring:active {
 		box-shadow: unset;
 		transform: translate(2px, 2px);
+	}
+	#clockContainer {
+		position: relative;
+		width: 96px;
+		height: 100%;
+		display: inline-block;
+	}
+	#hour, #minute, #second, #thatThingInTheCenterOfaClock {
+		position: absolute;
+		background: #E6E1E5;
+		transform-origin: bottom;
+	}
+	#thatThingInTheCenterOfaClock {
+		width: 4%;
+		height: 4%;
+		top: 48%;
+		bottom: 50%;
+		left: 49%;
+		right: 50%;
+	}
+	#hour {
+		width: 1.8%;
+		height: 25%;
+		top: 25%;
+		left: 50%;
+		opacity: 0.8;
+	}
+	#minute {
+		width: 1.6%;
+		height: 30%;
+		top: 19%;
+		left: 50%;
+		opacity: 0.8;
+	}
+	#second {
+		width: 1%;
+		height: 40%;
+		top: 9%;
+		left: 50%;
+		opacity: 0.8;
 	}
 	.animal {
 		width: 100%;
@@ -659,10 +705,8 @@
 		}
 		.blurry {display: none;}
 	}
-	@supports (animation-timeline: view()) {
-		#parallax-thing {display: none;}
-	}
 </style>
+<div id="heightCheck"></div>
 <div class="heading headerInvisible" id="poopBlock"></div>
 <div id="sideButton" onclick="openSidey()"></div>
 <div id="overSide"></div>
@@ -675,17 +719,16 @@
 	}
 </script>
 <div id="chewTooth"></div>
-<script src="resources/widgets/home/konami.js"></script>
 <div class="main">
 	<div id="flex">
 		<aside id="leftSidebar">
 			<div id="personSighted">
-				<div class="sidebox" id="frens" style="--side-bg: #29005599; --side-text: #eddcff; --side-border: #7d24e4;">
+				<div class="sidebox" id="frens" style="--side-bg: #29005599; --side-text: #eddcff; --border: #7d24e4;">
 					<div class="sidehead" style="color: #eddcff;">
-						<p style="background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(138,0,189,1) 100%); border-radius: 5px 2px 2px 2px;"><strong>FRiENDS</strong></p>
-						<span class="helpbutt" id="frihelp" onclick="flipTheScript('frihelp', 'frens', 'fri2', 'fri1', '#4b252d', '#f2b7c2')" style="color: #4b252d; background-color: #f2b7c2; --border: #7f525b; border-radius: 2px 5px 2px 2px;">?</span>
+						<p class="boxy" style="background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(138,0,189,1) 100%); --b-radius-tr: 2;"><strong>FRiENDS</strong></p>
+						<span class="helpbutt boxy" id="frihelp" onclick="flipTheScript('frihelp', 'frens', 'fri2', 'fri1', '#4b252d', '#f2b7c2')" style="color: #4b252d; background-color: #f2b7c2; --border: #7f525b; --b-radius-tl: 2;">?</span>
 					</div>
-					<div class="sidebox-content">
+					<div class="sidebox-content boxy">
 						<div id="fri1">
 							<div class="dabuttons">
 								<a href='https://char42.neocities.org' target="_blank"><img src="interests/websites/img/button/naybor/char42.png" loading="lazy"></a>
@@ -727,11 +770,11 @@
 						</script>
 					</div>
 				</div>
-				<div class="sidebox" id="moresites" style="--side-bg: #001e3399; --side-text: #cee5ff; --side-border: #00a6ff;">
+				<div class="sidebox" id="moresites" style="--side-bg: #001e3399; --side-text: #cee5ff; --border: #00a6ff;">
 					<div class="sidehead" style="color: #cee5ff;">
-						<p style="background: linear-gradient(45deg, rgba(0,74,119,1) 0%, rgba(0,105,119,1) 100%);"><strong>MORE SiTES</strong></p>
+						<p class="boxy" style="background: linear-gradient(45deg, rgba(0,74,119,1) 0%, rgba(0,105,119,1) 100%);"><strong>MORE SiTES</strong></p>
 					</div>
-					<div class="sidebox-content" style="padding: 0;">
+					<div class="sidebox-content boxy" style="padding: 0;">
 						<div class="dabuttons">
 							<iframe src="https://incr.easrng.net/badge?key=wiichicken" title="increment badge" width="88" height="31" frameborder="0" style="padding: 2px; box-sizing: content-box;"></iframe>
 							<a href="https://afellowu.neocities.org/" target="_blank"><img src="interests/websites/img/button/mebi_county.gif"></a>
@@ -758,11 +801,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="sidebox" id="webr" style="--side-bg: #3a0030cc; --side-text: #ffd8ee; --side-border: #af0095;">
+			<div class="sidebox" id="webr" style="--side-bg: #3a0030cc; --side-text: #ffd8ee; --border: #af0095;">
 				<div class="sidehead" style="color: #ffade4;">
-					<p style="background: linear-gradient(90deg, #77009a 0%, #510097 100%);"><strong>WEBRiNG</strong></p>
+					<p class="boxy" style="background: linear-gradient(90deg, #77009a 0%, #510097 100%);"><strong>WEBRiNG</strong></p>
 				</div>
-				<div class="sidebox-content">
+				<div class="sidebox-content boxy">
 					<div id='neorings-neoring-container' style="text-align: center;">
 						<a class="bring" href="https://neorings.org/api/webring/1/previous?via=https%3A%2F%2Fwiichicken.neocities.org">&lt;</a>
 						<a href="https://neorings.org/webring/1/">Neoring</a>
@@ -783,7 +826,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="alerta" class="box sec-full" style="padding: 0; --border: red; color: white; --b-radius: 5;"></div>
+			<div id="alerta" class="box" style="padding: 0; --border: red; color: white; --b-radius: 5;"></div>
 			<script>
 				const alertaChance = Math.floor(Math.random() * 5);
 				if (alertaChance === 3) {
@@ -794,22 +837,22 @@
 				}
 			</script>
 			<nav id="youWillScroll">
-				<div class="row sec-l">
-					<div class="box noblur sec-l" style="padding: 1px; width: 80%; border: none; padding-right: 1.1px; --b-radius: 5;" id="navig">
-						<a class="noBg" id="a1" style="border-radius: 5px 0 0 5px;" href="aboutme.html">ABOUT</a>
-						<a class="noBg" id="a2" href="creative/index.html">ART</a>
-						<a class="noBg" id="a3" href="more/archive/blog/index.html">BLOG</a>
-						<a class="noBg hasDrop" id="a4" href="interests/index.html">MEDiA</a>
-						<a class="noBg" id="a5" href="more/index.html">MORE</a>
+				<div class="row">
+					<div class="box d-sec-l m-sec-t" style="width: 80%; border: none;" id="navig">
+						<a class="noBg boxyless d-sec-l m-sec-t" style="--b-radius-tr: 0 !important; --b-radius-br: 0 !important; border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important;" id="a1" href="aboutme.html">ABOUT</a>
+						<a class="noBg" id="a2" href="creative/">ART</a>
+						<a class="noBg" id="a3" href="more/archive/blog/">BLOG</a>
+						<a class="noBg" id="a4" href="interests/">iNTERESTS</a>
+						<a class="noBg boxyless" id="a5" style="--b-radius-tr: 5 !important; --b-radius-br: 5 !important; border-top-right-radius: 5px !important;" href="more">MORE</a>
 					</div>
-					<div class="box noblur sec-r" style="padding: 0; width: 20%; margin-left: 10px; background-color: #bfbfbf; --border: #bfbfbf; --b-radius: 5;" id="lonelyNav">
-						<a class="noBg sec-r" id="a7" href="guestbook.html">GUESTBOOK</a>
+					<div class="box noblur d-sec-r m-sec-b" style="padding: 1px; width: 20%; margin-left: 10px; background-color: #bfbfbf; --border: #bfbfbf; border: none;" id="lonelyNav">
+						<a class="noBg boxyless d-sec-r m-sec-b" id="a7" href="guestbook.html">GUESTBOOK</a>
 					</div>
 				</div>
 			</nav>
 			<div class="mobileVisible section box compat-error">
 				<h2 class="nomarblock">MOBiLE MODE</h2>
-				<p class="nomarblock">Because you are on a small screen, a few adjustments have been made for mobile. This site is still desktop designed, but your experience on a mobile device should hopefully still be less malarky.</p>
+				<p class="nomarblock">Because you are on a small screen, a few adjustments have been made for mobile. This site is still desktop designed, but your experience on a mobile device should hopefully still be less malarky. Note that layouts and designs will be different than desktop.</p>
 			</div>
 			<div class="reducedVisible section box compat-error">
 				<h2 class="nomarblock">REDUCED MOTiON</h2>
@@ -819,26 +862,18 @@
 				<h2 class="nomarblock">NOSCRiPT</h2>
 				<p class="nomarblock">uh oh! it looks like you don't have javascript support! no worries, i have made some small changes to make your browsing experience slightly better. i love you too.<br>note that some things still may not work.</p>
 			</div>
-			<div class="section box compat-error" id="parallax-thing">
-				<h2 class="nomarblock">CSS ERROR</h2>
-				<p class="nomarblock">it appears that your browser does not support all of the css used. this should only affect appearance, not functionality.</p>
-			</div>
-			<div class="box compat-error">
-				<h2>PARDON MY DUST</h2>
-				<p>IM ADDING THESE FREAKING AWESOME CORNERS TO EVERYTHING. BELIEVE IT OR NOT, THIS IS NOT A FEATURE OF CSS AND IT IS CAUSING ME PHYSICAL PAIN. PLEASE, PARDON ME AS I WORK TO MAKE THIS SITE REALLY HARD TO MAINTAIN. BUT HEY, IT WILL LOOK REALLY COOL FOR SOME TIME.<br>THIS IS TAKING A REALLY LONG TIME BECAUSE I STILL HAVE A LOT TO FIGURE OUT, SUCH AS HOW TO MAKE THE EFFECT I WANT ACTUALLY WORK. THINGS ARE GOING TO GET UGLY.</p>
-			</div>
 			<div class="row" id="infamous" style="display: grid; gap: 10px;">
-				<div class="box noscript-hidden sec-l" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
+				<div class="box noscript-hidden d-sec-l m-sec-t" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
 					<div style="display: flex; flex-wrap: wrap;" id="statusCard">
-						<div id="statuscafe" style="padding: 5px; background-color: #ffb4a8; width: 100%; min-height: 85px;">
+						<div id="statuscafe" style="padding: 5px; background-color: #ffb4a8; width: 100%; min-height: 90px;">
 							<a href="https://status.cafe/users/cringe" class="noBg" target="_blank">
 								<div id="statuscafe-username"></div>
 								<div id="statuscafe-content"></div>
 							</a>
 						</div>
 						<script src="https://status.cafe/current-status.js?name=cringe" defer></script>
-						<img src="media/home/status.png" width="200" height="220" style="z-index: 1;" onmouseover="this.src ='media/home/statusy.png'" onmouseleave="this.src = 'media/home/status.png'">
-						<img src="media/home/status.png" class="blurry" style="height: 200px; width: 200px; bottom: 0;">
+						<img src="media/home/status.png" width="200" height="220" loading="lazy" style="z-index: 1;" onmouseover="this.src ='media/home/statusy.png'" onmouseleave="this.src = 'media/home/status.png'">
+						<img src="media/home/ditherglow.png" class="blurry" loading="lazy" style="height: 200px; width: 200px; bottom: 0; filter: none !important;">
 					</div>
 				</div>
 				<div class="box mobileHidden noscript-hidden" style="grid-column: 2/3; grid-row: 1; margin-bottom: 0; padding: 0; --border: #E6E1E5; background-color: #1C1B1Fcc;">
@@ -848,13 +883,11 @@
 						<div id="minute"></div>
 						<div id="second"></div>
 					</div>
-					<script src="resources/widgets/home/clock.js"></script>
-					<link href="resources/widgets/home/clock.css" rel="stylesheet" type="text/css" media="all">
 				</div>
-				<div class="box sec-tr" style="grid-column: 3 / 4; grid-row: 1; margin-bottom: 0;">
+				<div class="box d-sec-tr" style="grid-column: 3 / 4; grid-row: 1; margin-bottom: 0;">
 					<p class="nomarblock">hello! welcome to my brand new shiny website! a lot of the subpages are still a work in progress, but don't let that stop you from having a look around!</p>
 				</div>
-				<div class="box sec-br" style="grid-column: 2 / 4; grid-row: 2;">
+				<div class="box d-sec-br m-sec-b" style="grid-column: 2 / 4; grid-row: 2;">
 					<h2>aboutMe</h2>
 					<ul>
 						<li>i am born and raised american. sad, i know <img src="media/emoji/tear.gif" loading="lazy" alt=""></li>
@@ -864,20 +897,15 @@
 					</ul>
 				</div>
 			</div>
-			<div class="box sec-full" style="background-color: #141f00ab; color: #d4ec9d; --border: #b3ff00;">
-				<h3>iM ON ARTFiGHT!</h3>
-				<p>i am on team seafoam! i will try to attack everyone that i can back (not a guarantee)! if you would like to follow me, use this link</p>
-				<a href="https://artfight.net/~wiichicken" target="_blank" class="noBg"><button class="bring">ARTFiGHT PROFiLE</button></a>
-			</div>
 			<div class="box sec-full" style="padding: 0; display: flex; --border: #f6be14; background-color: #352500ab">
 				<iframe src="interests/websites/sotfp/widget.html" style="width: 100%; height: 100px; border: none;"></iframe>
 			</div>
 			<div class="row">
-				<div class="box sec-l" style="width: 50%;">
+				<div class="box d-sec-l m-sec-t" style="width: 50%;">
 					<h2>latestArt</h2>
 					<div style="display: flex;">
 						<div style="display: flex; align-items: center; margin-right: 10px;">
-							<img id="artfeat" src="https://i.imgur.com/s25rTzF.png" width="100px" height="100px" style="image-rendering: pixelated; display: inline-block; box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7); border-radius: 0 0 0 2px;">
+							<img id="artfeat" class="boxyless" src="https://i.imgur.com/s25rTzF.png" width="100px" height="100px" style="image-rendering: pixelated; display: inline-block; box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7); --b-radius-bl: 5;">
 							<div class="afterfeat" style="height: 95px; background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(227,232,0,1) 100%);"></div>
 							<div class="afterfeat" style="height: 90px; width: 2px; background: linear-gradient(45deg, rgba(189,0,128,1) 0%, rgba(0,232,179,1) 100%);"></div>
 						</div>
@@ -887,11 +915,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="box lefty sec-r" style="width: 50%;">
+				<div class="box lefty d-sec-r m-sec-b" style="width: 50%;">
 					<h2>curr.FavSong</h2>
 					<div style="display: flex;">
 						<img src="https://lastfm.freetls.fastly.net/i/u/500x500/adff38e3219e033dbc381644fa354583.jpg" width="100px" height="100px" style="margin-right: 10px; --border: #cde5ff; z-index: 1;">
-						<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/500x500/adff38e3219e033dbc381644fa354583.jpg" width="100px" height="100px" style="margin-right: 10px; --border: #cde5ff; mix-blend-mode: screen;">
+						<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/500x500/adff38e3219e033dbc381644fa354583.jpg" width="100px" height="100px" style="margin-right: 10px; opacity: 0.5;">
 						<div style="width: 100%;">
 							<p class="headText nomarblock" style="font-size: 17px;">Chicago</p>
 							<p class="nomarblock" style="font-size: 20px;">Capital STEEZ Archive</p>
@@ -917,7 +945,7 @@
 				<p>what are you supposed to put on your homepage</p>
 			</div>
 			<div class="row">
-				<div class="box sec-l" style="width: 100%;">
+				<div class="box d-sec-l m-sec-full" style="width: 100%;">
 					<h2>contactMe</h2>
 					<ul>
 						<li><strong>discord</strong>: @bbctwo (wiichicken#0040)</li>
@@ -927,7 +955,7 @@
 					</ul>
 				</div>
 				<div class="box lefty mobileHidden reducedHidden noscript-hidden sec-r" id="navlink" style="padding: 0; --border: #bec9c8;">
-					<span class="helpbutt" style="border-radius: 0 0 3px 0;" id="adHelp" onclick="flipTheScript('adHelp', 'navlink', 'nava2', 'nava1', '#1a1c1e', '#e2e2e5')">?</span>
+					<span class="helpbutt boxy" id="adHelp" onclick="flipTheScript('adHelp', 'navlink', 'nava2', 'nava1', '#1a1c1e', '#e2e2e5')">?</span>
 					<div id="nava1">
 						<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
 					</div>
@@ -939,18 +967,25 @@
 			<div class="box sec-full" id="whatsheader" style="--border: #3978c6;">
 				<div class="accordion">
 					<h2 class="gradientText" style="background: linear-gradient(90deg, rgba(193,232,255,1) 0%, rgba(229,222,255,1) 100%);">siteUpdates</h2>
-					<h3 style="margin: 0; font-size: 15px;"><strong>COMiNG THROUGH</strong></h3>
-					<p style="margin-top: 0; margin-bottom: 2px;"><strong>July 28, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
+					<h3 style="margin: 0; font-size: 15px;"><strong>DOTS AND BOXES MiNUS THE DOTS</strong></h3>
+					<p style="margin-top: 0; margin-bottom: 2px;"><strong>August 4, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
 				</div>
 				<div class="panel">
-					<h2 style="margin-bottom: 2px;">COMiNG THROUGH</h2>
-					<p id="updatedate">July 28, 2024</p>
-					<p>as you may notice, the look of thr website is kinda a mess of different jumpbled corner designs. this is because i am working on making a new design. please, pardon my dust.<br>anyway, there is still more than that:</p>
+					<h2 style="margin-bottom: 2px;">DOTS AND BOXES MiNUS THE DOTS</h2>
+					<p id="updatedate">August 4, 2024</p>
+					<p>so much is new this week that i kinda don't even know where to start. so i'm going to start at the start</p>
 					<ul>
-						<li><a href="/interests/websites/neom/" target="_blank">new page</a> where i talk about the meaning behind some sites on neocities that don't have much context to them</li>
-						<li>im working on making a video downloader using the cobalt api. i will probably be the only person who finds use from it</li>
-						<li>rounded corners and slanted corners are starting to appear all throughout the site</li>
+						<li>brand new rounded corner design. they aren't even rounded corners at all, now they're slanted corners. doesn't that look so cool?!?! not everything is perfect, but i'm still quite happy with where i am.</li>
+						<li>added a little bit of grain to elements. i've already noiced that grain is becoming the new <a href="https://crazyleafdesign.com/blog/wp-content/uploads/2013/09/long-shadow-icons-webdesignerdepot.jpg" target="_blank">45 degree material design drop shadow</a>, so i decided to try not to overdo it</li>
+						<li>massive performance improvements. sadly, some effects had to go. the parallax was cool when it worked, but 90% of the time it would just stutter. the effect where the color changes on the homepage is also gone, as it was really resource intensive and didn't even look that cool anyway</li>
+						<li>the mobile experience is also a little better. i got one complaint saying that running my website on an older phone causes it to catch fire, so i did a lot of performance improvements for mobile. that new cool corner design isn't on mobile <img src='/media/emoji/down.gif' loading='lazy' alt=''></li>
+						<li>there is some brand new stuff in the more page. just graphs and stuff, but its still cool.</li>
 					</ul>
+					<p>overall, this is awesome, and i am really happy that i was able to get this new design to work. you have no idea how long i spent trying to make variably sized boxed corners<br>for the first time ever in this website, if you use chromium, the website won't look as consistent as on firefox. this is how the website looks on chrome:</p>
+					<img src="https://i.imgur.com/o5kntrh.png" loading="lazy">
+					<p>(you might need to open the images in a new tab)<br>notice how theres a stray line in the nav bar, and how the right side of all the boxes are less bright. now here's firefox:</p>
+					<img src="https://i.imgur.com/aUy7kEy.png" loading="lazy">
+					<p>massive improvement. i just wish firefox would do things like not partnering with meta to add "ad control" to the browser. but, eh, i use vivaldi.</p>
 				</div>
 			</div>
 			<script>
@@ -990,64 +1025,59 @@
 				<div style="background-color: #0021119b; --border: #75daa2;" class="box animal sec-l">
 					<p>everytime i make a wobble, it gets deleted for some reason. so... no more <img src="media/emoji/disappointed.gif" loading="lazy"></p>
 				</div>
-				<div class="box animal lefty sec-r">
+				<div class="box animal lefty sec-r" style="background-color: #001e2e9b; --border: #00a6ff;">
 					<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!"></a>
 				</div>
 			</div>
-			<div class="box page-bottom" style="background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,134,255,1) 100%); color: #bfe9ff; border: none; overflow: visible; height: 54px; padding: 1px;">
-				<div style="background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,134,255,1) 100%); filter: blur(10px); width: 100%; height: 54px;" class="page-bottom"></div>
-				<div style="position: relative; transform: translateY(-54px); background-color: black; height: 52px; display: flex;" class="page-bottom" id="bottomOver">
-					<div class="middleBoy" id="alibaba" style="width: 100%; flex-direction: column;">
-						<div style="display: flex;">
-							<div class="square" style="background-color: red;"></div>
-							<p class="nomarblock" style="text-align: center;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
-							<div class="square" style="background-color: #00a2ff;"></div>
-						</div>
-						<p onclick="setRandomMessage()" id="messageTxt" class="nomarblock" style="font-size: 10px; text-align: center; cursor: pointer;">she no till i script</p>
-					</div>
-					<div id="cornerInBox" style="width: 0%; display: flex; align-items: flex-end; justify-content: flex-end;">
-						<a class="noBg" href="credits.html">credits</a>
-						<a class="noBg" href="sitemap.html">sitemap</a>
-						<a class="noBg" href="https://cd5k.net/tau/">&tau;</a>
-					</div>
+			<div class="footer page-bottom">
+				<div style="display: flex; justify-content: center;">
+					<div class="square" style="background-color: red;"></div>
+					<p class="nomarblock" style="text-align: center;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
+					<div class="square" style="background-color: #00a2ff;"></div>
+				</div>
+				<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
+				<div id="cornerInBox">
+					<a class="noBg" href="credits.html">credits</a>
+					<a class="noBg" href="sitemap.html">sitemap</a>
+					<a class="noBg" href="https://cd5k.net/tau/">&tau;</a>
 				</div>
 			</div>
 		</main>
 		<aside id="rightSidebar" class="noscript-hidden">
 			<!-- last.fm scrobble widget -->
-			<div class="sidebox" id="scrobblebox" style="--side-border: red; --side-bg: #2c151299;">
+			<div class="sidebox" id="scrobblebox" style="--border: red; --side-bg: #2c151299;">
 				<div class="sidehead">
-					<p><strong>SCROBBLES</strong></p>
+					<p class="boxy"><strong>SCROBBLES</strong></p>
 				</div>
-				<div class="sidebox-content" style="padding: 0; overflow: hidden;">
-					<iframe src="resources/widgets/home/np.html" id="scrobbleWidget" scrolling="no"></iframe>
+				<div class="sidebox-content boxy" style="padding: 0; overflow: hidden;">
+					<iframe src="resources/widgets/home/np.html" id="scrobbleWidget" scrolling="no" class="boxyless"></iframe>
 				</div>
 			</div>
-			<div class="sidebox" style="--side-bg: #00201c99; --side-text: #75f8e3; --side-border: #55dbc7;" id="visitorcount">
+			<div class="sidebox" style="--side-bg: #00201c99; --side-text: #75f8e3; --border: #55dbc7;" id="visitorcount">
 				<div class="sidehead" style="color: #83d5c6;">
-					<p style="background: linear-gradient(90deg, #005047 0%, #00502b 100%);">ViSiTOR #</p>
+					<p class="boxy" style="background: linear-gradient(90deg, #005047 0%, #00502b 100%);">ViSiTOR #</p>
 				</div>
-				<div class="sidebox-content middleBoy" id="googgo" style="flex-wrap: wrap; padding: 2px;">
+				<div class="sidebox-content boxy middleBoy" id="googgo" style="flex-wrap: wrap; padding: 2px;">
 					<p class="nomarblock headText" id="hitcount" style="font-size: 35px;">00000</p>
 				</div>
 			</div>
-			<div class="sidebox" id="lastUpdated" style="overflow: visible; margin: 0; --side-border: #f5ddda;">
+			<div class="sidebox" id="lastUpdated" style="overflow: visible; margin: 0; --border: #f5ddda;">
 				<div class="sidehead" style="display: flex; color: #f5ddda;">
-					<p style="display: inline-block; padding-left: 4px; background: linear-gradient(90deg, #534341 0%, #665949 100%);">UPDATED</p>
+					<p class="boxy" style="background: linear-gradient(90deg, #534341 0%, #665949 100%);">UPDATED</p>
 				</div>
-				<div class="sidebox-content" style="text-align: center; padding: 0;">
+				<div class="sidebox-content boxy" style="text-align: center; padding: 0;">
 					<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;"></p>
 					<p class="headText nomarblock" id="upDate" style="background-color: #ede0dd; color: #201a19; font-size: 50px;"></p>
 					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;"></p>
 					<script src="resources/widgets/home/lastupdate.js"></script>
 				</div>
 			</div>
-			<div class="sidebox" style="--side-bg: #001f23cc; --side-text: #8ef2ff; --side-border: #4ed8e8;" id="side-flood">
+			<div class="sidebox" style="--side-bg: #001f23cc; --side-text: #8ef2ff; --border: #4ed8e8;" id="side-flood">
 				<div class="sidehead">
-					<p style="background: linear-gradient(90deg, #006972 0%, #4a6366 100%); color: #98f5ff; border-radius: 5px 2px 2px 2px;"><strong>FLOOD</strong></p>
-					<a href="https://melonking.net/free/software/flood" target="_blank" class="helpbutt" id="flood-info" style="--side-border: #515e7d; border-radius: 2px 5px 2px 2px;">&#x1FAA3;</a>
+					<p class="boxy" style="background: linear-gradient(90deg, #006972 0%, #4a6366 100%); color: #98f5ff; --b-radius-tr: 2;"><strong>FLOOD</strong></p>
+					<a href="https://melonking.net/free/software/flood" target="_blank" class="helpbutt boxy" id="flood-info" style="--border: #515e7d; --b-radius-tl: 2;">&#x1FAA3;</a>
 				</div>
-				<div class="sidebox-content" id="flood-inner" style="height: 100px; padding: 0; overflow: hidden;">
+				<div class="sidebox-content boxy" id="flood-inner" style="height: 100px; padding: 0; overflow: hidden;">
 					<link href="resources/widgets/home/flood/flood.css" rel="stylesheet" type="text/css" media="all"/>
 					<button id="flood-fill-water" class="bring">FiLL</button>
 				</div>
@@ -1056,38 +1086,39 @@
 	</div>
 </div>
 <script>
-const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-isReducedMotion.addEventListener('change', () => {
-	console.log(isReducedMotion.media, isReducedMotion.matches);
-});
-window.addEventListener('scroll', () => {
-	let scrollProgress = (window.scrollY || window.pageYOffset) / (document.body.scrollHeight - window.innerHeight);
-	scrollProgress = Math.min(1, Math.max(0, scrollProgress));
-	function calculateBetween(initialColor, finalColor, alpha) {
-		const [r, g, b] = initialColor.map((channel, index) => {
-			const delta = finalColor[index] - channel;
-			return Math.round(channel + delta * scrollProgress);
-		});
-		if (alpha === 1) {
-			return `rgba(${r}, ${g}, ${b}, 0.7)`;
-		} else {return `rgb(${r}, ${g}, ${b})`;}
-	}
-	if (!isReducedMotion.matches) {
-		document.documentElement.style.setProperty("--main-background-color", calculateBetween([65, 0, 2], [0, 29, 50], 1));
-		document.documentElement.style.setProperty("--border", calculateBetween([255, 0, 0], [0, 168, 255], 0));
-		document.documentElement.style.setProperty("--texty-color", calculateBetween([255, 218, 214], [205, 229, 255], 0));
-		document.documentElement.style.setProperty("--linky-color", calculateBetween([222, 196, 140], [211, 191, 230]));
-		document.documentElement.style.setProperty("--linky-color2", calculateBetween([147, 0, 10], [0, 99, 155]));
-	}
-});
 document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById('fakeLogo').removeAttribute('href');
 	document.getElementById('fakeLogo').setAttribute('onclick', "window.scrollTo({top: 0, behavior: 'smooth'});");
 });
+const konamiCode = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+let userInput = [];
+document.addEventListener("keydown", (event) => {
+	userInput.push(event.key);
+	if (userInput.length > konamiCode.length) {
+		userInput.shift();
+	}
+	if (JSON.stringify(userInput) === JSON.stringify(konamiCode)) {
+		window.open("/more/glunk/gba.html", "_blank");
+		userInput = [];
+	}
+});
 function setRandomMessage() {
 	var msgList = ['Updated <code>index.html</code>', 'coded on a best buy kiosk macbook', 'jobs near me that pay trillion/hour', 'TV explodes in 30 seconds if not powered off', 'can we get a "woot woot"', 'anti-anti-aliasing', 'bring back parallax', 'wth is a framework', 'oh to be a navbar with 3 items', 'internet explorer is safe... so far', 'THiS iS A POOP ALERT', 'debbie downers DNI', 'do not use this website around pacemakers', 'Smile! You\'re on <i>Old Navy</i> TV!', 'one of the greatest', 'keep this place our secret', 'Thanks SiriusXM for making this possible!', 'not the best thing to show to an employer', 'awwwards are impractical anyways', 'dm for proto', 'it takes a village and a half', 'we bought a zoo', 'free for 7 days', 'like transformers, but funnier'];
-	document.getElementById('messageTxt').innerHTML = msgList[Math.floor(Math.random() * msgList.length)];
+	document.getElementById('random-message').innerHTML = msgList[Math.floor(Math.random() * msgList.length)];
 }
+// makes the clock run
+setInterval(() => {
+	d = new Date();
+	hr = d.getHours();
+	min = d.getMinutes();
+	sec = d.getSeconds();
+	hr_rotation = 30 * hr + min / 2;
+	min_rotation = 6 * min;
+	sec_rotation = 6 * sec;
+	hour.style.transform = `rotate(${hr_rotation}deg)`;
+	minute.style.transform = `rotate(${min_rotation}deg)`;
+	second.style.transform = `rotate(${sec_rotation}deg)`;
+	}, 1000);
 setRandomMessage();
 </script>
 <script src="resources/widgets/home/flood/flood.js"></script>

@@ -26,6 +26,15 @@ jobs:
       run: |
         npm i
         npm run build
+    - name: Compress files
+      uses: docker://textadi/minifier-compressor-html-action:v2
+      env:
+        DIR: public
+        DESTINATION_DIR: files
+        PARAM_MINIFY_CSS: True
+        PARAM_MINIFY_JS: True
+        PARAM_KEEP_COMMENTS: True
+        PARAM_KEEP_CLOSING_TAGS: True
     # When the dist_dir is ready, deploy it to neocities
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v1

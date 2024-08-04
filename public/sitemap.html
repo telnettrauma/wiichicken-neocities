@@ -11,8 +11,11 @@
 	<body>
 		<style>
 			* {
+				--border: white;
 				--dark-tertiary: #c4c5dd;
 				--dark-on-tertiary: #2d2f42;
+				--bg-1: white;
+				--bg-2: gray;
 			}
 			body {
 				background-color: #1f1a1d;
@@ -98,7 +101,6 @@
 				width: auto;
 				padding: 5px;
 				margin-bottom: 10px;
-				border: 1px solid white;
 			}
 			.node {
 				fill: white;
@@ -117,7 +119,7 @@
 		</style>
 		<div id="chewTooth"></div>
 		<main>
-			<div class="box" style="margin-top: 10px;">
+			<div class="box page-top">
 				<h1>SiTEMAP</h1>
 			</div>
 			<div class="box">
@@ -130,7 +132,7 @@
 				<p><span class="dir">dir</span> - directory. page may just be a place where i dump files. as such, pages contained inside of them may not be listed on this sitemap.</p>
 				<p><span class="arch">archive</span> - things that aren't really updated anymore, but instead are kept for the sake of keeping them</p>
 			</div>
-			<ul class="tree-view">
+			<ul class="tree-view box">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="aboutme.html">About Me</a></li>
 				<li>
@@ -222,7 +224,7 @@
 			<div class="box">
 				<p>this minimap behaves weird. darn my past self for not writing it good</p>
 			</div>
-			<div class="box">
+			<div class="box page-bottom">
 				<p>can't find what you're looking for? <a href="more/archive/blog/concepts/2023/ai.html" target="_blank">try our work in progress "ai" assistant</a>! but remember, just because its not listed in the site map doesn't mean it doesn't exist!</p>
 			</div>
 		</main>

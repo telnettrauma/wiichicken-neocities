@@ -15,6 +15,7 @@
 				--dark-primary: #b0c6ff;
 				--dark-tertiary: #e0bbdd;
 				--dark-on-tertiary: #412742;
+				--border: #0064ef;
 				--bg-1: #0059ff;
 				--bg-2: #f700ff;
 			}
@@ -61,7 +62,6 @@
 			.box, h1, h2, h3 {
 				padding: 5px;
 				margin-bottom: 10px;
-				border: 1px solid #0064ef;
 				backdrop-filter: blur(5px);
 				-webkit-backdrop-filter: blur(5px);
 				background-color: #0018478e;
@@ -74,7 +74,7 @@
 				margin-block-start: 0;
 				margin-block-end: 0;
 			}
-			h2, h3 {margin-bottom: 5px;}
+			h2, h3 {margin-bottom: 5px !important;}
 			.square {
 				width: 60px;
 				height: 60px;
@@ -87,10 +87,7 @@
 				box-shadow: none;
 				background-color: unset;
 			}
-			.head {
-				box-shadow: 0 0 150px 20px #0064ef;
-				margin-bottom: 10px;
-			}
+			.head {margin-bottom: 10px;}
 			.cta {
 				width: 100%;
 				font-size: 30px;
@@ -140,26 +137,21 @@
 		<div id="overSide"></div>
 		<div id="chewTooth"></div>
 		<main>
-			<h1 class="head page-top">MY WORKS OF ART</h1>
-			<h2 class="sec-t">ART</h2>
-			<h3 style="background-color: #141f00ab; color: #d4ec9d; border-color: #b3ff00;">iM ON ARTFiGHT!</h3>
-			<div class="box" style="background-color: #141f00ab; color: #d4ec9d; border-color: #b3ff00; margin-bottom: 5px;">
-				<p>this is my third year participating in artfight! i am on team seafoam.<br>i dont have many characters, but if you would like to follow me, use this link. i try to attack everyone back!</p>
-			</div>
-			<a href="https://artfight.net/~wiichicken" target="_blank"><button class="cta sec-b" style="background-color: #414a32; --fg: #dde6c6;">ARTFiGHT PROFiLE</button></a>
-			<div class="box sec-t" style="padding: 0; width: 100%; height: 125px; margin-bottom: 0;">
-				<a id="gallery" class="sec-t" style="background: none; display: flex; justify-content: center; align-items: center; flex-direction: column;" href="gallery/index.html"><span style="font-size: 30px;"><strong style="font-family: 'Martian Mono', monospace;">GALLERY</strong></span><br>look at the drawings i have made</a>
+			<h1 class="head box page-top">MY WORKS OF ART</h1>
+			<h2 class="box sec-t">ART</h2>
+			<div class="box" style="padding: 0; width: 100%; height: 125px; margin-bottom: 0;">
+				<a id="gallery" style="background: none; display: flex; justify-content: center; align-items: center; flex-direction: column;" href="gallery/index.html"><span style="font-size: 30px;"><strong style="font-family: 'Martian Mono', monospace;">GALLERY</strong></span><br>look at the drawings i have made</a>
 			</div>
 			<div class="row" id="linksys">
-				<a href="https://cara.app/cringe" target="_blank"><button class="sec-bl" style="--bg: #1c1b1b; --fg: white;">Cara</button></a>
+				<a href="https://cara.app/cringe" target="_blank"><button class="d-sec-bl" style="--bg: #1c1b1b; --fg: white;">Cara</button></a>
 				<a href="https://www.deviantart.com/wechicken" target="_blank"><button style="--bg: #002113; --fg: #abf2ca;">DeviantArt</button></a>
 				<a href="https://wiichicken.newgrounds.com" target="_blank"><button style="--bg: #2b1700; --fg: #ffddba;">Newgrounds</button></a>
 				<a href="https://toyhou.se/wiichicken" target="_blank"><button style="--bg: #002110; --fg: #aff2c4;">toyhouse</button></a>
-				<a href="https://wiichicken.tumblr.com" target="_blank"><button class="sec-br" style="--bg: #141b2c; --fg: #dbe2f9;">tumblr</button></a>
+				<a href="https://wiichicken.tumblr.com" target="_blank"><button class="d-sec-br m-sec-b" style="--bg: #141b2c; --fg: #dbe2f9;">tumblr</button></a>
 			</div>
 			<div class="row" style="margin-bottom: 0;">
 				<div>
-					<h3 class="sec-tl">BUTTONS</h3>
+					<h3 class="box sec-tl">BUTTONS</h3>
 					<div class="box" style="margin-bottom: 5px;">
 						<p><code>88</code>x<code>31</code> buttons i made that you can put on your website, because i love you <img src='/media/emoji/grin.gif' loading='lazy' alt=''></p>
 					</div>
@@ -171,7 +163,7 @@
 				</div>
 			</div>
 			<a href="graphics/buttons/index.html#home" class="noline"><button class="sec-b" style="width: 100%; font-size: 30px; margin: 0 2px 10px 0;">ViEW BUTTONS</button></a>
-			<h2 class="sec-t">ANiMATiONS</h2>
+			<h2 class="box sec-t">ANiMATiONS</h2>
 			<div class="box sec-b">
 				<p>not much of an animator, but i have a few animations i made a handful of years ago, just laying around in the archives. some kids would call these "animation memes", but i won't call them that.</p>
 				<ul>
@@ -180,16 +172,16 @@
 				</ul>
 				<p>i was going to just embed these, but they have copyrighted music, so i guess i cannot do that <img src='/media/emoji/pout.gif' loading='lazy' alt=''></p>
 			</div>
-			<h2 class="sec-t">PHOTOGRAPHY</h2>
+			<h2 class="box sec-t">PHOTOGRAPHY</h2>
 			<div class="box sec-b">
 				<p>there is also a <a href="photos.html">photo gallery</a>. you can tell im not proud of it because im putting the link as text</p>
 			</div>
-			<h2 class="sec-t">MUSiC</h2>
+			<h2 class="box sec-t">MUSiC</h2>
 			<div class="box" style="margin-bottom: 5px;">
 				<p>i don't actually make music, sorry! <img src="/media/emoji/sweat.gif"> but i do have a bandcamp that i released music i made in 5th grade to.</p>
 			</div>
 			<iframe style="border: 0; width: 100%; height: 42px; margin-bottom: 8px;" src="https://bandcamp.com/EmbeddedPlayer/album=1030405553/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://wiichicken.bandcamp.com/album/really-bad-music-i-made-on-a-music-making-app-in-2017" class="sec-b">really bad music i made on a music making app in 2017 by wiichicken</a></iframe>
-			<h2 class="sec-t">MORE</h2>
+			<h2 class="box sec-t">MORE</h2>
 			<div class="box sec-b">
 				<p>nothing else... <a href="nostart.html" target="_blank" style="background-color: unset; color: #d9e2ff;">yet</a></p>
 			</div>
@@ -215,7 +207,7 @@
 				button2.style.transform = 'rotate(' + (Math.floor(Math.random() * 5) + 3) + 'deg)';
 			}
 			function setRandomMessage() {
-				var msgList = ['awwww, you drew a kitty!', 'Click to add text', 'could be more artsy', 'we built this city on poop and pee', 'stop making stuff!!! quit it!', 'could we get more ideas', '#BANHUMANCREATIVITY', 'An iMovie Production', 'what are you doing', 'ai interact. idc anymore :/', 'drawn to death'];
+				var msgList = ['awwww, you drew a kitty!', 'Click to add text', 'could be more artsy', 'we built this city on poop and pee', 'stop making stuff!!! quit it!', 'could we get more ideas', '#BANHUMANCREATIVITY', 'An iMovie Production', 'what are you doing', 'ai interact. idc anymore :/', 'drawn to death', 'do it over and over and over and', 'do you take slap to pay'];
 				document.getElementById('random-message').innerHTML = msgList[Math.floor(Math.random() * msgList.length)];
 			}
 			setRandomMessage();

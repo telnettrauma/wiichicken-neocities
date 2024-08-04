@@ -16,10 +16,10 @@
 	<body>
 		<style>
 			:root {
-				--accent: #a04100;
+				--border: #a04100;
 				--main: #ffdbcc;
 				--sub: #ffb693;
-				--bg : #351000;
+				--bg: #351000;
 				--bg-1: #ffb693;
 				--bg-2: #d0c890;
 				--dark-tertiary: #d0c890;
@@ -34,16 +34,11 @@
 				max-width: 700px;
 				margin: auto;
 			}
-			.nomarblock {
-				margin-block-start: 0;
-				margin-block-end: 0;
-			}
 			* {
 				margin-block-start: 0;
 				margin-block-end: 0;
 			}
 			a {
-				background-color: var(--sub);
 				color: var(--bg);
 				cursor: pointer;
 			}
@@ -51,13 +46,10 @@
 				display: flex;
 				justify-content: space-between;
 			}
-			.section .card {margin-right: 10px;}
-			.card {
+			.section .box {margin-right: 10px;}
+			.box {
 				width: 100%;
 				background-color: #562000cc;
-				backdrop-filter: blur(5px);
-				-webkit-backdrop-filter: blur(5px);
-				border: 1px solid #a04100;
 				padding: 5px;
 				margin-bottom: 10px;
 			}
@@ -184,19 +176,19 @@
 		<div id="overSide"></div>
 		<div id="chewTooth"></div>
 		<main>
-			<div class="card">
+			<div class="box page-top">
 				<h1>MUSiC</h1>
 			</div>
-			<div id="nowplayingbox" class="card" style="padding: 0; max-width: 698px; display: flex; border-color: white;">
+			<div id="nowplayingbox" class="box sec-full" style="padding: 0; max-width: 698px; display: flex; --border: white;">
 				<iframe src="fm/playing.html" style="width: 100%; height: 220px; border: none;"></iframe>
 			</div>
-			<div class="card">
+			<div class="box sec-t">
 				<h2>PROJECTS</h2>
 				<ul>
 					<li><a href="fm/playing.html">last.fm now playing screen</a></li>
 				</ul>
 			</div>
-			<div class="card">
+			<div class="box sec-b">
 				<h2>PAGES</h2>
 				<ul>
 					<li><a href="favsongs.html">favorite songs</a></li>
@@ -206,11 +198,11 @@
 				</ul>
 			</div>
 			<div class="noscript-bye">
-				<div class="card">
+				<div class="box sec-t">
 					<h2>ALBUMS</h2>
 				</div>
 				<div class="section">
-					<div class="card">
+					<div class="box sec-bl">
 						<h3>MONTH</h3>
 						<div class="albumDisp">
 							<img id="monthAlbum0">
@@ -232,7 +224,7 @@
 						</div>
 						<script src="res/albumonth.js"></script>
 					</div>
-					<div class="card" style="margin-right: 0;">
+					<div class="box sec-br" style="margin-right: 0;">
 						<h3>YEAR</h3>
 						<div class="albumDisp">
 							<img id="yearAlbum0">
@@ -256,25 +248,25 @@
 					</div>
 				</div>
 			</div>
-			<div class="card">
+			<div class="box">
 				<h2>MiCROBLOG POSTS</h2>
 				<ul>
 					<li><a href="/more/archive/blog/2024/1/spotify.html" target="_blank">Spotify Sucks!!</a></li>
 				</ul>
 			</div>
-			<div class="card noscript-bye">
-				<h2>LiSTS</h2>
-				<ul>
-					<li><a onclick="openList('/more/archive/blog/concepts/lists/listy/music/fsfaailtatwt.html')">favorite song from an album i listened to all the way through</a></li>
-					<li><a onclick="openList('/more/archive/blog/concepts/lists/listy/music/tolisten.html')">to listen</a></li>
-				</ul>
-			</div>
-			<div class="card">
+			<div class="box">
 				<h2>PLACES i AM</h2>
 			</div>
 			<div id="links">
 				<a href="https://www.last.fm/user/wiichicken" target="_blank" style="background-color: #410E0B; color: #F2B8B5; --link-color: red;">last.fm</a>
 				<a href="https://rateyourmusic.com/~wiichicken" target="_blank" style="background-color: #001b3f; color: #d7e2ff; --link-color: #005dbf;">rate your music</a>
+			</div>
+			<div class="box noscript-bye page-bottom">
+				<h2>LiSTS</h2>
+				<ul>
+					<li><a onclick="openList('/more/archive/blog/concepts/lists/listy/music/fsfaailtatwt.html')">favorite song from an album i listened to all the way through</a></li>
+					<li><a onclick="openList('/more/archive/blog/concepts/lists/listy/music/tolisten.html')">to listen</a></li>
+				</ul>
 			</div>
 		</main>
 		<div id="floaters" style="display: none;">

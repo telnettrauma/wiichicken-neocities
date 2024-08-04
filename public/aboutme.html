@@ -15,6 +15,9 @@
 				--dark-primary: #8fcef3;
 				--dark-tertiary: #e5bad7;
 				--dark-on-tertiary: #44263d;
+				--dark-on-primary-container: #c1c4eb;
+				--light-on-primary-container: #181a2ccc;
+				--border: #c1c4eb;
 				--bg-1: #00bbff;
 				--bg-2: #2f00ff;
 			}
@@ -67,29 +70,12 @@
 				width: 700px;
 				margin: auto;
 			}
-			main a {
-				background-color: #dfe0ff;
-				color: #404565;
-			}
-			header, .blox, h2, h3 {
-				width: auto;
-				background-color: #181a2ccc;
-				color: #c1c4eb;
-				padding: 5px;
-				backdrop-filter: blur(5px);
-				-webkit-backdrop-filter: blur(5px);
-				box-shadow: 0px 0px 15px 0px #c1c4eb;
-				border: 1px solid #c1c4eb;
-				margin-bottom: 10px;
-				overflow: hidden;
-			}
 			h2, h3 {margin-bottom: 5px;}
-			.row .blox {margin-bottom: 5px;}
-			.blox, h3 {
+			.row .box {margin-bottom: 5px;}
+			.box, h3 {
 				box-shadow: none;
 				background-color: #151b2ccc;
 				color: #dde2f9;
-				border-radius: 2px;
 			}
 			.auto {flex-wrap: nowrap !important;}
 			#links {margin-right: 2px;}
@@ -124,7 +110,7 @@
 				align-items: stretch;
 				width: 100%;
 			}
-			/* .row .blox {width: 47%;} */
+			/* .row .box {width: 47%;} */
 			.gradtext {
 				background-clip: text;
 				color: transparent;
@@ -139,7 +125,7 @@
 				flex-wrap: wrap;
 				flex-direction: column;
 			}
-			#qanda .blox {margin-bottom: 0;}
+			#qanda .box {margin-bottom: 0;}
 			#buttons {
 				display: flex;
 				flex-wrap: wrap;
@@ -165,7 +151,6 @@
 				align-content: center;
 			}
 			#getPaid {
-				width: 100%;
 				height: 100%;
 				margin: 10px;
 				max-width: 98vw;
@@ -177,18 +162,17 @@
 				background-color: #333333cc;
 				backdrop-filter: blur(5px);
 				-webkit-backdrop-filter: blur(5px);
-				border: 1px solid white;
 				color: white;
+				--border: white;
 				padding: 0.5vw;
 				margin: 0 0.5vw 0 0.5vw;
+				opacity: 0.7;
 			}
 			#scatterbox p {
 				font-size: 5vw;
 				font-family: 'Martian Mono', monospace;
 				animation: doTheEffect 1s;
 				transition-duration: 0.15s;
-				opacity: 0.7;
-				border-radius: 2px;
 			}
 			#scatterbox p:hover {
 				margin: 0 1vw 0 1vw;
@@ -203,13 +187,13 @@
 			.yourMarginSucks {margin-right: 5px;}
 			@media only screen and (max-width: 1050px) {
 				.sidebar {position: static;}
-				article, .row, #helloGames, main, .blox, header, #qanda .blox {width: -webkit-fill-available;}
+				article, .row, #helloGames, main, .box, header, #qanda .box {width: -webkit-fill-available;}
 				.row {
 					flex-wrap: wrap;
 					flex-direction: column;
 				}
 				.hideMob {display: none !important;}
-				.row .blox {width: auto;}
+				.row .box {width: auto;}
 				.yourMarginSucks {margin-right: 0 !important;}
 				#theGoofyRow {display: flex !important;}
 				main {
@@ -237,18 +221,18 @@
 		<div id="sideButton" onclick="openSidey()"></div>
 		<div id="overSide"></div>
 		<div id="chewTooth"></div>
-		<div id="getPaid" style="width: 100%; height: 100%; margin: 10px; max-width: 98vw; max-height: 95vh;">
+		<div id="getPaid" style="height: 100%; margin: 10px; max-width: 98vw; max-height: 95vh;">
 			<div id="scatterbox" class="doTheThing">
-				<p class="sec-l">W</p>
-				<p style="background-color: #410E0B; color: red; border-color: red;">i</p>
-				<p style="background-color: #001e2e; color: #86cfff; border-color: #86cfff;">i</p>
-				<p>C</p>
-				<p>H</p>
-				<p>i</p>
-				<p>C</p>
-				<p>K</p>
-				<p>E</p>
-				<p class="sec-r">N</p>
+				<p class="sec-l boxy">W</p>
+				<p class="boxy" style="background-color: #410E0B; color: red; --border: red;">i</p>
+				<p class="boxy" style="background-color: #001e2e; color: #86cfff; --border: #86cfff;">i</p>
+				<p class="boxy">C</p>
+				<p class="boxy">H</p>
+				<p class="boxy">i</p>
+				<p class="boxy">C</p>
+				<p class="boxy">K</p>
+				<p class="boxy">E</p>
+				<p class="boxy sec-r">N</p>
 			</div>
 		</div>
 		<div id="helloGames">
@@ -276,24 +260,24 @@
 			</table>
 			<main>
 				<div class="row" style="display: grid; gap: 5px;" id="theGoofyRow">
-					<div class="blox hideMob" style="padding: 0; display: flex; width: 250px; grid-column: 1/2; grid-row: 1/2; border-radius: 10px 2px 2px 2px;">
+					<div class="box hideMob page-tl" style="padding: 0; display: flex; width: 250px; grid-column: 1/2; grid-row: 1/2;">
 						<img src="resources/about/img/hello.png" style="image-rendering: pixelated;">
 					</div>
 					<div class="auto" style="grid-column: 2/3; grid-row: 1/2;">
-						<h2 id="aboutme" style="border-radius: 2px 10px 2px 2px;">ME</h2>
-						<div class="blox">
+						<h2 id="aboutme" class="box d-page-tr m-page-top">ME</h2>
+						<div class="box">
 							<p>Hello, my name is WiiCHiCKEN. The name comes from when my friend sent me this picture with just the caption "wii chicken":</p>
 						</div>
 						<img src="https://i.ytimg.com/vi/mTRyL5Kl8zg/maxresdefault.jpg" style="width: 100%; border: 1px solid #dde2f9;" loading="lazy">
-						<div class="blox">
+						<div class="box">
 							<p>The styilization of my name (capitilizing every letter except for "i") was inspired by "LiDAR", because I thought it looked cool.</p>
 						</div>
 					</div>
 				</div>
-				<div class="blox sec-b">
+				<div class="box sec-b">
 					<p>I am from American.<br>I have been interested in technology for almost my whole life, ever since I got my first Windows XP laptop when I was, I don't know, 7? I used that laptop to make PowerPoint presentations, check the weather online, read my email, listen to the huge iTunes library my father gave me (remember when you didn't have to pay for iTunes Radio?), watch Minecraft videos, and look at Magic: The Gathering cards. Unrestricted internet access did not completely ruin me as a person, like it did for everyone else. <img src="media/emoji/bulge.gif" alt=""></p>
 				</div>
-				<div class="blox sec-full" id="buttons">
+				<div class="box sec-full" id="buttons">
 					<img src="resources/about/img/butt/markdown.png" loading="lazy">
 					<img src="resources/about/img/butt/nonazi.gif" loading="lazy">
 					<img src="resources/about/img/butt/1920.gif" loading="lazy">
@@ -306,39 +290,39 @@
 					<img src="resources/about/img/butt/ezgif.gif" loading="lazy">
 					<a href="https://monkeytype.com/profile/WiCKEN" target="_blank"><img src="resources/about/img/butt/132wpm.png" loading="lazy" alt="132 best wpm"></a>
 				</div>
-				<h2 class="sec-t"><img src="media/emoji/heart.gif" style="height: 30px;">HOBBiES</h2>
-				<div class="blox" style="margin-bottom: 5px;">
+				<h2 class="box sec-t"><img src="media/emoji/heart.gif" style="height: 30px;">HOBBiES</h2>
+				<div class="box" style="margin-bottom: 5px;">
 					<p>Unfourtanately, I don't have too many hobbies. <img src="media/emoji/eh.gif" alt=""> I was born with aspburgers (I have spelled it assburgers my whole life), and as apart of that, I feel like I don't really have many hobbies, except for ones I picked up when I was young.</p>
 				</div>
 				<div class="row auto">
-					<div class="blox yourMarginSucks hideMob" style="padding: 0; display: flex; min-width: 100px; position: relative;">
+					<div class="box yourMarginSucks hideMob" style="padding: 0; display: flex; min-width: 100px; position: relative;">
 						<img src="resources/about/img/console.png" width="100" height="150" style="position: relative;">
 						<img class="blurry" src="resources/about/img/console.png" width="100" height="150" style="filter: blur(10px);">
 					</div>
-					<div class="blox" style="width: auto;">
+					<div class="box" style="width: auto;">
 						<p><img src="media/emoji/pc.gif"> <strong>coding</strong> - Kind of. I got started with programming with Scratch when I was young. I made hundreds of projects, and then for some reason deleted my account. That's why I am currently working on archiving all of my old projects, because they are still up if you search for them.<br>Eventually, my grandma bought me a book that taught me Python, but I never really went that far with it. I should probably start learning it, or C++. I want to learn JavaScript so I can make more effects.</p>
 					</div>
 				</div>
 				<div class="row auto">
-					<div class="blox yourMarginSucks">
+					<div class="box yourMarginSucks">
 						<p><img src="media/emoji/car.gif"> <strong>maps</strong> - I have always been obsessed with maps and GPS. In fact, I got a GPS for Christmas one year and I liked it so much I ended up locking myself out of it because I brute forced the lock pin.</p>
 					</div>
-					<div class="blox hideMob" style="min-width: 150px; padding: 0; position: relative; display: flex;">
+					<div class="box hideMob" style="min-width: 150px; padding: 0; position: relative; display: flex;">
 						<img src="resources/about/img/lazymap.png" width="150" height="150" style="position: relative;">
 						<img class="blurry" src="resources/about/img/lazymap.png" width="150" height="150" style="filter: blur(10px);">
 					</div>
 				</div>
-				<div class="blox sec-b">
+				<div class="box sec-b">
 					<p><img src="media/emoji/note.gif"> <strong>listening to music</strong> - I really like listening to music. I try to listen to a large variety of genres. You can check my last.fm or Rate Your Music if you want to, or you can view the music pages I have on this site</p>
 				</div>
-				<h2 class="sec-t"><img src="media/emoji/star.gif">FAVORiTES</h2>
-				<div class="blox">
+				<h2 class="box sec-t"><img src="media/emoji/star.gif">FAVORiTES</h2>
+				<div class="box">
 					<p>you can find more of my interests on the <a href="interests/index.html">interests</a> page. these aren't in any particular order, btw.</p>
 				</div>
 				<div class="row auto">
 					<div class="yourMarginSucks" style="width: 100%; margin-bottom: 5px;">
-						<h3>GAMES</h3>
-						<div class="blox">
+						<h3 class="box">GAMES</h3>
+						<div class="box">
 							<ul>
 								<li>OneShot</li>
 								<li>Microsoft Solitaire Collection</li>
@@ -349,8 +333,8 @@
 						</div>
 					</div>
 					<div style="width: 100%; height: auto;">
-						<h3>FiLMS</h3>
-						<div class="blox">
+						<h3 class="box">FiLMS</h3>
+						<div class="box">
 							<p>i hate to tell you but i really dont watch movies much</p>
 							<ul>
 								<li>WALL-E</li>
@@ -360,9 +344,9 @@
 						</div>
 					</div>
 				</div>
-				<h3>MUSiC</h3>
+				<h3 class="box">MUSiC</h3>
 				<div class="row" style="flex-wrap: nowrap; margin-bottom: 5px;">
-					<div class="blox yourMarginSucks sec-bl">
+					<div class="box yourMarginSucks d-sec-bl">
 						<h4><img src="media/emoji/note.gif">ARTiSTS</h4>
 						<ul>
 							<li><a href="https://www.last.fm/music/Pond" target="_blank">POND</a></li>
@@ -372,7 +356,7 @@
 							<li><a href="https://www.last.fm/music/Mike" target="_blank">MIKE</a></li>
 						</ul>
 					</div>
-					<div class="blox sec-br">
+					<div class="box d-sec-br m-sec-b">
 						<h4><img src="media/emoji/microphone.gif">SONGS</h4>
 						<p>you can also find an archive of my favorite songs on my <a href="https://www.last.fm/user/wiichicken/obsessions" target="_blank">last.fm obsessions</a> page or on this site's <a href="/interests/music/favsongs.html">favorite songs</a> page.</p>
 						<ul>
@@ -386,80 +370,80 @@
 						</ul>
 					</div>
 				</div>
-				<h2 id="follow" class="sec-t">FOLLOW ME</h2>
-				<div class="blox">
+				<h2 id="follow" class="box sec-t">FOLLOW ME</h2>
+				<div class="box">
 					<p>in case you need more of me in your life, for some reason</p>
 				</div>
 				<div class="row" id="links">
-					<a href="https://www.youtube.com/channel/UCBfjBEKsW8ChxbX3MEGrx2Q" target="_blank" style="background-color: #410000; color: #ffdad4; --link-color: red;" class="sec-bl">youtube</a>
+					<a href="https://www.youtube.com/channel/UCBfjBEKsW8ChxbX3MEGrx2Q" target="_blank" style="background-color: #410000; color: #ffdad4; --link-color: red;" class="d-sec-bl">youtube</a>
 					<a href="https://www.last.fm/user/wiichicken" target="_blank" style="background-color: #410E0B; color: #F2B8B5; --link-color: red;">last.fm</a>
 					<a href="https://neocities.org/site/wiichicken" target="_blank" style="background-color: #2c1600; color: #ffdcbd; --link-color: orange;">neocities</a>
 					<a href="https://letterboxd.com/wiichicken/" target="_blank" style="background-color: #002106; color: #6cff80; --link-color: #6cff80;">letterboxd</a>
-					<a href="https://www.backloggd.com/u/wiichicken/" target="_blank" style="background-color: #3f001b; color: #ffd9e1; --link-color: #ea377a;" class="sec-br">backloggd</a>
+					<a href="https://www.backloggd.com/u/wiichicken/" target="_blank" style="background-color: #3f001b; color: #ffd9e1; --link-color: #ea377a;" class="d-sec-br m-sec-b">backloggd</a>
 				</div>
-				<h2 id="contact" class="sec-t">CONTACT ME</h2>
-				<div class="blox sec-b">
+				<h2 id="contact" class="box sec-t">CONTACT ME</h2>
+				<div class="box sec-b">
 					<ul>
 						<li><strong>discord</strong>: @bbctwo (wiichicken#0040) <a href="https://discord.gg/aeYHWsw" target="_blank">server</a> (sam told me to add this link, but don't join it sucks)</li>
 						<li><strong>email</strong>: <a href="mailto:vimeoofficial@gmail.com" target="_blank">vimeoofficial@gmail.com</a></li>
 						<li><a href="https://neocities.org/site/wiichicken" target="_blank">neocities page</a></li>
 					</ul>
 				</div>
-				<h2 id="site" class="sec-t">THiS SiTE</h2>
-				<div class="blox">
+				<h2 id="site" class="box sec-t">THiS SiTE</h2>
+				<div class="box">
 					<p>Cookie Clicker was the reason I discovered Neocities. The old school I attended blocked Cookie Clicker, but someone hosted the whole game on Neocities, albeit an older version. I got bored and decided to check the homepage of Neocities, and tried making another page for students to play games on at school. That page hasn't been lost to time, but rather lost to memory.<br>Recently I started getting really into website designing again. I found it is much more fun being able to have control of almost everything instead of just posting pictures and videos to a static feed. I hope that the content of my site makes up for the lack of effects and styling on it <img src="media/emoji/smile.gif"></p>
 					<p>I am hoping that soon this site can become a hub for my works and projects. I don't want things to be consistent across pages, I want it to be obvious how my design style has evolved (or devolved) over time (i have not been that good in doing this).</p>
 				</div>
-				<div class="blox sec-b">
+				<div class="box sec-b">
 					<p>As much as I don't like big tech and social media, this site wasn't made as a big middle finger towards them. Instead, this site is a creation of my own. It's something that I can look at and say "I made this" with pride. I feel alot of people forget about that when they start making their own websites. Making websites as protest is cool, but making websites for fun is also cool. <img src="media/emoji/glasses.gif"> I highly recommend you read the <a href="https://sadgrl.online/cyberspace/internet-manifesto" target="_blank">sadgrl.online Internet Manifesto</a>, as I strongly agree with what it says.</p>
 				</div>
-				<h2 id="naq" class="sec-t">NEVER ASKED QUESTiONS</h2>
+				<h2 id="naq" class="box sec-t">NEVER ASKED QUESTiONS</h2>
 				<div class="row" id="qanda" style="margin-bottom: 10px;">
-					<div class="blox">
+					<div class="box">
 						<p><strong>How can I contact you?</strong></p>
 						<p>Check the <a href="index.html">homepage</a>, there should be a few contact links there. There is also a <a href="#contact">contact</a> section on this page, don't know how you missed it.</p>
 					</div>
-					<div class="blox">
+					<div class="box">
 						<p><strong>What do you use to draw?</strong></p>
 						<p>I still have yet to decide what app I wanna commit to on computer, but I use a modified version of ibisPaint so I don't have to pay, because I'm cheap. On my phone I use the same app. oh yeah also recently i started using krita and i use aseprite in combination with it</p>
 					</div>
-					<div class="blox">
+					<div class="box">
 						<p><strong>What did you make this site in?</strong></p>
 						<p>At first I made this site in the Neocities editor, but now I mainly use Visual Studio code. I code in a lot of places at once, so when I'm not on my laptop, I'm using the browser version.</p>
 					</div>
-					<div class="blox">
+					<div class="box">
 						<p><strong>How do you pick colors?</strong></p>
 						<p>First I think of a theme color or color combination, usually revolving around a red and blue gradient. I do this using my brain. After that, I find a color and put it into the <a href="https://m3.material.io/theme-builder#/custom" target="_blank">Material Theme Builder</a>. I use this to make the background and text colors more harmonized. <img src="media/emoji/tulip.gif"></p>
 					</div>
-					<div class="blox">
+					<div class="box">
 						<p><strong>Why do you have a NAQ section?</strong></p>
 						<p>I am always going through what the kids call "writers block", so writing useless stuff like this makes it look like I have done work <img src="media/emoji/shh.gif"></p>
 					</div>
-					<div class="blox">
+					<div class="box">
 						<p><strong>Why wiggle.monster?</strong></p>
 						<p>Because it's funny. No other reason.</p>
 					</div>
-					<div class="blox">
+					<div class="box">
 						<p><strong>Why do some pages have Google Analytics tags?</strong></p>
 						<p>I am data obsessed, so I used to add Google Analytics tags to my pages. I don't really care about that anymore, so I stopped adding them. However, some pages may still have them, and I don't feel like going through to find what ones still do <img src="media/emoji/sleepy.gif">. Just use uBlock Origin or something, I dunno.</p>
 					</div>
-					<div class="blox">
+					<div class="box">
 						<p><strong>I am your friend. How can I get in your friend section?</strong></p>
 						<p>Hello, friend. <img src="media/emoji/grin.gif"> Just let me know. However, I may not put your website if you don't have a 88x31 button or if your site is basically just a linktree/caard. Just add a page with a marquee that says "poop" or something and maybe I will consider it <img src="media/emoji/sweat.gif"></p>
 					</div>
-					<div class="blox">
+					<div class="box">
 						<p><strong>Where's your landing page?</strong></p>
 						<p>A landing page? In THIS economy?<img src="media/emoji/crying.gif"> sorry i just don't really care enough for that and i dont think i have anything on my site where i would need to warn you before viewing (ex. autoplaying music)</p>
 					</div>
-					<div class="blox">
+					<div class="box">
 						<p><strong>How many slices of bread do you eat a day?</strong></p>
 						<p>I used to average 4, 6 on a bad day, but now I only average 2.</p>
 					</div>
-					<div class="blox">
+					<div class="box">
 						<p><strong>what up what you doing</strong></p>
 						<p>just watching my game. You?</p>
 					</div>
-					<div class="blox sec-b">
+					<div class="box sec-b">
 						<p><strong>do yall got lap tops</strong></p>
 						<p>you mean, the players? Do they have laptops?</p>
 					</div>
