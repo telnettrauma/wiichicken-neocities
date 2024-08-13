@@ -256,7 +256,7 @@ button {
 	cursor: pointer;
 	z-index: 2;
 	margin: 0 22px 0 22px;
-	background-color: unset !important;
+	padding: 2px;
 	pointer-events: all;
 }
 #fakeLogo:hover {
@@ -278,11 +278,11 @@ button {
 	filter: contrast(0.8);
 }
 #fakeLogo:hover .square {
-	width: 35px;
-	height: 35px;
+	transform: scale(2);
 	margin-right: 5px;
 	transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
+#fakeLogo:hover #s1 {margin-right: 20px;}
 #fakeLogo:hover p {
 	font-size: 30px;
 	opacity: 1;
@@ -291,6 +291,7 @@ button {
 #fakeLogo:active .square {
 	transition-duration: 0.2s;
 	width: 25px;
+	transform: scale(1.5);
 }
 #fakeLogo:active p {
 	font-size: 20px;
@@ -304,9 +305,10 @@ button {
 .square {
 	width: 15px;
 	height: 15px;
-	margin: 2px;
-	transition-duration: 0.3s;
+	/* margin: 2px; */
 }
+#s1 {transition-duration: 0.3s;}
+#s2 {transition-duration: 0.5s;}
 /* sidebar */
 #sideButton, #closeSide {
 	position: fixed;
@@ -415,6 +417,25 @@ button {
 		bottom: 0;
 		left: 0;
 	}
+	@keyframes wink {
+		0% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		10% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		11% {height: 5px; margin-top: 5px; margin-bottom: 5px;}
+		12% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		48% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		50% {height: 5px; margin-top: 5px; margin-bottom: 5px;}
+		52% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		100% {height: 15px; margin-top: 0; margin-bottom: 0;}
+	}
+	@keyframes blink {
+		0% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		10% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		11% {height: 5px; margin-top: 5px; margin-bottom: 5px;}
+		12% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		100% {height: 15px; margin-top: 0; margin-bottom: 0;}
+	}
+	#fakeLogo:not(:hover) #s1 {animation: wink 15s infinite;}
+	#fakeLogo:not(:hover) #s2 {animation: blink 15s infinite;}
 }
 /* styling for mobile */
 @media only screen and (max-width: 650px) {
