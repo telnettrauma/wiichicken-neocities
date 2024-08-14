@@ -228,12 +228,6 @@ button {
 }
 .headerVisible {transform: translateY(0px) !important;}
 .headerInvisible {transform: translateY(-50px);}
-.square {
-	width: 15px;
-	height: 15px;
-	margin: 2px;
-	transition-duration: 0.3s;
-}
 .topLinks, .topLinks a, #fakeLogo, .square {pointer-events: all;}
 .topLinks a {
 	font-weight: bold;
@@ -256,7 +250,7 @@ button {
 	cursor: pointer;
 	z-index: 2;
 	margin: 0 22px 0 22px;
-	padding: 2px;
+	padding: 3px;
 	pointer-events: all;
 }
 #fakeLogo:hover {
@@ -267,6 +261,7 @@ button {
 #fakeLogo .square {
 	width: 15px;
 	height: 15px;
+	margin: 2px;
 }
 #fakeLogo p {
 	pointer-events: none;
@@ -291,7 +286,6 @@ button {
 #fakeLogo:active .square {
 	transition-duration: 0.2s;
 	width: 25px;
-	transform: scale(1.5);
 }
 #fakeLogo:active p {
 	font-size: 20px;
@@ -302,11 +296,6 @@ button {
 
 #fakeLogo:active #s1 {margin-left: 12px;}
 #fakeLogo:active #s2 {margin-right: 10px !important;}
-.square {
-	width: 15px;
-	height: 15px;
-	/* margin: 2px; */
-}
 #s1 {transition-duration: 0.3s;}
 #s2 {transition-duration: 0.5s;}
 /* sidebar */
