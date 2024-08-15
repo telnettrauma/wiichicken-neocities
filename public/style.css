@@ -222,7 +222,7 @@ button {
 	position: absolute;
 	height: 1px;
 	width: 100%;
-	background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-1) 100%);
+	background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 23%, var(--bg-1) 100%);
 	content: '';
 	bottom: 0;
 	left: 0;
@@ -230,8 +230,9 @@ button {
 #heightCheck {height: 40px;}
 #inHead {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
+	padding-left: 100px;
 	margin: 5px;
 }
 .headerVisible {transform: translateY(0px) !important;}
@@ -251,16 +252,21 @@ button {
 #fakeLogo {
 	display: flex;
 	align-items: center;
-	transition-duration: 0.3s;
+	transition-duration: 0.4s;
 	cursor: pointer;
 	z-index: 2;
-	margin: 0 22px 0 22px;
-	padding: 3px;
+	margin: 30px 22px 0 22px;
+	padding: 5px;
 	pointer-events: all;
+	position: absolute;
+	left: 5px;
+	background-color: white;
+	aspect-ratio: 1;
+	border: 5px solid black;
 }
 #fakeLogo:hover {
-	margin: 0;
-	transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+	margin-top: 60px;
+	padding: 10px;
 }
 #fakeLogo:hover #s1 {box-shadow: 0 0 100px 25px red, 42px 0 100px 25px #00a2ff;}
 #fakeLogo .square {
@@ -268,41 +274,20 @@ button {
 	height: 15px;
 	margin: 2px;
 }
-#fakeLogo p {
-	pointer-events: none;
-	font-family: 'Martian Mono', monospace;
-	margin: 0 5px 0 5px;
-	transition-duration: 0.3s;
-	opacity: 0;
-	text-shadow: 0 0 10px black;
-	filter: contrast(0.8);
-}
 #fakeLogo:hover .square {
 	transform: scale(2);
-	margin-right: 5px;
 	transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 #fakeLogo:hover #s1 {margin-right: 20px;}
-#fakeLogo:hover p {
-	font-size: 30px;
-	opacity: 1;
-	transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);;
-}
-#fakeLogo:active .square {
+/* #fakeLogo:active .square {
 	transition-duration: 0.2s;
 	width: 25px;
-}
-#fakeLogo:active p {
-	font-size: 20px;
-	filter: contrast(1);
-}
-#s1 {background-color: red;}
-#s2 {background-color: #00a2ff;}
+} */
+#s1 {background-color: red; transition-duration: 0.3s;}
+#s2 {background-color: #00a2ff; transition-duration: 0.5s;}
 
 #fakeLogo:active #s1 {margin-left: 12px;}
 #fakeLogo:active #s2 {margin-right: 10px !important;}
-#s1 {transition-duration: 0.3s;}
-#s2 {transition-duration: 0.5s;}
 /* sidebar */
 #sideButton, #closeSide {
 	position: fixed;
