@@ -218,7 +218,7 @@ button {
 	height: 30px;
 	background-color: black;
 }
-.heading::after {
+.heading::after, #inHead::after {
 	position: absolute;
 	height: 1px;
 	width: 100%;
@@ -235,8 +235,12 @@ button {
 	padding-left: 100px;
 	margin: 5px;
 }
+#inHead::after {
+	height: 5px;
+	filter: blur(10px);
+}
 .headerVisible {transform: translateY(0px) !important;}
-.headerInvisible {transform: translateY(-50px);}
+.headerInvisible {transform: translateY(-65px);}
 .topLinks, .topLinks a, #fakeLogo, .square {pointer-events: all;}
 .topLinks a {
 	font-size: 15px;
@@ -255,7 +259,7 @@ button {
 	transition-duration: 0.4s;
 	cursor: pointer;
 	z-index: 2;
-	margin: 30px 22px 0 22px;
+	margin: 5px 0 0 20px;
 	padding: 5px;
 	pointer-events: all;
 	position: absolute;
@@ -265,7 +269,6 @@ button {
 	border: 5px solid black;
 }
 #fakeLogo:hover {
-	margin-top: 60px;
 	padding: 10px;
 }
 #fakeLogo:hover #s1 {box-shadow: 0 0 100px 25px red, 42px 0 100px 25px #00a2ff;}
@@ -275,14 +278,21 @@ button {
 	margin: 2px;
 }
 #fakeLogo:hover .square {
-	transform: scale(2);
+	transform: scale(1.8);
+	transform-origin: center;
+	margin: 1px;
 	transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+	animation: look-around 3s;
+}
+@keyframes look-around {
+	30% {transform-origin: initial;}
+	40% {transform-origin: left;}
+	50% {transform-origin: left;}
+	60% {transform-origin: right;}
+	75% {transform-origin: right;}
+	85% {transform-origin: initial;}
 }
 #fakeLogo:hover #s1 {margin-right: 20px;}
-/* #fakeLogo:active .square {
-	transition-duration: 0.2s;
-	width: 25px;
-} */
 #s1 {background-color: red; transition-duration: 0.3s;}
 #s2 {background-color: #00a2ff; transition-duration: 0.5s;}
 
