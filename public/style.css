@@ -1,5 +1,5 @@
 /* general styles */
-@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@700&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@700&family=Martian+Mono:wght@600&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 * {
 	box-sizing: border-box;
 	text-rendering: optimizeSpeed;
@@ -63,6 +63,7 @@ a {
 	text-decoration: none;
 	color: var(--dark-secondary);
 }
+code {font-family: 'Martian Mono', monospace;}
 img {image-rendering: pixelated;}
 button {
 	cursor: pointer;
@@ -242,10 +243,7 @@ button {
 	padding: 0 10px 0 10px;
 	background-color: unset !important;
 }
-.topLinks a:hover {
-	font-weight: bold;
-	color: white !important;
-}
+.topLinks a:hover {color: white !important;}
 #fakeLogo {
 	display: flex;
 	align-items: center;
@@ -259,13 +257,12 @@ button {
 	right: 5px;
 	background-color: white;
 	aspect-ratio: 1;
-	border: 5px solid black;
 }
 #fakeLogo:hover {
 	padding: 10px;
 	transform: translateY(-10px);
+	box-shadow: 0 0 100px 20px var(--bg-1);
 }
-#fakeLogo:hover {box-shadow: 0 0 100px 25px var(--bg-1);}
 #fakeLogo .square {
 	width: 15px;
 	height: 15px;
@@ -294,6 +291,7 @@ button {
 	height: 30px;
 	content: '';
 	width: 10px;
+	pointer-events: none;
 }
 #s1::after {
 	background-color: red;
@@ -303,6 +301,8 @@ button {
 	background-color: #00a2ff;
 	transform: translate(22px, -10px);
 }
+#fakeLogo:hover #s1::after {transform: translate(-15px, -10px);}
+#fakeLogo:hover #s2::after {transform: translate(20px, -10px);}
 #fakeLogo:active {
 	padding: 7px;
 	box-shadow: 0 0 100px 50px var(--bg-1);
