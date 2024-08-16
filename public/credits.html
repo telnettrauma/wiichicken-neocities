@@ -22,6 +22,7 @@
 				src: url("resources/VCR_OSD_MONO_1.001.ttf");
 			}
 			@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 			* {
 				margin-block-start: 0;
 				margin-block-end: 0;
@@ -50,7 +51,6 @@
 				backdrop-filter: blur(5px);
 				color: #b1cbd0;
 				padding: 5px;
-				box-shadow: 0px 0px 15px 0px #b1cbd0;
 				margin-bottom: 10px;
 				overflow: hidden;
 			}
@@ -59,7 +59,7 @@
 				background-color: #1c3438cc;
 				color: #cde7ec;
 			}
-			.three {
+			/* .three {
 				display: flex;
 				gap: 10px;
 				margin-bottom: 10px;
@@ -67,7 +67,7 @@
 			.three .box {
 				width: 33%;
 				margin-bottom: 0;
-			}
+			} */
 			.buttonhell a {background: none;}
 			.buttonhell {
 				display: flex;
@@ -124,15 +124,19 @@
 				<h2>FONTS</h2>
 			</header>
 			<div class="three">
-				<div class="box sec-bl">
+				<div class="box">
 					<h3 style="font-family: 'PT Sans', sans-serif;">PT Sans</h3>
 					<a href="https://fonts.google.com/specimen/PT+Sans/" target="_blank">Google Fonts Page</a>
 				</div>
 				<div class="box">
-					<h3>Martian Mono</h3>
+					<h3 style="font-family: 'Martian Mono', monospace;">Martian Mono</h3>
 					<a href="https://fonts.google.com/specimen/Martian+Mono" target="_blank">Google Fonts Page</a> <a href="https://github.com/evilmartians/mono" target="_blank">GitHub</a>
 				</div>
-				<div class="box sec-br">
+				<div class="box">
+					<h3 style="font-family: 'Kode Mono', monospace;">Kode Mono</h3>
+					<a href="https://fonts.google.com/specimen/Kode+Mono" target="_blank">Google Fonts Page</a>
+				</div>
+				<div class="box sec-b">
 					<h3 style="font-family: 'VCR';">VCR OSD Mono</h3>
 					<a href="https://www.dafont.com/vcr-osd-mono.font" target="_blank">Dafont Page</a>
 				</div>

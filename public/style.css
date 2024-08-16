@@ -1,5 +1,5 @@
 /* general styles */
-@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@700&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 * {
 	box-sizing: border-box;
 	text-rendering: optimizeSpeed;
@@ -7,7 +7,7 @@
 }
 body {
 	margin: 0;
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	background-color: var(--bg-1);
 	cursor: url(/media/home/cursor.png), default;
 	background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2));
@@ -58,7 +58,7 @@ mask:
 	linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s-main)) no-repeat,
 	linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s-main)) 100% no-repeat;
 }
-h1, h2, h3, h4, h5, h6 {font-family: 'Martian Mono', monospace;}
+h1, h2, h3, h4, h5, h6 {font-family: 'Kode Mono', monospace;}
 a {
 	text-decoration: none;
 	color: var(--dark-secondary);
@@ -66,7 +66,7 @@ a {
 img {image-rendering: pixelated;}
 button {
 	cursor: pointer;
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 }
 .nomarblock {
 	margin-block-start: 0;
@@ -178,7 +178,7 @@ button {
 .footer {
 	width: 100%;
 	background-color: black;
-	font-family: 'Martian Mono', monospace;
+	font-family: 'Kode Mono', monospace;
 	font-weight: bold;
 	padding: 10px;
 	color: white;
@@ -191,7 +191,7 @@ button {
 #random-message {
 	font-size: 10px;
 	cursor: pointer;
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-weight: normal;
 	color: gray;
 }
@@ -263,7 +263,7 @@ button {
 }
 #fakeLogo:hover {
 	padding: 10px;
-	transform: translateY(-20px);
+	transform: translateY(-10px);
 }
 #fakeLogo:hover {box-shadow: 0 0 100px 25px var(--bg-1);}
 #fakeLogo .square {
@@ -358,7 +358,7 @@ button {
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
 	font-size: 30px;
-	font-family: 'Martian Mono', monospace;
+	font-family: 'Kode Mono', monospace;
 	color: #6ff6f9;
 	padding: 10px;
 	position: relative;
