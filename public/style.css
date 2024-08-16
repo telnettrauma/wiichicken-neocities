@@ -246,7 +246,6 @@ button {
 	font-size: 15px;
 	color: var(--dark-tertiary);
 	padding: 0 10px 0 10px;
-	transition-duration: 0.3s;
 	background-color: unset !important;
 }
 .topLinks a:hover {
