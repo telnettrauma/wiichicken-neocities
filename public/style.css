@@ -20,7 +20,8 @@ main {
 	margin: auto;
 	padding: 10px;
 	overflow: hidden;
-	margin-bottom: 10px;
+	margin-top: 10px !important;
+	margin-bottom: 40px !important;
 	position: relative;
 	backdrop-filter: blur(5px);
 	background-image: url('/media/noise.png');
@@ -212,35 +213,28 @@ button {
 	width: 100%;
 	z-index: 10;
 	margin: 0;
-	top: 0;
+	bottom: 0;
 	position: fixed;
 	transition-duration: 0.5s;
 	height: 30px;
 	background-color: black;
 }
-.heading::after, #inHead::after {
+.heading::after {
 	position: absolute;
 	height: 1px;
 	width: 100%;
-	background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 10%, var(--bg-1) 100%);
+	background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 80%, var(--bg-1) 100%);
 	content: '';
 	bottom: 0;
-	left: 0;
+	top: 0;
 }
-#heightCheck {height: 40px;}
 #inHead {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: flex-end;
 	align-items: center;
-	padding-left: 100px;
+	padding-right: 100px;
 	margin: 5px;
 }
-#inHead::after {
-	height: 5px;
-	filter: blur(10px);
-}
-.headerVisible {transform: translateY(0px) !important;}
-.headerInvisible {transform: translateY(-65px);}
 .topLinks, .topLinks a, #fakeLogo, .square {pointer-events: all;}
 .topLinks a {
 	font-size: 15px;
@@ -258,17 +252,18 @@ button {
 	transition-duration: 0.4s;
 	cursor: pointer;
 	z-index: 2;
-	margin: 5px 0 0 20px;
+	margin: -35px 20px 0 0;
 	padding: 5px;
 	pointer-events: all;
 	position: absolute;
-	left: 5px;
+	right: 5px;
 	background-color: white;
 	aspect-ratio: 1;
 	border: 5px solid black;
 }
 #fakeLogo:hover {
 	padding: 10px;
+	transform: translateY(-20px);
 }
 #fakeLogo:hover #s1 {box-shadow: 0 0 100px 25px red, 42px 0 100px 25px #00a2ff;}
 #fakeLogo .square {
@@ -277,7 +272,7 @@ button {
 	margin: 2px;
 }
 #fakeLogo:hover .square {
-	transform: scale(1.8);
+	transform: scale(1.5);
 	transform-origin: center;
 	margin: 1px;
 	transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
@@ -291,12 +286,17 @@ button {
 	75% {transform-origin: right;}
 	85% {transform-origin: initial;}
 }
-#fakeLogo:hover #s1 {margin-right: 20px;}
+#fakeLogo:hover #s1 {margin-right: 10px;}
 #s1 {background-color: red; transition-duration: 0.3s;}
 #s2 {background-color: #00a2ff; transition-duration: 0.5s;}
+#fakeLogo:active {padding: 7px;}
+#fakeLogo:active .square {
+	margin: 1px;
+	transition-duration: 0.2;
+}
+#fakeLogo:active #s1 {transform: scale(1.7); margin-right: 15px;}
+#fakeLogo:active #s2 {transform: scale(2.1);}
 
-#fakeLogo:active #s1 {margin-left: 12px;}
-#fakeLogo:active #s2 {margin-right: 10px !important;}
 /* sidebar */
 #sideButton, #closeSide {
 	position: fixed;

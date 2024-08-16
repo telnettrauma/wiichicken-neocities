@@ -707,17 +707,9 @@
 	}
 </style>
 <div id="heightCheck"></div>
-<div class="heading headerInvisible" id="poopBlock"></div>
+<div class="heading" id="poopBlock"></div>
 <div id="sideButton" onclick="openSidey()"></div>
 <div id="overSide"></div>
-<script>
-	// displays the navbar is the page is scrolled down 120 px
-	window.onscroll = function() {checkHeader()};
-	var header = document.getElementById("poopBlock");
-	function checkHeader() {
-		if (window.pageYOffset > 120) {header.classList.remove("headerInvisible");} else {header.classList.add("headerInvisible");}
-	}
-</script>
 <div id="chewTooth"></div>
 <div class="main">
 	<div id="flex">
