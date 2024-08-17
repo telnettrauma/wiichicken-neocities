@@ -668,7 +668,7 @@
 			margin-left: 5px;
 		}
 	}
-	.reducedVisible {display: none;}
+	.reducedVisible, .contrastVisible, .transparentVisible {display: none;}
 	@media (prefers-reduced-motion) {
 		.reducedHidden {display: none !important;}
 		.reducedVisible {display: block;}
@@ -685,6 +685,7 @@
 		#hitcount {text-shadow: unset;}
 	}
 	@media (prefers-contrast: more) {
+		.contrastVisible {display: block !important;}
 		.sidehead p {color: white !important;}
 	}
 </style>
@@ -830,13 +831,13 @@
 				<h2 class="nomarblock">NOSCRiPT</h2>
 				<p class="nomarblock">uh oh! it looks like you don't have javascript support! no worries, i have made some small changes to make your browsing experience slightly better. i love you too.<br>note that some things still may not work.</p>
 			</div>
-			<div class="compat-error box" id="compat-table">
+			<div class="compat-error box reducedVisible contrastVisible transparentVisible" id="compat-table">
 				<h2>ACCESSiBiLiTY FEATURES</h2>
 				<p>the following accessibility features are enabled:</p>
 				<ul>
-					<li class="accessibility-title reducedVisible">Reduced Motion</li>
-					<li class="accessibility-title contrastVisible">Increased Contrast</li>
-					<li class="accessibility-title transparentVisible">Reduced Transparency</li>
+					<li class="reducedVisible">Reduced Motion</li>
+					<li class="contrastVisible">Increased Contrast</li>
+					<li class="transparentVisible">Reduced Transparency</li>
 				</ul>
 				<p>please note that just because a feature is enabled doesn't mean the entire site is compatible with it</p>
 			</div>
