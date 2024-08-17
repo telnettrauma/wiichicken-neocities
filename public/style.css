@@ -5,6 +5,7 @@
 	text-rendering: optimizeSpeed;
 	-webkit-font-smoothing: none;
 }
+*:focus {outline: 5px solid greenyellow;}
 body {
 	margin: 0;
 	font-family: 'Ubuntu', sans-serif;
@@ -297,6 +298,16 @@ button {
 }
 #fakeLogo:active #s1 {transform: scale(1.7); margin-right: 15px;}
 #fakeLogo:active #s2 {transform: scale(2.1);}
+#to-start {
+	position: absolute;
+	z-index: 1000;
+	left: -500px;
+	opacity: 0;
+}
+#to-start:focus {
+	opacity: 1;
+	left: 0;
+}
 
 /* sidebar */
 #sideButton, #closeSide {
