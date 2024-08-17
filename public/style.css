@@ -465,3 +465,23 @@ button {
 @media only screen and (min-height: 750px) {
 	#bottomNavLink {margin-bottom: 150px;}
 }
+/* prefers reduced transparency */
+@media (prefers-reduced-transparency: reduce) {
+	main {
+		backdrop-filter: unset !important;
+		background-color: black;
+	}
+}
+/* increased contrast */
+@media (prefers-contrast: more) {
+	.box {
+		color: white !important;
+	}
+	.topLinks a {
+		color: white;
+	}
+	.topLinks a:hover {
+		transition-duration: 0;
+		font-weight: bold;
+	}
+}
