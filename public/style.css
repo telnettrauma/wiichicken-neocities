@@ -5,7 +5,6 @@
 	text-rendering: optimizeSpeed;
 	-webkit-font-smoothing: none;
 }
-*:focus {outline: 5px solid greenyellow;}
 body {
 	margin: 0;
 	font-family: 'Ubuntu', sans-serif;
