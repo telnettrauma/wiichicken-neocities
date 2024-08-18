@@ -27,7 +27,6 @@
 	}
 	body {color: white;}
 	h1, h2, h3, h4 {margin: 0;}
-	a {text-decoration: none;}
 	aside {
 		width: 300px;
 		padding: 0;
@@ -99,7 +98,7 @@
 		background-color: unset;
 		margin: 0;
 		margin-bottom: 2px;
-		font-family: 'Martian Mono', monospace;
+		font-family: 'Kode Mono', monospace;
 		font-size: 20px;
 		display: flex;
 	}
@@ -229,7 +228,7 @@
 		background-color: unset;
 		margin: 5px;
 		margin-left: 0;
-		font-family: 'PT Sans', sans-serif;
+		font-family: 'Ubuntu', sans-serif;
 		font-size: 15px;
 		font-weight: 400;
 	}
@@ -252,7 +251,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		font-family: 'Martian Mono', monospace;
+		font-family: 'Kode Mono', monospace;
 		font-size: 14px;
 		font-weight: bold;
 		backdrop-filter: blur(5px);
@@ -293,12 +292,11 @@
 		color: #cee5ff !important;
 		width: 45%;
 		margin: 2px;
-		font-weight: bolder;
-		font-size: 15px;
+		font-size: 14px;
 	}
 	.headText {
 		font-size: 25px;
-		font-family: 'Martian Mono', monospace;
+		font-family: 'Kode Mono', monospace;
 	}
 	#updatedate {
 		font-size: 13px;
@@ -314,7 +312,7 @@
 	#signguest p {
 		margin-block-end: 0;
 		margin-block-start: 0;
-		font-family: 'Martian Mono', monospace;
+		font-family: 'Kode Mono', monospace;
 		font-size: 20px;
 		text-align: center;
 	}
@@ -333,7 +331,7 @@
 	}
 	#headerText {
 		display: none;
-		font-family: 'Martian Mono', monospace;
+		font-family: 'Kode Mono', monospace;
 		padding-top: 62px;
 	}
 	#tittle {
@@ -361,7 +359,7 @@
 		background: linear-gradient(270deg, #ff0000 0%, #00a2ff 100%) !important;
 	}
 	#navig a, #lonelyNav a {
-		font-family: 'Martian Mono', monospace;
+		font-family: 'Kode Mono', monospace;
 		padding: 5px 0 5px 0;
 		width: 100%;
 		display: flex;
@@ -419,10 +417,10 @@
 		height: 98px;
 		display: block;
 	}
-	#thisIsMyName {text-shadow: 0 0 10px black;}
-	.bring, #neorings-neoring-container a {
+	#thisIsMyName {text-shadow: 0 0 10px black; font-weight: bold;}
+	.bring {
 		padding: 0 2px 0 2px;
-		font-family: 'Martian Mono', monospace;
+		font-family: 'Kode Mono', monospace;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -435,7 +433,7 @@
 		color: #ede0dd !important;
 		border: 1px solid #a08c89;
 		padding: 0 2px 0 2px;
-		font-family: 'Martian Mono', monospace;
+		font-family: 'Kode Mono', monospace;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -455,25 +453,6 @@
 		box-shadow: 0 0 !important;
 	}
 	.bring::after {display: none;}
-	#neorings-neoring-container {
-		display: flex;
-		justify-content: center;
-	}
-	#neorings-neoring-container a {
-		background-color: #5f0050;
-		color: #ffade4;
-		margin: 2px;
-		border: 1px solid #af0095;
-		box-shadow: 2px 2px 0 0 #af0095;
-	}
-	#neorings-neoring-container a:hover, #neorings-neoring-container .bring:hover {
-		box-shadow: 1px 1px #af0095;
-		transform: translate(1px, 1px);
-	}
-	#neorings-neoring-container a:active, #neorings-neoring-container .bring:active {
-		box-shadow: unset;
-		transform: translate(2px, 2px);
-	}
 	#clockContainer {
 		position: relative;
 		width: 96px;
@@ -526,7 +505,7 @@
 	#statuscafe-username {
 		text-align: center;
 		font-weight: bold;
-		font-family: 'Martian Mono', monospace;
+		font-family: 'Kode Mono', monospace;
 	}
 	#statuscafe-username a {display: none;}
 	#statuscafe-username, #statuscafe-content {color: #561e16 !important;}
@@ -673,7 +652,6 @@
 			margin-top: 0 !important;
 		}
 		#infamous {display: flex !important;}
-		#neorings-neoring-container {font-size: 3vmax;}
 		.bring {
 			width: auto;
 			min-width: 20vw;
@@ -690,7 +668,7 @@
 			margin-left: 5px;
 		}
 	}
-	.reducedVisible {display: none;}
+	.reducedVisible, .contrastVisible, .transparentVisible {display: none;}
 	@media (prefers-reduced-motion) {
 		.reducedHidden {display: none !important;}
 		.reducedVisible {display: block;}
@@ -704,20 +682,17 @@
 			-webkit-backdrop-filter: blur(0px);
 		}
 		.blurry {display: none;}
+		#hitcount {text-shadow: unset;}
+	}
+	@media (prefers-contrast: more) {
+		.contrastVisible {display: block !important;}
+		.sidehead p {color: white !important;}
 	}
 </style>
 <div id="heightCheck"></div>
-<div class="heading headerInvisible" id="poopBlock"></div>
+<div class="heading" id="poopBlock"></div>
 <div id="sideButton" onclick="openSidey()"></div>
 <div id="overSide"></div>
-<script>
-	// displays the navbar is the page is scrolled down 120 px
-	window.onscroll = function() {checkHeader()};
-	var header = document.getElementById("poopBlock");
-	function checkHeader() {
-		if (window.pageYOffset > 120) {header.classList.remove("headerInvisible");} else {header.classList.add("headerInvisible");}
-	}
-</script>
 <div id="chewTooth"></div>
 <div class="main">
 	<div id="flex">
@@ -777,16 +752,15 @@
 					<div class="sidebox-content boxy" style="padding: 0;">
 						<div class="dabuttons">
 							<iframe src="https://incr.easrng.net/badge?key=wiichicken" title="increment badge" width="88" height="31" frameborder="0" style="padding: 2px; box-sizing: content-box;"></iframe>
-							<a href="https://afellowu.neocities.org/" target="_blank"><img src="interests/websites/img/button/mebi_county.gif"></a>
+							<a href="https://corvidae.digital" target="_blank"><img src="interests/websites/img/button/corvidae.gif" loading="lazy"></a>
 							<a href="https://divsel.neocities.org" target="_blank"><img id="divsel" src="interests/websites/img/button/divsel.png"></a>
 							<a href="https://catbyte.site/" target="_blank"><img src="interests/websites/img/button/catbyte.png"></a>
-							<a href="https://dabric.xyz" target="_blank"><img src="https://dabric.xyz/butt.png" alt="dabric"></a>
-							<a href="https://gradientos.neocities.org" target="_blank"><img src="https://gradientos.neocities.org/bsab/badge0.gif" alt="GradientOS"></a>
-							<a href="https://wi-fi.neocities.org/" target="_blank"><img src="interests/websites/img/button/needwifi.png"></a>
+							<a href="https://darkendstars.neocities.org" target="_blank"><img src="https://i.ibb.co/17djkby/Untitled-Artwork-20.gif" loading="lazy"></a>
+							<a href="https://psychicnewborn.neocities.org" target="_blank"><img loading="lazy" src="interests/websites/img/button/psychic.gif"></a>
+							<a href="https://charpine.neocities.org" target="_blank"><img src="interests/websites/img/button/artists/charpine.gif" loading="lazy"></a>
 							<a href="https://bruno-rubim.neocities.org/" target="_blank"><img src="interests/websites/img/button/bruno-button.gif" loading="lazy" alt="Bruno Rubim"></a>
 						</div>
 						<div class="favrow">
-							<a href="https://charpine.neocities.org" target="_blank"><img src="media/buttons/favicon/charpine.png"></a>
 							<a href="https://e4494s.neocities.org" target="_blank"><img src="interests/websites/img/ficon/game/e4494s.png"></a>
 							<a href="https://awe921.neocities.org" target="_blank"><img src="media/buttons/favicon/awehead.png"></a>
 							<a href="https://wented.neocities.org" target="_blank"><img src="media/buttons/favicon/epicomics.png"></a>
@@ -806,17 +780,12 @@
 					<p class="boxy" style="background: linear-gradient(90deg, #77009a 0%, #510097 100%);"><strong>WEBRiNG</strong></p>
 				</div>
 				<div class="sidebox-content boxy">
-					<div id='neorings-neoring-container' style="text-align: center;">
-						<a class="bring" href="https://neorings.org/api/webring/1/previous?via=https%3A%2F%2Fwiichicken.neocities.org">&lt;</a>
-						<a href="https://neorings.org/webring/1/">Neoring</a>
-						<a id="randring" style="padding-left: 2px;" href="https://neorings.org/api/webring/1/random" title="Random">?</a>
-						<a class="bring" href="https://neorings.org/api/webring/1/next?via=https%3A%2F%2Fwiichicken.neocities.org">&gt;</a>
-					</div>
+					<p>the creator of the last webring i was in didn't renew their domain</p>
 				</div>
 			</div>
 		</aside>
 		<main>
-			<div class="box head page-top">
+			<div class="box head page-top" id="start">
 				<div id="tittle">
 					<div id="logocontent">
 						<p id="thisIsMyName" class="nomarblock mobileVisible headText" style="color: white;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN</p>
@@ -862,10 +831,20 @@
 				<h2 class="nomarblock">NOSCRiPT</h2>
 				<p class="nomarblock">uh oh! it looks like you don't have javascript support! no worries, i have made some small changes to make your browsing experience slightly better. i love you too.<br>note that some things still may not work.</p>
 			</div>
+			<div class="compat-error box reducedVisible contrastVisible transparentVisible" id="compat-table">
+				<h2>ACCESSiBiLiTY FEATURES</h2>
+				<p>the following accessibility features are enabled:</p>
+				<ul>
+					<li class="reducedVisible">Reduced Motion</li>
+					<li class="contrastVisible">Increased Contrast</li>
+					<li class="transparentVisible">Reduced Transparency</li>
+				</ul>
+				<p>please note that just because a feature is enabled doesn't mean the entire site is compatible with it</p>
+			</div>
 			<div class="row" id="infamous" style="display: grid; gap: 10px;">
 				<div class="box noscript-hidden d-sec-l m-sec-t" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
 					<div style="display: flex; flex-wrap: wrap;" id="statusCard">
-						<div id="statuscafe" style="padding: 5px; background-color: #ffb4a8; width: 100%; min-height: 90px;">
+						<div id="statuscafe" style="padding: 5px; background: linear-gradient(0deg, rgba(255,180,168,1) 0%, rgba(255,212,168,1) 100%); width: 100%; min-height: 93px;">
 							<a href="https://status.cafe/users/cringe" class="noBg" target="_blank">
 								<div id="statuscafe-username"></div>
 								<div id="statuscafe-content"></div>
@@ -898,7 +877,7 @@
 				</div>
 			</div>
 			<div class="box sec-full" style="padding: 0; display: flex; --border: #f6be14; background-color: #352500ab">
-				<iframe src="interests/websites/sotfp/widget.html" style="width: 100%; height: 100px; border: none;"></iframe>
+				<iframe src="interests/websites/sotfp/widget.html" style="width: 100%; height: 100px; border: none;" title="Site of the Fiscal period"></iframe>
 			</div>
 			<div class="row">
 				<div class="box d-sec-l m-sec-t" style="width: 50%;">
@@ -921,8 +900,8 @@
 						<img src="https://lastfm.freetls.fastly.net/i/u/500x500/adff38e3219e033dbc381644fa354583.jpg" width="100px" height="100px" style="margin-right: 10px; --border: #cde5ff; z-index: 1;">
 						<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/500x500/adff38e3219e033dbc381644fa354583.jpg" width="100px" height="100px" style="margin-right: 10px; opacity: 0.5;">
 						<div style="width: 100%;">
-							<p class="headText nomarblock" style="font-size: 17px;">Chicago</p>
-							<p class="nomarblock" style="font-size: 20px;">Capital STEEZ Archive</p>
+							<p class="nomarblock"><strong>Chicago</strong></p>
+							<p class="nomarblock">Capital STEEZ Archive</p>
 							<a class="bring" href="interests/music/favarchive">Current Fav Song Archive</a>
 						</div>
 					</div>
@@ -967,25 +946,13 @@
 			<div class="box sec-full" id="whatsheader" style="--border: #3978c6;">
 				<div class="accordion">
 					<h2 class="gradientText" style="background: linear-gradient(90deg, rgba(193,232,255,1) 0%, rgba(229,222,255,1) 100%);">siteUpdates</h2>
-					<h3 style="margin: 0; font-size: 15px;"><strong>DOTS AND BOXES MiNUS THE DOTS</strong></h3>
-					<p style="margin-top: 0; margin-bottom: 2px;"><strong>August 4, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
+					<h3 style="margin: 0; font-size: 15px;"><strong>STARTED FROM THE TOP, NOW WE ON THE BOTTOM</strong></h3>
+					<p style="margin-top: 0; margin-bottom: 2px;"><strong>August 18, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
 				</div>
 				<div class="panel">
-					<h2 style="margin-bottom: 2px;">DOTS AND BOXES MiNUS THE DOTS</h2>
-					<p id="updatedate">August 4, 2024</p>
-					<p>so much is new this week that i kinda don't even know where to start. so i'm going to start at the start</p>
-					<ul>
-						<li>brand new rounded corner design. they aren't even rounded corners at all, now they're slanted corners. doesn't that look so cool?!?! not everything is perfect, but i'm still quite happy with where i am.</li>
-						<li>added a little bit of grain to elements. i've already noiced that grain is becoming the new <a href="https://crazyleafdesign.com/blog/wp-content/uploads/2013/09/long-shadow-icons-webdesignerdepot.jpg" target="_blank">45 degree material design drop shadow</a>, so i decided to try not to overdo it</li>
-						<li>massive performance improvements. sadly, some effects had to go. the parallax was cool when it worked, but 90% of the time it would just stutter. the effect where the color changes on the homepage is also gone, as it was really resource intensive and didn't even look that cool anyway</li>
-						<li>the mobile experience is also a little better. i got one complaint saying that running my website on an older phone causes it to catch fire, so i did a lot of performance improvements for mobile. that new cool corner design isn't on mobile <img src='/media/emoji/down.gif' loading='lazy' alt=''></li>
-						<li>there is some brand new stuff in the more page. just graphs and stuff, but its still cool.</li>
-					</ul>
-					<p>overall, this is awesome, and i am really happy that i was able to get this new design to work. you have no idea how long i spent trying to make variably sized boxed corners<br>for the first time ever in this website, if you use chromium, the website won't look as consistent as on firefox. this is how the website looks on chrome:</p>
-					<img src="https://i.imgur.com/o5kntrh.png" loading="lazy">
-					<p>(you might need to open the images in a new tab)<br>notice how theres a stray line in the nav bar, and how the right side of all the boxes are less bright. now here's firefox:</p>
-					<img src="https://i.imgur.com/aUy7kEy.png" loading="lazy">
-					<p>massive improvement. i just wish firefox would do things like not partnering with meta to add "ad control" to the browser. but, eh, i use vivaldi.</p>
+					<h2 style="margin-bottom: 2px;">STARTED FROM THE TOP, NOW WE ON THE BOTTOM</h2>
+					<p id="updatedate">August 18, 2024</p>
+					<p>now you will notice that the navigation bar is on the bottom, and it has some brand new wacky effects. and that's all that changed... that you can notice.<br>i am working on adding a bunch of accessibility features to the site. for example, if you enable increased contrast, some of the text will turn white. i am also working on adding a skip to content button. things are still a major work in progress, but behind the scenes they are going.<br>i guess another thing is that i updated the buttons on the homepage. if i removed yours, no hard feelings! i just want to keep them fresh, i still love you! in fact, i put the buttons of all my followers into the credits page.<br>finally, new fonts, yay! i don't know if i will keep on using ubuntu as the body font, but it's the only one that looked good with cleartype disabled.</p>
 				</div>
 			</div>
 			<script>
@@ -1058,7 +1025,7 @@
 					<p class="boxy" style="background: linear-gradient(90deg, #005047 0%, #00502b 100%);">ViSiTOR #</p>
 				</div>
 				<div class="sidebox-content boxy middleBoy" id="googgo" style="flex-wrap: wrap; padding: 2px;">
-					<p class="nomarblock headText" id="hitcount" style="font-size: 35px;">00000</p>
+					<p class="nomarblock headText" id="hitcount" style="font-size: 35px;">000000</p>
 				</div>
 			</div>
 			<div class="sidebox" id="lastUpdated" style="overflow: visible; margin: 0; --border: #f5ddda;">
@@ -1103,7 +1070,7 @@ document.addEventListener("keydown", (event) => {
 	}
 });
 function setRandomMessage() {
-	var msgList = ['Updated <code>index.html</code>', 'coded on a best buy kiosk macbook', 'jobs near me that pay trillion/hour', 'TV explodes in 30 seconds if not powered off', 'can we get a "woot woot"', 'anti-anti-aliasing', 'bring back parallax', 'wth is a framework', 'oh to be a navbar with 3 items', 'internet explorer is safe... so far', 'THiS iS A POOP ALERT', 'debbie downers DNI', 'do not use this website around pacemakers', 'Smile! You\'re on <i>Old Navy</i> TV!', 'one of the greatest', 'keep this place our secret', 'Thanks SiriusXM for making this possible!', 'not the best thing to show to an employer', 'awwwards are impractical anyways', 'dm for proto', 'it takes a village and a half', 'we bought a zoo', 'free for 7 days', 'like transformers, but funnier'];
+	var msgList = ['Updated <code>index.html</code>', 'coded on a best buy kiosk macbook', 'jobs near me that pay trillion/hour', 'TV explodes in 30 seconds if not powered off', 'can we get a "woot woot"', 'anti-anti-aliasing', 'bring back parallax', 'wth is a framework', 'oh to be a navbar with 3 items', 'internet explorer is safe... so far', 'THiS iS A POOP ALERT', 'debbie downers DNI', 'do not use this website around pacemakers', 'Smile! You\'re on <i>Old Navy</i> TV!', 'one of the greatest', 'keep this place our secret', 'Thanks SiriusXM for making this possible!', 'not the best thing to show to an employer', 'awwwards are impractical anyways', 'dm for proto', 'it takes a village and a half', 'we bought a zoo', 'free for 7 days', 'like transformers, but funnier', 'this website was created just for YOU!', 'hosted on Neocities.'];
 	document.getElementById('random-message').innerHTML = msgList[Math.floor(Math.random() * msgList.length)];
 }
 // makes the clock run

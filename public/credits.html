@@ -22,6 +22,7 @@
 				src: url("resources/VCR_OSD_MONO_1.001.ttf");
 			}
 			@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 			* {
 				margin-block-start: 0;
 				margin-block-end: 0;
@@ -50,7 +51,6 @@
 				backdrop-filter: blur(5px);
 				color: #b1cbd0;
 				padding: 5px;
-				box-shadow: 0px 0px 15px 0px #b1cbd0;
 				margin-bottom: 10px;
 				overflow: hidden;
 			}
@@ -59,7 +59,7 @@
 				background-color: #1c3438cc;
 				color: #cde7ec;
 			}
-			.three {
+			/* .three {
 				display: flex;
 				gap: 10px;
 				margin-bottom: 10px;
@@ -67,6 +67,12 @@
 			.three .box {
 				width: 33%;
 				margin-bottom: 0;
+			} */
+			.buttonhell a {background: none;}
+			.buttonhell {
+				display: flex;
+				justify-content: space-evenly;
+				flex-wrap: wrap;
 			}
 			@media only screen and (max-width: 900px) {
 				.three .box {width: 100% !important;}
@@ -118,15 +124,19 @@
 				<h2>FONTS</h2>
 			</header>
 			<div class="three">
-				<div class="box sec-bl">
+				<div class="box">
 					<h3 style="font-family: 'PT Sans', sans-serif;">PT Sans</h3>
 					<a href="https://fonts.google.com/specimen/PT+Sans/" target="_blank">Google Fonts Page</a>
 				</div>
 				<div class="box">
-					<h3>Martian Mono</h3>
+					<h3 style="font-family: 'Martian Mono', monospace;">Martian Mono</h3>
 					<a href="https://fonts.google.com/specimen/Martian+Mono" target="_blank">Google Fonts Page</a> <a href="https://github.com/evilmartians/mono" target="_blank">GitHub</a>
 				</div>
-				<div class="box sec-br">
+				<div class="box">
+					<h3 style="font-family: 'Kode Mono', monospace;">Kode Mono</h3>
+					<a href="https://fonts.google.com/specimen/Kode+Mono" target="_blank">Google Fonts Page</a>
+				</div>
+				<div class="box sec-b">
 					<h3 style="font-family: 'VCR';">VCR OSD Mono</h3>
 					<a href="https://www.dafont.com/vcr-osd-mono.font" target="_blank">Dafont Page</a>
 				</div>
@@ -139,10 +149,57 @@
 				<p>(This tool is not used for generating any pages on this site. I don't actually know why I installed it, but I will give credit anyways)</p>
 				<p><a href="https://github.com/11ty/eleventy" target="_blank">GitHub Page</a> <a href="https://github.com/11ty/eleventy/blob/main/LICENSE" target="_blank">License</a></p>
 			</div>
-			<div class="box page-bottom">
+			<div class="box sec-b">
 				<h3>@bcomnes/deploy-to-neocities</h3>
 				<p>Used for Git version control</p>
 				<p><a href="https://deploy-to-neocities.neocities.org" target="_blank">https://deploy-to-neocities.neocities.org</a> <a href="https://github.com/bcomnes/deploy-to-neocities" target="_blank">GitHub Page</a></p>
+			</div>
+			<div class="box sec-t">
+				<h2>BROUGHT TO YOU BY...</h2>
+			</div>
+			<div class="box">
+				<p><code>wiggle.monster</code> is brought to you by these followers:</p>
+			</div>
+			<div class="box buttonhell page-bottom">
+				<a href="https://afellowu.neocities.org" target="_blank"><img loading="lazy" src="interests/websites/img/button/mebi_county.gif"></a>
+				<a href="https://alicebluef0f8ff.neocities.org" target="_blank"><img src="interests/websites/img/button/aliceblue.gif" loading="lazy"></a>
+				<a href="https://buntsukim.neocities.org" target="_blank"><img src="https://buntsukim.neocities.org/button.png" loading="lazy"></a>
+				<a href="https://catbyte.site" target="_blank"><img src="interests/websites/img/button/catbyte.png" loading="lazy"></a>
+				<a href="https://cattafang.neocities.org" target="_blank"><img src="interests/websites/img/button/cattafang.png" loading="lazy"></a>
+				<a href='https://char42.neocities.org' target="_blank"><img src="interests/websites/img/button/naybor/char42.png" loading="lazy"></a>
+				<a href="https://charpine.neocities.org" target="_blank"><img src="interests/websites/img/button/artists/charpine.gif" loading="lazy"></a>
+				<a href="https://corvidae.digital" target="_blank"><img src="interests/websites/img/button/corvidae.gif" loading="lazy"></a>
+				<a href="https://cypherine.neocities.org" target="_blank"><img src="interests/websites/img/button/artists/cybutton.gif" loading="lazy"></a>
+				<a href="https://dabric.xyz" target="_blank"><img loading="lazy" src="https://dabric.xyz/butt.png" alt="dabric"></a>
+				<a href="https://daniele63.com" target="_blank"><img src="interests/websites/img/button/daniele.jpg" loading="lazy"></a>
+				<a href="https://darkendstars.neocities.org" target="_blank"><img src="https://i.ibb.co/17djkby/Untitled-Artwork-20.gif" loading="lazy"></a>
+				<a href="https://dshifter.neocities.org" target="_blank"><img src="interests/websites/img/button/dshifter.png" loading="lazy"></a>
+				<a href="https://eloipodio.neocities.org" target="_blank"><img src="interests/websites/img/button/eloipodio.jpg" loading="lazy"></a>
+				<a href='https://foggybear42.neocities.org' target='_blank'><img src='https://foggybear42.neocities.org/images/foggybear.gif' alt="foggybear42" loading="lazy"></a>
+				<a href="https://frogtheprince.neocities.org" target="_blank"><img src="https://frogtheprince.neocities.org/buttons/mybutton.jpg" alt="visit frog's castle" loading="lazy"></a>
+				<a href="https://geoside.online" target="_blank"><img src="interests/websites/img/button/geoside.gif" loading="lazy"></a>
+				<a href="https://gradientos.neocities.org" target="_blank"><img src="https://gradientos.neocities.org/bsab/badge0.gif" alt="GradientOS" loading="lazy"></a>
+				<a href="https://gildedware.neocities.org" target="_blank"><img src="https://gildedware.neocities.org/pageassets/button%202.gif" loading="lazy"></a>
+				<a href="https://indylandia.neocities.org" target="_blank"><img src="interests/websites/img/button/indylandia.gif" loading="lazy"></a>
+				<a href="https://jackofall.neocities.org" target="_blank"><img src="https://jackofall.neocities.org/jako-button.gif" loading="lazy"></a>
+				<a href="https://melancholic-entrails.neocities.org" target="_blank"><img src="https://files.catbox.moe/9gmw3j.png" width="88" height="31" loading="lazy"></a>
+				<a href="https://oddduck.neocities.org" target="_blank"><img src="interests/websites/img/button/oddduck.webp" loading="lazy"></a>
+				<a href="https://oerrorpage.neocities.org" target="_blank"><img src="https://i.imgur.com/83W6Zyv.png" loading="lazy"></a>
+				<a href="https://renyoi.neocities.org" target="_blank"><img src="https://renyoi.neocities.org/button.gif" alt="red button to renyoi's neocities page"></a>
+				<a href="https://sava28.neocities.org" target="_blank"><img src="https://sava28.neocities.org/images/sava28.gif" loading="lazy"></a>
+				<a href="https://sep.neocities.org" target="_blank"><img src="https://sep.neocities.org/images/sep.gif" alt="" loading="lazy"></a>
+				<a href="https://slaid.neocities.org" target="_blank"><img src="interests/websites/img/button/slaid.png" loading="lazy"></a>
+				<a href="http://spacepop.neocities.org" target="_blank"><img src="https://spacepop.neocities.org/Assets/SiteButton.png" loading="lazy"></a>
+				<a href="https://storeyed.neocities.org" target="_blank"><img src="interests/websites/img/button/storeyed.gif" loading="lazy"></a>
+				<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif" loading="lazy"></a>
+				<a href="https://the-canvas-garden.neocities.org" target="_blank"><img src="interests/websites/img/button/canvasgarden.png" loading="lazy"></a>
+				<a href="https://trick-916.neocities.org" target="_blank"><img src="interests/websites/img/button/trick916.gif" loading="lazy"></a>
+				<a href="https://tripixel.neocities.org" target="_blank"><img src="interests/websites/img/button/tripixel.png" loading="lazy"></a>
+				<a href="https://uandtmags.neocities.org" target="_blank"><img src="interests/websites/img/button/uandtmags.png" loading="lazy"></a>
+				<a href="https://unnamedriddle.neocities.org" target="_blank"><img src="https://unnamedriddle.neocities.org/imageassets/abutton.png" loading="lazy"></a>
+				<a href="https://wetnoodle.neocities.org" target="_blank"><img src="https://i.imgur.com/Fg6QRCd.gif" loading="lazy"></a>
+				<a href="https://wi-fi.neocities.org" target="_blank"><img src="interests/websites/img/button/needwifi.png" loading="lazy"></a>
+				<a href="https://wolfdeer.neocities.org" target="_blank"><img src="https://wolfdeer.neocities.org/button.png" alt="wolfdeerbutton" loading="lazy"></a> 
 			</div>
 		</main>
 		<script src="resources/nav/navbar.js"></script>

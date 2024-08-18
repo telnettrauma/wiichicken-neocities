@@ -1,5 +1,5 @@
 /* general styles */
-@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@700&family=Martian+Mono:wght@600&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 * {
 	box-sizing: border-box;
 	text-rendering: optimizeSpeed;
@@ -7,7 +7,7 @@
 }
 body {
 	margin: 0;
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	background-color: var(--bg-1);
 	cursor: url(/media/home/cursor.png), default;
 	background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2));
@@ -20,10 +20,12 @@ main {
 	margin: auto;
 	padding: 10px;
 	overflow: hidden;
-	margin-bottom: 10px;
+	margin-top: 10px !important;
+	margin-bottom: 40px !important;
 	position: relative;
 	backdrop-filter: blur(5px);
 	background-image: url('/media/noise.png');
+	image-rendering: pixelated;
 	clip-path: polygon(
 		var(--s-main) 0%, 
 		calc(100% - var(--s-main)) 0%, 
@@ -56,15 +58,16 @@ mask:
 	linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s-main)) no-repeat,
 	linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s-main)) 100% no-repeat;
 }
-h1, h2, h3, h4, h5, h6 {font-family: 'Martian Mono', monospace;}
+h1, h2, h3, h4, h5, h6 {font-family: 'Kode Mono', monospace;}
 a {
 	text-decoration: none;
 	color: var(--dark-secondary);
 }
+code {font-family: 'Martian Mono', monospace;}
 img {image-rendering: pixelated;}
 button {
 	cursor: pointer;
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 }
 .nomarblock {
 	margin-block-start: 0;
@@ -131,18 +134,6 @@ button {
 	position: relative;
 	color: var(--dark-tertiary);
 }
-.box a:not(:has(img))::after {
-	content: '';
-	background: linear-gradient(90deg, var(--dark-primary) 0%, var(--dark-tertiary) 100%);
-	height: 1px;
-	width: 100%;
-	background-position: bottom;
-	background-size: 100% 1px;
-	background-repeat: no-repeat;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-}
 .box a:not(:has(img)):hover::after {animation: happyHover 0.3s;}
 @keyframes happyHover {
 	0% {background-size: 100% 1px; background-position: 100% 100%;}
@@ -188,7 +179,7 @@ button {
 .footer {
 	width: 100%;
 	background-color: black;
-	font-family: 'Martian Mono', monospace;
+	font-family: 'Kode Mono', monospace;
 	font-weight: bold;
 	padding: 10px;
 	color: white;
@@ -201,7 +192,7 @@ button {
 #random-message {
 	font-size: 10px;
 	cursor: pointer;
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-weight: normal;
 	color: gray;
 }
@@ -223,101 +214,100 @@ button {
 	width: 100%;
 	z-index: 10;
 	margin: 0;
-	top: 0;
+	bottom: 0;
 	position: fixed;
 	transition-duration: 0.5s;
-	height: 35px;
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,0.8) 100%);
-	pointer-events: none;
+	height: 30px;
+	background-color: black;
 }
-#heightCheck {height: 30px;}
+.heading::after {
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 80%, var(--bg-1) 100%);
+	content: '';
+	bottom: 0;
+	top: 0;
+}
 #inHead {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
+	padding-right: 100px;
 	margin: 5px;
-}
-.headerVisible {transform: translateY(0px) !important;}
-.headerInvisible {transform: translateY(-50px);}
-.square {
-	width: 15px;
-	height: 15px;
-	margin: 2px;
-	transition-duration: 0.3s;
 }
 .topLinks, .topLinks a, #fakeLogo, .square {pointer-events: all;}
 .topLinks a {
-	font-weight: bold;
 	font-size: 15px;
-	color: white !important;
+	color: var(--dark-tertiary);
 	padding: 0 10px 0 10px;
-	transition-duration: 0.3s;
-	text-shadow: 0 0 5px black;
-	opacity: 0.7;
 	background-color: unset !important;
 }
-.topLinks a:hover {
-	opacity: 1;
-	text-shadow: 0 0 10px white;
-}
+.topLinks a:hover {color: white !important;}
 #fakeLogo {
 	display: flex;
 	align-items: center;
-	transition-duration: 0.3s;
+	transition-duration: 0.4s;
 	cursor: pointer;
 	z-index: 2;
-	margin: 0 22px 0 22px;
-	background-color: unset !important;
+	margin: -35px 20px 0 0;
+	padding: 5px;
 	pointer-events: all;
+	position: absolute;
+	right: 5px;
+	background-color: white;
+	border: 5px solid black;
+	aspect-ratio: 1;
 }
 #fakeLogo:hover {
-	margin: 0;
-	transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+	padding: 10px;
+	transform: translateY(-10px);
+	box-shadow: 0 0 100px 20px var(--bg-1);
 }
-#fakeLogo:hover #s1 {box-shadow: 0 0 100px 25px red, 42px 0 100px 25px #00a2ff;}
 #fakeLogo .square {
 	width: 15px;
 	height: 15px;
-}
-#fakeLogo p {
-	pointer-events: none;
-	font-family: 'Martian Mono', monospace;
-	margin: 0 5px 0 5px;
-	transition-duration: 0.3s;
-	opacity: 0;
-	text-shadow: 0 0 10px black;
-	filter: contrast(0.8);
+	margin: 2px;
 }
 #fakeLogo:hover .square {
-	width: 35px;
-	height: 35px;
-	margin-right: 5px;
+	transform: scale(1.5);
+	transform-origin: center;
+	margin: 1px;
 	transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+	animation: look-around 3s;
 }
-#fakeLogo:hover p {
-	font-size: 30px;
-	opacity: 1;
-	transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);;
+@keyframes look-around {
+	30% {transform-origin: initial;}
+	40% {transform-origin: left;}
+	50% {transform-origin: left;}
+	60% {transform-origin: right;}
+	75% {transform-origin: right;}
+	85% {transform-origin: initial;}
+}
+#fakeLogo:hover #s1 {margin-right: 10px;}
+#s1 {background-color: red; transition-duration: 0.3s;}
+#s2 {background-color: #00a2ff; transition-duration: 0.5s;}
+#fakeLogo:active {
+	padding: 7px;
+	box-shadow: 0 0 100px 50px var(--bg-1);
 }
 #fakeLogo:active .square {
-	transition-duration: 0.2s;
-	width: 25px;
+	margin: 1px;
+	transition-duration: 0.2;
 }
-#fakeLogo:active p {
-	font-size: 20px;
-	filter: contrast(1);
+#fakeLogo:active #s1 {transform: scale(1.7); margin-right: 15px;}
+#fakeLogo:active #s2 {transform: scale(2.1);}
+#to-start {
+	position: absolute;
+	z-index: 1000;
+	left: -500px;
+	opacity: 0;
 }
-#s1 {background-color: red;}
-#s2 {background-color: #00a2ff;}
+#to-start:focus {
+	opacity: 1;
+	left: 0;
+}
 
-#fakeLogo:active #s1 {margin-left: 12px;}
-#fakeLogo:active #s2 {margin-right: 10px !important;}
-.square {
-	width: 15px;
-	height: 15px;
-	margin: 2px;
-	transition-duration: 0.3s;
-}
 /* sidebar */
 #sideButton, #closeSide {
 	position: fixed;
@@ -352,22 +342,25 @@ button {
 	z-index: 25;
 	animation: slideLeft 0.5s;
 	flex-direction: column;
-	justify-content: space-between;
 	top: 0;
+	font-weight: bold;
 }
 #overSide a {
-	margin: 25px;
+	margin: 10px 10px 0 10px;
 	background-color: #051c3599;
 	border: 1px solid #4cdadc;
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
 	font-size: 30px;
-	font-family: 'Martian Mono', monospace;
+	font-family: 'Kode Mono', monospace;
 	color: #6ff6f9;
 	padding: 10px;
 	position: relative;
 	z-index: 51;
+	border-radius: 5px;
 }
+#overSide a:nth-child(2) {border-radius: 20px 20px 5px 5px;}
+#overSide a:last-child {border-radius: 5px 5px 20px 20px;}
 #closeSide {
 	position: unset;
 	box-shadow: 0 0 200px 50px rgb(0, 238, 255);
@@ -411,6 +404,37 @@ button {
 	.d-sec-t {--b-radius-tl: 10 !important; --b-radius-tr: 10 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
 	.d-sec-b {--b-radius-tl: 5 !important; --b-radius-tr: 5 !important; --b-radius-bl: 10 !important; --b-radius-br: 10 !important;}
 	.d-sec-full {--b-radius-tl: 10 !important; --b-radius-tr: 10 !important; --b-radius-bl: 10 !important; --b-radius-br: 10 !important;}
+	.box a:not(:has(img))::after {
+		content: '';
+		background: linear-gradient(90deg, var(--dark-primary) 0%, var(--dark-tertiary) 100%);
+		height: 1px;
+		width: 100%;
+		background-position: bottom;
+		background-size: 100% 1px;
+		background-repeat: no-repeat;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	@keyframes wink {
+		0% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		10% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		11% {height: 5px; margin-top: 5px; margin-bottom: 5px;}
+		12% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		48% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		50% {height: 5px; margin-top: 5px; margin-bottom: 5px;}
+		52% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		100% {height: 15px; margin-top: 0; margin-bottom: 0;}
+	}
+	@keyframes blink {
+		0% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		10% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		11% {height: 5px; margin-top: 5px; margin-bottom: 5px;}
+		12% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		100% {height: 15px; margin-top: 0; margin-bottom: 0;}
+	}
+	#fakeLogo:not(:hover) #s1 {animation: wink 15s infinite;}
+	#fakeLogo:not(:hover) #s2 {animation: blink 15s infinite;}
 }
 /* styling for mobile */
 @media only screen and (max-width: 650px) {
@@ -442,11 +466,32 @@ button {
 	);
 	}
 	.page-top::before, .page-bottom::before, .m-page-top::before {content: '';}
+	a {text-decoration: underline;}
+	#overSide a {text-decoration: none;}
 }
 @media only screen and (max-height: 750px) {
-	#overSide a {margin: 10px 25px 10px 25px !important;}
 	#overSide {justify-content: flex-start !important;}
 }
 @media only screen and (min-height: 750px) {
 	#bottomNavLink {margin-bottom: 150px;}
+}
+/* prefers reduced transparency */
+@media (prefers-reduced-transparency: reduce) {
+	main {
+		backdrop-filter: unset !important;
+		background-color: black;
+	}
+}
+/* increased contrast */
+@media (prefers-contrast: more) {
+	.box {
+		color: white !important;
+	}
+	.topLinks a {
+		color: white;
+	}
+	.topLinks a:hover {
+		transition-duration: 0;
+		font-weight: bold;
+	}
 }
