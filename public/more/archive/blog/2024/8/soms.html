@@ -88,11 +88,28 @@
 			margin-block-start: 0;
 			margin-block-end: 0;
 		}
-		p, header {
+		p, header, blockquote {
 			padding: 5px;
 			color: var(--dark-on-primary-container);
 			background-color: var(--light-on-primary-container);
 			margin-bottom: 10px;
+		}
+		blockquote {
+			--dark-on-primary-container: #e7bdb6;
+			--light-on-primary-container: #2c1512cc;
+			--border: #ff2200;
+			font-size: 18px;
+			padding-left: 20px;
+		}
+		blockquote::after {
+			background-color: var(--border);
+			position: absolute;
+			height: 100%;
+			width: 1px;
+			content: '';
+			left: 0;
+			top: 0;
+			margin: 10px;
 		}
 		iframe, img {width: 100%;}
 		img {--border: yellow;}
@@ -102,7 +119,7 @@
 			height: 400px;
 			background-color: white;
 		}
-		.box, .boxy, .boxyless, img, p, iframe {
+		.box, .boxy, .boxyless, img, p, iframe, blockquote {
 			--p: 1;
 			--pixel: calc(var(--p) * 1px); /* don't change this */
 			--b-radius-tl: 5; /* top-left */
@@ -121,7 +138,7 @@
 				var(--s-bl) 100%, 0% calc(100% - var(--s-bl)), 0% var(--s-tl)
 			);
 		}
-		.box::before, .footer::before, .boxy::before, img::after, p::before {
+		.box::before, .footer::before, .boxy::before, img::after, p::before, blockquote::before {
 			content: "";
 			position: absolute;
 			inset: 0;
@@ -218,7 +235,9 @@
 		<p>I’m happy my website no longer has the generic, flat, ugly imitation of Material 3. There is a certain charm to custom made websites that you cannot get with a Twitter microblog or even a Tumblr blog (maybe if you try hard enough).</p>
 		<iframe src="\more\archive\websites\homepages\2023april\"></iframe>
 		<p>Inspired by <a href="https://neonaut.neocities.org/microblog/" target="_blank">Neonaut</a>, one of the main benefits of having a manual blog is that I can make every page have its own unique theme. However, navigation within the blog sucks. There is simply a list of articles, and each opens a page that is just an article. I would much rather prefer how things were before I publicly wrote articles (back when I was writing in an Obsidian vault on my hard drive), Wiki style. oerrorpage does a great job at this. There are clearly different “posts” about different things, however they are all just kinda thrown wherever.<br>The blog is one of the most unique pages on my website, as its the only one where I actually make new, original creations. Without it, my website is just a glorified strawpage, or even just a Notion website with extra theming. A Notion website would probably have a better user experience.<br>However, there is no way I could ever make a Notion website feel like my own. The cool thing about my website is that it has given me a platform to showcase my creativity and work, and unlike on social media, a large group (outside of friends) actually view it. I got bored and looked at how many times the images I attached to my blog posts were viewed, and according to imgur I average about 25 views an image. Knowing that 25 people consciously tune into my ramblings is awesome.</p>
-		<p>Maybe its because Netizens on Neocities are nice, but a lot of people seem to really like my website. One person said my website is<br><blockquote>one of the most creative websites i've ever seen, on neocities, and the entire internet as a whole. GET HIM INTERNET FAME NOW!!!!! STOP BEING ON MY STUPID WEBSITE!!!!!!!! right now. !!!</blockquote><br>First off, never wish internet fame on someone, that is one of the worst things someone can experience. I promise my website is not one of the most creative on the internet, especially when there’s a 3D bagel where the code is also in the shape of a bagel. That’s not just the personal bias speaking, either. We tend to hate things we make more than things we didn’t. I put my blood, sweat, and tears into this now playing screen just for Chinese, Japanese, and Korean characters to break it?</p>
+		<p>Maybe its because Netizens on Neocities are nice, but a lot of people seem to really like my website. One person said my website is</p>
+		<blockquote>one of the most creative websites i've ever seen, on neocities, and the entire internet as a whole. GET HIM INTERNET FAME NOW!!!!! STOP BEING ON MY STUPID WEBSITE!!!!!!!! right now. !!!</blockquote>
+		<p>First off, never wish internet fame on someone, that is one of the worst things someone can experience. I promise my website is not one of the most creative on the internet, especially when there's a 3D bagel where the code is also in the shape of a bagel. That's not just the personal bias speaking, either. We tend to hate things we make more than things we didn't. I put my blood, sweat, and tears into this now playing screen just for Chinese, Japanese, and Korean characters to break it?</p>
 	</main>
 </body>
 </html>
