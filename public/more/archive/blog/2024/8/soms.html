@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>TiTLE - DATE - WiiCHiCKEN</title>
+	<title>State of my Site - August 21, 2024 - WiiCHiCKEN</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<meta charset="UTF-8">
@@ -24,8 +24,9 @@
 			margin: 0;
 			font-family: 'Ubuntu', sans-serif;
 			background-color: var(--bg-1);
-			cursor: url(/media/home/cursor.png), default;
+			cursor: url(soms/cursor.png), default;
 			background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2));
+			font-size: 17px;
 		}
 		main {
 			--p: 1;
@@ -112,12 +113,24 @@
 			margin: 10px;
 		}
 		iframe, img {width: 100%;}
-		img {--border: yellow;}
+		img, .img {--border: yellow;}
 		iframe {
 			border: none;
 			--border: white;
 			height: 400px;
 			background-color: white;
+		}
+		.img {
+			background-color: #251a00;
+			min-height: 200px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			mix-blend-mode: lighten;
+		}
+		.img img {
+			width: unset;
+			height: unset;
 		}
 		.box, .boxy, .boxyless, img, p, iframe, blockquote {
 			--p: 1;
@@ -170,11 +183,23 @@
 			--b-radius-br: 0;
 			--b-radius-bl: 0;
 		}
-		.box a:not(:has(img)) {
+		a:not(:has(img))::after {
+			content: '';
+			background: linear-gradient(90deg, var(--dark-primary) 0%, var(--dark-tertiary) 100%);
+			height: 1px;
+			width: 100%;
+			background-position: bottom;
+			background-size: 100% 1px;
+			background-repeat: no-repeat;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+		a:not(:has(img)) {
 			position: relative;
 			color: var(--dark-tertiary);
 		}
-		.box a:not(:has(img)):hover::after {animation: happyHover 0.3s;}
+		a:not(:has(img)):hover::after {animation: happyHover 0.3s;}
 		@keyframes happyHover {
 			0% {background-size: 100% 1px; background-position: 100% 100%;}
 			50% {background-size: 0% 1px; background-position: 100% 100%;}
@@ -188,7 +213,7 @@
 			top: 0;
 			z-index: -1;
 			display: block;
-			background-image: url(/starry.gif);
+			background-image: url(soms/starry.gif);
 			width: 100%;
 			height: 120%;
 			mix-blend-mode: luminosity;
@@ -222,6 +247,7 @@
 		<header class="box page-top">
 			<h1>State of my Site - August 2024</h1>
 		</header>
+		<p class="img" style="min-height: unset;">this article is basically just a long ramble about things i do and don't like about my website. so yeah. also, any websites mentioned here as examples shouldn't be viewed negatively. after all, they are good enough i am linking to them.</p>
 		<p>Welcome to the first state of the my site article. As I approach working on this website for an entire year, I would like to reflect on the current condition of it, what I would like to change, and where to go from here.<br>And with that said, I hate the current state of my website.</p>
 		<img src="https://i.imgur.com/MXowblV.png" loading="lazy">
 		<p>It feels like all I do is work on the layout. And because of that, it is becoming increasingly difficult to actually maintain the website in the long term. And the worst part about that is I rarely ever actually add anything to the website itself.<br>I tend to do this for everything. I had one <a href="https://www.youtube.com/watch?v=WMurGogSwWE" target="_blank">Minecraft world</a> that I played on. I have one person that I talk online with (hi sam). It is much easier for me to continue working on something that I already finished than start something new.<br>Because of that, the contents of each page just becomes content I work with in order to make a cool looking design. Having a website that is entirely focused on design feels corporate, even if the design itself is wacky. This feels like a portfolio website, not a personal website. The only thing setting it apart from a portfolio and personal website is the lack of a serious undertone. And because of the lack of content, for the lack of a better word (i said that twice :D), this website makes me feel like somebody with no interests. It makes it look like my only interest is designing. I do like designing, I'm actually taking design in college (i can see into the future and i already know im just going to end up in a kitchen instead).<br>I have an art page with barely no art on it. The only thing on my interests pages are some songs and albums I liked in November, and a directory of websites I want to remember, as I don't use bookmarks like you're supposed to. The only page where I show interests is the about me page. And even there, I just give a bulleted list like I'm taking notes in college. There is never a reason given as to why I like something, I don't say anything about it, I just tell you it's something I enjoy and then move on.</p>
@@ -232,12 +258,42 @@
 		<img src="https://i.imgur.com/MomB7U9.png" loading="lazy">
 		<p>One of the reasons that I assume people look at websites on Neocities is because there is actually a theme to them, usually. Even pre iOS 7, corporate web design has always been kinda flat and boring. I actually blame Facebook entirely for this.</p>
 		<img src="https://i.imgur.com/JL9MQgD.png" loading="lazy">
-		<p>I’m happy my website no longer has the generic, flat, ugly imitation of Material 3. There is a certain charm to custom made websites that you cannot get with a Twitter microblog or even a Tumblr blog (maybe if you try hard enough).</p>
+		<p>I'm happy my website no longer has the generic, flat, ugly imitation of Material 3. There is a certain charm to custom made websites that you cannot get with a Twitter microblog or even a Tumblr blog (maybe if you try hard enough).</p>
 		<iframe src="\more\archive\websites\homepages\2023april\"></iframe>
-		<p>Inspired by <a href="https://neonaut.neocities.org/microblog/" target="_blank">Neonaut</a>, one of the main benefits of having a manual blog is that I can make every page have its own unique theme. However, navigation within the blog sucks. There is simply a list of articles, and each opens a page that is just an article. I would much rather prefer how things were before I publicly wrote articles (back when I was writing in an Obsidian vault on my hard drive), Wiki style. oerrorpage does a great job at this. There are clearly different “posts” about different things, however they are all just kinda thrown wherever.<br>The blog is one of the most unique pages on my website, as its the only one where I actually make new, original creations. Without it, my website is just a glorified strawpage, or even just a Notion website with extra theming. A Notion website would probably have a better user experience.<br>However, there is no way I could ever make a Notion website feel like my own. The cool thing about my website is that it has given me a platform to showcase my creativity and work, and unlike on social media, a large group (outside of friends) actually view it. I got bored and looked at how many times the images I attached to my blog posts were viewed, and according to imgur I average about 25 views an image. Knowing that 25 people consciously tune into my ramblings is awesome.</p>
+		<p>Inspired by <a href="https://neonaut.neocities.org/microblog/" target="_blank">Neonaut</a>, one of the main benefits of having a manual blog is that I can make every page have its own unique theme. However, navigation within the blog sucks. There is simply a list of articles, and each opens a page that is just an article. I would much rather prefer how things were before I publicly wrote articles (back when I was writing in an Obsidian vault on my hard drive), Wiki style. <a href="https://oerrorpage.neocities.org" target="_blank">oerrorpage</a> does a great job at this. There are clearly different “posts” about different things, however they are all just kinda thrown wherever.<br>The blog is one of the most unique pages on my website, as its the only one where I actually make new, original creations. Without it, my website is just a glorified strawpage, or even just a Notion website with extra theming. A Notion website would probably have a better user experience.<br>However, there is no way I could ever make a Notion website feel like my own. The cool thing about my website is that it has given me a platform to showcase my creativity and work, and unlike on social media, a large group (outside of friends) actually view it. I got bored and looked at how many times the images I attached to my blog posts were viewed, and according to imgur I average about 25 views an image. Knowing that 25 people consciously tune into my ramblings is awesome.</p>
 		<p>Maybe its because Netizens on Neocities are nice, but a lot of people seem to really like my website. One person said my website is</p>
 		<blockquote>one of the most creative websites i've ever seen, on neocities, and the entire internet as a whole. GET HIM INTERNET FAME NOW!!!!! STOP BEING ON MY STUPID WEBSITE!!!!!!!! right now. !!!</blockquote>
-		<p>First off, never wish internet fame on someone, that is one of the worst things someone can experience. I promise my website is not one of the most creative on the internet, especially when there's a 3D bagel where the code is also in the shape of a bagel. That's not just the personal bias speaking, either. We tend to hate things we make more than things we didn't. I put my blood, sweat, and tears into this now playing screen just for Chinese, Japanese, and Korean characters to break it?</p>
+		<p>First off, never wish internet fame on someone, that is one of the worst things someone can experience. I promise my website is not one of the most creative on the internet, especially when there's a 3D bagel where the code is also in the shape of a bagel. That's not just the personal bias speaking, either. We tend to hate things we make more than things we didn't. I put my blood, sweat, and tears into this now playing screen just for Chinese, Japanese, and Korean characters to break it?<br>The thing about making your own layout, own code, own workflow is that when anything goes wrong, the only person you can really blame is yourself. Whenever adding something or changing something, you have to think about how much stuff will break in the process. How much work will I have to do in order to make this change?</p>
+		<p>Having almost every page rely on a single CSS file requires me to think about this for every small style change I make. On one hand, having everything using one stylesheet is nice because you don't have to rewrite styling for everything. On the other hand, my layout has gotten so complex that sometimes updating this stylesheet requires me to update almost every page that relies on it. One of the goals of my website was to try and make old pages retain their older look, however having every page update the style ruins this vision. However, having the stylesheet written out in every document is a huge waste of resources, and makes the site harder to maintain.</p>
+		<div class="img box"><img src="https://i.imgur.com/z9qXzTC.png" loading="lazy"></div>
+		<p>It's hard to make older pages keep their old style when you don't have many pages in the first place, so you just continue to update existing pages. The only pages that continue to retain their original, old styles are the art pages (which i REALLY need to update, as they pose an accessibility risk in their current state), archive pages (obviously), and the really old pre-2024 pages. One thing I forget is that people who are new to my website actually look through everything, not just the new stuff. There is no reason that anybody needs to be looking at my "epic gamer quiz", which I knew was unfunny when I made it. Luckily, I can just forget about these old pages, as they don't require any maintenance whatsoever. I likely wouldn't be able to say the same thing if I used a framework.</p>
+		<div class="img box"><img src="https://i.imgur.com/uhxNoXL.png" loading="lazy"></div>
+		<p>In order to make my website as easy as possible to continue to maintain, I am avoiding using technologies such as frameworks in my site. A lot of the inspiration for my site, as well as my method of learning how to do things, is from looking at how people did things in their websites. Using frameworks makes it harder for people to check out how I made my site. Not only that, but a framework is just one more thing that I have to learn. You may say "But it will help you prepare for getting a job", to which I say, does everything have to be about making money?</p>
+		<p>The only fancy technology that my site uses is Git. Before Git, I would edit in the Neocities editor. After that, I edited files locally, and then copied changed files when I was ready to make them live. This was really annoying, as it would require me to remember what changes I made, and then manually make them again. So eventually, after a lot of struggle, I got Git working with my site, and I don't think I could ever go back. Being able to work on my site everywhere, go back to almost any version, log changes, and store changes without making them public, it's something I don't know how I lived without.<br>Because of Git, one change I have made is updating the live version of the site every Sunday, instead of automatically pushing a new version every time I make a new commit. When the site would update with every commit, it would force me to complete a project in a single commit. However, delaying everything until Sunday allows me to work on larger projects, and make more commits that I can revert back to if something goes wrong.</p>
+		<img src="https://i.imgur.com/QVwaVoj.png" loading="lazy">
+		<p>My main issue with Git, and this applies to GitHub specifically, is the commit graph on my profile. I love variety. Because of this, I try not to commit too much. I'm afraid if I commit too much in a day, it will make the number of commits that will require a square to change color to go up, which adds less variety. I rarely ever reach this limit anyways. No matter how much I try ignoring it, it still appears in my mind. And it's a really stupid thing to have holding me back.</p>
+		<img src="https://i.imgur.com/4VlWB7x.png" loading="lazy">
+		<p>Another issue has been performance, especially on mobile devices. Usually Neocities websites aren't exactly optimized for mobile, however, I don't want a device to be a gatekeeper. Yes, the desktop experience will always be the best, but if someone cannot afford a computer, why should I punish them with an almost unusable experience?<br>Even on desktop, the effects were starting to get a little heavy, especially on the index page. Recently, I removed some of them, such as the color changing effect and the parallax effect. The color changing effect used a lot of resources for something that just looked clunky in the end, and the parallax effect always jittered.</p>
+		<div class="img box"><img src="https://i.imgur.com/0g7p0FJ.png" loading="lazy"></div>
+		<p>When I switched from square corners to sharp, futuristic sci-fi corners, I didn't know the performance issues that would come with it, but I didn't want to risk it. After all, the CSS used to achieve the effect did look quite complex. So, I replaced them with regular rounded corners on mobile.</p>
+		<img src="https://i.imgur.com/Y1cbVD4.png" loading="lazy">
+		<p>The mobile experience could still use some work, but I'm happy with how well it scales. The widgets on the index page are a mess on mobile, and some images mess things up, but I'm happy otherwise. The only thing that I feel like I would change is the navigation on mobile.<br>The mobile navigation system has barely changed once since I originally created it. It's buggy, unresponsive, and way too big. You can scroll the page while it's open. There is no feedback for it, other than the menu opening. Not to mention, the code for it is overly complex.</p>
+		<img src="https://i.imgur.com/828VCt8.png" loading="lazy">
+		<p>In comparison, the desktop navigation bar is much better. The original purpose of the desktop navigation bar was to serve as a scroll to top button. All the top level navigation was on the index page, and every page would have a link leading back to the index. The home button still has the scroll to top function when on the index page.</p>
+		<img src="https://i.imgur.com/Ks013zK.gif" loading="lazy">
+		<p>I quickly added actual links to this nav bar, and made it appear on every page. I experimented with some effects, such as a background blur, only to remove them. Recently, I moved the nav bar to the bottom right corner. I am already somewhat starting to regret this. The original reason I did this was because I wanted the navbar to be seen after you finished looking at a page, not when you first started looking at it. But for some reason, things at the bottom of the page are much more likely to get cut off than if they're at the top. The reason everything is on the right of the screen is because most browsers put the link preview in the bottom left corner, so that would obstruct the navigation bar. The biggest cool thing about the new navbar is the animated face. However, I don't actually blink in real life, like ever, so I don't know why I included that.<br>Another thing I recently changed was the shape of the boxes. I went for a cool futuristic look. This was a pain to make, but I think (for the most part) it paid off. On Chromium however, the rendering is really inconsistent. This just seems to be a bug with Chromium. Although the new shapes look really cool, they sacrifice something really important: box-shadow.</p>
+		<img src="https://i.imgur.com/OLXYOhJ.png" loading="lazy">
+		<p>The longer that I have been working on my website, the less prominent that glows have become. Which is something that I am ashamed of, because I think they look beautiful, especially when mixed with blur. The original “new” version of my site had huge glows on the sides of pages, and it looked so good. When I switched to the bento layout, I had to limit glows to just the titles, as they looked wrong elsewhere.<br>When making the new shapes for the boxes, I had to use masking, otherwise the backgrounds would clip over the borders. Because of this, I cannot (or at least cannot as easily) make glows. The shapes of buttons are also impacted.</p>
+		<img src="https://i.imgur.com/lnDJzA4.png" loading="lazy">
+		<p>I use a solid colored drop shadow for buttons, and make it so they can be “pressed” in. Buttons are nowhere near standardized in their looks, and this threatens to make them even more inconsistent. Another thing is that with some of the buttons, if you hover over them in just the right places, they stutter. Awesome!</p>
+		<img src="https://i.imgur.com/huWInrg.gif" loading="lazy">
+		<p>Finally, although I love the current starry background, I feel like I eventually need to replace it. I have been trying to find a replacement, but none come close to being as nice as the starry background I use. I also would like to use different backgrounds for pages. The website directory used to have a map of the world as the background. It doesn't anymore. I've also been masking a gradient based on the page colors over the stars in the background, to add more variety. One thing you won't be able to unsee is that one of the stars doesn't seam together correctly.</p>
+		<img src="https://i.imgur.com/CF8c3Y0.png" loading="lazy">
+		<p>So… now it's clear that I have a lot of issues with my website. What am I going to do about it?</p>
+		<p>Probably nothing.<br>Yet.</p>
+		<p>I want to start giving each page a unique design. For example, the lists page. I don't want pages to rely on the same styling. This will also allow for more creativity. Next, I would like to make pages more simple, while still having charm. Maybe work on the page content, and then focus on design.<br>I don't know. It's hard to plan for something you haven't done yet. And no matter what I do, I'm only going to receive positive feedback.</p>
+		<p>im sorry</p>
+		<div class="img box page-bottom"><img src="https://i.imgur.com/Fu1XgP3.png" loading="lazy"></div>
 	</main>
 </body>
 </html>
