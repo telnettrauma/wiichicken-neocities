@@ -241,8 +241,8 @@ button {
 .topLinks a {
 	display: flex;
 	font-size: 15px;
-	color: var(--dark-tertiary);
-	padding: 0 10px 0 10px;
+	color: white;
+	padding: 0 7px 0 7px;
 	background-color: unset !important;
 }
 .topLinks a:hover {color: white !important;}
