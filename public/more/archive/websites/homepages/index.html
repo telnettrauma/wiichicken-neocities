@@ -3,65 +3,48 @@
 	<head>
 		<title>WiiCHiCKEN HOMEPAGE ARCHiVE</title>
 		<link rel="icon" type="image/x-icon" href="/favicon.ico">
-		<link href="/style.css" rel="stylesheet">
+		<link href="/more/archive/archive.css" rel="stylesheet">
+		<meta charset="UTF-8">
+		<style>
+			main {
+				max-width: unset;
+				gap: 5px;
+			}
+			article {width: 100%;}
+		</style>
 	</head>
 	<body>
-		<style>
-			* {
-				--dark-primary: #a1d39a;
-				--dark-tertiary: #a0cfd4;
-				--dark-on-tertiary: #00363b;
-				--bg-1: #8fd88a;
-				--bg-2: #a0cfd4;
-				--border: #8fd88a;
-			}
-			main {
-				margin: 0 10px 0 10px;
-				max-width: unset;
-			}
-			button {
-				background-color: #055315;
-				color: #aaf5a4;
-				border: 1px solid #aaf5a4;
-				padding: 3px;
-				box-shadow: 2px 2px 0 0;
-			}
-			button:hover {
-				box-shadow: 1px 1px 0 0;
-				transform: translate(1px, 1px);
-			}
-			button:active {
-				box-shadow: none;
-				transform: translate(2px, 2px);
-			}
-			.box {
-				background-color: #002204cc;
-				color: #aaf5a4;
-			}
-		</style>
-		<div id="heightCheck"></div>
-		<nav>
-			<div class="heading" id="poopBlock"></div>
-			<div id="sideButton" onclick="openSidey()"></div>
-			<div id="overSide"></div>
-		</nav>
-		<div id="chewTooth"></div>
 		<main>
-			<div class="box page-top">
-				<h1>HOMEPAGE ARCHiVE</h1>
+			<nav>
+				<h3>Crumb</h3>
+				<ul>
+					<li><a href="/more/archive/websites/homepages/">Homepages</a></li>
+					<li><a href="/more/archive/websites/">Websites</a></li>
+					<li><a href="/more/archive/">Archive</a></li>
+				</ul>
+				<h3>Website</h3>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/aboutme.html">About Me</a></li>
+					<li><a href="/creative/">Art</a></li>
+					<li><a href="/more/archive/blog/">Blog</a></li>
+					<li><a href="/interests/">Interests</a></li>
+					<li><a href="/more/">More</a></li>
+					<li><a href="/guestbook.html">Guestbook</a></li>
+				</ul>
+			</nav>
+			<article>
+				<h1>Homepage Archive</h1>
 				<p>This is an archive of what my homepage looked like over the years. Some things, such as links, may not work properly.</p>
-			</div>
-			<div class="box" id="buttons">
-				<button onclick="document.getElementById('appleframe').src = '/more/archive/websites/homepages/2021april/index.html'">April 2021</button>
-				<button onclick="document.getElementById('appleframe').src = '/more/archive/websites/homepages/2023april/index.html'">April 2023</button>
-				<button onclick="document.getElementById('appleframe').src = '/more/archive/websites/homepages/2023dec/index.html'">December 2023</button>
-			</div>
-			<iframe src="" id="appleframe" width="100%" height="600px" style="border: 1px solid #424940; background-color: white; margin-bottom: 10px;"></iframe>
-			<div class="box page-bottom">
-				<h2>CREDiTS</h2>
+				<ul>
+					<li><a href="2021april/index.html" target="page">April 2021</a></li>
+					<li><a href="2023april/index.html" target="page">April 2023</a></li>
+					<li><a href="2023dec/index.html" target="page">December 2023</a></li>
+				</ul>
+				<iframe src="" id="appleframe" width="100%" height="700px" style="background-color: white; border: none;" name="page"></iframe>
+				<h2>Credits</h2>
 				<p>Thanks <a href="https://sep.neocities.org" target="_blank">septic</a> for the idea!<br>Archives are from the <a href="https://web.archive.org" target="_blank">Internet Archive</a>, however I'm working on hosting everything here so I'm not just hotlinking to them.</p>
-			</div>
+			</article>
 		</main>
-		<script src="/resources/nav/navbar.js"></script>
 	</body>
 </html>

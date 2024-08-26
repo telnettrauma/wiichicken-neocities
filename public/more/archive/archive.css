@@ -1,0 +1,34 @@
+body {
+	background-color: #f5fafb;
+	color: #171d1e;
+}
+main {
+	display: flex;
+	max-width: 600px;
+	margin: auto;
+	gap: 20px;
+}
+nav {
+	max-width: 150px;
+	border-right: 1px dotted #6f797a;
+	padding-right: 5px;
+}
+nav h2, nav h3 {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+nav ul {
+	padding-inline-start: 10px;
+	margin-block-start: 10px;
+}
+nav ul li {display: block;}
+a {color: #00a8bb;}
+a:visited {color: #334a85;}
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #0e1415;
+		color: #dee3e5;
+	}
+	a {color: #9eeffd;}
+	a:visited {color: #bac6ea;}
+}
