@@ -245,7 +245,6 @@ button {
 	padding: 0 7px 0 7px;
 	background-color: unset !important;
 }
-.topLinks a:hover {color: white !important;}
 #fakeLogo {
 	display: flex;
 	align-items: center;
@@ -357,7 +356,11 @@ button {
 	}
 	#fakeLogo:not(:hover) #s1 {animation: wink 15s infinite;}
 	#fakeLogo:not(:hover) #s2 {animation: blink 15s infinite;}
-	.topLinks a {align-items: center;}
+	.topLinks a {
+		align-items: center;
+		opacity: 0.7;
+	}
+	.topLinks a:hover {opacity: 1;}
 	.topLinks a img {
 		height: 12px;
 		margin-right: 3px;
