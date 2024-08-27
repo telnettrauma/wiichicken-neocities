@@ -325,6 +325,7 @@ button {
 	.d-sec-t {--b-radius-tl: 10 !important; --b-radius-tr: 10 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
 	.d-sec-b {--b-radius-tl: 5 !important; --b-radius-tr: 5 !important; --b-radius-bl: 10 !important; --b-radius-br: 10 !important;}
 	.d-sec-full {--b-radius-tl: 10 !important; --b-radius-tr: 10 !important; --b-radius-bl: 10 !important; --b-radius-br: 10 !important;}
+	.box a:not(:has(img)) {position: relative;}
 	.box a:not(:has(img))::after {
 		content: '';
 		background: linear-gradient(90deg, var(--dark-primary) 0%, var(--dark-tertiary) 100%);
@@ -401,6 +402,8 @@ button {
 		-webkit-backdrop-filter: unset;
 		background-color: black;
 		padding-bottom: 35px;
+		margin: 0;
+		padding-bottom: 10px;
 	}
 	main::before {
 		background: unset;
@@ -436,9 +439,8 @@ button {
 		width: 36px;
 		z-index: 50 !important;
 	}
-	.heading::after {
-		background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-1) 100%);
-	}
+	.heading::after {background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-1) 100%);}
+	.footer p {text-align: left;}
 }
 /* prefers reduced transparency */
 @media (prefers-reduced-transparency: reduce) {

@@ -20,6 +20,7 @@
 <body>
 <style>
 	:root {
+		--dark-primary: #93000a;
 		--dark-tertiary: #dec48c;
 		--dark-on-tertiary: #382a49;
 		--bg-1: red;
@@ -30,6 +31,7 @@
 	aside {
 		width: 300px;
 		padding: 0;
+		gap: 10px;
 	}
 	iframe {border: none;}
 	#leftSidebar, #rightSidebar {transition-duration: 0.5s;}
@@ -48,7 +50,6 @@
 		order: 2;
 		flex: 1;
 		min-width: 670px;
-		margin: 10px;
 		margin-top: 0;
 	}
 	.row {
@@ -64,15 +65,6 @@
 		overflow: hidden;
 	}
 	.lefty {margin-left: 10px;}
-	.box a {position: relative;}
-	.box a::after {background: linear-gradient(90deg, #dec48c 0%, #93000a 100%) !important;}
-	.box a:hover::after {animation: happyHover 0.3s !important;}
-	@keyframes happyHover {
-		0% {background-size: 100% 1px; background-position: 100% 100%;}
-		50% {background-size: 0% 1px; background-position: 100% 100%;}
-		51% {background-position: 0% 100%;}
-		100% {background-size: 100% 1px; background-position: 0% 100%;}
-	}
 	.noBg::after {display: none;}
 	.compat-error {
 		background-color: #2a1800;
@@ -596,11 +588,13 @@
 	::-webkit-scrollbar-thumb {background: linear-gradient(45deg, blue 0%, red 100%);}
 	.mobileVisible {display: none;}
 	/* i hate my life and i wanan die, i aint got no iphone */
-	/* @media only screen and (min-width: 900px) {} */
+	@media only screen and (min-width: 900px) {
+		main {margin: 10px;}
+	}
 	/* wow iphone */
 	@media only screen and (max-width: 900px) {
 		#flex, aside {flex-wrap: wrap;}
-		aside, main, .main {width: 100%;}
+		aside, main, .main, #scrobbleWidget {width: 100%;}
 		aside {
 			display: flex;
 			justify-content: center;
@@ -615,14 +609,12 @@
 		#leftSidebar {order: 2;}
 		#rightSidebar {
 			order: 3;
-			flex-wrap: wrap;
+			margin-bottom: 70px;
 		}
 		#rightSidebar .sidebox {margin: 0 0 10px 0;}
 		#inStep {margin-left: 10px;}
 		#glowBob {animation: none !important;}
 		.mumbo {display: inline-block;}
-		#scrobbleWidget {width: 100%;}
-		#piclog {order: 5;}
 		.head {
 			background-image: none;
 			background: linear-gradient(45deg, rgb(70, 0, 0) 0%, rgb(0, 14, 70)100%);
@@ -997,11 +989,7 @@
 				</div>
 			</div>
 			<div class="footer page-bottom">
-				<div style="display: flex; justify-content: center;">
-					<div class="square" style="background-color: red;"></div>
-					<p class="nomarblock" style="text-align: center;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
-					<div class="square" style="background-color: #00a2ff;"></div>
-				</div>
+				<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
 				<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
 				<div id="cornerInBox">
 					<a class="noBg" href="credits.html">credits</a>
