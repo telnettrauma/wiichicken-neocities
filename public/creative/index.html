@@ -117,13 +117,6 @@
 			#linksys a button:hover {box-shadow: 1px 1px 0 0 var(--fg);}
 			#linksys a button:active {box-shadow: none;}
 			#flickerbutt {cursor: pointer;}
-			#flickerbutt:active {animation: flicker-time 1s infinite;}
-			@keyframes flicker-time {
-				0% {color: #d9e2ff;}
-				30% {color: white;}
-				35% {color: #d9e2ff;}
-				100% {color: #d9e2ff;}
-			}
 			@media only screen and (max-width: 900px) {
 				button {
 					width: 100%;
@@ -216,6 +209,22 @@
 			}
 			setRandomMessage();
 			dynamicButtons();
+			const daButt = document.getElementById('flickerbutt');
+			let timer;
+			let isHovering = false;
+			daButt.addEventListener('mouseenter', () => {
+				if (!isHovering) {
+					isHovering = true;
+					timer = setTimeout(() => {
+						isHovering = false;
+						window.alert('please get your cursor off the butt');
+					}, 5000);
+				}
+			});
+			daButt.addEventListener('mouseleave', () => {
+				clearTimeout(timer);
+				isHovering = false;
+			});
 		</script>
 		<script src="/resources/nav/navbar.js"></script>
 	</body>
