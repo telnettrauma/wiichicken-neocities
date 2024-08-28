@@ -10,7 +10,7 @@
 	<meta name="theme-color" content="#00ffb1">
 	<noscript>
 		<style>
-			#noscript-error, #infamous, #whatsheader .panel {display: block !important;}
+			#noscript-error, #infamous {display: block !important;}
 			.noscript-hidden, #signguest, #lonelyNav {display: none !important;}
 			#infamous .box {margin-bottom: 10px !important;}
 			#navig {width: 100% !important;}
@@ -59,7 +59,7 @@
 	.box {
 		margin-bottom: 10px;
 		--border: red;
-		background-color: rgba(65, 0, 2, 0.7);
+		background-color: #410002b3;
 		color: #ffdad6;
 		padding: 10px;
 		overflow: hidden;
@@ -95,7 +95,7 @@
 		display: flex;
 	}
 	.sidehead p {
-		background: linear-gradient(45deg, rgba(147,0,6,1) 0%, rgba(116,59,0,1) 100%);
+		background: linear-gradient(45deg, #930006 0%, #743b00 100%);
 		margin-block-start: 0;
 		margin-block-end: 0;
 		padding-left: 3px;
@@ -262,7 +262,7 @@
 		transition-duration: 0.5s;
 		object-fit: cover;
 	}
-	.nomarblock {
+	.nomarblock, #signguest p {
 		margin-block-start: 0;
 		margin-block-end: 0;
 	}
@@ -302,8 +302,6 @@
 		animation: dcAnim 20s infinite;
 	}
 	#signguest p {
-		margin-block-end: 0;
-		margin-block-start: 0;
 		font-family: 'Kode Mono', monospace;
 		font-size: 20px;
 		text-align: center;
@@ -375,21 +373,6 @@
 		background-color: #274b5daa;
 		color: #c3e8fe;
 	}
-	#whatsheader:hover {
-		background-color: #175b7aaa;
-		color: #c3e8fe;
-	}
-	#emojiFart {
-		display: none;
-		position: relative;
-	}
-	.hasDrop:hover #emojiFart {
-		display: block !important;
-	}
-	.panel {
-		display: none;
-		overflow: hidden;
-	}
 	#scrobbleWidget {
 		width: 200px;
 		height: 70px;
@@ -403,11 +386,6 @@
 		--border: #00ffa1;
 		/* box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50);
 		animation: glowy 10s infinite; */
-	}
-	#babyHello {
-		width: 100%;
-		height: 98px;
-		display: block;
 	}
 	#thisIsMyName {text-shadow: 0 0 10px black; font-weight: bold;}
 	.bring {
@@ -582,7 +560,6 @@
 		50%{box-shadow: 0px 0px 200px 50px rgba(0, 126, 255, 0.75); --border: rgb(0, 126, 255);}
 		100%{box-shadow: 0px 0px 200px 50px rgba(0, 255, 161, 0.75); --border: rgba(0, 255, 161);}
 	}
-	.accordion {cursor: pointer;}
 	::-webkit-scrollbar {width: 5px;}
 	::-webkit-scrollbar-track {background-color: black;}
 	::-webkit-scrollbar-thumb {background: linear-gradient(45deg, blue 0%, red 100%);}
@@ -653,7 +630,6 @@
 		#personSighted {display: flex;}
 		#moresites, #webr {margin-right: 10px !important;}
 		#webr {margin-top: 0;}
-		#babyHello {height: 93px !important;}
 		#lonelyNav {margin-left: 0 !important;}
 		#alibaba {
 			align-items: flex-start;
@@ -665,7 +641,6 @@
 		.reducedHidden {display: none !important;}
 		.reducedVisible {display: block;}
 		* {animation: none !important;}
-		#babyHello {display: none;}
 		.head {height: 100px;}
 	}
 	@media (prefers-reduced-transparency) {
@@ -922,7 +897,6 @@
 						<li><strong>discord</strong>: @bbctwo (wiichicken#0040)</li>
 						<li><strong>email</strong>: <a href="mailto:vimeoofficial@gmail.com" target="_blank">vimeoofficial@gmail.com</a></li>
 						<li><a href="https://neocities.org/site/wiichicken" target="_blank">neocities profile</a></li>
-						<li>if you NEED to know my socials, go to the <a href="aboutme.html">about me</a> page</li>
 					</ul>
 				</div>
 				<div class="box lefty mobileHidden reducedHidden noscript-hidden sec-r" id="navlink" style="padding: 0; --border: #bec9c8;">
@@ -936,29 +910,11 @@
 				</div>
 			</div>
 			<div class="box sec-full" id="whatsheader" style="--border: #3978c6;">
-				<div class="accordion">
-					<h2>siteUpdates</h2>
-					<h3 style="margin: 0; font-size: 15px;"><strong>STATE OF THE SiTE</strong></h3>
-					<p style="margin-top: 0; margin-bottom: 2px;"><strong>August 25, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
-				</div>
-				<div class="panel">
-					<h2 style="margin-bottom: 2px;">STATE OF THE SiTE</h2>
-					<p id="updatedate">August 25, 2024</p>
-					<p>there's a new, really long blog posts titled "state of my site" where i basically just rant for 2,000 words.<br>We also made some general improvements and fixed some bugs to ensure your app is running smoothly.</p>
-				</div>
+				<h2>siteUpdates</h2>
+				<h3 style="margin: 0; font-size: 15px;"><strong>STATE OF THE SiTE</strong></h3>
+				<p id="updatedate">August 25, 2024</p>
+				<p>there's a new, really long blog posts titled "state of my site" where i basically just rant for 2,000 words.<br>We also made some general improvements and fixed some bugs to ensure your app is running smoothly.</p>
 			</div>
-			<script>
-				// code stolen from https://www.w3schools.com/howto/howto_js_accordion.asp
-				var acc = document.getElementsByClassName("accordion");
-				var i;
-				for (i = 0; i < acc.length; i++) {
-					acc[i].addEventListener("click", function() {
-						this.classList.toggle("active");
-						var panel = this.nextElementSibling;
-						if (panel.style.display === "block") {panel.style.display = "none";} else {panel.style.display = "block";}
-					});
-				}
-			</script>
 			<div id="mybum" class="box sec-full" style="--border: #9462bd;">
 				<h2 class="gradientText" style="background: linear-gradient(90deg, rgba(233,221,255,1) 0%, rgba(255,217,226,1) 100%);">myButton</h2>
 				<div style="display: flex; align-items: center;">

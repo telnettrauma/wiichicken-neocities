@@ -366,6 +366,7 @@ button {
 		height: 12px;
 		margin-right: 3px;
 	}
+	main {background-image: url('/media/noise.png'), linear-gradient(0deg, var(--bg-2) 0%, #00000000 20%, #00000000 80%, var(--bg-1) 100%);}
 }
 /* styling for mobile */
 @media only screen and (max-width: 650px) {
