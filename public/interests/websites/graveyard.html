@@ -19,9 +19,11 @@
 				--bg-1: #000021;
 				--bg-2: black;
 			}
-			main {
+			.main {
 				max-width: 700px;
 				margin: auto;
+				margin-top: 10px !important;
+				margin-bottom: 40px !important;
 			}
 			a {
 				background-color: #E6E1E5;
@@ -68,16 +70,17 @@
 				margin-inline-end: 10px;
 				padding-left: 5px;
 			}
-			.box {border: none;}
+			.box {clip-path: none;}
+			.box::before {content: none;}
 		</style>
 		<div id="heightCheck"></div>
 		<div class="heading" id="poopBlock"></div>
 		<div id="sideButton" onclick="openSidey()"></div>
 		<div id="overSide"></div>
-		<main id="mainer" class="gray">
+		<div id="mainer" class="gray main">
 			<div class="box page-top">
 				<h1>GRAVEYARD</h1>
-				<p>frequently, i link to websites in my directory. sometimes, the owner of a website decides to take it down. when that happens, the page will go here.</p>
+				<p>frequently, webmasters lose interest in their sites. sometimes they abandon them, or just remove them altogether. when this happens to a site in my directory, the page will go here.</p>
 			</div>
 			<div class="box">
 				<p><a href="directory.html">return</a> to the directory</p>
@@ -89,10 +92,10 @@
 				function toggleGray() {
 					var grayButton = document.getElementById('toggle-gray');
 					if (grayButton.innerHTML === 'disableGrayscale') {
-						document.getElementById('mainer').classList = 'not-gray';
+						document.getElementById('mainer').classList = 'not-gray main';
 						grayButton.innerHTML = 'enableGrayscale';
 					} else {
-						document.getElementById('mainer').classList = 'gray';
+						document.getElementById('mainer').classList = 'gray main';
 						grayButton.innerHTML = 'disableGrayscale';
 					}
 				}
@@ -130,21 +133,28 @@
 			</div>
 			<div class="box sec-t">
 				<h2>OBiTUARY</h2>
-				<p>websites that are no longer with us <img src="/media/emoji/tear.gif" loading="lazy">. these are websites that have been completely deleted by their owners.</p>
+				<p>websites that are no longer with us <img src="/media/emoji/tear.gif" loading="lazy">. these are websites that have been completely deleted by their owners, or otherwise taken down</p>
 			</div>
 			<table class="button">
+				<tr>
+					<td><a href="https://sep.neocities.org" target="_blank"><img src="img/button/sep.gif" loading="lazy"></a></td>
+					<td>
+						<h3><img src="img/ficon/default.png" loading="lazy">septic.lol</h3>
+						<p>this was the website that got me into updating this site again.<br><a href="https://web.archive.org/web/20240813010539/https://sep.neocities.org/" target="_blank">internet archive</a><br>added august 30, 2024</p>
+					</td>
+				</tr>
 				<tr>
 					<td><img src="img/button/federiefederi.gif" loading="lazy"></td>
 					<td>
 						<h3><img src="img/ficon/cities/feder.png" loading="lazy"> Federie + Federi</h3>
-						<p>replacement for districts. ended and deleted after some drama related to following people.<br><strong>update</strong>: an <a href="https://neocities.org/site/wiichicken?event_id=3672427" target="_blank">anonymous source</a> by the name of oerrorpage is telling me that f+f was banned because someone reported them<br><a href="https://forum.melonland.net/index.php?topic=2781" target="_blank">melonland forum topic</a> <a href="https://web.archive.org/web/20240414161144/https://federiefederi.neocities.org/" target="_blank">internet archive</a><br>added april 16, 2024</p>
+						<p>replacement for districts. ended and deleted after some drama related to following people.<br><strong>update</strong>: an <a href="https://neocities.org/site/wiichicken?event_id=3672427" target="_blank">anonymous source</a> by the name of <a href="https://oerrorpage.neocities.org" target="_blank">oerrorpage</a> is telling me that f+f was banned because someone reported them<br><a href="https://forum.melonland.net/index.php?topic=2781" target="_blank">melonland forum topic</a> <a href="https://web.archive.org/web/20240414161144/https://federiefederi.neocities.org/" target="_blank">internet archive</a><br>added april 16, 2024</p>
 					</td>
 				</tr>
 			</table>
 			<div class="box page-bottom">
 				<p><a href="directory.html">return</a> to the directory</p>
 			</div>
-		</main>
+		</div>
 		<script src="/interests/intnav.js"></script>
 	</body>
 </html>
