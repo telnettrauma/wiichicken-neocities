@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Using the SDF UNIX System - August 30, 2024 - WiiCHiCKEN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: black;
+      color: #c0c0c0;
+      font-family: monospace;
+      font-size: 13px;
+      max-width: 700px;
+    }
+    h1 {
+      font-size: 13px;
+      background-color: yellow;
+      color: blue;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      background-color: #c0c0c0;
+    }
+    code {
+      color: white;
+      white-space: pre;
+    }
+    .gray {color: gray;}
+    .purple {color: #ff00ff;}
+    .green {color: #00ff00;}
+    .red {color: red;}
+    .yellow {color: yellow;}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Using the SDF UNIX System</h1>
+      <p>August 30, 2024</p>
+    </header>
+    <p class="gray">--------------------------------------------------</p>
+    <p>I have been fortunate enough to have had graphical user interfaces for my entire life. I don't really like using the command line that much, I don't know why. Probably because the memorization aspect is hard for me. Especially learning how to use all the text commands. However, the more I get into coding, the more important I realize these systems are. At school, we did some exercises with using UNIX, but other than that, I was coming into this as a complete outsider.<br>Enter the <a href="https://sdf.org" target="_blank">SDF (Super Dimension Fortress) Public Access UNIX System</a>.<br>When I first visited the SDF, I was really excited. There was so much stuff with that old retro jank charm. I spent a few hours on the website, just looking at everything. But then I found <a href="https://ascii-games.org" target="_blank">ASCII Games</a>. This required you to use SSH, and at this point, I knew what I wanted to do.<br>So… I downloaded PuTTY, made an account, and logged in. This was my experience, coming from someone who usually avoids UNIX and CLI.</p>
+    <p>When I logged in, this was the first thing I saw:</p>
+    <code>[ 'wiichicken' will expire in 364 days - Please 'validate' your account soon ]</code>
+    <p>Validation doesn't really matter right now, as I'm just exploring. After that, I got some cool, random pieces of information, such as server uptime, the moon phase, and the guestbook:</p>
+    <code>
+=======================================================================
+SDF host uptime report for Seattle WA, Dallas TX (USA) and Germany (EU)
+              Please use 'tty.sdf.org' for general access
+=======================================================================
+
+SERVER          DAYS+HOUR:MIN       USERS   MACHINE LOAD
+----------------------------------------------------------------------
+9p             up   5+01:03,    6 users,  load:   0.00,   0.00,   0.00
+aNONradio      up 336+13:01,   30 users,  load:   0.10,   0.11,   0.17
+faeroes        up  24+06:11,    0  user,  load:   0.03,   0.01,   0.00
+iceland        up  23+17:48,   54 users,  load:   0.89,   0.70,   1.03
+jitsi          up   53+2:18, 1680 users,  load:   6.26,   6.85,   7.21
+ma             up   55+3:19,   95 users,  load:   6.11,   7.06,   8.01
+matrix         up  14+10:26,   31 users,  load:   0.40,   0.56,   0.61
+mc             up  12+08:44,    1 users,  load:   3.40,   3.12,   3.41
+miku           up  23+18:06,    4 users,  load:   0.49,   0.44,   0.37
+mx             up  23+18:02,  371 users,  load:  11.69,   8.82,   5.93
+norge          up  23+18:04,   97 users,  load:   0.17,   0.11,   0.03
+otaku          up  23+18:08,   45 users,  load:   0.50,   0.35,   0.24
+pixelfed       up  54+13:58, 2130 users,  load:   0.80,   0.75,   0.72
+rie            up  22+12:54,   50  user,  load:   2.30,   2.67,   2.42
+ryo            up  23+18:04,   21 users,  load:   0.16,   0.14,   0.09
+sdf            up  13+14:16,  127 users,  load:   9.22,   8.45,   7.99
+sdfeu          up 784+12:31,   41 users,  load:   2.10,   1.79,   1.66
+sverige        up  23+18:05,   24 users,  load:   6.75,   4.31,   2.16
+unix50         up  48+44:00,  118 users,  load:  36.39,  36.64,  36.72
+vps3           up 336+12:51,   49 users,  load:   4.42,   2.53,   3.61
+vps9           up 337+23:06,   18 users,  load:   7.99,   7.50,   5.43
+                              4992 total
+                The Moon is Waning Crescent (11% of Full)
+                .--
+            .--
+          .-'
+      .-'@
+      /@@@
+    ./
+  /@@  o
+  /@@@@
+  |@@@@@
+/@@@@@  Last Quarter +
+| @@@@  4  6:59:31
+|@ @@@  New Moon -
+|       3  9:28:15
+\  . @
+  |
+  \
+  \  o
+    `\
+      \
+      `-.
+          `-.
+            `--
+                `--
+    </code>
+    <p>After that, I got to select what I wanted to do. First, I checked out the games. There are quite a few to choose from. At first, I checked out Connect 4, because I felt like that would be the easiest. I got my butt handed to me by the computer:</p>
+    <code>
+       ab  efg
+      |-------|
+      |  XX   |
+      |  XX   |
+      | XOO   |
+      |XOXX   |
+      |OOOX   |
+      |OXOOXOO|
+      |-------|
+       abcdefg
+
+I win.
+Another game?
+    </code>
+    <p>I am very bad at this. No matter how hard I tried, I could not win against the computer player. So, I decided to play Tetris instead. My score was 2306. The controls started to make my hand cramp up. Also, there weren't many of the modern features, such as ghost periods, and whatever the Tetris version of coyote time is. Anyway, that's enough of the games. I wanted to check out some of the other things I could do.<br>I decided to look at stock quotes, because, why not? However, I couldn't get this to work. Whenever I tried, all I got was a list of statistics, missing the statistics themselves.</p>
+    <code>
+sdf:/sdf/udd/w/wiichicken> quote goog
+52-week range
+Market cap
+  * (BUTTON) Market capitalization
+$ Market cap P/E ratio $ Price 1d change 52-week range
+  * (BUTTON) Market capitalization
+    </code>
+    <p>Trying to add on additional parameters to my command just gave me the same message. But, oh well. I'm not here to check up on the stocks anyways.<br>After this, I decided to check out the bulletin boards. I didn't know what one I wanted to look at, so I entered the one about pens. The bulletin board experience is quite charming. It's also quite focused. The best thing to compare it to would probably be like a TikTok feed, but without the algorithm. You only see one thing at a time.<br>The last thing I wanted to check out was the web browser. Looking at supported websites through this web browser is really cool. It's just Lynx, and this is my second time using it, but still cool. Here is an example of a website that actually worked for it. This was a <a href="http://jaredc.chaosnet.org/./jokes/jk_kids.html" target="_blank">joke page</a>:</p>
+    <code>
+  Important Things I've Learned From Kids
+
+  <span class="purple"> 1. It's more fun to color outside the lines.
+   2. If you're gonna draw on the wall, do it behind the couch.
+   3. Ask why until you understand.
+   4. Hang on tight.
+   5. Even if you've been fishing for 3 hours and haven't gotten anything except poison ivy and a sunburn, you're still better off than the worm.
+   6. Make up the rules as you go along.
+   7. It doesn't matter who started it.
+   8. Ask for sprinkles.
+   9. If the horse you're drawing looks more like a dog, make it a dog.
+  10. Save a place in line for your friends.
+  11. Sometimes you have to take the test before you've finished studying.
+  12. If you want a kitten, start out asking for a horse.
+  13. Just keep banging until someone opens the door.
+  14. Making your bed is a waste of time.
+  15. There is no good reason why clothes have to match.
+  16. Even Popeye didn't eat his spinach until he absolutely had to.
+  17. You work so hard pedaling up the hill that you hate to brake on the way down.
+  18. You can't ask to start over just because you're losing the game.</span>
+
+  <span class="green">Go to top</span>
+    </code>
+    <p>After this, I wanted to see what my website would look like in this. This is what Google looks like:</p>
+    <code>
+<span class="red">Search</span> <span class="green">Images Maps Play YouTube News Gmail Drive More ▒
+Web History</span> | <span class="green">Settings</span> | <span class="green">Sign in</span>
+
+<span class="yellow">Google</span>
+
+                                                                              _______________________________________________________
+                                                                              Google Search  I'm Feeling Lucky                          <span class="green">Advanced search</span>
+
+<span class="green">Advertising     Business Solutions     About Google</span>
+
+                                                                                                      ▒ 2024 - <span class="green">Privacy</span> - <span class="green">Terms</span>
+    </code>
+    <p>And this is what the search results for my website look like:</p>
+    <code>
+<span class="yellow">Google</span>
+wiggle.monster______ Search
+ALL <span class="green">IMAGES VIDEOS NEWS
+
+Images View all</span>
+<span class="yellow">Bendy Wiggle-Eye Monsters
+Giant Steve vs Security House - Minecraft - YouTube
+The Monster Wiggle - Artburst
+22513 MONSTER WIGGLE GEL PEN-24 - BCmini
+Wiggle Monster' Sticker | Spreadshirt
+Wacky Wiggle Monster Silicone Pen - www.shoptherocket.com
+The Wiggle Monster" Essential T-Shirt for Sale by Bailey Pietrzak ...
+The Wiggle Monster" Essential T-Shirt for Sale by Bailey Pietrzak ...
+Stream The Wiggle Monster by Wiggly Air | Listen online for free ...</span>
+<span class="green">View all</span>
+The Monster Wiggle Song by Amy Bic▒t, Antony Elvin, and Artburst <span class="yellow">The Monster Wiggle</span>
+Released : 2014
+Artists : <span class="green">Antony Elvin</span> , <span class="green">Amy Bic▒t</span> , and <span class="green">Artburst</span>
+Album : <span class="green">Artburst Action Songs</span>
+<span class="green">The Monster Wiggle Song - Official Video - YouTube www.youtube.com > watch</span>
+Duration: 2:38
+Posted: May 29, 2021
+
+                    <span class="yellow">Video for wiggle.monster</span>
+                      VIDEO
+<span class="green">wiggle.monster wiggle.monster</span>
+welcome... to the very first website that was ever made on the internet! the revolution is here, and its only just getting started! <span class="green">About</span> ▒ <span class="green">ART</span> ▒ <span class="green">Art</span> ▒ <span class="green">iNTERESTS</span>
+<span class="green">ALL ABOUT WiiCHiCKEN - wiggle.monster wiggle.monster > aboutme</span>
+Hello, my name is WiiCHiCKEN. The name comes from when my friend sent me this picture with just the caption "wii chicken":.
+<span class="green">Bendy Wiggle-Eye Monsters - Baker Ross www.bakerross.com > bendy-wiggle-eye-monsters</span>
+$5.95 In stock Our Monster Wiggle-Eyes Bendies will provide hours of fun this Halloween as kids bend, stretch, and pose these marvellous monsters.
+<span class="green">Artburst Children's Songs - The Monster Wiggle - YouTube www.youtube.com > watch</span>
+Duration: 2:44
+Posted: Oct 21, 2021
+
+                    <span class="yellow">Video for wiggle.monster</span>
+                      VIDEO
+<span class="green">Wiggle Monsters www.coloradowigglemonsters.com</span>
+Professional dog walking, boarding and day care in the Roaring Fork Valley. Your pet should have as much fun as you do: call Wiggle Monsters today! Missing: monster | Show results with: <span class="green">monster</span>
+<span class="green">Monster Wiggle Gel Pen - Little Craft Place www.littlecraftplace.com > Fall & Halloween</span>
+$2.00 These wiggly monster gel pens are perfect for planning, for work, home, desk or for school. They will be a beautiful addition to your pen collection!
+<span class="green">Stream The Wiggle Monster by Wiggly Air - SoundCloud soundcloud.com > the-wiggle-monster</span>
+Nov 7, 2021 ▒ Stream The Wiggle Monster by Wiggly Air on desktop and mobile. Play over 320 million tracks for free on SoundCloud.
+<span class="green">Monster Penthouse Squiggle Wiggle Tube Slide (13G) www.greatoutdoorsplay.com > products</span>
+$3,999.00 In stock A fun way for kids to slide through the tube slide at almost 90 degree turn from top to ground level. Available in yellow or green. Total 8 pieces.
+
+<span class="green">Next ></span>
+
+                                                                                          United States - From your IP address - <span class="green">Learn more</span>
+
+                                                                                                              <span class="green">Sign in</span>
+
+<span class="green">Settings Privacy Terms</span>
+    </code>
+    <p>However, trying to actually visit my website gave me this error:</p>
+    <code>
+  <span style="background-color: red; color: yellow;">Alert! Illegal redirection URL received from server!</span>
+  <span style="background-color: blue; color: yellow;">Illegal URL: https://wiggle.monster/</span>
+  Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.
+ H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history list
+    </code>
+    <p>So… that was a little disappointing. Anyways, after this I decided to logout.</p>
+    <code>
+Good Bye from the S D F - 1 ..
+
+Please 'validate' or join 'arpa' soon.
+Your support is appreciated!
+
+Thank you!
+    </code>
+    <p>So… that was fun and cool. It was easier than I thought it would be, but not at the same time. However, this is probably because I didn't do much, and most of the stuff I did were just apps, nothing really UNIX related. I find it crazy that this is just what computers used to be like, but that's just what people were used to. And its not like everyone used computers, especially like now. I would like to come back to this in the near future, as there is likely a whole bunch of stuff that I didn't explore.</p>
+    <p>If you are looking to explore the SDF, here are some links that I think you would find helpful:</p>
+    <p><a href="https://sdf.org/?tilde" target="_blank">Tilde</a> - Directory of sites SDF members created. Really fun to explore<br><a href="https://wiki.sdf.org/doku.php?id=sdf_general_use_tutorials" target="_blank">Tutorials for General Use of SDF</a><br><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank">Download PuTTY</a> - Helpful client that you will most likely need on Windows</p>
+  </main>
+</body>
+</html>
