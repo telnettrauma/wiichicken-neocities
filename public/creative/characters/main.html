@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>MY MAiN CHARACTER</title>
+		<title>my awesome reference</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/favicon.png">
+		<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+		<style>
+			* {box-sizing: border-box;}
+			body {
+				background-color: black;
+				font-family: 'PT Sans', sans-serif;
+				color: white;
+			}
+			main {
+				max-width: 800px;
+				display: flex;
+				gap: 10px;
+				flex-direction: column;
+			}
+			.head, h1, h2 {
+				font-family: 'Martian Mono', monospace;
+			}
+			.row {
+				display: flex;
+				gap: 10px;
+			}
+			.sec {
+				display: flex;
+				gap: 3px;
+				flex-direction: column;
+			}
+			.box, p, h1, h2 {
+				margin-block-start: 0;
+				margin-block-end: 0;
+				border: 1px solid var(--border);
+				padding: 5px;
+				background-color: var(--bg);
+				color: var(--fg);
+			}
+		</style>
 	</head>
 	<body>
-		<h1>MY MAiN CHARACTER</h1>
-		<p>This is my main character. I love him very much, even if doing a reverse image search for him just returns "Dave Strider" from Homestuck.</p>
-		<p>the following is just copy and pasted from his toyhouse page:</p>
-		<p>this is my main character. like all my other characters, he has no name.</p>
-		<p>i wanted this character to be &quot;edgy&quot;, but not &quot;<em>RY@N &bull; 12 &bull; K1LL5 N008S</em>&quot; edgy</p>
-		<h1>looks</h1>
-		<p>for the record, you don&#39;t have to copy this the exact way that i do. i like to experiment. feel free to add your own little twists.</p>
-		<h2>clothing &amp; stuff</h2>
-		<p><img src="https://i.imgur.com/lXQDbMH.png" alt="Drawing of a white hoodie with a red and a blue drawstring. There is a slanted blue line near the bottom of the left sleeve and a slanted red line near the bottom of the right sleeve.">he wears a hoodie that has spiked drawstrings. the design of the hoodie can be whatever, as long as it has the red and blue drawstrings and splashes of color on the sides</p>
-		<p><img src="https://i.imgur.com/ofvNMte.png" alt="Drawing of a headset with a microphone. The left part of the headset is red and the right part is blue."></p>
-		<p>he wears a headset and that&#39;s cool i guess.</p>
-		<p><img src="https://i.imgur.com/4zHDGfW.png" alt="Scarf with a red and blue gradient."></p>
-		<p>he wears a scarf that has a red and blue gradient</p>
-		<br><p>this isn't anywhere close to being finished</p>
+		<main>
+			<div style="--border: red; --bg: #3a0905; --fg: #ffdad4;">
+				<h1>MAiN CHARACTER</h1>
+			</div>
+			<div class="row">
+				<div class="sec" style="--border: yellow; --bg: #241a00; --fg: #ffe08d;">
+					<h2 class="head box">ABOUT</h2>
+					<p>this is my awesome little dude. he is evil and awesome. he is a boy. the surface of him is fuzzy, not like a cat, but like a stuffed animal.<br>feel free to alter the design in any ways that you think are cool.</p>
+				</div>
+				<div class="sec" style="--border: white; --bg: #1c1b1b; --fg: #f6f3f2;">
+					<h2>COLORS</h2>
+					<p class="head" style="--bg: red; --fg: black;">#ff0000</p>
+					<p class="head" style="--bg: blue;">#0000ff</p>
+					<p>just because i use these colors doesn't mean you have to! also, i just like red+blue, im not patriotic</p>
+				</div>
+				<!-- what would you do with this space? -->
+			</div>
+			<!-- always include room for desert! also, include a link to the old page -->
+		</main>
 	</body>
 </html>
