@@ -7,9 +7,7 @@ function addTheFart() {
 		return;
 	}
 	poopBlock.removeAttribute('style');
-	poopBlock.innerHTML = '<a href="#start" id="to-start"><button>Skip to Content</button></a><a id="fakeLogo" href="/index.html" title="Home"><div class="square" id="s1"></div><div class="square" id="s2"></div></a><div id="inHead"><div class="topLinks"><a href="/aboutme.html">ABOUT</a><a href="/creative/index.html">ART</a><a href="/more/archive/blog/index.html">BLOG</a><a href="/interests/index.html">iNTERESTS</a><a href="/more/index.html">MORE</a><a href="/guestbook.html">GUESTBOOK</a></div></div>';
-	sideButton.innerHTML = '<div class="rect" style="background-color: red;"></div><div class="rect" style="background-color: #00a2ff;"></div><div class="rect" style="margin-bottom: 0;"></div>';
-	overSide.innerHTML = '	<div id="closeSide" onclick="closeSidey()"><div class="rect" id="closeRect1"></div><div class="rect" id="closeRect2"></div><div class="rect" id="closeRect3"></div></div><a href="/index.html">HOME</a><a href="/aboutme.html">ABOUT ME</a><a href="/creative/index.html">ART</a><a href="/interests/index.html">iNTERESTS</a><a href="/more/index.html">MORE</a><a href="/sitemap.html" id="bottomNavLink">SiTEMAP</a>';
+	poopBlock.innerHTML = '<a href="#start" id="to-start"><button>Skip to Content</button></a><a id="fakeLogo" href="/index.html" title="Home"><div class="square" id="s1"></div><div class="square" id="s2"></div></a><div id="inHead"><div class="topLinks"><a href="/aboutme.html"><img src="/resources/nav/me.png">ABOUT</a><a href="/creative/index.html"><img src="/resources/nav/art.png">ART</a><a href="/more/archive/blog/index.html"><img src="/resources/nav/blog.png">BLOG</a><a href="/interests/index.html"><img src="/resources/nav/intr.png">iNTERESTS</a><a href="/more/index.html"><img src="/resources/nav/more.png">MORE</a><a href="/guestbook.html"><img src="/resources/nav/gb.png">GUESTBOOK</a></div></div>';
 }
 function openSidey() {document.getElementById('overSide').style.display = 'flex';}
 function closeSidey() {document.getElementById('overSide').style.display = 'none';}

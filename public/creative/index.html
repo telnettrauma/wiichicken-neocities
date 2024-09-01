@@ -4,7 +4,7 @@
 		<title>WiiCHiCKEN'S WORKS OF ART</title>
 		<link href="https://fonts.googleapis.com/css2?family=Barlow&family=Martian+Mono:wght@400;700&display=swap" rel="stylesheet">
 		<link href="/style.css" rel="stylesheet">
-		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link rel="icon" type="image/x-icon" href="favicon.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="theme-color" content="#e0bbdd">
 		<noscript><style>#poopBlock iframe {display: block !important;}</style></noscript>
@@ -117,13 +117,6 @@
 			#linksys a button:hover {box-shadow: 1px 1px 0 0 var(--fg);}
 			#linksys a button:active {box-shadow: none;}
 			#flickerbutt {cursor: pointer;}
-			#flickerbutt:active {animation: flicker-time 1s infinite;}
-			@keyframes flicker-time {
-				0% {color: #d9e2ff;}
-				30% {color: white;}
-				35% {color: #d9e2ff;}
-				100% {color: #d9e2ff;}
-			}
 			@media only screen and (max-width: 900px) {
 				button {
 					width: 100%;
@@ -167,6 +160,16 @@
 				</div>
 			</div>
 			<a href="graphics/buttons/index.html#home" class="noline"><button class="sec-b" style="width: 100%; font-size: 30px; margin: 0 2px 10px 0;">ViEW BUTTONS</button></a>
+			<div class="row" style="margin-bottom: 0;">
+				<div class="box sec-tl" style="padding: 0; margin-right: 5px; min-width: 101px; max-height: 101px; margin-bottom: 5px;">
+					<img src="characters/main/media/etc/speaking.png" loading="lazy">
+					<!-- this drawing feels really out of place for me lol -->
+				</div>
+				<div class="box sec-tr" style="margin-bottom: 5px;">
+					<p>learn more about me! the character, not the owner <img src='/media/emoji/imp.gif' loading='lazy' alt=''>! i am the most osome in the whole world <img src='/media/emoji/imp.gif' loading='lazy' alt=''><img src='/media/emoji/imp.gif' loading='lazy' alt=''><img src='/media/emoji/imp.gif' loading='lazy' alt=''><img src='/media/emoji/imp.gif' loading='lazy' alt=''></p>
+				</div>
+			</div>
+			<a href="characters/main.html" target="_blank" class="noline"><button class="sec-b" style="width: 100%; font-size: 30px; margin: 0 2px 10px 0;">YEAH, CHECK iT</button></a>
 			<h2 class="box sec-t">ANiMATiONS</h2>
 			<div class="box sec-b">
 				<p>not much of an animator, but i have a few animations i made a handful of years ago, just laying around in the archives. some kids would call these "animation memes", but i won't call them that.</p>
@@ -201,7 +204,7 @@
 				var button1 = document.getElementById('but1');
 				var button2 = document.getElementById('but2');
 				var button3 = document.getElementById('but3');
-				var buttons1 = ['graphics/buttons/tech/mobile/android/3button.PNG', 'graphics/buttons/tech/mobile/android/gestures.PNG', 'graphics/buttons/tech/mobile/ios/lowpower.PNG', 'graphics/buttons/internet/socialmedia/suspended/twitter/twtwhiteblack.png', 'graphics/buttons/internet/socialmedia/suspended/instagram/colorful.png', 'graphics/buttons/customizable/internet/social/suspended/twitter/preview.gif'];
+				var buttons1 = ['graphics/buttons/tech/mobile/android/3button.PNG', 'graphics/buttons/tech/mobile/android/gestures.PNG', 'graphics/buttons/tech/mobile/ios/lowpower.PNG', 'graphics/buttons/internet/socialmedia/suspended/twitter/twtwhiteblack.png', 'graphics/buttons/internet/socialmedia/suspended/instagram/colorful.png', 'graphics/buttons/customizable/internet/social/suspended/twitter/preview.gif', 'graphics/buttons/internet/socialmedia/reddit/offnasdaq.png'];
 				var buttons2 = ['graphics/buttons/tech/mobile/ios/jailbreak/sidestore.PNG', 'graphics/buttons/tech/mobile/ios/noise/transparency.PNG', 'graphics/buttons/tech/mobile/ios/noise/adaptive.PNG', 'graphics/buttons/tech/mobile/ios/noise/cancelling.PNG', 'graphics/buttons/tech/mobile/1111.PNG', 'graphics/buttons/gaming/playstation/ps5/nogames.gif', 'graphics/buttons/internet/socialmedia/suspended/twitter/twtblu.png'];
 				var buttons3 = ['graphics/buttons/tech/mobile/ios/jailbreak/altstore.PNG', 'graphics/buttons/tech/mobile/ios/dnd.PNG', 'graphics/buttons/life/100000miles.PNG', 'graphics/buttons/gaming/nintendo/3ds/netpass.png', 'graphics/buttons/internet/socialmedia/suspended/instagram/sticker.png', 'graphics/buttons/internet/socialmedia/youtube/loveambientmode.gif'];
 				button1.src = buttons1[Math.floor(Math.random() * buttons1.length)];
@@ -216,6 +219,22 @@
 			}
 			setRandomMessage();
 			dynamicButtons();
+			const daButt = document.getElementById('flickerbutt');
+			let timer;
+			let isHovering = false;
+			daButt.addEventListener('mouseenter', () => {
+				if (!isHovering) {
+					isHovering = true;
+					timer = setTimeout(() => {
+						isHovering = false;
+						window.alert('please get your cursor off the butt');
+					}, 5000);
+				}
+			});
+			daButt.addEventListener('mouseleave', () => {
+				clearTimeout(timer);
+				isHovering = false;
+			});
 		</script>
 		<script src="/resources/nav/navbar.js"></script>
 	</body>

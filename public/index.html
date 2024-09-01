@@ -6,11 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="VY9zXKAnkuHIsHGWLKHMNuZMIg0AMjhw3Mjzs8NgdG8"/>
 	<meta name="description" content="WiiCHiCKEN i am awesome and i will be the most awesome person in the whole world forever.">
-	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/x-icon" href="favicon.png">
 	<meta name="theme-color" content="#00ffb1">
 	<noscript>
 		<style>
-			#noscript-error, #infamous, #whatsheader .panel {display: block !important;}
+			#noscript-error, #infamous {display: block !important;}
 			.noscript-hidden, #signguest, #lonelyNav {display: none !important;}
 			#infamous .box {margin-bottom: 10px !important;}
 			#navig {width: 100% !important;}
@@ -20,6 +20,7 @@
 <body>
 <style>
 	:root {
+		--dark-primary: #93000a;
 		--dark-tertiary: #dec48c;
 		--dark-on-tertiary: #382a49;
 		--bg-1: red;
@@ -30,6 +31,7 @@
 	aside {
 		width: 300px;
 		padding: 0;
+		gap: 10px;
 	}
 	iframe {border: none;}
 	#leftSidebar, #rightSidebar {transition-duration: 0.5s;}
@@ -48,7 +50,6 @@
 		order: 2;
 		flex: 1;
 		min-width: 670px;
-		margin: 10px;
 		margin-top: 0;
 	}
 	.row {
@@ -58,21 +59,12 @@
 	.box {
 		margin-bottom: 10px;
 		--border: red;
-		background-color: rgba(65, 0, 2, 0.7);
+		background-color: #410002b3;
 		color: #ffdad6;
 		padding: 10px;
 		overflow: hidden;
 	}
 	.lefty {margin-left: 10px;}
-	.box a {position: relative;}
-	.box a::after {background: linear-gradient(90deg, #dec48c 0%, #93000a 100%) !important;}
-	.box a:hover::after {animation: happyHover 0.3s !important;}
-	@keyframes happyHover {
-		0% {background-size: 100% 1px; background-position: 100% 100%;}
-		50% {background-size: 0% 1px; background-position: 100% 100%;}
-		51% {background-position: 0% 100%;}
-		100% {background-size: 100% 1px; background-position: 0% 100%;}
-	}
 	.noBg::after {display: none;}
 	.compat-error {
 		background-color: #2a1800;
@@ -103,7 +95,7 @@
 		display: flex;
 	}
 	.sidehead p {
-		background: linear-gradient(45deg, rgba(147,0,6,1) 0%, rgba(116,59,0,1) 100%);
+		background: linear-gradient(45deg, #930006 0%, #743b00 100%);
 		margin-block-start: 0;
 		margin-block-end: 0;
 		padding-left: 3px;
@@ -270,7 +262,7 @@
 		transition-duration: 0.5s;
 		object-fit: cover;
 	}
-	.nomarblock {
+	.nomarblock, #signguest p {
 		margin-block-start: 0;
 		margin-block-end: 0;
 	}
@@ -310,8 +302,6 @@
 		animation: dcAnim 20s infinite;
 	}
 	#signguest p {
-		margin-block-end: 0;
-		margin-block-start: 0;
 		font-family: 'Kode Mono', monospace;
 		font-size: 20px;
 		text-align: center;
@@ -383,21 +373,6 @@
 		background-color: #274b5daa;
 		color: #c3e8fe;
 	}
-	#whatsheader:hover {
-		background-color: #175b7aaa;
-		color: #c3e8fe;
-	}
-	#emojiFart {
-		display: none;
-		position: relative;
-	}
-	.hasDrop:hover #emojiFart {
-		display: block !important;
-	}
-	.panel {
-		display: none;
-		overflow: hidden;
-	}
 	#scrobbleWidget {
 		width: 200px;
 		height: 70px;
@@ -411,11 +386,6 @@
 		--border: #00ffa1;
 		/* box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50);
 		animation: glowy 10s infinite; */
-	}
-	#babyHello {
-		width: 100%;
-		height: 98px;
-		display: block;
 	}
 	#thisIsMyName {text-shadow: 0 0 10px black; font-weight: bold;}
 	.bring {
@@ -590,17 +560,18 @@
 		50%{box-shadow: 0px 0px 200px 50px rgba(0, 126, 255, 0.75); --border: rgb(0, 126, 255);}
 		100%{box-shadow: 0px 0px 200px 50px rgba(0, 255, 161, 0.75); --border: rgba(0, 255, 161);}
 	}
-	.accordion {cursor: pointer;}
 	::-webkit-scrollbar {width: 5px;}
 	::-webkit-scrollbar-track {background-color: black;}
 	::-webkit-scrollbar-thumb {background: linear-gradient(45deg, blue 0%, red 100%);}
 	.mobileVisible {display: none;}
 	/* i hate my life and i wanan die, i aint got no iphone */
-	/* @media only screen and (min-width: 900px) {} */
+	@media only screen and (min-width: 900px) {
+		main {margin: 10px;}
+	}
 	/* wow iphone */
 	@media only screen and (max-width: 900px) {
 		#flex, aside {flex-wrap: wrap;}
-		aside, main, .main {width: 100%;}
+		aside, main, .main, #scrobbleWidget {width: 100%;}
 		aside {
 			display: flex;
 			justify-content: center;
@@ -615,14 +586,12 @@
 		#leftSidebar {order: 2;}
 		#rightSidebar {
 			order: 3;
-			flex-wrap: wrap;
+			margin-bottom: 70px;
 		}
 		#rightSidebar .sidebox {margin: 0 0 10px 0;}
 		#inStep {margin-left: 10px;}
 		#glowBob {animation: none !important;}
 		.mumbo {display: inline-block;}
-		#scrobbleWidget {width: 100%;}
-		#piclog {order: 5;}
 		.head {
 			background-image: none;
 			background: linear-gradient(45deg, rgb(70, 0, 0) 0%, rgb(0, 14, 70)100%);
@@ -661,7 +630,6 @@
 		#personSighted {display: flex;}
 		#moresites, #webr {margin-right: 10px !important;}
 		#webr {margin-top: 0;}
-		#babyHello {height: 93px !important;}
 		#lonelyNav {margin-left: 0 !important;}
 		#alibaba {
 			align-items: flex-start;
@@ -673,7 +641,6 @@
 		.reducedHidden {display: none !important;}
 		.reducedVisible {display: block;}
 		* {animation: none !important;}
-		#babyHello {display: none;}
 		.head {height: 100px;}
 	}
 	@media (prefers-reduced-transparency) {
@@ -839,15 +806,15 @@
 					<li class="contrastVisible">Increased Contrast</li>
 					<li class="transparentVisible">Reduced Transparency</li>
 				</ul>
-				<p>please note that just because a feature is enabled doesn't mean the entire site is compatible with it</p>
+				<p>please note that just because a feature is enabled doesn't mean the entire site is compatible with it. these features are still a work in progress</p>
 			</div>
 			<div class="row" id="infamous" style="display: grid; gap: 10px;">
 				<div class="box noscript-hidden d-sec-l m-sec-t" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
 					<div style="display: flex; flex-wrap: wrap;" id="statusCard">
 						<div id="statuscafe" style="padding: 5px; background: linear-gradient(0deg, rgba(255,180,168,1) 0%, rgba(255,212,168,1) 100%); width: 100%; min-height: 93px;">
 							<a href="https://status.cafe/users/cringe" class="noBg" target="_blank">
-								<div id="statuscafe-username"></div>
-								<div id="statuscafe-content"></div>
+								<div id="statuscafe-username">10 years ago</div>
+								<div id="statuscafe-content">this is still being loaded, give me a second</div>
 							</a>
 						</div>
 						<script src="https://status.cafe/current-status.js?name=cringe" defer></script>
@@ -930,7 +897,6 @@
 						<li><strong>discord</strong>: @bbctwo (wiichicken#0040)</li>
 						<li><strong>email</strong>: <a href="mailto:vimeoofficial@gmail.com" target="_blank">vimeoofficial@gmail.com</a></li>
 						<li><a href="https://neocities.org/site/wiichicken" target="_blank">neocities profile</a></li>
-						<li>if you NEED to know my socials, go to the <a href="aboutme.html">about me</a> page</li>
 					</ul>
 				</div>
 				<div class="box lefty mobileHidden reducedHidden noscript-hidden sec-r" id="navlink" style="padding: 0; --border: #bec9c8;">
@@ -944,29 +910,19 @@
 				</div>
 			</div>
 			<div class="box sec-full" id="whatsheader" style="--border: #3978c6;">
-				<div class="accordion">
-					<h2>siteUpdates</h2>
-					<h3 style="margin: 0; font-size: 15px;"><strong>STATE OF THE SiTE</strong></h3>
-					<p style="margin-top: 0; margin-bottom: 2px;"><strong>August 25, 2024</strong> &#8226; <strong>[Click to expand]</strong></p>
-				</div>
-				<div class="panel">
-					<h2 style="margin-bottom: 2px;">STATE OF THE SiTE</h2>
-					<p id="updatedate">August 25, 2024</p>
-					<p>there's a new, really long blog posts titled "state of my site" where i basically just rant for 2,000 words.<br>We also made some general improvements and fixed some bugs to ensure your app is running smoothly.</p>
-				</div>
+				<h2>siteUpdates</h2>
+				<h3 style="margin: 0; font-size: 15px;"><strong>OK WOW i ACTUALLY DiD A LOT</strong></h3>
+				<p id="updatedate">September 1, 2024</p>
+				<p>yeah, you read the title. i actually got a lot done this week. let me take you down a deep dive of everything that i got done i think:</p>
+				<ul>
+					<li>pages have been slightly refreshed. now there is a gradient at the top and bottom of them, to kind of bring back that old charm of the glows</li>
+					<li>new navigation bar on mobile, instead of a sidebar. also, pages now have icons on the bottom of the screen. how cool is that!? the smallest size screen that i tested this new design on was an iPhone SE, so it should hopefully be visible on anything except a KYOCERA flip phone</li>
+					<li>the <a href="/more/archive/" target="_blank">archive</a> has a new design that although is less impressive, i think it makes it feel more like an actual archive. and it has breadcrumbs</li>
+					<li>favicons on main pages are now a little more colorful. and they aren't using large .ico files</li>
+					<li>made a new <a href="/creative/characters/main.html" target="_blank">page for my awesome character</a>. it is awesome</li>
+				</ul>
+				<p>kinda busy week, yay! anyways, i start school again soon, so who knows how many updates i will have upcoming</p>
 			</div>
-			<script>
-				// code stolen from https://www.w3schools.com/howto/howto_js_accordion.asp
-				var acc = document.getElementsByClassName("accordion");
-				var i;
-				for (i = 0; i < acc.length; i++) {
-					acc[i].addEventListener("click", function() {
-						this.classList.toggle("active");
-						var panel = this.nextElementSibling;
-						if (panel.style.display === "block") {panel.style.display = "none";} else {panel.style.display = "block";}
-					});
-				}
-			</script>
 			<div id="mybum" class="box sec-full" style="--border: #9462bd;">
 				<h2 class="gradientText" style="background: linear-gradient(90deg, rgba(233,221,255,1) 0%, rgba(255,217,226,1) 100%);">myButton</h2>
 				<div style="display: flex; align-items: center;">
@@ -997,11 +953,7 @@
 				</div>
 			</div>
 			<div class="footer page-bottom">
-				<div style="display: flex; justify-content: center;">
-					<div class="square" style="background-color: red;"></div>
-					<p class="nomarblock" style="text-align: center;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
-					<div class="square" style="background-color: #00a2ff;"></div>
-				</div>
+				<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
 				<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
 				<div id="cornerInBox">
 					<a class="noBg" href="credits.html">credits</a>
@@ -1033,9 +985,9 @@
 					<p class="boxy" style="background: linear-gradient(90deg, #534341 0%, #665949 100%);">UPDATED</p>
 				</div>
 				<div class="sidebox-content boxy" style="text-align: center; padding: 0;">
-					<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;"></p>
-					<p class="headText nomarblock" id="upDate" style="background-color: #ede0dd; color: #201a19; font-size: 50px;"></p>
-					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;"></p>
+					<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;">----</p>
+					<p class="headText nomarblock" id="upDate" style="background-color: #ede0dd; color: #201a19; font-size: 50px;">##</p>
+					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;">2024</p>
 					<script src="resources/widgets/home/lastupdate.js"></script>
 				</div>
 			</div>
@@ -1087,6 +1039,15 @@ setInterval(() => {
 	second.style.transform = `rotate(${sec_rotation}deg)`;
 	}, 1000);
 setRandomMessage();
+if (Math.floor(Math.random() * 25) === 10) {
+	var favLink = document.querySelector("link[rel~='icon']");
+	if (!favLink) {
+		favLink = document.createElement('link');
+		favLink.rel = 'icon';
+		document.head.appendChild(favLink);
+	}
+	favLink.href = 'media/home/corrupted.png';
+}
 </script>
 <script src="resources/widgets/home/flood/flood.js"></script>
 <script src="resources/nav/navbar.js"></script>
