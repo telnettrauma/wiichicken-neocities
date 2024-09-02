@@ -80,6 +80,10 @@
 			#bookshelf {overflow-x: scroll;}
 			.box a:not(:has(img))::after {display: none;}
 			.row {width: 100%;}
+			.whitebook {
+				--bg: #d4d4d4;
+				--fg: #3e4040;
+			}
 		</style>
 	</head>
 	<body>
@@ -102,16 +106,20 @@
 		</div>
 		<div class="box">
 			<h2>BLOGS</h2>
-			<p>proper blogs</p>
+			<p>proper blogs and stuff like that</p>
 		</div>
 		<div class="box shelf" style="background-size: 170px;">
-			<a class="blog" href="https://solar.lowtechmagazine.com" target="_blank" style="--fg: #22191c; --bg: #d5c2c6;">
+			<a class="blog whitebook" href="https://solar.lowtechmagazine.com" target="_blank">
 				<img src="img/ficon/default.png" loading="lazy">
 				<h4>Low Tech Magazine</h4>
 			</a>
-			<a class="blog" href="https://www.justinobeirne.com" target="_blank" style="--fg: #22191c; --bg: #d5c2c6;">
+			<a class="blog whitebook" href="https://www.justinobeirne.com" target="_blank">
 				<h4>justinobeirne.com</h4>
 				<p>Google Maps and Apple Maps (not all articles are on the homepage, some require archive.is)</p>
+			</a>
+			<a class="blog whitebook" href="https://thehistoryoftheweb.com" target="_blank">
+				<img src="img/ficon/blog/hotw.png" loading="lazy">
+				<h4>The History of the Web</h4>
 			</a>
 		</div>
 		<div class="box">
@@ -156,6 +164,10 @@
 		<div class="box shelf" id="bookshelf">
 			<div class="stack">
 				<div class="book">
+					<a href="https://eev.ee/blog/2020/02/01/old-css-new-css/" target="_blank" style="--bg: #f4bd6f; --fg: #452b00;">Old CSS, new CSS</a>
+					<a href="https://web.archive.org/web/20240902030153/https://eev.ee/blog/2020/02/01/old-css-new-css/" target="_blank">iA</a>
+				</div>
+				<div class="book">
 					<a href="https://bytemoth.tumblr.com/post/674671055813640192/paradigm-adrift-prokopetz-im-pretty-convinced" target="_blank" style="--bg: #a3d397; --fg: #0e380d;">Google Search is Useless</a>
 					<a href="https://web.archive.org/web/20240429194358/https://bytemoth.tumblr.com/post/674671055813640192/paradigm-adrift-prokopetz-im-pretty-convinced" target="_blank">iA</a>
 				</div>
@@ -178,6 +190,22 @@
 				<div class="book">
 					<a href="https://www.signs.com/branded-in-memory/" target="_blank" style="--bg: #94cdf6; --fg: #00344d;">Branded in Memory</a>
 					<a href="https://archive.is/stb7I" target="_blank">iS</a>
+				</div>
+				<div class="book">
+					<a href="https://motherfuckingwebsite.com" target="_blank" class="whitebook">This is a motherfucking website.</a>
+					<a href="https://web.archive.org/web/20240902020154/https://motherfuckingwebsite.com/" target="_blank">iA</a>
+				</div>
+				<div class="book">
+					<a href="http://bettermotherfuckingwebsite.com" target="_blank" class="whitebook">Better Motherfucking Website</a>
+					<a href="https://web.archive.org/web/20240823020855/http://bettermotherfuckingwebsite.com/" target="_blank">iA</a>
+				</div>
+				<div class="book">
+					<a href="https://bestmotherfucking.website" target="_blank" class="whitebook">This is the best motherfucking website.</a>
+					<a href="https://web.archive.org/web/20240902020649/https://bestmotherfucking.website/" target="_blank">iA</a>
+				</div>
+				<div class="book">
+					<a href="https://actualwebsite.org" target="_blank" style="--bg: #c0c1ff; --fg: #282a60;">This is an Actual Website.</a>
+					<a href="https://web.archive.org/web/20240824235925/https://actualwebsite.org/" target="_blank">iA</a>
 				</div>
 			</div>
 		</div>
