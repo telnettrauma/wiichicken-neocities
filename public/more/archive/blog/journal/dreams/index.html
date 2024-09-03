@@ -5,61 +5,102 @@
 		<link rel="icon" type="image/x-icon" href="/favicon.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+			* {box-sizing: border-box;}
 			body {
-				background-color: #fafaee;
+				background-color: #f4f4e8;
 				color: #1b1c15;
+				margin: 0;
+				font-family: 'Comic Neue', cursive;
 			}
 			main {
 				display: flex;
 				max-width: 1000px;
 				margin: auto;
-				gap: 20px;
+				height: 100vh;
+				max-height: 100vh;
 			}
 			nav {
-				width: 300px;
-				padding-right: 5px;
+				background-color: #dee6c5;
+				color: #424a31;
+				min-width: 200px;
+				padding: 10px;
+				border-radius: 15px;
+				margin: 10px;
 			}
-			nav h1, nav h2, nav h3 {
+			nav h1, nav h2, nav h3, ul {
+				padding-inline-start: 0;
 				margin-block-start: 0;
 				margin-block-end: 0;
 			}
 			#main-links {
-				padding-inline-start: 0;
-				margin-block-start: 0;
 				display: flex;
 				margin-top: 5px;
 				width: 100%;
+				margin-bottom: 6px;
 			}
-			nav ul li {display: block;}
-			nav a {
+			nav ul li, #return {
+				display: block;
 				background-color: #d4ec9d;
 				color: #263500;
 				border: 1px solid #263500;
 				padding: 3px;
-				margin: 3px;
+				margin: 2px 0 2px 0;
 				border-radius: 4px;
 				width: 100%;
 			}
+			#articles {
+				background-color: #e3e3d7;
+				border-radius: 15px;
+				margin: 10px;
+				font-size: 20px;
+				margin-left: 0;
+				overflow-y: scroll;
+			}
+			.entry {
+				border-radius: 5px;
+				padding: 10px;
+				margin: 10px;
+				background-color: #fafaee;
+			}
+			#article-list li {
+				background-color: #a1d0c7;
+				color: #023732;
+			}
+			#article-list li:nth-child(even) {
+				background-color: #bcece3;
+				color: #204e48;
+			}
 			a {text-decoration: none;}
-			a:visited {color: #334a85;}
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d0f08;
+					color: #e3e3d7;
+				}
+				nav {
+					background-color: #424a31;
+					color: #dee6c5;
+				}
+				#articles {background-color: #181e09;}
+				.entry {
+					background-color: #12140d;
+					color: #e3e3d7;
+				}
+			}
 		</style>
 	</head>
 	<body>
 		<main>
 			<nav>
 				<h1>DREAM JOURNAL</h1>
-				<ul id="main-links">
-					<li><a href="/">Home</a></li>
-					<li><a href="/aboutme.html">About</a></li>
-					<li><a href="/creative/">Art</a></li>
-					<li><a href="/more/archive/blog/">Blog</a></li>
-					<li><a href="/interests/">Interests</a></li>
-					<li><a href="/more/">More</a></li>
+				<a style="display: block;" id="return">Return to Journal</a>
+				<ul id="article-list">
+					<li><a>fortnite: self destruct</a></li>
+					<li><a>fortnite: self destruct</a></li>
+					<li><a>fortnite: self destruct</a></li>
 				</ul>
-				<a style="width: 100%; display: block;">return to journal</a>
-				<div></div>
 			</nav>
-			<div>
+			<div id="articles">
 				<div class="entry">
 					<h2>The Carnival Where They Break Your Dreams</h2>
 					<p>in my dream, the circus came to my school. they did their whole thing, and then had us all do our individual activities. once we did an individual activity, the perosn hosting it would straight up drive away and leave.<br>later on, there were a bunch of minigames. there was one where you had to climb to the top of an impossible thing to grab a thing and get a reward. i did this, and so did another person.<br>the announcer was calling out who won it, and said that the other person won. the whole crowd started cheering out that i won. so he started making us do things like riding on each other. eventually, one of the people organizing the event said "this is not on script, stick to the script"</p>
@@ -68,6 +109,7 @@
 					<h2>the worlds saddest childrens song</h2>
 					<p>my dream was like a weird children's music video that had various abstract shapes running around and performing random actions. one of the shapes was put behind bars, but came back out a few lines later in the song. the shapes were doing things like going down a slide, which they would be chopped up by the end of the slide for some reason.<br>eventually i suddenly woke up, and for some reason i was just about to cry from this dream. the only lyric that i remember is:</p>
 					<blockquote>5, 6, 7, 8, where did you get that mug?</blockquote>
+				</div>
 				</div>
 			</div>
 		</main>
