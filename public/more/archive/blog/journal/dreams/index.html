@@ -22,6 +22,7 @@
 			}
 			nav {
 				background-color: #dee6c5;
+				background-image: url('res/noise/noiselight.png');
 				color: #424a31;
 				min-width: 200px;
 				padding: 10px;
@@ -43,7 +44,6 @@
 				display: block;
 				background-color: #d4ec9d;
 				color: #263500;
-				border: 1px solid #263500;
 				padding: 3px;
 				margin: 2px 0 2px 0;
 				border-radius: 4px;
@@ -51,6 +51,7 @@
 			}
 			#articles {
 				background-color: #e3e3d7;
+				background-image: url('res/fiesta/fiestalight.png');
 				border-radius: 15px;
 				margin: 10px;
 				font-size: 20px;
@@ -62,7 +63,9 @@
 				padding: 10px;
 				margin: 10px;
 				background-color: #fafaee;
+				background-image: url('res/line/linelight.png');
 			}
+			nav, .entry, #articles {image-rendering: pixelated;}
 			#article-list li {background-color: #a1d0c7;}
 			#article-list li a {color: #023732;}
 			#article-list li:nth-child(even) {background-color: #bcece3;}
@@ -75,12 +78,17 @@
 				}
 				nav {
 					background-color: #424a31;
+					background-image: url('res/noise/noisedark.png');
 					color: #dee6c5;
 				}
-				#articles {background-color: #181e09;}
+				#articles {
+					background-color: #181e09;
+					background-image: url('res/fiesta/fiestadark.png');
+				}
 				.entry {
 					background-color: #12140d;
 					color: #e3e3d7;
+					background-image: url('res/line/linedark.png');
 				}
 			}
 		</style>
@@ -96,6 +104,7 @@
 					<li><a>fortnite: self destruct</a></li>
 					<li><a href="#3-1-23">bed bath and beyond our timeline</a></li>
 				</ul>
+				<p>hey guys this is still a work in progress</p>
 			</nav>
 			<div id="articles">
 				<div class="entry">
