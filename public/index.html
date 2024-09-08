@@ -315,6 +315,11 @@
 		color: #CCC2DC;
 		padding: 5px;
 	}
+	#mybum .bring {
+		background-color: #332f35 !important;
+		color: #e8e0e8 !important;
+		--border: #968e98;
+	}
 	#flex {
 		display: flex;
 		justify-content: center;
@@ -369,10 +374,6 @@
 		color: black !important;
 		text-shadow: black 0 0 20px;
 	}
-	#whatsheader {
-		background-color: #274b5daa;
-		color: #c3e8fe;
-	}
 	#scrobbleWidget {
 		width: 200px;
 		height: 70px;
@@ -389,33 +390,26 @@
 	}
 	#thisIsMyName {text-shadow: 0 0 10px black; font-weight: bold;}
 	.bring {
-		padding: 0 2px 0 2px;
-		font-family: 'Kode Mono', monospace;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		min-width: 12px;
-		font-weight: bold;
-	}
-	.bring {
 		background: none !important;
 		background-color: #201a19 !important;
 		color: #ede0dd !important;
-		border: 1px solid #a08c89;
+		border: 1px solid var(--border);
+		--border: #a08c89;
 		padding: 0 2px 0 2px;
 		font-family: 'Kode Mono', monospace;
+		font-weight: bold;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		min-width: 12px;
-		box-shadow: 2px 2px 0 0 #a08c89;
+		box-shadow: 2px 2px 0 0 var(--border);
 		transition-duration: 0s !important;
 		position: relative;
 		width: auto;
 		margin: 1px;
 	}
 	.bring:hover {
-		box-shadow: 1px 1px 0 0 #a08c89;
+		box-shadow: 1px 1px 0 0 var(--border);
 		transform: translate(1px, 1px);
 	}
 	.bring:active {
@@ -423,6 +417,11 @@
 		box-shadow: 0 0 !important;
 	}
 	.bring::after {display: none;}
+	main .bring {
+		background-color: #392e2c !important;
+		color: #ffedea !important;
+		--border: #857370;
+	}
 	#clockContainer {
 		position: relative;
 		width: 96px;
@@ -864,11 +863,11 @@
 				<div class="box lefty d-sec-r m-sec-b" style="width: 50%;">
 					<h2>curr.FavSong</h2>
 					<div style="display: flex;">
-						<img src="https://lastfm.freetls.fastly.net/i/u/500x500/adff38e3219e033dbc381644fa354583.jpg" width="100px" height="100px" style="margin-right: 10px; --border: #cde5ff; z-index: 1;">
-						<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/500x500/adff38e3219e033dbc381644fa354583.jpg" width="100px" height="100px" style="margin-right: 10px; opacity: 0.5;">
+						<img src="https://lastfm.freetls.fastly.net/i/u/500x500/63991722b36ad298ec58c0db6abbdb36.jpg" width="100px" height="100px" style="margin-right: 10px; --border: #cde5ff; z-index: 1;">
+						<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/500x500/63991722b36ad298ec58c0db6abbdb36.jpg" width="100px" height="100px" style="margin-right: 10px; opacity: 0.5;">
 						<div style="width: 100%;">
-							<p class="nomarblock"><strong>Chicago</strong></p>
-							<p class="nomarblock">Capital STEEZ Archive</p>
+							<p class="nomarblock"><strong>Never</strong></p>
+							<p class="nomarblock">Mag.Lo Archive</p>
 							<a class="bring" href="interests/music/favarchive">Current Fav Song Archive</a>
 						</div>
 					</div>
@@ -909,19 +908,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="box sec-full" id="whatsheader" style="--border: #3978c6;">
+			<div class="box sec-t">
 				<h2>siteUpdates</h2>
-				<h3 style="margin: 0; font-size: 15px;"><strong>OK WOW i ACTUALLY DiD A LOT</strong></h3>
-				<p id="updatedate">September 1, 2024</p>
-				<p>yeah, you read the title. i actually got a lot done this week. let me take you down a deep dive of everything that i got done i think:</p>
-				<ul>
-					<li>pages have been slightly refreshed. now there is a gradient at the top and bottom of them, to kind of bring back that old charm of the glows</li>
-					<li>new navigation bar on mobile, instead of a sidebar. also, pages now have icons on the bottom of the screen. how cool is that!? the smallest size screen that i tested this new design on was an iPhone SE, so it should hopefully be visible on anything except a KYOCERA flip phone</li>
-					<li>the <a href="/more/archive/" target="_blank">archive</a> has a new design that although is less impressive, i think it makes it feel more like an actual archive. and it has breadcrumbs</li>
-					<li>favicons on main pages are now a little more colorful. and they aren't using large .ico files</li>
-					<li>made a new <a href="/creative/characters/main.html" target="_blank">page for my awesome character</a>. it is awesome</li>
-				</ul>
-				<p>kinda busy week, yay! anyways, i start school again soon, so who knows how many updates i will have upcoming</p>
+				<h3 style="margin: 0; font-size: 15px;"><strong>NOT TOO MUCH</strong></h3>
+				<p id="updatedate">September 8, 2024</p>
+				<p>not too much is new this week. after all, i did start college, so i have been more focused on that. however, if you would like to see a secret work in progress project, check out the <a href="/more/archive/blog/journal/dreams/" target="_blank">dream journal</a>. don't hate if some things are broken, it IS a work in progress.</p>
+			</div>
+			<div class="box sec-b">
+				<p>site updates almost every sunday, blog posts and content updates whenever</p>
+				<a class="bring" href="more/archive/blog/">Site Update Archive</a>
 			</div>
 			<div id="mybum" class="box sec-full" style="--border: #9462bd;">
 				<h2 class="gradientText" style="background: linear-gradient(90deg, rgba(233,221,255,1) 0%, rgba(255,217,226,1) 100%);">myButton</h2>
@@ -1022,7 +1017,7 @@ document.addEventListener("keydown", (event) => {
 	}
 });
 function setRandomMessage() {
-	var msgList = ['Updated <code>index.html</code>', 'coded on a best buy kiosk macbook', 'jobs near me that pay trillion/hour', 'TV explodes in 30 seconds if not powered off', 'can we get a "woot woot"', 'anti-anti-aliasing', 'bring back parallax', 'wth is a framework', 'oh to be a navbar with 3 items', 'internet explorer is safe... so far', 'THiS iS A POOP ALERT', 'debbie downers DNI', 'do not use this website around pacemakers', 'Smile! You\'re on <i>Old Navy</i> TV!', 'one of the greatest', 'keep this place our secret', 'Thanks SiriusXM for making this possible!', 'not the best thing to show to an employer', 'awwwards are impractical anyways', 'dm for proto', 'it takes a village and a half', 'we bought a zoo', 'free for 7 days', 'like transformers, but funnier', 'this website was created just for YOU!', 'hosted on Neocities.'];
+	var msgList = ['Updated <code>index.html</code>', 'coded on a best buy kiosk macbook', 'jobs near me that pay trillion/hour', 'TV explodes in 30 seconds if not powered off', 'can we get a "woot woot"', 'anti-anti-aliasing', 'bring back parallax', 'wth is a framework', 'oh to be a navbar with 3 items', 'internet explorer is safe... so far', 'THiS iS A POOP ALERT', 'debbie downers DNI', 'do not use this website around pacemakers', 'Smile! You\'re on <i>Old Navy</i> TV!', 'one of the greatest', 'keep this place our secret', 'Thanks SiriusXM for making this possible!', 'not the best thing to show to an employer', 'awwwards are impractical anyways', 'dm for proto', 'it takes a village and a half', 'we bought a zoo', 'free for 7 days', 'like transformers, but funnier', 'this website was created just for YOU!', 'hosted on Neocities.', 'updated every Sunday. almost'];
 	document.getElementById('random-message').innerHTML = msgList[Math.floor(Math.random() * msgList.length)];
 }
 // makes the clock run

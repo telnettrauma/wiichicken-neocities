@@ -224,7 +224,7 @@ button {
 	position: absolute;
 	height: 1px;
 	width: 100%;
-	background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 80%, var(--bg-1) 100%);
+	background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-1) 100%);
 	content: '';
 	bottom: 0;
 	top: 0;
