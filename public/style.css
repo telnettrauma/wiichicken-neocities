@@ -143,6 +143,12 @@ button {
 	51% {background-position: 0% 100%;}
 	100% {background-size: 100% 1px; background-position: 0% 100%;}
 }
+.head {
+	height: 100px;
+	background: linear-gradient(45deg, var(--bg-1) 0%, var(--bg-2) 100%);
+	image-rendering: pixelated;
+	background-position: center;
+}
 .noline::after {display: none;}
 #chewTooth {
 	position: fixed;

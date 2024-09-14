@@ -21,9 +21,6 @@
 				--bg-1: #00bbff;
 				--bg-2: #2f00ff;
 			}
-			body {
-				margin: 0;
-			}
 			p, h1, h2, h3, h4 {
 				margin-block-start: 0;
 				margin-block-end: 0;
@@ -107,6 +104,7 @@
 				align-items: stretch;
 			}
 			/* .row .box {width: 47%;} */
+			.head {background-image: url('media/headers/about.png');}
 			.gradtext {
 				background-clip: text;
 				color: transparent;
@@ -255,12 +253,13 @@
 				</tr>
 			</table>
 			<main>
+				<div class="box head page-top"></div>
 				<div class="row" style="display: grid; gap: 5px;" id="theGoofyRow">
-					<div class="box hideMob page-tl" style="padding: 0; display: flex; width: 250px; grid-column: 1/2; grid-row: 1/2;">
-						<img src="resources/about/img/hello.png" style="image-rendering: pixelated;">
+					<div class="box hideMob sec-tl" style="padding: 0; display: flex; width: 250px; grid-column: 1/2; grid-row: 1/2;">
+						<img src="resources/about/img/hello.png" loading="lazy" style="image-rendering: pixelated;">
 					</div>
 					<div class="auto" style="grid-column: 2/3; grid-row: 1/2;">
-						<h2 id="aboutme" class="box d-page-tr m-page-top">ME</h2>
+						<h1 id="aboutme" class="box d-sec-tr m-sec-top">ABOUT ME</h1>
 						<div class="box">
 							<p>Hello, my name is WiiCHiCKEN. The name comes from when my friend sent me this picture with just the caption "wii chicken":</p>
 						</div>
