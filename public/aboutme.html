@@ -21,9 +21,6 @@
 				--bg-1: #00bbff;
 				--bg-2: #2f00ff;
 			}
-			body {
-				margin: 0;
-			}
 			p, h1, h2, h3, h4 {
 				margin-block-start: 0;
 				margin-block-end: 0;
@@ -68,8 +65,7 @@
 				width: 700px;
 				margin: auto;
 			}
-			h2, h3 {margin-bottom: 5px;}
-			.row .box {margin-bottom: 5px;}
+			h2, h3, .row .box {margin-bottom: 5px;}
 			.box, h3 {
 				box-shadow: none;
 				background-color: #151b2ccc;
@@ -106,9 +102,9 @@
 				display: flex;
 				justify-content: space-between;
 				align-items: stretch;
-				width: 100%;
 			}
 			/* .row .box {width: 47%;} */
+			.head {background-image: url('media/headers/about.png');}
 			.gradtext {
 				background-clip: text;
 				color: transparent;
@@ -257,12 +253,13 @@
 				</tr>
 			</table>
 			<main>
+				<div class="box head page-top"></div>
 				<div class="row" style="display: grid; gap: 5px;" id="theGoofyRow">
-					<div class="box hideMob page-tl" style="padding: 0; display: flex; width: 250px; grid-column: 1/2; grid-row: 1/2;">
-						<img src="resources/about/img/hello.png" style="image-rendering: pixelated;">
+					<div class="box hideMob sec-tl" style="padding: 0; display: flex; width: 250px; grid-column: 1/2; grid-row: 1/2;">
+						<img src="resources/about/img/hello.png" loading="lazy" style="image-rendering: pixelated;">
 					</div>
 					<div class="auto" style="grid-column: 2/3; grid-row: 1/2;">
-						<h2 id="aboutme" class="box d-page-tr m-page-top">ME</h2>
+						<h1 id="aboutme" class="box d-sec-tr m-sec-top">ABOUT ME</h1>
 						<div class="box">
 							<p>Hello, my name is WiiCHiCKEN. The name comes from when my friend sent me this picture with just the caption "wii chicken":</p>
 						</div>
@@ -328,6 +325,7 @@
 								<li>Saints Row 3</li>
 								<li>WarioWare Gold</li>
 							</ul>
+							<p><strong>switch friend code</strong>: SW-6656-0767-2100</p>
 						</div>
 					</div>
 					<div style="width: 100%; height: auto;">
@@ -408,6 +406,14 @@
 					<div class="box">
 						<p><strong>What did you make this site in?</strong></p>
 						<p>At first I made this site in the Neocities editor, but now I mainly use Visual Studio code. I code in a lot of places at once, so when I'm not on my laptop, I'm using the browser version.</p>
+					</div>
+					<div class="box">
+						<p><strong>What computer do you use?</strong></p>
+						<p>I use a Lenovo P52 ThinkPad. Yep. If I'm feeling daring, I use a T450 running Chrome OS, however this is more for light browsing and schoolwork.</p>
+					</div>
+					<div class="box">
+						<p><strong>What phone do you use?</strong></p>
+						<p>I don't actually have a phone. Whenever I do phone stuff, I use the infotainment on my car's dashboard, as it runs Android. If the car is in repair, I use Android Studio.</p>
 					</div>
 					<div class="box">
 						<p><strong>How do you pick colors?</strong></p>

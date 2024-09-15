@@ -1,271 +1,275 @@
-<head>
-	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-	<title>CURRENTLY LiSTENiNG TO</title>
-	<link rel="icon" type="image/x-icon" href="/favicon.png">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<div class="content" style="margin: 0; position: relative; overflow: hidden;" id="main">
-	<div id="moneyOnMind" class="moneyOnMind"></div>
-	<div class="moneyOnMind" id="fartOnMind" style="animation: otherRotate 75s linear infinite; opacity: 0.75; z-index: 1; mix-blend-mode: multiply;"></div>   
-	<div id="hiPoopFart">
-		<p id="listen" user="wiichicken">CANT FETCH (TRY REFRESHiNG)</p>
-		<div id="artworklink" target="_blank">
-			<img id="artwork" src="" onError="this.onerror=null;this.src='/med/blank.png';">
-			<p id="track"></p>
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+		<title>CURRENTLY LiSTENiNG TO</title>
+		<link rel="icon" type="image/x-icon" href="/favicon.png">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<div class="content" style="margin: 0; position: relative; overflow: hidden;" id="main">
+		<div id="moneyOnMind" class="moneyOnMind"></div>
+		<div class="moneyOnMind" id="fartOnMind" style="animation: otherRotate 75s linear infinite; opacity: 0.75; z-index: 1; mix-blend-mode: multiply;"></div>   
+		<div id="hiPoopFart">
+			<p id="listen" user="wiichicken">CANT FETCH (TRY REFRESHiNG)</p>
+			<div id="artworklink" target="_blank">
+				<img id="artwork" src="" onError="this.onerror=null;this.src='/med/blank.png';">
+				<p id="track"></p>
+			</div>
 		</div>
 	</div>
-</div>
-<div id="controls">
-	<img src="media/np/horizontal.png" onclick="enableHorizontal();" id="en-hor" title="Horizontal mode">
-	<img src="media/np/vertical.png" onclick="enableVertical()" id="en-vert" title="Vertical mode">
-	<img src="media/np/listener.png" onclick="setUser()" title="Set username" style="padding: 1px 6px 1px 6px;">
-</div>
-<div id="enter-name">
-	<form onsubmit="event.preventDefault(); confirmUser()">
-		<input type="text" id="username" name="username">
-		<img src="media/np/continue.png" onclick="confirmUser()" title="Confirm">
-	</form>
-</div>
-<style>
-	@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap');
-	* {
-		::-webkit-scrollbar {width: 0;}
-	}
-	body {
-		font-family: 'PT Sans', sans-serif;
-		margin: 0;
-		color: white;
-		overflow-x: hidden;
-	}
-	p {text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);}
-	#listen {
-		text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
-		font-family: 'Martian Mono', monospace;
-		font-size: 20px;
-		margin-block-start: 0;
-		margin-block-end: 5px;
-	}
-	a {text-decoration: none;}
-	#coverart {transition-duration: 0.5s;}
-	#coverart:hover {margin-right: 10px;}
-	#coverart:hover .afterfeat {
-		width: 30px !important;
-		height: 30px !important;
-		transform: translate(5px, 0px) !important;
-		margin: 3px;
-	}
-	.content {max-height: 100vh;}
-	.afterfeat {
-		margin: 0px;
-		width: 3px;
-		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
-		transition-duration: 0.5s;
-		object-fit: cover;
-	}
-	.moneyOnMind {
-		width: 100vmax;
-		height: 100vmax;
-		position: absolute;
-		z-index: 0;
-		background-size: 80vmax;
-		background-repeat: repeat;
-		animation: rotate 45s linear infinite;
-		scale: 1.5;
-	}
-	#artwork {
-		display: inline-block;
-		box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.3);
-		border: 1px solid white;
-		width: 30vmin;
-		max-width: 300px;
-	}
-	#listenglow {
-		text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6), white 0 0 10px;
-		font-weight: bold;
-	}
-	#artworklink {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	#hiPoopFart {
-		backdrop-filter: blur(80px) saturate(2);
-		-webkit-backdrop-filter: blur(80px) saturate(2);
-		position: relative;
-		z-index: 1;
-		background-color: rgba(49, 49, 49, 0.4);
-		width: 100vw;
-		height: 100vh;
-		object-fit: contain;
-		margin: 0;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		align-items: center;
-	}
-	@keyframes nowBack {
-		0% {background-position-y: 0%; background-position-x: 0%; transform: rotate(0deg);}
-		20% {background-position-x: 113%; background-position-y: 213%;}
-		40% {background-position-x: 226%; background-position-y: 426%;}
-		60% {background-position-x: 339%; background-position-y: 639%;}
-		80% {background-position-x: 452%; background-position-y: 852%;}
-		100% {background-position-y: 1065%; background-position-x: 565%; transform: rotate(360deg);}
-	}
-	@keyframes nowFront {
-		0% {background-position-y: 0%; background-position-x: 0%; transform: rotateY(360deg);}
-		20% {background-position-x: -113%; background-position-y: -213%;}
-		40% {background-position-x: -226%; background-position-y: -426%;}
-		60% {background-position-x: -339%; background-position-y: -639%;}
-		80% {background-position-x: -452%; background-position-y: -852%;}
-		100% {background-position-y: -1065%; background-position-x: -565%; transform: rotateY(0deg);}
-	}
-	@keyframes rotate {
-		0% {transform: rotate(360deg);}
-		100% {transform: rotate(0deg);}
-	}
-	@keyframes otherRotate {
-		0% {transform: rotate3d(0, 0, 0, 0deg);}
-		100% {transform: rotate3d(2, 5, 8, 359deg);}
-	}
-	#controls, #enter-name {
-		background-color: #79747e6f;
-		padding: 5px;
-		border: 1px solid #CAC4D0;
-		z-index: 10;
-	}
-	#controls {
-		position: absolute;
-		right: 15px;
-		bottom: 15px;
-		display: flex;
-		justify-content: center;
-		max-width: 100px;
-		opacity: 0.3;
-		transition-duration: 0.5s;
-	}
-	#controls:hover {opacity: 1;}
-	#controls img:hover {filter: brightness(2) drop-shadow(0 0 5px #CAC4D0);}
-	.active-button {filter: brightness(2) drop-shadow(0 0 5px #CAC4D0);}
-	#enter-name {
-		position: absolute;
-		bottom: 65px;
-		right: 10px;
-		height: 22px;
-		display: none;
-	}
-	#username {
-		background: none;
-		border: none;
-		border-bottom: 1px solid #CAC4D0;
-		color: #CAC4D0;
-	}
-	/* styles for when in portrait */
-	.portrait #hiPoopFart #artworklink {flex-direction: column;}
-	.portrait #hiPoopFart #artworklink #track {
-		text-align: center;
-		font-size: 4vmin;
-	}
-	.portrait #hiPoopFart #artworklink #track strong {font-size: 5vmin;}
-	/* styles for when in landscape */
-	.landscape #hiPoopFart #artworklink {
-		flex-direction: row;
-		align-items: flex-end;
-	}
-	.landscape #hiPoopFart #artworklink #track {
-		margin-block-end: 0;
-		margin-left: 15px;
-		text-align: left;
-		font-size: 2.5vmax;
-	}
-	.landscape #hiPoopFart #artworklink #track strong {font-size: 3vmax;}
-	.landscape #hiPoopFart {
-		align-items: flex-start;
-		padding: 15px;
-	}
-	.landscape #hiPoopFart #artworklink #artwork {width: 20vmax;}
-	@media (prefers-reduced-motion) {
-		* {animation: none !important;}
-	}
-	@media (prefers-reduced-transparency) {
-		.content {background-image: none !important;}
+	<div id="controls">
+		<img src="media/np/horizontal.png" onclick="enableHorizontal();" id="en-hor" title="Horizontal mode">
+		<img src="media/np/vertical.png" onclick="enableVertical()" id="en-vert" title="Vertical mode">
+		<img src="media/np/listener.png" onclick="setUser()" title="Set username" style="padding: 1px 6px 1px 6px;">
+	</div>
+	<div id="enter-name">
+		<form onsubmit="event.preventDefault(); confirmUser()">
+			<input type="text" id="username" name="username">
+			<img src="media/np/continue.png" onclick="confirmUser()" title="Confirm">
+		</form>
+	</div>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap');
+		* {
+			::-webkit-scrollbar {width: 0;}
+		}
+		body {
+			font-family: 'PT Sans', sans-serif;
+			margin: 0;
+			color: white;
+			overflow-x: hidden;
+		}
+		p {text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);}
+		#listen {
+			text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+			font-family: 'Martian Mono', monospace;
+			font-size: 20px;
+			margin-block-start: 0;
+			margin-block-end: 5px;
+		}
+		a {text-decoration: none;}
+		#coverart {transition-duration: 0.5s;}
+		#coverart:hover {margin-right: 10px;}
+		#coverart:hover .afterfeat {
+			width: 30px !important;
+			height: 30px !important;
+			transform: translate(5px, 0px) !important;
+			margin: 3px;
+		}
+		.content {max-height: 100vh;}
+		.afterfeat {
+			margin: 0px;
+			width: 3px;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+			transition-duration: 0.5s;
+			object-fit: cover;
+		}
+		.moneyOnMind {
+			width: 100vmax;
+			height: 100vmax;
+			position: absolute;
+			z-index: 0;
+			background-size: 80vmax;
+			background-repeat: repeat;
+			animation: rotate 45s linear infinite;
+			scale: 1.5;
+		}
+		#artwork {
+			display: inline-block;
+			box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.3);
+			border: 1px solid white;
+			width: 30vmin;
+			max-width: 300px;
+		}
+		#listenglow {
+			text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6), white 0 0 10px;
+			font-weight: bold;
+		}
+		#artworklink {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 		#hiPoopFart {
-			backdrop-filter: blur(0px) !important;
-			-webkit-backdrop-filter: blur(0px); 
-			background-color: black;
+			backdrop-filter: blur(80px) saturate(2);
+			-webkit-backdrop-filter: blur(80px) saturate(2);
+			position: relative;
+			z-index: 1;
+			background-color: rgba(49, 49, 49, 0.4);
+			width: 100vw;
+			height: 100vh;
+			object-fit: contain;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
 		}
-	}
-</style>
-<script>
-	var mainElement = document.getElementById('main');
-	let user = 'wiichicken';
-	function getNowPlaying() {
-		var url = `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`;
-		var request = new XMLHttpRequest();
-		request.open('GET', url, true);
-
-		request.onload = function() {
-			if (request.status >= 200 && request.status < 400) {
-				var data = JSON.parse(request.responseText);
-				var artist = data.recenttracks.track[0].artist["#text"];
-				var song = data.recenttracks.track[0]["name"];
-				var artwork = data.recenttracks.track[0].image[3]["#text"];
-				var tinyArtwork = data.recenttracks.track[0].image[0]["#text"];
-
-				var artworkImg = document.getElementById("artwork");
-				artworkImg.setAttribute("src", artwork);
-				var fakeBlur = document.getElementById('moneyOnMind');
-				fakeBlur.style.backgroundImage = `url(${tinyArtwork})`;
-				document.getElementById('fartOnMind').style.backgroundImage = `url(${tinyArtwork})`;
-
-				var trackInfo = document.getElementById("track");
-				trackInfo.innerHTML = "\
-					<strong>"+song+"</strong><br />\
-					"+artist+"\
-				";
-
-				if (typeof data.recenttracks.track[0]["@attr"] !== "undefined"){
-					var listenInfo = document.getElementById("listen");
-					listenInfo.innerHTML = '<span id="listenglow">LiSTENiNG</span> TO:';
-				} else {
-					var listenInfo = document.getElementById("listen");
-					listenInfo.innerHTML = 'last <span>listened</span> to:';
-					console.log("false");
-				}
-			} else {console.error("Error fetching data from server.");}
-		};
-		request.onerror = function() {console.error("Connection error.");};
-		request.send();
-	}
-	document.addEventListener('DOMContentLoaded', getNowPlaying());
-	function detectSize() {
-		if (window.innerHeight >= window.innerWidth) {
-			mainElement.classList.add('portrait');
-			document.getElementById('en-vert').classList.add('active-button');
-		} else {
-			mainElement.classList.add('landscape');
+		@keyframes nowBack {
+			0% {background-position-y: 0%; background-position-x: 0%; transform: rotate(0deg);}
+			20% {background-position-x: 113%; background-position-y: 213%;}
+			40% {background-position-x: 226%; background-position-y: 426%;}
+			60% {background-position-x: 339%; background-position-y: 639%;}
+			80% {background-position-x: 452%; background-position-y: 852%;}
+			100% {background-position-y: 1065%; background-position-x: 565%; transform: rotate(360deg);}
+		}
+		@keyframes nowFront {
+			0% {background-position-y: 0%; background-position-x: 0%; transform: rotateY(360deg);}
+			20% {background-position-x: -113%; background-position-y: -213%;}
+			40% {background-position-x: -226%; background-position-y: -426%;}
+			60% {background-position-x: -339%; background-position-y: -639%;}
+			80% {background-position-x: -452%; background-position-y: -852%;}
+			100% {background-position-y: -1065%; background-position-x: -565%; transform: rotateY(0deg);}
+		}
+		@keyframes rotate {
+			0% {transform: rotate(360deg);}
+			100% {transform: rotate(0deg);}
+		}
+		@keyframes otherRotate {
+			0% {transform: rotate3d(0, 0, 0, 0deg);}
+			100% {transform: rotate3d(2, 5, 8, 359deg);}
+		}
+		#controls, #enter-name {
+			background-color: #79747e6f;
+			padding: 5px;
+			border: 1px solid #CAC4D0;
+			z-index: 10;
+		}
+		#controls {
+			position: absolute;
+			right: 15px;
+			bottom: 15px;
+			display: flex;
+			justify-content: center;
+			max-width: 100px;
+			opacity: 0.3;
+			transition-duration: 0.5s;
+		}
+		#controls img {image-rendering: pixelated;}
+		#controls:hover {opacity: 1;}
+		#controls img:hover {filter: brightness(2) drop-shadow(0 0 5px #CAC4D0);}
+		.active-button {filter: brightness(2) drop-shadow(0 0 5px #CAC4D0);}
+		#enter-name {
+			position: absolute;
+			bottom: 65px;
+			right: 10px;
+			height: 22px;
+			display: none;
+		}
+		#username {
+			background: none;
+			border: none;
+			border-bottom: 1px solid #CAC4D0;
+			color: #CAC4D0;
+		}
+		/* styles for when in portrait */
+		.portrait #hiPoopFart #artworklink {flex-direction: column;}
+		.portrait #hiPoopFart #artworklink #track {
+			text-align: center;
+			font-size: 4vmin;
+		}
+		.portrait #hiPoopFart #artworklink #track strong {font-size: 5vmin;}
+		/* styles for when in landscape */
+		.landscape #hiPoopFart #artworklink {
+			flex-direction: row;
+			align-items: flex-end;
+		}
+		.landscape #hiPoopFart #artworklink #track {
+			margin-block-end: 0;
+			margin-left: 15px;
+			text-align: left;
+			font-size: 2.5vmax;
+		}
+		.landscape #hiPoopFart #artworklink #track strong {font-size: 3vmax;}
+		.landscape #hiPoopFart {
+			align-items: flex-start;
+			padding: 15px;
+		}
+		.landscape #hiPoopFart #artworklink #artwork {width: 20vmax;}
+		@media (prefers-reduced-motion) {
+			* {animation: none !important;}
+		}
+		@media (prefers-reduced-transparency) {
+			.content {background-image: none !important;}
+			#hiPoopFart {
+				backdrop-filter: blur(0px) !important;
+				-webkit-backdrop-filter: blur(0px); 
+				background-color: black;
+			}
+		}
+	</style>
+	<script>
+		var mainElement = document.getElementById('main');
+		let user = 'wiichicken';
+		function getNowPlaying() {
+			var url = `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`;
+			var request = new XMLHttpRequest();
+			request.open('GET', url, true);
+	
+			request.onload = function() {
+				if (request.status >= 200 && request.status < 400) {
+					var data = JSON.parse(request.responseText);
+					var artist = data.recenttracks.track[0].artist["#text"];
+					var song = data.recenttracks.track[0]["name"];
+					var artwork = data.recenttracks.track[0].image[3]["#text"];
+					var tinyArtwork = data.recenttracks.track[0].image[0]["#text"];
+	
+					var artworkImg = document.getElementById("artwork");
+					artworkImg.setAttribute("src", artwork);
+					var fakeBlur = document.getElementById('moneyOnMind');
+					fakeBlur.style.backgroundImage = `url(${tinyArtwork})`;
+					document.getElementById('fartOnMind').style.backgroundImage = `url(${tinyArtwork})`;
+	
+					var trackInfo = document.getElementById("track");
+					trackInfo.innerHTML = "\
+						<strong>"+song+"</strong><br />\
+						"+artist+"\
+					";
+	
+					if (typeof data.recenttracks.track[0]["@attr"] !== "undefined"){
+						var listenInfo = document.getElementById("listen");
+						listenInfo.innerHTML = '<span id="listenglow">LiSTENiNG</span> TO:';
+					} else {
+						var listenInfo = document.getElementById("listen");
+						listenInfo.innerHTML = 'last <span>listened</span> to:';
+						console.log("false");
+					}
+				} else {console.error("Error fetching data from server.");}
+			};
+			request.onerror = function() {console.error("Connection error.");};
+			request.send();
+		}
+		document.addEventListener('DOMContentLoaded', getNowPlaying());
+		function detectSize() {
+			if (window.innerHeight >= window.innerWidth) {
+				mainElement.classList.add('portrait');
+				document.getElementById('en-vert').classList.add('active-button');
+			} else {
+				mainElement.classList.add('landscape');
+				document.getElementById('en-hor').classList.add('active-button');
+			}
+		}
+		function enableHorizontal() {
+			mainElement.classList.replace('portrait', 'landscape');
 			document.getElementById('en-hor').classList.add('active-button');
+			document.getElementById('en-vert').classList.remove('active-button');
 		}
-	}
-	function enableHorizontal() {
-		mainElement.classList.replace('portrait', 'landscape');
-		document.getElementById('en-hor').classList.add('active-button');
-		document.getElementById('en-vert').classList.remove('active-button');
-	}
-	function enableVertical() {
-		mainElement.classList.replace('landscape', 'portrait');
-		document.getElementById('en-vert').classList.add('active-button');
-		document.getElementById('en-hor').classList.remove('active-button');
-	}
-	function setUser() {
-		document.getElementById('enter-name').style.display = 'block';
-		document.getElementById('username').value = user;
-	}
-	function confirmUser() {
-		user = document.getElementById('username').value;
-		document.getElementById('enter-name').style.display = 'none';
-		getNowPlaying();
-	}
-	detectSize();
-	setInterval(function(){getNowPlaying()}, 15000);
-</script>
+		function enableVertical() {
+			mainElement.classList.replace('landscape', 'portrait');
+			document.getElementById('en-vert').classList.add('active-button');
+			document.getElementById('en-hor').classList.remove('active-button');
+		}
+		function setUser() {
+			document.getElementById('enter-name').style.display = 'block';
+			document.getElementById('username').value = user;
+		}
+		function confirmUser() {
+			user = document.getElementById('username').value;
+			document.getElementById('enter-name').style.display = 'none';
+			getNowPlaying();
+		}
+		detectSize();
+		setInterval(function(){getNowPlaying()}, 15000);
+	</script>
+</html>
