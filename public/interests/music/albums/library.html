@@ -17,17 +17,26 @@
 				margin-block-start: 0;
 				margin-block-end: 0;
 			}
+			h2 {color: #004e5a;}
 			nav {
-				position: sticky;
+				position: fixed;
 				background: linear-gradient(180deg, #a3eeff 0%, #a3eeff00 100%);
 				margin: 0;
 				padding: 20px;
 				color: #001f25;
+				width: 100%;
+				top: 0;
+				z-index: 5;
 			}
 			main {
-				margin: 10px;
+				margin: 20px 0 0 20px;
+				margin-top: 60px;
 			}
-			#albums {
+			i {
+				color: #334a50;
+				opacity: 0.8;
+			}
+			.albums {
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: space-around;
@@ -37,41 +46,147 @@
 				width: 200px;
 				flex-direction: column;
 				align-items: center;
+				margin: 10px;
+				text-align: center;
 			}
+			.album:hover .cover {transform: translateY(-10px);}
+			.album:hover .cover:before {
+				filter: blur(15px);
+				bottom: -10px;
+				opacity: 0.7;
+			}
+			.cover, .cover:before, .cover:after {transition-duration: 0.3s;}
 			.cover, .cover img {
 				width: 100px;
 				height: 100px;
 			}
 			.cover {transform: skewY(-7deg);}
-			.cover:before {
+			.cover:before, .cover:after {
 				content: '';
 				width: 100%;
+				position: absolute;
+			}
+			.cover:before {
 				height: 10px;
 				background: #001f25;
-				position: absolute;
 				bottom: 0;
 				filter: blur(10px);
 				z-index: -1;
 			}
+			.cover:after {
+				height: 100%;
+				transform: translateX(-100px);
+				background: linear-gradient(180deg, #ffffff57 0%, #ebfbff00 50%, #ebfbff00 80%, #001f251a 100%);
+			}
 			.album .name {
 				font-weight: bold;
 				margin-top: 15px;
+				color: #00363f;
+			}
+			.album .artist {
+				font-size: 14px;
+				color: #1c3439;
 			}
 		</style>
 	</head>
 	<body>
 		<nav>
-			<div id="header">
-				<h1>MUSiC LiBRARY</h1>
-			</div>
+			<h1>MUSiC LiBRARY</h1>
 		</nav>
 		<main>
 			<h2>Digital</h2>
-			<div id="albums">
+			<div class="albums">
 				<a class="album">
 					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/d82fe962fa809c9e3b034def363d8f01.jpg" loading="lazy"></div>
 					<p class="name">Go! Go! Year of the Cow</p>
-					<p>Andor</p>
+					<p class="artist">Andor</p>
+				</a>
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/25c393d687d9f4f93863d678c642eff2.jpg" loading="lazy"></div>
+					<p class="name">Duelists In Love</p>
+					<p class="artist">Andor</p>
+				</a>
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/770x0/b44a010fdd93a24212931842113656b6.jpg" loading="lazy"></div>
+					<p class="name">Music for Menus</p>
+					<p class="artist">Blank Banshee</p>
+				</a>
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/f8d8ed0c361a0c5e2fc81d5e0976c3e0.jpg" loading="lazy"></div>
+					<p class="name">oh no we are lost</p>
+					<p class="artist">fishpaste</p>
+				</a>
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/5d38c4b46cd8522dc98eabdab43cb2bb.jpg" loading="lazy"></div>
+					<p class="name">Good Kid</p>
+					<p class="artist">Good Kid</p>
+				</a>
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/7d35179204f1a0ac5afbe3311b691ab0.jpg" loading="lazy"></div>
+					<p class="name">Good Kid 2</p>
+					<p class="artist">Good Kid</p>
+				</a>
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/32f25910da5748b6b768a3c62652dddb.jpg" loading="lazy"></div>
+					<p class="name">ROMCOM</p>
+					<p class="artist">Jakey</p>
+				</a>
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/770x0/a49cb7a5062e0d508a352fd22c35a302.jpg" loading="lazy"></div>
+					<p class="name">I LAY DOWN MY LIFE FOR YOU</p>
+					<p class="artist">JPEGMAFIA</p>
+				</a>
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/63287ae3739a01fe90e2809f8270c64a.jpg" loading="lazy"></div>
+					<p class="name">Polygondwanaland</p>
+					<p class="artist">King Gizzard and The Lizard Wizard</p>
+				</a>
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/770x0/6ef8df39522e0825e72ce7153b711fb2.jpg" loading="lazy"></div>
+					<p class="name">Boondoggling</p>
+					<p class="artist">Loser Camp</p>
+				</a>
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/5fc89a7571bf35d5c2830125c4a62b49.jpg" loading="lazy"></div>
+					<p class="name">maya is dead soon</p>
+					<p class="artist">maya is dead soon</p>
+				</a>
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/df99ce08456a61af83964e5dd15d5dbc.jpg" loading="lazy"></div>
+					<p class="name">Sewer Man</p>
+					<p class="artist">Mucoid</p>
+				</a>
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/653abf0dfc72d8963db495723e927162.jpg" loading="lazy"></div>
+					<p class="name">Zones</p>
+					<p class="artist">Mucoid</p>
+				</a>
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/84d291732889258ae58f06f4e28b1dbc.jpg" loading="lazy"></div>
+					<p class="name">Skin</p>
+					<p class="artist">Rav, Kill Bill: The Rapper, Scuare</p>
+				</a>
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/1bcf60893f8d9f6b1b1327880f5b0c88.jpg" loading="lazy"></div>
+					<p class="name">모두 살아 <i>(EVERYONE, LIVE)</i></p>
+					<p class="artist">Cecily Renns</p>
+				</a>
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/9e249393bc7e6f683ddcfdd77449a3c5.jpg" loading="lazy"></div>
+					<p class="name">Standing on the Corner</p>
+					<p class="artist">Standing on the Corner</p>
+				</a>
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/d5bd07fc8ddce04f38ab15df780b3e1b.jpg" loading="lazy"></div>
+					<p class="name">Vansire</p>
+					<p class="artist">Reflections and Reveries</p>
+				</a>
+			</div>
+			<h2>Bootlegs</h2>
+			<div class="albums">
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/60119eca579b666e2c51b8bcdc1cc2f9.jpg" loading="lazy"></div>
+					<p class="name">Weatherscan Music</p>
 				</a>
 			</div>
 		</main>
