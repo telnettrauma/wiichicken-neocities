@@ -17,7 +17,7 @@
 				margin-block-start: 0;
 				margin-block-end: 0;
 			}
-			h2 {color: #004e5a;}
+			h2, h3 {color: #004e5a;}
 			nav {
 				position: fixed;
 				background: linear-gradient(180deg, #a3eeff 0%, #a3eeff00 100%);
@@ -52,6 +52,7 @@
 			.album:hover .cover {transform: translateY(-10px);}
 			.album:hover .cover:before {
 				filter: blur(15px);
+				-webkit-filter: blur(15px);
 				bottom: -10px;
 				opacity: 0.7;
 			}
@@ -71,6 +72,7 @@
 				background: #001f25;
 				bottom: 0;
 				filter: blur(10px);
+				-webkit-filter: blur(10px);
 				z-index: -1;
 			}
 			.cover:after {
@@ -86,6 +88,23 @@
 			.album .artist {
 				font-size: 14px;
 				color: #1c3439;
+			}
+			#modal {
+				position: fixed;
+				z-index: 6;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: #171d1e;
+				display: flex;
+			}
+			#modal-box {
+				background-color: white;
+				margin: auto;
+				padding: 10px;
+				width: 50%;
 			}
 		</style>
 	</head>
@@ -178,11 +197,11 @@
 				</a>
 				<a class="album">
 					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/d5bd07fc8ddce04f38ab15df780b3e1b.jpg" loading="lazy"></div>
-					<p class="name">Vansire</p>
-					<p class="artist">Reflections and Reveries</p>
+					<p class="name">Reflections and Reveries</p>
+					<p class="artist">Vansire</p>
 				</a>
 			</div>
-			<h2>Bootlegs</h2>
+			<h3>Bootlegs</h3>
 			<div class="albums">
 				<a class="album">
 					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/60119eca579b666e2c51b8bcdc1cc2f9.jpg" loading="lazy"></div>
@@ -190,5 +209,27 @@
 				</a>
 			</div>
 		</main>
+		<div id="modal">
+			<div id="modal-box">
+				<span id="close-modal">&times;</span>
+				<div>
+					<img id="cover-art">
+					<div>
+						<div>
+							<h4 id="album-title">Title</h4>
+							<p id="album-artist">Artist</p>
+						</div>
+						<div>
+							<p>Year: <span id="album-year" class="mono">XXXX</span></p>
+							<p>Duration: <span id="album-duration" class="mono">00:00</span></p>
+						</div>
+						<div>
+							<p>Catalog Date: <span id="album-catalog" class="mono">January 1, 1970</span></p>
+							<p>Rating:</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
