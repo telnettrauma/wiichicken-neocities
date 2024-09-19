@@ -13,7 +13,7 @@
 				background-attachment: fixed;
 				font-family: Arial, Helvetica, sans-serif;
 			}
-			h1, h2, h3, h4, p {
+			h1, h2, h3, h4, p, ol {
 				margin-block-start: 0;
 				margin-block-end: 0;
 			}
@@ -90,6 +90,7 @@
 				color: #1c3439;
 			}
 			#modal {
+				display: none;
 				position: fixed;
 				z-index: 6;
 				left: 0;
@@ -97,15 +98,67 @@
 				width: 100%;
 				height: 100%;
 				overflow: auto;
-				background-color: #171d1e;
-				display: flex;
+				background-color: #004e5a;
+				animation: fadeIn 0.3s;
+			}
+			@keyframes fadeIn {
+				0% {opacity: 0; filter: blur(20px);}
+				100% {opacity: 1; filter: blur(0px);}
 			}
 			#modal-box {
-				background-color: white;
 				margin: auto;
-				padding: 10px;
-				width: 50%;
+				min-width: 400px;
 			}
+			#close-modal {
+				background-color: var(--on-primary-container);
+				color: var(--primary-container);
+				border: 1px solid var(--primary-container);
+				width: 30px;
+				height: 30px;
+				font-weight: bold;
+				font-size: 30px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			#modal-box, #modal-too-far {flex-direction: column;}
+			#the-modal, #modal-box, #modal-too-far {
+				display: flex;
+				gap: 10px;
+			}
+			#the-modal img {
+				width: 400px;
+				height: 400px;
+				border: 1px solid var(--primary-container);
+			}
+			#modal-too-far {width: 400px;}
+			.mono {font-family: monospace;}
+			.box {
+				background-color: var(--on-primary-container);
+				color: var(--primary-container);
+				padding: 10px;
+				border: 1px solid var(--primary-container);
+			}
+			#album-title {font-size: 24px;}
+			#album-info {
+				background-color: var(--on-tertiary-container);
+				color: var(--tertiary-container);
+				border: 1px solid var(--tertiary-container);
+			}
+			#track-list {
+				height: 100%;
+				background-color: var(--on-secondary-container);
+				color: var(--secondary-container);
+				border: 1px solid var(--secondary-container);
+				overflow-y: scroll;
+				padding-right: 0;
+			}
+			#track-list ol {padding-inline-start: 10px;}
+			#track-list ol li {
+				margin: 10px;
+				border-bottom: 1px solid var(--secondary-container);
+			}
+			#track-list ol li::marker {font-weight: bold;}
 		</style>
 	</head>
 	<body>
@@ -175,7 +228,7 @@
 					<p class="name">Sewer Man</p>
 					<p class="artist">Mucoid</p>
 				</a>
-				<a class="album">
+				<a class="album" onclick="loadInfo('data/m/mucoid.json', 0)">
 					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/500x500/653abf0dfc72d8963db495723e927162.jpg" loading="lazy"></div>
 					<p class="name">Zones</p>
 					<p class="artist">Mucoid</p>
@@ -211,25 +264,67 @@
 		</main>
 		<div id="modal">
 			<div id="modal-box">
-				<span id="close-modal">&times;</span>
-				<div>
+				<span id="close-modal" onclick="closeModal();">&times;</span>
+				<div id="the-modal">
 					<img id="cover-art">
-					<div>
-						<div>
-							<h4 id="album-title">Title</h4>
-							<p id="album-artist">Artist</p>
+					<div id="modal-too-far">
+						<div id="album-info" class="box">
+							<h4 id="album-title"></h4>
+							<p id="album-artist"></p>
 						</div>
-						<div>
-							<p>Year: <span id="album-year" class="mono">XXXX</span></p>
-							<p>Duration: <span id="album-duration" class="mono">00:00</span></p>
+						<div id="album-info-ext" class="box">
+							<p><strong>Year</strong>: <span id="album-year" class="mono">XXXX</span></p>
+							<p><strong>Rating</strong>: <span id="album-rating" class="mono">Rating</span></p>
+							<p><strong>Scrobbles</strong>: <span id="album-scrobbles" class="mono">500</span></p>
 						</div>
-						<div>
-							<p>Catalog Date: <span id="album-catalog" class="mono">January 1, 1970</span></p>
-							<p>Rating:</p>
-						</div>
+						<div id="track-list" class="box"></div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<script>
+			function loadInfo(toFetch, position) {
+				document.getElementById('modal').style.display = 'flex';
+				let jason;
+				fetch(toFetch)
+				.then(response => response.json())
+				.then(hello => {
+					jason = hello;
+					document.getElementById('album-title').innerHTML = hello.album[position].title;
+					document.getElementById('album-artist').innerHTML = hello.album[position].artist;
+					document.getElementById('album-year').innerHTML = hello.album[position].year;
+					document.getElementById('album-rating').innerHTML = hello.album[position].rating;
+					document.getElementById('cover-art').src = hello.album[position].image;
+					document.getElementById('modal-box').setAttribute('style', `--on-primary-container: ${hello.album[position].colors[0].bg}; --primary-container: ${hello.album[position].colors[0].fg}; --on-secondary-container: ${hello.album[position].colors[1].bg}; --secondary-container: ${hello.album[position].colors[1].fg}; --on-tertiary-container: ${hello.album[position].colors[2].bg}; --tertiary-container: ${hello.album[position].colors[2].fg};`);
+					const url = `http://ws.audioscrobbler.com/2.0/?method=album.getInfo&username=wiichicken&api_key=93016c14b5580e5f2a72cdc9413cfa36&artist=${hello.album[position].artist}&album=${hello.album[position].title}&format=json`;
+					let request = new XMLHttpRequest();
+					request.open('GET', url, true);
+					request.send();
+					request.onload = function () {
+						if (request.status >= 200 && request.status < 400) {
+							const data = JSON.parse(request.responseText);
+							document.getElementById('album-scrobbles').innerHTML = data.album.userplaycount;
+							let tracks = data.album.tracks.track;
+							let trackCount = tracks.length;
+							let ol = document.createElement('ol');
+							tracks.forEach(track => {
+								let li = document.createElement('li');
+								li.innerHTML = track.name;
+								ol.appendChild(li);
+							});
+							document.getElementById('track-list').innerHTML = '';
+							document.getElementById('track-list').appendChild(ol);
+						} else {console.log('Fuck.');}
+					};
+					request.onerror = function () {
+						console.log('request error. Fuck.');
+					};
+				})
+				.catch(error => {
+					console.log('Fuck:', error);
+				});
+			}
+			function closeModal() {document.getElementById('modal').style.display = 'none';}
+		</script>
 	</body>
 </html>

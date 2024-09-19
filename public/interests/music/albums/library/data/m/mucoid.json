@@ -1,0 +1,25 @@
+{
+	"album": [
+		{
+			"title": "Zones",
+			"artist": "Mucoid",
+			"year": "2024",
+			"rating": "none",
+			"image": "https://lastfm.freetls.fastly.net/i/u/500x500/653abf0dfc72d8963db495723e927162.jpg",
+			"colors": [
+				{
+					"fg": "#bef0b2",
+					"bg": "#002202"
+				},
+				{
+					"fg": "#d8e7cb",
+					"bg": "#131f0d"
+				},
+				{
+					"fg": "#bcebef",
+					"bg": "#002022"
+				}
+			]
+		}
+	]
+}
