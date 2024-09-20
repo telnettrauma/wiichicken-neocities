@@ -9,16 +9,16 @@
 			"image": "https://lastfm.freetls.fastly.net/i/u/500x500/f8d8ed0c361a0c5e2fc81d5e0976c3e0.jpg",
 			"colors": [
 				{
-					"fg": "#e8e78f",
-					"bg": "#1d1d00"
+					"fg": "#ece68d",
+					"bg": "#1e1c00"
 				},
 				{
-					"fg": "#e7e4bf",
-					"bg": "#1d1d06"
+					"fg": "#c0efaf",
+					"bg": "#002200"
 				},
 				{
-					"fg": "#c0ecd8",
-					"bg": "#002116"
+					"fg": "#eaddff",
+					"bg": "#220f46"
 				}
 			]
 		}
