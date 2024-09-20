@@ -1,0 +1,26 @@
+{
+	"album": [
+		{
+			"title": "I LAY DOWN MY LIFE FOR YOU",
+			"artist": "JPEGMAFIA",
+			"year": "2024",
+			"rating": "none",
+			"links": "<a href='https://jpegmafia.bandcamp.com/album/i-lay-down-my-life-for-you' target='_blank'>Bandcamp</a>",
+			"image": "https://lastfm.freetls.fastly.net/i/u/500x500/a49cb7a5062e0d508a352fd22c35a302.jpg",
+			"colors": [
+				{
+					"fg": "#e3dfff",
+					"bg": "#16134a"
+				},
+				{
+					"fg": "#e3e0f9",
+					"bg": "#1a1a2c"
+				},
+				{
+					"fg": "#ffdbcd",
+					"bg": "#360f00"
+				}
+			]
+		}
+	]
+}
