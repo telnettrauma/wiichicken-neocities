@@ -109,6 +109,7 @@
 			#modal-box {
 				margin: auto;
 				min-width: 400px;
+				max-width: 710px;
 			}
 			#close-modal {
 				background-color: var(--on-primary-container);
@@ -160,22 +161,32 @@
 				overflow-y: scroll;
 				padding-right: 0;
 			}
-			::-webkit-scrollbar {width: 5px;}
-			::-webkit-scrollbar-track {background-color: var(--on-secondary-container);}
-			::-webkit-scrollbar-thumb {background-color: var(--secondary-container);}
+			#track-list::-webkit-scrollbar {width: 5px;}
+			#track-list::-webkit-scrollbar-track {background-color: var(--on-secondary-container);}
+			#track-list::-webkit-scrollbar-thumb {background-color: var(--secondary-container);}
 			#track-list ol {padding-inline-start: 10px;}
 			#track-list ol li {
 				margin: 10px;
 				border-bottom: 1px solid var(--secondary-container);
 			}
 			#track-list ol li::marker {font-weight: bold;}
+			@media only screen and (max-width: 700px) {
+				#modal-box {min-width: unset;}
+				#the-modal {flex-direction: column-reverse;}
+				#the-modal img {
+					width: 300px;
+					height: 300px;
+				}
+				.cover::before {display: none;}
+				#disclaimers {max-width: 300px;}
+			}
 		</style>
 	</head>
 	<body>
 		<nav>
 			<h1>MUSiC LiBRARY</h1>
 		</nav>
-		<main>
+		<main id="main">
 			<h2>Digital</h2>
 			<div class="albums">
 				<a class="album" onclick="loadInfo('data/a/andor.json', 0);">
@@ -218,17 +229,17 @@
 					<p class="name">I LAY DOWN MY LIFE FOR YOU</p>
 					<p class="artist">JPEGMAFIA</p>
 				</a>
-				<a class="album">
+				<a class="album" onclick="loadInfo('data/k/kgatlw.json', 0);">
 					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/63287ae3739a01fe90e2809f8270c64a.jpg" loading="lazy"></div>
 					<p class="name">Polygondwanaland</p>
-					<p class="artist">King Gizzard and The Lizard Wizard</p>
+					<p class="artist">King Gizzard and the Lizard Wizard</p>
 				</a>
-				<a class="album">
+				<a class="album" onclick="loadInfo('data/l/losercamp.json', 0);">
 					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/770x0/6ef8df39522e0825e72ce7153b711fb2.jpg" loading="lazy"></div>
 					<p class="name">Boondoggling</p>
 					<p class="artist">Loser Camp</p>
 				</a>
-				<a class="album">
+				<a class="album" onclick="loadInfo('data/m/mayaisdead.json', 0)">
 					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/5fc89a7571bf35d5c2830125c4a62b49.jpg" loading="lazy"></div>
 					<p class="name">maya is dead soon</p>
 					<p class="artist">maya is dead soon</p>
@@ -284,18 +295,22 @@
 						</div>
 						<div id="album-info-ext" class="box">
 							<p><strong>Year</strong>: <span id="album-year" class="mono">XXXX</span></p>
-							<p><strong>Rating</strong>: <span id="album-rating" class="mono">Rating</span></p>
-							<p><strong>Scrobbles</strong>: <span id="album-scrobbles" class="mono">500</span></p>
+							<p><strong>Rating</strong>: <span id="album-rating" class="mono">none</span></p>
+							<p><strong>Scrobbles</strong>: <span id="album-scrobbles" class="mono">000</span></p>
 							<p><strong>Links</strong>: <span id="album-links"></span></p>
 						</div>
 						<div id="track-list" class="box"></div>
 					</div>
+				</div>
+				<div class="box" id="disclaimers">
+					<p>Some data is from last.fm. Due to inconsistencies in metadata tagging, scrobble counts may be lower, especially for EPs.</p>
 				</div>
 			</div>
 		</div>
 		<script>
 			function loadInfo(toFetch, position) {
 				document.getElementById('modal').style.display = 'flex';
+				document.getElementById('track-list').innerHTML = 'Loading...';
 				let jason;
 				fetch(toFetch)
 				.then(response => response.json())
@@ -344,6 +359,10 @@
 			document.addEventListener('keydown', function(event) {
 				if (event.key === 'Escape' || event.key === 'Esc') {closeModal();}
 			});
+			let modal = document.getElementById('modal');
+			window.onclick = function(event) {
+				if (event.target == modal) {modal.style.display = "none";}
+			}
 		</script>
 	</body>
 </html>
