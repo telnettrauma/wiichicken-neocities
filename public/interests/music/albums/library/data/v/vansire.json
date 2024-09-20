@@ -1,0 +1,26 @@
+{
+	"album": [
+		{
+			"title": "Reflections and Reveries",
+			"artist": "Vansire",
+			"year": "2016",
+			"rating": "2.5",
+			"links": "<a href='https://vansire.bandcamp.com/album/reflections-and-reveries' target='_blank'>Bandcamp</a>",
+			"image": "https://lastfm.freetls.fastly.net/i/u/500x500/d5bd07fc8ddce04f38ab15df780b3e1b.jpg",
+			"colors": [
+				{
+					"fg": "#ffdbcb",
+					"bg": "#341100"
+				},
+				{
+					"fg": "#ffdbcb",
+					"bg": "#2c160b"
+				},
+				{
+					"fg": "#ece4aa",
+					"bg": "#1f1c00"
+				}
+			]
+		}
+	]
+}

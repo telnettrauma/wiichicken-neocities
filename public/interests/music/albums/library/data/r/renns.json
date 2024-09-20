@@ -1,0 +1,26 @@
+{
+	"album": [
+		{
+			"title": "모두 살아",
+			"artist": "Cecily Renns",
+			"year": "2023",
+			"rating": "4.0",
+			"links": "<a href='https://cecilyrenns.bandcamp.com/album/everyone-live' target='_blank'>Bandcamp</a>",
+			"image": "https://lastfm.freetls.fastly.net/i/u/500x500/1bcf60893f8d9f6b1b1327880f5b0c88.jpg",
+			"colors": [
+				{
+					"fg": "#dde1ff",
+					"bg": "#06164b"
+				},
+				{
+					"fg": "#efdbff",
+					"bg": "#280d43"
+				},
+				{
+					"fg": "#ffddb1",
+					"bg": "#291800"
+				}
+			]
+		}
+	]
+}

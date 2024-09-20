@@ -21,6 +21,28 @@
 					"bg": "#002022"
 				}
 			]
+		},
+		{
+			"title": "Sewer Man",
+			"artist": "Mucoid",
+			"year": "2019",
+			"rating": "none",
+			"links": "<a href='https://mucoid.bandcamp.com/album/sewer-man' target='_blank'>Bandcamp</a>",
+			"image": "https://lastfm.freetls.fastly.net/i/u/500x500/df99ce08456a61af83964e5dd15d5dbc.jpg",
+			"colors": [
+				{
+					"fg": "#ffd9e1",
+					"bg": "#3a071a"
+				},
+				{
+					"fg": "#f0dbff",
+					"bg": "#280d42"
+				},
+				{
+					"fg": "#ffdcbf",
+					"bg": "#2d1600"
+				}
+			]
 		}
 	]
 }
