@@ -1,0 +1,26 @@
+{
+	"album": [
+		{
+			"title": "oh no we are lost",
+			"artist": "fishpaste",
+			"year": "2020",
+			"rating": "2.0",
+			"links": "<a href='https://fishpastemusic.bandcamp.com/album/oh-no-we-are-lost' target='_blank'>Bandcamp</a>",
+			"image": "https://lastfm.freetls.fastly.net/i/u/500x500/f8d8ed0c361a0c5e2fc81d5e0976c3e0.jpg",
+			"colors": [
+				{
+					"fg": "#e8e78f",
+					"bg": "#1d1d00"
+				},
+				{
+					"fg": "#e7e4bf",
+					"bg": "#1d1d06"
+				},
+				{
+					"fg": "#c0ecd8",
+					"bg": "#002116"
+				}
+			]
+		}
+	]
+}
