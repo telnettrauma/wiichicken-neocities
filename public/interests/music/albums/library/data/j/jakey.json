@@ -1,0 +1,26 @@
+{
+	"album": [
+		{
+			"title": "ROMCOM",
+			"artist": "Jakey",
+			"year": "2022",
+			"rating": "4.0",
+			"links": "<a href='https://jakeychristy.bandcamp.com/album/romcom' target='_blank'>Bandcamp</a>",
+			"image": "https://lastfm.freetls.fastly.net/i/u/500x500/32f25910da5748b6b768a3c62652dddb.jpg",
+			"colors": [
+				{
+					"fg": "#ffdad6",
+					"bg": "#3b0907"
+				},
+				{
+					"fg": "#ffdad6",
+					"bg": "#2c1513"
+				},
+				{
+					"fg": "#fddfa6",
+					"bg": "#261900"
+				}
+			]
+		}
+	]
+}

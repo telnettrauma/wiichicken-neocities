@@ -1,0 +1,26 @@
+{
+	"album": [
+		{
+			"title": "Standing on the Corner",
+			"artist": "Standing on the Corner",
+			"year": "2016",
+			"rating": "4.5",
+			"links": "<a href='https://standingonthecorner.bandcamp.com/album/standing-on-the-corner' target='_blank'>Bandcamp</a>",
+			"image": "https://lastfm.freetls.fastly.net/i/u/500x500/9e249393bc7e6f683ddcfdd77449a3c5.jpg",
+			"colors": [
+				{
+					"fg": "#bef0b2",
+					"bg": "#002202"
+				},
+				{
+					"fg": "#d6e8ce",
+					"bg": "#111f0f"
+				},
+				{
+					"fg": "#ffdf96",
+					"bg": "#251a00"
+				}
+			]
+		}
+	]
+}
