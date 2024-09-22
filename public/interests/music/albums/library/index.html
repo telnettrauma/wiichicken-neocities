@@ -307,7 +307,7 @@
 					</div>
 				</div>
 				<div class="box" id="disclaimers">
-					<p>Some data is from last.fm. Due to inconsistencies in metadata tagging, scrobble counts may be lower, especially for EPs.</p>
+					<p>Some data is from last.fm. Due to inconsistencies in metadata tagging, scrobble counts may be lower.</p>
 				</div>
 			</div>
 		</div>
@@ -339,6 +339,19 @@
 								document.getElementById('track-list').innerHTML = '<p>this album doesn\'t have a tracklist. this is because this album isn\'t real and i made it up</p>';
 								return;
 							}
+							// for EPs, checks if alternate tagging has more scrobbles
+							if (data.album.tracks.track.length <= 6) {
+								const secondRequest = new XMLHttpRequest();
+								secondRequest.open('GET', `http://ws.audioscrobbler.com/2.0/?method=album.getInfo&username=wiichicken&api_key=93016c14b5580e5f2a72cdc9413cfa36&artist=${hello.album[position].artist}&album=${hello.album[position].title} - EP&format=json`, true);
+								secondRequest.send();
+								secondRequest.onload = function () {
+									if (secondRequest.status >= 200 && secondRequest.status < 400) {
+										const epData = JSON.parse(secondRequest.responseText);
+										console.log(epData.album.userplaycount);
+										if (epData.album.userplaycount > data.album.userplaycount) {document.getElementById('album-scrobbles').innerHTML = epData.album.userplaycount;}
+									}
+								}
+							}
 							let tracks = data.album.tracks.track ? data.album.tracks.track : null;
 							let trackCount = tracks.length;
 							let ol = document.createElement('ol');
@@ -349,6 +362,7 @@
 							});
 							document.getElementById('track-list').innerHTML = '';
 							document.getElementById('track-list').appendChild(ol);
+							return;
 						} else {console.log('Fuck.');}
 					};
 					request.onerror = function () {
