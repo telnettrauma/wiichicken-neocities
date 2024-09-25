@@ -254,6 +254,11 @@ button {
 	padding: 0 7px 0 7px;
 	background-color: unset !important;
 }
+.topLinks a:first-child {color: #c5e7ff;}
+.topLinks a:nth-child(2) {color: #dce1ff;}
+.topLinks a:nth-child(3) {color: #ffd6fe;}
+.topLinks a:nth-child(4) {color: #ffdadb;}
+.topLinks a:nth-child(5) {color: #ffdad6;}
 #fakeLogo {
 	display: flex;
 	align-items: center;
