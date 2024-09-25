@@ -149,7 +149,10 @@ button {
 	image-rendering: pixelated;
 	background-position: center;
 }
-.noline::after {display: none;}
+.noline::after {
+	content: unset !important;
+	text-decoration: none !important;
+}
 #chewTooth {
 	position: fixed;
 	left: 0;

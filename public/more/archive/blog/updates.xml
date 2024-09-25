@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<atom:link href="https://wiggle.monster/more/archive/blog/updates.xml" rel="self" type="application/rss+xml"/>
+		<title>wiggle.monster SiTE UPDATES!!</title>
+		<link>https://wiggle.monster/more/archive/blog/updates</link>
+		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
+		<language>en-us</language>
+		<item>
+			<title>FREE LiTTLE LiBRARY</title>
+			<pubDate>Sun, 22 Sep 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>i made a library of all the music i digitally own</description>
+		</item>
+		<item>
+			<title>4K HDR</title>
+			<pubDate>Sun, 15 Sep 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>welcome... to the FUTURE!</description>
+		</item>
+		<item>
+			<title>NOT TOO MUCH</title>
+			<pubDate>Sun, 8 Sep 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>not too much is new this week</description>
+		</item>
+		<item>
+			<title>OK WOW i ACTUALLY DiD A LOT</title>
+			<pubDate>Sun, 1 Sep 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>you read the title</description>
+		</item>
+		<item>
+			<title>STATE OF MY SiTE</title>
+			<pubDate>Sun, 25 Aug 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>new, really long ramble blog post about the state of my site</description>
+		</item>
+		<item>
+			<title>STARTED FROM THE TOP, NOW WE ON THE BOTTOM</title>
+			<pubDate>Sun, 18 Aug 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>now the navigation bar is at the bottom</description>
+		</item>
+		<item>
+			<title>DOTS AND BOXES MiNUS THE DOTS</title>
+			<pubDate>Sun, 4 Aug 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>site update refresh, featuring slanted corners</description>
+		</item>
+		<item>
+			<title>COMiNG THROUGH</title>
+			<pubDate>Sun, 28 Jul 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>the look of the website is a mess</description>
+		</item>
+		<item>
+			<title>10:00:24 PM</title>
+			<pubDate>Sun, 21 Jul 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>is it normal to vomit string</description>
+		</item>
+	</channel>
+</rss>

@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<link href="/style.css" rel="stylesheet">
+	<link rel="alternate" type="application/rss+xml" href="updates.xml" title="RSS">
 	<noscript><style>#poopBlock iframe {display: block !important;}</style></noscript>
 	<style>
 		* {
@@ -22,6 +23,21 @@
 			margin-block-start: 0;
 			margin-block-end: 0;
 		}
+		button {
+			background-color: var(--dark-on-tertiary);
+			color: var(--dark-tertiary);
+			border: 1px solid var(--dark-tertiary);
+			box-shadow: 2px 2px 0 0 var(--dark-tertiary);
+			margin: 3px;
+		}
+		button:hover {
+			box-shadow: 1px 1px 0 0 var(--dark-tertiary);
+			transform: translate(1px, 1px);
+		}
+		button:active {
+			box-shadow: unset;
+			transform: translate(2px, 2px);
+		}
 		.timeline {
 			display: flex;
 			max-width: 800px;
@@ -33,6 +49,11 @@
 			border: 1px solid var(--border);
 			border-right: none;
 			border-bottom: none;
+		}
+		.sec-t {
+			--light-on-primary-container: #09201799;
+			--dark-on-primary-container: #cfe9da;
+			--border: #00ff6a;
 		}
 		header {color: #cfe9da;}
 	</style>
@@ -48,6 +69,9 @@
 	<main>
 		<div class="box page-top">
 			<h1>SiTE UPDATE LOG</h1>
+		</div>
+		<div class="box sec-b">
+			<a href="updates.xml" target="_blank" class="noline"><button>RSS Feed</button></a>
 		</div>
 		<div class="timeline">
 			<div class="time-line"></div>
