@@ -1,16 +1,12 @@
 function addTheFart() {
 	const poopBlock = document.getElementById('poopBlock');
-	const sideButton = document.getElementById('sideButton');
-	const overSide = document.getElementById('overSide');
-	if (!poopBlock || !sideButton || !overSide) {
+	if (!poopBlock) {
 		console.error('Error: One or more elements not found');
 		return;
 	}
 	poopBlock.removeAttribute('style');
 	poopBlock.innerHTML = '<a href="#start" id="to-start"><button>Skip to Content</button></a><a id="fakeLogo" href="/index.html" title="Home"><div class="square" id="s1"></div><div class="square" id="s2"></div></a><div id="inHead"><div class="topLinks"><a href="/aboutme.html"><img src="/resources/nav/me.png">ABOUT</a><a href="/creative/index.html"><img src="/resources/nav/art.png">ART</a><a href="/more/archive/blog/index.html"><img src="/resources/nav/blog.png">BLOG</a><a href="/interests/index.html"><img src="/resources/nav/intr.png">iNTERESTS</a><a href="/more/index.html"><img src="/resources/nav/more.png">MORE</a><a href="/guestbook.html"><img src="/resources/nav/gb.png">GUESTBOOK</a></div></div>';
 }
-function openSidey() {document.getElementById('overSide').style.display = 'flex';}
-function closeSidey() {document.getElementById('overSide').style.display = 'none';}
 addTheFart();
 function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms || DEF_DELAY));}
 var whatIsOpera = (navigator.userAgent.match(/Opera|OPR\//) ? true : false);

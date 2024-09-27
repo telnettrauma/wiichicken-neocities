@@ -4,27 +4,35 @@
 	<meta name="robots" content="noindex">
 	<link href="/style.css" rel="stylesheet">
 	<style>
-		body {background: black;}
-		#fakeLogo {
-			margin: -6px 20px 0 0;
-			padding: 2px;
-		}
-		#fakeLogo:hover {
-			padding: 2px;
-			transform: unset;
-		}
-		#fakeLogo .square {
-			width: 5px;
-			height: 5px;
-			animation: none !important;
-		}
-		#fakeLogo:hover .square {
-			transform: scale(1);
-			height: 8px;
-			margin: 2px;
-		}
+		* {--bg-1: red;}
 		#fakeLogo:hover #s1 {margin-right: 2px;}
-		#inHead {padding-right: 50px;}
+		#fakeLogo:hover {transform: unset;}
+		@media only screen and (min-width: 650px) {
+			body {background: black;}
+			#fakeLogo {
+				margin: -2px 20px 0 0;
+				padding: 2px;
+				border: 1px solid black;
+			}
+			#fakeLogo:hover {padding: 2px;}
+			#fakeLogo .square {
+				width: 5px;
+				height: 5px;
+				animation: none !important;
+			}
+			#fakeLogo:hover .square {
+				transform: scale(1);
+				height: 8px;
+				margin: 2px;
+			}
+			#inHead {padding-right: 50px;}
+		}
+		@media only screen and (max-width: 650px) {
+			#fakeLogo:hover {padding: 6px;}
+			#fakeLogo:hover .square {
+				transform: scale(1.2);
+			}
+		}
 	</style>
 </head>
 <body>

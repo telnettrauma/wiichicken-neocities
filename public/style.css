@@ -456,6 +456,7 @@ button {
 		z-index: 50 !important;
 	}
 	.heading::after {background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-1) 100%);}
+	#poopBlock iframe {height: 60px;}
 	.footer p {text-align: left;}
 }
 /* prefers reduced transparency */
