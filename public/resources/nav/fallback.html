@@ -1,25 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta name="robots" content="noindex">
 	<link href="/style.css" rel="stylesheet">
+	<style>
+		body {background: black;}
+		#fakeLogo {
+			margin: -6px 20px 0 0;
+			padding: 2px;
+		}
+		#fakeLogo:hover {
+			padding: 2px;
+			transform: unset;
+		}
+		#fakeLogo .square {
+			width: 5px;
+			height: 5px;
+			animation: none !important;
+		}
+		#fakeLogo:hover .square {
+			transform: scale(1);
+			height: 8px;
+			margin: 2px;
+		}
+		#fakeLogo:hover #s1 {margin-right: 2px;}
+		#inHead {padding-right: 50px;}
+	</style>
 </head>
 <body>
-<div id="inHead">
-	<div class="topLinks">
-		<a target="_top" href="/aboutme.html">ABOUT</a>
-		<a target="_top" href="/creative/index.html">ART</a>
-		<a target="_top" href="/more/archive/blog/index.html">BLOG</a>
-	</div>
-	<a target="_top" id="fakeLogo" href="/index.html">
-		<div class="square" id="s1" style="background-color: red;"></div>
-		<div class="square" id="s2" style="background-color: #00a2ff; margin-right: 0;"></div>
+	<a href="#start" id="to-start">
+		<button>Skip to Content</button>
 	</a>
-	<div class="topLinks">
-		<a target="_top" href="/interests/index.html">MEDiA</a>
-		<a target="_top" href="/more/index.html">MORE</a>
-		<a target="_top" href="/guestbook.html">GUESTBOOK</a>
+	<a id="fakeLogo" href="/index.html" title="Home" target="_top">
+		<div class="square" id="s1"></div>
+		<div class="square" id="s2"></div>
+	</a>
+	<div id="inHead">
+		<div class="topLinks">
+			<a href="/aboutme.html" target="_top"><img src="/resources/nav/me.png">ABOUT</a>
+			<a href="/creative/index.html" target="_top"><img src="/resources/nav/art.png">ART</a>
+			<a href="/more/archive/blog/index.html" target="_top"><img src="/resources/nav/blog.png">BLOG</a>
+			<a href="/interests/index.html" target="_top"><img src="/resources/nav/intr.png">iNTERESTS</a>
+			<a href="/more/index.html" target="_top"><img src="/resources/nav/more.png">MORE</a>
+		</div>
 	</div>
-</div>
 </body>
 </html>
