@@ -90,25 +90,51 @@
 				gap: 10px;
 			}
 			.lightbox {
-				background-image: linear-gradient(180deg, rgba(0,31,38,1) 0%, #334a50 100%);
-				width: 60px;
+				background-image: linear-gradient(0deg, rgba(0,31,38,1) 0%, #334a50 100%);
+				width: 80px;
 				min-height: 60px;
 				border: 1px solid #5ad5f9;
 				display: flex;
 				justify-content: center;
 				align-items: flex-end;
-				padding: 0;
+				padding: 3px;
 			}
 			.lightbox a {background-color: unset;}
-			.lightbox a img {
+			.image {
+				transform: skewY(-7deg) translateX(3px);
 				padding: 15px 5px 15px 5px;
-				width: 42px;
-				height: 60px;
 				background-color: var(--bg);
+				box-shadow: 2px 2px 10px 0 black, inset 15px -10px 40px 0px #00000080, inset 0px 20px 20px 0px rgba(255, 255, 255, 0.3);
+				position: relative;
 			}
-			.fic-row .box {
-				margin-bottom: 0;
+			.image img {
+				width: 32px;
+				height: 32px;
 			}
+			.image::before, .image::after {
+				content: '';
+				position: absolute;
+				background: var(--bg);
+			}
+			.image::before {
+				height: 65px;
+				top: 0;
+				transform: skewY(45deg);
+				transform-origin: right bottom;
+				width: 6px;
+				left: -6px;
+				opacity: 0.6;
+			}
+			.image::after {
+				opacity: 0.3;
+				left: 0;
+				width: 100%;
+				transform-origin: bottom left;
+				transform: skew(45deg);
+				height: 6px;
+				top: -6px;
+			}
+			.fic-row .box {margin-bottom: 0;}
 			.fic-row .box h4 {text-align: left;}
 		</style>
 	</head>
@@ -136,27 +162,32 @@
 		</div>
 		<div class="rows">
 			<div class="fic-row">
-				<div class="lightbox">
-					<a href="https://plorg.neocities.org/" target="_blank" style="--bg: #bec2ff;">
-						<img loading="lazy" src="img/ficon/art/plorg.ico">
-					</a>
-				</div>
+				<a href="https://plorg.neocities.org" target="_blank" style="--bg: #bec2ff;" class="lightbox">
+					<div class="image"><img loading="lazy" src="img/ficon/art/plorg.ico"></div>
+				</a>
 				<div class="box">
 					<h4>Poorly Planned Comics</h4>
 					<p>archive of the most interesting comic i have ever read</p>
 				</div>
 			</div>
-		</div>
-		<div class="box shelf" style="background-size: 170px;">
-			<a class="blog" href="https://plorg.neocities.org/" target="_blank" style="--bg: #bec2ff; --fg: #272b60;">
-				<img loading="lazy" src="img/ficon/art/plorg.ico">
-				<h4>Poorly Planned Comics</h4>
-				<p>archive of the most interesting comic i have ever read</p>
-			</a>
-			<a href="https://castlezzt-archive.neocities.org" target="_blank" class="blog">
-				<h4>castleZZT archive</h4>
-				<p>archive of more comics created by Jack Masters, the creator of the comic previously linked</p>
-			</a>
+			<div class="fic-row">
+				<a href="https://castlezzt-archive.neocities.org" target="_blank" class="lightbox whitebook">
+					<div class="image"><img loading="lazy" src="img/ficon/default.png"></div>
+				</a>
+				<div class="box">
+					<h4>castleZZT archive</h4>
+					<p>archive of more comics created by Jack Masters, the creator of the comic linked above</p>
+				</div>
+			</div>
+			<div class="fic-row">
+				<a href="https://www.sbnation.com/a/17776-football" target="_blank" class="lightbox" style="--bg: #ffb3af;">
+					<div class="image"><img loading="lazy" src="img/ficon/blog/stories/17776.png"></div>
+				</a>
+				<div class="box">
+					<h4>17776</h4>
+					<p>What football will look like in the future</p>
+				</div>
+			</div>
 		</div>
 		<div class="box">
 			<h2>BLOGS</h2>
