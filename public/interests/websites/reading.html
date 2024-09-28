@@ -17,7 +17,7 @@
 				display: flex;
 				flex-wrap: wrap;
 				padding: 0 !important;
-				max-width: 698px;
+				max-width: 700px;
 				justify-content: space-around;
 				overflow: hidden;
 			}
@@ -84,6 +84,32 @@
 				--bg: #d4d4d4;
 				--fg: #3e4040;
 			}
+			.fic-row {
+				margin-bottom: 10px;
+				display: flex;
+				gap: 10px;
+			}
+			.lightbox {
+				background-image: linear-gradient(180deg, rgba(0,31,38,1) 0%, #334a50 100%);
+				width: 60px;
+				min-height: 60px;
+				border: 1px solid #5ad5f9;
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+				padding: 0;
+			}
+			.lightbox a {background-color: unset;}
+			.lightbox a img {
+				padding: 15px 5px 15px 5px;
+				width: 42px;
+				height: 60px;
+				background-color: var(--bg);
+			}
+			.fic-row .box {
+				margin-bottom: 0;
+			}
+			.fic-row .box h4 {text-align: left;}
 		</style>
 	</head>
 	<body>
@@ -102,7 +128,35 @@
 		</div>
 		<div class="box">
 			<h1>READS</h1>
-			<p>things you can read</p>
+			<p>things you can read. online.<br>just click a book to read it. it is so easy...</p>
+		</div>
+		<div class="box">
+			<h2>FiCTiON</h2>
+			<p>gamerscore is just AR points for people who play video games. and aren't in elementary school<br>this also includes things like webcomics and the like</p>
+		</div>
+		<div class="rows">
+			<div class="fic-row">
+				<div class="lightbox">
+					<a href="https://plorg.neocities.org/" target="_blank" style="--bg: #bec2ff;">
+						<img loading="lazy" src="img/ficon/art/plorg.ico">
+					</a>
+				</div>
+				<div class="box">
+					<h4>Poorly Planned Comics</h4>
+					<p>archive of the most interesting comic i have ever read</p>
+				</div>
+			</div>
+		</div>
+		<div class="box shelf" style="background-size: 170px;">
+			<a class="blog" href="https://plorg.neocities.org/" target="_blank" style="--bg: #bec2ff; --fg: #272b60;">
+				<img loading="lazy" src="img/ficon/art/plorg.ico">
+				<h4>Poorly Planned Comics</h4>
+				<p>archive of the most interesting comic i have ever read</p>
+			</a>
+			<a href="https://castlezzt-archive.neocities.org" target="_blank" class="blog">
+				<h4>castleZZT archive</h4>
+				<p>archive of more comics created by Jack Masters, the creator of the comic previously linked</p>
+			</a>
 		</div>
 		<div class="box">
 			<h2>BLOGS</h2>
