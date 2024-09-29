@@ -149,7 +149,10 @@ button {
 	image-rendering: pixelated;
 	background-position: center;
 }
-.noline::after {display: none;}
+.noline::after {
+	content: unset !important;
+	text-decoration: none !important;
+}
 #chewTooth {
 	position: fixed;
 	left: 0;
@@ -251,6 +254,11 @@ button {
 	padding: 0 7px 0 7px;
 	background-color: unset !important;
 }
+.topLinks a:first-child {color: #c5e7ff;}
+.topLinks a:nth-child(2) {color: #dce1ff;}
+.topLinks a:nth-child(3) {color: #ffd6fe;}
+.topLinks a:nth-child(4) {color: #ffdadb;}
+.topLinks a:nth-child(5) {color: #ffdad6;}
 #fakeLogo {
 	display: flex;
 	align-items: center;
@@ -448,6 +456,7 @@ button {
 		z-index: 50 !important;
 	}
 	.heading::after {background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-1) 100%);}
+	#poopBlock iframe {height: 60px;}
 	.footer p {text-align: left;}
 }
 /* prefers reduced transparency */

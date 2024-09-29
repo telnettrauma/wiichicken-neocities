@@ -2,12 +2,10 @@
 body {
 	margin: 0;
 	font-family: 'PT Sans', sans-serif;
-}
-h1, h2, h3, h4, h5, h6 {font-family: 'Martian Mono', monospace;}
-body {
 	background-color: var(--bg);
 	color: var(--main);
 }
+h1, h2, h3, h4, h5, h6 {font-family: 'Martian Mono', monospace;}
 hr {
 	height: 0px;
 	color: var(--border);
@@ -17,6 +15,7 @@ a {
 	color: var(--bg);
 	text-decoration: none;
 }
+#themachine, main {margin-bottom: 40px !important;}
 .heading {
 	width: 100%;
 	z-index: 10;

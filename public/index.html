@@ -34,6 +34,7 @@
 		gap: 10px;
 	}
 	iframe {border: none;}
+	.heading {display: none;}
 	#leftSidebar, #rightSidebar {transition-duration: 0.5s;}
 	#leftSidebar {
 		order: 1;
@@ -156,7 +157,6 @@
 	@media only screen and (min-width: 900px) {
 		#frens {animation: pooFart 1.1s;}
 		#moresites {animation: pooFart 1.2s;}
-		#webr {animation: pooFart 1.3s;}
 		#piclog {animation: fartPoo 1.1s;}
 		#scrobblebox {animation: fartPoo 1.2s;}
 		#visitorcount {animation: fartPoo 1.3s;}
@@ -608,7 +608,6 @@
 			width: auto;
 			margin-left: 0;
 		}
-		#webr {width: 100%;}
 		#littleBuddies {flex-direction: row;}
 		#littleBuddies .box {
 			width: 100% !important;
@@ -627,8 +626,6 @@
 			min-height: 50px;
 		}
 		#personSighted {display: flex;}
-		#moresites, #webr {margin-right: 10px !important;}
-		#webr {margin-top: 0;}
 		#lonelyNav {margin-left: 0 !important;}
 		#alibaba {
 			align-items: flex-start;
@@ -655,10 +652,7 @@
 		.sidehead p {color: white !important;}
 	}
 </style>
-<div id="heightCheck"></div>
 <div class="heading" id="poopBlock"></div>
-<div id="sideButton" onclick="openSidey()"></div>
-<div id="overSide"></div>
 <div id="chewTooth"></div>
 <div class="main">
 	<div id="flex">
@@ -739,14 +733,6 @@
 							<a href="#mybum" style="margin-left: 0px;">MY BUTTON!</a>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="sidebox" id="webr" style="--side-bg: #3a0030cc; --side-text: #ffd8ee; --border: #af0095;">
-				<div class="sidehead" style="color: #ffade4;">
-					<p class="boxy" style="background: linear-gradient(90deg, #77009a 0%, #510097 100%);"><strong>WEBRiNG</strong></p>
-				</div>
-				<div class="sidebox-content boxy">
-					<p>the creator of the last webring i was in didn't renew their domain</p>
 				</div>
 			</div>
 		</aside>
@@ -883,6 +869,7 @@
 					</li>
 					<li>dig through my bookmarks to add to the directory</li>
 					<li>make a guestbook archive</li>
+					<li>improve the text reading experience</li>
 				</ul>
 				<p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
 			</div>
@@ -910,11 +897,34 @@
 			</div>
 			<div class="box sec-t">
 				<h2>siteUpdates</h2>
-				<h3 style="margin: 0; font-size: 15px;"><strong>LiTTLE FREE LiBRARY</strong></h3>
-				<p id="updatedate">September 22, 2024</p>
+				<h3 style="margin: 0; font-size: 15px;"><strong>YET ANOTHER MiNOR NAVBAR UPDATE</strong></h3>
+				<p id="updatedate">September 29, 2024</p>
 			</div>
 			<div class="box">
-				<p>i made a library of all the music that i digitally own. how cool is that? you can check it out <a href="/interests/music/albums/library/" target="_blank">here</a>.<br>this is quite innovative for me because this actually uses json files to load the metadata for each album, making it less of a pain in the butt to manage. cool! <img src='/media/emoji/glasses.gif' loading='lazy' alt=''></p>
+				<p>yep, you read the title! there is another minor update to the navigation bar! but this time its one i have been wanting to make for quite some time, so its actually fine <img src='/media/emoji/relieved.gif' loading='lazy' alt=''></p>
+				<ul>
+					<li>the colors of the links on the navbar now correspond more to the color of the page. i hope this makes more people realize that they are colored to be a blue to red gradient</li>
+					<li>javascript-free navbar now works again, as well as the navbar on some deep pages that have custom navbars. at least, i think it works</li>
+					<li>due to weird things related to metadata tagging, the scrobble count for EPs in the <a href="\interests\music\albums\library\" target="_blank">album library</a> would sometimes be lower than the actual count. worry not, as now there is a check for separate metadata tagging, and it will automatically switch to the tagging version with more scrobbles</li>
+					<li>RSS feed for site updates, and started updating the one for blog posts again. who knows how long until i forget!</li>
+					<li>new section for online fiction on the <a href="\interests\websites\reading.html" target="_blank">reading</a> page, and yes it looks out of place</li>
+				</ul>
+				<p>just as a cool little experiemnt, i wanna try listing all of the changes i can think of, just because:</p>
+				<details>
+					<summary>everything!</summary>
+					<ul>
+						<li>removed the webring widget</li>
+						<li>harmonized the color of the tags in the blog</li>
+						<li>cursor changes to a pointer when hovering over an album in the album library</li>
+						<li>improved rounded corners on some pages</li>
+						<li>pages with a breadcrumb navbar now display it correctly</li>
+						<li>each section is now sorted alphabetically by URl in the directory</li>
+						<li>added some sites to the directory</li>
+						<li>icon shown next to pages without a favicon in the directory is no longer anti-aliased</li>
+						<li>there is now a little bit of spacing between bullet points in the site update page</li>
+						<li>added RSS feed buttons to blog and site update pages. now you don't have to rely on your browser showing an RSS icon in the navbar</li>
+					</ul>
+				</details>
 			</div>
 			<div class="box sec-b">
 				<p>site updates almost every sunday, blog posts and content updates whenever</p>
@@ -995,7 +1005,7 @@
 				</div>
 				<div class="sidebox-content boxy" id="flood-inner" style="height: 100px; padding: 0; overflow: hidden;">
 					<link href="resources/widgets/home/flood/flood.css" rel="stylesheet" type="text/css" media="all"/>
-					<button id="flood-fill-water" class="bring">FiLL</button>
+					<button id="flood-fill-water" class="bring">FiLL TANK</button>
 				</div>
 			</div>
 		</aside>

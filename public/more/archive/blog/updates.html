@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<link href="/style.css" rel="stylesheet">
+	<link rel="alternate" type="application/rss+xml" href="updates.xml" title="RSS">
 	<noscript><style>#poopBlock iframe {display: block !important;}</style></noscript>
 	<style>
 		* {
@@ -22,6 +23,21 @@
 			margin-block-start: 0;
 			margin-block-end: 0;
 		}
+		button {
+			background-color: var(--dark-on-tertiary);
+			color: var(--dark-tertiary);
+			border: 1px solid var(--dark-tertiary);
+			box-shadow: 2px 2px 0 0 var(--dark-tertiary);
+			margin: 3px;
+		}
+		button:hover {
+			box-shadow: 1px 1px 0 0 var(--dark-tertiary);
+			transform: translate(1px, 1px);
+		}
+		button:active {
+			box-shadow: unset;
+			transform: translate(2px, 2px);
+		}
 		.timeline {
 			display: flex;
 			max-width: 800px;
@@ -34,7 +50,15 @@
 			border-right: none;
 			border-bottom: none;
 		}
+		section {margin-bottom: 5px !important;}
+		.sec-b {margin-bottom: 10px !important;}
+		.sec-t, .time-line {
+			--light-on-primary-container: #09201799;
+			--dark-on-primary-container: #cfe9da;
+			--border: #00ff6a;
+		}
 		header {color: #cfe9da;}
+		li {margin-bottom: 5px;}
 	</style>
 </head>
 <body>
@@ -49,12 +73,45 @@
 		<div class="box page-top">
 			<h1>SiTE UPDATE LOG</h1>
 		</div>
+		<div class="box sec-b">
+			<a href="updates.xml" target="_blank" class="noline"><button>RSS Feed</button></a>
+		</div>
 		<div class="timeline">
 			<div class="time-line"></div>
 			<div class="not-time">
 			<div class="box sec-t">
 				<h2>SEPTEMBER</h2>
 			</div>
+			<section class="box">
+				<header>
+					<h3>YET ANOTHER MiNOR NAVBAR CHANGE</h3>
+					<p>September 29, 2024</p>
+				</header>
+				<p>yep, you read the title! there is another minor update to the navigation bar! but this time its one i have been wanting to make for quite some time, so its actually fine <img src='/media/emoji/relieved.gif' loading='lazy' alt=''></p>
+				<ul>
+					<li>the colors of the links on the navbar now correspond more to the color of the page. i hope this makes more people realize that they are colored to be a blue to red gradient</li>
+					<li>javascript-free navbar now works again, as well as the navbar on some deep pages that have custom navbars. at least, i think it works</li>
+					<li>due to weird things related to metadata tagging, the scrobble count for EPs in the <a href="\interests\music\albums\library\" target="_blank">album library</a> would sometimes be lower than the actual count. worry not, as now there is a check for separate metadata tagging, and it will automatically switch to the tagging version with more scrobbles</li>
+					<li>RSS feed for site updates, and started updating the one for blog posts again. who knows how long until i forget!</li>
+					<li>new section for online fiction on the <a href="\interests\websites\reading.html" target="_blank">reading</a> page, and yes it looks out of place</li>
+				</ul>
+				<p>just as a cool little experiemnt, i wanna try listing all of the changes i can think of, just because:</p>
+				<details>
+					<summary>everything!</summary>
+					<ul>
+						<li>removed the webring widget</li>
+						<li>harmonized the color of the tags in the blog</li>
+						<li>cursor changes to a pointer when hovering over an album in the album library</li>
+						<li>improved rounded corners on some pages</li>
+						<li>pages with a breadcrumb navbar now display it correctly</li>
+						<li>each section is now sorted alphabetically by URl in the directory</li>
+						<li>added some sites to the directory</li>
+						<li>icon shown next to pages without a favicon in the directory is no longer anti-aliased</li>
+						<li>there is now a little bit of spacing between bullet points in the site update page</li>
+						<li>added RSS feed buttons to blog and site update pages. now you don't have to rely on your browser showing an RSS icon in the navbar</li>
+					</ul>
+				</details>
+			</section>
 			<section class="box">
 				<header>
 					<h3>FREE LiTTLE LiBRARY</h3>
