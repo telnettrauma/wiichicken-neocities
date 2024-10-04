@@ -41,16 +41,8 @@
 				margin-block-start: 0;
 				margin-block-end: 0;
 			}
+			h2, header {margin-bottom: 3px !important;}
 			.head {background-image: url('/media/headers/more.png');}
-			.fake-button {box-shadow: 2px 2px 0 0 var(--box-border);}
-			.fake-button:hover {
-				box-shadow: 1px 1px 0 0 var(--box-border);
-				transform: translate(1px, 1px);
-			}
-			.fake-button:active {
-				box-shadow: none;
-				transform: translate(2px, 2px);
-			}
 			.row {
 				display: flex;
 				width: 100%;
@@ -78,35 +70,20 @@
 		<div id="chewTooth"></div>
 		<main>
 			<div class="box head page-top"></div>
-			<header class="box sec-full">
+			<header class="box sec-t">
 				<h1>MORE PROJECTS</h1>
 				<p>stuff where i dind't really have another place to put them. mainly just like projects and stuff from over the years.</p>
 			</header>
-			<div class="row">
-				<div class="box fake-button sec-tl">
-					<a class="noline" href="archive/index.html" style="color: #ffdad4;">
-						<h3>ARCHiVE</h3>
-						<p>my slowly ever growing archive of things</p>
-					</a>
-				</div>
-				<div class="box lefty fake-button sec-tr" style="background-color: #2f1500d0; --border: #ff8800;">
-					<a class="noline" href="idle_file/versions.html" style="color: #ffdcc3;">
-						<h3>idle file</h3>
-						<p>idle game i abandoned before it got good <span class="jsalert">requires javascript</span></p>
-					</a>
-				</div>
-			</div>
-			<div class="box fake-button sec-b" style="background-color: #271900d0; --border: yellow;">
-				<a class="noline" href="https://aisites.neocities.org" target="_blank" style="color: #ffdea9;">
-					<h3>aisites</h3>
-					<p>back when generative ai wasn't that good i made this for comedic purposes. i stopped work on it because ai suddenly got good, causing the project to no longer be funny, and because i felt bad about stealing code, even if it wasn't for profit.</p>
-				</a>
+			<div class="box sec-b">
+				<ul>
+					<li><a href="archive/">archive</a> - my slowly growing archive of things of mine</li>
+					<li><a href="archive/blog/concepts/lists/">lists</a> - exactly what it sounds like. lists of things</li>
+				</ul>
 			</div>
 			<h2 class="sec-t box">OTHER</h2>
 			<div class="box sec-b">
 				<p>projects that aren't significant enough to go to the above section</p>
 				<ul>
-					<li><a href="archive/blog/concepts/lists/">lists</a> - exactly what it sounds like. lists of things</li>
 					<li><a href="glunk">Glunk</a> - glunk</li>
 					<li><a href="tools/userscripts/tweetbutton.html">replace X 'Post' buttons with 'Tweet' buttons</a> - userscript that does exactly what it says on the tin</li>
 				</ul>
@@ -115,8 +92,10 @@
 			<div class="box sec-b">
 				<p>these suck and lack polish, but im still including them here because why not, ya know?!? <strong>actually, just avoid viewing these ones at all, they're all awful</strong></p>
 				<ul>
+					<li><a href="idle_file/versions.html">idle file</a> - idle game i abandoned before it got good</li>
 					<li><a href="gamerquiz/index.html">are U a gamer?</a> - lets see if u are! take dis quiz to find out! (disclaimer: this one isnt and never was funny) <span class="jsalert">requires javascript</span></li>
 					<li><a href="yomommamachine/yo.html">yo momma machine</a> - the machine the government doesnt want you or yo step sissy to know about <span class="jsalert">requires javascript</span></li>
+					<li><a href="https://aisites.neocities.org" target="_blank">aisites</a> - back when generative ai wasn't that good i made this for comedic purposes. i stopped work on it because ai suddenly got good, causing the project to no longer be funny, and because i felt bad about stealing code, even if it wasn't for profit.</li>
 					<li><a href="randomscreenshot.html">random screenshots</a> - random screenshots uploaded to lightshot <span class="jsalert">requires javascript</span></li>
 				</ul>
 			</div>
