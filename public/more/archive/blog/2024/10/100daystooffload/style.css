@@ -1,0 +1,8 @@
+body {
+	background-color: var(--light);
+	color: var(--dark);
+	max-width: 700px;
+	margin: auto;
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+}
