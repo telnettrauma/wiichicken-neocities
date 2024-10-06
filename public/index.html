@@ -362,7 +362,6 @@
 		mix-blend-mode: multiply;
 		background-color: rgb(50, 50, 50) !important;
 		color: white !important;
-		transition-duration: 0.4s;
 	}
 	#navig a::after, #lonelyNav a::after {
 		background: black;
@@ -652,7 +651,7 @@
 		.sidehead p {color: white !important;}
 	}
 </style>
-<div class="heading" id="poopBlock"></div>
+<!-- <div class="heading" id="poopBlock"></div> -->
 <div id="chewTooth"></div>
 <div class="main">
 	<div id="flex">
@@ -751,7 +750,7 @@
 			<script>
 				const alertaChance = Math.floor(Math.random() * 5);
 				if (alertaChance === 3) {
-					const alertList = [ "THE NATIONAL WEATHER SERVICE HAS ISSUED A SEVERE THUNDERSTORM WARNING IN EFFECT FROM 12:23 PM UNTIL 2:00 PM. FOR YOUR PROTECTION MOVE TO AN INTERIOR ROOM ON THE LOWEST FLOOR OF A BUILDING.", "THE NATIONAL WEATHER SERVICE IN BIRMINGHAM HAS ISSUED A TORNADO WARNING UNTIL 2:45 AM. AT 2:06 AM CST...THE NATIONAL WEATHER SERVICE INDICATED A SEVERE THUNDERSTORM CAPABLE OF PRODUCING A TORNADO. THIS DANGEROUS STORM WAS LOCATED NEAR MEMPHIS...OR 8 MILES SOUTHWEST OF PICKENSVILLE... AND MOVING NORTHEAST AT 45 MPH. TORNADOES ARE DIFFICULT TO SEE AND CONFIRM AT NIGHT. TAKE COVER NOW.", "THE NATIONAL WEATHER SERVICE HAS ISSUED A SPECIAL MARINE WARNING UNTIL 9:15 AM. AT 7:13 AM EDT...DOPPLER RADAR INDICATED A LINE OF THUNDERSTORMS... CAPABLE OF PRODUCING DANGEROUS WINDS IN EXCESS OF 50 KNOTS AND LARGE HAIL FROM 24 NM NORTHWEST OF ALABASTER TO 43 NM SOUTHWEST OF ALABASTER...MOVING EAST AT 35 KNOTS. MARINERS CAN EXPECT GUSTY WINDS...LARGE HAIL...HIGH WAVES...DANGEROUS LIGHTNING...AND HEAVY RAINS. BOATERS SHOULD SEEK SAFE HARBOR IMMEDIATELY...UNTIL THESE STORMS PASS." ];
+					const alertList = [ "THE NATIONAL WEATHER SERVICE HAS ISSUED A SEVERE THUNDERSTORM WARNING IN EFFECT FROM 12:23 PM UNTIL 2:00 PM. FOR YOUR PROTECTION MOVE TO AN INTERIOR ROOM ON THE LOWEST FLOOR OF A BUILDING.", "THE NATIONAL WEATHER SERVICE IN BIRMINGHAM HAS ISSUED A TORNADO WARNING UNTIL 2:45 AM. AT 2:06 AM CST...THE NATIONAL WEATHER SERVICE INDICATED A SEVERE THUNDERSTORM CAPABLE OF PRODUCING A TORNADO. THIS DANGEROUS STORM WAS LOCATED NEAR MEMPHIS...OR 8 MILES SOUTHWEST OF PICKENSVILLE... AND MOVING NORTHEAST AT 45 MPH. TORNADOES ARE DIFFICULT TO SEE AND CONFIRM AT NIGHT. TAKE COVER NOW.", "THE NATIONAL WEATHER SERVICE HAS ISSUED A SPECIAL MARINE WARNING UNTIL 9:15 AM. AT 7:13 AM EDT...DOPPLER RADAR INDICATED A LINE OF THUNDERSTORMS... CAPABLE OF PRODUCING DANGEROUS WINDS IN EXCESS OF 50 KNOTS AND LARGE HAIL FROM 24 NM NORTHWEST OF ALABASTER TO 43 NM SOUTHWEST OF ALABASTER...MOVING EAST AT 35 KNOTS. MARINERS CAN EXPECT GUSTY WINDS...LARGE HAIL...HIGH WAVES...DANGEROUS LIGHTNING...AND HEAVY RAINS. BOATERS SHOULD SEEK SAFE HARBOR IMMEDIATELY...UNTIL THESE STORMS PASS.", "A civil authority has issued A LOCAL AREA EMERGENCY for the following counties or areas: Edgefield, SC; at 5:40 PM on SEP 30, 2024 Effective until 8:40 PM. Message from IPAWSCAP. Edgefield County mandatory curfew from Monday, September 30, at 9 pm to Tuesday, October 1, at 6 am. Essential workers for local businesses/services and responders will be exempt from this curfew. Road conditions are DANGEROUS due to downed power lines and trees. Do NOT travel after 9 pm.", "A civil authority has issued A 911 TELEPHONE OUTAGE EMERGENCY for the following counties or areas: Aiken, SC; at 3:12 PM on SEP 30, 2024 Effective until 11:12 PM. Message from IPAWSCAP. URGENT MESSAGE. From Aiken County. AT&T customers attempting to dial 9-1-1 in the Aiken County and surrounding area are EXPERIENCING TECHNICAL DIFFICULTIES and are UNABLE to make wireless calls to 9-1-1. Please find other alternative methods to communicate to 9-1-1 or call (803) 642-1751.", "A broadcast or cable system has issued A PRACTICE/DEMO WARNING for the following counties or areas: Norfolk, VA; at 1:05 PM on OCT 2, 2024 Effective until 4:05 PM. Message from TGR/DAS."];
 					const selectedAlert = alertList[Math.floor(Math.random() * alertList.length)];
 					document.getElementById("alerta").innerHTML = "<marquee scrollamount='10'>" + selectedAlert + "</marquee>";
 					document.getElementById("alerta").style.display = "block";
@@ -897,34 +896,11 @@
 			</div>
 			<div class="box sec-t">
 				<h2>siteUpdates</h2>
-				<h3 style="margin: 0; font-size: 15px;"><strong>YET ANOTHER MiNOR NAVBAR UPDATE</strong></h3>
-				<p id="updatedate">September 29, 2024</p>
+				<h3 style="margin: 0; font-size: 15px;"><strong>my chest hurts</strong></h3>
+				<p id="updatedate">October 6, 2024</p>
 			</div>
 			<div class="box">
-				<p>yep, you read the title! there is another minor update to the navigation bar! but this time its one i have been wanting to make for quite some time, so its actually fine <img src='/media/emoji/relieved.gif' loading='lazy' alt=''></p>
-				<ul>
-					<li>the colors of the links on the navbar now correspond more to the color of the page. i hope this makes more people realize that they are colored to be a blue to red gradient</li>
-					<li>javascript-free navbar now works again, as well as the navbar on some deep pages that have custom navbars. at least, i think it works</li>
-					<li>due to weird things related to metadata tagging, the scrobble count for EPs in the <a href="\interests\music\albums\library\" target="_blank">album library</a> would sometimes be lower than the actual count. worry not, as now there is a check for separate metadata tagging, and it will automatically switch to the tagging version with more scrobbles</li>
-					<li>RSS feed for site updates, and started updating the one for blog posts again. who knows how long until i forget!</li>
-					<li>new section for online fiction on the <a href="\interests\websites\reading.html" target="_blank">reading</a> page, and yes it looks out of place</li>
-				</ul>
-				<p>just as a cool little experiemnt, i wanna try listing all of the changes i can think of, just because:</p>
-				<details>
-					<summary>everything!</summary>
-					<ul>
-						<li>removed the webring widget</li>
-						<li>harmonized the color of the tags in the blog</li>
-						<li>cursor changes to a pointer when hovering over an album in the album library</li>
-						<li>improved rounded corners on some pages</li>
-						<li>pages with a breadcrumb navbar now display it correctly</li>
-						<li>each section is now sorted alphabetically by URl in the directory</li>
-						<li>added some sites to the directory</li>
-						<li>icon shown next to pages without a favicon in the directory is no longer anti-aliased</li>
-						<li>there is now a little bit of spacing between bullet points in the site update page</li>
-						<li>added RSS feed buttons to blog and site update pages. now you don't have to rely on your browser showing an RSS icon in the navbar</li>
-					</ul>
-				</details>
+				<p>my chest hurts</p>
 			</div>
 			<div class="box sec-b">
 				<p>site updates almost every sunday, blog posts and content updates whenever</p>
@@ -1032,19 +1008,6 @@ function setRandomMessage() {
 	var msgList = ['Updated <code>index.html</code>', 'coded on a best buy kiosk macbook', 'jobs near me that pay trillion/hour', 'TV explodes in 30 seconds if not powered off', 'can we get a "woot woot"', 'anti-anti-aliasing', 'bring back parallax', 'wth is a framework', 'oh to be a navbar with 3 items', 'internet explorer is safe... so far', 'THiS iS A POOP ALERT', 'debbie downers DNI', 'do not use this website around pacemakers', 'Smile! You\'re on <i>Old Navy</i> TV!', 'one of the greatest', 'keep this place our secret', 'Thanks SiriusXM for making this possible!', 'not the best thing to show to an employer', 'awwwards are impractical anyways', 'dm for proto', 'it takes a village and a half', 'we bought a zoo', 'free for 7 days', 'like transformers, but funnier', 'this website was created just for YOU!', 'hosted on Neocities.', 'updated every Sunday. almost'];
 	document.getElementById('random-message').innerHTML = msgList[Math.floor(Math.random() * msgList.length)];
 }
-// makes the clock run
-setInterval(() => {
-	d = new Date();
-	hr = d.getHours();
-	min = d.getMinutes();
-	sec = d.getSeconds();
-	hr_rotation = 30 * hr + min / 2;
-	min_rotation = 6 * min;
-	sec_rotation = 6 * sec;
-	hour.style.transform = `rotate(${hr_rotation}deg)`;
-	minute.style.transform = `rotate(${min_rotation}deg)`;
-	second.style.transform = `rotate(${sec_rotation}deg)`;
-	}, 1000);
 setRandomMessage();
 if (Math.floor(Math.random() * 25) === 10) {
 	var favLink = document.querySelector("link[rel~='icon']");
@@ -1055,8 +1018,45 @@ if (Math.floor(Math.random() * 25) === 10) {
 	}
 	favLink.href = 'media/home/corrupted.png';
 }
+let clockVisible = false;
+let clockInterval = null;
+function startClockScript() {
+	clockInterval = setInterval(() => {
+		d = new Date();
+		hr = d.getHours();
+		min = d.getMinutes();
+		sec = d.getSeconds();
+		hr_rotation = 30 * hr + min / 2;
+		min_rotation = 6 * min;
+		sec_rotation = 6 * sec;
+		hour.style.transform = `rotate(${hr_rotation}deg)`;
+		minute.style.transform = `rotate(${min_rotation}deg)`;
+		second.style.transform = `rotate(${sec_rotation}deg)`;
+	}, 1000);
+}
+function stopClockScript() {clearInterval(clockInterval);}
+function checkVisibility(entries) {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			if (!clockVisible) {
+				clockVisible = true;
+				startClockScript();
+			}
+		} else {
+			if (clockVisible) {
+				clockVisible = false;
+				stopClockScript();
+			}
+		}
+	});
+}
+const observer = new IntersectionObserver(checkVisibility, {
+	root: null,
+	threshold: 0.1
+});
+observer.observe(document.querySelector('#clockContainer'));
 </script>
 <script src="resources/widgets/home/flood/flood.js"></script>
-<script src="resources/nav/navbar.js"></script>
+<!-- <script src="resources/nav/navbar.js"></script> -->
 </body>
 </html>
