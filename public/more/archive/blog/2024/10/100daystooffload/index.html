@@ -13,6 +13,12 @@
 			--example: hsl(0, 100%, 50%);
 			--e2: hsl(5, 84%, 12%);
 		}
+		table, tr {width: 100%;}
+		tr td:first-child {
+			width: 5px;
+			background-color: var(--accent);
+		}
+		tr td:nth-child(3n) {opacity: 0.75;}
 	</style>
 </head>
 <body>
@@ -27,7 +33,9 @@
 		<p>I have been wanting to get more into journaling and writing. I think doing this challenge would be a fun way to encourage myself to write more, outside of just my personal diary. I also rarely ever finish projects, so I think forcing myself to publish 100 blog posts within a year would be a fun way to try and complete a project.<br>These 100 posts do not have to be a streak, that would be unreasonable. I cannot write a post every single day, I have a life outside this website. Sometimes I may write a post, but not publish it on this site on the same day. That is fine too, as long as I publish it eventually. Rules don't state if I can publish multiple posts for the same date, but I am going to count only one post per day for this.<br>Also, these articles don't have to necessarily be of top quality. It's more about getting into the habit of writing blog posts. I am reaching for at least 200 words per article, however.</p>
 		<h2>Articles</h2>
 		<table>
-			<tr style="--accent: hsl(0, 100%, 50%);"></tr>
+			<tr style="--accent: hsl(0, 100%, 50%);">
+				<td></td><td>Title</td><td>Date</td>
+			</tr>
 			<tr style="--accent: hsl(4, 100%, 50%);"></tr>
 			<tr style="--accent: hsl(8, 100%, 50%);"></tr>
 			<tr style="--accent: hsl(12, 100%, 50%);"></tr>
