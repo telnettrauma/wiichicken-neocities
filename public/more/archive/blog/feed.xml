@@ -7,6 +7,20 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>Why I Came Back to Notion After Obsidian</title>
+			<pubDate>Mon, 7 Oct 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/10/notion.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/10/notion.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>#100DaysToOffload</title>
+			<pubDate>Sun, 6 Oct 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/10/100daystooffload/</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/10/100daystooffload/</guid>
+			<description>#meta</description>
+		</item>
+		<item>
 			<title>Twitter's Terrible New TV App (X TV)</title>
 			<pubDate>Thu, 5 Sep 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/9/xtv.html</link>
@@ -61,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/2024/5/arc.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/5/arc.html</guid>
 			<description>no tags</description>
-		</item>
-		<item>
-			<title>what will we actually use ai for?</title>
-			<pubDate>Thu, 2 May 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/5/usingai.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/5/usingai.html</guid>
-			<description>#ai</description>
 		</item>
 	</channel>
 </rss>
