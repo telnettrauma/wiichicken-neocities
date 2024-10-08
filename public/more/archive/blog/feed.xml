@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>Things That Don't Work - RCS and Spotify Jam</title>
+			<pubDate>Tue, 8 Oct 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/10/jamrcs.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/10/jamrcs.html</guid>
+			<description>#rant</description>
+		</item>
+		<item>
 			<title>Why I Came Back to Notion After Obsidian</title>
 			<pubDate>Mon, 7 Oct 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/10/notion.html</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/2024/6/suspended.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/6/suspended.html</guid>
 			<description>#social</description>
-		</item>
-		<item>
-			<title>using arc for windows (as a non memoji pfp)</title>
-			<pubDate>Tue, 21 May 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/5/arc.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/5/arc.html</guid>
-			<description>no tags</description>
 		</item>
 	</channel>
 </rss>
