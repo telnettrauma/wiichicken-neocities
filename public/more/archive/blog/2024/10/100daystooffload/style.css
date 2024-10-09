@@ -20,6 +20,12 @@ hr {
 	border: unset;
 	border-top: 1px solid var(--dark);
 }
+code, kbd, pre {
+	font-family: "Roboto Mono", "Courier New", Courier, monospace;
+	background-color: var(--dark);
+	color: var(--light);
+}
+pre {padding: 10px;}
 iframe {
 	border: none;
 	width: 100%;
@@ -55,5 +61,9 @@ iframe {
 		color: black;
 	}
 	hr {border-top: 1px solid var(--light);}
+	code, kbd, pre {
+		background-color: var(--light);
+		color: var(--dark);
+	}
 	#logo, #homego {background: var(--light);}
 }
