@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 		<title>CURRENTLY LiSTENiNG TO</title>
 		<link rel="icon" type="image/x-icon" href="/favicon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="media/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="media/favicons/32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="media/favicons/16.png">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
+	<body>
 	<div class="content" style="margin: 0; position: relative; overflow: hidden;" id="main">
 		<div id="moneyOnMind" class="moneyOnMind"></div>
 		<div class="moneyOnMind" id="fartOnMind" style="animation: otherRotate 75s linear infinite; opacity: 0.75; z-index: 1; mix-blend-mode: multiply;"></div>   
@@ -30,12 +33,12 @@
 		</form>
 	</div>
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@600&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 		* {
 			::-webkit-scrollbar {width: 0;}
 		}
 		body {
-			font-family: 'PT Sans', sans-serif;
+			font-family: 'Ubuntu', sans-serif;
 			margin: 0;
 			color: white;
 			overflow-x: hidden;
@@ -272,4 +275,5 @@
 		detectSize();
 		setInterval(function(){getNowPlaying()}, 15000);
 	</script>
+	</body>
 </html>
