@@ -7,11 +7,18 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>Congrats, you Accomplished Nothing (Internet Archive DDoS)</title>
+			<pubDate>Thu, 10 Oct 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/10/iadown.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/10/iadown.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
 			<title>Working With More Complex Git</title>
 			<pubDate>Wed, 9 Oct 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/10/professionalgit.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/10/professionalgit.html</guid>
-			<description>#rant</description>
+			<description>#meta #code</description>
 		</item>
 		<item>
 			<title>Things That Don't Work - RCS and Spotify Jam</title>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/2024/7/twitterbingo.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/7/twitterbingo.html</guid>
 			<description>#social</description>
-		</item>
-		<item>
-			<title>iOS 18 is stupid</title>
-			<pubDate>Thu, 13 Jun 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/6/ios18.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/6/ios18.html</guid>
-			<description>#rant #design</description>
 		</item>
 	</channel>
 </rss>

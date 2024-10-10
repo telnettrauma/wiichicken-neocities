@@ -20,6 +20,7 @@ hr {
 	border: unset;
 	border-top: 1px solid var(--dark);
 }
+img {max-width: 100%;}
 code, kbd, pre {
 	font-family: "Roboto Mono", "Courier New", Courier, monospace;
 	background-color: var(--dark);
