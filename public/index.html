@@ -23,11 +23,16 @@
 <body>
 <style>
 	:root {
-		--dark-primary: #93000a;
+		/* --dark-primary: #93000a;
 		--dark-tertiary: #dec48c;
 		--dark-on-tertiary: #382a49;
 		--bg-1: red;
-		--bg-2: blue;
+		--bg-2: blue; */
+		--dark-primary: #ffb68a;
+		--dark-tertiary: #e1b8f5;
+		--dark-on-tertiary: #422255;
+		--bg-1: #ae00ff;
+		--bg-2: #ff7b00;
 	}
 	body {color: white;}
 	h1, h2, h3, h4 {margin: 0;}
@@ -62,9 +67,12 @@
 	}
 	.box {
 		margin-bottom: 10px;
-		--border: red;
+		--border: var(--bg-2);
+		background-color: #321300;
+		color: #ffdbc8;
+		/* --border: red;
 		background-color: #410002b3;
-		color: #ffdad6;
+		color: #ffdad6; */
 		padding: 10px;
 		overflow: hidden;
 	}
@@ -347,14 +355,15 @@
 		display: none;
 		background-color: #750000;
 	}
+	/* TODO switch navig to more readable colors once halloween ends */
 	#navig {
 		display: flex;
-		background: linear-gradient(270deg, #ff0000, #00a2ff);
+		background: linear-gradient(270deg, var(--bg-1), var(--bg-2));
 		padding: 1px;
 	}
 	#navig::before {
 		background-color: unset !important;
-		background: linear-gradient(270deg, #ff0000 0%, #00a2ff 100%) !important;
+		background: linear-gradient(270deg, var(--bg-1) 0%, var(--bg-2) 100%) !important;
 	}
 	#navig a, #lonelyNav a {
 		font-family: 'Kode Mono', monospace;
@@ -561,9 +570,6 @@
 		50%{box-shadow: 0px 0px 200px 50px rgba(0, 126, 255, 0.75); --border: rgb(0, 126, 255);}
 		100%{box-shadow: 0px 0px 200px 50px rgba(0, 255, 161, 0.75); --border: rgba(0, 255, 161);}
 	}
-	::-webkit-scrollbar {width: 5px;}
-	::-webkit-scrollbar-track {background-color: black;}
-	::-webkit-scrollbar-thumb {background: linear-gradient(45deg, blue 0%, red 100%);}
 	.mobileVisible {display: none;}
 	/* i hate my life and i wanan die, i aint got no iphone */
 	@media only screen and (min-width: 900px) {
@@ -744,7 +750,7 @@
 					<div id="logocontent">
 						<p id="thisIsMyName" class="nomarblock mobileVisible headText" style="color: white;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN</p>
 						<div id="wiiLogo" class="mobileHidden" style="image-rendering: pixelated;">
-							<img src="logo.png">
+							<img src="media/home/scarylogo.png" loading="lazy">
 						</div>
 					</div>
 				</div>
@@ -806,7 +812,7 @@
 						</div>
 						<script src="https://status.cafe/current-status.js?name=cringe" defer></script>
 						<img src="media/home/status.png" width="200" height="220" loading="lazy" style="z-index: 1;" onmouseover="this.src ='media/home/statusy.png'" onmouseleave="this.src = 'media/home/status.png'">
-						<img src="media/home/ditherglow.png" class="blurry" loading="lazy" style="height: 200px; width: 200px; bottom: 0; filter: none !important;">
+						<img src="media/home/ditherglow.png" class="blurry" loading="lazy" style="height: 200px; width: 200px; bottom: 0; filter: none !important; opacity: 0.6;">
 					</div>
 				</div>
 				<div class="box mobileHidden noscript-hidden" style="grid-column: 2/3; grid-row: 1; margin-bottom: 0; padding: 0; --border: #E6E1E5; background-color: #1C1B1Fcc;">
