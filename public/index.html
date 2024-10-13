@@ -90,6 +90,8 @@
 	.sidebox {
 		color: var(--side-text);
 		width: 200px;
+		--side-text: #bdf0b3 !important;
+		--border: #4dc236 !important;
 	}
 	.sidehead, .sidebox-content, .sidehead p {
 		backdrop-filter: blur(5px);
@@ -98,7 +100,8 @@
 	}
 	.sidebox:hover .sidehead p {box-shadow: 0 0 20px 1px var(--side-border);}
 	.sidehead {
-		color: #ffdad5;
+		/* color: #ffdad5; */
+		color: #bdf0b3 !important;
 		background-color: unset;
 		margin: 0;
 		margin-bottom: 2px;
@@ -107,7 +110,10 @@
 		display: flex;
 	}
 	.sidehead p {
-		background: linear-gradient(45deg, #930006 0%, #743b00 100%);
+		/* background: linear-gradient(45deg, #930006 0%, #743b00 100%); */
+		background: unset !important;
+		background-color: #0c390e !important;
+		color: #bdf0b3 !important;
 		margin-block-start: 0;
 		margin-block-end: 0;
 		padding-left: 3px;
@@ -123,12 +129,15 @@
 	.sidebox-content {
 		padding: 5px;
 		background-color: var(--side-bg);
+		--side-bg: #002203b3 !important;
 		--b-radius-tl: 2;
 		--b-radius-tr: 2;
 		--b-radius-bl: 5;
 		--b-radius-br: 5;
 		background-image: url('/media/lownoise.png');
+		color: #bdf0b3 !important;
 	}
+	#flood-menu {color: #bdf0b3 !important;}
 	.sidebox-content a:not(:has(img)) {
 		background-color: #ffb4aa;
 		color: #690003;
@@ -290,9 +299,12 @@
 		padding: 2px;
 		display: flex;
 		justify-content: center;
-		background-color: #004a76 !important;
+		background-color: #255023 !important;
+		border: 1px solid #a2d399;
+		color: #a2d399 !important;
+		/* background-color: #004a76 !important;
 		border: 1px solid #97cbff;
-		color: #cee5ff !important;
+		color: #cee5ff !important; */
 		width: 45%;
 		margin: 2px;
 		font-size: 14px;
@@ -978,9 +990,12 @@
 					<p class="boxy" style="background: linear-gradient(90deg, #534341 0%, #665949 100%);">UPDATED</p>
 				</div>
 				<div class="sidebox-content boxy" style="text-align: center; padding: 0;">
-					<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;">----</p>
+					<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #255023; color: #bdf0b3; padding: 2px;">----</p>
+					<p class="headText nomarblock" id="upDate" style="background-color: #f2f5eb; color: #191d17; font-size: 50px;">##</p>
+					<p class="nomarblock headText" id="upYear" style="background-color: #c2c8bd; color: #424940; font-size: 19px;">2024</p>
+					<!-- <p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;">----</p>
 					<p class="headText nomarblock" id="upDate" style="background-color: #ede0dd; color: #201a19; font-size: 50px;">##</p>
-					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;">2024</p>
+					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;">2024</p> -->
 					<script src="resources/widgets/home/lastupdate.js"></script>
 				</div>
 			</div>
