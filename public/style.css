@@ -254,11 +254,17 @@ button {
 	padding: 0 7px 0 7px;
 	background-color: unset !important;
 }
-.topLinks a:first-child {color: #c5e7ff;}
+/* .topLinks a:first-child {color: #c5e7ff;}
 .topLinks a:nth-child(2) {color: #dce1ff;}
 .topLinks a:nth-child(3) {color: #ffd6fe;}
 .topLinks a:nth-child(4) {color: #ffdadb;}
-.topLinks a:nth-child(5) {color: #ffdad6;}
+.topLinks a:nth-child(5) {color: #ffdad6;} */
+/* colors for halloween */
+.topLinks a:first-child {color: #ffdbc8;}
+.topLinks a:nth-child(2) {color: #ffdad3;}
+.topLinks a:nth-child(3) {color: #ffd9e2;}
+.topLinks a:nth-child(4) {color: #ffd7f5;}
+.topLinks a:nth-child(5) {color: #f5d9ff;}
 #fakeLogo {
 	display: flex;
 	align-items: center;
