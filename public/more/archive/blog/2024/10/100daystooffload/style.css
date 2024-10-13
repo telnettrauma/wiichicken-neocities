@@ -27,8 +27,8 @@ code, kbd, pre {
 	color: var(--light);
 }
 pre {padding: 10px;}
-iframe {
-	border: none;
+iframe {border: none;}
+#prog-widget {
 	width: 100%;
 	height: 25px;
 }
