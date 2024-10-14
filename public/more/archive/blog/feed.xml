@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>Corporate Television is Taking Over</title>
+			<pubDate>Mon, 14 Oct 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/10/corporatetv.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/10/corporatetv.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
 			<title>Bring Back Good Captioning, and Make it Closed</title>
 			<pubDate>Sun, 13 Oct 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/10/captions.html</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/2024/9/xtv.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/9/xtv.html</guid>
 			<description>#social</description>
-		</item>
-		<item>
-			<title>Using the SDF UNIX System</title>
-			<pubDate>Fri, 30 Aug 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/8/sdf.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/8/sdf.html</guid>
-			<description>no tags</description>
 		</item>
 	</channel>
 </rss>
