@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>i am so mean hahaha</title>
+			<pubDate>Tue, 15 Oct 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/10/somean.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/10/somean.html</guid>
+			<description>#rant</description>
+		</item>
+		<item>
 			<title>Corporate Television is Taking Over</title>
 			<pubDate>Mon, 14 Oct 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/10/corporatetv.html</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/2024/10/100daystooffload/</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/10/100daystooffload/</guid>
 			<description>#meta</description>
-		</item>
-		<item>
-			<title>Twitter's Terrible New TV App (X TV)</title>
-			<pubDate>Thu, 5 Sep 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/9/xtv.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/9/xtv.html</guid>
-			<description>#social</description>
 		</item>
 	</channel>
 </rss>
