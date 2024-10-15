@@ -1,10 +1,11 @@
 ---
 layout: blog/24/10/100daystounload.njk
 title: "Bring Back Good Captioning, and Make it Closed"
-date: 2024-10-10
+date: 2024-10-13
 light: "#ffdbcd"
 dark: "#360f00"
 articleNumber: 7
+permalink: "/more/archive/blog/2024/10/captions.html"
 ---
 Captioning is both dying and more alive then ever, and it's getting kinda annoying.
 
