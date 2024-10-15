@@ -1,7 +1,7 @@
 ---
 layout: blog/24/10/100daystounload.njk
 title: "Corporate Television is Taking Over"
-date: 2024-14-13
+date: 2024-10-14
 light: "#ffdbc9"
 dark: "#331200"
 articleNumber: 8

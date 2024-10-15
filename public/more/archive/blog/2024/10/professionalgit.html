@@ -28,29 +28,29 @@
 		<hr>
 	</header>
 	<main>
-		<div>
-			<p>Some people see doing things other than using the Neocities editor or copy pasting changes into the Neocities editor as "ruining the experience," but using Git was something that I wish I did much earlier. It makes everything so much easier to use, doesn't change the way I actually make my website, and allows me to come back to projects or experiment without the website breaking for everyone until I'm finished.</p>
-			<p>I used to just instantly update the site whenever I pushed a commit, but after some time I realized this was holding me back. It also made things confusing for writing site updates, as I didn't have a specific time when I would write them. Instead, I would just write them whenever.</p>
-			<p>Now, I update the site almost every Sunday. This allows me to work on bigger projects where I would have to make multiple commits. The way I do this is having 2 branches, <code>main</code> and <code>live</code>. The <code>main</code> branch is the work in progress branch, while the <code>live</code> branch is the version that everyone gets to see. I also sometimes update the <code>live</code> branch on days other than Sunday, usually when publishing new content such as blog posts. I am not very consistent with that. Sometimes much larger projects would get their own branch, and I would merge the branches together once the time came.</p>
-			<p>When I started 100DaysToUnload, I realized that this current setup is a good start, but it will get really annoying to manage when writing a ton of blog posts. So, I added a third branch. This allows me to write articles using more than one commit without either publishing them early, or adding all my other site updates for the week early. So far, this has worked out great.</p>
-			<p>One thing that is annoying is pull requests. I am the only person who makes commits on this repository. Having to ask myself for permission to make sure a branch is up to date can get somewhat annoying. Luckily, the only times I really have to make a pull request is when I'm updating the site, as pull requests only add/remove changes, not change a branch to the exact point in time of the other branch.</p>
-			<p><br>
-			Setting up Git is quite easy, and takes like 15 minutes to adapt to, especially if you use Visual Studio Code. I want to make a tutorial for how to setup updating your site with Git sometime in the future. <a href="https://afellowu.neocities.org/blog/11ty-github-and-neocities" target="_blank">afellowu already has a good tutorial for installing with 11ty</a>, which I followed, however I don't use 11ty, and I have already seen sites make the same mistake as me, so I want to make my tutorial for how to setup Git without 11ty. Accidentally replacing your index page with a plaintext file saying you don't know what you're doing is only funny when it doesn't happen to you.</p>
-			<p>(the Internet Archive didn't have an archive of the day it happened, but i think you can imagine what the page looked like from the raw code:)</p>
-			<pre class="language-md" tabindex="0"><code class="language-md is-loaded">---
+		<p>Some people see doing things other than using the Neocities editor or copy pasting changes into the Neocities editor as &quot;ruining the experience,&quot; but using Git was something that I wish I did much earlier. It makes everything so much easier to use, doesn't change the way I actually make my website, and allows me to come back to projects or experiment without the website breaking for everyone until I'm finished.</p>
+<p>I used to just instantly update the site whenever I pushed a commit, but after some time I realized this was holding me back. It also made things confusing for writing site updates, as I didn't have a specific time when I would write them. Instead, I would just write them whenever.</p>
+<p>Now, I update the site almost every Sunday. This allows me to work on bigger projects where I would have to make multiple commits. The way I do this is having 2 branches, <code>main</code> and <code>live</code>. The <code>main</code> branch is the work in progress branch, while the <code>live</code> branch is the version that everyone gets to see. I also sometimes update the <code>live</code> branch on days other than Sunday, usually when publishing new content such as blog posts. I am not very consistent with that. Sometimes much larger projects would get their own branch, and I would merge the branches together once the time came.</p>
+<p>When I started 100DaysToUnload, I realized that this current setup is a good start, but it will get really annoying to manage when writing a ton of blog posts. So, I added a third branch. This allows me to write articles using more than one commit without either publishing them early, or adding all my other site updates for the week early. So far, this has worked out great.</p>
+<p>One thing that is annoying is pull requests. I am the only person who makes commits on this repository. Having to ask myself for permission to make sure a branch is up to date can get somewhat annoying. Luckily, the only times I really have to make a pull request is when I'm updating the site, as pull requests only add/remove changes, not change a branch to the exact point in time of the other branch.</p>
+<p>%% TODO add link once i make the tutorial, if i ever make it %%
+Setting up Git is quite easy, and takes like 15 minutes to adapt to, especially if you use Visual Studio Code. I want to make a tutorial for how to setup updating your site with Git sometime in the future. <a href="https://afellowu.neocities.org/blog/11ty-github-and-neocities" target="_blank">afellowu already has a good tutorial for installing with 11ty</a>, which I followed, however I don't use 11ty, and I have already seen sites make the same mistake as me, so I want to make my tutorial for how to setup Git without 11ty. Accidentally replacing your index page with a plaintext file saying you don't know what you're doing is only funny when it doesn't happen to you.</p>
+<p>(the Internet Archive didn't have an archive of the day it happened, but i think you can imagine what the page looked like from the raw code:)</p>
+<pre><code class="language-md">‐‐‐
 title: Main Page
 layout: layout/base.njk
----
+‐‐‐
 
-<span class="token title important"><span class="token punctuation">#</span> Uh oh! I broke something!</span>
+# Uh oh! I broke something!
 
 uhhhh... awkward!
-			</code></pre>
-		<p>Luckily, because you're using Git, you can just revert the change.</p></div>
+</code></pre>
+<p>Luckily, because you're using Git, you can just revert the change.</p>
+
 	</main>
 	<footer>
 		<hr>
-		<p>this article was written as apart of <a href="/more/archive/blog/2024/10/100daystooffload/">#100DaysToOffload</a>, and is article <strong>3</strong> of <strong>100</strong>.</p>
+		<p>this article was written as a part of <a href="/more/archive/blog/2024/10/100daystooffload/">#100DaysToOffload</a>, and is article <strong>3</strong> of <strong>100</strong>.</p>
 		<iframe src="/more/archive/blog/2024/10/100daystooffload/widget.html" id="prog-widget"></iframe>
 	</footer>
 </body>
