@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>There Won't be a Twitter Killer</title>
+			<pubDate>Wed, 16 Oct 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/10/twtalt.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/10/twtalt.html</guid>
+			<description>#social</description>
+		</item>
+		<item>
 			<title>i am so mean hahaha</title>
 			<pubDate>Tue, 15 Oct 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/10/somean.html</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/2024/10/notion.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/10/notion.html</guid>
 			<description>no tags</description>
-		</item>
-		<item>
-			<title>#100DaysToOffload</title>
-			<pubDate>Sun, 6 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/10/100daystooffload/</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/10/100daystooffload/</guid>
-			<description>#meta</description>
 		</item>
 	</channel>
 </rss>
