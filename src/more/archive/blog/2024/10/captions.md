@@ -27,7 +27,7 @@ The problem with automatic captioning comes to when it is used in placed of manu
 
 Generated captions are good as a starting point, but should not be relied on entirely.
 
-One of the reasons good captions have been dying, at least on YouTube, is the removal of community captions. You used to be able to write the captions for other channels. Not only did this allow anybody to help with captions, but it would also allow captions to be written in languages other than the one the video is spoken in, making the video more accessible. What a great feature it was. YouTube's internal statistics said otherwise, so they [removed it](https://www.theverge.com/2020/7/31/21349401/youtube-community-captions-deaf-creators-accessibility-google), citing "low usage" *(i was going to try and find the original post but the [[Congrats, you Accomplished Nothing (Internet Archive DDoS)|Internet Archive is still down]])*. Nice job team!
+One of the reasons good captions have been dying, at least on YouTube, is the removal of community captions. You used to be able to write the captions for other channels. Not only did this allow anybody to help with captions, but it would also allow captions to be written in languages other than the one the video is spoken in, making the video more accessible. What a great feature it was. YouTube's internal statistics said otherwise, so they [removed it](https://www.theverge.com/2020/7/31/21349401/youtube-community-captions-deaf-creators-accessibility-google), citing "low usage" *(i was going to try and find the original post but the [Internet Archive is still down](iadown.html))*. Nice job team!
 
 ### Tom Scott
 
