@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{ title }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<link href="/more/archive/blog/2024/10/100daystooffload/style.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<style>
+		* {
+			--light: {{ light | default('#e0e0ff') }};
+			--dark: {{ dark | default('#11144b') }};
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div id="logos">
+			<a href="/">
+				<div id="homego"></div>
+			</a>
+			<a href="/more/archive/blog/2024/10/100daystooffload/">
+				<div id="logo"></div>
+			</a>
+		</div>
+		<h1>{{ title }}</h1>
+		<p>{{ date | date("MMMM d, yyyy") }}</p>
+		<hr>
+	</header>
+	<main>
+		{{ content | safe }}
+	</main>
+	<footer>
+		<hr>
+		<p>this article was written as a part of <a href="/more/archive/blog/2024/10/100daystooffload/">#100DaysToOffload</a>, and is article <strong>{{ articleNumber }}</strong> of <strong>100</strong>.</p>
+		<iframe src="/more/archive/blog/2024/10/100daystooffload/widget.html" id="prog-widget"></iframe>
+	</footer>
+</body>
+</html>
