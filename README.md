@@ -8,4 +8,8 @@ don't know how you're reading this though, because this repo is private
 
 the work in progress version (non-public) is located on the `main` branch. the live version is on the `live` branch. i don't think it is hard to understand. also hi the article version is at `article`
 
-<!-- test test -->
+## flags
+
+these are important flags that are used to modify properties about pages generated with `11ty` and stuff
+
+- put `noBlankLinks: true` in the header of a file to not automatically add `_blank` attributes to urls
