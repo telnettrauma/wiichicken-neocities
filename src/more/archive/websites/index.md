@@ -4,8 +4,7 @@ breadcrumb: |
   <li><a href="/more/archive/websites/">Websites</a></li>
   <li><a href="/more/archive/">Archive</a><li>
 layout: wiki/archive/archive.njk
-noBlankLinks: true
-# permalink: "/more/archive/websites/index.html"
+permalink: "/more/archive/websites/index.html"
 ---
 these are old websites that i have made over the years. most of these are archives of sites made with site creation tools, recreated with html (not very well)
 

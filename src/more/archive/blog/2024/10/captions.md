@@ -15,9 +15,9 @@ When I say that captioning is dying, this is what I mean. The quality of caption
 
 First off, I am not saying that I am against automatic captions, far from it. I am aware that not everyone has the time, skills, or budget for captioning. I'm not expecting you to add captions to your family posts on Instagram. Some people don't even think of adding captions to videos. There are also times when adding manual captions just isn't feasible, like livestreams to 2 people.
 
-Fun fact, on live television in the United States, live events such as the local news are usually typed out with a [Stenograph](https://en.wikipedia.org/wiki/Stenotype) in real time, usually with a ~15 second delay. You can actually see them occasionally make typos and backspace them out. YouTube supports this type of captioning, you can sometimes see it on local news channels. Here's an [example from WDIV Local 4 Detroit](https://youtu.be/ZRIHOUSgMO0?t=9), set your captions to `English - CC1`.
+Fun fact, on live television in the United States, live events such as the local news are usually typed out with a [Stenograph](https://en.wikipedia.org/wiki/Stenotype){target=_blank} in real time, usually with a ~15 second delay. You can actually see them occasionally make typos and backspace them out. YouTube supports this type of captioning, you can sometimes see it on local news channels. Here's an [example from WDIV Local 4 Detroit](https://youtu.be/ZRIHOUSgMO0?t=9){target=_blank}, set your captions to `English - CC1`.
 
-The problem with automatic captioning comes to when it is used in placed of manual captioning. The worst offenders of this happen on YouTube. [YouTube has a tool](https://support.google.com/youtube/answer/2734796?hl=en#zippy=%2Cauto-sync) where you can turn their automatic captions (the same ones that spit out "`foreign [Music]`" whenever there is silence) into regular captions. This has several problems:
+The problem with automatic captioning comes to when it is used in placed of manual captioning. The worst offenders of this happen on YouTube. [YouTube has a tool](https://support.google.com/youtube/answer/2734796?hl=en#zippy=%2Cauto-sync){target=_blank} where you can turn their automatic captions (the same ones that spit out "`foreign [Music]`" whenever there is silence) into regular captions. This has several problems:
 
 - Lazy
 - Cannot detect multiple speakers
@@ -27,7 +27,7 @@ The problem with automatic captioning comes to when it is used in placed of manu
 
 Generated captions are good as a starting point, but should not be relied on entirely.
 
-One of the reasons good captions have been dying, at least on YouTube, is the removal of community captions. You used to be able to write the captions for other channels. Not only did this allow anybody to help with captions, but it would also allow captions to be written in languages other than the one the video is spoken in, making the video more accessible. What a great feature it was. YouTube's internal statistics said otherwise, so they [removed it](https://www.theverge.com/2020/7/31/21349401/youtube-community-captions-deaf-creators-accessibility-google), citing "low usage" *(i was going to try and find the original post but the [Internet Archive is still down](iadown.html))*. Nice job team!
+One of the reasons good captions have been dying, at least on YouTube, is the removal of community captions. You used to be able to write the captions for other channels. Not only did this allow anybody to help with captions, but it would also allow captions to be written in languages other than the one the video is spoken in, making the video more accessible. What a great feature it was. YouTube's internal statistics said otherwise, so they [removed it](https://www.theverge.com/2020/7/31/21349401/youtube-community-captions-deaf-creators-accessibility-google){target=_blank}, citing "low usage" *(i was going to try and find the original post but the [Internet Archive is still down](iadown.html))*. Nice job team!
 
 ### Tom Scott
 
