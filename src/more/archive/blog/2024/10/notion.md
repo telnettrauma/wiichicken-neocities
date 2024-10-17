@@ -31,7 +31,7 @@ The first problem is having all files local. This is a pain in the butt to sync 
 
 Another issue is the app, both on desktop and mobile. I was lucky enough to be able to install Obsidian on computers last year, but this year our school has Macs, and the group policy actually blocks installing apps now. So now I can only view individual files, and without the app none of the features work. Also, for some reason the iOS app can only sync using Notion sync (which costs money), or using iCloud. So I just could not access any of my notes on my phone. That definitely was not annoying.
 
-I'm not saying that local files are bad, they're great. You are in control of all your data, and you can access it as long as you have the files. Notion infamously promised an offline mode [many years ago](https://twitter.com/NotionHQ/status/978394258217435136?lang=en)and still have yet to deliver. All that I am saying it that the approach I had didn't work for what **I** needed.
+I'm not saying that local files are bad, they're great. You are in control of all your data, and you can access it as long as you have the files. Notion infamously promised an offline mode [many years ago](https://twitter.com/NotionHQ/status/978394258217435136?lang=en){target=_blank} and still have yet to deliver. All that I am saying it that the approach I had didn't work for what **I** needed.
 
 ## Back to Notion
 
