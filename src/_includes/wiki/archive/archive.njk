@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>INDEX - WiiCHiCKEN ARCHiVE</title>
+		<title>{{ title }} - WiiCHiCKEN ARCHiVE</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/x-icon" href="/favicon.png">
@@ -12,8 +12,7 @@
 			<nav>
 				<h3>breadcrumb</h3>
 				<ul>
-					<li><a href="/more/archive/">Archive</a><li>
-
+					{{ breadcrumb | safe }}
 				</ul>
 				<h3>website</h3>
 				<ul>
@@ -27,18 +26,8 @@
 				</ul>
 			</nav>
 			<article>
-				<h1>INDEX</h1>
-				<p>welcome to my archive of random things ive made over the years</p>
-<ul>
-<li><a href="blog/" target="_blank">Blog</a> - Various blog posts I have written on this site
-<ul>
-<li><a href="blog/arch/wp" target="_blank">2014 Wordpress</a> - A complete recreation of a WordPress blog that I had in 2014</li>
-</ul>
-</li>
-<li><a href="websites/" target="_blank">Websites</a> - Old websites I've made over the years</li>
-</ul>
-<p>a lot of pages moved into the websites page, so that's why this place is suddenly so barren!</p>
-
+				<h1>{{ title }}</h1>
+				{{ content | safe }}
 			</article>
 		</main>
 	</body>
