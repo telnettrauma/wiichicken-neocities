@@ -34,7 +34,6 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: live
           base: main
 
       - name: Deploy to neocities
