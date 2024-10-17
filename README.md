@@ -12,4 +12,4 @@ the work in progress version (non-public) is located on the `main` branch. the l
 
 these are important flags that are used to modify properties about pages generated with `11ty` and stuff
 
-- put `noBlankLinks: true` in the header of a file to not automatically add `_blank` attributes to urls
+- one used to exist but it doesn't anymore.
