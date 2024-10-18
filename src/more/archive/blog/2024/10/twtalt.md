@@ -7,6 +7,8 @@ dark: "#2c1600"
 articleNumber: 10
 permalink: "/more/archive/blog/2024/10/twtalt.html"
 ---
+**Edit (October 18, 2024)**: Ironically the day after this was published, there was a mass migration to BlueSky, with over [half a million people joining](https://bsky.app/profile/bsky.app/post/3l6pwjlt7hu2z){target=_blank} in a day. However, I don't think they will stick around, and most will go back to Twitter within 3 days.
+
 Ever since Elon Musk took over Twitter, people have been waiting and waiting for a Twitter killer to come. But that probably won't happen for quite some time.
 
 One of the first reasons is time. Most of the social media networks that exist now are popular because they solved an issue early on. However, technology has gotten good enough where we have run out of issues or innovations to really add to networks that will appeal to a wide audience. YouTube became popular because it was video hosting that didn't suck. Instagram made sharing videos on mobile devices quick, while bringing simple image editing to the masses. Twitter launched [in 2006](https://techcrunch.com/2006/07/15/is-twttr-interesting/){target=_blank}, and the main gimmick was that you could send status updates to your friends just by texting 40404.
