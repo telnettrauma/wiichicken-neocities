@@ -7,11 +7,18 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>Drawing the Same Things Over and Over Again</title>
+			<pubDate>Fri, 18 Oct 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/10/drawingoverandover.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/10/drawingoverandover.html</guid>
+			<description>#rant</description>
+		</item>
+		<item>
 			<title>Fortnite Black Hole</title>
 			<pubDate>Thu, 17 Oct 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/10/fortniteblackhole.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/10/fortniteblackhole.html</guid>
-			<description>#social</description>
+			<description>no tags</description>
 		</item>
 		<item>
 			<title>There Won't be a Twitter Killer</title>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/2024/10/professionalgit.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/10/professionalgit.html</guid>
 			<description>#meta #code</description>
-		</item>
-		<item>
-			<title>Things That Don't Work - RCS and Spotify Jam</title>
-			<pubDate>Tue, 8 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/10/jamrcs.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/10/jamrcs.html</guid>
-			<description>#rant</description>
 		</item>
 	</channel>
 </rss>
