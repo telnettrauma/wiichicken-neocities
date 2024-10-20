@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>Using 11ty</title>
+			<pubDate>Sun, 20 Oct 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/10/using11ty.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/10/using11ty.html</guid>
+			<description>#meta #code</description>
+		</item>
+		<item>
 			<title>Noto Color Emoji are Ugly</title>
 			<pubDate>Sat, 19 Oct 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/10/notoemoji.html</link>

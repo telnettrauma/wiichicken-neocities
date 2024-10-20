@@ -9,7 +9,7 @@ permalink: "/more/archive/blog/2024/10/iadown.html"
 ---
 The Internet Archive (will be referred to as IA for the rest of this post) just cannot seem to catch a break. First they had to shut down their virtual library, and now they just got breached. This is one of the dumbest breaches yet, I felt physical pain reading everything.
 
-## Data Breech
+## Data Breach
 
 IA has been suffering multiple data breaches recently, taking it offline. As of me writing this, the IA is still completely offline:
 
