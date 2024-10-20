@@ -766,7 +766,7 @@
 			</div>
 			<div id="alerta" class="box" style="padding: 0; --border: red; color: white; --b-radius: 5;"></div>
 			<script>
-				const alertaChance = Math.floor(Math.random() * 5);
+				const alertaChance = Math.floor(Math.random() * 10);
 				if (alertaChance === 3) {
 					const alertList = [ "THE NATIONAL WEATHER SERVICE HAS ISSUED A SEVERE THUNDERSTORM WARNING IN EFFECT FROM 12:23 PM UNTIL 2:00 PM. FOR YOUR PROTECTION MOVE TO AN INTERIOR ROOM ON THE LOWEST FLOOR OF A BUILDING.", "THE NATIONAL WEATHER SERVICE IN BIRMINGHAM HAS ISSUED A TORNADO WARNING UNTIL 2:45 AM. AT 2:06 AM CST...THE NATIONAL WEATHER SERVICE INDICATED A SEVERE THUNDERSTORM CAPABLE OF PRODUCING A TORNADO. THIS DANGEROUS STORM WAS LOCATED NEAR MEMPHIS...OR 8 MILES SOUTHWEST OF PICKENSVILLE... AND MOVING NORTHEAST AT 45 MPH. TORNADOES ARE DIFFICULT TO SEE AND CONFIRM AT NIGHT. TAKE COVER NOW.", "THE NATIONAL WEATHER SERVICE HAS ISSUED A SPECIAL MARINE WARNING UNTIL 9:15 AM. AT 7:13 AM EDT...DOPPLER RADAR INDICATED A LINE OF THUNDERSTORMS... CAPABLE OF PRODUCING DANGEROUS WINDS IN EXCESS OF 50 KNOTS AND LARGE HAIL FROM 24 NM NORTHWEST OF ALABASTER TO 43 NM SOUTHWEST OF ALABASTER...MOVING EAST AT 35 KNOTS. MARINERS CAN EXPECT GUSTY WINDS...LARGE HAIL...HIGH WAVES...DANGEROUS LIGHTNING...AND HEAVY RAINS. BOATERS SHOULD SEEK SAFE HARBOR IMMEDIATELY...UNTIL THESE STORMS PASS.", "A civil authority has issued A LOCAL AREA EMERGENCY for the following counties or areas: Edgefield, SC; at 5:40 PM on SEP 30, 2024 Effective until 8:40 PM. Message from IPAWSCAP. Edgefield County mandatory curfew from Monday, September 30, at 9 pm to Tuesday, October 1, at 6 am. Essential workers for local businesses/services and responders will be exempt from this curfew. Road conditions are DANGEROUS due to downed power lines and trees. Do NOT travel after 9 pm.", "A civil authority has issued A 911 TELEPHONE OUTAGE EMERGENCY for the following counties or areas: Aiken, SC; at 3:12 PM on SEP 30, 2024 Effective until 11:12 PM. Message from IPAWSCAP. URGENT MESSAGE. From Aiken County. AT&T customers attempting to dial 9-1-1 in the Aiken County and surrounding area are EXPERIENCING TECHNICAL DIFFICULTIES and are UNABLE to make wireless calls to 9-1-1. Please find other alternative methods to communicate to 9-1-1 or call (803) 642-1751.", "A broadcast or cable system has issued A PRACTICE/DEMO WARNING for the following counties or areas: Norfolk, VA; at 1:05 PM on OCT 2, 2024 Effective until 4:05 PM. Message from TGR/DAS."];
 					const selectedAlert = alertList[Math.floor(Math.random() * alertList.length)];
@@ -857,8 +857,8 @@
 					<div style="display: flex;">
 						<div style="display: flex; align-items: center; margin-right: 10px;">
 							<img id="artfeat" class="boxyless" src="https://i.imgur.com/s25rTzF.png" width="100px" height="100px" style="image-rendering: pixelated; display: inline-block; box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7); --b-radius-bl: 5;">
-							<div class="afterfeat" style="height: 95px; background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(227,232,0,1) 100%);"></div>
-							<div class="afterfeat" style="height: 90px; width: 2px; background: linear-gradient(45deg, rgba(189,0,128,1) 0%, rgba(0,232,179,1) 100%);"></div>
+							<div class="afterfeat" style="height: 95px; background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(227,232,0,1) 100%); width: 8px; opacity: 0.7;"></div>
+							<div class="afterfeat" style="height: 90px; width: 4px; background: linear-gradient(45deg, rgba(189,0,128,1) 0%, rgba(0,232,179,1) 100%); opacity: 0.5;"></div>
 						</div>
 						<div style="width: 100%;">
 							<p class="nomarblock">look i made more wallpaper!</p>
