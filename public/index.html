@@ -7,9 +7,6 @@
 	<meta name="google-site-verification" content="VY9zXKAnkuHIsHGWLKHMNuZMIg0AMjhw3Mjzs8NgdG8"/>
 	<meta name="description" content="WiiCHiCKEN i am awesome and i will be the most awesome person in the whole world forever.">
 	<link rel="icon" type="image/x-icon" href="favicon.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="media/favicons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="media/favicons/32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="media/favicons/16.png">
 	<meta name="theme-color" content="#00ffb1">
 	<noscript>
 		<style>
@@ -23,16 +20,11 @@
 <body>
 <style>
 	:root {
-		/* --dark-primary: #93000a;
+		--dark-primary: #93000a;
 		--dark-tertiary: #dec48c;
 		--dark-on-tertiary: #382a49;
 		--bg-1: red;
-		--bg-2: blue; */
-		--dark-primary: #ffb68a;
-		--dark-tertiary: #e1b8f5;
-		--dark-on-tertiary: #422255;
-		--bg-1: #ae00ff;
-		--bg-2: #ff7b00;
+		--bg-2: blue;
 	}
 	body {color: white;}
 	h1, h2, h3, h4 {margin: 0;}
@@ -67,12 +59,9 @@
 	}
 	.box {
 		margin-bottom: 10px;
-		--border: var(--bg-2);
-		background-color: #321300b3;
-		color: #ffdbc8;
-		/* --border: red;
+		--border: red;
 		background-color: #410002b3;
-		color: #ffdad6; */
+		color: #ffdad6;
 		padding: 10px;
 		overflow: hidden;
 	}
@@ -90,8 +79,6 @@
 	.sidebox {
 		color: var(--side-text);
 		width: 200px;
-		--side-text: #bdf0b3 !important;
-		--border: #4dc236 !important;
 	}
 	.sidehead, .sidebox-content, .sidehead p {
 		backdrop-filter: blur(5px);
@@ -100,8 +87,7 @@
 	}
 	.sidebox:hover .sidehead p {box-shadow: 0 0 20px 1px var(--side-border);}
 	.sidehead {
-		/* color: #ffdad5; */
-		color: #bdf0b3 !important;
+		color: #ffdad5;
 		background-color: unset;
 		margin: 0;
 		margin-bottom: 2px;
@@ -110,10 +96,7 @@
 		display: flex;
 	}
 	.sidehead p {
-		/* background: linear-gradient(45deg, #930006 0%, #743b00 100%); */
-		background: unset !important;
-		background-color: #0c390e !important;
-		color: #bdf0b3 !important;
+		background: linear-gradient(45deg, #930006 0%, #743b00 100%);
 		margin-block-start: 0;
 		margin-block-end: 0;
 		padding-left: 3px;
@@ -129,15 +112,12 @@
 	.sidebox-content {
 		padding: 5px;
 		background-color: var(--side-bg);
-		--side-bg: #002203b3 !important;
 		--b-radius-tl: 2;
 		--b-radius-tr: 2;
 		--b-radius-bl: 5;
 		--b-radius-br: 5;
 		background-image: url('/media/lownoise.png');
-		color: #bdf0b3 !important;
 	}
-	#flood-menu {color: #bdf0b3 !important;}
 	.sidebox-content a:not(:has(img)) {
 		background-color: #ffb4aa;
 		color: #690003;
@@ -190,6 +170,11 @@
 	@keyframes fartPoo {
 		from {transform: translateX(1000px);}
 		to {transform: translateX(0);}
+	}
+	#divsel {animation: dcAnim 15s infinite;}
+	#divsel:hover {
+		animation-duration: 2s;
+		box-shadow: 0px 0px 10px 1px #721D56;
 	}
 	#randring:hover {animation: rainbow 1s infinite;}
 	@keyframes dcAnim {
@@ -294,12 +279,9 @@
 		padding: 2px;
 		display: flex;
 		justify-content: center;
-		background-color: #255023 !important;
-		border: 1px solid #a2d399;
-		color: #a2d399 !important;
-		/* background-color: #004a76 !important;
+		background-color: #004a76 !important;
 		border: 1px solid #97cbff;
-		color: #cee5ff !important; */
+		color: #cee5ff !important;
 		width: 45%;
 		margin: 2px;
 		font-size: 14px;
@@ -362,15 +344,14 @@
 		display: none;
 		background-color: #750000;
 	}
-	/* TODO switch navig to more readable colors once halloween ends */
 	#navig {
 		display: flex;
-		background: linear-gradient(270deg, var(--bg-1), var(--bg-2));
+		background: linear-gradient(270deg, #ff0000, #00a2ff);
 		padding: 1px;
 	}
 	#navig::before {
 		background-color: unset !important;
-		background: linear-gradient(270deg, var(--bg-1) 0%, var(--bg-2) 100%) !important;
+		background: linear-gradient(270deg, #ff0000 0%, #00a2ff 100%) !important;
 	}
 	#navig a, #lonelyNav a {
 		font-family: 'Kode Mono', monospace;
@@ -400,8 +381,7 @@
 	.head {
 		padding: 0;
 		background: linear-gradient(45deg, rgb(70, 0, 0) 0%, rgb(0, 14, 70)100%);
-		/* background-image: url(media/home/ditty.png); */
-		background-image: url('media/home/scaryblend.png');
+		background-image: url(media/home/ditty.png);
 		image-rendering: pixelated;
 		--border: #00ffa1;
 		/* box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50);
@@ -578,6 +558,9 @@
 		50%{box-shadow: 0px 0px 200px 50px rgba(0, 126, 255, 0.75); --border: rgb(0, 126, 255);}
 		100%{box-shadow: 0px 0px 200px 50px rgba(0, 255, 161, 0.75); --border: rgba(0, 255, 161);}
 	}
+	::-webkit-scrollbar {width: 5px;}
+	::-webkit-scrollbar-track {background-color: black;}
+	::-webkit-scrollbar-thumb {background: linear-gradient(45deg, blue 0%, red 100%);}
 	.mobileVisible {display: none;}
 	/* i hate my life and i wanan die, i aint got no iphone */
 	@media only screen and (min-width: 900px) {
@@ -729,7 +712,7 @@
 						<div class="dabuttons">
 							<iframe src="https://incr.easrng.net/badge?key=wiichicken" title="increment badge" width="88" height="31" frameborder="0" style="padding: 2px; box-sizing: content-box;"></iframe>
 							<a href="https://corvidae.digital" target="_blank"><img src="interests/websites/img/button/corvidae.gif" loading="lazy"></a>
-							<a href="https://bulltown.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/bulltownneo.png" loading="lazy" alt="bulltown.neo"></a>
+							<a href="https://divsel.neocities.org" target="_blank"><img id="divsel" src="interests/websites/img/button/divsel.png"></a>
 							<a href="https://catbyte.site/" target="_blank"><img src="interests/websites/img/button/catbyte.png"></a>
 							<a href="https://darkendstars.neocities.org" target="_blank"><img src="https://i.ibb.co/17djkby/Untitled-Artwork-20.gif" loading="lazy"></a>
 							<a href="https://psychicnewborn.neocities.org" target="_blank"><img loading="lazy" src="interests/websites/img/button/psychic.gif"></a>
@@ -758,7 +741,7 @@
 					<div id="logocontent">
 						<p id="thisIsMyName" class="nomarblock mobileVisible headText" style="color: white;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN</p>
 						<div id="wiiLogo" class="mobileHidden" style="image-rendering: pixelated;">
-							<img src="media/home/scarylogo.png" loading="lazy">
+							<img src="logo.png">
 						</div>
 					</div>
 				</div>
@@ -809,9 +792,6 @@
 				</ul>
 				<p>please note that just because a feature is enabled doesn't mean the entire site is compatible with it. these features are still a work in progress</p>
 			</div>
-			<div class="box sec-full">
-				<p class="headText nomarblock" style="text-align: center;">HAPPY HALLOWEEN!</p>
-			</div>
 			<div class="row" id="infamous" style="display: grid; gap: 10px;">
 				<div class="box noscript-hidden d-sec-l m-sec-t" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
 					<div style="display: flex; flex-wrap: wrap;" id="statusCard">
@@ -823,7 +803,7 @@
 						</div>
 						<script src="https://status.cafe/current-status.js?name=cringe" defer></script>
 						<img src="media/home/status.png" width="200" height="220" loading="lazy" style="z-index: 1;" onmouseover="this.src ='media/home/statusy.png'" onmouseleave="this.src = 'media/home/status.png'">
-						<img src="media/home/ditherglow.png" class="blurry" loading="lazy" style="height: 200px; width: 200px; bottom: 0; filter: none !important; opacity: 0.6;">
+						<img src="media/home/ditherglow.png" class="blurry" loading="lazy" style="height: 200px; width: 200px; bottom: 0; filter: none !important;">
 					</div>
 				</div>
 				<div class="box mobileHidden noscript-hidden" style="grid-column: 2/3; grid-row: 1; margin-bottom: 0; padding: 0; --border: #E6E1E5; background-color: #1C1B1Fcc;">
@@ -916,11 +896,11 @@
 			</div>
 			<div class="box sec-t">
 				<h2>siteUpdates</h2>
-				<h3 style="margin: 0; font-size: 15px;"><strong>WELCOME 11ty</strong></h3>
-				<p id="updatedate">October 20, 2024</p>
+				<h3 style="margin: 0; font-size: 15px;"><strong>my chest hurts</strong></h3>
+				<p id="updatedate">October 6, 2024</p>
 			</div>
 			<div class="box">
-				<p>there aren't many visible changes this week, but there are a ton of changes behind the scenes.<br>the #100DaysToUnload blog, as well as some other pages, now use 11ty. there is a <a href="/more/archive/blog/2024/10/using11ty.html" target="_blank">blog post about this</a> if you're interested. this doesn't mean anything to you, but it means a lot to me, as it means the site will be a lot easier to maintain. it also means that i am becoming the person i swore i would never become, but now i've realized i've just been arrogant about html.<br>halfway through the week i accidentally pushed a full update early. sorry about that if things broke.</p>
+				<p>my chest hurts</p>
 			</div>
 			<div class="box sec-b">
 				<p>site updates almost every sunday, blog posts and content updates whenever</p>
@@ -988,12 +968,9 @@
 					<p class="boxy" style="background: linear-gradient(90deg, #534341 0%, #665949 100%);">UPDATED</p>
 				</div>
 				<div class="sidebox-content boxy" style="text-align: center; padding: 0;">
-					<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #255023; color: #bdf0b3; padding: 2px;">----</p>
-					<p class="headText nomarblock" id="upDate" style="background-color: #f2f5eb; color: #191d17; font-size: 50px;">##</p>
-					<p class="nomarblock headText" id="upYear" style="background-color: #c2c8bd; color: #424940; font-size: 19px;">2024</p>
-					<!-- <p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;">----</p>
+					<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;">----</p>
 					<p class="headText nomarblock" id="upDate" style="background-color: #ede0dd; color: #201a19; font-size: 50px;">##</p>
-					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;">2024</p> -->
+					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;">2024</p>
 					<script src="resources/widgets/home/lastupdate.js"></script>
 				</div>
 			</div>
