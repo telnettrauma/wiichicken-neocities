@@ -13,13 +13,14 @@ var whatIsOpera = (navigator.userAgent.match(/Opera|OPR\//) ? true : false);
 async function banOpera() {
 	if (whatIsOpera === true) {
 		await sleep(100);
-		document.body.innerHTML = '<h1>Oops!</h1><p>Opera browsers are not supported. For the best, most private browsers, check these out:</p><br><ul><li><a href="https://qutebrowser.org">Qute Browser</a></li><li><a href="https://www.apple.com/safari/">Safari</li></ul><br><br><p>Or... look up how to fake your UA. Either works.</p>';
+		document.body.innerHTML = '<div style="color: white !important;"><h1>Oops!</h1><p>Opera browsers are not supported. For the best, most private browsers, check these out:</p><br><ul><li><a href="https://qutebrowser.org">Qute Browser</a></li><li><a href="https://www.apple.com/safari/">Safari</li></ul><br><br><p>Or... look up how to fake your UA. Either works.</p></div>';
+		document.body.style.backgroundColor = 'white';
 	}
 }
 banOpera();
 async function shareCopyLink(toCopy) {
-  await navigator.clipboard.writeText(toCopy);
-  window.alert('done!');
+	await navigator.clipboard.writeText(toCopy);
+	window.alert('done!');
 }
 const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 mediaQuery.addEventListener('change', () => {
