@@ -8,13 +8,9 @@ flood.serverURL = "https://brain.melonking.net"; // Server - Do not Edit.
 //flood.serverURL = "http://localhost:3000"; // For testing - Please ignore!
 flood.ringPage = "https://melonking.net/free/software/flood.html"; // Do not edit!
 flood.ringTarget = "_blank";
-// TODO remove flood texture after halloween
-flood.texture = "https://melonking.net/images/flood-goo.png";
-flood.textureWidth = 256;
-flood.textureHeight = 256;
-// flood.texture = "https://melonking.net/images/flood-water.png";
-// flood.textureWidth = 314;
-// flood.textureHeight = 98;
+flood.texture = "https://melonking.net/images/flood-water.png";
+flood.textureWidth = 314;
+flood.textureHeight = 98;
 flood.drainSound = "https://melonking.net/audio/ui/flush.mp3";
 flood.drainTooSoonSound = "https://melonking.net/audio/ui/clunk.mp3";
 flood.updateSpeed = 5000; // Please do not lower!

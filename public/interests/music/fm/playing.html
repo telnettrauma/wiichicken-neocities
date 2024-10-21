@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 		<title>CURRENTLY LiSTENiNG TO</title>
 		<link rel="icon" type="image/x-icon" href="/favicon.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="media/favicons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="media/favicons/32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="media/favicons/16.png">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
-	<body>
 	<div class="content" style="margin: 0; position: relative; overflow: hidden;" id="main">
 		<div id="moneyOnMind" class="moneyOnMind"></div>
 		<div class="moneyOnMind" id="fartOnMind" style="animation: otherRotate 75s linear infinite; opacity: 0.75; z-index: 1; mix-blend-mode: multiply;"></div>   
@@ -33,11 +30,12 @@
 		</form>
 	</div>
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@600&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-		* {box-sizing: border-box;}
-		::-webkit-scrollbar {width: 0;}
+		@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap');
+		* {
+			::-webkit-scrollbar {width: 0;}
+		}
 		body {
-			font-family: 'Ubuntu', sans-serif;
+			font-family: 'PT Sans', sans-serif;
 			margin: 0;
 			color: white;
 			overflow-x: hidden;
@@ -273,33 +271,5 @@
 		}
 		detectSize();
 		setInterval(function(){getNowPlaying()}, 15000);
-		let fadeTimeout, isHovered = false;
-		let controls = document.querySelector('#controls');
-		function fadeOut() {
-			if (!isHovered) {
-				controls.style.transition = 'opacity 0.5s';
-				controls.style.opacity = '0';
-			}
-		}
-		function fadeIn() {
-			controls.style.transition = 'opacity 0.5s';
-			controls.style.opacity = '1';
-			clearTimeout(fadeTimeout);
-			fadeTimeout = setTimeout(fadeOut, 5000);
-		}
-		// shows the controls if the mouse is moved or screen is tapped
-		document.addEventListener('mousemove', () => {fadeIn();});
-		document.addEventListener('touchstart', () => {fadeIn();});
-		controls.addEventListener('mouseenter', () => {
-			isHovered = true;
-			clearTimeout(fadeTimeout);
-		});
-		// prevents controls from being automatically hidden when hovered over
-		controls.addEventListener('mouseleave', () => {
-			isHovered = false;
-			fadeTimeout = setTimeout(fadeOut, 5000);
-		});
-		fadeTimeout = setTimeout(fadeOut, 5000);
 	</script>
-	</body>
 </html>

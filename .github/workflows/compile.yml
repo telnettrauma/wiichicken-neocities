@@ -1,0 +1,33 @@
+name: Compile website
+
+# don't run on live branch, as that has a dedicated workflow for pushing to neocities
+on:
+  push:
+    branches-ignore:
+      - live
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout live branch
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+
+      - name: Install deps and build
+        run: |
+          npm i
+          npm run build
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: 'Automatically compile site'
+          commit-message: Automatically compile site
+          delete-branch: true

@@ -7,20 +7,6 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
-			<title>WELCOME 11ty</title>
-			<pubDate>Sun, 20 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>11ty is now used for some blog posts</description>
-		</item>
-		<item>
-			<title>HAPPY HALLOWEEN</title>
-			<pubDate>Sun, 13 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>now the site has a halloween theme</description>
-		</item>
-		<item>
 			<title>my chest hurts</title>
 			<pubDate>Sun, 6 Oct 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -75,6 +61,20 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>now the navigation bar is at the bottom</description>
+		</item>
+		<item>
+			<title>DOTS AND BOXES MiNUS THE DOTS</title>
+			<pubDate>Sun, 4 Aug 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>site update refresh, featuring slanted corners</description>
+		</item>
+		<item>
+			<title>COMiNG THROUGH</title>
+			<pubDate>Sun, 28 Jul 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>the look of the website is a mess</description>
 		</item>
 	</channel>
 </rss>
