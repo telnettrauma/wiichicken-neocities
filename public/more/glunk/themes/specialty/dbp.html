@@ -51,7 +51,6 @@
 		}
 		#artwork {
 			display: inline-block;
-			border: 1px solid #c2ffd5;
 			width: 100px;
 			max-width: 300px;
 			border-radius: 5px;
@@ -132,6 +131,7 @@
 			request.send();
 		}
 		document.addEventListener('DOMContentLoaded', getNowPlaying());
+		setInterval(function(){getNowPlaying()}, 15000);
 	</script>
 	</body>
 </html>
