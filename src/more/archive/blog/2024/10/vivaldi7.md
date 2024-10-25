@@ -1,7 +1,7 @@
 ---
 layout: blog/24/10/100daystounload.njk
 title: "Vivaldi 7.0"
-date: 2024-10-23
+date: 2024-10-24
 light: "#dcea97"
 dark: "#181e00"
 articleNumber: 18
