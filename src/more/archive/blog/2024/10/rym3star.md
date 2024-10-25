@@ -4,6 +4,7 @@ title: "Everything on RYM is Rated 3 Stars"
 date: 2024-10-11
 light: "#ffdbd1"
 dark: "#3a0b01"
+accent: "#ff4400"
 articleNumber: 5
 permalink: "/more/archive/blog/2024/10/rym3star.html"
 ---

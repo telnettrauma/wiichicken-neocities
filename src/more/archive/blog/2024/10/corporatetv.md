@@ -4,6 +4,7 @@ title: "Corporate Television is Taking Over"
 date: 2024-10-14
 light: "#ffdbc9"
 dark: "#331200"
+accent: "#ff7700"
 articleNumber: 8
 permalink: "/more/archive/blog/2024/10/corporatetv.html"
 ---

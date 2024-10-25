@@ -4,6 +4,7 @@ title: "i am so mean hahaha"
 date: 2024-10-15
 light: "#ffdcc4"
 dark: "#2f1400"
+accent: "#ff8800"
 articleNumber: 9
 permalink: "/more/archive/blog/2024/10/somean.html"
 ---

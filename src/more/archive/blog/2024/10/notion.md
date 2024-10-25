@@ -4,6 +4,7 @@ title: "Why I Came Back to Notion"
 date: 2024-10-07
 light: "#ffdad4"
 dark: "#3a0905"
+accent: "#ff0000"
 articleNumber: 1
 permalink: "/more/archive/blog/2024/10/notion.html"
 ---

@@ -4,6 +4,7 @@ title: "You Unlocked a 3 Day Streak"
 date: 2024-10-23
 light: "#e2e993"
 dark: "#1b1d00"
+accent: "#eeff00"
 articleNumber: 17
 permalink: "/more/archive/blog/2024/10/streaks.html"
 ---

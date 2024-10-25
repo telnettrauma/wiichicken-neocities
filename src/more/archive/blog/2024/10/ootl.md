@@ -4,6 +4,7 @@ title: "Falling Out of the Loop"
 date: 2024-10-22
 light: "#e8e78f"
 dark: "#1d1d00"
+accent: "#ffff00"
 articleNumber: 16
 permalink: "/more/archive/blog/2024/10/ootl.html"
 ---

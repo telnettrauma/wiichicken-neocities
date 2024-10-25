@@ -4,6 +4,7 @@ title: "Using 11ty"
 date: 2024-10-20
 light: "#f7e388"
 dark: "#211b00"
+accent: "#ffdd00"
 articleNumber: 14
 permalink: "/more/archive/blog/2024/10/using11ty.html"
 ---

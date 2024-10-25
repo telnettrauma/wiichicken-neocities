@@ -4,6 +4,7 @@ title: "Vivaldi 7.0"
 date: 2024-10-24
 light: "#dcea97"
 dark: "#181e00"
+accent: "#ddff00"
 articleNumber: 18
 permalink: "/more/archive/blog/2024/10/vivaldi7.html"
 ---
