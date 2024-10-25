@@ -4,6 +4,7 @@ title: "SSO is the Coolest Thing Ever"
 date: 2024-10-25
 light: "#d7eb9b"
 dark: "#161e00"
+accent: "#ccff00"
 articleNumber: 19
 permalink: "/more/archive/blog/2024/10/ssorules.html"
 ---
