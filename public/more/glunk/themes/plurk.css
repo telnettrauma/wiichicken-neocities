@@ -1,0 +1,131 @@
+* {
+	border-radius: 0px !important;
+}
+body {
+	background: url('https://wiggle.monster/starry.gif') !important;
+}
+.ex_link {
+	color: #c6e7ff !important;
+	text-shadow: 0 0 10px;
+}
+.plurk_cnt, .response_count, .p_img, #updater .item a, .filter_selected, .plurk_box {
+	border: 1px solid;
+	box-shadow: 2px 2px 0 0;
+}
+.profile-pic {
+	border: 1px solid white;
+	box-shadow: 2px 2px 0 0 white;
+}
+.new .response_count {
+	background: linear-gradient(0deg, rgba(255,136,0,1) 0%, rgba(255,46,0,1) 100%) !important;
+	color: white;
+}
+.pop-window-view, .divplurk, .response_box, .mini_form {
+	background: #0f1513 !important;
+}
+.response_box, .mini_form {border-top: 1px solid #89938f !important;}
+.td_img {
+	color: #a1f2db;
+}
+.plurk_cnt, #form_holder, .response_box, .poster_holder .mini_form {
+	color: #a1f2db;
+	background-color: #002019e3 !important;
+	backdrop-filter: blur(5px);
+	transition-duration: 0.2s;
+}
+.plurk_icon.pif-replurk-circle:before {
+	background-clip: text !important;
+	color: transparent !important;
+	background: linear-gradient(0deg, rgba(134,214,191,1) 0%, rgba(166,214,134,1) 100%);
+}
+.q_replurks, .replurk_count {
+	background: linear-gradient(90deg, rgba(134,214,191,1) 0%, rgba(166,214,134,1) 100%) !important;
+	color: #00382d !important;
+}
+.favorite_count {
+	background: linear-gradient(90deg, rgba(255,0,85,1) 0%, rgba(255,0,198,1) 100%) !important;
+	color: #3a071d !important;
+}
+.plurk_icon, .like-on {
+	text-shadow: 0 0 10px;
+}
+.new5, .new4, .new3, .new2, .new1 {
+	background-color: #231b00 !important;
+	color: #fde186 !important;
+}
+.input_holder, #cbox_input {
+	background-color: #1d352e !important;
+	color: #cde9de !important;
+}
+#input_small {
+	background-color: #294a5e !important;
+	color: #c6e7ff !important;
+	border: 1px solid;
+	box-shadow: 2px 2px 0 0 !important;
+}
+.browse_button .cmp_arrow_right, .browse_button .cmp_arrow_left {
+	background-clip: text !important;
+	color: transparent !important;
+	background: linear-gradient(45deg, rgba(0,215,255,1) 0%, rgba(0,255,166,1) 100%);
+}
+.cmp_back_to_today {
+	background: linear-gradient(45deg, rgba(0,215,255,1) 0%, rgba(0,255,166,1) 100%);
+	color: #002019 !important;
+}
+.cmp_back_to_today::before {color: rgba(0,215,255,1);}
+#top_bar {
+	color: #cde9de !important;
+}
+.bar-color, #top_bar {
+	background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%) !important;
+}
+#noti_count {
+	background: linear-gradient(0deg, rgba(255,136,0,1) 0%, rgba(255,46,0,1) 100%) !important;
+	box-shadow: 0 0 15px 3px red;
+}
+.unread_generic {
+	background: linear-gradient(90deg, #86d6bf 0%, #86b9d6 100%);
+	background-color: #86d6bf;
+	color: #00382d !important;
+}
+.filter_selected {
+	background-color: #a9cbe3 !important;
+	color: #0f3447 !important;
+}
+.text_holder {
+	color: #a1f2db;
+}
+#updater .item a {
+	background-color: #334c44 !important;
+	color: #a1f2db !important;
+}
+#bottom_line {overflow: visible;}
+#bottom_line, #bottom_line::after {
+	background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,0,255,1) 100%);
+}
+#bottom_line::after {
+	content: '';
+	height: 10px;
+	width: 110%;
+	position: absolute;
+	bottom: -7px;
+	left: -20px;
+	filter: blur(15px);
+}
+.time_start {
+	background-color: #334c44;
+	color: #cde9de;
+	border: 1px solid;
+}
+#plurk-dashboard {
+	background: #001e2ddc;
+	backdrop-filter: blur(10px);
+	color: #c6e7ff;
+	border: 1px solid #0095ff;
+}
+.icons_holder {
+	text-shadow: 0 0 5px !important;
+}
+.candidate-background {
+	background: linear-gradient(90deg, rgba(0,136,111,1) 0%, rgba(0,184,210,1) 100%) !important;
+}
