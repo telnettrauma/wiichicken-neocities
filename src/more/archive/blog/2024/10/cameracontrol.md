@@ -4,6 +4,7 @@ title: "Camera Control and 3D Touch"
 date: 2024-10-21
 light: "#efe58b"
 dark: "#1f1c00"
+accent: "#ffee00"
 articleNumber: 15
 permalink: "/more/archive/blog/2024/10/cameracontrol.html"
 ---
