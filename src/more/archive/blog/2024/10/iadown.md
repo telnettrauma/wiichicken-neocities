@@ -4,6 +4,7 @@ title: "Congrats, you Accomplished Nothing (Internet Archive DDoS)"
 date: 2024-10-10
 light: "#ffdad4"
 dark: "#3a0a04"
+accent: "#ff3300"
 articleNumber: 4
 permalink: "/more/archive/blog/2024/10/iadown.html"
 ---

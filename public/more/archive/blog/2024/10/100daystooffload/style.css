@@ -52,6 +52,14 @@ iframe {border: none;}
 	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60' width='60' height='60'%3E%3Cstyle%3E%3C/style%3E%3Cpath fill-rule='evenodd' d='m58 2v56h-56v-56zm-53 40h24v-24h-24zm27 0h23v-24h-23z'/%3E%3C/svg%3E");
 	width: 60px;
 }
+.callout {
+	display: block;
+	width: 100%;
+	padding: 20px;
+	background-color: var(--dark);
+	color: var(--light);
+	border-radius: 5px;
+}
 @media (prefers-color-scheme: dark) {
 	body {
 		background-color: var(--dark);
@@ -62,7 +70,7 @@ iframe {border: none;}
 		color: black;
 	}
 	hr {border-top: 1px solid var(--light);}
-	code, kbd, pre {
+	code, kbd, pre, .callout {
 		background-color: var(--light);
 		color: var(--dark);
 	}

@@ -4,6 +4,7 @@ title: "There Won't be a Twitter Killer"
 date: 2024-10-16
 light: "#ffdcbd"
 dark: "#2c1600"
+accent: "#ff9900"
 articleNumber: 10
 permalink: "/more/archive/blog/2024/10/twtalt.html"
 ---

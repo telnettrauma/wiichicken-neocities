@@ -4,6 +4,7 @@ title: "Fortnite Black Hole"
 date: 2024-10-17
 light: "#ffddb4"
 dark: "#291800"
+accent: "#ffaa00"
 articleNumber: 11
 permalink: "/more/archive/blog/2024/10/fortniteblackhole.html"
 ---

@@ -24,9 +24,7 @@ jobs:
           npm i
           npm run build
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
+      - name: Create commit
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: 'Automatically compile site'
-          commit-message: Automatically compile site
+          commit_message: Compile website

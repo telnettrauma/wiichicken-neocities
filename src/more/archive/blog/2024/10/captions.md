@@ -4,6 +4,7 @@ title: "Bring Back Good Captioning, and Make it Closed"
 date: 2024-10-13
 light: "#ffdbcd"
 dark: "#360f00"
+accent: "#ff6600"
 articleNumber: 7
 permalink: "/more/archive/blog/2024/10/captions.html"
 ---

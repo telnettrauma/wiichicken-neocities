@@ -4,6 +4,7 @@ title: "Noto Color Emoji are Ugly"
 date: 2024-10-19
 light: "#ffe08b"
 dark: "#241a00"
+accent: "#ffcc00"
 articleNumber: 13
 permalink: "/more/archive/blog/2024/10/notoemoji.html"
 ---

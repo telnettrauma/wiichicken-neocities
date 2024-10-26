@@ -7,6 +7,48 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>TikTok Search is Horny</title>
+			<pubDate>Sat, 26 Oct 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/10/tiktoksearch.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/10/tiktoksearch.html</guid>
+			<description>#social</description>
+		</item>
+		<item>
+			<title>SSO is the Coolest Thing Ever</title>
+			<pubDate>Fri, 25 Oct 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/10/ssorules.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/10/ssorules.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Vivaldi 7.0</title>
+			<pubDate>Thu, 24 Oct 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/10/vivaldi7.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/10/vivaldi7.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>You Unlocked a 3 Day Streak</title>
+			<pubDate>Wed, 23 Oct 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/10/streaks.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/10/streaks.html</guid>
+			<description>#social</description>
+		</item>
+		<item>
+			<title>Falling Out of the Loop</title>
+			<pubDate>Tue, 22 Oct 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/10/ootl.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/10/ootl.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Camera Control and 3D Touch</title>
+			<pubDate>Mon, 21 Oct 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/10/cameracontrol.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/10/cameracontrol.html</guid>
+			<description>#design</description>
+		</item>
+		<item>
 			<title>Using 11ty</title>
 			<pubDate>Sun, 20 Oct 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/10/using11ty.html</link>
@@ -32,55 +74,6 @@
 			<pubDate>Thu, 17 Oct 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/10/fortniteblackhole.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/10/fortniteblackhole.html</guid>
-			<description>no tags</description>
-		</item>
-		<item>
-			<title>There Won't be a Twitter Killer</title>
-			<pubDate>Wed, 16 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/10/twtalt.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/10/twtalt.html</guid>
-			<description>#social</description>
-		</item>
-		<item>
-			<title>i am so mean hahaha</title>
-			<pubDate>Tue, 15 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/10/somean.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/10/somean.html</guid>
-			<description>#rant</description>
-		</item>
-		<item>
-			<title>Corporate Television is Taking Over</title>
-			<pubDate>Mon, 14 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/10/corporatetv.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/10/corporatetv.html</guid>
-			<description>no tags</description>
-		</item>
-		<item>
-			<title>Bring Back Good Captioning, and Make it Closed</title>
-			<pubDate>Sun, 13 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/10/captions.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/10/captions.html</guid>
-			<description>no tags</description>
-		</item>
-		<item>
-			<title>Low Power Mode on iOS Doesn't Exist</title>
-			<pubDate>Sat, 12 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/10/lowpowermode.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/10/lowpowermode.html</guid>
-			<description>no tags</description>
-		</item>
-		<item>
-			<title>Everything on RYM is Rated 3 Stars</title>
-			<pubDate>Fri, 11 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/10/rym3star.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/10/rym3star.html</guid>
-			<description>no tags</description>
-		</item>
-		<item>
-			<title>Congrats, you Accomplished Nothing (Internet Archive DDoS)</title>
-			<pubDate>Thu, 10 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/10/iadown.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/10/iadown.html</guid>
 			<description>no tags</description>
 		</item>
 	</channel>

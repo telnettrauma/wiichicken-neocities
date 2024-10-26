@@ -4,6 +4,7 @@ title: "Drawing the Same Things Over and Over Again"
 date: 2024-10-18
 light: "#ffdea4"
 dark: "#261900"
+accent: "#ffbb00"
 articleNumber: 12
 permalink: "/more/archive/blog/2024/10/drawingoverandover.html"
 ---
