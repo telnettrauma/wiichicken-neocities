@@ -4,6 +4,7 @@ title: "Working With More Complex Git"
 date: 2024-10-09
 light: "#ffdad4"
 dark: "#3a0a04"
+accent: "#ff2200"
 articleNumber: 3
 permalink: "/more/archive/blog/2024/10/professionalgit.html"
 ---

@@ -4,6 +4,7 @@ title: "Things That Don't Work - RCS and Spotify Jam"
 date: 2024-10-08
 light: "#ffdad4"
 dark: "#3a0904"
+accent: "#ff1100"
 articleNumber: 2
 permalink: "/more/archive/blog/2024/10/jamrcs.html"
 ---

@@ -4,6 +4,7 @@ title: "Low Power Mode on iOS Doesn't Exist"
 date: 2024-10-12
 light: "#ffdbcf"
 dark: "#390c00"
+accent: "#ff5500"
 articleNumber: 6
 permalink: "/more/archive/blog/2024/10/lowpowermode.html"
 ---

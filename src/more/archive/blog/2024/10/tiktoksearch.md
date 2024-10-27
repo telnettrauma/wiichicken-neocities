@@ -4,6 +4,7 @@ title: "TikTok Search is Horny"
 date: 2024-10-26
 light: "#d3ec9e"
 dark: "#141f00"
+accent: "#bbff00"
 articleNumber: 20
 permalink: "/more/archive/blog/2024/10/tiktoksearch.html"
 ---
