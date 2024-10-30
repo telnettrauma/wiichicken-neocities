@@ -46,6 +46,10 @@ body {
 	background: linear-gradient(90deg, rgba(255,0,85,1) 0%, rgba(255,0,198,1) 100%) !important;
 	color: #3a071d !important;
 }
+.private_info {
+	background: linear-gradient(90deg, rgba(228,186,37,1) 0%, rgba(228,102,37,1) 100%) !important;
+	color: #231a00 !important;
+}
 .plurk_icon, .like-on {
 	text-shadow: 0 0 10px;
 }
