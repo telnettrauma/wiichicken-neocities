@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Index of {{ title }}</title>
+	</head>
+	<body>
+		<h1>Index of {{ title }}</h1>
+		<ul><li><strong><a href="../">Parent Directory</a></strong></li></ul>
+		{{ content | safe }}
+		<hr>
+		<p style="color: grey;">this isn't a real directory page</p>
+	</body>
+</html>
