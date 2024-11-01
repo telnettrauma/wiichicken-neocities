@@ -63,12 +63,9 @@
 	}
 	.box {
 		margin-bottom: 10px;
-		--border: var(--bg-2);
-		background-color: #321300b3;
-		color: #ffdbc8;
-		/* --border: red;
+		--border: red;
 		background-color: #410002b3;
-		color: #ffdad6; */
+		color: #ffdad6;
 		padding: 10px;
 		overflow: hidden;
 	}
@@ -86,8 +83,6 @@
 	.sidebox {
 		color: var(--side-text);
 		width: 200px;
-		--side-text: #bdf0b3 !important;
-		--border: #4dc236 !important;
 	}
 	.sidehead, .sidebox-content, .sidehead p {
 		backdrop-filter: blur(5px);
@@ -97,7 +92,6 @@
 	.sidebox:hover .sidehead p {box-shadow: 0 0 20px 1px var(--side-border);}
 	.sidehead {
 		/* color: #ffdad5; */
-		color: #bdf0b3 !important;
 		background-color: unset;
 		margin: 0;
 		margin-bottom: 2px;
@@ -106,10 +100,7 @@
 		display: flex;
 	}
 	.sidehead p {
-		/* background: linear-gradient(45deg, #930006 0%, #743b00 100%); */
-		background: unset !important;
-		background-color: #0c390e !important;
-		color: #bdf0b3 !important;
+		background: linear-gradient(45deg, #930006 0%, #743b00 100%);
 		margin-block-start: 0;
 		margin-block-end: 0;
 		padding-left: 3px;
@@ -125,15 +116,12 @@
 	.sidebox-content {
 		padding: 5px;
 		background-color: var(--side-bg);
-		--side-bg: #002203b3 !important;
 		--b-radius-tl: 2;
 		--b-radius-tr: 2;
 		--b-radius-bl: 5;
 		--b-radius-br: 5;
 		background-image: url('/media/lownoise.png');
-		color: #bdf0b3 !important;
 	}
-	#flood-menu {color: #bdf0b3 !important;}
 	.sidebox-content a:not(:has(img)) {
 		background-color: #ffb4aa;
 		color: #690003;
@@ -290,12 +278,9 @@
 		padding: 2px;
 		display: flex;
 		justify-content: center;
-		background-color: #255023 !important;
-		border: 1px solid #a2d399;
-		color: #a2d399 !important;
-		/* background-color: #004a76 !important;
+		background-color: #004a76 !important;
 		border: 1px solid #97cbff;
-		color: #cee5ff !important; */
+		color: #cee5ff !important;
 		width: 45%;
 		margin: 2px;
 		font-size: 14px;
@@ -361,12 +346,12 @@
 	/* TODO switch navig to more readable colors once halloween ends */
 	#navig {
 		display: flex;
-		background: linear-gradient(270deg, var(--bg-1), var(--bg-2));
+		background: linear-gradient(270deg, #ff0000, #00a2ff);
 		padding: 1px;
 	}
 	#navig::before {
 		background-color: unset !important;
-		background: linear-gradient(270deg, var(--bg-1) 0%, var(--bg-2) 100%) !important;
+		background: linear-gradient(270deg, #ff0000, #00a2ff) !important;
 	}
 	#navig a, #lonelyNav a {
 		font-family: 'Kode Mono', monospace;
@@ -396,8 +381,7 @@
 	.head {
 		padding: 0;
 		background: linear-gradient(45deg, rgb(70, 0, 0) 0%, rgb(0, 14, 70)100%);
-		/* background-image: url(media/home/ditty.png); */
-		background-image: url('media/home/scaryblend.png');
+		background-image: url(media/home/ditty.png);
 		image-rendering: pixelated;
 		--border: #00ffa1;
 		/* box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50);
@@ -754,7 +738,7 @@
 					<div id="logocontent">
 						<p id="thisIsMyName" class="nomarblock mobileVisible headText" style="color: white;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN</p>
 						<div id="wiiLogo" class="mobileHidden" style="image-rendering: pixelated;">
-							<img src="media/home/scarylogo.png" loading="lazy">
+							<img src="logo.png" loading="lazy">
 						</div>
 					</div>
 				</div>
@@ -909,16 +893,11 @@
 			</div>
 			<div class="box sec-t">
 				<h2>siteUpdates</h2>
-				<h3 style="margin: 0; font-size: 15px;"><strong>WELCOME BACK MATERiAL 3</strong></h3>
-				<p id="updatedate">October 27, 2024</p>
+				<h3 style="margin: 0; font-size: 15px;"><strong>HALLOWEEN iS NO MORE!!</strong></h3>
+				<p id="updatedate">November 1, 2024</p>
 			</div>
 			<div class="box">
-				<p>i think that there are a few new things that i made this time around. i don't know.</p>
-				<ul>
-					<li>the favicon for the #100DaysToOffload pages now changes color depending on the color of the page</li>
-					<li>i also marked out some of my favorite posts in the blog page</li>
-				</ul>
-				<p>also, behind the scenes i learned how to use git to merge without opening a pull request on github. that has been really helpful honestly.</p>
+				<p>that's right, i have removed the halloween theme, as halloween is over! none more for you. now, go back to your regular life.</p>
 			</div>
 			<div class="box sec-b">
 				<p>site updates almost every sunday, blog posts and content updates whenever</p>
@@ -986,12 +965,9 @@
 					<p class="boxy" style="background: linear-gradient(90deg, #534341 0%, #665949 100%);">UPDATED</p>
 				</div>
 				<div class="sidebox-content boxy" style="text-align: center; padding: 0;">
-					<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #255023; color: #bdf0b3; padding: 2px;">----</p>
-					<p class="headText nomarblock" id="upDate" style="background-color: #f2f5eb; color: #191d17; font-size: 50px;">##</p>
-					<p class="nomarblock headText" id="upYear" style="background-color: #c2c8bd; color: #424940; font-size: 19px;">2024</p>
-					<!-- <p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;">----</p>
+					<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;">----</p>
 					<p class="headText nomarblock" id="upDate" style="background-color: #ede0dd; color: #201a19; font-size: 50px;">##</p>
-					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;">2024</p> -->
+					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;">2024</p>
 					<script src="resources/widgets/home/lastupdate.js"></script>
 				</div>
 			</div>
