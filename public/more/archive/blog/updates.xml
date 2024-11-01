@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>HALLOWEEN iS NO MORE!!</title>
+			<pubDate>Fri, 1 Nov 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>removed the halloween theme</description>
+		</item>
+		<item>
 			<title>WELCOME BACK MATERiAL 3</title>
 			<pubDate>Sun, 27 Oct 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>you read the title</description>
-		</item>
-		<item>
-			<title>STATE OF MY SiTE</title>
-			<pubDate>Sun, 25 Aug 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>new, really long ramble blog post about the state of my site</description>
 		</item>
 	</channel>
 </rss>
