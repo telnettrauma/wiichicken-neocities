@@ -2,9 +2,6 @@ name: Combined Workflow
 
 on:
   push:
-    branches:
-      - main
-      - master
     branches-ignore:
       - live
   workflow_dispatch:
