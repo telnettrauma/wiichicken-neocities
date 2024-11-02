@@ -1,9 +1,9 @@
-name: Combined Workflow
+name: Compile and Deploy
 
 on:
   push:
-    branches-ignore:
-      - live
+    branches:
+      - '**'
   workflow_dispatch:
     inputs:
       importAll:
@@ -17,13 +17,17 @@ permissions:
   repository-projects: read
   contents: read
 
+concurrency:
+  group: deploy-to-neocities
+  cancel-in-progress: true
+
 jobs:
   compile:
-    if: github.ref != 'refs/heads/main' && github.ref != 'refs/heads/master' # Run only when not on main or master branch
+    if: github.ref != 'refs/heads/live'  # Run on all branches except live
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout live branch
+      - name: Checkout branch
         uses: actions/checkout@v4
 
       - name: Use Node.js
@@ -46,7 +50,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Run Issue Bot
         uses: juulsn/todo-issue@main
@@ -54,3 +58,36 @@ jobs:
           excludePattern: '^(node_modules/)'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy:
+    if: github.ref == 'refs/heads/live' # Run only on live branch
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout live branch
+        uses: actions/checkout@v4
+        with:
+          ref: live
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+
+      - name: Install deps and build
+        run: |
+          npm i
+          npm run build
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+
+      - name: Deploy to neocities
+        uses: bcomnes/deploy-to-neocities@v1
+        with:
+          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+          cleanup: true
+          dist_dir: public # specify the directory where your site is built
