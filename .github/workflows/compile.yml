@@ -1,13 +1,28 @@
-name: Compile website
+name: Combined Workflow
 
-# don't run on live branch, as that has a dedicated workflow for pushing to neocities
 on:
   push:
+    branches:
+      - main
+      - master
     branches-ignore:
       - live
+  workflow_dispatch:
+    inputs:
+      importAll:
+        default: false
+        required: false
+        type: boolean
+        description: Enable, if you want to import all TODOs. Runs on checked out branch! Only use if you're sure what you are doing.
+
+permissions:
+  issues: write
+  repository-projects: read
+  contents: read
 
 jobs:
   compile:
+    if: github.ref != 'refs/heads/main' && github.ref != 'refs/heads/master' # Run only when not on main or master branch
     runs-on: ubuntu-latest
 
     steps:
@@ -28,3 +43,17 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Compile website
+
+  todos:
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' # Run only on main or master branch
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run Issue Bot
+        uses: juulsn/todo-issue@main
+        with:
+          excludePattern: '^(node_modules/)'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
