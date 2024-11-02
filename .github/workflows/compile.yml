@@ -7,7 +7,7 @@ on:
       - live
 
 jobs:
-  deploy:
+  compile:
     runs-on: ubuntu-latest
 
     steps:
