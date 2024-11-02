@@ -254,17 +254,11 @@ button {
 	padding: 0 7px 0 7px;
 	background-color: unset !important;
 }
-/* .topLinks a:first-child {color: #c5e7ff;}
+.topLinks a:first-child {color: #c5e7ff;}
 .topLinks a:nth-child(2) {color: #dce1ff;}
 .topLinks a:nth-child(3) {color: #ffd6fe;}
 .topLinks a:nth-child(4) {color: #ffdadb;}
-.topLinks a:nth-child(5) {color: #ffdad6;} */
-/* colors for halloween */
-.topLinks a:first-child {color: #ffdbc8;}
-.topLinks a:nth-child(2) {color: #ffdad3;}
-.topLinks a:nth-child(3) {color: #ffd9e2;}
-.topLinks a:nth-child(4) {color: #ffd7f5;}
-.topLinks a:nth-child(5) {color: #f5d9ff;}
+.topLinks a:nth-child(5) {color: #ffdad6;}
 #fakeLogo {
 	display: flex;
 	align-items: center;
@@ -309,8 +303,6 @@ button {
 #fakeLogo:hover #s1 {margin-right: 10px;}
 #s1 {background-color: red; background: linear-gradient(0deg, #ff7b00 0%, #ff0000 100%); transition-duration: 0.3s;}
 #s2 {background-color: #00a2ff; background: linear-gradient(180deg, #00a2ff 0%, #0044ff 100%); transition-duration: 0.5s;}
-#s1 {background: linear-gradient(0deg, #ff7b00 0%, #ff1e00 100%);}
-#s2 {background: linear-gradient(0deg, #d400ff 0%, #6f00ff 100%);}
 #fakeLogo:active {
 	padding: 7px;
 	box-shadow: 0 0 100px 50px var(--bg-1);
