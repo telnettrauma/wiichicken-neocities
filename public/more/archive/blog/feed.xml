@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>Upcoming Changes to Living</title>
+			<pubDate>Sat, 2 Nov 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/11/livingchanges.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/11/livingchanges.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
 			<title>Stop Snapping to the Road</title>
 			<pubDate>Fri, 1 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/snaproad.html</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/2024/10/vivaldi7.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/10/vivaldi7.html</guid>
 			<description>no tags</description>
-		</item>
-		<item>
-			<title>You Unlocked a 3 Day Streak</title>
-			<pubDate>Wed, 23 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/10/streaks.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/10/streaks.html</guid>
-			<description>#social</description>
 		</item>
 	</channel>
 </rss>
