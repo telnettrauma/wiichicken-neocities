@@ -18,7 +18,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: deploy-to-neocities
+  group: deploy
   cancel-in-progress: true
 
 jobs:
@@ -43,7 +43,7 @@ jobs:
       - name: Create commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Compile website
+          commit_message: 🤖 Compile website
 
   todos:
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' # Run only on main or master branch
