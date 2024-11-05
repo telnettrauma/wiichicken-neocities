@@ -15,7 +15,7 @@ on:
 permissions:
   issues: write
   repository-projects: read
-  contents: read
+  contents: write
 
 concurrency:
   group: deploy
