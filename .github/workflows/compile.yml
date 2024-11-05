@@ -79,13 +79,14 @@ jobs:
           npm i
           npm run build
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
+      - name: Opening pull request
+        id: pull
+        uses: tretuna/sync-branches@1.4.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: "🔃 sync main with live"
-          body: "what would you do for a poopy"
-          commit-message: "🔃 sync live with main"
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          FROM_BRANCH: "live"
+          TO_BRANCH: "main"
+          PULL_REQUEST_TITLE: "🔃 SYNC MAIN WITH LIVE WOOHOO"
 
       - name: Auto-Merge Pull Request
         if: success() && steps.create_pr.outputs.pull-request-url != ''
