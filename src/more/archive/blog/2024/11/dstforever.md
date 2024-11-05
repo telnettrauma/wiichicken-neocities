@@ -4,7 +4,7 @@ title: "DST Forever"
 date: 2024-11-03
 light: "#c1efae"
 dark: "#022100"
-accent: "33ff00"
+accent: "#33ff00"
 articleNumber: 28
 permalink: "/more/archive/blog/2024/11/dstforever.html"
 ---
