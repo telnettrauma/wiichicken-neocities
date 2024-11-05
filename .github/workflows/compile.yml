@@ -79,21 +79,28 @@ jobs:
           npm i
           npm run build
 
-      - name: Sync live branch to main
-        uses: connor-baer/action-sync-branch@v1.1.0
-        with:
-          branch: main
-          token: ${{ secrets.GITHUB_TOKEN }}
-          force: false
-
       - name: Create Pull Request
         if: failure()
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: main
-          title: "🚫 merge conflict! AHHHHH"
-          body: "HOLY CRAP THERE WAS A MERGE CONFLICT WERE ALL GOING TO DIE"
+          title: "🔃 sync main with live"
+          body: "what would you do for a poopy"
+
+      - name: Auto-Merge Pull Request
+        if: success() && steps.create_pr.outputs.pull-request-url != ''
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const prNumber = parseInt('${{ steps.create_pr.outputs.pull-request-number }}');
+            await github.pulls.merge({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+              merge_method: 'merge'
+            });
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy to neocities
         uses: bcomnes/deploy-to-neocities@v1
