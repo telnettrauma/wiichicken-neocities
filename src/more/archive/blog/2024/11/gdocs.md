@@ -13,7 +13,7 @@ Google Docs and Notion are 2 completely separate products that happen to have a 
 - Google Docs is a document editor, used for creating... documents
 - Notion is a highly flexible app that is mainly for productivity and note taking, but can be adapted to do just about anything
 
-Notion has been gaining popularity, due to its flexible nature as well as its minimalist design. People online like to compare the Google Docs and Notion interface, because once you start typing, the only interface Notion has is your page content. Notion is so lightweight in fact that it takes like 2 seconds to load a page, and you should probably just use [Obsidian](https://obsidian.md) instead ([unless you're me](../10/Why%20I%20Came%20Back%20to%20Notion.md){target=_blank}).
+Notion has been gaining popularity, due to its flexible nature as well as its minimalist design. People online like to compare the Google Docs and Notion interface, because once you start typing, the only interface Notion has is your page content. Notion is so lightweight in fact that it takes like 2 seconds to load a page, and you should probably just use [Obsidian](https://obsidian.md) instead ([unless you're me](/more/archive/blog/2024/10/notion.md){target=_blank}).
 
 Obviously, Google started to notice this, and they wanted a piece of the pie.
 
