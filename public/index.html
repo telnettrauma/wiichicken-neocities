@@ -147,15 +147,10 @@
 		font-size: 10px;
 		bottom: 1px;
 		right: 1px;
-		padding-right: 8px;
 		background-color: #e2e2e5;
 		color: #1a1c1e;
 		margin: 2px;
-		--border: #1a1c1e;
-		--b-radius-br: 8;
-		--b-radius-tl: 0;
-		--b-radius-tr: 0;
-		--b-radius-bl: 0;
+		border: 1px solid #1a1c1e;
 	}
 	#fri2 {display: none;}
 	@media only screen and (min-width: 900px) {
@@ -460,14 +455,6 @@
 		left: 50%;
 		opacity: 0.8;
 	}
-	.animal {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.animal a {background: none;}
-	.animal a:hover {box-shadow: none;}
 	#statuscafe {color: #561e16 !important;}
 	#statuscafe-username {
 		text-align: center;
@@ -871,23 +858,25 @@
 			<div class="box sec-b">
 				<p>what are you supposed to put on your homepage</p>
 			</div>
+			<div class="box sec-t">
+				<h2>pets</h2>
+			</div>
 			<div class="row">
-				<div class="box d-sec-l m-sec-full" style="width: 100%;">
-					<h2>contactMe</h2>
-					<ul>
-						<li><strong>discord</strong>: @bbctwo (wiichicken#0040)</li>
-						<li><strong>email</strong>: <a href="mailto:vimeoofficial@gmail.com" target="_blank">vimeoofficial@gmail.com</a></li>
-						<li><a href="https://neocities.org/site/wiichicken" target="_blank">neocities profile</a></li>
-					</ul>
+				<div class="box middleBoy sec-bl" style="background-color: #001e2e9b; --border: #00a6ff; min-width: 200px;">
+					<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!" width="120px" height="144px"></a>
 				</div>
-				<div class="box lefty mobileHidden reducedHidden noscript-hidden sec-r" id="navlink" style="padding: 0; --border: #bec9c8;">
-					<span class="helpbutt boxy" id="adHelp" onclick="flipTheScript('adHelp', 'navlink', 'nava2', 'nava1', '#1a1c1e', '#e2e2e5')">?</span>
+				<div class="box lefty mobileHidden reducedHidden noscript-hidden" id="navlink" style="padding: 0; --border: #bec9c8;">
+					<span class="helpbutt" id="adHelp" onclick="flipTheScript('adHelp', 'navlink', 'nava2', 'nava1', '#1a1c1e', '#e2e2e5')">?</span>
 					<div id="nava1">
 						<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
 					</div>
 					<div id="nava2" style="display: none; width: 180px; height: 180px;">
 						<p class="nomarblock" style="padding: 5px;">These "ads" are just here for fun! I am not making any profit off of them.<br>Visit <a href="https://dimden.dev/navlinkads" target="_blank">dimden.dev/navlinkads</a> for more information.<br><a target="_blank" style="background-color: unset;" href="https://dimden.dev/"><img src="https://dimden.dev/services/images/88x31.gif" loading="lazy"></a></p>
 					</div>
+				</div>
+				<div class="box middleBoy lefty sec-br" style="width: 100%; background-color: #00201a9b; --border: #00ffbf; flex-direction: column;">
+					<img src="media/home/pets/chatt/chatt.png" loading="lazy" onmouseover="this.src ='media/home/pets/chatt/blink.png'" onmouseleave="this.src = 'media/home/pets/chatt/chatt.png'">
+					<p class="nomarblock" style="color: #a0f2dd;">adopted from <a href="https://neonriser.neocities.org/adopt" target="_blank" style="color: #aacbe4; --dark-primary: #afd18c; --dark-tertiary: #ffb1c0;">Neonriser</a>!</p>
 				</div>
 			</div>
 			<div class="box sec-t">
@@ -922,14 +911,6 @@
 			</div>
 			<div id="signguest" class="box sec-full" style="--border: #ff8875;">
 				<p class="middleBoy"><img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt="">Remember: <a class="noBg" style="cursor: pointer !important; margin-right: 10px;" href="guestbook.html">sign the guestbook</a> before you go<img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt=""></p>
-			</div>
-			<div class="row" id="littleBuddies">
-				<div style="background-color: #0021119b; --border: #75daa2;" class="box animal sec-l">
-					<p>everytime i make a wobble, it gets deleted for some reason. so... no more <img src="media/emoji/disappointed.gif" loading="lazy"></p>
-				</div>
-				<div class="box animal lefty sec-r" style="background-color: #001e2e9b; --border: #00a6ff;">
-					<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!"></a>
-				</div>
 			</div>
 			<div class="footer page-bottom">
 				<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2024</p>
