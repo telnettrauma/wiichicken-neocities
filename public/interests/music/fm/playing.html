@@ -12,7 +12,7 @@
 	<body>
 	<div class="content" style="margin: 0; position: relative; overflow: hidden;" id="main">
 		<div id="moneyOnMind" class="moneyOnMind"></div>
-		<div class="moneyOnMind" id="fartOnMind" style="animation: otherRotate 75s linear infinite; opacity: 0.75; z-index: 1; mix-blend-mode: multiply;"></div>   
+		<div class="moneyOnMind" id="fartOnMind" style="animation: otherRotate 75s linear infinite; opacity: 0.75; z-index: 1; mix-blend-mode: multiply;"></div>
 		<div id="hiPoopFart">
 			<p id="listen" user="wiichicken">CANT FETCH (TRY REFRESHiNG)</p>
 			<div id="artworklink" target="_blank">
@@ -173,6 +173,8 @@
 			padding: 15px;
 		}
 		.landscape #hiPoopFart #artworklink #artwork {width: 20vmax;}
+		/* whatever */
+		.noBg #moneyOnMind, .noBg #fartOnMind {display: none;}
 		@media (prefers-reduced-motion) {
 			* {animation: none !important;}
 		}
