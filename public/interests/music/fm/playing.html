@@ -32,15 +32,12 @@
 				<p><img src="media/np/listener.png"><span id="show-username">Username</span></p>
 				<button class="toggle-button" onclick="setUser()">Set User</button>
 			</div>
-			<div class="c-row">
+			<div class="c-row w-slide">
 				<p><img src="media/np/bg.png">Background</p>
-				<div class="dropdown">
-					<div class="selections" id="bg-selection">
-						<a>Cover</a>
-						<a>Light</a>
-						<a>Dark</a>
-					</div>
-					<button class="dropdown-button" onclick="toggleDropdown('bg-selection');">Cover</button>
+				<div class="mult-choice">
+					<button class="mc-o selected">Color</button>
+					<button class="mc-o">Light</>
+					<button class="mc-o">Dark</d>
 				</div>
 			</div>
 		</div>
@@ -204,6 +201,28 @@
 			height: 20px;
 			margin-right: 5px;
 		}
+		.w-slide {
+			padding-top: 5px;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.mult-choice {
+			display: flex;
+			width: 100%;
+			justify-content: space-evenly;
+		}
+		.mc-o {
+			font-size: 10px;
+			cursor: pointer;
+			border: 1px solid #CAC4D0;
+			padding: 0 3px 0 3px !important;
+			width: unset !important;
+		}
+		.selected {
+			background-color: #CAC4D0 !important;
+			color: #2c2b2e !important;
+			box-shadow: unset !important;
+		}
 		#enter-name {
 			position: absolute;
 			bottom: 65px;
@@ -216,23 +235,6 @@
 			border: none;
 			border-bottom: 1px solid #CAC4D0;
 			color: #CAC4D0;
-		}
-		.dropdown {
-			position: relative;
-			display: inline-block;
-		}
-		.selections {
-			margin-top: 5px;
-			display: none;
-			position: absolute;
-			z-index: 1;
-			background-color: black;
-			border: 1px solid #CAC4D0;
-			color: #CAC4D0;
-		}
-		.selections a {
-			display: block;
-			padding: 5px;
 		}
 		/* styles for when in portrait */
 		.portrait #hiPoopFart #artworklink {flex-direction: column;}
