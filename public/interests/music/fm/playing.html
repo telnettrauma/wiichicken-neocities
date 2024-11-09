@@ -24,14 +24,24 @@
 	<div id="controls">
 		<p id="control-header">Settings</p>
 		<div id="control-area">
-			<div class="c-row" onclick="enableHorizontal();" id="en-hor">
-				<img src="media/np/horizontal.png">
-				<p>Layout</p>
+			<div class="c-row" onclick="enableHorizontal();">
+				<p><img src="media/np/horizontal.png">Layout</p>
 				<button class="toggle-button" id="layout-mode" onclick="toggleLayout();">Horizontal</button>
 			</div>
 			<div class="c-row">
-				<img src="media/np/listener.png" onclick="setUser()" title="Set username">
-				<p>Set username</p>
+				<p><img src="media/np/listener.png"><span id="show-username">Username</span></p>
+				<button class="toggle-button" onclick="setUser()">Set User</button>
+			</div>
+			<div class="c-row">
+				<p><img src="media/np/bg.png">Background</p>
+				<div class="dropdown">
+					<div class="selections" id="bg-selection">
+						<a>Cover</a>
+						<a>Light</a>
+						<a>Dark</a>
+					</div>
+					<button class="dropdown-button" onclick="toggleDropdown('bg-selection');">Cover</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -153,6 +163,7 @@
 			width: 70px;
 			cursor: pointer;
 			position: relative;
+			margin-top: 2px;
 		}
 		#controls button:hover {
 			box-shadow: 1px 1px 0 0;
@@ -180,13 +191,18 @@
 		.c-row {
 			display: flex;
 			align-items: center;
+			justify-content: space-between;
 			gap: 5px;
 			padding: 5px;
+			padding-top: 3px;
 			border: 1px solid #CAC4D0;
+			text-align: left;
 		}
+		.c-row p {display: flex;}
 		.c-row img {
 			width: 20px;
 			height: 20px;
+			margin-right: 5px;
 		}
 		#enter-name {
 			position: absolute;
@@ -200,6 +216,23 @@
 			border: none;
 			border-bottom: 1px solid #CAC4D0;
 			color: #CAC4D0;
+		}
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+		.selections {
+			margin-top: 5px;
+			display: none;
+			position: absolute;
+			z-index: 1;
+			background-color: black;
+			border: 1px solid #CAC4D0;
+			color: #CAC4D0;
+		}
+		.selections a {
+			display: block;
+			padding: 5px;
 		}
 		/* styles for when in portrait */
 		.portrait #hiPoopFart #artworklink {flex-direction: column;}
@@ -315,7 +348,14 @@
 		function confirmUser() {
 			user = document.getElementById('username').value;
 			document.getElementById('enter-name').style.display = 'none';
+			document.getElementById('show-username').innerHTML = user;
 			getNowPlaying();
+		}
+		function toggleDropdown(ident) {
+			var dropdown = document.getElementById(ident);
+			if (dropdown.style.display === 'block') {
+				dropdown.style.display = 'none';
+			} else {dropdown.style.display = 'block';}
 		}
 		detectSize();
 		setInterval(function(){getNowPlaying()}, 15000);
