@@ -22,9 +22,18 @@
 		</div>
 	</div>
 	<div id="controls">
-		<img src="media/np/horizontal.png" onclick="enableHorizontal();" id="en-hor" title="Horizontal mode">
-		<img src="media/np/vertical.png" onclick="enableVertical()" id="en-vert" title="Vertical mode">
-		<img src="media/np/listener.png" onclick="setUser()" title="Set username" style="padding: 1px 6px 1px 6px;">
+		<div class="c-row">
+			<img src="media/np/horizontal.png" onclick="enableHorizontal();" id="en-hor" title="Horizontal mode">
+			<p>Horizontal Mode</p>
+		</div>
+		<div class="c-row">
+			<img src="media/np/vertical.png" onclick="enableVertical()" id="en-vert" title="Vertical mode">
+			<p>Vertical Mode</p>
+		</div>
+		<div class="c-row">
+			<img src="media/np/listener.png" onclick="setUser()" title="Set username">
+			<p>Set username</p>
+		</div>
 	</div>
 	<div id="enter-name">
 		<form onsubmit="event.preventDefault(); confirmUser()">
@@ -42,7 +51,7 @@
 			color: white;
 			overflow-x: hidden;
 		}
-		p {text-shadow: 0px 0px 5px #00000099;}
+		.content p {text-shadow: 0px 0px 5px #00000099;}
 		#listen {
 			text-shadow: 0px 0px 5px #00000099;
 			font-family: 'Martian Mono', monospace;
@@ -127,14 +136,28 @@
 			right: 15px;
 			bottom: 15px;
 			display: flex;
+			flex-direction: column;
 			justify-content: center;
-			max-width: 100px;
+			gap: 5px;
 			opacity: 0.3;
 			transition-duration: 0.5s;
 		}
 		#controls img {image-rendering: pixelated;}
+		#controls p {
+			margin-block-start: 0;
+			margin-block-end: 0;
+		}
 		#controls:hover {opacity: 1;}
 		#controls img:hover {filter: brightness(2) drop-shadow(0 0 5px #CAC4D0);}
+		.c-row {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+		.c-row img {
+			width: 20px;
+			height: 20px;
+		}
 		.active-button {filter: brightness(2) drop-shadow(0 0 5px #CAC4D0);}
 		#enter-name {
 			position: absolute;
