@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>AWW! YOU ADDED A KiTTY!</title>
+			<pubDate>Sun, 10 Nov 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>there is now a kitty on the homepage</description>
+		</item>
+		<item>
 			<title>HALLOWEEN iS NO MORE!!</title>
 			<pubDate>Fri, 1 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>not too much is new this week</description>
-		</item>
-		<item>
-			<title>OK WOW i ACTUALLY DiD A LOT</title>
-			<pubDate>Sun, 1 Sep 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>you read the title</description>
 		</item>
 	</channel>
 </rss>
