@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>Going Back to the Official Discord Client</title>
+			<pubDate>Sun, 10 Nov 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/11/discord.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/11/discord.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
 			<title>Customer Support Has No Support</title>
 			<pubDate>Sat, 9 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/support.html</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/2024/10/searchgpt.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/10/searchgpt.html</guid>
 			<description>#ai</description>
-		</item>
-		<item>
-			<title>Nintendo is Launching a Music App</title>
-			<pubDate>Wed, 30 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/10/nintendomusic.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/10/nintendomusic.html</guid>
-			<description>no tags</description>
 		</item>
 	</channel>
 </rss>
