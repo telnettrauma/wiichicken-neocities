@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Going Back to the Official Discord Client</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<link href="/more/archive/blog/2024/10/100daystooffload/style.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<style>
+		* {
+			--light: #bdf0b3;
+			--dark: #002203;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div id="logos">
+			<a href="/">
+				<div id="homego"></div>
+			</a>
+			<a href="/more/archive/blog/2024/10/100daystooffload/">
+				<div id="logo"></div>
+			</a>
+		</div>
+		<h1>Going Back to the Official Discord Client</h1>
+		<p>November 10, 2024</p>
+		<hr>
+	</header>
+	<main>
+		<p>Due to concerns about third party clients with Discord, I have decided to go back to using the official Discord client. And I don't like it.</p>
+<p>Previously, I would use the Discord website as a web app, so it could live in my taskbar. This changed when I downloaded a third party client, because it was faster, less resource intensive, and wasn't bloated with features. However, I'm starting to suspect that the reasons I got my spam warnings (as discussed in <a href="support.html">yesterday's article</a>) was simply because I was using a third party client.</p>
+<p>On mobile, I'm switching to a version from 2020. I might switch to a slightly newer version, because having replies instead of quotes is nice. However, not having the message composer bubbly is also nice.</p>
+<p>On desktop, I decided to download the official Discord app so that I could benefit from <a href="https://betterdiscord.app" target="_blank">BetterDiscord</a>. It may seem weird that the reason I moved was because of third party clients, only to move to a modified client, but that's different. BetterDiscord adds features into the already existing Discord client, while third party clients are written basically completely from the ground up, and usually rely on your account token.</p>
+<h2>Plugins</h2>
+<p>I'm not going all out with BetterDiscord features, as I simply don't need them, I just want to make the Discord experience more tailored to how I use Discord. So here is a list of the plugins that I actually use:</p>
+<ul>
+<li><a href="https://github.com/mwittrien/BetterDiscordAddons/tree/master/Library/" target="_blank">BDFDB</a> - library</li>
+<li><a href="https://github.com/arg0NNY/DiscordPlugins/tree/master/BetterChannelList" target="_blank">BetterChannelList</a> - don't actually know if I'm going to end up keeping this one, but I like being able to see the channel previews</li>
+<li><a href="https://github.com/programmer2514/BetterDiscord-CollapsibleUI" target="_blank">CollapsibleUI</a> - used for hiding the UI elements when I don't need them to be shown. This one is <strong>really</strong> nice to have</li>
+<li><a href="https://github.com/zerebos/BetterDiscordAddons/tree/master/Plugins/HideDisabledEmojis" target="_blank">HideDisabledEmojis</a> - I don't use Nitro, so I have no reason for the emojis to be shown in the first place</li>
+<li><a href="https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ImageUtilities/" target="_blank">ImageUtilities</a> - honestly this one is probably doing too much, and I might just go back to <a href="https://github.com/Legend-Master/discord-better-image-viewer" target="_blank">BetterImageViewer</a>, because all I want is to zoom</li>
+<li><a href="https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/PinDMs/" target="_blank">PinDMs</a> - Discord already has this feature, but it's weird and you have to enter a cheat code to unlock it (if you still can anymore)</li>
+<li><a href="https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/PluginRepo/" target="_blank">PluginRepo</a> - makes finding and installing plugins easier</li>
+<li><a href="https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ThemeRepo/" target="_blank">ThemeRepo</a> - same as PluginRepo</li>
+<li><a href="https://github.com/zerebos/BDPluginLibrary" target="_blank">ZeresPluginLibrary</a> - library</li>
+</ul>
+<h2>Themes</h2>
+<p>On top of that, I also have a few (2) themes that I use. I don't have anything flashy, just some that slightly make the experience better:</p>
+<ul>
+<li><a href="https://github.com/XYZenix/XYZenixThemes/tree/master" target="_blank">DTM-16</a> - makes Discord look like how it looked in 2016. i mainly like this one because i like the easing curves on the animation when you hover over a server. the main thing is that its clear Discord's old design was optimized for Mac</li>
+<li><a href="https://github.com/DiscordStyles/HorizontalServerList" target="_blank">HorizontalServerList</a> - I'm not in enough servers to benefit from the vertical server list, so I use this</li>
+</ul>
+<p>Obviously both the plugins and themes I use are subject to change, these are just what I use at this exact moment.</p>
+<h2>Thoughts?</h2>
+<p>So, despite these enhancements I've made, I still don't like using the official Discord client.</p>
+<p>First off, and this is the biggest thing, the official Discord client is <strong>slow</strong>, and I have a kinda good laptop. There are a few things that everything starts to struggle from that can be traced to this:</p>
+<ul>
+<li>Web app</li>
+<li>Too many features</li>
+<li>Too many technologies</li>
+</ul>
+<p><strong>Web Apps</strong> aren't exactly known for being fast or efficient on your memory. Which is funny because Discord launched with one of the main gimmick being that it was memory efficient compared to Skype and TeamSpeak. Despite that, it's just an Electron app, which is a more fancy version of a browser tab.</p>
+<p>Having <strong>too many features</strong> is another obvious one, and Discord is no exception. There is so much useless stuff on Discord. What is the point of guilds? Plus, Discord is always monitoring for what games you have running on your computer, and tries displaying an overlay. I know these are old features, but they are still running in the background. And that's not even bringing up the failed Discord game store, which means Discord still has a built in game launcher that has to be kept for compatibility reasons.</p>
+<p>Finally, modern websites just use <strong>too many technologies</strong>. For instance, just look at how long the <a href="https://discord.com/acknowledgements" target="_blank">Discord Acknowledgements page</a> is. I know not every platform uses all of those, but that is still a lot of packages. Did you really need to save your dev team 10 seconds by adding the package <a href="https://github.com/i-voted-for-trump/is-odd" target="_blank">i-voted-for-trump/is-odd</a>, a package dedicated to telling you if a number is odd?</p>
+<p>Because of all these factors, the official Discord client is not a pleasant experience to use. For example, when you click something, there is a really obvious 2 second delay before the page changes. This happens even with BetterDiscord. And notifications are terrible.</p>
+<p>Previously, I was used to seeing a count of unread conversations I selected in my taskbar. Only chats that I specifically chose would increment the counter, and each chat would only increment the counter once, so the number wouldn't be inflated by one conversation. Discord shows no number in the taskbar, and if it did, it counts all unread messages, which I have too many of. Taskbar flashing doesn't work either, and using desktop notifications isn't something I want to do, because I value sanity.</p>
+<p>Another thing is that when you finally open Discord, you have to wait about 2-3 seconds before new messages are actually rendered on the screen. Look, I'm happy you're trying to save RAM, you're not really good at it, but could you please not make it an inconvenience?</p>
+<p>Overall, I haven't been happy about having to move to the official Discord client, but I guess this is just something I am going to have to deal with.</p>
+
+	</main>
+	<footer>
+		<hr>
+		<p>this article was written as a part of <a href="/more/archive/blog/2024/10/100daystooffload/">#100DaysToOffload</a>, and is article <strong>35</strong> of <strong>100</strong>.</p>
+		<iframe src="/more/archive/blog/2024/10/100daystooffload/widget.html" id="prog-widget"></iframe>
+	</footer>
+	<script>
+		const accentColor = "#00ff44";
+	</script>
+	<script src="/more/archive/blog/2024/10/100daystooffload/favicon.js"></script>
+</body>
+</html>
