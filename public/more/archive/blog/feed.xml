@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>BlueSky is Pre-2018 Tumblr</title>
+			<pubDate>Mon, 11 Nov 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/11/newsky.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/11/newsky.html</guid>
+			<description>#social</description>
+		</item>
+		<item>
 			<title>Going Back to the Official Discord Client</title>
 			<pubDate>Sun, 10 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/discord.html</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/2024/11/snaproad.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/11/snaproad.html</guid>
 			<description>no tags</description>
-		</item>
-		<item>
-			<title>ChatGPT is Now a Search Engine</title>
-			<pubDate>Thu, 31 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/10/searchgpt.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/10/searchgpt.html</guid>
-			<description>#ai</description>
 		</item>
 	</channel>
 </rss>
