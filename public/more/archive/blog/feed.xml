@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>Time for a Monitor</title>
+			<pubDate>Tue, 12 Nov 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/11/monitor.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/11/monitor.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
 			<title>BlueSky is Pre-2018 Tumblr</title>
 			<pubDate>Mon, 11 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/newsky.html</link>
@@ -67,13 +74,6 @@
 			<pubDate>Sat, 2 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/livingchanges.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/11/livingchanges.html</guid>
-			<description>no tags</description>
-		</item>
-		<item>
-			<title>Stop Snapping to the Road</title>
-			<pubDate>Fri, 1 Nov 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/11/snaproad.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/11/snaproad.html</guid>
 			<description>no tags</description>
 		</item>
 	</channel>
