@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>The Time Microsoft Copy Pasted an Entire Social Media</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<link href="/more/archive/blog/2024/10/100daystooffload/style.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<style>
+		* {
+			--light: #b6f1bb;
+			--dark: #002109;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div id="logos">
+			<a href="/">
+				<div id="homego"></div>
+			</a>
+			<a href="/more/archive/blog/2024/10/100daystooffload/">
+				<div id="logo"></div>
+			</a>
+		</div>
+		<h1>The Time Microsoft Copy Pasted an Entire Social Media</h1>
+		<p>November 12, 2024</p>
+		<hr>
+	</header>
+	<main>
+		<p>It seems like these days every social media network is becoming a copy of each other, while most people only use the main gimmick of the network anyway. However, in 2009 Microsoft actually completely copied another social network, not just the features, but even the code itself.</p>
+<p>One thing many people forget is that many companies operate completely different in China, making different versions of the same product. The most popular example is Douyin, the Chinese version of TikTok. However, other services such as Minecraft also have dedicated Chinese versions, too. Microsoft's MSN also had a Chinese version, titled MSN China.</p>
+<p>In 2009, MSN China decided to launch a microblogging platform called MSN Juku. Because it was a microblogging platform, it was obviously compared to Twitter. But another platform that MSN Juku was compared to even more heavily was Plurk, an at the time popular microblogging platform in Asia.</p>
+<p>In fact, it was a little <strong>too</strong> similar, to the point where Plurk launched an investigation and <a href="https://web.archive.org/web/20091216064543/http://blog.plurk.com/2009/12/14/microsoft-rips-plurk/" target="_blank">published it to their blog</a>. And when you look at screenshots comparing the two, you will notice that they are extremely similar to each other.</p>
+<p><img src="https://i.imgur.com/cWQgL9K.png" alt="Screenshot comparing 2 social networking websites which look incredibly alike"></p>
+<p>However, the Plurk team decided to dig even deeper into this, and found that 80% of the code was basically copy and pasted and changed to be slightly different. Here is an example of a  code snippet written by Plurk:</p>
+<pre><code>TimeLine = {
+	init: function(light) {
+		this.blocks = [];
+		this.plurks = [];
+		this.active_blocks = [];
+		
+		this.getting_plurks = false;
+		this.move_tl = false;
+		this.mode = 'friends';
+		
+		if(!light) {
+			this.offset = 0;
+			this.real_end_offsets = {};
+			this.fetch_count = {};
+			this.highlight_ids = {};
+		}
+</code></pre>
+<p>Now compare this to the code from MSN Juku:</p>
+<pre><code>TimeLine =
+{
+	init: function(C)
+	{
+		this.blocks = [];
+		this.walls = [];
+		this.active_blocks = [];
+		this.getting_walls = false;
+		this.move_tl = false;
+		this.in_ml = false;
+		this.mode = &quot;own&quot;;
+		if (!C)
+		{
+			this.offset = 0;
+			this.real_end_ffsets =
+			{};
+			this.fetch_count =
+			{};
+			this.highlight_ids =
+			{}
+		}
+</code></pre>
+<p>Quite similar, don't you think?</p>
+<p>MSN Juku was never released past Beta. In fact, the day after the blog post was released, <a href="https://web.archive.org/web/20091217190140/http://www.microsoft.com/presspass/press/2009/dec09/12-15statement.mspx" target="_blank">Microsoft issued a press release</a> confirming that stolen code was indeed used, and that the application was developed by a third party. The service was immediately shut down, and Microsoft issued an apology to Plurk.</p>
+<p><a href="https://web.archive.org/web/20110701062603/http://en.blog.plurk.com/2009/12/17/plurks-response-to-microsofts-apology/" target="_blank">Plurk issued a response to Microsoft</a>, saying that they were still debating on taking more legal action, as Microsoft didn't take any accountability, only responsibility, and because Microsoft is a large company with a huge budget, while the Plurk team is just a few people.</p>
+
+	</main>
+	<footer>
+		<hr>
+		<p>this article was written as a part of <a href="/more/archive/blog/2024/10/100daystooffload/">#100DaysToOffload</a>, and is article <strong>38</strong> of <strong>100</strong>.</p>
+		<iframe src="/more/archive/blog/2024/10/100daystooffload/widget.html" id="prog-widget"></iframe>
+	</footer>
+	<script>
+		const accentColor = "#00ff77";
+	</script>
+	<script src="/more/archive/blog/2024/10/100daystooffload/favicon.js"></script>
+</body>
+</html>
