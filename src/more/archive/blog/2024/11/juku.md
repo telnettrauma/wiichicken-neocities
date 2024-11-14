@@ -1,7 +1,7 @@
 ---
 layout: blog/24/10/100daystounload.njk
 title: "The Time Microsoft Copy Pasted an Entire Social Media"
-date: 2024-11-12
+date: 2024-11-13
 light: "#b6f1bb"
 dark: "#002109"
 accent: "#00ff77"
