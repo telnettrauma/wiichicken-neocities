@@ -1,5 +1,7 @@
 # my awesome website! =D
 
+[![Compile and Deploy](https://github.com/telnettrauma/wiichicken-neocities/actions/workflows/compile.yml/badge.svg?branch=live)](https://github.com/telnettrauma/wiichicken-neocities/actions/workflows/compile.yml)
+
 hello! this is where i place all of the files for my website. why? because its cool this way! and it gives me version control or whatever.
 
 don't know how you're reading this though, because this repo is private
