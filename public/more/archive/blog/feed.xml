@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>The Material 3 Carousel is Too Much</title>
+			<pubDate>Thur, 14 Nov 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/11/carousel.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/11/carousel.html</guid>
+			<description>#design</description>
+		</item>
+		<item>
 			<title>The Time Microsoft Copy Pasted an Entire Social Media</title>
 			<pubDate>Wed, 13 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/juku.html</link>
@@ -67,13 +74,6 @@
 			<pubDate>Mon, 4 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/gdocs.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/11/gdocs.html</guid>
-			<description>no tags</description>
-		</item>
-		<item>
-			<title>DST Forever</title>
-			<pubDate>Sun, 3 Nov 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/11/dstforever.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/11/dstforever.html</guid>
 			<description>no tags</description>
 		</item>
 	</channel>
