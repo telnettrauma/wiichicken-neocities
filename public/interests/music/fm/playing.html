@@ -35,9 +35,9 @@
 			<div class="c-row w-slide">
 				<p><img src="media/np/bg.png">Background</p>
 				<div class="mult-choice">
-					<button class="mc-o selected">Color</button>
-					<button class="mc-o">Light</>
-					<button class="mc-o">Dark</d>
+					<button class="mc-o selected" onclick="enableImageBackground();">Cover</button>
+					<button class="mc-o">Light</button>
+					<button class="mc-o" onclick="enableBlackBackground();">Dark</d>
 				</div>
 			</div>
 		</div>
@@ -262,6 +262,19 @@
 		.landscape #hiPoopFart #artworklink #artwork {width: 20vmax;}
 		/* whatever */
 		.noBg #moneyOnMind, .noBg #fartOnMind {display: none;}
+		.whiteBg {
+			background-color: white;
+			color: black;
+		}
+		.blackBg {
+			background-color: black;
+			color: white;
+		}
+		.blackBg #hiPoopFart, .whiteBg #hiPoopFart {
+			background-color: unset;
+			backdrop-filter: unset;
+			-webkit-backdrop-filter: unset;
+		}
 		@media (prefers-reduced-motion) {
 			* {animation: none !important;}
 		}
@@ -277,6 +290,8 @@
 	<script>
 		var mainElement = document.getElementById('main');
 		let user = 'wiichicken';
+		// background modes: 1 - color; 2 - light; 3 - dark
+		let bgMode = 1;
 		function getNowPlaying() {
 			var url = `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`;
 			var request = new XMLHttpRequest();
@@ -290,11 +305,14 @@
 					var artwork = data.recenttracks.track[0].image[3]["#text"];
 					var tinyArtwork = data.recenttracks.track[0].image[0]["#text"];
 	
-					var artworkImg = document.getElementById("artwork");
-					artworkImg.setAttribute("src", artwork);
-					var fakeBlur = document.getElementById('moneyOnMind');
-					fakeBlur.style.backgroundImage = `url(${tinyArtwork})`;
-					document.getElementById('fartOnMind').style.backgroundImage = `url(${tinyArtwork})`;
+					// only adds background images if the background is set to image
+					if (bgMode === 1) {
+						var artworkImg = document.getElementById("artwork");
+						artworkImg.setAttribute("src", artwork);
+						var fakeBlur = document.getElementById('moneyOnMind');
+						fakeBlur.style.backgroundImage = `url(${tinyArtwork})`;
+						document.getElementById('fartOnMind').style.backgroundImage = `url(${tinyArtwork})`;
+					}
 	
 					var trackInfo = document.getElementById("track");
 					trackInfo.innerHTML = "\
@@ -353,11 +371,18 @@
 			document.getElementById('show-username').innerHTML = user;
 			getNowPlaying();
 		}
-		function toggleDropdown(ident) {
-			var dropdown = document.getElementById(ident);
-			if (dropdown.style.display === 'block') {
-				dropdown.style.display = 'none';
-			} else {dropdown.style.display = 'block';}
+		function enableImageBackground() {
+			var main = document.getElementById('main');
+			bgMode = 1;
+			main.classList.remove('noBg');
+			main.classList.remove('blackBg');
+			main.classList.remove('whiteBg');
+		}
+		function enableBlackBackground() {
+			var main = document.getElementById('main');
+			main.classList.add('noBg');
+			main.classList.add('blackBg');
+			bgMode = 3;
 		}
 		detectSize();
 		setInterval(function(){getNowPlaying()}, 15000);
