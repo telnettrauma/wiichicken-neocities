@@ -82,10 +82,6 @@
 			width: 30vmin;
 			max-width: 300px;
 		}
-		#listenglow {
-			text-shadow: 0px 0px 5px #00000099, #ffffff56 0 0 10px;
-			font-weight: bold;
-		}
 		#artworklink {
 			display: flex;
 			align-items: center;
@@ -322,7 +318,7 @@
 	
 					if (typeof data.recenttracks.track[0]["@attr"] !== "undefined"){
 						var listenInfo = document.getElementById("listen");
-						listenInfo.innerHTML = '<span id="listenglow">LiSTENiNG</span> TO:';
+						listenInfo.innerHTML = 'LiSTENiNG TO:';
 					} else {
 						var listenInfo = document.getElementById("listen");
 						listenInfo.innerHTML = 'last <span>listened</span> to:';
