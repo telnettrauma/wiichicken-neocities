@@ -38,6 +38,17 @@
 					<button id="cover-b" class="mc-o selected" onclick="enableImageBackground();">Cover</button>
 					<button id="light-b" class="mc-o" onclick="enableWhiteBackground();">Light</button>
 					<button id="dark-b" class="mc-o" onclick="enableBlackBackground();">Dark</d>
+						<button id="custom-b" class="mc-o">Custom</button>
+				</div>
+				<div id="color-options">
+					<div>
+						<label for="bg-color">bg</label>
+						<input type="color" name="bg-color" id="bg-color" class="color-button"/>
+					</div>
+					<div>
+						<label for="fg-color">fg</label>
+						<input type="color" name="fg-color" id="fg-color" class="color-button"/>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -126,8 +137,9 @@
 			100% {transform: rotate3d(2, 5, 8, 359deg);}
 		}
 		#controls, #enter-name {
+			--settings-fg: #CAC4D0;
 			background-color: #79747e6f;
-			border: 1px solid #CAC4D0;
+			border: 1px solid var(--settings-fg);
 			z-index: 10;
 		}
 		.darky {background-color: #2a2331 !important;}
@@ -227,9 +239,24 @@
 		#username {
 			background: none;
 			border: none;
-			border-bottom: 1px solid #CAC4D0;
+			border-bottom: 1px solid var(--settings-fg);
 			color: #CAC4D0;
 		}
+		#color-options {
+			display: flex;
+			width: 100%;
+			justify-content: space-around;
+		}
+		.color-button {
+			border: 1px solid var(--settings-fg);
+			padding: 0;
+			outline: unset;
+			width: 30px;
+			height: 30px;
+			box-shadow: 2px 2px 0 0 var(--settings-fg);
+		}
+		.color-button::-webkit-color-swatch-wrapper {padding: 0;}
+		.color-button::-webkit-color-swatch {border: none;}
 		/* styles for when in portrait */
 		.portrait #hiPoopFart #artworklink {flex-direction: column;}
 		.portrait #hiPoopFart #artworklink #track {
