@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@600&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {box-sizing: border-box;}
+::-webkit-scrollbar {width: 0;}
+body {
+	font-family: 'Ubuntu', sans-serif;
+	margin: 0;
+	color: white;
+	overflow-x: hidden;
+}
+.content p {text-shadow: 0px 0px 5px #00000099;}
+#listen {
+	font-family: 'Martian Mono', monospace;
+	font-size: 20px;
+	margin-block-start: 0;
+	margin-block-end: 5px;
+}
+.content {max-height: 100vh;}
+.moneyOnMind {
+	width: 100vmax;
+	height: 100vmax;
+	position: absolute;
+	z-index: 0;
+	background-size: 80vmax;
+	background-repeat: repeat;
+	animation: rotate 45s linear infinite;
+	scale: 1.5;
+}
+#artwork {
+	display: inline-block;
+	width: 30vmin;
+	max-width: 300px;
+}
+#artworklink {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#hiPoopFart {
+	backdrop-filter: blur(80px) saturate(2);
+	-webkit-backdrop-filter: blur(80px) saturate(2);
+	position: relative;
+	z-index: 1;
+	background-color: rgba(49, 49, 49, 0.4);
+	width: 100vw;
+	height: 100vh;
+	object-fit: contain;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+@keyframes nowBack {
+	0% {background-position-y: 0%; background-position-x: 0%; transform: rotate(0deg);}
+	20% {background-position-x: 113%; background-position-y: 213%;}
+	40% {background-position-x: 226%; background-position-y: 426%;}
+	60% {background-position-x: 339%; background-position-y: 639%;}
+	80% {background-position-x: 452%; background-position-y: 852%;}
+	100% {background-position-y: 1065%; background-position-x: 565%; transform: rotate(360deg);}
+}
+@keyframes nowFront {
+	0% {background-position-y: 0%; background-position-x: 0%; transform: rotateY(360deg);}
+	20% {background-position-x: -113%; background-position-y: -213%;}
+	40% {background-position-x: -226%; background-position-y: -426%;}
+	60% {background-position-x: -339%; background-position-y: -639%;}
+	80% {background-position-x: -452%; background-position-y: -852%;}
+	100% {background-position-y: -1065%; background-position-x: -565%; transform: rotateY(0deg);}
+}
+@keyframes rotate {
+	0% {transform: rotate(360deg);}
+	100% {transform: rotate(0deg);}
+}
+@keyframes otherRotate {
+	0% {transform: rotate3d(0, 0, 0, 0deg);}
+	100% {transform: rotate3d(2, 5, 8, 359deg);}
+}
+#controls, #enter-name {
+	--settings-fg: #CAC4D0;
+	background-color: #79747e6f;
+	border: 1px solid var(--settings-fg);
+	z-index: 10;
+}
+.darky {background-color: #2a2331 !important;}
+#controls {
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	opacity: 0.3;
+	transition-duration: 0.5s;
+}
+#controls img {image-rendering: pixelated;}
+#controls p {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+#controls:hover {opacity: 1;}
+#controls button {
+	border: 1px solid #CAC4D0;
+	padding: 5px;
+	box-shadow: 2px 2px 0 0;
+	font-size: 10px;
+	background-color: unset;
+	color: #CAC4D0;
+	width: 70px;
+	cursor: pointer;
+	position: relative;
+	margin-top: 2px;
+}
+#controls button:hover {
+	box-shadow: 1px 1px 0 0;
+	transform: translate(1px, 1px);
+}
+#controls button:active {
+	box-shadow: unset;
+	transform: translate(2px, 2px);
+}
+#control-area {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 5px;
+	padding: 5px;
+}
+#control-header {
+	text-align: center;
+	font-size: 9px;
+	width: 100%;
+	background-color: #CAC4D0;
+	color: #2c2b2e;
+	font-weight: bold;
+}
+.c-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 5px;
+	padding: 5px;
+	padding-top: 3px;
+	border: 1px solid #CAC4D0;
+	text-align: left;
+}
+.c-row p {display: flex;}
+.c-row img {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+.w-slide {
+	padding-top: 5px;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.mult-choice {
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+}
+.mc-o {
+	font-size: 10px;
+	cursor: pointer;
+	border: 1px solid #CAC4D0;
+	padding: 0 3px 0 3px !important;
+	width: unset !important;
+}
+.selected {
+	background-color: #CAC4D0 !important;
+	color: #2c2b2e !important;
+	box-shadow: unset !important;
+}
+#enter-name {
+	position: absolute;
+	bottom: 65px;
+	right: 10px;
+	height: 22px;
+	display: none;
+}
+#username {
+	background: none;
+	border: none;
+	border-bottom: 1px solid var(--settings-fg);
+	color: #CAC4D0;
+}
+#color-options {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+.color-button {
+	border: 1px solid var(--settings-fg);
+	padding: 0;
+	outline: unset;
+	width: 30px;
+	height: 30px;
+	box-shadow: 2px 2px 0 0 var(--settings-fg);
+}
+.color-button::-webkit-color-swatch-wrapper {padding: 0;}
+.color-button::-webkit-color-swatch {border: none;}
+/* styles for when in portrait */
+.portrait #hiPoopFart #artworklink {flex-direction: column;}
+.portrait #hiPoopFart #artworklink #track {
+	text-align: center;
+	font-size: 4vmin;
+}
+.portrait #hiPoopFart #artworklink #track strong {font-size: 5vmin;}
+/* styles for when in landscape */
+.landscape #hiPoopFart #artworklink {
+	flex-direction: row;
+	align-items: flex-end;
+}
+.landscape #hiPoopFart #artworklink #track {
+	margin-block-end: 0;
+	margin-left: 15px;
+	text-align: left;
+	font-size: 2.5vmax;
+}
+.landscape #hiPoopFart #artworklink #track strong {font-size: 3vmax;}
+.landscape #hiPoopFart {
+	align-items: flex-start;
+	padding: 15px;
+}
+.landscape #hiPoopFart #artworklink #artwork {width: 20vmax;}
+/* whatever */
+.noBg #moneyOnMind, .noBg #fartOnMind {display: none;}
+.whiteBg {
+	background-color: white;
+	color: black;
+}
+.blackBg {
+	background-color: black;
+	color: white;
+}
+.custom-colors {
+	background-color: var(--bg);
+	color: var(--fg);
+}
+.blackBg #hiPoopFart, .whiteBg #hiPoopFart, .custom-colors #hiPoopFart {
+	background-color: unset;
+	backdrop-filter: unset;
+	-webkit-backdrop-filter: unset;
+}
+.blackBg p, .whiteBg p, .custom-colors p {text-shadow: none !important;}
+@media (prefers-reduced-motion) {
+	* {animation: none !important;}
+}
+@media (prefers-reduced-transparency) {
+	.content {background-image: none !important;}
+	#hiPoopFart {
+		backdrop-filter: blur(0px) !important;
+		-webkit-backdrop-filter: blur(0px); 
+		background-color: black;
+	}
+}
