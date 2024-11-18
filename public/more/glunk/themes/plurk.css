@@ -21,7 +21,7 @@ body {
 	color: white;
 }
 .pop-window-view, .divplurk, .response_box, .mini_form {
-	background: #0f1513 !important;
+	background: linear-gradient(180deg, rgba(0,32,25,1) 0%, rgba(0,12,32,1) 100%);
 }
 .response_box, .mini_form {border-top: 1px solid #89938f !important;}
 .td_img {
@@ -32,6 +32,10 @@ body {
 	background-color: #002019e3 !important;
 	backdrop-filter: blur(5px);
 	transition-duration: 0.2s;
+}
+.plurk_cnt {
+	background-color: unset !important;
+	border-bottom: 1px solid #a1f2db;
 }
 .plurk_icon.pif-replurk-circle:before {
 	background-clip: text !important;
