@@ -29,6 +29,7 @@ body {
 	display: inline-block;
 	width: 30vmin;
 	max-width: 300px;
+	border-radius: var(--corners);
 }
 #artworklink {
 	display: flex;
@@ -76,6 +77,7 @@ body {
 }
 #controls, #enter-name {
 	--settings-fg: #CAC4D0;
+	--settings-bg: #79747e;
 	background-color: #79747e6f;
 	border: 1px solid var(--settings-fg);
 	z-index: 10;
@@ -113,6 +115,19 @@ body {
 #controls button:active {
 	box-shadow: unset;
 	transform: translate(2px, 2px);
+}
+#controls .radio-button {
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+}
+.enabled .enabled-status {
+	width: 14px;
+	height: 14px;
+	background-color: var(--settings-fg);
 }
 #control-area {
 	display: flex;
@@ -251,6 +266,14 @@ body {
 	background: unset;
 	border-top: 1px solid var(--settings-fg);
 	margin: 0;
+}
+.slider::-webkit-slider-thumb {
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	background-color: unset;
+	border: 1px solid var(--settings-fg);
+	box-shadow: 2px 2px 0 0 var(--settings-fg);
 }
 @media (prefers-reduced-motion) {
 	* {animation: none !important;}

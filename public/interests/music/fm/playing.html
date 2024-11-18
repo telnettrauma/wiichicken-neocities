@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="--fg: #a8f0ce; --bg: #001f13;">
+<html lang="en" style="--fg: #a8f0ce; --bg: #001f13;">
 	<head>
 		<title>CURRENTLY LiSTENiNG TO</title>
 		<link rel="icon" type="image/x-icon" href="/favicon.png">
@@ -52,10 +52,14 @@
 					</div>
 				</div>
 			</div>
+			<div class="c-row">
+				<p><img src="media/np/coverart.png">Cover Art</p>
+				<button class="radio-button enabled" id="toggle-cover-art" onclick="toggleCoverArt();"><div class="enabled-status"></div></button>
+			</div>
 			<div class="c-row w-slide">
 				<p><img src="media/np/borderadius.png">Rounded Corners</p>
 				<div class="slider-box">
-					<input type="range" class="slider" id="round-slider" min="0" max="25" step="1" value="0">
+					<input type="range" class="slider" id="round-slider" min="0" max="50" step="1" value="0">
 				</div>
 			</div>
 		</div>

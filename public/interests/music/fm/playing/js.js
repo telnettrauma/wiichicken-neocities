@@ -168,9 +168,19 @@ function colorPickerStartup() {
 	bgColorPicker.addEventListener("input", updateBg, false);
 	fgColorPicker.addEventListener("input", updateFg, false);
 }
-function updateBg(event) {
-	document.documentElement.style.setProperty("--bg", event.target.value);
-}
-function updateFg(event) {
-	document.documentElement.style.setProperty("--fg", event.target.value);
+function updateBg(event) {document.documentElement.style.setProperty("--bg", event.target.value);}
+function updateFg(event) {document.documentElement.style.setProperty("--fg", event.target.value);}
+var cornerSlider = document.getElementById('round-slider');
+cornerSlider.oninput = function() {document.documentElement.style.setProperty("--corners", `${cornerSlider.value}%`);}
+
+// toggle cover art
+function toggleCoverArt() {
+	var coverArtButton = document.getElementById('toggle-cover-art');
+	if (coverArtButton.classList.contains('enabled')) {
+		coverArtButton.classList.remove('enabled');
+		document.getElementById('artwork').style.display = 'none';
+	} else {
+		coverArtButton.classList.add('enabled');
+		document.getElementById('artwork').style.display = 'block';
+	}
 }
