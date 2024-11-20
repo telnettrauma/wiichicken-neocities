@@ -79,21 +79,24 @@ jobs:
           npm i
           npm run build
 
-      - name: Sync live branch to main
-        uses: connor-baer/action-sync-branch@v1.1.0
+      - name: Sync changes to main
+        uses: jojomatik/sync-branch@v2
         with:
-          branch: main
-          token: ${{ secrets.GITHUB_TOKEN }}
-          force: false
+          source: "live"
+          target: "main"
+          strategy: "merge"
+          resolve_conflicts: "false"
+          git_committer_name: darkscar
+          git_committer_email: 41898282+github-actions[bot]@users.noreply.github.com
 
-      - name: Create Pull Request
+      - name: Make pull request in case of failure
         if: failure()
-        uses: peter-evans/create-pull-request@v7
+        uses: sansx/sync-branches@v1.0.1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: main
-          title: "🚫 merge conflict! AHHHHH"
-          body: "HOLY CRAP THERE WAS A MERGE CONFLICT WERE ALL GOING TO DIE"
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          FROM_BRANCH: "live"
+          TO_BRANCH: "main"
+          PULL_REQUEST_TITLE: "🔃 SYNC MAIN WITH LIVE"
 
       - name: Deploy to neocities
         uses: bcomnes/deploy-to-neocities@v1

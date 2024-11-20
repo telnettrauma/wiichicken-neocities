@@ -41,6 +41,11 @@
 				margin-bottom: 10px;
 				width: -webkit-fill-available;
 			}
+			.row {
+				display: flex;
+				width: 100%;
+				gap: 10px;
+			}
 			.grid .box h2, .grid .box h3 {background-color: unset;}
 			.head {background-image: url('/media/headers/blog.png');}
 			/* styling for grid mode */
@@ -179,21 +184,24 @@
 		<div id="chewTooth"></div>
 		<main>
 			<div class="head box page-top"></div>
-			<header class="box sec-full">
+			<header class="box sec-full" style="display: flex; align-items: center; justify-content: space-between;">
 				<h1>MiCROBLOG</h1>
+				<a href="feed.xml" target="_blank" class="noline" style="margin-right: 5px;"><button>RSS Feed</button></a>
 			</header>
-			<div class="box">
-				<p>this is where i store original pieces of rambling. (this just in, the kids call it "yapping" now)<br>You can also view my <a href="https://cringepoop.tumblr.com" target="_blank">tumblr</a> blog, where I post these updates and more (that's a lie, i completely forgot to). If you want to use tumblr but only see things posted here, view <a href="https://cringepoop.tumblr.com/tagged/neocitiesblog" target="_blank">my tag</a>.</p>
-			</div>
-			<div class="box">
-				<a href="feed.xml" target="_blank" class="noline"><button>RSS Feed</button></a>
+			<div class="row">
+				<div class="box sec-l">
+					<p>this is where i store original pieces of rambling. (this just in, the kids call it "yapping" now)</p>
+				</div>
+				<div class="box sec-r">
+					<p>the blog is recommended for audiences <strong>16 and older</strong></p>
+				</div>
 			</div>
 			<div class="box sec-b">
 				<h2>TAG GUiDE</h2>
 				<p><span class="aiBadge">#ai</span> - definitely a rant</p>
 				<p><span class="codeBadge">#code</span> - coding and other techy stuff. does not mean that a page will contain code snippets</p>
 				<p><span class="designBadge">#design</span> - me talking about ui/ux design</p>
-				<p><span class="metaBadge">#meta</span> - stuff about this website. older update posts are kept here, but new ones are put on the <a href="updates.html" target="_blank">updates page</a>.</p>
+				<p><span class="metaBadge">#meta</span> - stuff about this website. if you're looking for site updates, check out the <a href="updates.html" target="_blank">updates page</a>.</p>
 				<p><span class="rantBadge">#rant</span> - me complaining</p>
 				<p><span class="socialBadge">#social</span> - all about social media and the like</p>
 			</div>
@@ -205,7 +213,6 @@
 						<ul>
 							<li><a href="#24m1">January</a></li>
 							<li><a href="#24m2">Feburary</a></li>
-							<li><a href="#24m3">March</a></li>
 							<li><a href="#24m4">April</a></li>
 							<li><a href="#24m5">May</a></li>
 							<li><a href="#24m6">June</a></li>
@@ -220,8 +227,6 @@
 						<summary>2023</summary>
 						<ul>
 							<li><a href="#23m10">October</a></li>
-							<li><a href="#23m11">November</a></li>
-							<li><a href="#23m12">December</a></li>
 						</ul>
 					</details>
 				</details>
@@ -328,20 +333,9 @@
 				<div class="box">
 					<h3 id="24m4">April</h3>
 					<ul>
-						<li class="meta"><a href="2024/4/28.html" target="_blank">28. DO YOU HATE ME YET?</a> <span class="metaBadge">#meta</span></li>
 						<li class="ai social rant"><a href="2024/4/metasearch.html" target="_blank">24. Meta AI: a case study on how NOT to introduce a gimmick</a> <span class="aiBadge">#ai</span> <span class="socialBadge">#social</span> <span class="rantBadge">#rant</span></li>
-						<li class="meta"><a href="2024/4/21.html" target="_blank">21. WELL, THAT HAPPENED</a> <span class="metaBadge">#meta</span></li>
 						<li><a href="2024/4/infotainment.html" target="_blank">18. replacing my infotainment system</a></li>
-						<li class="meta"><a href="2024/4/14.html" target="_blank">14. STAGGERiNG</a> <span class="metaBadge">#meta</span></li>
 						<li class="social"><a href="2024/4/aprilfools.html" target="_blank">1. april fools (online)</a> <span class="socialBadge">#social</span></li>
-					</ul>
-				</div>
-				<div class="box">
-					<h3 id="24m3">March</h3>
-					<ul>
-						<li class="meta"><a href="2024/3/29.html" target="_blank">29. NEW BUTOTN AGAIN</a> <span class="metaBadge">#meta</span></li>
-						<li class="meta"><a href="2024/3/21.html" target="_blank">21. 100</a> <span class="metaBadge">#meta</span></li>
-						<li class="meta"><a href="2024/3/9.html" target="_blank">9. newGizmo</a> <span class="metaBadge">#meta</span></li>
 					</ul>
 				</div>
 				<div class="box">
@@ -349,10 +343,8 @@
 					<ul>
 						<li class="rant social"><a target="_blank" href="2024/2/x.html">29. i updated Twitter to X</a> <span class="rantBadge">#rant</span> <span class="socialBadge">#social</span></li>
 						<li><a target="_blank" href="2024/2/neko.html">25. NekoWeb</a></li>
-						<li class="meta"><a target="_blank" href="2024/2/16.html">16. EL DiRECTORY</a> <span class="metaBadge">#meta</span></li>
 						<li class="social"><a target="_blank" href="2024/2/insta.html">15. why instagram keeps coming back</a> <span class="socialBadge">#social</span></li>
 						<li><a target="_blank" href="2024/2/headset.html">6. the apple headset will die in a week</a></li>
-						<li class="meta"><a target="_blank" href="2024/2/4.html">4. SAME SH!T, NOW ON GiT</a> <span class="metaBadge">#meta</span></li>
 						<li class="meta code"><a target="_blank" href="2024/2/git.html">2. trying to use Git on my site</a> <span class="metaBadge">#meta</span> <span class="codeBadge">#code</span></li>
 					</ul>
 				</div>
@@ -364,33 +356,11 @@
 						<li class="rant fav"><a target="_blank" href="2024/1/spotify.html">26. Spotify Sucks!!</a> <span class="rantBadge">#rant</span> <span class="favBadge">#favorite</span></li>
 						<li class="social"><a target="_blank" href="2024/1/follow.html">25. i DONT WANT TO BE YOUR FRiEND</a> <span class="socialBadge">#social</span></li>
 						<li><a target="_blank" href="2024/1/bookmarks.html">23. i need BOOKMARKS Goku</a></li>
-						<li class="meta"><a target="_blank" href="2024/1/22.html">22. whereAmI</a> <span class="metaBadge">#meta</span></li>
 						<li class="design"><a target="_blank" href="2024/1/np.html">16. comparing mobile now playing widgets</a> <span class="designBadge">#design</span></li>
-						<li class="meta"><a target="_blank" href="2024/1/13.html">13. TRENDY LAYOUT</a> <span class="metaBadge">#meta</span></li>
-						<li class="meta"><a target="_blank" href="2024/1/9.html">9. THE NEW NEW</a> <span class="metaBadge">#meta</span></li>
 					</ul>
 				</div>
 				<div class="box sec-t">
 					<h2 id="23">2023</h2>
-				</div>
-				<div class="box">
-					<h3 id="23m12">December</h3>
-					<ul>
-						<li class="meta"><a target="_blank" href="2023/december/31.html">31. WiGGLE.MONSTER</a> <span class="metaBadge">#meta</span></li>
-						<li class="meta"><a target="_blank" href="2023/december/20.html">20. REDUCED MOTiON</a> <span class="metaBadge">#meta</span></li>
-						<li class="meta"><a target="_blank" href="2023/december/18.html">18. i AiNT GOT NO iPHONE</a> <span class="metaBadge">#meta</span></li>
-						<li class="meta"><a target="_blank" href="2023/december/11.html">11. iDrewThis</a> <span class="metaBadge">#meta</span></li>
-						<li class="meta"><a target="_blank" href="2023/december/8.html">8. MERRY CHRiSTMAS</a> <span class="metaBadge">#meta</span></li>
-						<li class="meta"><a target="_blank" href="2023/december/6.html">6. SiGN THE GUESTBOOK YOU DiNGUS</a> <span class="metaBadge">#meta</span></li>
-						<li class="meta"><a target="_blank" href="2023/december/4.html">4. HOUSTON, WE HAVE WiDGETS</a> <span class="metaBadge">#meta</span></li>
-					</ul>
-				</div>
-				<div class="box">
-					<h3 id="23m11">November</h3>
-					<ul>
-						<li class="meta"><a target="_blank" href="2023/november/30.html">30. ALL ABOUT ME</a> <span class="metaBadge">#meta</span></li>
-						<li class="meta"><a target="_blank" href="2023/november/26.html">26. HOMEPAGE REDESiGN</a> <span class="metaBadge">#meta</span></li>
-					</ul>
 				</div>
 				<div class="box sec-b" style="margin-bottom: 10px;">
 					<h3 id="23m10">October</h3>
