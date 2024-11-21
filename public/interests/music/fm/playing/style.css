@@ -275,14 +275,3 @@ body {
 	border: 1px solid var(--settings-fg);
 	box-shadow: 2px 2px 0 0 var(--settings-fg);
 }
-@media (prefers-reduced-motion) {
-	* {animation: none !important;}
-}
-@media (prefers-reduced-transparency) {
-	.content {background-image: none !important;}
-	#hiPoopFart {
-		backdrop-filter: blur(0px) !important;
-		-webkit-backdrop-filter: blur(0px); 
-		background-color: black;
-	}
-}
