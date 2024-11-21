@@ -26,15 +26,15 @@
 		<p id="control-header">Settings</p>
 		<div id="control-area">
 			<div class="c-row" onclick="enableHorizontal();">
-				<p><img src="media/np/horizontal.png">Layout</p>
+				<p><img src="playing/media/horizontal.png">Layout</p>
 				<button class="toggle-button" id="layout-mode" onclick="toggleLayout();">Horizontal</button>
 			</div>
 			<div class="c-row">
-				<p><img src="media/np/listener.png"><span id="show-username">Username</span></p>
+				<p><img src="playing/media/listener.png"><span id="show-username">Username</span></p>
 				<button class="toggle-button" onclick="setUser()">Set User</button>
 			</div>
 			<div class="c-row w-slide">
-				<p><img src="media/np/bg.png">Background</p>
+				<p><img src="playing/media/bg.png">Background</p>
 				<div class="mult-choice">
 					<button id="cover-b" class="mc-o selected" onclick="enableImageBackground();">Cover</button>
 					<button id="light-b" class="mc-o" onclick="enableWhiteBackground();">Light</button>
@@ -53,17 +53,17 @@
 				</div>
 			</div>
 			<div class="c-row w-slide">
-				<p><img src="media/np/drop.png">Blur</p>
+				<p><img src="playing/media/drop.png">Blur</p>
 				<div class="slider-box">
 					<input type="range" class="slider" id="blur-slider" min="0" max="20" step="1" value="10">
 				</div>
 			</div>
 			<div class="c-row">
-				<p><img src="media/np/coverart.png">Cover Art</p>
+				<p><img src="playing/media/coverart.png">Cover Art</p>
 				<button class="radio-button enabled" id="toggle-cover-art" onclick="toggleCoverArt();"><div class="enabled-status"></div></button>
 			</div>
 			<div class="c-row w-slide">
-				<p><img src="media/np/borderadius.png">Rounded Corners</p>
+				<p><img src="playing/media/borderadius.png">Rounded Corners</p>
 				<div class="slider-box">
 					<input type="range" class="slider" id="round-slider" min="0" max="50" step="1" value="0">
 				</div>
@@ -73,7 +73,7 @@
 	<div id="enter-name">
 		<form onsubmit="event.preventDefault(); confirmUser()">
 			<input type="text" id="username" name="username">
-			<img src="media/np/continue.png" onclick="confirmUser()" title="Confirm">
+			<img src="playing/media/continue.png" onclick="confirmUser()" title="Confirm">
 		</form>
 	</div>
 	<script src="playing/js.js"></script>
