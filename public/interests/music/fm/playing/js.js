@@ -172,6 +172,8 @@ function updateBg(event) {document.documentElement.style.setProperty("--bg", eve
 function updateFg(event) {document.documentElement.style.setProperty("--fg", event.target.value);}
 var cornerSlider = document.getElementById('round-slider');
 cornerSlider.oninput = function() {document.documentElement.style.setProperty("--corners", `${cornerSlider.value}%`);}
+var blurSlider = document.getElementById('blur-slider');
+blurSlider.oninput = function() {document.documentElement.style.setProperty("--bg-blur", `${blurSlider.value}vmax`);}
 
 // toggle cover art
 function toggleCoverArt() {
