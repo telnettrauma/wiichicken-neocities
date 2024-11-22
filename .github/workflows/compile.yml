@@ -99,7 +99,7 @@ jobs:
           PULL_REQUEST_TITLE: "🔃 SYNC MAIN WITH LIVE"
 
       - name: Deploy to neocities
-        uses: bcomnes/deploy-to-neocities@v1
+        uses: bcomnes/deploy-to-neocities@v3
         with:
           api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
           cleanup: true
