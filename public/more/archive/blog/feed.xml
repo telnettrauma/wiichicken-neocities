@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>Windows Cannot Toolbar</title>
+			<pubDate>Fri, 22 Nov 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/11/toolbar.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/11/toolbar.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
 			<title>YouTube Gaming Recap 2024</title>
 			<pubDate>Thu, 21 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/gaming2024.html</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/2024/11/juku.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/11/juku.html</guid>
 			<description>#social</description>
-		</item>
-		<item>
-			<title>Time for a Monitor</title>
-			<pubDate>Tue, 12 Nov 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/11/monitor.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/11/monitor.html</guid>
-			<description>no tags</description>
 		</item>
 	</channel>
 </rss>
