@@ -89,6 +89,8 @@ body {
 	bottom: 15px;
 	opacity: 0.3;
 	transition-duration: 0.5s;
+	height: 90vh;
+	max-height: 200px;
 }
 #controls img {image-rendering: pixelated;}
 #controls p {
@@ -130,12 +132,16 @@ body {
 	background-color: var(--settings-fg);
 }
 #control-area {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 5px;
-	padding: 5px;
+	margin: 5px;
+	height: 100%;
+	max-height: 180px;
+	overflow-y: scroll;
 }
+#control-area::-webkit-scrollbar {
+	width: 5px;
+	margin-left: 5px;
+}
+#control-area::-webkit-scrollbar-thumb {background-color: var(--settings-fg);}
 #control-header {
 	text-align: center;
 	font-size: 9px;
@@ -153,12 +159,14 @@ body {
 	padding-top: 3px;
 	border: 1px solid #CAC4D0;
 	text-align: left;
+	margin: 0 5px 5px 0;
 }
 .c-row p {display: flex;}
 .c-row img {
 	width: 20px;
 	height: 20px;
 	margin-right: 5px;
+	image-rendering: pixelated;
 }
 .w-slide {
 	padding-top: 5px;
