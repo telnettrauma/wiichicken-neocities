@@ -218,13 +218,13 @@ body {
 }
 .color-button::-webkit-color-swatch-wrapper {padding: 0;}
 .color-button::-webkit-color-swatch {border: none;}
+#song {font-weight: bold;}
 /* styles for when in portrait */
 .portrait #hiPoopFart #artworklink {flex-direction: column;}
-.portrait #hiPoopFart #artworklink #track {
-	text-align: center;
-	font-size: 4vmin;
-}
-.portrait #hiPoopFart #artworklink #track strong {font-size: 5vmin;}
+.portrait #hiPoopFart #artworklink #track {text-align: center;}
+.portrait #hiPoopFart #artworklink #artist {font-size: 4vmin;}
+.portrait #hiPoopFart #artworklink #song {font-size: 5vmin;}
+.landscape #hiPoopFart #artworklink #album {font-size: 3vmin;}
 /* styles for when in landscape */
 .landscape #hiPoopFart #artworklink {
 	flex-direction: row;
@@ -236,7 +236,8 @@ body {
 	text-align: left;
 	font-size: 2.5vmax;
 }
-.landscape #hiPoopFart #artworklink #track strong {font-size: 3vmax;}
+.landscape #hiPoopFart #artworklink #song {font-size: 3vmax;}
+.landscape #hiPoopFart #artworklink #album {font-size: 2vmax;}
 .landscape #hiPoopFart {
 	align-items: flex-start;
 	padding: 15px;

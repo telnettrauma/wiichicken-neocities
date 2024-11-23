@@ -11,6 +11,7 @@ function getNowPlaying() {
 		if (request.status >= 200 && request.status < 400) {
 			var data = JSON.parse(request.responseText);
 			var artist = data.recenttracks.track[0].artist["#text"];
+			var album = data.recenttracks.track[0].album["#text"];
 			var song = data.recenttracks.track[0]["name"];
 			var artwork = data.recenttracks.track[0].image[3]["#text"];
 			var tinyArtwork = data.recenttracks.track[0].image[0]["#text"];
@@ -25,10 +26,7 @@ function getNowPlaying() {
 			}
 
 			var trackInfo = document.getElementById("track");
-			trackInfo.innerHTML = "\
-				<strong>"+song+"</strong><br />\
-				"+artist+"\
-			";
+			trackInfo.innerHTML = `<span id="song">${song}<br></span><span id="artist">${artist}<br></span><span id="album">${album}</span>`;
 
 			if (typeof data.recenttracks.track[0]["@attr"] !== "undefined"){
 				var listenInfo = document.getElementById("listen");
