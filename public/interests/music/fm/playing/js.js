@@ -126,7 +126,13 @@ function enableCustomBackground() {
 	iHateChangingTheBackground();
 }
 function iHateChangingTheBackground() {
-	if (bgMode > 1) {main.classList.add('noBg')} else {main.classList.remove('noBg');}
+	if (bgMode > 1) {
+		main.classList.add('noBg');
+		document.getElementById('blur-row').style.display = 'none';
+	} else {
+		main.classList.remove('noBg');
+		document.getElementById('blur-row').style.display = 'block';
+	}
 	if (bgMode === 4) {document.getElementById('color-options').style.display = 'flex';} else {document.getElementById('color-options').style.display = 'none';}
 }
 detectSize();
