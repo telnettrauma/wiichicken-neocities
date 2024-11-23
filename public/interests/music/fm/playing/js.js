@@ -191,3 +191,15 @@ function toggleCoverArt() {
 		document.getElementById('artwork').style.display = 'block';
 	}
 }
+
+// toggle metadata (note that the conditions are inverted)
+function toggleSongMetadata(md, elm) {
+	var info = document.getElementById('track');
+	if (info.classList.contains(md)) {
+		info.classList.remove(md);
+		document.getElementById(elm).classList.add('selected');
+	} else {
+		info.classList.add(md);
+		document.getElementById(elm).classList.remove('selected');
+	}
+}
