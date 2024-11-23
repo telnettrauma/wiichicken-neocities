@@ -2,6 +2,7 @@ var mainElement = document.getElementById('main');
 let user = 'wiichicken';
 // background modes: 1 - color; 2 - light; 3 - dark
 let bgMode = 1;
+let previousCover = 'nothing!';
 function getNowPlaying() {
 	var url = `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`;
 	var request = new XMLHttpRequest();
@@ -14,15 +15,15 @@ function getNowPlaying() {
 			var album = data.recenttracks.track[0].album["#text"];
 			var song = data.recenttracks.track[0]["name"];
 			var artwork = data.recenttracks.track[0].image[3]["#text"];
-			var tinyArtwork = data.recenttracks.track[0].image[0]["#text"];
 
-			// only adds background images if the background is set to image
-			if (bgMode === 1) {
+			// only adds background images if the background is set to image and the cover art isn't the same
+			if (bgMode === 1 && !(previousCover === artwork)) {
 				var artworkImg = document.getElementById("artwork");
 				artworkImg.setAttribute("src", artwork);
 				var fakeBlur = document.getElementById('moneyOnMind');
-				fakeBlur.style.backgroundImage = `url(${tinyArtwork})`;
-				document.getElementById('fartOnMind').style.backgroundImage = `url(${tinyArtwork})`;
+				fakeBlur.style.backgroundImage = `url(${artwork})`;
+				document.getElementById('fartOnMind').style.backgroundImage = `url(${artwork})`;
+				previousCover = artwork;
 			}
 
 			var trackInfo = document.getElementById("track");
