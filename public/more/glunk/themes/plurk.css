@@ -137,3 +137,95 @@ body {
 .candidate-background {
 	background: linear-gradient(90deg, rgba(0,136,111,1) 0%, rgba(0,184,210,1) 100%) !important;
 }
+.q_plays {
+	background: linear-gradient(90deg, rgba(253,115,135,1) 0%, rgba(253,150,115,1) 100%);
+	color: #3b0712;
+}
+.q_buys {
+	background: linear-gradient(90deg, rgba(255,148,129,1) 0%, rgba(255,187,129,1) 100%);
+	color: #3a0a04;
+}
+.q_sells {
+	background: linear-gradient(90deg, rgba(255,81,41,1) 0%, rgba(255,201,41,1) 100%);
+	color: #3a0a02;
+}
+.q_loves {
+	background: linear-gradient(90deg, rgba(204,1,0,1) 0%, rgba(204,0,177,1) 100%);
+	color: #ffdad4;
+}
+.q_likes {
+	background: linear-gradient(90deg, rgba(242,25,45,1) 0%, rgba(153,25,242,1) 100%);
+	color: #3b0909;
+}
+.q_shares {
+	background: linear-gradient(90deg, rgba(198,84,84,1) 0%, rgba(198,158,84,1) 100%);
+	color: #ffdad8;
+}
+.q_hates {
+	background: linear-gradient(90deg, rgba(9,15,16,1) 0%, rgba(9,10,16,1) 100%);
+	color: #dee3e5;
+}
+.q_wants {
+	background: linear-gradient(90deg, rgba(132,150,77,1) 0%, rgba(150,147,77,1) 100%);
+	color: #161e00;
+}
+.q_wishes {
+	background: linear-gradient(90deg, rgba(92,178,122,1) 0%, rgba(92,178,169,1) 100%);
+	color: #00210e;
+}
+.q_needs {
+	background: linear-gradient(90deg, rgba(58,164,109,1) 0%, rgba(99,164,58,1) 100%);
+	color: #002110;
+}
+.q_has {
+	background: linear-gradient(90deg, rgba(70,130,129,1) 0%, rgba(70,78,130,1) 100%);
+	color: #9cf1ef;
+}
+.q_will {
+	background: linear-gradient(90deg, rgba(174,96,177,1) 0%, rgba(177,96,128,1) 100%);
+	color: #320936;
+}
+.q_hopes {
+	background: linear-gradient(90deg, rgba(226,142,225,1) 0%, rgba(147,142,226,1) 100%);
+	color: #320935;
+}
+.q_asks {
+	background: linear-gradient(90deg, rgba(124,88,164,1) 0%, rgba(164,88,137,1) 100%);
+	color: #efdbff;
+}
+.q_wonders {
+	background: linear-gradient(90deg, rgba(76,99,145,1) 0%, rgba(76,136,145,1) 100%);
+	color: #d8e2ff;
+}
+.q_feels {
+	background: linear-gradient(90deg, rgba(77,153,205,1) 0%, rgba(77,84,205,1) 100%);
+	color: #001e30;
+}
+.q_thinks {
+	background: linear-gradient(90deg, rgba(108,165,206,1) 0%, rgba(121,108,206,1) 100%);
+	color: #001e2f;
+}
+.q_draws {
+	background: linear-gradient(90deg, rgba(71,178,177,1) 0%, rgba(71,178,110,1) 100%);
+	color: #002020;
+}
+.q_is {
+	background: linear-gradient(90deg, rgba(255,121,50,1) 0%, rgba(255,235,50,1) 100%);
+	color: #351000;
+}
+.q_says {
+	background: linear-gradient(90deg, rgba(232,141,67,1) 0%, rgba(232,213,67,1) 100%);
+	color: #301400;
+}
+.q_eats {
+	background: linear-gradient(90deg, rgba(255,141,6,1) 0%, rgba(255,40,6,1) 100%);
+	color: #2f1500;
+}
+.q_writes {
+	background: linear-gradient(90deg, rgba(239,171,7,1) 0%, rgba(226,239,7,1) 100%);
+	color: #271900;
+}
+.q_whispers {
+	background: linear-gradient(90deg, rgba(50,0,126,1) 0%, rgba(126,51,0,1) 100%);
+	color: #e9ddff;
+}
