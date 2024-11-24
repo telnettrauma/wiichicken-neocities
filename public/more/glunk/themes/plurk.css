@@ -12,6 +12,16 @@ body {
 	border: 1px solid;
 	box-shadow: 2px 2px 0 0;
 }
+.p_img {
+	box-shadow: 0 0 20px 0;
+	border: none !important;
+}
+.p_img a img {
+	color: #a1f2db;
+	border-top: 1px solid !important;
+	border-left: 1px solid !important;
+	border-bottom: 1px solid !important;
+}
 .profile-pic {
 	border: 1px solid white;
 	box-shadow: 2px 2px 0 0 white;
@@ -30,12 +40,16 @@ body {
 .plurk_cnt, #form_holder, .response_box, .poster_holder .mini_form {
 	color: #a1f2db;
 	background-color: #002019e3 !important;
-	backdrop-filter: blur(5px);
 	transition-duration: 0.2s;
+}
+.response table tbody tr td .plurk_cnt {
+	backdrop-filter: unset;
 }
 .plurk_cnt {
 	background-color: unset !important;
 	border-bottom: 1px solid #a1f2db;
+	box-shadow: 2px 2px 0 0 inset 0 0 20px 0px #00000070;
+	backdrop-filter: blur(5px) brightness(0.5);
 }
 .plurk_icon.pif-replurk-circle:before {
 	background-clip: text !important;
@@ -133,6 +147,11 @@ body {
 }
 .icons_holder {
 	text-shadow: 0 0 5px !important;
+}
+.name {
+	background: linear-gradient(90deg, rgba(161,242,219,1) 0%, rgba(198,231,255,1) 100%);
+	background-clip: text !important;
+	color: transparent;
 }
 .candidate-background {
 	background: linear-gradient(90deg, rgba(0,136,111,1) 0%, rgba(0,184,210,1) 100%) !important;
