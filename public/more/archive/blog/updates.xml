@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>UPDATES FROM DEPENDABOT</title>
+			<pubDate>Sun, 24 Nov 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>thanks dependabot</description>
+		</item>
+		<item>
 			<title>NOTHiNG, GO TO BED</title>
 			<pubDate>Sun, 17 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>i made a library of all the music i digitally own</description>
-		</item>
-		<item>
-			<title>4K HDR</title>
-			<pubDate>Sun, 15 Sep 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>welcome... to the FUTURE!</description>
 		</item>
 	</channel>
 </rss>
