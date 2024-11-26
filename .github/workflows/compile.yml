@@ -101,6 +101,7 @@ jobs:
       - name: Deploy to neocities
         uses: bcomnes/deploy-to-neocities@v3
         with:
-          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
           cleanup: true
           dist_dir: public # specify the directory where your site is built
+          neocities_supporter: true
