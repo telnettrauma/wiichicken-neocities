@@ -1,6 +1,6 @@
 ---
 layout: blog/24/10/100daystounload.njk
-title: "Unscientific Unresearched Report About if Bowling Alleys are Becoming too Family Focused"
+title: "Unresearched Rant on if Bowling is Too Family Friendly"
 date: 2024-11-27
 light: "#c5e7ff"
 dark: "#001e2d"
