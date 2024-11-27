@@ -79,6 +79,11 @@ jobs:
           npm i
           npm run build
 
+      - name: Create commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 🤖 Compile website and sitemap
+
       - name: Sync changes to main
         uses: jojomatik/sync-branch@v2
         with:
