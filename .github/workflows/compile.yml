@@ -86,6 +86,11 @@ jobs:
           base-url-path: https://wiggle.monster/
           path-to-root: public
           drop-html-extension: true
+      
+      - name: Create commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 🤖 Compile website and sitemap
 
       - name: Sync changes to main
         uses: jojomatik/sync-branch@v2
