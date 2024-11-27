@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>Online Social Experiments Don't Work Anymore</title>
+			<pubDate>Tue, 26 Nov 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/11/experiment.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/11/experiment.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
 			<title>Day 50 - A Reflection</title>
 			<pubDate>Mon, 25 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/reflection.html</link>
@@ -67,13 +74,6 @@
 			<pubDate>Sun, 17 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/moveon.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/11/moveon.html</guid>
-			<description>no tags</description>
-		</item>
-		<item>
-			<title>Breaking up With Maximizing</title>
-			<pubDate>Sat, 16 Nov 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/11/maximize.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/11/maximize.html</guid>
 			<description>no tags</description>
 		</item>
 	</channel>
