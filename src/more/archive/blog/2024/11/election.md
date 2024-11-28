@@ -24,11 +24,11 @@ So... election day came. And this election day was different. Not just because o
 
 <h2 id="thegoodpart">Dynamic Island</h2>
 
-You thought this was going to be a deep political article, but nope, its another [rant about Apple](../cameracontrol.html).
+You thought this was going to be a deep political article, but nope, its another [rant about Apple](../10/cameracontrol.html).
 
 In iOS 16, Apple introduced [Live Activities](https://developer.apple.com/design/human-interface-guidelines/live-activities). Live Activities allow apps to put information on your lock screen inside a little widget, instead of sending a bunch of notifications. This is useful for things like live sports scores, delivery apps, and probably something else. If you have an iPhone 16 Pro or newer, these live activities appear in the "[dynamic island](https://support.apple.com/guide/iphone/use-the-dynamic-island-iph28f50d10d/ios)", which basically means inside of the notch. This way, you can always check on your activities. Additionally, these appear on your Apple Watch starting in watchOS 11.
 
-The problem is that most apps that I use don't support this feature. And honestly, I don't need them to. Live Activities to me are those things that appear during [sport matches](../sports.html) and if I close Instagram while a story is being uploaded.
+The problem is that most apps that I use don't support this feature. And honestly, I don't need them to. Live Activities to me are those things that appear during [sport matches](../10/sports.html) and if I close Instagram while a story is being uploaded.
 
 Seeing this new technology, Apple decided to use it for the upcoming election. If you had the Apple News app, you could opt into having a [Live Activity showing election results](https://www.macrumors.com/2024/11/05/apple-news-us-election-results-iphone/) directly on your lock screen and dynamic island. It could even buzz you whenever something happened. This seemed like a cool idea, and it was, until you start realizing how stressful this election would become.
 

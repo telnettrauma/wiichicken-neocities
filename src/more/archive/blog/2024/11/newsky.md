@@ -8,7 +8,7 @@ accent: "#00ff55"
 articleNumber: 36
 permalink: "/more/archive/blog/2024/11/newsky.html"
 ---
-BlueSky seems to have started blowing up in popularity due to the recent changes in Twitter. A lot has changed since [the last time I talked about BlueSky](../twtalt.html){target=_blank}.
+BlueSky seems to have started blowing up in popularity due to the recent changes in Twitter. A lot has changed since [the last time I talked about BlueSky](../10/twtalt.html){target=_blank}.
 
 One interesting thing that's important but nobody thinks about when it comes to social networks is the community and culture around the platform. And I think that BlueSky is finally starting to gain it's identity. And the identity that BlueSky has given itself is similar to Tumblr before the 2018 porn ban.
 
