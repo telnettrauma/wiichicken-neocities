@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>This Little Piggy Went to Markt</title>
+			<pubDate>Sat, 30 Nov 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/11/markt.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/11/markt.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
 			<title>happy fun snow driving time</title>
 			<pubDate>Fri, 29 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/winter.html</link>
@@ -67,13 +74,6 @@
 			<pubDate>Thu, 21 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/gaming2024.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/11/gaming2024.html</guid>
-			<description>no tags</description>
-		</item>
-		<item>
-			<title>Lifestreams - Not a Desktop</title>
-			<pubDate>Wed, 20 Nov 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/11/lifestream.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/11/lifestream.html</guid>
 			<description>no tags</description>
 		</item>
 	</channel>
