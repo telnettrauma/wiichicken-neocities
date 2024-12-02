@@ -87,6 +87,15 @@ jobs:
           base-url-path: https://wiggle.monster/
           path-to-root: public
           drop-html-extension: true
+
+      - name: Deploy to neocities
+        uses: bcomnes/deploy-to-neocities@v3
+        with:
+          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
+          cleanup: true
+          dist_dir: public # specify the directory where your site is built
+          neocities_supporter: true
+        continue-on-error: true
       
       - name: Create commit
         uses: stefanzweifel/git-auto-commit-action@v5
@@ -112,11 +121,3 @@ jobs:
           FROM_BRANCH: "live"
           TO_BRANCH: "main"
           PULL_REQUEST_TITLE: "🔃 SYNC MAIN WITH LIVE"
-
-      - name: Deploy to neocities
-        uses: bcomnes/deploy-to-neocities@v3
-        with:
-          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
-          cleanup: true
-          dist_dir: public # specify the directory where your site is built
-          neocities_supporter: true
