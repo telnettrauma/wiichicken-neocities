@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>Using a Fire TV Sucks</title>
+			<pubDate>Sun, 1 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/firetv.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/firetv.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
 			<title>This Little Piggy Went to Markt</title>
 			<pubDate>Sat, 30 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/markt.html</link>
@@ -67,13 +74,6 @@
 			<pubDate>Fri, 22 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/toolbar.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/11/toolbar.html</guid>
-			<description>no tags</description>
-		</item>
-		<item>
-			<title>YouTube Gaming Recap 2024</title>
-			<pubDate>Thu, 21 Nov 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/11/gaming2024.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/11/gaming2024.html</guid>
 			<description>no tags</description>
 		</item>
 	</channel>
