@@ -6,7 +6,7 @@ light: "#d5e3ff"
 dark: "#001b3c"
 accent: "#0088ff"
 articleNumber: 56
-permalink: "/more/archive/blog/2024/11/firetv.html"
+permalink: "/more/archive/blog/2024/12/firetv.html"
 ---
 We had to get a new television for... reasons. Because it was black Friday, we were able to get a new television for less than `$200`. We decided to avoid getting a Roku, because we didn't want to pay the activation fee (and my Roku experience has always been terrible). So, Fire TV it was. Maybe it's just because I'm used to the luxury of an Apple TV, but Fire TV sucks!
 
