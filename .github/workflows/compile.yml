@@ -94,6 +94,7 @@ jobs:
           cleanup: true
           dist_dir: public # specify the directory where your site is built
           neocities_supporter: true
+        continue-on-error: true
       
       - name: Create commit
         uses: stefanzweifel/git-auto-commit-action@v5
