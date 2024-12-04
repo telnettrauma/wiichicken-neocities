@@ -3,7 +3,492 @@
 <head>
 	<title>WiiCHiCKEN GUESTBOOK</title>
 	<link rel="icon" type="image/x-icon" href="media/guesticon.png">
-	<link href="style.css" rel="stylesheet">
+	<style>
+		/* general styles */
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@700&family=Martian+Mono:wght@600&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+	box-sizing: border-box;
+	text-rendering: optimizeSpeed;
+	-webkit-font-smoothing: none;
+}
+body {
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	background-color: var(--bg-1);
+	cursor: url(/media/home/cursor.png), default;
+	background-image: url(/starry.gif);
+	background-attachment: fixed;
+	image-rendering: pixelated;
+}
+main {
+	--p: 1;
+	--pixel: calc(var(--p) * 1px);
+	--s-main: calc(var(--pixel) * 20);
+	max-width: 610px;
+	margin: auto;
+	padding: 10px;
+	overflow: hidden;
+	margin-top: 10px !important;
+	margin-bottom: 40px !important;
+	position: relative;
+	backdrop-filter: blur(5px);
+	background-image: url('/media/noise.png');
+	image-rendering: pixelated;
+	clip-path: polygon(
+		var(--s-main) 0%, 
+		calc(100% - var(--s-main)) 0%, 
+		100% var(--s-main), 100% calc(100% - var(--s-main)), 
+		calc(100% - var(--s-main)) 100%, 
+		var(--s-main) 100%, 
+		0% calc(100% - var(--s-main)), 
+		0% var(--s-main));
+}
+main:before {
+	content:"";
+	position:absolute;
+	inset:0;
+	z-index: -1;
+	background: linear-gradient(45deg,var(--bg-2),var(--bg-1));
+	--g1:#000 var(--pixel),#0000 0 calc(100% - var(--pixel)),#000 0;
+	--g2:#0000   calc(0.707*var(--s-main)), 
+		#000  0 calc(0.707*var(--s-main) + var(--pixel)),
+		#0000 0 calc(100% - 0.707*var(--s-main) - var(--pixel)),
+		#000  0 calc(100% - 0.707*var(--s-main)),
+		#0000 0;
+	-webkit-mask:
+	linear-gradient(45deg ,var(--g2)),
+	linear-gradient(-45deg,var(--g2)),
+	linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s-main)) no-repeat,
+	linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s-main)) 100% no-repeat;
+mask:
+	linear-gradient(45deg ,var(--g2)),
+	linear-gradient(-45deg,var(--g2)),
+	linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s-main)) no-repeat,
+	linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s-main)) 100% no-repeat;
+}
+h1, h2, h3, h4, h5, h6 {font-family: 'Kode Mono', monospace;}
+a {
+	text-decoration: none;
+	color: var(--dark-secondary);
+}
+code {font-family: 'Martian Mono', monospace;}
+img {image-rendering: pixelated;}
+button {
+	cursor: pointer;
+	font-family: 'Ubuntu', sans-serif;
+}
+.nomarblock {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+.box {
+	padding: 5px;
+	color: var(--dark-on-primary-container);
+	background-color: var(--light-on-primary-container);
+	margin-bottom: 10px;
+}
+.box, .footer, .boxy, .boxyless {
+	--p: 1;
+	--pixel: calc(var(--p) * 1px); /* don't change this */
+	--b-radius-tl: 5; /* top-left */
+	--b-radius-tr: 5; /* top-right */
+	--b-radius-br: 5; /* bottom-right */
+	--b-radius-bl: 5; /* bottom-left */
+	--s-tl: calc(var(--pixel) * var(--b-radius-tl));
+	--s-tr: calc(var(--pixel) * var(--b-radius-tr));
+	--s-br: calc(var(--pixel) * var(--b-radius-br));
+	--s-bl: calc(var(--pixel) * var(--b-radius-bl));
+	position: relative;
+	overflow: hidden;
+	clip-path: polygon(
+		var(--s-tl) 0%, calc(100% - var(--s-tr)) 0%, 100% var(--s-tr), 
+		100% calc(100% - var(--s-br)), calc(100% - var(--s-br)) 100%, 
+		var(--s-bl) 100%, 0% calc(100% - var(--s-bl)), 0% var(--s-tl)
+	);
+}
+.box::before, .footer::before, .boxy::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 10;
+	pointer-events: none;
+	background-color: var(--border);
+	--g1-tl: #0000 calc(0.707 * var(--s-tl)), #000 0 calc(0.707 * var(--s-tl) + var(--pixel)), #0000 0;
+	--g1-tr: #0000 calc(0.707 * var(--s-tr)), #000 0 calc(0.707 * var(--s-tr) + var(--pixel)), #0000 0;
+	--g1-br: #0000 calc(0.707 * var(--s-br)), #000 0 calc(0.707 * var(--s-br) + var(--pixel)), #0000 0;
+	--g1-bl: #0000 calc(0.707 * var(--s-bl)), #000 0 calc(0.707 * var(--s-bl) + var(--pixel)), #0000 0;
+	-webkit-mask:
+		linear-gradient(135deg, var(--g1-tl)) top left,
+		linear-gradient(-135deg, var(--g1-tr)) top right,
+		linear-gradient(-45deg, var(--g1-br)) bottom right,
+		linear-gradient(45deg, var(--g1-bl)) bottom left,
+		linear-gradient(90deg, #000 var(--pixel), #0000 0 calc(100% - var(--pixel)), #000 0) 50%/100% calc(100% - 2*var(--pixel)) no-repeat,
+		linear-gradient(180deg, #000 var(--pixel), #0000 0 calc(100% - var(--pixel)), #000 0) 50%/calc(100% - 2*var(--pixel)) 100% no-repeat;
+	mask:
+		linear-gradient(135deg, var(--g1-tl)) top left,
+		linear-gradient(-135deg, var(--g1-tr)) top right,
+		linear-gradient(-45deg, var(--g1-br)) bottom right,
+		linear-gradient(45deg, var(--g1-bl)) bottom left,
+		linear-gradient(90deg, #000 var(--pixel), #0000 0 calc(100% - var(--pixel)), #000 0) 50%/100% calc(100% - 2*var(--pixel)) no-repeat,
+		linear-gradient(180deg, #000 var(--pixel), #0000 0 calc(100% - var(--pixel)), #000 0) 50%/calc(100% - 2*var(--pixel)) 100% no-repeat;
+}
+.boxyless {
+	--b-radius-tl: 0;
+	--b-radius-tr: 0;
+	--b-radius-br: 0;
+	--b-radius-bl: 0;
+}
+.box a:not(:has(img)) {
+	position: relative;
+	color: var(--dark-tertiary);
+}
+.box a:not(:has(img)):hover::after {animation: happyHover 0.3s;}
+@keyframes happyHover {
+	0% {background-size: 100% 1px; background-position: 100% 100%;}
+	50% {background-size: 0% 1px; background-position: 100% 100%;}
+	51% {background-position: 0% 100%;}
+	100% {background-size: 100% 1px; background-position: 0% 100%;}
+}
+.head {
+	height: 100px;
+	background: linear-gradient(45deg, var(--bg-1) 0%, var(--bg-2) 100%);
+	image-rendering: pixelated;
+	background-position: center;
+}
+.noline::after {
+	content: unset !important;
+	text-decoration: none !important;
+}
+#chewTooth {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2));
+	width: 100%;
+	height: 120%;
+	mix-blend-mode: color;
+}
+.page-top {--b-radius-tl: 15 !important; --b-radius-tr: 15 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
+.page-bottom {--b-radius-tl: 5 !important; --b-radius-tr: 5 !important; --b-radius-bl: 15 !important; --b-radius-br: 15 !important; margin-bottom: 0 !important;}
+.page-tl {--b-radius-tl: 15 !important; --b-radius-tr: 5 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
+.page-tr {--b-radius-tl: 5 !important; --b-radius-tr: 15 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
+.sec-tl {--b-radius-tl: 10 !important; --b-radius-tr: 5 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
+.sec-tr {--b-radius-tl: 5 !important; --b-radius-tr: 10 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
+.sec-br {--b-radius-tl: 5 !important; --b-radius-tr: 5 !important; --b-radius-bl: 5 !important; --b-radius-br: 10 !important;}
+.sec-bl {--b-radius-tl: 5 !important; --b-radius-tr: 5 !important; --b-radius-bl: 10 !important; --b-radius-br: 5 !important;}
+.sec-l {--b-radius-tl: 10 !important; --b-radius-tr: 5 !important; --b-radius-bl: 10 !important; --b-radius-br: 5 !important;}
+.sec-r {--b-radius-tl: 5 !important; --b-radius-tr: 10 !important; --b-radius-bl: 5 !important; --b-radius-br: 10 !important;}
+.sec-t {--b-radius-tl: 10 !important; --b-radius-tr: 10 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
+.sec-b {--b-radius-tl: 5 !important; --b-radius-tr: 5 !important; --b-radius-bl: 10 !important; --b-radius-br: 10 !important;}
+.sec-full {--b-radius-tl: 10 !important; --b-radius-tr: 10 !important; --b-radius-bl: 10 !important; --b-radius-br: 10 !important;}
+
+::selection {
+	background-color: var(--dark-tertiary);
+	color: var(--dark-on-tertiary);
+}
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {background-color: black;}
+::-webkit-scrollbar-thumb {background: linear-gradient(45deg, var(--bg-2) 0%, var(--bg-1) 100%);}
+/* footer */
+.footer {
+	width: 100%;
+	background-color: black;
+	font-family: 'Kode Mono', monospace;
+	font-weight: bold;
+	padding: 10px;
+	color: white;
+}
+.footer::before {
+	background-color: unset !important;
+	background: linear-gradient(45deg, var(--bg-2) 0%, var(--bg-1) 100%) !important;
+}
+.footer p {text-align: center;}
+#random-message {
+	font-size: 10px;
+	cursor: pointer;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: normal;
+	color: gray;
+}
+#random-message:hover {
+	color: white;
+	box-shadow: none;
+}
+
+/* navigation styles */
+
+/* navbar */
+#poopBlock iframe {
+	width: 100%;
+	height: 30px;
+	border: none;
+	display: none;
+}
+.heading {
+	width: 100%;
+	z-index: 10;
+	margin: 0;
+	bottom: 0;
+	position: fixed;
+	transition-duration: 0.5s;
+	height: 30px;
+	background-color: black;
+}
+.heading::after {
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-1) 100%);
+	content: '';
+	bottom: 0;
+	top: 0;
+}
+#inHead {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 100px;
+	margin: 5px;
+}
+.topLinks, .topLinks a, #fakeLogo, .square {pointer-events: all;}
+.topLinks {display: flex;}
+.topLinks a {
+	display: flex;
+	font-size: 15px;
+	color: white;
+	padding: 0 7px 0 7px;
+	background-color: unset !important;
+}
+.topLinks a:first-child {color: #c5e7ff;}
+.topLinks a:nth-child(2) {color: #dce1ff;}
+.topLinks a:nth-child(3) {color: #ffd6fe;}
+.topLinks a:nth-child(4) {color: #ffdadb;}
+.topLinks a:nth-child(5) {color: #ffdad6;}
+#fakeLogo {
+	display: flex;
+	align-items: center;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	z-index: 2;
+	margin: -35px 20px 0 0;
+	padding: 5px;
+	pointer-events: all;
+	position: absolute;
+	right: 5px;
+	background-color: white;
+	background: linear-gradient(0deg, #7e7e7e 0%, #ffffff 100%);
+	border: 5px solid black;
+	aspect-ratio: 1;
+}
+#fakeLogo:hover {
+	padding: 10px;
+	transform: translateY(-10px);
+	box-shadow: 0 0 100px 20px var(--bg-1);
+}
+#fakeLogo .square {
+	width: 15px;
+	height: 15px;
+	margin: 2px;
+}
+#fakeLogo:hover .square {
+	transform: scale(1.5);
+	transform-origin: center;
+	margin: 1px;
+	transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+	animation: look-around 3s;
+}
+@keyframes look-around {
+	30% {transform-origin: initial;}
+	40% {transform-origin: left;}
+	50% {transform-origin: left;}
+	60% {transform-origin: right;}
+	75% {transform-origin: right;}
+	85% {transform-origin: initial;}
+}
+#fakeLogo:hover #s1 {margin-right: 10px;}
+#s1 {background-color: red; background: linear-gradient(0deg, #ff7b00 0%, #ff0000 100%); transition-duration: 0.3s;}
+#s2 {background-color: #00a2ff; background: linear-gradient(180deg, #00a2ff 0%, #0044ff 100%); transition-duration: 0.5s;}
+#fakeLogo:active {
+	padding: 7px;
+	box-shadow: 0 0 100px 50px var(--bg-1);
+}
+#fakeLogo:active .square {
+	margin: 1px;
+	transition-duration: 0.2;
+}
+#fakeLogo:active #s1 {transform: scale(1.7); margin-right: 15px;}
+#fakeLogo:active #s2 {transform: scale(2.1);}
+#to-start {
+	position: absolute;
+	z-index: 1000;
+	left: -500px;
+	opacity: 0;
+}
+#to-start:focus {
+	opacity: 1;
+	left: 0;
+}
+
+/* other */
+/* styling for desktop */
+@media only screen and (min-width: 650px) {
+	.d-page-top {--b-radius-tl: 15 !important; --b-radius-tr: 15 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
+	.d-page-bottom {--b-radius-tl: 5 !important; --b-radius-tr: 5 !important; --b-radius-bl: 15 !important; --b-radius-br: 15 !important; margin-bottom: 0 !important;}
+	.d-page-tl {--b-radius-tl: 15 !important; --b-radius-tr: 5 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
+	.d-page-tr {--b-radius-tl: 5 !important; --b-radius-tr: 15 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
+	.d-sec-tl {--b-radius-tl: 10 !important; --b-radius-tr: 5 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
+	.d-sec-tr {--b-radius-tl: 5 !important; --b-radius-tr: 10 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
+	.d-sec-br {--b-radius-tl: 5 !important; --b-radius-tr: 5 !important; --b-radius-bl: 5 !important; --b-radius-br: 10 !important;}
+	.d-sec-bl {--b-radius-tl: 5 !important; --b-radius-tr: 5 !important; --b-radius-bl: 10 !important; --b-radius-br: 5 !important;}
+	.d-sec-l {--b-radius-tl: 10 !important; --b-radius-tr: 5 !important; --b-radius-bl: 10 !important; --b-radius-br: 5 !important;}
+	.d-sec-r {--b-radius-tl: 5 !important; --b-radius-tr: 10 !important; --b-radius-bl: 5 !important; --b-radius-br: 10 !important;}
+	.d-sec-t {--b-radius-tl: 10 !important; --b-radius-tr: 10 !important; --b-radius-bl: 5 !important; --b-radius-br: 5 !important;}
+	.d-sec-b {--b-radius-tl: 5 !important; --b-radius-tr: 5 !important; --b-radius-bl: 10 !important; --b-radius-br: 10 !important;}
+	.d-sec-full {--b-radius-tl: 10 !important; --b-radius-tr: 10 !important; --b-radius-bl: 10 !important; --b-radius-br: 10 !important;}
+	.box a:not(:has(img)) {position: relative;}
+	.box a:not(:has(img))::after {
+		content: '';
+		background: linear-gradient(90deg, var(--dark-primary) 0%, var(--dark-tertiary) 100%);
+		height: 1px;
+		width: 100%;
+		background-position: bottom;
+		background-size: 100% 1px;
+		background-repeat: no-repeat;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	@keyframes wink {
+		0% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		10% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		11% {height: 5px; margin-top: 5px; margin-bottom: 5px;}
+		12% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		48% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		50% {height: 5px; margin-top: 5px; margin-bottom: 5px;}
+		52% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		100% {height: 15px; margin-top: 0; margin-bottom: 0;}
+	}
+	@keyframes blink {
+		0% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		10% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		11% {height: 5px; margin-top: 5px; margin-bottom: 5px;}
+		12% {height: 15px; margin-top: 0; margin-bottom: 0;}
+		100% {height: 15px; margin-top: 0; margin-bottom: 0;}
+	}
+	#fakeLogo:not(:hover) #s1 {animation: wink 15s infinite;}
+	#fakeLogo:not(:hover) #s2 {animation: blink 15s infinite;}
+	.topLinks a {
+		align-items: center;
+		opacity: 0.7;
+	}
+	.topLinks a:hover {opacity: 1;}
+	.topLinks a img {
+		height: 12px;
+		margin-right: 3px;
+	}
+	main {background-image: url('/media/noise.png'), linear-gradient(0deg, var(--bg-2) 0%, #00000000 20%, #00000000 80%, var(--bg-1) 100%);}
+}
+/* styling for mobile */
+@media only screen and (max-width: 650px) {
+	.mobileHidden {display: none !important;}
+	.page-top, .m-page-top, .page-bottom, .m-page-bottom {border: unset !important;}
+	.page-top, .m-page-top {--b-radius-tl: 15 !important; --b-radius-tr: 15 !important; --b-radius-bl: 0 !important; --b-radius-br: 0 !important;}
+	.page-bottom, .m-page-bottom {--b-radius-tl: 0 !important; --b-radius-tr: 0 !important; --b-radius-bl: 15 !important; --b-radius-br: 15 !important; margin-bottom: 0 !important;}
+	.m-page-tl, .page-tl {border-radius: 15px 2px 2px 2px !important;}
+	.m-page-tr, .page-tr {border-radius: 2px 15px 2px 2px !important;}
+	.m-sec-tl, .sec-tl {border-radius: 5px 2px 2px 2px !important;}
+	.m-sec-tr, .sec-tr {border-radius: 2px 5px 2px 2px !important;}
+	.m-sec-br, .sec-br {border-radius: 2px 2px 5px 2px !important;}
+	.m-sec-bl, .sec-bl {border-radius: 2px 2px 2px 5px !important;}
+	.m-sec-l, .sec-l {border-radius: 5px 2px 2px 5px !important;}
+	.m-sec-r, .sec-r {border-radius: 2px 5px 5px 2px !important;}
+	.m-sec-t, .sec-t {border-radius: 5px 5px 2px 2px !important;}
+	.m-sec-b, .sec-b {border-radius: 2px 2px 5px 5px !important;}
+	.m-sec-full, .sec-full {border-radius: 5px 5px 5px 5px !important;}
+	.box, .boxy, .boxyless {clip-path: none;}
+	.box, .boxy {border-radius: 2px;}
+	.box, .boxy {border: 1px solid var(--border);}
+	.box::before, .boxy::before {content: none;}
+	.page-top, .page-bottom, .m-page-top {
+		clip-path: polygon(
+		var(--s-tl) 0%, calc(100% - var(--s-tr)) 0%, 100% var(--s-tr), 
+		100% calc(100% - var(--s-br)), calc(100% - var(--s-br)) 100%, 
+		var(--s-bl) 100%, 0% calc(100% - var(--s-bl)), 0% var(--s-tl)
+	);
+	}
+	.page-top::before, .page-bottom::before, .m-page-top::before {content: '';}
+	a {text-decoration: underline;}
+	main {
+		margin-bottom: 35px !important;
+		backdrop-filter: unset;
+		-webkit-backdrop-filter: unset;
+		background-color: black;
+		padding-bottom: 35px !important;
+		margin: 0;
+		padding-bottom: 10px;
+	}
+	main::before {
+		background: unset;
+		background-color: var(--bg-1);
+	}
+	.heading {
+		height: 60px;
+		background-image: url('/starry.gif');
+	}
+	#inHead {
+		align-items: flex-start;
+		padding-right: 55px;
+	}
+	#fakeLogo {
+		margin: 0;
+		border: unset;
+		right: 5px;
+		bottom: 5px;
+	}
+	.topLinks {
+		position: absolute;
+		align-items: flex-end;
+	}
+	.topLinks a {
+		flex-direction: column;
+		align-items: center;
+		font-size: 9px;
+		text-decoration: none !important;
+		padding: 0 5px 0 5px;
+	}
+	.topLinks a:nth-child(6n) {display: none;}
+	.topLinks a img {
+		width: 36px;
+		z-index: 50 !important;
+	}
+	.heading::after {background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-1) 100%);}
+	#poopBlock iframe {height: 60px;}
+	.footer p {text-align: left;}
+}
+/* prefers reduced transparency */
+@media (prefers-reduced-transparency: reduce) {
+	main {
+		backdrop-filter: unset !important;
+		-webkit-backdrop-filter: unset !important;
+		background: unset;
+		background-color: black;
+	}
+}
+/* increased contrast */
+@media (prefers-contrast: more) {
+	.box {
+		color: white !important;
+	}
+	.topLinks a {
+		color: white;
+	}
+	.topLinks a:hover {
+		transition-duration: 0;
+		font-weight: bold;
+	}
+}
+	</style>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#00c3ff;">
 	<noscript>
@@ -85,6 +570,7 @@
 		<h1>GUESTBOOK</h1>
 	</header>
 	<div class="box">
+		<p>you can also <a href="https://colormytree.me/2024/01JE03471AZFRZVY2XNEGYJKGX" target="_blank">color my tree</a> if you want to do that instead...</p>
 		<p>these are the fields</p>
 		<ul>
 			<li>Name</li>

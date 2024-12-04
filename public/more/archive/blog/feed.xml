@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>Wrapped 2024 was Bad, Which is Good</title>
+			<pubDate>Wed, 4 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/wrapped.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/wrapped.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
 			<title>Helvetica Just Wins</title>
 			<pubDate>Tue, 3 Dec 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/12/helvetica.html</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/2024/11/reflection.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/11/reflection.html</guid>
 			<description>#meta</description>
-		</item>
-		<item>
-			<title>New York Times Word Game Review</title>
-			<pubDate>Sun, 24 Nov 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/11/wordgame.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/11/wordgame.html</guid>
-			<description>no tags</description>
 		</item>
 	</channel>
 </rss>

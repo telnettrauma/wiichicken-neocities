@@ -44,6 +44,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 🤖 Compile website
+          commit_author: elijah_flowers <actions@github.com>
 
   todos:
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' # Run only on main or master branch
@@ -100,6 +101,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 🤖 Compile website and sitemap
+          commit_author: elijah_flowers <actions@github.com>
 
       - name: Sync changes to main
         uses: jojomatik/sync-branch@v2
