@@ -32,11 +32,11 @@
 			}
 			#flex {display: flex;}
 			.box, header, .grid .box ul li, .grid .box h2, .grid .box h3 {
-				--bg: #310938cc;
+				/* --bg: #310938cc;
 				--text: #ffd6fe;
 				--border: #f7adfd;
 				background-color: var(--bg);
-				color: var(--text);
+				color: var(--text); */
 				padding: 5px;
 				margin-bottom: 10px;
 				width: -webkit-fill-available;
@@ -48,6 +48,9 @@
 			}
 			.grid .box h2, .grid .box h3 {background-color: unset;}
 			.head {background-image: url('/media/headers/blog.png');}
+			.box ul li:nth-child(even) a {
+				color: #226488;
+			}
 			/* styling for grid mode */
 			.grid .box {
 				padding: 0;
