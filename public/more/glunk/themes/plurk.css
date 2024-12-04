@@ -277,6 +277,7 @@ color: #e9ddff;
 }
 .plurk:nth-child(6n) .plurk_cnt {
 	border-color: red;
+	box-shadow: 2px 2px 0 0 red;
 	background-color: #3a090586;
 }
 .plurk:nth-child(6n) .plurk_cnt .text_holder {
@@ -285,6 +286,7 @@ color: #e9ddff;
 
 .plurk:nth-child(6n+1) .plurk_cnt {
 	border-color: #ffee00;
+	box-shadow: 2px 2px 0 0 #ffee00;
 	background-color: #1f1c0086;
 }
 .plurk:nth-child(6n+1) .plurk_cnt .text_holder {
@@ -293,6 +295,7 @@ color: #e9ddff;
 
 .plurk:nth-child(6n+2) .plurk_cnt {
 	border-color: #00ff00;
+	box-shadow: 2px 2px 0 0 #00ff00;
 	background-color: #00220086;
 }
 .plurk:nth-child(6n+2) .plurk_cnt .text_holder {
@@ -301,6 +304,7 @@ color: #e9ddff;
 
 .plurk:nth-child(6n+3) .plurk_cnt {
 	border-color: #00ffbf;
+	box-shadow: 2px 2px 0 0 #00ffbf;
 	background-color: #00211686;
 }
 .plurk:nth-child(6n+3) .plurk_cnt .text_holder {
@@ -309,6 +313,7 @@ color: #e9ddff;
 
 .plurk:nth-child(6n+4) .plurk_cnt {
 	border-color: #d400ff;
+	box-shadow: 2px 2px 0 0 #d400ff;
 	background-color: #30093986;
 }
 .plurk:nth-child(6n+4) .plurk_cnt .text_holder {
@@ -317,6 +322,7 @@ color: #e9ddff;
 
 .plurk:nth-child(6n+5) .plurk_cnt {
 	border-color: #914cff;
+	box-shadow: 2px 2px 0 0 #914cff;
 	background-color: #240e4586;
 }
 .plurk:nth-child(6n+5) .plurk_cnt .text_holder {
