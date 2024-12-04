@@ -74,6 +74,7 @@ backdrop-filter: blur(5px) brightness(0.5);
 }
 .list .plurk_cnt {
 	background-color: unset !important;
+	box-shadow: none !important;
 }
 .highlight_owner {
 	text-shadow: 0 0 10px;
