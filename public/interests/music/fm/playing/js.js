@@ -178,3 +178,21 @@ function toggleSongMetadata(md, elm) {
 		document.getElementById(elm).classList.remove('selected');
 	}
 }
+
+// detect a click to toggle controls, unless the click is inside the controls
+document.addEventListener('click', (event) => {
+	var controls = document.getElementById('controls');
+	var enterName = document.getElementById('enter-name');
+	if (!controls.contains(event.target) && !enterName.contains(event.target)) {
+		if (controls.style.display === 'block') {
+			controls.style.display = 'none';
+			document.getElementById('click-hint').style.display = 'none';
+		} else {controls.style.display = 'block';}
+	}
+});
+// hides the hint telling you to click or tap after 15 seconds
+setTimeout(() => {
+	var clickHint = document.getElementById('click-hint');
+	clickHint.style.opacity = '0';
+	setTimeout(() => {clickHint.style.display = 'none';}, 3000);
+}, 15000);

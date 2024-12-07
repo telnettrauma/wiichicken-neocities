@@ -73,6 +73,15 @@ body {
 	0% {transform: rotate3d(0, 0, 0, 0deg);}
 	100% {transform: rotate3d(2, 5, 8, 359deg);}
 }
+#click-hint {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	z-index: 15;
+	background: linear-gradient(0deg, black 0%, #00000000 100%);
+	text-align: center;
+	transition-duration: 3s;
+}
 #controls, #enter-name {
 	--settings-fg: #CAC4D0;
 	--settings-bg: #79747e;
@@ -82,11 +91,10 @@ body {
 }
 .darky {background-color: #2a2331 !important;}
 #controls {
+	display: none;
 	position: absolute;
 	right: 15px;
 	bottom: 15px;
-	opacity: 0.3;
-	transition-duration: 0.5s;
 	height: 90vh;
 	max-height: 200px;
 }
@@ -95,7 +103,6 @@ body {
 	margin-block-start: 0;
 	margin-block-end: 0;
 }
-#controls:hover {opacity: 1;}
 #controls button {
 	border: 1px solid #CAC4D0;
 	padding: 5px;
