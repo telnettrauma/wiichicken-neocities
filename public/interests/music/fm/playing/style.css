@@ -201,7 +201,7 @@ body {
 	border-bottom: 1px solid var(--settings-fg);
 	color: #CAC4D0;
 }
-#color-options {
+#color-choices {
 	display: flex;
 	width: 100%;
 	justify-content: space-around;

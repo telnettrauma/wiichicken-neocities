@@ -72,11 +72,13 @@ function enableVertical() {
 }
 function setUser() {
 	document.getElementById('enter-name').style.display = 'block';
+	document.getElementById('controls').style.display = 'none';
 	document.getElementById('username').value = user;
 }
 function confirmUser() {
 	user = document.getElementById('username').value;
 	document.getElementById('enter-name').style.display = 'none';
+	document.getElementById('controls').style.display = 'block';
 	document.getElementById('show-username').innerHTML = user;
 	getNowPlaying();
 }
@@ -136,33 +138,6 @@ function iHateChangingTheBackground() {
 }
 detectSize();
 setInterval(function(){getNowPlaying()}, 15000);
-let fadeTimeout, isHovered = false;
-let controls = document.querySelector('#controls');
-function fadeOut() {
-	if (!isHovered) {
-		controls.style.transition = 'opacity 0.5s';
-		controls.style.opacity = '0';
-	}
-}
-function fadeIn() {
-	controls.style.transition = 'opacity 0.5s';
-	controls.style.opacity = '1';
-	clearTimeout(fadeTimeout);
-	fadeTimeout = setTimeout(fadeOut, 5000);
-}
-// shows the controls if the mouse is moved or screen is tapped
-document.addEventListener('mousemove', () => {fadeIn();});
-document.addEventListener('touchstart', () => {fadeIn();});
-controls.addEventListener('mouseenter', () => {
-	isHovered = true;
-	clearTimeout(fadeTimeout);
-});
-// prevents controls from being automatically hidden when hovered over
-controls.addEventListener('mouseleave', () => {
-	isHovered = false;
-	fadeTimeout = setTimeout(fadeOut, 5000);
-});
-fadeTimeout = setTimeout(fadeOut, 5000);
 
 // color picker controls
 // code is taken from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color#javascript

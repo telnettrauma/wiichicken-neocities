@@ -41,7 +41,10 @@
 					<button id="dark-b" class="mc-o" onclick="enableBlackBackground();">Dark</d>
 						<button id="custom-b" class="mc-o" onclick="enableCustomBackground();">Custom</button>
 				</div>
-				<div id="color-options" style="display: none;">
+			</div>
+			<div id="color-options" class="c-row w-slide" style="display: none;">
+				<p><img src="playing/media/colors.png">Colors</p>
+				<div id="color-choices">
 					<div>
 						<label for="bg-color">bg</label>
 						<input type="color" name="bg-color" id="bg-color" class="color-button" value="#002115"/>
@@ -69,7 +72,7 @@
 				</div>
 			</div>
 			<div class="c-row w-slide">
-				<p>Display</p>
+				<p><img src="playing/media/info.png">Display</p>
 				<div class="mult-choice">
 					<button id="disp-song" class="mc-o selected" onclick="toggleSongMetadata('hide-song', 'disp-song');">Song</button>
 					<button id="disp-artist" class="mc-o selected" onclick="toggleSongMetadata('hide-artist', 'disp-artist');">Artist</button>
