@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>Giving Gifts is Better Than Getting Gifts</title>
+			<pubDate>Fri, 6 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/gifts.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/gifts.html</guid>
+			<description>#rant</description>
+		</item>
+		<item>
 			<title>🔊 to 🔇</title>
 			<pubDate>Thu, 5 Dec 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/12/sound.html</link>
@@ -67,13 +74,6 @@
 			<pubDate>Wed, 27 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/bowling.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/11/bowling.html</guid>
-			<description>no tags</description>
-		</item>
-		<item>
-			<title>Online Social Experiments Don't Work Anymore</title>
-			<pubDate>Tue, 26 Nov 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/11/experiment.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/11/experiment.html</guid>
 			<description>no tags</description>
 		</item>
 	</channel>
