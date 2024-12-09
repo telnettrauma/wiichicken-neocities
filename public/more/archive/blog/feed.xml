@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>Using a Magic Mouse on Windows</title>
+			<pubDate>Sun, 8 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/magicmouse.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/magicmouse.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
 			<title>Screw Discussion Posts</title>
 			<pubDate>Sat, 7 Dec 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/12/blackboard.html</link>
@@ -67,13 +74,6 @@
 			<pubDate>Fri, 29 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/winter.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/11/winter.html</guid>
-			<description>no tags</description>
-		</item>
-		<item>
-			<title>Not the Biggest Fan of Thanksgiving</title>
-			<pubDate>Thu, 28 Nov 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/11/thanksgiving.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/11/thanksgiving.html</guid>
 			<description>no tags</description>
 		</item>
 	</channel>
