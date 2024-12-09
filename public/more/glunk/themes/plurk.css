@@ -329,11 +329,11 @@ color: #e9ddff;
 .plurk:nth-child(6n+5) .plurk_cnt .text_holder {
 	color: #ebdcff;
 }
-.like, .replurk {
+.like, .pif-replurk {
 	transition-duration: 0.3s;
 	transition-timing-function: cubic-bezier(0.01, 1.13, 0.6, 1.29);
 }
-.like:active, .replurk:active {
+.like:active, .pif-replurk:active {
 	position: relative;
 	transform: scale(2);
 }
