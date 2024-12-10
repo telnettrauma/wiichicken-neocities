@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>DO NOT Take 3 Studio Classes at Once</title>
+			<pubDate>Mon, 9 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/studio.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/studio.html</guid>
+			<description>#rant</description>
+		</item>
+		<item>
 			<title>Using a Magic Mouse on Windows</title>
 			<pubDate>Sun, 8 Dec 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/12/magicmouse.html</link>
@@ -67,13 +74,6 @@
 			<pubDate>Sat, 30 Nov 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/11/markt.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/11/markt.html</guid>
-			<description>no tags</description>
-		</item>
-		<item>
-			<title>happy fun snow driving time</title>
-			<pubDate>Fri, 29 Nov 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/11/winter.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/11/winter.html</guid>
 			<description>no tags</description>
 		</item>
 	</channel>
