@@ -6,6 +6,13 @@
 		<link>https://wiggle.monster</link>
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
+				<item>
+			<title>I... I've Officially Made It 🥹</title>
+			<pubDate>Wed, 11 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/trolls.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/trolls.html</guid>
+			<description>#meta</description>
+		</item>
 		<item>
 			<title>Not Making a List</title>
 			<pubDate>Tue, 10 Dec 2024 12:00:00 EST</pubDate>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/2024/12/snapchat.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/12/snapchat.html</guid>
 			<description>#social</description>
-		</item>
-		<item>
-			<title>Using a Fire TV Sucks</title>
-			<pubDate>Sun, 1 Dec 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/12/firetv.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/12/firetv.html</guid>
-			<description>no tags</description>
 		</item>
 	</channel>
 </rss>
