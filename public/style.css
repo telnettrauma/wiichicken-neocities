@@ -241,8 +241,7 @@ button {
 	position: fixed;
 	transition-duration: 0.5s;
 	height: 30px;
-	/* background-color: black; */
-	background-color: white;
+	background-color: black;
 }
 .heading::after {
 	position: absolute;
@@ -274,7 +273,7 @@ button {
 .topLinks a:nth-child(3) {color: #ffd6fe;}
 .topLinks a:nth-child(4) {color: #ffdadb;}
 .topLinks a:nth-child(5) {color: #ffdad6;} */
-.topLinks a {color: #002200;}
+.topLinks a {color: white;}
 #fakeLogo {
 	display: flex;
 	align-items: center;
@@ -286,11 +285,8 @@ button {
 	pointer-events: all;
 	position: absolute;
 	right: 5px;
-	background-color: white;
-	/* background: linear-gradient(0deg, #7e7e7e 0%, #ffffff 100%); */
-	background: linear-gradient(0deg, #313131 0%, #000000 100%);
-	/* border: 5px solid black; */
-	border: 5px solid white;
+	background: linear-gradient(0deg, #7e7e7e 0%, #ffffff 100%);
+	border: 5px solid black;
 	aspect-ratio: 1;
 }
 #fakeLogo:hover {
