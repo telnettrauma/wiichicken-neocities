@@ -337,3 +337,28 @@ color: #e9ddff;
 	position: relative;
 	transform: scale(2);
 }
+.friend_man {
+	color: var(--main-color);
+	border: 1px solid var(--main-color);
+	box-shadow: 2px 2px 0 0 var(--main-color);
+}
+.friend_man:hover {
+	box-shadow: 1px 1px 0 0 var(--main-color);
+	transform: translate(1px, 1px);
+}
+.friend_man:active {
+	box-shadow: none;
+	transform: translate(2px, 2px);
+}
+.add_follow, .private_plurk {
+	background-color: #00344c;
+	--main-color: #92cef6;
+}
+.add_friend {
+	background-color: #233600;
+	--main-color: #b5d086;
+}
+.send_gift {
+	background-color: #422c00;
+	--main-color: #efbf6d;
+}
