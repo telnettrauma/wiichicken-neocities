@@ -1,7 +1,7 @@
 ---
 layout: blog/24/10/100daystounload.njk
 title: "I... I've Officially Made It 🥹"
-date: 2024-12-10
+date: 2024-12-11
 light: "#e0e0ff"
 dark: "#10144b"
 accent: "#0008ff"
