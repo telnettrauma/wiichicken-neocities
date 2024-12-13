@@ -60,6 +60,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Sync issues
+        id: sync
+        uses: cobraz/todoist-action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          todoist-token: ${{ secrets.TODOIST_TOKEN }}
+          query:
+            updated:>2020-06-01 archived:false sort:updated-desc assignee:cobraz -label:backlog
+          sync-file-name: ./todoist-sync.json
+
   deploy:
     if: github.ref == 'refs/heads/live' # Run only on live branch
     runs-on: ubuntu-latest
