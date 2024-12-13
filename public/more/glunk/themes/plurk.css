@@ -57,6 +57,10 @@ color: white;
 background: linear-gradient(180deg, rgba(0,32,25,1) 0%, rgba(0,12,32,1) 100%);
 }
 .response_box, .mini_form {border-top: 1px solid #89938f !important;}
+.timeline-cnt .plurk .text_holder {
+	width: unset;
+	max-width: 300px;
+}
 .td_img {
 color: #a1f2db;
 }
@@ -66,6 +70,13 @@ transition-duration: 0.2s;
 }
 .response table tbody tr td .plurk_cnt {
 backdrop-filter: unset;
+padding: 0 !important;
+}
+.list .plurk {
+	margin: 0;
+}
+.list .td_qual {
+	min-width: 100px;
 }
 .plurk_cnt {
 border-bottom: 1px solid #a1f2db;
@@ -337,16 +348,16 @@ color: #e9ddff;
 	position: relative;
 	transform: scale(2);
 }
-.friend_man {
+.friend_man, .submit_img {
 	color: var(--main-color);
 	border: 1px solid var(--main-color);
 	box-shadow: 2px 2px 0 0 var(--main-color);
 }
-.friend_man:hover {
+.friend_man:hover, .submit_img:hover {
 	box-shadow: 1px 1px 0 0 var(--main-color);
 	transform: translate(1px, 1px);
 }
-.friend_man:active {
+.friend_man:active, .submit_img:active {
 	box-shadow: none;
 	transform: translate(2px, 2px);
 }
@@ -361,4 +372,8 @@ color: #e9ddff;
 .send_gift {
 	background-color: #422c00;
 	--main-color: #efbf6d;
+}
+.submit_img {
+	background-color: #561e19;
+	--main-color: #ffb4ab;
 }
