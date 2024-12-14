@@ -25,6 +25,11 @@ code, kbd, pre {
 	font-family: "Roboto Mono", "Courier New", Courier, monospace;
 	background-color: var(--dark);
 	color: var(--light);
+	text-wrap: initial;
+}
+blockquote {
+	border-left: 3px solid var(--dark);
+	padding-left: 20px;
 }
 pre {padding: 10px;}
 iframe {border: none;}
@@ -74,5 +79,6 @@ iframe {border: none;}
 		background-color: var(--light);
 		color: var(--dark);
 	}
+	blockquote {border-left: 3px solid var(--light);}
 	#logo, #homego {background: var(--light);}
 }
