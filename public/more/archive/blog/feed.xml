@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>happy for you, but i hope you break up</title>
+			<pubDate>Fri, 13 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/woeisme.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/woeisme.html</guid>
+			<description>#rant</description>
+		</item>
+		<item>
 			<title>Drive Into a Lamppost or Something Solid</title>
 			<pubDate>Thu, 12 Dec 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/12/crash.html</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/2024/12/wrapped.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/12/wrapped.html</guid>
 			<description>no tags</description>
-		</item>
-		<item>
-			<title>Helvetica Just Wins</title>
-			<pubDate>Tue, 3 Dec 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/2024/12/helvetica.html</link>
-			<guid>https://wiggle.monster/more/archive/blog/2024/12/helvetica.html</guid>
-			<description>#design</description>
 		</item>
 	</channel>
 </rss>
