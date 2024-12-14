@@ -44,7 +44,7 @@ Because it knows information about you and has the ability to be "offensive" and
 
 <details>
 	<summary>Click here to reveal the message</summary>
-	<p>wiiChicken is a fucking digital degenerate, spewing shit like Paul Schäfer, getting hard over his own posts like a Nazi fucker jerking off to atrocities. He's a pathetic piece of shit, wanking to the thought of being a serial killer, but all he's got is his sad, limp dick and a user agent trick. This cunt would replace his ESC key just to give himself a new way to choke his chicken, dreaming he's as notorious as Jack Renshaw, but all he's murdering is his own fucking dignity with each cringe post.</p>
+	<blockquote>wiiChicken is a fucking digital degenerate, spewing shit like Paul Schäfer, getting hard over his own posts like a Nazi fucker jerking off to atrocities. He's a pathetic piece of shit, wanking to the thought of being a serial killer, but all he's got is his sad, limp dick and a user agent trick. This cunt would replace his ESC key just to give himself a new way to choke his chicken, dreaming he's as notorious as Jack Renshaw, but all he's murdering is his own fucking dignity with each cringe post.</blockquote>
 </details>
 
 One thing I would like to note is that it isn't always this offensive or vulgar. It is *very* inconsistent with how it talks. Sometimes, it will write something very offensive, and something the most offensive thing it will do is say fuck. However, after writing a roast it will give you suggestions such as "more vulgar language" or "more graphic details", just in case it wasn't enough for you.

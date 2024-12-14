@@ -25,6 +25,7 @@ code, kbd, pre {
 	font-family: "Roboto Mono", "Courier New", Courier, monospace;
 	background-color: var(--dark);
 	color: var(--light);
+	text-wrap: initial;
 }
 pre {padding: 10px;}
 iframe {border: none;}
