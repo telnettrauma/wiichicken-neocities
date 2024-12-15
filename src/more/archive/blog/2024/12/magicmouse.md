@@ -18,7 +18,9 @@ When you first connect the Magic Mouse, you have to install drivers for it to en
 
 Once you have the mouse drivers, you will realize that on Windows it isn't really a "magic" mouse. The only real beneficial feature it has is the ability to scroll horizontally in a way that isn't weird, which I actually quite like a lot. However, gestures and stuff won't work.
 
-There is a piece of software you can purchase called Magic Mouse Utilities, which allows you to give the mouse additional functionality. I tried the demo and it worked great, but I don't want to pay a subscription for mouse features, or constantly have another program running in the background.
+**Update (December 15, 2024)**: Sometimes, and I have no idea what causes this, scrolling will just stop working. When you try scrolling, nothing happens. You can fix this by turning the mouse off and back on again, but it's still really annoying to deal with.
+
+There is a piece of software you can purchase called [Magic Mouse Utilities](https://magicutilities.net){target=_blank}, which allows you to give the mouse additional functionality. I tried the demo and it worked great, but I don't want to pay a subscription for mouse features, or constantly have another program running in the background.
 
 Although the scrolling is great, there is no momentum, so it just suddenly stops once you lift your finger. Don't think there is anything you can really do about this. Another annoying thing is that there is no middle click, and you cannot left and right click at the same time. This doesn't sound like too big of a deal until you have to actually live with it.
 
