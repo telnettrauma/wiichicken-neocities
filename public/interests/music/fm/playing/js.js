@@ -134,8 +134,8 @@ setInterval(function(){getNowPlaying()}, 15000);
 // code is taken from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color#javascript
 window.addEventListener("load", colorPickerStartup, false);
 function colorPickerStartup() {
-	bgColorPicker = document.querySelector("#bg-color");
-	fgColorPicker = document.querySelector("#fg-color");
+	var bgColorPicker = document.querySelector("#bg-color");
+	var fgColorPicker = document.querySelector("#fg-color");
 	bgColorPicker.addEventListener("input", updateBg, false);
 	fgColorPicker.addEventListener("input", updateFg, false);
 }
@@ -190,10 +190,29 @@ setTimeout(() => {
 
 // saves the stupid thing to a url
 function saveToURL() {
+	// gets the current url
 	let params = new URLSearchParams(window.location.search);
-	if (mainElement.classList.contains('portrait')) {
-		params.set('layout', 0);
-	} else {params.set('layout', 1);}
+	params.set('urlmode', 1);
+	function detectActive(elemental, classHas) {
+		if (document.getElementById(elemental).classList.contains(classHas))
+			{return 1;} else {return 0;}
+	}
+	// changes the value of the layout setting based on the layout
+	params.set('layout', detectActive('main', 'landscape'));
 	params.set('name', user);
+	params.set('bg', bgMode);
+	// decides what params should be saved depending on the background settings
+	if (bgMode === 1) {params.set('blur', blurSlider.value);}
+	else if (bgMode === 4) {
+		params.set('bgcolor', document.querySelector("#bg-color").value);
+		params.set('fgcolor', document.querySelector("#fg-color").value);
+	}
+	// should cover art be shown
+	params.set('cart', detectActive('toggle-cover-art', 'enabled'));
+	// rounded corner size
+	params.set('corners', document.getElementById('round-slider').value);
+	// elements to display
+	params.set('disp', `${detectActive('disp-song', 'selected')}${detectActive('disp-artist', 'selected')}${detectActive('disp-album', 'selected')}`);
+	// applies the new settings to the page
 	window.location.search = params;
 }
