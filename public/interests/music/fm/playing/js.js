@@ -61,15 +61,6 @@ function toggleLayout() {
 		document.getElementById('layout-mode').innerHTML = 'Portrait';
 	}
 }
-function enableHorizontal() {
-	document.getElementById('en-hor').classList.add('active-button');
-	document.getElementById('en-vert').classList.remove('active-button');
-}
-function enableVertical() {
-	mainElement.classList.replace('landscape', 'portrait');
-	document.getElementById('en-vert').classList.add('active-button');
-	document.getElementById('en-hor').classList.remove('active-button');
-}
 function setUser() {
 	document.getElementById('enter-name').style.display = 'block';
 	document.getElementById('controls').style.display = 'none';
@@ -196,3 +187,13 @@ setTimeout(() => {
 	clickHint.style.opacity = '0';
 	setTimeout(() => {clickHint.style.display = 'none';}, 3000);
 }, 15000);
+
+// saves the stupid thing to a url
+function saveToURL() {
+	let params = new URLSearchParams(window.location.search);
+	if (mainElement.classList.contains('portrait')) {
+		params.set('layout', 0);
+	} else {params.set('layout', 1);}
+	params.set('name', user);
+	window.location.search = params;
+}
