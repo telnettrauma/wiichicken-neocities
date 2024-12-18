@@ -223,6 +223,29 @@ function loadFromParams() {
 		let indexParams = {};
 		for ([key, value] of params.entries()) {indexParams[key] = value;}
 		user = indexParams.name;
+		// changes the layout if it needs to be changed
+		if ((indexParams.layout === '0' && mainElement.classList.contains('landscape')) || (indexParams.layout === '1' && mainElement.classList.contains('portrait'))) {
+			toggleLayout();
+		}
+		// changes the background mode
+		var newBackground = indexParams.bg;
+		if (newBackground === '1') {
+			enableImageBackground();
+			// changes the blur
+			blurSlider.value = Number(indexParams.blur);
+			document.documentElement.style.setProperty("--bg-blur", `${blurSlider.value}vmax`);
+		} else if (newBackground === '2') {
+			enableWhiteBackground();
+		} else if (newBackground === '3') {
+			enableBlackBackground();
+		} else if (newBackground === '4') {
+			// sets the colors for a custom background
+			document.querySelector("#bg-color").value = indexParams.bgcolor;
+			document.documentElement.style.setProperty("--bg", indexParams.bgcolor);
+			document.querySelector("#fg-color").value = indexParams.fgcolor;
+			document.documentElement.style.setProperty("--fg", indexParams.fgcolor);
+			enableCustomBackground();
+		}
 	}
 	getNowPlaying();
 }
