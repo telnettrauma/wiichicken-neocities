@@ -286,7 +286,7 @@ body {
 	appearance: none;
 	width: 15px;
 	height: 15px;
-	background-color: unset;
+	background-color: var(--settings-bg);
 	border: 1px solid var(--settings-fg);
 	box-shadow: 2px 2px 0 0 var(--settings-fg);
 }
