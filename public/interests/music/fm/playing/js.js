@@ -246,6 +246,17 @@ function loadFromParams() {
 			document.documentElement.style.setProperty("--fg", indexParams.fgcolor);
 			enableCustomBackground();
 		}
+		// if cover art is set to 0, don't display it
+		if (indexParams.cart === '0') {toggleCoverArt();}
+		// changes how round rounded corners are
+		cornerSlider.value = Number(indexParams.corners);
+		document.documentElement.style.setProperty("--corners", `${Number(indexParams.corners)}%`);
+		// toggles displaying certain elements
+		var displayThings = indexParams.disp;
+		// song
+		if (displayThings[0] === '0') {toggleSongMetadata('hide-song', 'disp-song');}
+		if (displayThings[1] === '0') {toggleSongMetadata('hide-artist', 'disp-artist');}
+		if (displayThings[2] === '1') {toggleSongMetadata('hide-album', 'disp-album');}
 	}
 	getNowPlaying();
 }
