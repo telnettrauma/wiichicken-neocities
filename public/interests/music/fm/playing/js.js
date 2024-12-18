@@ -31,7 +31,7 @@ function getNowPlaying() {
 
 			if (typeof data.recenttracks.track[0]["@attr"] !== "undefined"){
 				var listenInfo = document.getElementById("listen");
-				listenInfo.innerHTML = 'LiSTENiNG TO:';
+				listenInfo.innerHTML = 'Listening to:';
 			} else {
 				var listenInfo = document.getElementById("listen");
 				listenInfo.innerHTML = 'last <span>listened</span> to:';
