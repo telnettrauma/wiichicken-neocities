@@ -42,7 +42,6 @@ function getNowPlaying() {
 	request.onerror = function() {console.error("Connection error.");};
 	request.send();
 }
-document.addEventListener('DOMContentLoaded', getNowPlaying());
 function detectSize() {
 	if (window.innerHeight >= window.innerWidth) {
 		mainElement.classList.add('portrait');
@@ -189,9 +188,9 @@ setTimeout(() => {
 }, 15000);
 
 // saves the stupid thing to a url
+// gets the current url
+let params = new URLSearchParams(window.location.search);
 function saveToURL() {
-	// gets the current url
-	let params = new URLSearchParams(window.location.search);
 	params.set('urlmode', 1);
 	function detectActive(elemental, classHas) {
 		if (document.getElementById(elemental).classList.contains(classHas))
@@ -216,3 +215,15 @@ function saveToURL() {
 	// applies the new settings to the page
 	window.location.search = params;
 }
+
+// if the urlmode=1, load the rest
+function loadFromParams() {
+	if (params.get('urlmode') === '1') {
+		// index the parameters
+		let indexParams = {};
+		for ([key, value] of params.entries()) {indexParams[key] = value;}
+		user = indexParams.name;
+	}
+	getNowPlaying();
+}
+loadFromParams();
