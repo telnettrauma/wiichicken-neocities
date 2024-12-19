@@ -17,12 +17,18 @@ function getNowPlaying() {
 			var artwork = data.recenttracks.track[0].image[3]["#text"];
 
 			// only adds background images if the background is set to image and the cover art isn't the same
-			if (bgMode === 1 && !(previousCover === artwork)) {
-				var artworkImg = document.getElementById("artwork");
-				artworkImg.setAttribute("src", artwork);
-				var fakeBlur = document.getElementById('moneyOnMind');
-				fakeBlur.style.backgroundImage = `url(${artwork})`;
-				document.getElementById('fartOnMind').style.backgroundImage = `url(${artwork})`;
+			if (!(previousCover === artwork)) {
+				// changes the background image when on blur mode
+				if (bgMode === 1) {
+					var fakeBlur = document.getElementById('moneyOnMind');
+					fakeBlur.style.backgroundImage = `url(${artwork})`;
+					document.getElementById('fartOnMind').style.backgroundImage = `url(${artwork})`;
+				}
+				// only updates the cover art if it is visible
+				if (coverArtVisible === 1) {
+					var artworkImg = document.getElementById("artwork");
+					artworkImg.setAttribute("src", artwork);
+				}
 				previousCover = artwork;
 			}
 
@@ -146,14 +152,17 @@ var blurSlider = document.getElementById('blur-slider');
 blurSlider.oninput = function() {document.documentElement.style.setProperty("--bg-blur", `${blurSlider.value}vmax`);}
 
 // toggle cover art
+let coverArtVisible = 1;
 function toggleCoverArt() {
 	var coverArtButton = document.getElementById('toggle-cover-art');
 	if (coverArtButton.classList.contains('enabled')) {
 		coverArtButton.classList.remove('enabled');
 		document.getElementById('artwork').style.display = 'none';
+		coverArtVisible = 0;
 	} else {
 		coverArtButton.classList.add('enabled');
 		document.getElementById('artwork').style.display = 'block';
+		coverArtVisible = 1;
 	}
 }
 
