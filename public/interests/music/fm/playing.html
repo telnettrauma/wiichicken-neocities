@@ -26,15 +26,15 @@
 		<p id="control-header">Settings</p>
 		<div id="control-area">
 			<div class="c-row">
-				<p><img src="playing/media/horizontal.png">Layout</p>
+				<p><img src="playing/media/horizontal.png" alt="" loading="lazy">Layout</p>
 				<button class="toggle-button" id="layout-mode" onclick="toggleLayout();">Horizontal</button>
 			</div>
 			<div class="c-row">
-				<p><img src="playing/media/listener.png"><span id="show-username">Username</span></p>
+				<p><img src="playing/media/listener.png" alt="" loading="lazy"><span id="show-username">Username</span></p>
 				<button class="toggle-button" onclick="setUser()">Set User</button>
 			</div>
 			<div class="c-row w-slide">
-				<p><img src="playing/media/bg.png">Background</p>
+				<p><img src="playing/media/bg.png" alt="" loading="lazy">Background</p>
 				<div class="mult-choice">
 					<button id="cover-b" class="mc-o selected" onclick="enableImageBackground();">Cover</button>
 					<button id="light-b" class="mc-o" onclick="enableWhiteBackground();">Light</button>
@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div id="color-options" class="c-row w-slide" style="display: none;">
-				<p><img src="playing/media/colors.png">Colors</p>
+				<p><img src="playing/media/colors.png" alt="" loading="lazy">Colors</p>
 				<div id="color-choices">
 					<div>
 						<label for="bg-color">bg</label>
@@ -56,23 +56,23 @@
 				</div>
 			</div>
 			<div id="blur-row" class="c-row w-slide">
-				<p><img src="playing/media/drop.png">Blur</p>
+				<p><img src="playing/media/drop.png" alt="" loading="lazy">Blur</p>
 				<div class="slider-box">
 					<input type="range" class="slider" id="blur-slider" min="0" max="20" step="1" value="10">
 				</div>
 			</div>
 			<div class="c-row">
-				<p><img src="playing/media/coverart.png">Cover Art</p>
+				<p><img src="playing/media/coverart.png" alt="" loading="lazy">Cover Art</p>
 				<button class="radio-button enabled" id="toggle-cover-art" onclick="toggleCoverArt();"><div class="enabled-status"></div></button>
 			</div>
 			<div class="c-row w-slide">
-				<p><img src="playing/media/borderadius.png">Rounded Corners</p>
+				<p><img src="playing/media/borderadius.png" alt="" loading="lazy">Rounded Corners</p>
 				<div class="slider-box">
 					<input type="range" class="slider" id="round-slider" min="0" max="50" step="1" value="0">
 				</div>
 			</div>
 			<div class="c-row w-slide">
-				<p><img src="playing/media/info.png">Display</p>
+				<p><img src="playing/media/info.png" alt="" loading="lazy">Display</p>
 				<div class="mult-choice">
 					<button id="disp-song" class="mc-o selected" onclick="toggleSongMetadata('hide-song', 'disp-song');">Song</button>
 					<button id="disp-artist" class="mc-o selected" onclick="toggleSongMetadata('hide-artist', 'disp-artist');">Artist</button>
@@ -81,7 +81,7 @@
 			</div>
 			<div class="c-row w-slide">
 				<div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-					<p><img src="playing/media/save.png">Save to URL</p>
+					<p><img src="playing/media/save.png" alt="" loading="lazy">Save to URL</p>
 					<button class="toggle-button" onclick="saveToURL();">Save</button>
 				</div>
 				<p class="small-text">Clicking this button will save all your settings into the URL. Just bookmark the new page to come back with all of your settings. Doing this will refresh the page.</p>
@@ -91,7 +91,7 @@
 	<div id="enter-name">
 		<form onsubmit="event.preventDefault(); confirmUser()">
 			<input type="text" id="username" name="username">
-			<img src="playing/media/continue.png" onclick="confirmUser()" title="Confirm">
+			<img src="playing/media/continue.png" onclick="confirmUser()" title="Confirm" alt="" loading="lazy">
 		</form>
 	</div>
 	<div id="click-hint">
