@@ -1,0 +1,17 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background-size: 100% 100%;
+	background-position: 0px 0px,0px 0px,0px 0px,0px 0px;
+	background-image: radial-gradient(113% 91% at 17% -2%, #5d421b 1%, #FF000000 99%),radial-gradient(142% 91% at 87% 9%, #723354FF 1%, #FF000000 99%),radial-gradient(142% 91% at -6% 74%, #FF0049FF 1%, #FF000000 99%),radial-gradient(142% 91% at 111% 84%, #3b0711 0%, #5B0214FF 100%);
+	background-attachment: fixed;
+	color: #ffdadb;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+main {
+	max-width: 700px;
+	margin: auto;
+}
+a {color: #e8c08e;}
