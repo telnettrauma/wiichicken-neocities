@@ -526,7 +526,7 @@
 		z-index: 3;
 	}
 	#googgo a {background: none !important;}
-	#hitcount {
+	#visitorscount {
 		/* background: linear-gradient(90deg, #75f8e3 0%, #75f89c 100%); */
 		background: linear-gradient(90deg, #020085 0%, #004138 100%);
 		background-clip: text;
@@ -649,7 +649,7 @@
 			-webkit-backdrop-filter: blur(0px);
 		}
 		.blurry {display: none;}
-		#hitcount {text-shadow: unset;}
+		#visitorscount {text-shadow: unset;}
 	}
 	@media (prefers-contrast: more) {
 		.contrastVisible {display: block !important;}
@@ -830,8 +830,8 @@
 						<!-- <li>my favorite color is <span style="color: #00ffcc;">aquamarine</span>, but i also like using <span style="color: red;">red</span> and <span style="color: #00ccff;">blue</span> gradients, in a non-patriotic way</li> -->
 						<li>my favorite color is <span style="background-color: #00ffcc;">aquamarine</span>, but i also like using <span style="background-color: red;">red</span> and <span style="background-color: #00ccff;">blue</span> gradients, in a non-patriotic way</li>
 						<li>i have assburgers (ive spelled it like that my whole life im not stopping now)</li>
-						<!-- <li>i am feeling <a class="noBg" style="background-color: unset;" href="https://www.imood.com/users/RiPPY"><img style="transform: translateY(3px);" src="https://moods.imood.com/display/uname-RiPPY/fg-ffdad6/trans-1/imood.gif"></a></li> -->
-						<li>i am feeling <a class="noBg" style="background-color: unset;" href="https://www.imood.com/users/RiPPY"><img style="transform: translateY(3px);" src="https://moods.imood.com/display/uname-RiPPY/fg-002200/trans-1/imood.gif"></a></li>
+						<!-- <li>i am feeling <a class="noBg" style="background-color: unset;" href="https://www.imood.com/users/RiPPY" target="_blank"><img style="transform: translateY(3px);" src="https://moods.imood.com/display/uname-RiPPY/fg-ffdad6/trans-1/imood.gif"></a></li> -->
+						<li>i am feeling <a class="noBg" style="background-color: unset;" href="https://www.imood.com/users/RiPPY" target="_blank"><img style="transform: translateY(3px);" src="https://moods.imood.com/display/uname-RiPPY/fg-002200/trans-1/imood.gif"></a></li>
 					</ul>
 				</div>
 			</div>
@@ -967,7 +967,8 @@
 					<p class="boxy" style="background: linear-gradient(90deg, #005047 0%, #00502b 100%);">ViSiTOR #</p>
 				</div>
 				<div class="sidebox-content boxy middleBoy" id="googgo" style="flex-wrap: wrap; padding: 2px;">
-					<p class="nomarblock headText" id="hitcount" style="font-size: 35px;">000000</p>
+					<p class="nomarblock headText" id="visitorscount" style="font-size: 35px;">000000</p>
+					<p class="nomarblock">HiTS: <code><span id="hitcount">000000</span></code></p>
 				</div>
 			</div>
 			<div class="sidebox" id="lastUpdated" style="overflow: visible; margin: 0; --border: #f5ddda;">
@@ -978,7 +979,6 @@
 					<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;">----</p>
 					<p class="headText nomarblock" id="upDate" style="background-color: #ede0dd; color: #201a19; font-size: 50px;">##</p>
 					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;">2024</p>
-					<script src="resources/widgets/home/lastupdate.js"></script>
 				</div>
 			</div>
 			<div class="sidebox" style="--side-bg: #001f23cc; --side-text: #8ef2ff; --border: #4ed8e8;" id="side-flood">
@@ -1062,6 +1062,37 @@ const observer = new IntersectionObserver(checkVisibility, {
 	threshold: 0.1
 });
 observer.observe(document.querySelector('#clockContainer'));
+// code stolen from https://sadgrl.online/learn/articles/last-update-visitors
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = async function() {
+	if (this.readyState == 4 && this.status == 200) {
+		var site_data = JSON.parse(this.responseText);
+		var num_arr = site_data.info.views.toString().split("");
+		var num_str = "";
+		for (i = 0; i < num_arr.length; i++) {
+			num_str += num_arr[i];
+			if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ) {num_str += ",";}
+			var date_str = site_data.info.last_updated;
+			var date_obj = new Date(site_data.info.last_updated);
+			var daMonths = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRiL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER']
+			document.getElementById('upMonth').innerHTML = daMonths[date_obj.getMonth()];
+			document.getElementById('upDate').innerHTML = date_obj.getDate();
+			document.getElementById('upYear').innerHTML = date_obj.getFullYear();
+		}
+		document.getElementById('hitcount').innerHTML = site_data.info.hits;
+		await sleep(500);
+		let daBob = site_data.info.views / 20;
+		let setNew = 0;
+		for (l = 0; l < 20; l++) {
+			setNew = Math.floor(setNew + daBob);
+			document.getElementById('visitorscount').innerHTML = setNew;
+			await sleep(50);
+		}
+		document.getElementById('visitorscount').innerHTML = site_data.info.views;
+	}
+};
+xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=wiichicken", true);
+xhttp.send();
 </script>
 <script src="resources/widgets/home/flood/flood.js"></script>
 <!-- <script src="resources/nav/navbar.js"></script> -->
