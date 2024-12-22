@@ -1,7 +1,7 @@
 ---
 layout: interests/music/fm/np/help.njk
 title: "last.fm Now Playing Screen Help"
-permalink: "/interests/music/fm/np/help/index.html"
+permalink: "/interests/music/fm/playing/help/index.html"
 ---
 ## Table of Contents
 
