@@ -77,11 +77,8 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Kode Mono', monospace;}
 a {
 	text-decoration: none;
 	color: var(--dark-secondary);
-	cursor: url(/media/pointer.png), pointer;
 }
-a:hover, a:active {
-	cursor: url(/media/pointer.png), pointer;
-}
+a, a:hover, a:active {cursor: url(/media/pointer.png), pointer;}
 code {font-family: 'Martian Mono', monospace;}
 img {image-rendering: pixelated;}
 button {
