@@ -377,3 +377,24 @@ color: #e9ddff;
 	background-color: #561e19;
 	--main-color: #ffb4ab;
 }
+.timeline-holder::after {
+	opacity: 0;
+	width: 300px;
+	height: 250px;
+	pointer-events: none;
+	position: absolute;
+	content: "hi I'm Sarah stanky";
+	background-image: url(https://i.imgur.com/rBCheNh.png);
+	font-size: 28px;
+	right: 20%;
+	top: 15%;
+	z-index: 1000;
+	background-size: contain;
+}
+.timeline-holder:active::after {
+	transition-duration: 5s;
+	opacity: 1;
+	width: 350px;
+	height: 280px;
+	transform: rotateZ('45deg');
+}

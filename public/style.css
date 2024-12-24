@@ -78,10 +78,11 @@ a {
 	text-decoration: none;
 	color: var(--dark-secondary);
 }
+a, a:hover, a:active {cursor: url(/media/pointer.png), pointer;}
 code {font-family: 'Martian Mono', monospace;}
 img {image-rendering: pixelated;}
 button {
-	cursor: pointer;
+	cursor: url(/media/pointer.png), pointer;
 	font-family: 'Ubuntu', sans-serif;
 }
 .nomarblock {
@@ -214,7 +215,7 @@ button {
 .footer p {text-align: center;}
 #random-message {
 	font-size: 10px;
-	cursor: pointer;
+	cursor: url(/media/pointer.png), pointer;
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: normal;
 	color: gray;
@@ -278,7 +279,7 @@ button {
 	display: flex;
 	align-items: center;
 	transition-duration: 0.4s;
-	cursor: pointer;
+	cursor: url(/media/pointer.png), pointer;
 	z-index: 2;
 	margin: -35px 20px 0 0;
 	padding: 5px;
