@@ -8,6 +8,10 @@ accent: "#a200ff"
 articleNumber: 79
 permalink: "/more/archive/blog/2024/12/boring.html"
 ---
+**Disclaimer**: I definitely could of written a better article than this, but I was in a little bit of a rush because my laptop was dying. This definitely had the potential to be expanded on and worded better.
+
+---
+
 On the current internet, you can find a ton of sentiment that the old internet was just "better". In some cases, that is true. But I think there is another reason why the internet is boring: **You've gotten used to it**.
 
 For most, if not everyone reading this blog, it's highly likely that the internet has been a thing for your entire life. Twitter is probably older than some of my readers, which is a really funny thing to think about. Some of you weren't even conscious when Instagram was new.
