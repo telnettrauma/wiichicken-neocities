@@ -7,8 +7,15 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>Is the Internet Boring</title>
+			<pubDate>Tue, 24 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/boring.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/boring.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
 			<title>Making Cookies Isn't Fun</title>
-			<pubDate>Tue, 23 Dec 2024 12:00:00 EST</pubDate>
+			<pubDate>Mon, 23 Dec 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/2024/12/cookies.html</link>
 			<guid>https://wiggle.monster/more/archive/blog/2024/12/cookies.html</guid>
 			<description>no tags</description>
