@@ -622,6 +622,8 @@
 		.reducedVisible {display: block;}
 		* {animation: none !important;}
 		.head {height: 100px;}
+		/* confetti */
+		#canvas {display: none;}
 	}
 	@media (prefers-reduced-transparency) {
 		.box, .sidebox {
@@ -635,9 +637,11 @@
 		.contrastVisible {display: block !important;}
 		.sidehead p {color: white !important;}
 	}
+	/* confetti */
+	#canvas {position: fixed;}
 </style>
-<!-- <div class="heading" id="poopBlock"></div> -->
 <div id="chewTooth"></div>
+<canvas id="canvas"></canvas>
 <div class="main">
 	<div id="flex">
 		<aside id="leftSidebar">
@@ -777,6 +781,11 @@
 				</ul>
 				<p>please note that just because a feature is enabled doesn't mean the entire site is compatible with it. these features are still a work in progress</p>
 			</div>
+			<div class="box sec-full">
+				<h2>1 YEAR OF WIGGLE.MONSTER!</h2>
+				<p>wiggle.monster has officially existed for 1 year!</p>
+				<a href="more/archive/blog/2024/12/1year.html" target="_blank" class="noBg"><button class="bring">Read the Article!</button></a>
+			</div>
 			<div class="row" id="infamous" style="display: grid; gap: 10px;">
 				<div class="box noscript-hidden d-sec-l m-sec-t" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
 					<div style="display: flex; flex-wrap: wrap;" id="statusCard">
@@ -883,20 +892,11 @@
 			</div>
 			<div class="box sec-t">
 				<h2>siteUpdates</h2>
-				<h3 style="margin: 0; font-size: 15px;"><strong>NOW PLAYiNG 2.0</strong></h3>
-				<p id="updatedate">December 23, 2024</p>
+				<h3 style="margin: 0; font-size: 15px;"><strong>HAPPY 1 YEAR TO wiggle.monster!</strong></h3>
+				<p id="updatedate">December 30, 2024</p>
 			</div>
 			<div class="box">
-				<p>the large project i have been working on is <strong>finally</strong> complete! the <a href="/interests/music/fm/playing.html" target="_blank">last.fm now playing screen</a> has gotten a huge update, making it super customizable. here is a little bit of what's new:</p>
-				<ul>
-					<li>brand new design which should look universally better and less branded</li>
-					<li>a TON of new customization options</li>
-					<li>ability to change the background</li>
-					<li>options to toggle metadata</li>
-					<li>documentation help page for it</li>
-					<li>the ability to save settings to a URL</li>
-				</ul>
-				<p>i am very proud of the result, and i hope that you are, too!</p>
+				<p>wiggle.monster is officially 1 year old! this website has come a long way, and i am so proud of it! enjoy the confetti on the homepage, slowing down your device. oh, and <a href="/more/archive/blog/2024/12/1year.html" target="_blank">this article</a>, too.</p>
 			</div>
 			<div class="box sec-b">
 				<p>site updates almost every sunday, blog posts and content updates whenever</p>
@@ -1076,6 +1076,7 @@ xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=wii
 xhttp.send();
 </script>
 <script src="resources/widgets/home/flood/flood.js"></script>
+<script src="resources/widgets/home/confetti.js"></script>
 <!-- <script src="resources/nav/navbar.js"></script> -->
 </body>
 </html>
