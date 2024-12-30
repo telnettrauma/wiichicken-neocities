@@ -19,8 +19,18 @@ var canvas = document.getElementById('canvas'),
 									particles = [];
 									tick = 0;
 		var x = 0;
-		function loop() {
+		var isPaused = false;
 
+		window.addEventListener('blur', function() {
+			isPaused = true;
+		});
+
+		window.addEventListener('focus', function() {
+			isPaused = false;
+			requestAnimFrame(loop);  // resume the loop
+		});
+		function loop() {
+				if (isPaused) return;
 				createParticles();
 				updateParticles();
 				killParticles();
