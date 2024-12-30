@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://wiggle.monster/</loc>
-<lastmod>2024-12-23T12:40:44-05:00</lastmod>
+<lastmod>2024-12-29T14:34:34-05:00</lastmod>
 </url>
 <url>
 <loc>https://wiggle.monster/aboutme</loc>
@@ -10,11 +10,11 @@
 </url>
 <url>
 <loc>https://wiggle.monster/credits</loc>
-<lastmod>2024-11-15T08:37:25-05:00</lastmod>
+<lastmod>2024-12-29T14:23:49-05:00</lastmod>
 </url>
 <url>
 <loc>https://wiggle.monster/guestbook</loc>
-<lastmod>2024-12-25T18:29:37-05:00</lastmod>
+<lastmod>2024-12-28T21:52:34-05:00</lastmod>
 </url>
 <url>
 <loc>https://wiggle.monster/not_found</loc>
@@ -26,7 +26,7 @@
 </url>
 <url>
 <loc>https://wiggle.monster/creative/</loc>
-<lastmod>2024-12-01T15:25:04-05:00</lastmod>
+<lastmod>2024-12-26T12:38:24-05:00</lastmod>
 </url>
 <url>
 <loc>https://wiggle.monster/creative/photos</loc>
@@ -210,7 +210,7 @@
 </url>
 <url>
 <loc>https://wiggle.monster/more/archive/blog/</loc>
-<lastmod>2024-12-25T18:22:57-05:00</lastmod>
+<lastmod>2024-12-29T14:34:34-05:00</lastmod>
 </url>
 <url>
 <loc>https://wiggle.monster/more/archive/blog/hell</loc>
@@ -617,6 +617,10 @@
 <lastmod>2024-12-07T20:51:43+00:00</lastmod>
 </url>
 <url>
+<loc>https://wiggle.monster/more/archive/blog/2024/12/blowup</loc>
+<lastmod>2024-12-29T02:37:47+00:00</lastmod>
+</url>
+<url>
 <loc>https://wiggle.monster/more/archive/blog/2024/12/boring</loc>
 <lastmod>2024-12-25T16:55:29+00:00</lastmod>
 </url>
@@ -635,6 +639,10 @@
 <url>
 <loc>https://wiggle.monster/more/archive/blog/2024/12/crash</loc>
 <lastmod>2024-12-13T00:48:53+00:00</lastmod>
+</url>
+<url>
+<loc>https://wiggle.monster/more/archive/blog/2024/12/fears</loc>
+<lastmod>2024-12-26T20:12:30+00:00</lastmod>
 </url>
 <url>
 <loc>https://wiggle.monster/more/archive/blog/2024/12/firetv</loc>
@@ -681,8 +689,16 @@
 <lastmod>2024-12-15T19:09:39+00:00</lastmod>
 </url>
 <url>
+<loc>https://wiggle.monster/more/archive/blog/2024/12/oldside</loc>
+<lastmod>2024-12-29T18:55:28+00:00</lastmod>
+</url>
+<url>
 <loc>https://wiggle.monster/more/archive/blog/2024/12/radio</loc>
 <lastmod>2024-12-20T01:50:19+00:00</lastmod>
+</url>
+<url>
+<loc>https://wiggle.monster/more/archive/blog/2024/12/shapes</loc>
+<lastmod>2024-12-27T18:21:40+00:00</lastmod>
 </url>
 <url>
 <loc>https://wiggle.monster/more/archive/blog/2024/12/snapchat</loc>
@@ -906,7 +922,7 @@
 </url>
 <url>
 <loc>https://wiggle.monster/more/archive/blog/2024/10/100daystooffload/</loc>
-<lastmod>2024-12-25T18:22:57-05:00</lastmod>
+<lastmod>2024-12-29T12:49:23-05:00</lastmod>
 </url>
 <url>
 <loc>https://wiggle.monster/more/archive/blog/concepts/2024/1/comic</loc>
