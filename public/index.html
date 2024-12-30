@@ -622,6 +622,8 @@
 		.reducedVisible {display: block;}
 		* {animation: none !important;}
 		.head {height: 100px;}
+		/* confetti */
+		#canvas {display: none;}
 	}
 	@media (prefers-reduced-transparency) {
 		.box, .sidebox {
@@ -635,9 +637,11 @@
 		.contrastVisible {display: block !important;}
 		.sidehead p {color: white !important;}
 	}
+	/* confetti */
+	#canvas {position: fixed;}
 </style>
-<!-- <div class="heading" id="poopBlock"></div> -->
 <div id="chewTooth"></div>
+<canvas id="canvas"></canvas>
 <div class="main">
 	<div id="flex">
 		<aside id="leftSidebar">
@@ -1080,6 +1084,7 @@ xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=wii
 xhttp.send();
 </script>
 <script src="resources/widgets/home/flood/flood.js"></script>
+<script src="resources/widgets/home/confetti.js"></script>
 <!-- <script src="resources/nav/navbar.js"></script> -->
 </body>
 </html>
