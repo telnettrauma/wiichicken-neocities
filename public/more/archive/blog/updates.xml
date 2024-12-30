@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>HAPPY 1 YEAR TO wiggle.monster!</title>
+			<pubDate>Mon, 30 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>wiggle.monster is now a year old!</description>
+		</item>
+		<item>
 			<title>NOW PLAYiNG 2.0</title>
 			<pubDate>Mon, 23 Dec 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -75,13 +82,6 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>now the site has a halloween theme</description>
-		</item>
-		<item>
-			<title>my chest hurts</title>
-			<pubDate>Sun, 6 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>my chest hurts</description>
 		</item>
 	</channel>
 </rss>
