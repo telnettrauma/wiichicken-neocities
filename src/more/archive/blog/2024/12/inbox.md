@@ -2,7 +2,7 @@
 layout: blog/24/10/100daystounload.njk
 title: "Updating my Gmail Filters"
 date: 2024-12-31
-light: "#864b6f"
+light: "#ffd8eb"
 dark: "#370729"
 accent: "#ff00c8"
 articleNumber: 86
