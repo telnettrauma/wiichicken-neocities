@@ -622,8 +622,6 @@
 		.reducedVisible {display: block;}
 		* {animation: none !important;}
 		.head {height: 100px;}
-		/* confetti */
-		#canvas {display: none;}
 	}
 	@media (prefers-reduced-transparency) {
 		.box, .sidebox {
@@ -637,11 +635,8 @@
 		.contrastVisible {display: block !important;}
 		.sidehead p {color: white !important;}
 	}
-	/* confetti */
-	#canvas {position: fixed;}
 </style>
 <div id="chewTooth"></div>
-<canvas id="canvas"></canvas>
 <div class="main">
 	<div id="flex">
 		<aside id="leftSidebar">
@@ -780,11 +775,6 @@
 					<li class="transparentVisible">Reduced Transparency</li>
 				</ul>
 				<p>please note that just because a feature is enabled doesn't mean the entire site is compatible with it. these features are still a work in progress</p>
-			</div>
-			<div class="box sec-full">
-				<h2>1 YEAR OF WIGGLE.MONSTER!</h2>
-				<p>wiggle.monster has officially existed for 1 year!</p>
-				<a href="more/archive/blog/2024/12/1year.html" target="_blank" class="noBg"><button class="bring">Read the Article!</button></a>
 			</div>
 			<div class="row" id="infamous" style="display: grid; gap: 10px;">
 				<div class="box noscript-hidden d-sec-l m-sec-t" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
@@ -1076,7 +1066,6 @@ xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=wii
 xhttp.send();
 </script>
 <script src="resources/widgets/home/flood/flood.js"></script>
-<script src="resources/widgets/home/confetti.js"></script>
 <!-- <script src="resources/nav/navbar.js"></script> -->
 </body>
 </html>
