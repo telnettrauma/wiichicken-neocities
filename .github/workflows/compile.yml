@@ -112,7 +112,6 @@ jobs:
           resolve_conflicts: "false"
           git_committer_name: darkscar
           git_committer_email: 41898282+github-actions[bot]@users.noreply.github.com
-        continue-on-error: true
 
       - name: Make pull request in case of failure
         if: failure()
