@@ -55,7 +55,6 @@
 			.book {
 				display: flex;
 				flex-direction: column;
-				height: 208px;
 			}
 			.book a {
 				font-family: 'Martian Mono', monospace;
@@ -65,17 +64,23 @@
 				background-color: var(--bg);
 				color: var(--fg) !important;
 				font-size: 12px;
+				box-shadow: inset 15px -10px 20px 0px #00000054;
+			}
+			.vertical .book {height: 208px;}
+			.vertical .book a:first-child {
 				text-orientation: sideways;
-				writing-mode: tb;
+				writing-mode: sideways-lr;
 				min-height: 190px;
 				max-height: 190px;
-				box-shadow: inset 15px -10px 20px 0px #00000054;
 			}
 			.book a:nth-child(2) {
 				font-size: 8px;
 				background-color: #f6fafe;
 				color: #171c1f !important;
 			}
+			.horizontal .stack {flex-direction: column;}
+			.horizontal .book {flex-direction: row;}
+			.horizontal .book a:first-child, .horizontal .book {width: 100%;}
 			.blog p, .micro p {font-size: 10px;}
 			#bookshelf {overflow-x: scroll;}
 			.box a:not(:has(img))::after {display: none;}
@@ -264,8 +269,10 @@
 		<div class="box" id="articles">
 			<h2>ARTiCLES</h2>
 			<p>individual articles and blog posts that i think are worth a reading. click the "iA"/"iS" button under a "book" to view it on the internet archive/archive.is</p>
+			<!-- TODO make horizontal and vertical buttons on the directory pages consistent -->
+			<button onclick="document.getElementById('bookshelf').classList.replace('vertical', 'horizontal');">Horizontal</button><button onclick="document.getElementById('bookshelf').classList.replace('horizontal', 'vertical');" style="margin-left: 5px;">Vertical</button>
 		</div>
-		<div class="box shelf" id="bookshelf">
+		<div class="box shelf vertical" id="bookshelf">
 			<div class="stack">
 				<div class="book">
 					<a href="https://eev.ee/blog/2020/02/01/old-css-new-css/" target="_blank" style="--bg: #f4bd6f; --fg: #452b00;">Old CSS, new CSS</a>
@@ -292,6 +299,10 @@
 					<a href="https://web.archive.org/web/20240601012416/https://html.spec.whatwg.org/" target="_blank">iA</a>
 				</div>
 				<div class="book">
+					<a href="https://kaszkowiak.org/en/blog/lastfm-scrobbles-printer/" target="_blank" style="--bg: #abc7ff; --fg: #0d2f5f;">Print your friends' listening history in real-time</a>
+					<a href="https://web.archive.org/web/20250105163429/https://kaszkowiak.org/en/blog/lastfm-scrobbles-printer/" target="_blank">iA</a>
+				</div>
+				<div class="book">
 					<a href="https://www.signs.com/branded-in-memory/" target="_blank" style="--bg: #94cdf6; --fg: #00344d;">Branded in Memory</a>
 					<a href="https://archive.is/stb7I" target="_blank">iS</a>
 				</div>
@@ -310,6 +321,10 @@
 				<div class="book">
 					<a href="https://actualwebsite.org" target="_blank" style="--bg: #c0c1ff; --fg: #282a60;">This is an Actual Website.</a>
 					<a href="https://web.archive.org/web/20240824235925/https://actualwebsite.org/" target="_blank">iA</a>
+				</div>
+				<div class="book">
+					<a href="https://www.andrewturnbull.net/mozilla/history.html" target="_blank" style="--bg: #abc7ff; --fg: #0d2f5f;">Visual Browser History, from Netscape 4 to Mozilla Firefox</a>
+					<a href="https://web.archive.org/web/20250105170220/https://www.andrewturnbull.net/mozilla/history.html" target="_blank">iA</a>
 				</div>
 			</div>
 		</div>
