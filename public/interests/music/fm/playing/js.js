@@ -75,7 +75,7 @@ function confirmUser() {
 	user = document.getElementById('username').value;
 	document.getElementById('enter-name').style.display = 'none';
 	document.getElementById('controls').style.display = 'block';
-	document.getElementById('show-username').innerHTML = user;
+	document.getElementById('show-username').textContent = user;
 	getNowPlaying();
 }
 function setBgButtonStatus(...buttons) {
