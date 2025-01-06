@@ -32,6 +32,11 @@
 			<div class="box">
 				<p>every emoji EVER invented</p>
 			</div>
+			<div class="box">
+				<button onclick="changeMode(0);">html (0)</button>
+				<button onclick="changeMode(1);">markdown (1)</button>
+				<p>Your emoji mode is: <span id="what-the-blub">0</span></p>
+			</div>
 			<div class="box" id="emoji-mania">
 				<img src="/media/emoji/angry.gif" onclick="emojiBoard('angry');">
 				<img src="/media/emoji/down.gif" onclick="emojiBoard('down');">
@@ -115,9 +120,15 @@
 			</div>
 		</main>
 		<script>
+			let emojiMode = 0;
 			async function emojiBoard(copytight) {
-				await navigator.clipboard.writeText(`<img src='/media/emoji/${copytight}.gif' loading='lazy' alt=''>`);
+				if (emojiMode === 0) {await navigator.clipboard.writeText(`<img src='/media/emoji/${copytight}.gif' loading='lazy' alt='${copytight} emoji'>`);}
+				else if (emojiMode === 1) {await navigator.clipboard.writeText(`![${copytight} emoji](/media/emoji/${copytight}.gif)`);}
 				window.alert('done!');
+			}
+			function changeMode(newMode) {
+				emojiMode = newMode;
+				document.getElementById('what-the-blub').textContent = emojiMode;
 			}
 		</script>
 	</body>
