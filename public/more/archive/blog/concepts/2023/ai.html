@@ -286,14 +286,22 @@
                 document.getElementById(`m${newBoy}`).style.display = "block";
                 conductor = newBoy;
             }
+            function escapeHtml(unsafe) {
+                return unsafe
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;");
+            }
             function internalGenerate() {
-                var pageNumber = document.getElementById("danumber").value;
-                var poopCont = document.getElementById("pagecont").value;
-                var linkNo1 = document.getElementById("link1").value;
-                var linkNo2 = document.getElementById("link2").value;
-                var linkNo3 = document.getElementById("link3").value;
-                var linkNo4 = document.getElementById("link4").value;
-                var linkNo5 = document.getElementById("link5").value;
+                var pageNumber = escapeHtml(document.getElementById("danumber").value);
+                var poopCont = escapeHtml(document.getElementById("pagecont").value);
+                var linkNo1 = escapeHtml(document.getElementById("link1").value);
+                var linkNo2 = escapeHtml(document.getElementById("link2").value);
+                var linkNo3 = escapeHtml(document.getElementById("link3").value);
+                var linkNo4 = escapeHtml(document.getElementById("link4").value);
+                var linkNo5 = escapeHtml(document.getElementById("link5").value);
                 let newGen = `&ltdiv class="msg" id="m${pageNumber}"&gt;<br>&lt;p&gt;&lt;img src="ai/neut.png"&gt;${poopCont}&lt;/p&gt;<br>&lt;ul id="l${pageNumber}"&gt;<br>&lt;li&gt;&lt;a class="wip"&gt;${linkNo1}&lt;/a&gt;&lt;/li&gt;<br>&lt;li&gt;&lt;a class="wip"&gt;${linkNo2}&lt;/a&gt;&lt;/li&gt;<br>&lt;li&gt;&lt;a class="wip"&gt;${linkNo3}&lt;/a&gt;&lt;/li&gt;<br>&lt;li&gt;&lt;a class="wip"&gt;${linkNo4}&lt;/a&gt;&lt;/li&gt;<br>&lt;li&gt;&lt;a class="wip"&gt;${linkNo5}&lt;/a&gt;&lt;/li&gt;<br>&lt;/ul&gt;<br>&lt;/div&gt;`;
                 document.getElementById("outputhtml").innerHTML = newGen;
             }
