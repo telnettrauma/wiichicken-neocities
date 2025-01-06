@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>NEW YEAR, SAME SiTE</title>
+			<pubDate>Mon, 6 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>not much really changed, don't get your hopes up</description>
+		</item>
+		<item>
 			<title>HAPPY 1 YEAR TO wiggle.monster!</title>
 			<pubDate>Mon, 30 Dec 2024 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -75,13 +82,6 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>11ty is now used for some blog posts</description>
-		</item>
-		<item>
-			<title>HAPPY HALLOWEEN</title>
-			<pubDate>Sun, 13 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>now the site has a halloween theme</description>
 		</item>
 	</channel>
 </rss>
