@@ -24,6 +24,15 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(format);
   });
 
+  eleventyConfig.addGlobalData("eleventyComputed", {
+    permalink: (data) => {
+      if (data.page.filePathStem.startsWith("/")) {
+        return `${data.page.filePathStem}.html`;
+      }
+      return data.permalink; // fallback to the current permalink if it's set
+    },
+  });
+
   return {
     passthroughFileCopy: true,
     dir: {
