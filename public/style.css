@@ -27,7 +27,7 @@ main {
 	position: relative;
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
-	/* background-image: url('/media/noise.png'); */
+	background-image: url('/media/noise.png');
 	image-rendering: pixelated;
 	clip-path: polygon(
 		var(--s-main) 0%, 
@@ -382,8 +382,7 @@ button {
 		height: 12px;
 		margin-right: 3px;
 	}
-	/* main {background-image: url('/media/noise.png'), linear-gradient(0deg, var(--bg-2) 0%, #00000000 20%, #00000000 80%, var(--bg-1) 100%);} */
-	main {background-image: linear-gradient(0deg, var(--bg-2) 0%, #00000000 20%, #00000000 80%, var(--bg-1) 100%);}
+	main {background-image: url('/media/noise.png'), linear-gradient(0deg, var(--bg-2) 0%, #00000000 20%, #00000000 80%, var(--bg-1) 100%);}
 
 }
 /* styling for mobile */
