@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>WERE OPEN SOURCE</title>
+			<pubDate>Sun, 11 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>the github repo for this site is now public, and a behind the scenes rewrite is in the works</description>
+		</item>
+		<item>
 			<title>NEW YEAR, SAME SiTE</title>
 			<pubDate>Mon, 6 Jan 2025 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -75,13 +82,6 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>dynamically colored favicons for #100DaysToOffload blog posts</description>
-		</item>
-		<item>
-			<title>WELCOME 11ty</title>
-			<pubDate>Sun, 20 Oct 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>11ty is now used for some blog posts</description>
 		</item>
 	</channel>
 </rss>
