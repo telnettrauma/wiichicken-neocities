@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://wiggle.monster/</loc>
-<lastmod>2025-01-11T14:48:27-05:00</lastmod>
+<lastmod>2025-01-12T12:47:50-05:00</lastmod>
 </url>
 <url>
 <loc>https://wiggle.monster/aboutme</loc>
@@ -10,7 +10,7 @@
 </url>
 <url>
 <loc>https://wiggle.monster/credits</loc>
-<lastmod>2024-12-30T14:21:50-05:00</lastmod>
+<lastmod>2025-01-12T12:47:17-05:00</lastmod>
 </url>
 <url>
 <loc>https://wiggle.monster/guestbook</loc>
@@ -90,7 +90,7 @@
 </url>
 <url>
 <loc>https://wiggle.monster/interests/websites/directory</loc>
-<lastmod>2025-01-06T11:36:35-05:00</lastmod>
+<lastmod>2025-01-12T12:39:12-05:00</lastmod>
 </url>
 <url>
 <loc>https://wiggle.monster/interests/websites/downloads</loc>
@@ -210,7 +210,7 @@
 </url>
 <url>
 <loc>https://wiggle.monster/more/archive/blog/</loc>
-<lastmod>2025-01-11T14:20:44-05:00</lastmod>
+<lastmod>2025-01-12T13:45:17-05:00</lastmod>
 </url>
 <url>
 <loc>https://wiggle.monster/more/archive/blog/hell</loc>
@@ -218,7 +218,7 @@
 </url>
 <url>
 <loc>https://wiggle.monster/more/archive/blog/updates</loc>
-<lastmod>2025-01-06T12:05:47-05:00</lastmod>
+<lastmod>2025-01-11T12:26:55-05:00</lastmod>
 </url>
 <url>
 <loc>https://wiggle.monster/more/archive/scratch/</loc>
@@ -849,6 +849,10 @@
 <lastmod>2025-01-11T02:34:57+00:00</lastmod>
 </url>
 <url>
+<loc>https://wiggle.monster/more/archive/blog/25/1/grokapp</loc>
+<lastmod>2025-01-12T18:45:45+00:00</lastmod>
+</url>
+<url>
 <loc>https://wiggle.monster/more/archive/blog/25/1/gtav</loc>
 <lastmod>2025-01-02T18:32:15+00:00</lastmod>
 </url>
@@ -986,7 +990,7 @@
 </url>
 <url>
 <loc>https://wiggle.monster/more/archive/blog/2024/10/100daystooffload/</loc>
-<lastmod>2025-01-11T14:20:44-05:00</lastmod>
+<lastmod>2025-01-12T13:45:17-05:00</lastmod>
 </url>
 <url>
 <loc>https://wiggle.monster/more/archive/blog/concepts/2024/1/comic</loc>
