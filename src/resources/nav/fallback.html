@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="robots" content="noindex">
+	<link href="/style.css" rel="stylesheet">
+	<style>
+		* {--bg-1: red;}
+		#fakeLogo:hover #s1 {margin-right: 2px;}
+		#fakeLogo:hover {transform: unset;}
+		@media only screen and (min-width: 650px) {
+			body {background: black;}
+			#fakeLogo {
+				margin: -2px 20px 0 0;
+				padding: 2px;
+				border: 1px solid black;
+			}
+			#fakeLogo:hover {padding: 2px;}
+			#fakeLogo .square {
+				width: 5px;
+				height: 5px;
+				animation: none !important;
+			}
+			#fakeLogo:hover .square {
+				transform: scale(1);
+				height: 8px;
+				margin: 2px;
+			}
+			#inHead {padding-right: 50px;}
+		}
+		@media only screen and (max-width: 650px) {
+			#fakeLogo:hover {padding: 6px;}
+			#fakeLogo:hover .square {
+				transform: scale(1.2);
+			}
+		}
+	</style>
+</head>
+<body>
+	<a href="#start" id="to-start">
+		<button>Skip to Content</button>
+	</a>
+	<a id="fakeLogo" href="/index.html" title="Home" target="_top">
+		<div class="square" id="s1"></div>
+		<div class="square" id="s2"></div>
+	</a>
+	<div id="inHead">
+		<div class="topLinks">
+			<a href="/aboutme.html" target="_top"><img src="/resources/nav/me.png">ABOUT</a>
+			<a href="/creative/index.html" target="_top"><img src="/resources/nav/art.png">ART</a>
+			<a href="/more/archive/blog/index.html" target="_top"><img src="/resources/nav/blog.png">BLOG</a>
+			<a href="/interests/index.html" target="_top"><img src="/resources/nav/intr.png">iNTERESTS</a>
+			<a href="/more/index.html" target="_top"><img src="/resources/nav/more.png">MORE</a>
+		</div>
+	</div>
+</body>
+</html>

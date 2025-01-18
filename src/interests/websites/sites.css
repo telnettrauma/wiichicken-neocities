@@ -1,0 +1,220 @@
+* {
+	--dark-tertiary: #c1c4eb;
+	--dark-on-tertiary: #2b2e4d;
+	--bg-1: #86d1ea;
+	--bg-2: #c1c4eb;
+	box-sizing: border-box;
+}
+body {
+	background-color: #000e11 !important;
+	font-family: 'PT Sans', sans-serif;
+	margin: 0;
+	margin-top: 10px;
+}
+#flex {
+	display: flex;
+	width: 900px;
+	margin: auto;
+	margin-bottom: 30px !important;
+}
+h1, h2, h3, h4, .mainnav {
+	font-family: 'Martian Mono', monospace;
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+a {
+	text-decoration: none;
+	background-color: #b3ebff;
+	color: #00677d !important;
+}
+img {image-rendering: pixelated;}
+button {
+	background-color: #464364;
+	color: #e3dfff;
+	border: 1px solid #c6c2ea;
+	box-shadow: 2px 2px 0 0 #c6c2ea;
+	cursor: pointer;
+}
+#chewTooth {
+	position: fixed;
+	background-size: cover;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+table {border-collapse: collapse;}
+td {border: 1px solid #5ad5f9;}
+th {
+	border: 1px solid #5ad5f9;
+	font-size: x-large;
+	font-family: 'Martian Mono', monospace;
+	overflow: hidden;
+}
+th p {
+	display: inline-block;
+	margin-right: 20px;
+}
+.urls table {
+	max-width: 747px;
+	width: 100%;
+	text-indent: initial;
+	margin-bottom: 10px;
+	color: #b4ebff;
+}
+tr {
+	display: flex;
+	width: 100%;
+	margin-bottom: 2px;
+}
+td {
+	font-size: 13px;
+	display: block;
+	margin-left: 2px;
+	background-color: #001f27;
+}
+/* the first element in a table will not have padding */
+tr td:first-child {margin-left: 0 !important;}
+tr td:nth-child(3n) {width: 100%;}
+.urls table tr td:first-child {
+	margin-left: 0;
+	display: flex;
+	align-items: center;
+	/* background: linear-gradient(180deg, rgba(0,31,39,1) 0%, rgba(54,65,152,1) 100%); */
+}
+.urls table tr td:first-child img {
+	display: flex;
+	width: 16px;
+	height: 16px;
+}
+.sidebar {
+	margin-top: 50px;
+	margin-right: 15px;
+	width: 150px;
+	background-color: #3a4857;
+	color: #d5e4f7;
+	border: 1px solid #d5e4f7;
+	order: 1;
+	padding-left: 5px;
+}
+.sidebar a {
+	background-color: #233240;
+	color: #b9c8da !important;
+}
+.sidebar ul {
+	list-style-type: none;
+	margin: 3px;
+	padding-left: 5px;
+}
+.main {
+	margin-left: 150px;
+	max-width: 700px;
+	margin: auto;
+	order: 2;
+}
+header, #directoryNav {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+header .box {
+	display: inline-block;
+	width: auto;
+}
+.mainnav {
+	box-shadow: 2px 2px 0 0 #dfe0ff;
+	width: 50%;
+	background-color: #151937bd !important;
+	color: #dfe0ff !important;
+	font-size: 1.2em;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #dfe0ff;
+	padding: 5px;
+}
+.mainnav:hover {
+	box-shadow: 1px 1px 0 0 #dfe0ff;
+	transform: translate(1px, 1px);
+}
+.mainnav:active {
+	box-shadow: unset;
+	transform: translate(2px, 2px);
+}
+#directoryNav .active {
+	box-shadow: inset 0 -2px 0 0 !important;
+	background-color: #344a52 !important;
+	color: #cee6f0 !important;
+	border-color: #cee6f0;
+}
+header .box, .box, .app img, .app div {
+	background-color: #00677d;
+	color: #b3ebff;
+	padding: 5px;
+	border: 1px solid #5ad5f9;
+}
+.box, .app img, .app div {
+	box-shadow: none;
+	background-color: #001f27bd;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	color: #b4ebff;
+	width: 100%;
+	margin-bottom: 10px;
+	max-width: 700px;
+	overflow: visible !important;
+	clip-path: none;
+}
+.box::before {content: none;}
+header .lessvis {
+	background-color: #004e5f !important;
+	color: #b4ebff !important;
+	box-shadow: none;
+}
+.glow {box-shadow: 0px 0px 8px 1px #c1c4eb;}
+@media only screen and (min-width: 900px) {
+	.main {flex: 1;}
+}
+@media only screen and (max-width: 900px) {
+	body, .main {width: 100%;}
+	.main, .urls table {max-width: unset;}
+	.box, header {width: auto;}
+	button {
+		width: 100%;
+		margin-top: 5px;
+		font-size: 20px;
+	}
+	#flex {
+		flex-wrap: wrap;
+		width: auto;
+	}
+	nav {
+		width: 100%;
+		margin-top: 0;
+	}
+	.mainnav {
+		font-size: 0.8em;
+		width: 100%;
+	}
+	.box, .app img, .app div {margin-bottom: 5px;}
+	#directoryNav {
+		max-width: 100vw;
+		flex-direction: column;
+	}
+	.urls table tr td:first-child {
+		margin-right: 2px;
+	}
+	.urls table tr td:first-child img {
+		width: 32px;
+		height: 32px;
+	}
+	.urls table tr {flex-wrap: wrap;}
+	.urls table tr td {
+		margin-left: 0;
+		margin-bottom: 2px;
+		font-size: 16px;
+	}
+	.urls table tr td:nth-child(2) {width: fit-content;}
+	.urls table tr td:nth-child(2) a {font-size: 26px;}
+}

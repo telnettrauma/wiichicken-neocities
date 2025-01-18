@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>good reads by amazon i think</title>
+		<link rel="icon" type="image/x-icon" href="/favicon.png">
+		<link href="/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+		<link href="sites.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<noscript>
+			<style>.noscript-bye {display: none !important;}</style>
+		</noscript>
+		<style>
+			.shelf, .row {
+				background-image: linear-gradient(180deg, rgba(0,31,38,1) 0%, #334a50 100%);
+				background-color: unset;
+				display: flex;
+				flex-wrap: wrap;
+				padding: 0 !important;
+				max-width: 700px;
+				justify-content: space-around;
+				overflow: hidden;
+			}
+			.blog, .micro {
+				display: flex;
+				background-color: var(--bg);
+				align-items: center;
+				flex-direction: column;
+				padding: 5px;
+				margin: 10px 15px 0 15px;
+				box-shadow: 2px 2px 10px 0 black, inset 15px -10px 40px 0px #00000080, inset 0px 20px 20px 0px rgba(255, 255, 255, 0.3);
+				transition-duration: 0.5s;
+			}
+			.blog:hover, .micro:hover {box-shadow: 2px 2px 10px 0 black, inset 15px -10px 40px 0px #00000049, inset 0px 20px 20px 0px rgba(255, 255, 255, 0.5);}
+			.blog {
+				max-width: 100px;
+				height: 150px;
+			}
+			.micro {
+				width: 180px;
+				height: 100px;
+			}
+			.blog img, .micro img {
+				width: 32px;
+				height: 32px;
+			}
+			.blog h4 {word-break: break-all;}
+			h4, .blog p, .micro p, .stack a {
+				color: var(--fg);
+				text-align: center;
+				margin-block-start: 0;
+				margin-block-end: 0;
+			}
+			.stack {display: flex;}
+			.book {
+				display: flex;
+				flex-direction: column;
+			}
+			.book a {
+				font-family: 'Martian Mono', monospace;
+				padding: 2px;
+			}
+			.book a:first-child {
+				background-color: var(--bg);
+				color: var(--fg) !important;
+				font-size: 12px;
+				box-shadow: inset 15px -10px 20px 0px #00000054;
+			}
+			.vertical .book {height: 208px;}
+			.vertical .book a:first-child {
+				text-orientation: sideways;
+				writing-mode: sideways-lr;
+				min-height: 190px;
+				max-height: 190px;
+			}
+			.book a:nth-child(2) {
+				font-size: 8px;
+				background-color: #f6fafe;
+				color: #171c1f !important;
+			}
+			.horizontal .stack {flex-direction: column;}
+			.horizontal .book {flex-direction: row;}
+			.horizontal .book a:first-child, .horizontal .book {width: 100%;}
+			.blog p, .micro p {font-size: 10px;}
+			#bookshelf {overflow-x: scroll;}
+			.box a:not(:has(img))::after {display: none;}
+			.row {width: 100%;}
+			.whitebook {
+				--bg: #d4d4d4;
+				--fg: #3e4040;
+			}
+			.fic-row {
+				margin-bottom: 10px;
+				display: flex;
+				gap: 10px;
+			}
+			.lightbox {
+				background-image: linear-gradient(0deg, rgba(0,31,38,1) 0%, #334a50 100%);
+				width: 80px;
+				min-height: 60px;
+				border: 1px solid #5ad5f9;
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+				padding: 3px;
+			}
+			.lightbox a {background-color: unset;}
+			.image {
+				transform: skewY(-7deg) translate(3px, -2px);
+				padding: 15px 5px 15px 5px;
+				background-color: var(--bg);
+				box-shadow: 2px 2px 10px 0 black, inset 15px -10px 40px 0px #00000080, inset 0px 20px 20px 0px rgba(255, 255, 255, 0.3);
+				position: relative;
+			}
+			.image img {
+				width: 32px;
+				height: 32px;
+			}
+			.image::before, .image::after {
+				content: '';
+				position: absolute;
+				background: var(--bg);
+			}
+			.image::before {
+				height: 66px;
+				top: 0;
+				transform: skewY(45deg);
+				transform-origin: right bottom;
+				width: 6px;
+				left: -6px;
+				opacity: 0.6;
+			}
+			.image::after {
+				opacity: 0.3;
+				left: 0;
+				width: 100%;
+				transform-origin: bottom left;
+				transform: skew(45deg);
+				height: 6px;
+				top: -6px;
+			}
+			.fic-row .box {margin-bottom: 0;}
+			.fic-row .box h4 {text-align: left;}
+		</style>
+	</head>
+	<body>
+	<div id="heightCheck"></div>
+	<div class="heading" id="poopBlock"></div>
+	<div id="sideButton" onclick="openSidey()"></div>
+	<div id="overSide"></div>
+	<div id="chewTooth"></div>
+	<div id="flex">
+	<nav>
+	<div class="sidebar">
+		<ul>
+			<li><a href="/interests/websites/index.html">return</a></li>
+		</ul>
+		<h2>READiNG</h2>
+		<ul>
+			<li><a href="#fiction">fiction</a></li>
+			<li><a href="#blogs">blogs</a></li>
+			<li><a href="#microblogs">microblogs</a></li>
+			<li><a href="#articles">articles</a></li>
+		</ul>
+	</div>
+	</nav>
+	<div class="main">
+		<div id="directoryNav">
+			<a class="mainnav" href="directory.html" style="margin-right: 10px;">DiRECTORY</a>
+			<a class="mainnav" href="downloads.html">DOWNLOADS</a>
+			<a class="mainnav active">READiNG</a>
+			<a class="mainnav" href="app/iphone.html" style="margin-right: 2px;">iPHONE APPS</a>
+		</div>
+		<div class="box">
+			<h1>READS</h1>
+			<p>things you can read. online.<br>just click a book to read it. it is so easy...</p>
+		</div>
+		<div class="box" id="fiction">
+			<h2>FiCTiON</h2>
+			<p>gamerscore is just AR points for people who play video games. and aren't in elementary school<br>this also includes things like webcomics and the like</p>
+		</div>
+		<div class="rows">
+			<div class="fic-row">
+				<a href="https://www.sbnation.com/a/17776-football" target="_blank" class="lightbox" style="--bg: #ffb3af;">
+					<div class="image"><img loading="lazy" src="img/ficon/blog/stories/17776.png"></div>
+				</a>
+				<div class="box">
+					<h4>17776</h4>
+					<p>What football will look like in the future</p>
+				</div>
+			</div>
+			<div class="fic-row">
+				<a href="https://plorg.neocities.org" target="_blank" style="--bg: #bec2ff;" class="lightbox">
+					<div class="image"><img loading="lazy" src="img/ficon/art/plorg.ico"></div>
+				</a>
+				<div class="box">
+					<h4>Poorly Planned Comics</h4>
+					<p>archive of the most interesting comic i have ever read</p>
+				</div>
+			</div>
+			<div class="fic-row">
+				<a href="https://castlezzt-archive.neocities.org" target="_blank" class="lightbox whitebook">
+					<div class="image"><img loading="lazy" src="img/ficon/default.png"></div>
+				</a>
+				<div class="box">
+					<h4>castleZZT archive</h4>
+					<p>archive of more comics created by Jack Masters, the creator of the comic linked above</p>
+				</div>
+			</div>
+		</div>
+		<div class="box" id="blogs">
+			<h2>BLOGS</h2>
+			<p>proper blogs and stuff like that</p>
+		</div>
+		<div class="box shelf" style="background-size: 170px;">
+			<a class="blog whitebook" href="https://www.justinobeirne.com" target="_blank">
+				<h4>justinobeirne.com</h4>
+				<p>Google Maps and Apple Maps (not all articles are on the homepage, some require archive.is)</p>
+			</a>
+			<a class="blog whitebook" href="https://solar.lowtechmagazine.com" target="_blank">
+				<img src="img/ficon/default.png" loading="lazy">
+				<h4>Low Tech Magazine</h4>
+			</a>
+			<a class="blog whitebook" href="https://so1o.xyz" target="_blank">
+				<img src="img/ficon/blog/so1o.png" loading="lazy">
+				<h4>so1o</h4>
+				<p>"A oddly strange personal blog"</p>
+			</a>
+			<a class="blog whitebook" href="https://thehistoryoftheweb.com" target="_blank">
+				<img src="img/ficon/blog/hotw.png" loading="lazy">
+				<h4>The History of the Web</h4>
+			</a>
+		</div>
+		<div class="box" id="microblogs">
+			<h2>MiCROBLOGS</h2>
+			<p>blogs that don't have posts that are as long, but may still be worth a peep. includes twitter pages or other social medias</p>
+		</div>
+		<div class="box shelf" style="background-size: 120px;">
+			<div class="row">
+				<a class="micro" href="https://oneterabyteofkilobyteage.tumblr.com" target="_blank" style="--bg: #ffb3b0; --fg: #571d1e;">
+					<img src="https://64.media.tumblr.com/avatar_002c6d11213c_64.pnj" loading="lazy">
+					<h4>One Terabyte of Kilobyte Age</h4>
+					<p>Automatically posts screenshots of random sites on the Geocities archive</p>
+				</a>
+				<a class="micro" href="https://www.suppermariobroth.com/" target="_blank" style="--bg: #ffb4a6; --fg: #561e15;">
+					<img src="https://64.media.tumblr.com/avatar_4691f8d9c906_128.pnj" loading="lazy">
+					<h4>Supper Mario Broth</h4>
+					<p>Obscure information about the Mario franchise</p>
+				</a>
+				<a class="micro" href="https://twitter.com/depthsofwiki" target="_blank" style="--bg: #9ccbfb; --fg: #003354;">
+					<img src="img/ficon/blog/twt.png" loading="lazy">
+					<h4>depths of wikipedia</h4>
+					<p>Fun facts about Wikipedia and out of context screenshots</p>
+				</a>
+			</div>
+			<div class="row">
+				<a class="micro whitebook" href="https://text-mode.org" target="_blank">
+					<img src="img/ficon/default.png" loading="lazy">
+					<h4>text-mode</h4>
+					<p>art composed of text</p>
+				</a>
+				<a class="micro whitebook" href="https://tojskfarnijler.tumblr.com" target="_blank">
+					<img src="https://64.media.tumblr.com/a83209525e8a90a3f791344e6ec6ecb1/b585d6fae7110f59-21/s64x64u_c1/b2ba672a71ec72a2e4c6924bcd15b7877dd89d7d.png" loading="lazy">
+					<h4>tojskfarnijler</h4>
+					<p>experimental pixel art</p>
+				</a>
+			</div>
+		</div>
+		<div class="box" id="articles">
+			<h2>ARTiCLES</h2>
+			<p>individual articles and blog posts that i think are worth a reading. click the "iA"/"iS" button under a "book" to view it on the internet archive/archive.is</p>
+			<!-- TODO make horizontal and vertical buttons on the directory pages consistent -->
+			<button onclick="document.getElementById('bookshelf').classList.replace('vertical', 'horizontal');">Horizontal</button><button onclick="document.getElementById('bookshelf').classList.replace('horizontal', 'vertical');" style="margin-left: 5px;">Vertical</button>
+		</div>
+		<div class="box shelf vertical" id="bookshelf">
+			<div class="stack">
+				<div class="book">
+					<a href="https://eev.ee/blog/2020/02/01/old-css-new-css/" target="_blank" style="--bg: #f4bd6f; --fg: #452b00;">Old CSS, new CSS</a>
+					<a href="https://web.archive.org/web/20240902030153/https://eev.ee/blog/2020/02/01/old-css-new-css/" target="_blank">iA</a>
+				</div>
+				<div class="book">
+					<a href="https://bytemoth.tumblr.com/post/674671055813640192/paradigm-adrift-prokopetz-im-pretty-convinced" target="_blank" style="--bg: #a3d397; --fg: #0e380d;">Google Search is Useless</a>
+					<a href="https://web.archive.org/web/20240429194358/https://bytemoth.tumblr.com/post/674671055813640192/paradigm-adrift-prokopetz-im-pretty-convinced" target="_blank">iA</a>
+				</div>
+				<div class="book">
+					<a href="https://abowlofpetuniasandawhale.tumblr.com/post/686420958466162688/honestly-the-worst-thing-about-adhd-for-me-is-that" target="_blank" style="--bg: #ffb3b4; --fg: #561d22;">worst thing about adhd</a>
+					<a href="https://web.archive.org/web/20240429195824/https://abowlofpetuniasandawhale.tumblr.com/post/686420958466162688/honestly-the-worst-thing-about-adhd-for-me-is-that" target="_blank">iA</a>
+				</div>
+				<div class="book">
+					<a href="https://mortimermcmirestinks.tumblr.com/post/680612356771971072/wikia-is-not-good-wikia-is-a-hypercapitalist" target="_blank" style="--bg: #e7c26c; --fg: #3f2e00;">wikia is not good</a>
+					<a href="https://web.archive.org/web/20240429200505/https://mortimermcmirestinks.tumblr.com/post/680612356771971072/wikia-is-not-good-wikia-is-a-hypercapitalist" target="_blank">iA</a>
+				</div>
+				<div class="book">
+					<a href="https://afellowu.neocities.org/blog/11ty-github-and-neocities" target="_blank" style="--bg: #97d5a5; --fg: #00391b;">11ty, GitHub and Neocities</a>
+					<a href="https://web.archive.org/web/20240421033426/https://afellowu.neocities.org/blog/11ty-github-and-neocities" target="_blank">iA</a>
+				</div>
+				<div class="book">
+					<a href="https://html.spec.whatwg.org/multipage/" target="_blank" style="--bg: #acd28e; --fg: #1a3705;">HTML Living Standard</a>
+					<a href="https://web.archive.org/web/20240601012416/https://html.spec.whatwg.org/" target="_blank">iA</a>
+				</div>
+				<div class="book">
+					<a href="https://kaszkowiak.org/en/blog/lastfm-scrobbles-printer/" target="_blank" style="--bg: #abc7ff; --fg: #0d2f5f;">Print your friends' listening history in real-time</a>
+					<a href="https://web.archive.org/web/20250105163429/https://kaszkowiak.org/en/blog/lastfm-scrobbles-printer/" target="_blank">iA</a>
+				</div>
+				<div class="book">
+					<a href="https://www.signs.com/branded-in-memory/" target="_blank" style="--bg: #94cdf6; --fg: #00344d;">Branded in Memory</a>
+					<a href="https://archive.is/stb7I" target="_blank">iS</a>
+				</div>
+				<div class="book">
+					<a href="https://motherfuckingwebsite.com" target="_blank" class="whitebook">This is a motherfucking website.</a>
+					<a href="https://web.archive.org/web/20240902020154/https://motherfuckingwebsite.com/" target="_blank">iA</a>
+				</div>
+				<div class="book">
+					<a href="http://bettermotherfuckingwebsite.com" target="_blank" class="whitebook">Better Motherfucking Website</a>
+					<a href="https://web.archive.org/web/20240823020855/http://bettermotherfuckingwebsite.com/" target="_blank">iA</a>
+				</div>
+				<div class="book">
+					<a href="https://bestmotherfucking.website" target="_blank" class="whitebook">This is the best motherfucking website.</a>
+					<a href="https://web.archive.org/web/20240902020649/https://bestmotherfucking.website/" target="_blank">iA</a>
+				</div>
+				<div class="book">
+					<a href="https://actualwebsite.org" target="_blank" style="--bg: #c0c1ff; --fg: #282a60;">This is an Actual Website.</a>
+					<a href="https://web.archive.org/web/20240824235925/https://actualwebsite.org/" target="_blank">iA</a>
+				</div>
+				<div class="book">
+					<a href="https://www.andrewturnbull.net/mozilla/history.html" target="_blank" style="--bg: #abc7ff; --fg: #0d2f5f;">Visual Browser History, from Netscape 4 to Mozilla Firefox</a>
+					<a href="https://web.archive.org/web/20250105170220/https://www.andrewturnbull.net/mozilla/history.html" target="_blank">iA</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/interests/intnav.js"></script>
+	</body>
+</html>

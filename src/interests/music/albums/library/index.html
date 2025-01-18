@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>my little library of tunes</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/favicon.png">
+		<style>
+			*, :after, :before {box-sizing: border-box;}
+			body {
+				margin: 0;
+				background: radial-gradient(circle at top, #00434e 0%, #001f25 100%);
+				background-attachment: fixed;
+				font-family: Arial, Helvetica, sans-serif;
+				color: #a5eeff;
+			}
+			h1, h2, h3, h4, p, ol {
+				margin-block-start: 0;
+				margin-block-end: 0;
+			}
+			h2, h3 {color: #a5eeff;}
+			nav {
+				position: fixed;
+				background: linear-gradient(180deg, #004e5a 0%, #a3eeff00 100%);
+				margin: 0;
+				padding: 20px;
+				color: #a5eeff;
+				width: 100%;
+				top: 0;
+				z-index: 5;
+			}
+			a {color: #dce1ff;}
+			main {
+				margin: 20px 0 0 20px;
+				margin-top: 60px;
+			}
+			i {
+				color: #bfc8cb;
+				opacity: 0.8;
+			}
+			.albums {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+			}
+			.album {
+				display: flex;
+				width: 200px;
+				flex-direction: column;
+				align-items: center;
+				margin: 10px;
+				text-align: center;
+				cursor: pointer;
+			}
+			.album:hover .cover {transform: translateY(-10px);}
+			.album:hover .cover:before {
+				filter: blur(15px);
+				-webkit-filter: blur(15px);
+				bottom: -10px;
+				opacity: 0.7;
+			}
+			.cover, .cover:before, .cover:after {transition-duration: 0.3s;}
+			.cover, .cover img {
+				width: 100px;
+				height: 100px;
+			}
+			.cover {transform: skewY(-7deg);}
+			.cover:before, .cover:after {
+				content: '';
+				width: 100%;
+				position: absolute;
+			}
+			.cover:before {
+				height: 10px;
+				background: #001114;
+				bottom: 0;
+				filter: blur(10px);
+				-webkit-filter: blur(10px);
+				z-index: -1;
+			}
+			.cover:after {
+				height: 100%;
+				transform: translateX(-100px);
+				background: linear-gradient(180deg, #ffffff57 0%, #ebfbff00 50%, #ebfbff00 80%, #001f251a 100%);
+			}
+			.album .name {
+				font-weight: bold;
+				margin-top: 15px;
+				color: #a5eeff;
+			}
+			.album .artist {
+				font-size: 14px;
+				color: #bdc5eb;
+			}
+			#modal {
+				display: none;
+				position: fixed;
+				z-index: 6;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: #001f25d7;
+				backdrop-filter: blur(50px);
+				animation: fadeIn 0.3s;
+			}
+			@keyframes fadeIn {
+				0% {opacity: 0; filter: blur(20px);}
+				100% {opacity: 1; filter: blur(0px);}
+			}
+			#modal-box {
+				margin: auto;
+				min-width: 400px;
+				max-width: 710px;
+			}
+			#close-modal {
+				background-color: var(--on-primary-container);
+				color: var(--primary-container);
+				border: 1px solid var(--primary-container);
+				width: 30px;
+				height: 30px;
+				font-weight: bold;
+				font-size: 30px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+			}
+			#modal-box, #modal-too-far {flex-direction: column;}
+			#the-modal, #modal-box, #modal-too-far {
+				display: flex;
+				gap: 10px;
+			}
+			#the-modal img {
+				width: 400px;
+				height: 400px;
+				object-fit: cover;
+				border: 1px solid var(--primary-container);
+			}
+			#modal-too-far {
+				width: 300px;
+				max-height: 400px;
+			}
+			.mono {font-family: monospace;}
+			.box {
+				background-color: var(--on-primary-container);
+				color: var(--primary-container);
+				padding: 10px;
+				border: 1px solid var(--primary-container);
+			}
+			.box a {color: var(--tertiary-container);}
+			#album-title {font-size: 24px;}
+			#album-info {
+				background-color: var(--on-tertiary-container);
+				color: var(--tertiary-container);
+				border: 1px solid var(--tertiary-container);
+			}
+			#track-list {
+				height: 100%;
+				background-color: var(--on-secondary-container);
+				color: var(--secondary-container);
+				border: 1px solid var(--secondary-container);
+				overflow-y: scroll;
+				padding-right: 0;
+			}
+			#track-list::-webkit-scrollbar {width: 5px;}
+			#track-list::-webkit-scrollbar-track {background-color: var(--on-secondary-container);}
+			#track-list::-webkit-scrollbar-thumb {background-color: var(--secondary-container);}
+			#track-list ol {padding-inline-start: 10px;}
+			#track-list ol li {
+				margin: 10px;
+				border-bottom: 1px solid var(--secondary-container);
+			}
+			#track-list ol li::marker {font-weight: bold;}
+			@media only screen and (max-width: 700px) {
+				#modal-box {min-width: unset;}
+				#the-modal {flex-direction: column-reverse;}
+				#the-modal img {
+					width: 300px;
+					height: 300px;
+				}
+				.cover::before {display: none;}
+				#disclaimers {max-width: 300px;}
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<p><a href="/">Home</a> <a href="/interests/music/">Music</a></p>
+			<h1>MUSiC LiBRARY</h1>
+		</nav>
+		<main id="main">
+			<h2>Vinyl</h2>
+			<div class="albums">
+				<a class="album" onclick="loadInfo('data/a/arctic.json', 0);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/f579e414e20f40969185e41182d72472.jpg" loading="lazy"></div>
+					<p class="name">AM</p>
+					<p class="artist">Arctic Monkeys</p>
+				</a>
+			</div>
+			<h2>Digital</h2>
+			<div class="albums">
+				<a class="album" onclick="loadInfo('data/a/andor.json', 0);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/d82fe962fa809c9e3b034def363d8f01.jpg" loading="lazy"></div>
+					<p class="name">Go! Go! Year of the Cow</p>
+					<p class="artist">Andor</p>
+				</a>
+				<a class="album" onclick="loadInfo('data/a/andor.json', 1);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/25c393d687d9f4f93863d678c642eff2.jpg" loading="lazy"></div>
+					<p class="name">Duelists In Love</p>
+					<p class="artist">Andor</p>
+				</a>
+				<a class="album" onclick="loadInfo('data/b/banshee.json', 0);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/770x0/b44a010fdd93a24212931842113656b6.jpg" loading="lazy"></div>
+					<p class="name">Music for Menus</p>
+					<p class="artist">Blank Banshee</p>
+				</a>
+				<a class="album" onclick="loadInfo('data/f/fishpaste.json', 0);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/f8d8ed0c361a0c5e2fc81d5e0976c3e0.jpg" loading="lazy"></div>
+					<p class="name">oh no we are lost</p>
+					<p class="artist">fishpaste</p>
+				</a>
+				<a class="album" onclick="loadInfo('data/g/goodkid.json', 0);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/5d38c4b46cd8522dc98eabdab43cb2bb.jpg" loading="lazy"></div>
+					<p class="name">Good Kid</p>
+					<p class="artist">Good Kid</p>
+				</a>
+				<a class="album" onclick="loadInfo('data/g/goodkid.json', 1);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/7d35179204f1a0ac5afbe3311b691ab0.jpg" loading="lazy"></div>
+					<p class="name">Good Kid 2</p>
+					<p class="artist">Good Kid</p>
+				</a>
+				<a class="album" onclick="loadInfo('data/j/jakey.json', 0);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/32f25910da5748b6b768a3c62652dddb.jpg" loading="lazy"></div>
+					<p class="name">ROMCOM</p>
+					<p class="artist">Jakey</p>
+				</a>
+				<a class="album" onclick="loadInfo('data/j/jpegmafia.json', 0);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/770x0/a49cb7a5062e0d508a352fd22c35a302.jpg" loading="lazy"></div>
+					<p class="name">I LAY DOWN MY LIFE FOR YOU</p>
+					<p class="artist">JPEGMAFIA</p>
+				</a>
+				<a class="album" onclick="loadInfo('data/k/kgatlw.json', 0);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/63287ae3739a01fe90e2809f8270c64a.jpg" loading="lazy"></div>
+					<p class="name">Polygondwanaland</p>
+					<p class="artist">King Gizzard and the Lizard Wizard</p>
+				</a>
+				<a class="album" onclick="loadInfo('data/l/losercamp.json', 0);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/770x0/6ef8df39522e0825e72ce7153b711fb2.jpg" loading="lazy"></div>
+					<p class="name">Boondoggling</p>
+					<p class="artist">Loser Camp</p>
+				</a>
+				<a class="album" onclick="loadInfo('data/m/mayaisdead.json', 0);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/5fc89a7571bf35d5c2830125c4a62b49.jpg" loading="lazy"></div>
+					<p class="name">maya is dead soon</p>
+					<p class="artist">maya is dead soon</p>
+				</a>
+				<a class="album" onclick="loadInfo('data/m/mucoid.json', 1);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/df99ce08456a61af83964e5dd15d5dbc.jpg" loading="lazy"></div>
+					<p class="name">Sewer Man</p>
+					<p class="artist">Mucoid</p>
+				</a>
+				<a class="album" onclick="loadInfo('data/m/mucoid.json', 0);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/653abf0dfc72d8963db495723e927162.jpg" loading="lazy"></div>
+					<p class="name">Zones</p>
+					<p class="artist">Mucoid</p>
+				</a>
+				<a class="album" onclick="loadInfo('data/r/rav.json', 0);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/84d291732889258ae58f06f4e28b1dbc.jpg" loading="lazy"></div>
+					<p class="name">Skin</p>
+					<p class="artist">Rav, Kill Bill: The Rapper, Scuare</p>
+				</a>
+				<a class="album" onclick="loadInfo('data/r/renns.json', 0);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/1bcf60893f8d9f6b1b1327880f5b0c88.jpg" loading="lazy"></div>
+					<p class="name">모두 살아 <i>(EVERYONE, LIVE)</i></p>
+					<p class="artist">Cecily Renns</p>
+				</a>
+				<a class="album" onclick="loadInfo('data/s/standingoncorner.json', 0);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/9e249393bc7e6f683ddcfdd77449a3c5.jpg" loading="lazy"></div>
+					<p class="name">Standing on the Corner</p>
+					<p class="artist">Standing on the Corner</p>
+				</a>
+				<a class="album" onclick="loadInfo('data/v/vansire.json', 0);">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/d5bd07fc8ddce04f38ab15df780b3e1b.jpg" loading="lazy"></div>
+					<p class="name">Reflections and Reveries</p>
+					<p class="artist">Vansire</p>
+				</a>
+			</div>
+			<h3>Bootlegs</h3>
+			<div class="albums">
+				<a class="album">
+					<div class="cover"><img src="https://lastfm.freetls.fastly.net/i/u/174s/60119eca579b666e2c51b8bcdc1cc2f9.jpg" loading="lazy"></div>
+					<p class="name">Weatherscan Music</p>
+				</a>
+			</div>
+			<p>Inspired by <a href="https://books.chsmc.org/" target="_blank">The Internet Library of Lewis Chase McCoy</a></p>
+		</main>
+		<div id="modal">
+			<div id="modal-box">
+				<span id="close-modal" onclick="closeModal();">&times;</span>
+				<div id="the-modal">
+					<img id="cover-art">
+					<div id="modal-too-far">
+						<div id="album-info" class="box">
+							<h4 id="album-title"></h4>
+							<p id="album-artist"></p>
+						</div>
+						<div id="album-info-ext" class="box">
+							<p><strong>Year</strong>: <span id="album-year" class="mono">XXXX</span></p>
+							<p><strong>Rating</strong>: <span id="album-rating" class="mono">none</span></p>
+							<p><strong>Scrobbles</strong>: <span id="album-scrobbles" class="mono">000</span></p>
+							<p><strong>Links</strong>: <span id="album-links"></span></p>
+						</div>
+						<div id="track-list" class="box"></div>
+					</div>
+				</div>
+				<div class="box" id="disclaimers">
+					<p>Some data is from last.fm. Due to inconsistencies in metadata tagging, scrobble counts may be lower.</p>
+				</div>
+			</div>
+		</div>
+		<script>
+			function loadInfo(toFetch, position) {
+				document.getElementById('modal').style.display = 'flex';
+				document.getElementById('track-list').innerHTML = 'Loading...';
+				let jason;
+				fetch(toFetch)
+				.then(response => response.json())
+				.then(hello => {
+					jason = hello;
+					document.getElementById('album-title').innerHTML = hello.album[position].title;
+					document.getElementById('album-artist').innerHTML = hello.album[position].artist;
+					document.getElementById('album-year').innerHTML = hello.album[position].year;
+					document.getElementById('album-rating').innerHTML = hello.album[position].rating;
+					document.getElementById('album-links').innerHTML = hello.album[position].links;
+					document.getElementById('cover-art').src = hello.album[position].image;
+					document.getElementById('modal-box').setAttribute('style', `--on-primary-container: ${hello.album[position].colors[0].bg}; --primary-container: ${hello.album[position].colors[0].fg}; --on-secondary-container: ${hello.album[position].colors[1].bg}; --secondary-container: ${hello.album[position].colors[1].fg}; --on-tertiary-container: ${hello.album[position].colors[2].bg}; --tertiary-container: ${hello.album[position].colors[2].fg};`);
+					const url = `http://ws.audioscrobbler.com/2.0/?method=album.getInfo&username=wiichicken&api_key=93016c14b5580e5f2a72cdc9413cfa36&artist=${hello.album[position].artist}&album=${hello.album[position].title}&format=json`;
+					let request = new XMLHttpRequest();
+					request.open('GET', url, true);
+					request.send();
+					request.onload = function () {
+						if (request.status >= 200 && request.status < 400) {
+							const data = JSON.parse(request.responseText);
+							document.getElementById('album-scrobbles').innerHTML = data.album.userplaycount;
+							if (!data.album.tracks || !data.album.tracks.track || data.album.tracks.track.length === 0) {
+								document.getElementById('track-list').innerHTML = '<p>this album doesn\'t have a tracklist. this is because this album isn\'t real and i made it up</p>';
+								return;
+							}
+							// for EPs, checks if alternate tagging has more scrobbles
+							if (data.album.tracks.track.length <= 6) {
+								const secondRequest = new XMLHttpRequest();
+								secondRequest.open('GET', `http://ws.audioscrobbler.com/2.0/?method=album.getInfo&username=wiichicken&api_key=93016c14b5580e5f2a72cdc9413cfa36&artist=${hello.album[position].artist}&album=${hello.album[position].title} - EP&format=json`, true);
+								secondRequest.send();
+								secondRequest.onload = function () {
+									if (secondRequest.status >= 200 && secondRequest.status < 400) {
+										const epData = JSON.parse(secondRequest.responseText);
+										console.log(epData.album.userplaycount);
+										if (epData.album.userplaycount > data.album.userplaycount) {document.getElementById('album-scrobbles').innerHTML = epData.album.userplaycount;}
+									}
+								}
+							}
+							let tracks = data.album.tracks.track ? data.album.tracks.track : null;
+							let trackCount = tracks.length;
+							let ol = document.createElement('ol');
+							tracks.forEach(track => {
+								let li = document.createElement('li');
+								li.innerHTML = track.name;
+								ol.appendChild(li);
+							});
+							document.getElementById('track-list').innerHTML = '';
+							document.getElementById('track-list').appendChild(ol);
+							return;
+						} else {console.log('Fuck.');}
+					};
+					request.onerror = function () {
+						console.log('request error. Fuck.');
+					};
+				})
+				.catch(error => {
+					console.log('Fuck:', error);
+				});
+			}
+			function closeModal() {document.getElementById('modal').style.display = 'none';}
+			document.addEventListener('keydown', function(event) {
+				if (event.key === 'Escape' || event.key === 'Esc') {closeModal();}
+			});
+			let modal = document.getElementById('modal');
+			window.onclick = function(event) {
+				if (event.target == modal) {modal.style.display = "none";}
+			}
+		</script>
+	</body>
+</html>

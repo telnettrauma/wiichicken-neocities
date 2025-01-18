@@ -1,0 +1,58 @@
+#flood {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 100%;
+	left: 0px;
+	z-index: 1000;
+}
+#flood-menu {
+	display: none;
+	padding: 5px;
+	color: #afebff;
+	font-size: 13px;
+	z-index: 1001;
+	pointer-events: none;
+}
+#flood-message {text-shadow: black 0 0 5px;}
+#flood-menu button {
+	border-radius: 0px;
+	background-color: #9ba8bb;
+	border: 3px double #1e1e1e;
+}
+#flood-info {
+	font-size: 18px;
+	background-color: #d9e2ff;
+}
+#flood-fill-water {
+	position: absolute;
+	bottom: 0;
+	margin: 5px;
+	z-index: 1001;
+}
+.flood-unavailable {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+.wave > use {
+	animation: slide 40s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+	fill: url("#water");
+}
+.wave > use:nth-child(1) {
+	animation-delay: -2s;
+	animation-duration: 14s;
+}
+.wave > use:nth-child(2) {
+	animation-delay: -3s;
+	animation-duration: 20s;
+}
+.wave > use:nth-child(3) {
+	animation-delay: -5s;
+	animation-duration: 40s;
+}
+@keyframes slide {
+	0% {transform: translate3d(-90px, 0, 0);}
+	100% {transform: translate3d(85px, 0, 0);}
+}
+@media only screen and (max-width: 650px) {#side-flood {display: none !important;}}

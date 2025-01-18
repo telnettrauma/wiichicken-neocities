@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap');
+body {
+	margin: 0;
+	font-family: 'PT Sans', sans-serif;
+	background-color: var(--bg);
+	color: var(--main);
+}
+h1, h2, h3, h4, h5, h6 {font-family: 'Martian Mono', monospace;}
+hr {
+	height: 0px;
+	color: var(--border);
+	border: 1px solid var(--border);
+}
+a {
+	color: var(--bg);
+	text-decoration: none;
+}
+#themachine, main {margin-bottom: 40px !important;}
+.heading {
+	width: 100%;
+	z-index: 10;
+	margin: 0;
+	bottom: 0;
+	position: fixed;
+	transition-duration: 0.5s;
+	height: 30px;
+	background-color: black;
+}
+.heading::after {
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 80%, var(--bg-1) 100%);
+	content: '';
+	bottom: 0;
+	top: 0;
+}
+#inHead {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 100px;
+	margin: 5px;
+}
+.topLinks, .topLinks a, #fakeLogo, .square {pointer-events: all;}
+.topLinks a {
+	font-size: 15px;
+	color: var(--dark-tertiary);
+	padding: 0 10px 0 10px;
+	background-color: unset !important;
+}
+.topLinks a:hover {
+	font-weight: bold;
+	color: white !important;
+}
+#fakeLogo {
+	display: flex;
+	align-items: center;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	z-index: 2;
+	margin: -35px 20px 0 0;
+	padding: 5px;
+	pointer-events: all;
+	position: absolute;
+	right: 5px;
+	background-color: white;
+	aspect-ratio: 1;
+	border: 5px solid black;
+}
+#fakeLogo:hover {
+	padding: 10px;
+	transform: translateY(-20px);
+}
+#fakeLogo:hover #s1 {box-shadow: 0 0 100px 25px red, 42px 0 100px 25px #00a2ff;}
+#fakeLogo .square {
+	width: 15px;
+	height: 15px;
+	margin: 2px;
+}
+#fakeLogo:hover .square {
+	transform: scale(1.5);
+	transform-origin: center;
+	margin: 1px;
+	transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+	animation: look-around 3s;
+}
+@keyframes look-around {
+	30% {transform-origin: initial;}
+	40% {transform-origin: left;}
+	50% {transform-origin: left;}
+	60% {transform-origin: right;}
+	75% {transform-origin: right;}
+	85% {transform-origin: initial;}
+}
+#fakeLogo:hover #s1 {margin-right: 10px;}
+#s1 {background-color: red; transition-duration: 0.3s;}
+#s2 {background-color: #00a2ff; transition-duration: 0.5s;}
+#fakeLogo:active {padding: 7px;}
+#fakeLogo:active .square {
+	margin: 1px;
+	transition-duration: 0.2;
+}
+#fakeLogo:active #s1 {transform: scale(1.7); margin-right: 15px;}
+#fakeLogo:active #s2 {transform: scale(2.1);}
