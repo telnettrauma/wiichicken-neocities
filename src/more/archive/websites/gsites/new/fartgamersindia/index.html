@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>fart gamers</title>
+  </head>
+  <body>
+    <style>
+      body {margin: 0;}
+      .mainpage {
+        height: 100%;
+        margin-left: 200px;
+        padding: 5px;
+      }
+      #sidebar {
+        width: 200px;
+        border: none;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        background-color: gray;
+      }
+      #mainframe {
+        margin-left: 200px;
+        border: none;
+        width: 100%;
+        position: fixed;
+        height: 100%;
+      }
+      ul {
+        list-style-type: none;
+        padding-inline-start: 20px;
+      }
+      a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+    <div id="sidebar">
+      <ul class="navbar">
+        <li><h1>fart gamers</h1></li>
+        <li><a onclick="setPage('home.html')">welcome!</a></li>
+        <li><a>blog</a></li>
+        <li>
+          <a onclick="setPage('gift/index.html')">gift shop</a>
+          <ul>
+            <li><a onclick="setPage('gift/music.html')">music</a></li>
+            <li><a onclick="setPage('gift/wallpapers.html')">wallpapers</a></li>
+            <li><a onclick="setPage('gift/images.html')">images</a></li>
+            <li><a onclick="setPage('gift/other.html')">other</a></li>
+          </ul>
+        </li>
+        <li>
+          <a>about</a>
+          <ul>
+            <li>
+              <a onclick="setPage('about/discord/index.html')">discord</a>
+              <ul>
+                <li><a onclick="setPage('about/discord/rules.html')">rules</a></li>
+                <li><a onclick="setPage('about/discord/roles.html')">roles</a></li>
+                <li><a onclick="setPage('about/discord/hof.html')">hall of fame</a></li>
+              </ul>
+            </li>
+            <li><a onclick="setPage('about/fartai.html')">fart ai (bot)</a></li>
+            <li><a onclick="setPage('about/youtube.html')">youtube</a></li>
+          </ul>
+        </li>
+        <li>
+          <a onclick="setPage('help/index.html')">help</a>
+          <ul>
+            <li>
+              <a onclick="setPage('help/fartai/index.html')">fart ai</a>
+              <ul>
+                <li>
+                  <a onclick="setPage('help/fartai/more/index.html')">more features</a>
+                  <ul>
+                    <li><a onclick="setPage('help/fartai/more/events.html')">message events</a></li>
+                    <li><a onclick="setPage('help/fartai/more/autoreact.html')">autoreact</a></li>
+                    <li><a onclick="setPage('help/fartai/more/twitter.html')">twitter</a></li>
+                  </ul>
+                </li>
+                <li><a onclick="setPage('help/fartai/commands.html')">commands</a></li>
+                <li><a onclick="setPage('help/fartai/tags.html')">tags (custom reactions)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <script>
+      function setPage(newPage) {
+        document.getElementById('mainframe').src = newPage;
+      }
+    </script>
+    <iframe src="home.html" id="mainframe"></iframe>
+		<script src="https://melonking.net/scripts/frame-link.js"></script>
+  </body>
+</html>
