@@ -1,0 +1,65 @@
+body {
+  background-color: #f6f6f6;
+  color: #404040;
+}
+a {
+  color: #004178;
+  text-decoration: none;
+}
+a:hover {color: #337dbb;}
+h1, h2, h3 {
+  font-weight: 300;
+  text-align: left;
+}
+img {
+  max-width: 610px;
+  overflow: scroll;
+}
+code {background-color: lightgray;}
+header .line {
+  height: 1px;
+  width: 100%;
+  background-color: white;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+nav a {
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  color: #262626;
+}
+nav a:hover {
+  background-color: white;
+  color: #262626;
+}
+article {
+  background-color: white;
+  margin: auto;
+  padding: 5px;
+  margin-top: 10px;
+}
+article p {
+  margin-bottom: 15px;
+}
+.comment {border-top: 1px solid #e5e5e5;}
+.comment p {
+  margin-bottom: 0;
+}
+.poll {background-color: #f6f6f6;}
+@media only screen and (min-width: 1190px) {
+  body {
+    width: 1190px;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 750px) {
+  article {
+    width: 610px;
+    padding: 15px;
+  }
+}

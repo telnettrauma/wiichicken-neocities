@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>"Ai" ASSiSTANT</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.png">
+    </head>
+    <body>
+        <!-- please refer to the canvas in your obsidian vault for a map -->
+        <style>
+            body {
+                font-family: 'Courier New', Courier, monospace;
+                width: 700px;
+                margin: auto;
+                background-color: rgb(0, 0, 26);
+                color: #88f8c8;
+            }
+            a {
+                background-color: #00ffcc;
+                color: #002118;
+                text-decoration: solid;
+                cursor: pointer;
+            }
+            .link {
+                background-color: #00419c;
+                color: #d9e2ff;
+            }
+            .newchat {
+                background-color: #37debf;
+                color: #00382e;
+                width: 100%;
+                font-family: 'Courier New', Courier, monospace;
+                border: none;
+                height: 30px;
+                cursor: pointer;
+            }
+            .newchat:hover {
+                background-color: #005143;
+                color: #5efbda;
+            }
+            .extlink {
+                background-color: #ffb95a;
+                color: #462a00;
+            }
+            img {
+                margin-right: 5px;
+                vertical-align: text-top;
+                float: left;
+                border: 1px solid #88f8c8;
+            }
+            .msg {
+                display: none;
+                border-bottom: 3px solid #88f8c8;
+                margin-bottom: 10px;
+            }
+            .wip {
+                background-color: #3b4664;
+                color: #dae2ff;
+                cursor: default;
+            }
+            #m001 {display: block;}
+        </style>
+        <h1>Ai ASSiSTANT</h1>
+        <p>This is still a HUGE work in progress. I still have planty more ideas for this. Conversations may still contain continuity errors or suddenly stop.</p>
+        <hr>
+        <div class="msg" id="m001">
+            <p><img src="ai/neut.png">
+            Hello! I'm the new "AI" assistant.<br>I am currently in beta testing, so I may not work completely as expected.<br>How can I help you?</p>
+            <ul id="l001">
+                <li><a class="wip">Find a page</a></li>
+                <li><a onclick="doAction('002')">Who are you?</a></li>
+                <li><a class="link" href="/index.html">Return home</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m002">
+            <p><img src="ai/neut.png">I was created to help users find what they need.<br>If you need anything, feel free to ask me.</p>
+            <ul id="l002">
+                <li><a onclick="doAction('003')">How are you?</a></li>
+                <li><a onclick="doAction('004')">What is your name?</a></li>
+                <li><a onclick="doAction('007')">You look familiar</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m007">
+            <p><img src="ai/neut.png">This is because my personification is based on my creator's online appearance.</p>
+            <ul id="l007">
+                <li><a class="link">The downside of making  an assistant that helps you find pages is that frequently you have a good idea, but you haven't actually made the page that would appear in conversation. As a result, you just end up with a bunch of dead ends.</a></li>
+                <li><a onclick="doAction('008')">Are you 2 the same person?</a></li>
+                <li><a onclick="doAction('004')">What's your name?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m008">
+            <p><img src="ai/neut.png">Yes, but at the same time, no.</p>
+            <ul id="l008">
+                <li><a onclick="doAction('003')">How are you?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m004">
+            <p><img src="ai/neut.png">I do not have a name because my creator could not come up with one.</p>
+            <ul id="l004">
+                <li><a onclick="doAction('004')">How are you?</a></li>
+                <li><a onclick="doAction('010')">Can I name you?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m003">
+            <p><img src="ai/neut.png">I am happy because someone is talking to me.<br>That does not usually happen.</p>
+            <ul id="l003">
+                <li><a onclick="doAction('006')">I'm sorry</a></li>
+                <li><a onclick="doAction('005')">I love you</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m005">
+            <p><img src="ai/neut.png">Ok.</p>
+            <ul id="l005">
+                <li><a onclick="doAction('009')">Do you love me?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m006">
+            <p><img src="ai/neut.png">You have no reason to feel sorry for me.<br>I am just an AI. I cannot actually feel any emotion, I can only pretend to.</p>
+            <ul id="l006">
+                <li><a onclick="doAction('013')">Are you really even an AI?</a></li>
+                <li><a onclick="doAction('009')">Do you love me?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m009">
+            <p><img src="ai/neut.png">Who are you asking?</p>
+            <ul id="l009">
+                <li><a onclick="doAction('011')">You, the AI</a></li>
+                <li><a onclick="doAction('012')">The site owner</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m010">
+            <p><img src="ai/neut.png">I would rather not, but if you insist...<br>What is your name for me?</p>
+            <ul id="l010">
+                <li><a class="wip">Cool guy</a></li>
+                <li><a onclick="doAction('021')">WiiCHiCKEN</a></li>
+                <li><a onclick="doAction('016')">CRiNGEPOOP</a></li>
+                <li><a onclick="doAction('014')">Jeff</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m011">
+            <p><img src="ai/neut.png">I am just an AI. I cannot love you.<br>In fact, I cannot feel actual emotions.<br>I am sorry...</p>
+            <ul id="l011">
+                <li><a onclick="doAction('013')">Are you really even AI?</a></li>
+                <li><a class="wip">Can you pretend to love me?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m012">
+            <p><img src="ai/neut.png">I cannot verify this.<br>I do not know who you specifically are, and I don't know who the site owner likes.</p>
+            <ul id="l012">
+                <li><a class="wip">I'm the site owner's girlfriend</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m013">
+            <p><img src="ai/neut.png">Don't let anybody know I'm telling you this.<br>I'm not really an AI, I'm just a complex algorithm. My creator lied about me being an AI to attract investors.</p>
+            <ul>
+                <li><a class="wip">Are you sentient?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m014">
+            <p><img src="ai/neut.png">Come on, is that all you can come up with?</p>
+            <ul id="l014">
+                <li><a onclick="doAction('015')">Joe</a></li>
+                <li><a onclick="doAction('015')">Bob</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m015">
+            <p><img src="ai/neut.png">Just let it go bruh... its over</p>
+        </div>
+        <div class="msg" id="m016">
+            <p><img src="ai/neut.png">I don't know why people keep calling me that...<br>Two different people!</p>
+            <ul id="l016">
+                <li><a onclick="doAction('017')">Really?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m017">
+            <p><img src="ai/neut.png">Yes, I think...</p>
+            <ul id="l017">
+                <li><a onclick="doAction('018')">How do I know you aren't lying?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m018">
+            <p><img src="ai/neut.png">I have a secret to tell you.<br>They are both the same person.<br>The CRiNGEPOOP was going to be abandoned, but it was just too good of a name to abandon.</p>
+            <ul id="l018">
+                <li><a onclick="doAction('019')">So, the character's name is CRiNGEPOOP?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m019">
+            <p><img src="ai/neut.png">No, the character has no name, but people give him a name anyway.<br>More people call him CRiNGEPOOP than WiiCHiCKEN.</p>
+            <ul id="i019">
+                <li><a onclick="doAction('020')">What happened to the old character?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m020">
+            <p><img src="ai/neut.png">He just stopped being in use.<br>Eventually, he was replaced.</p>
+            <ul id="i020">
+               <li><a onclick="doAction('023')">Why was the chicken replaced?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m021">
+            <p><img src="ai/neut.png">That reminds me of an old friend...</p>
+            <ul id="l021">
+                <li><a onclick="doAction('022')">Wait...</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m022">
+            <p><img src="ai/neut.png">Yeah, the site owner's character used to be an actual chicken. But as the years went by, the character appeared less and less like a chicken.<br>But now, I appear like this.<br>Note: try and find a way to stop your past self from writing this, because now you have to add this, for the sake of preservation...</p>
+            <ul id="l022">
+                <li><a onclick="doAction('023')">Why was the chicken removed?</a></li>
+                <li><a class="wip">Good, the old design sucked</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m023">
+            <p><img src="ai/neut.png">The owner just didn't like how the chicken looked.<br>He thought it was too generic, and he wanted a more 'edgy' character.</p>
+            <ul id="l023">
+                <li><a class="wip">Good, the old design sucked</a></li>
+                <li><a onclick="doAction('024')">Are you happy with this change?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m024">
+            <p><img src="ai/neut.png">Admittedly, the old character just sucked.<br>Its probably not coming back, because the creator really likes the current character.</p>
+            <ul id="l024">
+                <li><a class="wip">Did you ever get to experience being the chicken?</a></li>
+                <li><a onclick="doAction('025')">Why does the creator like it?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m025">
+            <p><img src="ai/neut.png">He's just happy to finally made something of his own.<br>It took him over 3 years to come to this state.</p>
+            <ul id="l025">
+                <li><a onclick="doAction('026')">What were the earlier designs like?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m026">
+            <p><img src="ai/neut.png">Generic, white creature with a sword and generic hair.<br>Actually, the hair thing is still true, but don't tell the creator I said that.<br>Reverse image searching the character on Google Images used to show Dave Strider from Homestuck.</p>
+            <ul id="l026">
+                <li><a onclick="doAction('027')">Have you ever read Homestuck?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m027">
+            <p><img src="ai/neut.png">I am just an AI.<br>I cannot read Homestuck.</p>
+            <ul id="l027">
+                <li><a onclick="doAction('028')">Hasn't AI read the entire internet?</a></li>
+                <li><a class="wip">Has the creator of this site read Homestuck?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m028">
+            <p><img src="ai/neut.png">I may be... an exception to that.</p>
+            <ul id="l028">
+                <li><a onclick="doAction('030')">What do you mean by that?</a></li>
+                <li><a onclick="doAction('029')">You've read everything but Homestuck?</a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m029">
+            <p><img src="ai/neut.png">I actually haven't read anything</p>
+            <ul id="l029">
+                <li><a onclick="doAction('030')"></a></li>
+            </ul>
+        </div>
+        <div class="msg" id="m030">
+            <p><img src="ai/neut.png">Don't let anybody know I'm telling you this.<br>I'm not really an AI, I'm just a complex algorithm. My creator lied about me being an AI to attract investors.</p>
+        </div>
+        <button onClick="location.reload();" class="newchat"><strong>NEW CHAT</strong></button>
+        <a onclick="document.getElementById('goolash').style.display = 'block';">ABOUT</a>
+        <p id="goolash" style="display: none;">This is a fake AI chatbot.<br>I find it especially hard to talk about things I like or have made, especially when not in conversaton. So, I created this.<br>This is intended as both a parody of AI chatbots that I'm actually getting kinda tired of seeing (it was funny the first 20 times but now they're getting on my nerves), as well as a way for me to discuss my character.<br>The writing here is not that good, and that's somewhat intentional. This is intended to be a stream of consciousness, put into a format that is fun to play around with.<br>Thank you for listening to what I have to say.</p>
+        <h1>devtool</h1>
+        <form>
+            <label for="danumber">page number:</label>
+            <input type="text" id="danumber" name="danumber"><br>
+            <label for="pagecont">page content:</label>
+            <input type="text" id="pagecont" name="pagecont" style="width: 100%; height: 300px;"><br>
+            <label for="link1">link 1:</label>
+            <input type="text" id="link1" name="link1"><br>
+            <label for="link2">link 2:</label>
+            <input type="text" id="link2" name="link2"><br>
+            <label for="link3">link 3:</label>
+            <input type="text" id="link3" name="link3"><br>
+            <label for="link4">link 4:</label>
+            <input type="text" id="link4" name="link4"><br>
+            <label for="link5">link 5:</label>
+            <input type="text" id="link5" name="link5"><br>
+        </form>
+        <button onclick="internalGenerate()">generate</button>
+        <p id="outputhtml">output html will go here</p>
+        <script>
+            var conductor = '001';
+            function doAction(newBoy) {
+                document.getElementById(`l${conductor}`).style.display = "none";
+                document.getElementById(`m${newBoy}`).style.display = "block";
+                conductor = newBoy;
+            }
+            function escapeHtml(unsafe) {
+                return unsafe
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;");
+            }
+            function internalGenerate() {
+                var pageNumber = escapeHtml(document.getElementById("danumber").value);
+                var poopCont = escapeHtml(document.getElementById("pagecont").value);
+                var linkNo1 = escapeHtml(document.getElementById("link1").value);
+                var linkNo2 = escapeHtml(document.getElementById("link2").value);
+                var linkNo3 = escapeHtml(document.getElementById("link3").value);
+                var linkNo4 = escapeHtml(document.getElementById("link4").value);
+                var linkNo5 = escapeHtml(document.getElementById("link5").value);
+                let newGen = `&ltdiv class="msg" id="m${pageNumber}"&gt;<br>&lt;p&gt;&lt;img src="ai/neut.png"&gt;${poopCont}&lt;/p&gt;<br>&lt;ul id="l${pageNumber}"&gt;<br>&lt;li&gt;&lt;a class="wip"&gt;${linkNo1}&lt;/a&gt;&lt;/li&gt;<br>&lt;li&gt;&lt;a class="wip"&gt;${linkNo2}&lt;/a&gt;&lt;/li&gt;<br>&lt;li&gt;&lt;a class="wip"&gt;${linkNo3}&lt;/a&gt;&lt;/li&gt;<br>&lt;li&gt;&lt;a class="wip"&gt;${linkNo4}&lt;/a&gt;&lt;/li&gt;<br>&lt;li&gt;&lt;a class="wip"&gt;${linkNo5}&lt;/a&gt;&lt;/li&gt;<br>&lt;/ul&gt;<br>&lt;/div&gt;`;
+                document.getElementById("outputhtml").innerHTML = newGen;
+            }
+        </script>
+    </body>
+</html>

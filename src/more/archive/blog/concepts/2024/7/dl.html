@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>video downloader</title>
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/style.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<style>
+		body {
+			background-color: #101417;
+			color: #e0e3e8;
+		}
+		#maincontrols {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			min-height: 80vh;
+		}
+		#header, footer {min-height: 10vh;}
+		#control-center {min-height: 60vh;}
+		button {
+			background-color: var(--button-bg);
+			color: var(--button-fg);
+			border: 1px solid var(--button-border);
+			box-shadow: 2px 2px 0 0 var(--button-border);
+			margin-top: 3px;
+		}
+		button:hover {
+			box-shadow: 1px 1px 0 0 var(--button-border);
+			transform: translate(1px, 1px);
+		}
+		button:active {
+			box-shadow: none;
+			transform: translate(2px, 2px);
+		}
+		.is-video {
+			--button-fg: #dfb8f7;
+			--button-bg: #412356;
+			--button-border: #9500ff;
+		}
+		.is-audio {
+			--button-fg: #f6bc70;
+			--button-bg: #462a00;
+			--button-border: #ff9100;
+		}
+		#dl-button {
+			--button-bg: #00344e;
+			--button-fg: #95cdf7;
+			--button-border: #0091ff;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<div id="maincontrols">
+			<div id="header">
+				<h1>ViDEO DOWNLOADER</h1>
+			</div>
+			<div id="control-center">
+				<input type="text" id="dl-url" name="dl">
+				<button onclick="submitReply();" id="dl-button">Download</button>
+				<div>
+					<button onclick="toggleAudio();" id="toggle-audio" class="is-video">downloading as video</button>
+				</div>
+			</div>
+			<footer>
+				<p>Powered by <a href="https://cobalt.tools" target="_blank">Cobalt</a> (<a href="https://github.com/imputnet/cobalt" target="_blank">GitHub</a>) - <a href="dl/index.html" target="_blank">help and about</a></p>
+			</footer>
+		</div>
+		<div id="dl-confirm" style="display: none;">
+			<h2>downloading...</h2>
+		</div>
+	</main>
+	<script>
+		const leHeader = new Headers();
+		leHeader.append("Accept", "application/json");
+		leHeader.append("Content-Type", "application/json");
+		let response;
+		let audioOnly = false;
+		async function submitReply() {
+			response = await fetch('https://api.cobalt.tools/api/json/', {
+				method: "POST",
+				body: JSON.stringify({ 
+					url: document.getElementById('dl-url').value,
+					isAudioOnly: audioOnly,
+					filenamePattern: 'nerdy'
+				}),
+				headers: leHeader,
+			});
+			var parsedJSON = await response.json();
+			downloadUrl(parsedJSON.url);
+		}
+		function downloadUrl(url) {
+			var link = document.createElement('a');
+			link.href = url;
+			link.click();
+		}
+		function toggleAudio() {
+			const toggleAudioButton = document.getElementById('toggle-audio');
+			toggleAudioButton.classList.toggle('is-audio');
+			if (toggleAudioButton.classList.contains('is-audio')) {
+				audioOnly = true;
+				toggleAudioButton.innerHTML = 'downloading as audio';
+			} else {
+				audioOnly = false;
+				toggleAudioButton.innerHTML = 'downloading as video';
+			}
+		}
+		async function setMainFrame() {
+			let params = new URLSearchParams(window.location.search);
+			let page = params.get('dl');
+			if (page === 'true') {
+				let isAudio = params.get('audio') === 'true';
+				document.getElementById('dl-url').value = params.get('url');
+				document.getElementById('maincontrols').style.display = 'none';
+				document.getElementById('dl-confirm').style.display = 'block';
+				submitReply();
+			}
+		}
+		setMainFrame();
+	</script>
+</body>
+</html>
