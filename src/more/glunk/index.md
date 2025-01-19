@@ -9,7 +9,7 @@ permalink: "/more/glunk/index.html"
 - [balls.html](balls.html)
 - [bobby.html](bobby.html)
 - [bangertweets.txt](bangertweets.txt)
-- [BLOGLIFE.md](BLOGLIFE.md)
+- [BLOGLIFE.txt](BLOGLIFE.txt)
 - [fartopia.html](fartopia.html)
 - [funfacts.txt](funfacts.txt)
 - [how_to_tie_knots.txt](how_to_tie_knots.txt)
