@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Music</title>
+		<meta charset="UTF-8">
+		<meta name="robots" content="noindex">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+	<div class="content landscape" style="margin: 0; position: relative; overflow: hidden;" id="main">
+		<div id="hiPoopFart">
+			<p id="listen" user="wiichicken">Loading...</p>
+			<div id="artworklink" target="_blank">
+				<img id="artwork" src="" onError="this.onerror=null;this.src='/resources/widgets/home/med/blank.png';">
+				<p id="track"></p>
+			</div>
+		</div>
+	</div>
+	<style>
+		* {
+			box-sizing: border-box;
+			--background: #132806;
+			--foreground: #c2ffd5;
+			--highlight: #18c976;
+			--corners: 5px;
+		}
+		::-webkit-scrollbar {width: 0;}
+		body {
+			font-family: "Segoe UI", Tahoma, sans-serif;
+			margin: 0;
+			color: var(--foreground);
+			background-color: var(--background);
+			overflow-x: hidden;
+		}
+		#listen {
+			font-size: 16px;
+			margin-block-start: 0;
+			margin-block-end: 5px;
+			font-weight: 300;
+		}
+		.content {max-height: 100vh;}
+		#artwork {
+			display: inline-block;
+			width: 100px;
+			max-width: 300px;
+			border-radius: var(--corners);
+		}
+		#artworklink {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#hiPoopFart {
+			position: relative;
+			z-index: 1;
+			width: 100vw;
+			height: 100vh;
+			object-fit: contain;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+		}
+		/* styles for when in landscape */
+		.landscape #hiPoopFart #artworklink {
+			flex-direction: row;
+			align-items: flex-end;
+		}
+		.landscape #hiPoopFart #artworklink #track {
+			margin-block-end: 0;
+			margin-left: 15px;
+			text-align: left;
+			font-size: 16px;
+			font-weight: 300;
+		}
+		.landscape #hiPoopFart #artworklink #track strong {
+			font-size: 22px;
+			color: var(--highlight);
+		}
+		.landscape #hiPoopFart {
+			align-items: flex-start;
+			padding: 15px;
+		}
+	</style>
+	<script>
+		let user = 'wiichicken';
+
+		function getNowPlaying() {
+			var url = `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`;
+			var request = new XMLHttpRequest();
+			request.open('GET', url, true);
+
+			request.onload = function() {
+				if (request.status >= 200 && request.status < 400) {
+					var data = JSON.parse(request.responseText);
+					var artist = data.recenttracks.track[0].artist["#text"];
+					var song = data.recenttracks.track[0]["name"];
+					var artwork = data.recenttracks.track[0].image[3]["#text"];
+					var tinyArtwork = data.recenttracks.track[0].image[0]["#text"];
+
+					var artworkImg = document.getElementById("artwork");
+					artworkImg.setAttribute("src", artwork);
+
+					var trackInfo = document.getElementById("track");
+					if (song.length > 40) {
+						trackInfo.innerHTML = "\
+							<marquee><strong>" + song + "</strong></marquee><br />\
+							" + artist + "\
+						";
+					} else {
+						trackInfo.innerHTML = "\
+							<strong>" + song + "</strong><br />\
+							" + artist + "\
+						";
+					}
+
+					if (typeof data.recenttracks.track[0]["@attr"] !== "undefined") {
+						var listenInfo = document.getElementById("listen");
+						listenInfo.innerHTML = '<span id="listenglow">Listening</span> to:';
+					} else {
+						var listenInfo = document.getElementById("listen");
+						listenInfo.innerHTML = 'Last <span>listened</span> to:';
+						console.log("false");
+					}
+				} else {
+					console.error("Error fetching data from server.");
+				}
+			};
+
+			request.onerror = function() {
+				console.error("Connection error.");
+			};
+
+			request.send();
+		}
+
+		document.addEventListener('DOMContentLoaded', getNowPlaying());
+		setInterval(function() {
+			getNowPlaying();
+		}, 15000);
+	</script>
+	</body>
+</html>
