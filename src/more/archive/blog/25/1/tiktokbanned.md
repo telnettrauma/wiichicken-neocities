@@ -4,6 +4,8 @@ title: "The TikTok Ban Was a Nothing Burger"
 date: 2025-01-19
 permalink: "/more/archive/blog/25/1/tiktokbanned.html"
 ---
+> It turns out TikTok **is** still banned in the United States. Please read the [follow up article](tiktokactuallybanned.html).
+
 The "nothing ever happens" crowd may of been screaming, saying that nothing is going to happen. But guess what, something happened, kinda.
 
 ## Banning
