@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>this is when i changed rhings yeah</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<link href="/style.css" rel="stylesheet">
+	<link rel="alternate" type="application/rss+xml" href="updates.xml" title="RSS">
+	<style>
+		* {
+			--dark-primary: #8bd5b5;
+			--dark-tertiary: #a6cce0;
+			--dark-on-tertiary: #093544;
+			--border: #00ffbf;
+			--light-on-primary-container: #00211699;
+			--dark-on-primary-container: #a7f2d0;
+			--bg-1: #00ffa6;
+			--bg-2: #00aeff;
+		}
+		header p, h2, h3 {
+			margin-block-start: 0;
+			margin-block-end: 0;
+		}
+		img {max-width: 560px;}
+		button {
+			background-color: var(--dark-on-tertiary);
+			color: var(--dark-tertiary);
+			border: 1px solid var(--dark-tertiary);
+			box-shadow: 2px 2px 0 0 var(--dark-tertiary);
+			margin: 3px;
+		}
+		button:hover {
+			box-shadow: 1px 1px 0 0 var(--dark-tertiary);
+			transform: translate(1px, 1px);
+		}
+		button:active {
+			box-shadow: unset;
+			transform: translate(2px, 2px);
+		}
+		.timeline {
+			display: flex;
+			max-width: 800px;
+		}
+		.time-line {
+			width: 20px;
+			min-width: 20px;
+			margin: 15px 0 15px 5px;
+			border: 1px solid var(--border);
+			border-right: none;
+			border-bottom: none;
+		}
+		section {margin-bottom: 5px !important;}
+		.sec-b {margin-bottom: 10px !important;}
+		.sec-t, .time-line {
+			--light-on-primary-container: #09201799;
+			--dark-on-primary-container: #cfe9da;
+			--border: #00ff6a;
+		}
+		li {margin-bottom: 5px;}
+	</style>
+</head>
+<body>
+	{% include "partials/navbar.njk" %}
+	<div id="chewTooth"></div>
+	<main>
+		<div class="box page-top">
+			<h1>SiTE UPDATE LOG</h1>
+		</div>
+		<div class="box sec-b">
+			<a href="updates.xml" target="_blank" class="noline"><button>RSS Feed</button></a>
+		</div>
+		<div class="timeline">
+			<div class="time-line"></div>
+			<div class="not-time">
+			<div class="box sec-t">
+				<h2>JANUARY</h2>
+			</div>
+			<section class="box">
+				<header>
+					<h3>WE'RE OPEN SOURCE!!!</h3>
+					<p>January 12, 2025</p>
+				</header>
+				<p>sorry everyone, there isn't really anything new with the site this week. however, i have made the GitHub repo for this site public, and you can check it out <a href="https://github.com/telnettrauma/wiichicken-neocities" target="_blank">here</a>!<br>with that being said, i am currently working on changing everything behind the scenes to make it easier to make pages and stuff, as well as to reduce the amount of javascript that is used. i basically have to move all <code>44,636</code> lines of code on this site, so this may take a bit!</p>
+			</section>
+			<section class="box sec-b">
+				<header>
+					<h3>NEW YEAR, SAME SiTE</h3>
+					<p>January 6, 2025</p>
+				</header>
+				<p>you heard that right! it may be a new year, but the site is still the same. i did make some small changes:</p>
+				<ul>
+					<li>the celebration theme is now gone. sorry.</li>
+					<li>as you have probably noticed, the noise texture is gone because of a bug <img src='/media/emoji/down.gif' loading='lazy' alt=''>. however im working on it!</li>
+					<li>if you go to the <a href="/interests/websites/reading.html" target="_blank">reading page</a>, you can now select a horizontal view for the bookshelf</li>
+				</ul>
+			</section>
+			</div>
+		</div>
+		</div>
+		<div class="box page-bottom">
+			<p>older updates:</p>
+			<ul>
+				<li><a href="2024/updates.html">2024</a></li>
+				<li><a href="2023/updates.html">2023</a></li>
+			</ul>
+		</div>
+	</main>
+	<script src="/resources/nav/navbar.js"></script>
+</body>
+</html>
