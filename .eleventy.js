@@ -4,9 +4,7 @@ const mdAttrs = require('markdown-it-attrs');
 
 module.exports = function (eleventyConfig) {
 
-  eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("images");
-  eleventyConfig.addPassthroughCopy("js");
+  eleventyConfig.addPassthroughCopy("src/**/*.{css,png,gif,json,jpg,jpeg,js,webmanifest,xml,ttf,ico,webp,txt}");
 
   eleventyConfig.setLibrary("md", markdownLib);
   eleventyConfig.amendLibrary("md", (markdownLib) => markdownLib.use(mdAttrs));
@@ -22,6 +20,15 @@ module.exports = function (eleventyConfig) {
   // date filter
   eleventyConfig.addFilter("date", (dateObj, format = "MMMM d, yyyy") => {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(format);
+  });
+
+  eleventyConfig.addGlobalData("eleventyComputed", {
+    permalink: (data) => {
+      if (data.page.filePathStem.startsWith("/")) {
+        return `${data.page.filePathStem}.html`;
+      }
+      return data.permalink; // fallback to the current permalink if it's set
+    },
   });
 
   return {

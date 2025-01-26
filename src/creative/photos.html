@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>say click! take a pic!</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+  </head>
+  <body>
+    <style>
+			:root {
+				--dark-secondary: #b0cccb;
+				--dark-on-primary-container: #6ff6f8;
+				--light-on-primary-container: #004f50;
+				--border: #4cdadb;
+			}
+      body {
+				margin: 0;
+				background-color: #2b151c
+			}
+      img {image-rendering: pixelated;}
+			main {
+				max-width: 800px;
+				margin: auto;
+			}
+			.gallery {display: flex;}
+      .gallery a {
+        display: flex;
+        align-items: center;
+				flex-direction: column;
+				padding: 5px;
+      }
+      .gallery img {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+		<div id="heightCheck"></div>
+		{% include "partials/navbar.njk" %}
+		<div id="sideButton" onclick="openSidey()"></div>
+		<div id="overSide"></div>
+		<div id="chewTooth"></div>
+		<main>
+			<div class="box">
+				<h1>PHOTOGRAPHY</h1>
+			</div>
+			<div class="box">
+				<p>wow! look at all of my pretty pictures at an awful resolution.</p>
+			</div>
+			<div class="box">
+				<div class="gallery">
+					<a href="photos/24/abandoned.html" target="_blank"><img src="https://i.imgur.com/M5Cj34V.png">abandoned building</a>
+				</div>
+			</div>
+			<div class="box">
+				<p>hey guys im not that motivated to make this gallery look good so just pretend it does look good.</p>
+			</div>
+		</main>
+  </body>
+</html>
