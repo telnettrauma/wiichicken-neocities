@@ -1,0 +1,56 @@
+<!-- site of the fiscal period styling -->
+<style>
+	#sotfp {
+		--border: #F6BE14;
+		background-color: #352500ab;
+		color: #ffdf99;
+	}
+	#sotfp p, #sotfp h2 {
+		margin-block-start: 0;
+		margin-block-end: 0;
+	}
+	#sotfp h2 {
+		color: #f6be14;
+		font-size: 2vmax;
+		text-shadow: #f6be1479 0 0 5px;
+	}
+	#sotfp h2 {font-size: 2vmax;}
+	#sotfp-head {
+		display: flex;
+		justify-content: space-between;
+	}
+	#sitebutton {
+		image-rendering: pixelated;
+		width: 176px;
+		height: 62px;
+	}
+	#linksys {margin-top: 5px;}
+	#aboutMyButt .yourBatt {
+		background-color: #52452a;
+		--main-color: #d7c4a0;
+	}
+	#sotfp a {padding: 3px;}
+	#sotfp a::after {display: none;}
+	#floating-disclaimer {font-size: 10px;}
+	.yourBatt {
+		background-color: #3f2e00;
+		color: #ffdf99;
+		text-decoration: none;
+		padding: 5px;
+		border: 1px solid var(--main-color);
+		--main-color: #f6be14;
+		box-shadow: 2px 2px 0 var(--main-color);
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+	}
+	#sotfp a:hover .yourBatt {
+		transform: translate(1px, 1px);
+		box-shadow: 1px 1px 0 var(--main-color);
+		z-index: 0;
+	}
+	#sotfp a:active .yourBatt {
+		transform: translate(2px, 2px);
+		box-shadow: unset;
+	}
+</style>
