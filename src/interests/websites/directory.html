@@ -35,6 +35,9 @@
 		.list .listhell {display: block;}
 		.grid .buttonhell {display: flex;}
 		.list .buttonhell, .grid .listhell {display: none;}
+		/* additional styling for sotfp */
+		#sotfp {border-color: #F6BE14;}
+		#sotfp a {background-color: unset;}
 		@media (prefers-reduced-motion = no-preference) {
 			.buttonhell a:hover {
 				max-width: 88px;
@@ -66,6 +69,7 @@
 			height: 62px;
 		}
 	</style>
+	{% include "partials/interests/websites/sotfp/style.njk" %}
 	<div id="heightCheck"></div>
 	<div class="heading" id="poopBlock"></div>
 	<div id="chewTooth"></div>
@@ -106,9 +110,7 @@
 		<div class="box">
 			<h1>DiRECTORY</h1>
 		</div>
-		<div class="box" id="sofp" style="padding: 0; display: flex; background-color: #352500; border-color: #f6be14; max-width: 700px;">
-			<iframe src="sotfp/widget.html" style="width: 100%; height: 100px; border: none;"></iframe>
-		</div>
+		{% include "partials/interests/websites/sotfp/widget.njk" %}
 		<div id="butterball" class="grid">
 			<header>
 				<div class="box" style="width: auto;">
