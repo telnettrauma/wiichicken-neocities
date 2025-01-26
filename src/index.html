@@ -880,11 +880,14 @@
 			</div>
 			<div class="box sec-t">
 				<h2>siteUpdates</h2>
-				<h3 style="margin: 0; font-size: 15px;"><strong>WE'RE OPEN SOURCE</strong></h3>
-				<p id="updatedate">January 12, 2025</p>
+				<h3 style="margin: 0; font-size: 15px;"><strong>MOVE TO THE DARK SiDE</strong></h3>
+				<p id="updatedate">January 26, 2025</p>
 			</div>
 			<div class="box">
-				<p>sorry everyone, there isn't really anything new with the site this week. however, i have made the GitHub repo for this site public, and you can check it out <a href="https://github.com/telnettrauma/wiichicken-neocities" target="_blank">here</a>!<br>with that being said, i am currently working on changing everything behind the scenes to make it easier to make pages and stuff, as well as to reduce the amount of javascript that is used. i basically have to move all <code>44,636</code> lines of code on this site, so this may take a bit!</p>
+				<p>i promised myself that this would never happen, yet here i am writing this right now.<br>this website now uses 11ty, which is a static site generator. this doesn't really change anything that you can see, but behind the scenes, it <strong>might</strong> make things a whole lot easier. who knows!</p>
+				<p>previously, i used javascript to insert the navigation bar into each page. this worked, but was less than ideal, especially because it meant users who didn't have javascript enabled would encounter a worse experience of this site.<br>11ty changes this. instead, i can do the following for the same effect:</p>
+				<code>{ % includes "partials/navbar.njk" % }</code>
+				<p>this has the same functionality as before, but now works without javascript! awesome! as a result of this change, opera gx users are now allowed on my website again <img src='/media/emoji/whine.gif' loading='lazy' alt='whine emoji'>. sorry.<br>everything should work the exact same, but because i had to manually move every site file, some things may be broken. if you find something that is broken, please send me an email: <a href="mailto:vimeoofficial@gmail.com" target="_blank">vimeoofficial@gmail.com</a></p>
 			</div>
 			<div class="box sec-b">
 				<p>site updates almost every sunday, blog posts and content updates whenever</p>
