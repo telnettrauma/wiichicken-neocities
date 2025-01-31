@@ -22,7 +22,7 @@ h1, h2, h3, h4, .mainnav {
 	margin-block-start: 0;
 	margin-block-end: 0;
 }
-a {
+.main a {
 	text-decoration: none;
 	background-color: #b3ebff;
 	color: #00677d !important;
