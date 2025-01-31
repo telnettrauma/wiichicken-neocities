@@ -49,10 +49,7 @@ a {
 	padding: 0 10px 0 10px;
 	background-color: unset !important;
 }
-.topLinks a:hover {
-	font-weight: bold;
-	color: white !important;
-}
+.topLinks a:hover {color: white !important;}
 #fakeLogo {
 	display: flex;
 	align-items: center;
