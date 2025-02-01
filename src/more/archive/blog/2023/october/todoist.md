@@ -10,8 +10,6 @@ permalink: "/more/archive/blog/2023/october/todoist.html"
 
 </div>
 
-  
-
 recently, i decided that i could benefit from using a todo list in my life. after looking through a ton of different options, i ended up with only 2 left, todoist and ticktick. so because why not, i will compare them, and see what one is better. note that this is a desktop focused review, so i won’t be trying out the mobile or watch apps. also, because this is a free tier review, of course im not trying the paid plans!
 
 ## terms

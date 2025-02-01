@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{{ title }} - WiiCHiCKEN BLOG</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/favicon.png">
+		<meta charset="UTF-8">
+		<style>
+			body {
+				max-width: 800px;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>{{ title }}</h1>
+			<p>january 16, 2024</p>
+		</header>
+		<article>
+			{{ content | safe }}
+		</article>
+	</body>
+</html>
