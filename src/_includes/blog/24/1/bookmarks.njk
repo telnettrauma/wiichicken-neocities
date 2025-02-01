@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{{ title }} - WiiCHiCKEN BLOG (January 23, 2024)</title>
+		<link rel="icon" type="image/x-icon" href="/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<style>
+			body {
+				max-width: 800px;
+				margin: auto;
+				background-color: #211b00;
+				color: #fde265;
+			}
+			img {max-width: 800px;}
+			h1 {font-family: monospace;}
+			a {
+				text-decoration: none;
+				background-color: #c4eccf;
+				color: #2b4e38;
+			}
+			header {text-align: center;}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>{{ title }}</h1>
+			<p>January 23, 2024</p>
+		</header>
+		{{ content | safe }}
+	</body>
+</html>
