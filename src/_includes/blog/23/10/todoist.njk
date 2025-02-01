@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{ title }} - October 4, 2023 - WiiCHiCKEN</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<meta charset="UTF-8">
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #fffbff;
+		}
+		article {
+			background-color: #ece0df;
+			color: #201a1a;
+			margin: auto;
+			max-width: 800px;
+			padding: 10px;
+		}
+		blockquote {
+			border-left: 3px solid #524343;
+			padding-left: 5px;
+		}
+		img {
+			max-width: 100%;
+			max-height: 50vh;
+		}
+		.imgcap {
+			display: flex;
+			flex-direction: column;
+			padding: 5px;
+		}
+		.imgrow {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			width: 100%;
+		}
+		.imgrow img {object-fit: contain;}
+		.disclaimer {
+			background-color: #ffddb2;
+			color: #5c421a;
+			padding: 5px;
+		}
+		.disclaimer a {
+			text-decoration: none;
+			color: #ffddb2;
+			background-color: #291800;
+		}
+		span {font-weight: bold;}
+	</style>
+</head>
+<body>
+	<article>
+		<header>
+			<h1>{{ title }}</h1>
+			<p>October 4, 2023</p>
+		</header>
+		{{ content | safe }}
+	</article>
+</body>
+</html>
