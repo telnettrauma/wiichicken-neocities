@@ -658,7 +658,7 @@
     download.click();
   };
   const exportControlWhenCreate = (originValueList) => {
-    const info = ['/**======== Create by Plurk CSS Generator ========**/', '/**== https://hoshikata.github.io/PlurkCSSGenerator ==**/'];
+    const info = ['/**======== Created by ENG Plurk CSS Generator ========**/', '/**== https://wiggle.monster/more/glunk/themes/plurk/css-gen/'];
     generatorGetOriginValueList(originValueList);
     const result = generatorExportResult(originValueList);
     result.unshift(...info);
