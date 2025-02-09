@@ -1,0 +1,112 @@
+#browser.win.address-top .toolbar:has(.window-buttongroup.on-mainbar) {
+  min-height: 34px !important;
+}
+#browser {
+  menuWidth: 0;
+}
+#browser.win .window-buttongroup {
+  top: unset !important;
+}
+.disable-titlebar#browser.win .window-buttongroup {
+  height: 35px !important;
+}
+#browser.win .window-buttongroup button {
+  width: 25px !important;
+}
+#browser.win .window-buttongroup button.window-close {
+  width: 25px !important;
+}
+#browser.win.address-top .toolbar:has(.window-buttongroup.on-mainbar) {
+  padding-right: calc((25px * 3) / var(--uiZoomLevel)) !important;
+}
+.toolbar-mainbar .toolbar-extensions > .button-toolbar > button, .toolbar-mainbar .page-zoom-controls > .button-toolbar > button, .toolbar-mainbar > .button-toolbar > button, .toolbar-mainbar .toolbar-extensions > .toolbar-group > .button-toolbar > button, .toolbar-mainbar .page-zoom-controls > .toolbar-group > .button-toolbar > button, .toolbar-mainbar > .toolbar-group > .button-toolbar > button {
+  min-width: 34px !important;
+  filter: drop-shadow(2px 2px 0 black);
+}
+.UrlBar-AddressField {
+  box-shadow: 2px 2px 0 0 black;
+}
+.toolbar-large .button-circularimage.button-cropimage.profile-popup button img {
+  width: 26px !important;
+  height: 26px !important;
+  border: 1px solid black;
+}
+.ToolbarButton-Button:hover {
+  box-shadow: none;
+}
+.on-speeddial, .SpeedDial-Blocked-Counter {
+  box-shadow: 2px 2px 0 0 black;
+  border: 1px solid black !important;
+}
+.startpage .startpage-navigation {
+  margin: 5px !important;
+  box-shadow: 2px 2px 0 0 black;
+  border: 1px solid black;
+}
+#browser .tab-position .tab.active {
+  box-shadow: 2px 2px 0 0 black;
+  border: 1px solid black;
+}
+.draggable.dial.folder {
+  box-shadow: 2px 2px 0 0 black;
+  border: 1px solid black;
+}
+.newtab {
+  border: 1px solid black;
+  margin-top: 5px;
+  box-shadow: 2px 2px 0 0 black;
+  background-color: var(--colorAccentBg);
+}
+.StatusInfo-Content {
+  box-shadow: 2px 2px 0 0 black;
+  border: 1px solid black;
+}
+.vivaldi {
+  border: 1px solid black;
+  box-shadow: 2px 2px 0 0 black !important;
+  width: 26px !important;
+  height: 26px !important;
+}
+.SearchField, .UrlBar-AddressField {
+  background-color: var(--colorBgIntense) !important;
+}
+.extensionIconPopupMenu {
+  box-shadow: 2px 2px 0 0 black;
+  border: 1px solid black;
+}
+.toolbar-large .SearchField {
+  box-shadow: 2px 2px 0 0 black;
+  border: 1px solid black;
+}
+.modal-wrapper {
+  box-shadow: 2px 2px 0 0 black !important;
+  border: 1px solid black;
+}
+.dialog-footer input {
+  box-shadow: 2px 2px 0 0 !important;
+}
+::selection {
+	background-color: #cec7a3;
+	color: #363100;
+}
+.win.normal #tabs-tabbar-container.top {
+	padding-top: 5px;
+}
+
+/* SVG disposition */
+button.window-minimize svg {
+	transform: translate(-4px, -1px);
+}
+
+button.window-close svg {
+	transform: translate(0px, -1px); /* Adjust the translation values as needed */
+}
+
+.Dashboard-Widgets .dashboard-widget {
+	border: 1px solid black;
+	box-shadow: 2px 2px 0 0 black;
+}
+
+.tiled.visible{
+	border-radius: calc(var(--radiusCap) + 5px);
+}

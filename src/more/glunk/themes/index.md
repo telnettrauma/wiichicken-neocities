@@ -9,3 +9,4 @@ permalink: "/more/glunk/themes/index.html"
 - [oldtwitter.css](oldtwitter.css)
 - [plurk.css](plurk.css)
 - [statuscafe.css](statuscafe.css)
+- [vivaldi.css](vivaldi.css)
