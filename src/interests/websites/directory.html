@@ -14,61 +14,62 @@
 				a:hover {cursor: pointer !important;}
 			</style>
 		</noscript>
-	</head>
-	<body>
-	<style>
-		button:hover {
-			transform: translate(1px, 1px);
-			box-shadow: 1px 1px 0 0;
-		}
-		button:active {
-			transform: translate(2px, 2px);
-			box-shadow: unset;
-		}
-		.buttonhell a {background: none;}
-		.buttonhell {
-			display: flex;
-			justify-content: space-evenly;
-			flex-wrap: wrap;
-		}
-		.listhell table tr td:nth-child(2n) {width: 100%;}
-		.list .listhell {display: block;}
-		.grid .buttonhell {display: flex;}
-		.list .buttonhell, .grid .listhell {display: none;}
-		/* additional styling for sotfp */
-		#sotfp {border-color: #F6BE14;}
-		#sotfp a {background-color: unset;}
-		@media (prefers-reduced-motion = no-preference) {
-			.buttonhell a:hover {
-				max-width: 88px;
-				max-height: 31px;
-				cursor: none;
-				z-index: 20;
+		<style>
+			button:hover {
+				transform: translate(1px, 1px);
+				box-shadow: 1px 1px 0 0;
 			}
-			.buttonhell a:hover img {
-				position: relative;
+			button:active {
+				transform: translate(2px, 2px);
+				box-shadow: unset;
+			}
+			.buttonhell a {background: none;}
+			.buttonhell {
+				display: flex;
+				justify-content: space-evenly;
+				flex-wrap: wrap;
+			}
+			.listhell table tr td:nth-child(2n) {width: 100%;}
+			.list .listhell {display: block;}
+			.grid .buttonhell {display: flex;}
+			.list .buttonhell, .grid .listhell {display: none;}
+			/* additional styling for sotfp */
+			#sotfp {border-color: #F6BE14;}
+			#sotfp a {background-color: unset;}
+			@media (prefers-reduced-motion = no-preference) {
+				.buttonhell a:hover {
+					max-width: 88px;
+					max-height: 31px;
+					cursor: none;
+					z-index: 20;
+				}
+				.buttonhell a:hover img {
+					position: relative;
+					width: 176px;
+					height: 62px;
+					pointer-events: none;
+					transform: translate(-30px, -10px);
+					filter: drop-shadow(0 0 15px black);
+				}
+				.zoom .buttonhell a:hover {
+					max-width: 176px !important;
+					max-height: 62px !important;
+				}
+				.zoom .buttonhell a:hover img {
+					width: 352px;
+					height: 124px;
+					transform: translate(-80px, -30px);
+					filter: drop-shadow(0 0 15px black);
+				}
+			}
+			.zoom .buttonhell img {
 				width: 176px;
 				height: 62px;
-				pointer-events: none;
-				transform: translate(-30px, -10px);
-				filter: drop-shadow(0 0 15px black);
 			}
-			.zoom .buttonhell a:hover {
-				max-width: 176px !important;
-				max-height: 62px !important;
-			}
-			.zoom .buttonhell a:hover img {
-				width: 352px;
-				height: 124px;
-				transform: translate(-80px, -30px);
-				filter: drop-shadow(0 0 15px black);
-			}
-		}
-		.zoom .buttonhell img {
-			width: 176px;
-			height: 62px;
-		}
-	</style>
+		</style>
+		{% include "partials/interests/websites/sotfp/style.njk" %}
+	</head>
+	<body>
 	{% include "partials/interests/intnav.njk" %}
 	<div id="chewTooth"></div>
 	<div id="flex">
