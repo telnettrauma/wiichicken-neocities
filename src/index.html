@@ -193,12 +193,10 @@
 		#cornerInBox {
 			display: flex;
 			align-items: flex-end;
-			justify-content: flex-end;
-			position: absolute;
-			right: 10px;
-			bottom: 0;
+			justify-content: space-between;
 		}
 		#cornerInBox a {
+			--border: rgb(57, 57, 57);
 			color: gray;
 			background-color: unset;
 			margin: 5px;
@@ -206,6 +204,10 @@
 			font-family: 'Ubuntu', sans-serif;
 			font-size: 15px;
 			font-weight: 400;
+			width: 100%;
+			text-align: center;
+			padding: 5px;
+			margin-bottom: 0;
 		}
 		#navibox {
 			display: flex;
@@ -912,12 +914,15 @@
 				<p class="middleBoy"><img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt="">Remember: <a class="noBg" style="cursor: pointer !important; margin-right: 10px;" href="guestbook.html">sign the guestbook</a> before you go<img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt=""></p>
 			</div>
 			<div class="footer page-bottom">
-				<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2025</p>
-				<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
+				<div>
+					<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2025</p>
+					<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
+				</div>
 				<div id="cornerInBox">
-					<a class="noBg" href="credits.html">credits</a>
-					<a class="noBg" href="sitemap.html">sitemap</a>
-					<a class="noBg" href="https://cd5k.net/tau/">&tau;</a>
+					<a class="noBg boxy sec-bl" href="credits.html">credits</a>
+					<a class="noBg boxy" href="sitemap.html">sitemap</a>
+					<a class="noBg boxy" href="https://github.com/telnettrauma/wiichicken-neocities/tree/live" target="_blank">GitHub</a>
+					<a class="noBg boxy sec-br" style="margin-right: 0;" href="https://cd5k.net/tau/">&tau;</a>
 				</div>
 			</div>
 		</main>
