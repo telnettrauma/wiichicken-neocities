@@ -193,12 +193,10 @@
 		#cornerInBox {
 			display: flex;
 			align-items: flex-end;
-			justify-content: flex-end;
-			position: absolute;
-			right: 10px;
-			bottom: 0;
+			justify-content: space-between;
 		}
 		#cornerInBox a {
+			--border: rgb(57, 57, 57);
 			color: gray;
 			background-color: unset;
 			margin: 5px;
@@ -206,6 +204,10 @@
 			font-family: 'Ubuntu', sans-serif;
 			font-size: 15px;
 			font-weight: 400;
+			width: 100%;
+			text-align: center;
+			padding: 5px;
+			margin-bottom: 0;
 		}
 		#navibox {
 			display: flex;
@@ -252,22 +254,6 @@
 		.noblur {
 			backdrop-filter: blur(0px) !important;
 			-webkit-backdrop-filter: blur(0px) !important;
-		}
-		.twolinkies {
-			display: flex;
-			margin: 0;
-			justify-content: center;
-		}
-		.twolinkies a {
-			padding: 2px;
-			display: flex;
-			justify-content: center;
-			background-color: #004a76 !important;
-			border: 1px solid #97cbff;
-			color: #cee5ff !important;
-			width: 45%;
-			margin: 2px;
-			font-size: 14px;
 		}
 		.headText {
 			font-size: 25px;
@@ -470,32 +456,14 @@
 			width: 88px;
 			height: 31px;
 		}
-		.favrow {
+		.dalist a {
+			background-color: var(--bg);
+			border: 1px solid var(--border);
+			width: 100%;
+			margin-top: 2px;
+			padding: 3px;
 			display: flex;
-			justify-content: center;
-			padding: 3px 0 0 0;
-		}
-		.favrow img {
-			width: 16px;
-			height: 16px;
-			image-rendering: pixelated;
-		}
-		.favrow a {background: none;}
-		.favrow a img {
-			position: relative;
-			transition: 0.15s;
-			transform-origin: center;
-			pointer-events: none;
-		}
-		.favrow a:hover {
-			max-width: 16px;
-			max-height: 16px;
-		}
-		.favrow a:hover img {
-			pointer-events: none;
-			transform: scale(4);
-			filter: drop-shadow(0 0 10px black);
-			z-index: 3;
+			align-items: center;
 		}
 		#googgo a {background: none !important;}
 		#visitorscount {
@@ -652,6 +620,9 @@
 							<div class="dabuttons">
 								<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
 							</div>
+							<div class="dalist" style="--border: #7d24e4; background-color: #1d1a20; color: #eddcff;">
+								<a href="https://crypticworm.neocities.org" target="_blank"><img src="interests/websites/img/ficon/default.png" loading="lazy">crypticworm</a>
+							</div>
 						</div>
 						<div id="fri2">
 							<p class="nomarblock">If we are friends, just contact me to get your button added here (we're friends, so you should have contact with me). If I only know you on Neocities, I may still add you, but don't feel upset if I don't! <img src="media/emoji/sweat.gif" loading="lazy"></p>
@@ -698,22 +669,15 @@
 							<a href="https://corvidae.digital" target="_blank"><img src="interests/websites/img/button/corvidae.gif" loading="lazy"></a>
 							<a href="https://bulltown.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/bulltownneo.png" loading="lazy" alt="bulltown.neo"></a>
 							<a href="https://catbyte.site/" target="_blank"><img src="interests/websites/img/button/catbyte.png"></a>
-							<a href="https://darkendstars.neocities.org" target="_blank"><img src="https://i.ibb.co/17djkby/Untitled-Artwork-20.gif" loading="lazy"></a>
+							<a href="https://kiwimeowo.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/kiwimeow.png" loading="lazy"></a>
 							<a href="https://psychicnewborn.neocities.org" target="_blank"><img loading="lazy" src="interests/websites/img/button/psychic.gif"></a>
 							<a href="https://charpine.neocities.org" target="_blank"><img src="interests/websites/img/button/artists/charpine.gif" loading="lazy"></a>
 							<a href="https://bruno-rubim.neocities.org/" target="_blank"><img src="interests/websites/img/button/bruno-button.gif" loading="lazy" alt="Bruno Rubim"></a>
 						</div>
-						<div class="favrow">
-							<a href="https://e4494s.neocities.org" target="_blank"><img src="interests/websites/img/ficon/game/e4494s.png" loading="lazy"></a>
-							<a href="https://awe921.neocities.org" target="_blank"><img src="media/buttons/favicon/awehead.png" loading="lazy"></a>
-							<a href="https://wented.neocities.org" target="_blank"><img src="media/buttons/favicon/epicomics.png" loading="lazy"></a>
-							<a href="https://sidi0s0.neocities.org" target="_blank"><img src="media/buttons/favicon/sidiicon.ico" loading="lazy"></a>
-							<a href="https://cattafang.neocities.org" target="_blank"><img src="media/buttons/favicon/cattafang.ico" loading="lazy"></a>
-							<a href="https://plorg.neocities.org" target="_blank"><img src="interests/websites/img/ficon/art/plorg.ico" loading="lazy"></a>
-						</div>
-						<div class="twolinkies">
-							<a href="interests/websites/directory.html" target="_blank">DiRECTORY</a>
-							<a href="#mybum" style="margin-left: 0px;">MY BUTTON!</a>
+						<div class="dalist" style="--border: #00a6ff; --bg: #181c20; color: #cee5ff; margin: 0 5px 5px 5px;">
+							<a href="https://e4494s.neocities.org" target="_blank"><img src="interests/websites/img/ficon/game/e4494s.png" loading="lazy">e4494s</a>
+							<a href="https://awe921.neocities.org" target="_blank"><img src="media/buttons/favicon/awehead.png" loading="lazy">awe921</a>
+							<a href="https://cattafang.neocities.org" target="_blank"><img src="media/buttons/favicon/cattafang.ico" loading="lazy">cattafang</a>
 						</div>
 					</div>
 				</div>
@@ -880,11 +844,17 @@
 			</div>
 			<div class="box sec-t">
 				<h2>siteUpdates</h2>
-				<h3 style="margin: 0; font-size: 15px;"><strong>SORRY!</strong></h3>
-				<p id="updatedate">February 9, 2025</p>
+				<h3 style="margin: 0; font-size: 15px;"><strong>FRiEND LiST</strong></h3>
+				<p id="updatedate">February 16, 2025</p>
 			</div>
 			<div class="box">
-				<p>updates have really slowed recently, and that's because i have been more busy. i have been working more, doing schoolwork, and working on bettering myself. as a result, im somewhat stressed and tired.<br>with that said, i did translate a css generator web app from chinese to english. i don't think its worth linking to here, because its for a social networking service that i know none of you use.</p>
+				<p>it has still been a bit since the last actual update of substance, but there are a couple small changes:</p>
+				<ul>
+					<li>checked some sites i linked to and removed some broken/taken down sites</li>
+					<li>new list view on the friends and more sites widgets</li>
+					<li>plurk theme generator is now on version <code>v1.0.1</code></li>
+				</ul>
+				<p>remember kids in middle/high school to cherish the free time you currently have, once you get into college you have to write a whole essay with 3 days, 20 images, 2 pages, and 5 sources.</p>
 			</div>
 			<div class="box sec-b">
 				<p>site updates almost every sunday, blog posts and content updates whenever</p>
@@ -912,12 +882,15 @@
 				<p class="middleBoy"><img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt="">Remember: <a class="noBg" style="cursor: pointer !important; margin-right: 10px;" href="guestbook.html">sign the guestbook</a> before you go<img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt=""></p>
 			</div>
 			<div class="footer page-bottom">
-				<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2025</p>
-				<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
+				<div>
+					<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2025</p>
+					<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
+				</div>
 				<div id="cornerInBox">
-					<a class="noBg" href="credits.html">credits</a>
-					<a class="noBg" href="sitemap.html">sitemap</a>
-					<a class="noBg" href="https://cd5k.net/tau/">&tau;</a>
+					<a class="noBg boxy sec-bl" href="credits.html">credits</a>
+					<a class="noBg boxy" href="sitemap.html">sitemap</a>
+					<a class="noBg boxy" href="https://github.com/telnettrauma/wiichicken-neocities/tree/live" target="_blank">GitHub</a>
+					<a class="noBg boxy sec-br" style="margin-right: 0;" href="https://cd5k.net/tau/">&tau;</a>
 				</div>
 			</div>
 		</main>
