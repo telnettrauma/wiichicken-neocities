@@ -125,32 +125,27 @@
 				</div>
 			</header>
 			<script>
-					const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-					document.addEventListener("DOMContentLoaded", function() {
-						if (!prefersReducedMotion && screen.width >= 900) {
-							const elementsWithImages = document.querySelectorAll(".buttonhell");
-							elementsWithImages.forEach(element => {
-								const images = element.querySelectorAll("a");
-								images.forEach(image => {
-									image.addEventListener("mousemove", e => {
-										const rect = image.getBoundingClientRect();
-										const mouseX = e.clientX - rect.left;
-										const mouseY = e.clientY - rect.top;
-										const rotateY = (mouseX - rect.width / 2) * 0.5;
-										const rotateX = (mouseY - rect.height / 2) * 0.8;
-										image.style.transform = `translate(${rotateY}px, ${rotateX}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-									});
-									image.addEventListener("mouseleave", () => {
-										image.style.transform = "translate(0, 0) rotateX(0deg) rotateY(0deg)";
-									});
+				const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+				document.addEventListener("DOMContentLoaded", function() {
+					if (!prefersReducedMotion && screen.width >= 900) {
+						const elementsWithImages = document.querySelectorAll(".buttonhell");
+						elementsWithImages.forEach(element => {
+							const images = element.querySelectorAll("a");
+							images.forEach(image => {
+								image.addEventListener("mousemove", e => {
+									const rect = image.getBoundingClientRect();
+									const mouseX = e.clientX - rect.left;
+									const mouseY = e.clientY - rect.top;
+									const moveX = (mouseX - rect.width / 2) * 0.1;
+									const moveY = (mouseY - rect.height / 2) * 0.1;
+									image.style.transform = `translate(${moveX}px, ${moveY}px)`;
 								});
+								image.addEventListener("mouseleave", () => {image.style.transform = "translate(0, 0)";});
 							});
-						}
-					});
-
-				if (prefersReducedMotion) {
-					document.getElementById('butterball').className = 'list';
-				}
+						});
+					}
+				});
+				if (prefersReducedMotion) {document.getElementById('butterball').className = 'list';}
 			</script>
 			<div class="box buttonhell">
 				<a href="https://afellowu.neocities.org/" target="_blank"><img loading="lazy" src="img/button/mebi_county.gif"></a>
