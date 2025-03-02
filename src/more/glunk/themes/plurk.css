@@ -49,6 +49,7 @@ box-shadow: 2px 2px 0 0 white;
 font-family: 'Martian Mono', monospace;
 font-weight: bold;
 }
+#num_of_friends, #num_of_fans {display: none;}
 .new .response_count {
 background: linear-gradient(0deg, rgba(255,136,0,1) 0%, rgba(255,46,0,1) 100%) !important;
 color: white;
