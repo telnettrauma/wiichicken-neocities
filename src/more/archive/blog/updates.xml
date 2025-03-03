@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>SHORT AND SWEET!</title>
+			<pubDate>Mon, 3 Mar 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>just some small changes</description>
+		</item>
+		<item>
 			<title>FRiEND LiST</title>
 			<pubDate>Sun, 16 Feb 2025 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -75,13 +82,6 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>thanks dependabot</description>
-		</item>
-		<item>
-			<title>NOTHiNG, GO TO BED</title>
-			<pubDate>Sun, 17 Nov 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>nothing is new.</description>
 		</item>
 	</channel>
 </rss>
