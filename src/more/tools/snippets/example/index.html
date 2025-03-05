@@ -34,14 +34,10 @@
 			#sidebar {
 				width: 30%;
 				min-width: 150px;
-				overflow-y: scroll;
 				margin-bottom: 0;
 			}
-			#sidebar .box {
-				margin-right: 3px;
-			}
+			.inner-content {overflow-y: scroll;}
 			#rightside {
-				width: 70%;
 				flex: 1;
 				display: flex;
 				flex-direction: column;
@@ -54,8 +50,6 @@
 			}
 			#bottom-code {
 				height: 40%;
-				width: 100%;
-				overflow-y: scroll;
 				margin-bottom: 0;
 			}
 		</style>
@@ -64,21 +58,23 @@
 		<div id="chewTooth"></div>
 		<main>
 			<div id="sidebar" class="sec-l box">
-				<div id="inner-sidebar">
-						<h1>SNiPPETS</h1>
-						<p>see an effect on the site you like and want to copy for yourself? well here is a collection of code snippets that you're free to steal!</p>
-						<p>see an effect on the site you like and want to copy for yourself? well here is a collection of code snippets that you're free to steal!</p>
-						<p>see an effect on the site you like and want to copy for yourself? well here is a collection of code snippets that you're free to steal!</p>
-						<p>see an effect on the site you like and want to copy for yourself? well here is a collection of code snippets that you're free to steal!</p>
-						<p>see an effect on the site you like and want to copy for yourself? well here is a collection of code snippets that you're free to steal!</p>
-						<p>see an effect on the site you like and want to copy for yourself? well here is a collection of code snippets that you're free to steal!</p>
-						<p>see an effect on the site you like and want to copy for yourself? well here is a collection of code snippets that you're free to steal!</p>
+				<div class="inner-content">
+					<h1>SNiPPETS</h1>
+					<p>see an effect on the site you like and want to copy for yourself? well here is a collection of code snippets that you're free to steal!</p>
+					<p>see an effect on the site you like and want to copy for yourself? well here is a collection of code snippets that you're free to steal!</p>
+					<p>see an effect on the site you like and want to copy for yourself? well here is a collection of code snippets that you're free to steal!</p>
+					<p>see an effect on the site you like and want to copy for yourself? well here is a collection of code snippets that you're free to steal!</p>
+					<p>see an effect on the site you like and want to copy for yourself? well here is a collection of code snippets that you're free to steal!</p>
+					<p>see an effect on the site you like and want to copy for yourself? well here is a collection of code snippets that you're free to steal!</p>
+					<p>see an effect on the site you like and want to copy for yourself? well here is a collection of code snippets that you're free to steal!</p>
 				</div>
 			</div>
 			<div id="rightside">
 				<iframe src="preview.html" name="frame" class="boxy sec-tr"></iframe>
 				<div id="bottom-code" class="box sec-br">
-					<p>this is where the code goes</p>
+					<div class="inner-content">
+						<p>this is where the code goes</p>
+					</div>
 				</div>
 			</div>
 		</main>
