@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>steal everything i have ever made - WiiCHiCKEN</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/favicon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/media/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/media/favicons/32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/media/favicons/16.png">
+		<link href="/style.css" rel="stylesheet">
+		<style>
+			* {
+				--dark-primary: #ffb3ad;
+				--dark-tertiary: #e0c38c;
+				--dark-on-tertiary: #3f2e04;
+				--light-on-primary-container: #3a0905cc;
+				--dark-on-primary-container: #ffdad4;
+				--bg-1: red;
+				--bg-2: #ffaa00;
+				--border: red; 
+			}
+			main {
+				max-width: unset;
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		{% include "partials/navbar.njk" %}
+		<div id="chewTooth"></div>
+		<main>
+			<div id="sidebar">
+				<div class="box page-top">
+					<h1>SNiPPETS</h1>
+				</div>
+				<div id="scrolly">
+					<div class="box">
+						<p>see an effect on the site you like and want to copy for yourself? well here is a collection of code snippets that you're free to steal!</p>
+					</div>
+				</div>
+			</div>
+			<div class="rightside">
+				<iframe src="example/desc.html" name="frame"></iframe>
+			</div>
+		</main>
+	</body>
+</html>
