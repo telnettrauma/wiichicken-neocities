@@ -55,6 +55,7 @@ iframe {
 	width: 58px;
 	height: 58px;
 }
+#fakeLogo:hover {transform: unset;}
 #inHead {
 	justify-content: flex-start;
 	padding-right: unset;
@@ -64,4 +65,6 @@ iframe {
 	height: 24px;
 	margin: 5px;
 	image-rendering: pixelated;
+	opacity: 0.75;
 }
+#topLinks a img:hover {opacity: 1;}
