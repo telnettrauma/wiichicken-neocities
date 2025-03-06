@@ -40,3 +40,28 @@ iframe {
 	height: 40%;
 	margin-bottom: 0;
 }
+
+/* navbar style */
+
+.heading {
+	position: relative;
+	background-color: unset;
+	margin-bottom: 65px;
+}
+.heading::after, #fakeLogo::after {content: unset;}
+#fakeLogo {
+	margin: 10px;
+	position: relative;
+	width: 58px;
+	height: 58px;
+}
+#inHead {
+	justify-content: flex-start;
+	padding-right: unset;
+}
+#topLinks a img {
+	width: 24px;
+	height: 24px;
+	margin: 5px;
+	image-rendering: pixelated;
+}
