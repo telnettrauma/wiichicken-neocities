@@ -24,12 +24,16 @@ main::before {content: unset;}
 	min-width: 150px;
 	margin-bottom: 0;
 }
-.inner-content {overflow-y: scroll;}
+.inner-content {
+	overflow-y: scroll;
+	height: 100%;
+}
 #rightside {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	width: 70%;
 }
 iframe {
 	border: unset;
@@ -39,6 +43,7 @@ iframe {
 #bottom-code {
 	height: 40%;
 	margin-bottom: 0;
+	padding: 0;
 }
 
 /* navbar style */
@@ -68,3 +73,14 @@ iframe {
 	opacity: 0.75;
 }
 #topLinks a img:hover {opacity: 1;}
+
+/* Gist style */
+
+.gist .gist-file {
+	margin-bottom: unset !important;
+}
+.gist .gist-meta {
+	position: absolute;
+	bottom: 0;
+	width: calc((100%) - 5px);
+}
