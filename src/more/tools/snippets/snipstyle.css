@@ -28,6 +28,7 @@ main::before {content: unset;}
 	overflow-y: scroll;
 	height: 100%;
 }
+#sidebar .inner-content {padding: 5px;}
 #rightside {
 	flex: 1;
 	display: flex;
@@ -45,6 +46,7 @@ iframe {
 	margin-bottom: 0;
 	padding: 0;
 }
+.box {padding: 0;}
 
 /* navbar style */
 
@@ -76,9 +78,7 @@ iframe {
 
 /* Gist style */
 
-.gist .gist-file {
-	margin-bottom: unset !important;
-}
+.gist .gist-file {margin-bottom: unset !important;}
 .gist .gist-meta {
 	position: absolute;
 	bottom: 0;
