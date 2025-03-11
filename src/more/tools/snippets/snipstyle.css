@@ -1,12 +1,12 @@
 * {
-	--dark-primary: #ffb3ad;
-	--dark-tertiary: #e0c38c;
-	--dark-on-tertiary: #3f2e04;
-	--light-on-primary-container: #3a0905cc;
-	--dark-on-primary-container: #ffdad4;
-	--bg-1: red;
-	--bg-2: #ffaa00;
-	--border: red; 
+	--dark-primary: #bfefb1;
+	--dark-tertiary: #bcebef;
+	--dark-on-tertiary: #00373a;
+	--light-on-primary-container: #032d03cc;
+	--dark-on-primary-container: #bfefb1;
+	--bg-1: #3cff00;
+	--bg-2: #00eaff;
+	--border: #3cff00;
 }
 main {
 	max-width: unset;
