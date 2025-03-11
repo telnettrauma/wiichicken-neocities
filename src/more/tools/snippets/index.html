@@ -20,6 +20,17 @@
 				--bg-2: #ffaa00;
 				--border: red; 
 			}
+			h1, h2, h3, h4 {
+				margin-block-start: 0px;
+				margin-block-end: 0px;
+			}
+			h4 {margin-block-start: 5px;}
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 10px;
+			}
+			.grid .box {margin-bottom: unset;}
 		</style>
 	</head>
 	<body>
@@ -31,6 +42,12 @@
 			</div>
 			<div class="box">
 				<p>here are a couple code snippets that i made that you can use too!</p>
+			</div>
+			<div class="box"><h2>Style</h2></div>
+			<div class="grid">
+				<a href="style/slanted/" class="box">
+					<h4>Slanted Corners</h4>
+				</a>
 			</div>
 		</main>
 	</body>
