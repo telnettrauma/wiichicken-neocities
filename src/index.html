@@ -193,12 +193,10 @@
 		#cornerInBox {
 			display: flex;
 			align-items: flex-end;
-			justify-content: flex-end;
-			position: absolute;
-			right: 10px;
-			bottom: 0;
+			justify-content: space-between;
 		}
 		#cornerInBox a {
+			--border: rgb(57, 57, 57);
 			color: gray;
 			background-color: unset;
 			margin: 5px;
@@ -206,6 +204,10 @@
 			font-family: 'Ubuntu', sans-serif;
 			font-size: 15px;
 			font-weight: 400;
+			width: 100%;
+			text-align: center;
+			padding: 5px;
+			margin-bottom: 0;
 		}
 		#navibox {
 			display: flex;
@@ -252,22 +254,6 @@
 		.noblur {
 			backdrop-filter: blur(0px) !important;
 			-webkit-backdrop-filter: blur(0px) !important;
-		}
-		.twolinkies {
-			display: flex;
-			margin: 0;
-			justify-content: center;
-		}
-		.twolinkies a {
-			padding: 2px;
-			display: flex;
-			justify-content: center;
-			background-color: #004a76 !important;
-			border: 1px solid #97cbff;
-			color: #cee5ff !important;
-			width: 45%;
-			margin: 2px;
-			font-size: 14px;
 		}
 		.headText {
 			font-size: 25px;
@@ -470,32 +456,14 @@
 			width: 88px;
 			height: 31px;
 		}
-		.favrow {
+		.dalist a {
+			background-color: var(--bg);
+			border: 1px solid var(--border);
+			width: 100%;
+			margin-top: 2px;
+			padding: 3px;
 			display: flex;
-			justify-content: center;
-			padding: 3px 0 0 0;
-		}
-		.favrow img {
-			width: 16px;
-			height: 16px;
-			image-rendering: pixelated;
-		}
-		.favrow a {background: none;}
-		.favrow a img {
-			position: relative;
-			transition: 0.15s;
-			transform-origin: center;
-			pointer-events: none;
-		}
-		.favrow a:hover {
-			max-width: 16px;
-			max-height: 16px;
-		}
-		.favrow a:hover img {
-			pointer-events: none;
-			transform: scale(4);
-			filter: drop-shadow(0 0 10px black);
-			z-index: 3;
+			align-items: center;
 		}
 		#googgo a {background: none !important;}
 		#visitorscount {
@@ -566,10 +534,8 @@
 				background-image: none;
 				background: linear-gradient(45deg, rgb(70, 0, 0) 0%, rgb(0, 14, 70)100%);
 			}
-			#tittle {
-				flex-direction: column;
-				height: auto;
-			}
+			#tittle {flex-direction: column;}
+			#tittle #logocontent #thisIsMyName {font-size: 35px;}
 			#frens {min-width: 105px;}
 			.helpbutt {display: none;}
 			.box {width: auto !important;}
@@ -652,6 +618,9 @@
 							<div class="dabuttons">
 								<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
 							</div>
+							<div class="dalist" style="--border: #7d24e4; background-color: #1d1a20; color: #eddcff;">
+								<a href="https://crypticworm.neocities.org" target="_blank"><img src="interests/websites/img/ficon/default.png" loading="lazy">crypticworm</a>
+							</div>
 						</div>
 						<div id="fri2">
 							<p class="nomarblock">If we are friends, just contact me to get your button added here (we're friends, so you should have contact with me). If I only know you on Neocities, I may still add you, but don't feel upset if I don't! <img src="media/emoji/sweat.gif" loading="lazy"></p>
@@ -698,22 +667,15 @@
 							<a href="https://corvidae.digital" target="_blank"><img src="interests/websites/img/button/corvidae.gif" loading="lazy"></a>
 							<a href="https://bulltown.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/bulltownneo.png" loading="lazy" alt="bulltown.neo"></a>
 							<a href="https://catbyte.site/" target="_blank"><img src="interests/websites/img/button/catbyte.png"></a>
-							<a href="https://darkendstars.neocities.org" target="_blank"><img src="https://i.ibb.co/17djkby/Untitled-Artwork-20.gif" loading="lazy"></a>
+							<a href="https://kiwimeowo.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/kiwimeow.png" loading="lazy"></a>
 							<a href="https://psychicnewborn.neocities.org" target="_blank"><img loading="lazy" src="interests/websites/img/button/psychic.gif"></a>
 							<a href="https://charpine.neocities.org" target="_blank"><img src="interests/websites/img/button/artists/charpine.gif" loading="lazy"></a>
 							<a href="https://bruno-rubim.neocities.org/" target="_blank"><img src="interests/websites/img/button/bruno-button.gif" loading="lazy" alt="Bruno Rubim"></a>
 						</div>
-						<div class="favrow">
-							<a href="https://e4494s.neocities.org" target="_blank"><img src="interests/websites/img/ficon/game/e4494s.png" loading="lazy"></a>
-							<a href="https://awe921.neocities.org" target="_blank"><img src="media/buttons/favicon/awehead.png" loading="lazy"></a>
-							<a href="https://wented.neocities.org" target="_blank"><img src="media/buttons/favicon/epicomics.png" loading="lazy"></a>
-							<a href="https://sidi0s0.neocities.org" target="_blank"><img src="media/buttons/favicon/sidiicon.ico" loading="lazy"></a>
-							<a href="https://cattafang.neocities.org" target="_blank"><img src="media/buttons/favicon/cattafang.ico" loading="lazy"></a>
-							<a href="https://plorg.neocities.org" target="_blank"><img src="interests/websites/img/ficon/art/plorg.ico" loading="lazy"></a>
-						</div>
-						<div class="twolinkies">
-							<a href="interests/websites/directory.html" target="_blank">DiRECTORY</a>
-							<a href="#mybum" style="margin-left: 0px;">MY BUTTON!</a>
+						<div class="dalist" style="--border: #00a6ff; --bg: #181c20; color: #cee5ff; margin: 0 5px 5px 5px;">
+							<a href="https://e4494s.neocities.org" target="_blank"><img src="interests/websites/img/ficon/game/e4494s.png" loading="lazy">e4494s</a>
+							<a href="https://awe921.neocities.org" target="_blank"><img src="media/buttons/favicon/awehead.png" loading="lazy">awe921</a>
+							<a href="https://cattafang.neocities.org" target="_blank"><img src="media/buttons/favicon/cattafang.ico" loading="lazy">cattafang</a>
 						</div>
 					</div>
 				</div>
@@ -830,11 +792,11 @@
 				<div class="box lefty d-sec-r m-sec-b" style="width: 50%;">
 					<h2>curr.FavSong</h2>
 					<div style="display: flex;">
-						<img src="https://lastfm.freetls.fastly.net/i/u/300x300/c837fcd275074bb66210f45e8e8e6bc6.jpg" width="100px" height="100px" style="margin-right: 10px; border: 1px solid #cde5ff; z-index: 1;">
-						<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/300x300/c837fcd275074bb66210f45e8e8e6bc6.jpg" width="100px" height="100px" style="margin-right: 10px; opacity: 0.5;">
+						<img src="https://lastfm.freetls.fastly.net/i/u/500x500/2b69762b5519b03f0f6d31832fb9bfa6.jpg" width="100px" height="100px" style="margin-right: 10px; border: 1px solid #cde5ff; z-index: 1;">
+						<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/500x500/2b69762b5519b03f0f6d31832fb9bfa6.jpg" width="100px" height="100px" style="margin-right: 10px; opacity: 0.5;">
 						<div style="width: 100%;">
-							<p class="nomarblock"><strong>Makrel Jaxon</strong></p>
-							<p class="nomarblock">Mach-Hommy</p>
+							<p class="nomarblock"><strong>Living Happy</strong></p>
+							<p class="nomarblock">Quelle Chris</p>
 							<a class="bring" href="interests/music/favarchive">Current Fav Song Archive</a>
 						</div>
 					</div>
@@ -880,14 +842,20 @@
 			</div>
 			<div class="box sec-t">
 				<h2>siteUpdates</h2>
-				<h3 style="margin: 0; font-size: 15px;"><strong>MOVE TO THE DARK SiDE</strong></h3>
-				<p id="updatedate">January 26, 2025</p>
+				<h3 style="margin: 0; font-size: 15px;"><strong>SHORT AND SWEET!</strong></h3>
+				<p id="updatedate">March 3, 2025</p>
 			</div>
 			<div class="box">
-				<p>i promised myself that this would never happen, yet here i am writing this right now.<br>this website now uses 11ty, which is a static site generator. this doesn't really change anything that you can see, but behind the scenes, it <strong>might</strong> make things a whole lot easier. who knows!</p>
-				<p>previously, i used javascript to insert the navigation bar into each page. this worked, but was less than ideal, especially because it meant users who didn't have javascript enabled would encounter a worse experience of this site.<br>11ty changes this. instead, i can do the following for the same effect:</p>
-				<code>{ % includes "partials/navbar.njk" % }</code>
-				<p>this has the same functionality as before, but now works without javascript! awesome! as a result of this change, opera gx users are now allowed on my website again <img src='/media/emoji/whine.gif' loading='lazy' alt='whine emoji'>. sorry.<br>everything should work the exact same, but because i had to manually move every site file, some things may be broken. if you find something that is broken, please send me an email: <a href="mailto:vimeoofficial@gmail.com" target="_blank">vimeoofficial@gmail.com</a></p>
+				<p>horray! some stuff changed this week!</p>
+				<ul>
+					<li>interest pages no longer rely on javascript for navbars</li>
+					<li>2025 updates page is easier to navigate thanks to links allowing you to quickly jump from one section to another</li>
+					<li>hardware acceleration is now used for boxes
+						<ul>
+							<li>on chromium based browsers, the edges of the slanted boxes i use would appear inconsistent at certain screen sizes. this is a bug with how chromium renders things. enabling hardware acceleration fixes this.</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 			<div class="box sec-b">
 				<p>site updates almost every sunday, blog posts and content updates whenever</p>
@@ -915,12 +883,15 @@
 				<p class="middleBoy"><img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt="">Remember: <a class="noBg" style="cursor: pointer !important; margin-right: 10px;" href="guestbook.html">sign the guestbook</a> before you go<img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt=""></p>
 			</div>
 			<div class="footer page-bottom">
-				<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2025</p>
-				<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
+				<div>
+					<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2025</p>
+					<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
+				</div>
 				<div id="cornerInBox">
-					<a class="noBg" href="credits.html">credits</a>
-					<a class="noBg" href="sitemap.html">sitemap</a>
-					<a class="noBg" href="https://cd5k.net/tau/">&tau;</a>
+					<a class="noBg boxy sec-bl" href="credits.html">credits</a>
+					<a class="noBg boxy" href="sitemap.html">sitemap</a>
+					<a class="noBg boxy" href="https://github.com/telnettrauma/wiichicken-neocities/tree/live" target="_blank">GitHub</a>
+					<a class="noBg boxy sec-br" style="margin-right: 0;" href="https://cd5k.net/tau/">&tau;</a>
 				</div>
 			</div>
 		</main>

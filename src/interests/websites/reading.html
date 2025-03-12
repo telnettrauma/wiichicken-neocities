@@ -141,10 +141,22 @@
 			}
 			.fic-row .box {margin-bottom: 0;}
 			.fic-row .box h4 {text-align: left;}
+			.side-by-buttons a {
+				margin: 3px;
+				background-color: unset !important;
+			}
+			.side-by-buttons a:hover button {
+				transform: translate(1px, 1px);
+				box-shadow: 1px 1px #c6c2ea;
+			}
+			.side-by-buttons a:active button {
+				transform: translate(2px, 2px);
+				box-shadow: unset;
+			}
 		</style>
 	</head>
 	<body>
-	<div class="heading" id="poopBlock"></div>
+	{% include "partials/interests/intnav.njk" %}
 	<div id="chewTooth"></div>
 	<div id="flex">
 	<nav>
@@ -266,8 +278,9 @@
 		<div class="box" id="articles">
 			<h2>ARTiCLES</h2>
 			<p>individual articles and blog posts that i think are worth a reading. click the "iA"/"iS" button under a "book" to view it on the internet archive/archive.is</p>
-			<!-- TODO make horizontal and vertical buttons on the directory pages consistent -->
-			<button onclick="document.getElementById('bookshelf').classList.replace('vertical', 'horizontal');">Horizontal</button><button onclick="document.getElementById('bookshelf').classList.replace('horizontal', 'vertical');" style="margin-left: 5px;">Vertical</button>
+			<div class="side-by-buttons">
+				<a onclick="document.getElementById('bookshelf').classList.replace('vertical', 'horizontal');"><button>Horizontal</button></a><a onclick="document.getElementById('bookshelf').classList.replace('horizontal', 'vertical');" style="margin-left: 5px;"><button>Vertical</button></a>
+			</div>
 		</div>
 		<div class="box shelf vertical" id="bookshelf">
 			<div class="stack">
@@ -326,6 +339,5 @@
 			</div>
 		</div>
 	</div>
-	<script src="/interests/intnav.js"></script>
 	</body>
 </html>

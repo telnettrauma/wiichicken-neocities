@@ -46,7 +46,6 @@ a {
 .topLinks a {
 	font-size: 15px;
 	color: var(--dark-tertiary);
-	padding: 0 10px 0 10px;
 	background-color: unset !important;
 }
 .topLinks a:hover {color: white !important;}
