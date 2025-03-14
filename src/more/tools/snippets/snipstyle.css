@@ -46,6 +46,7 @@ iframe {
 	margin-bottom: 0;
 	padding: 0;
 }
+.one-pane #bottom-code {height: 100%;}
 .box {padding: 0;}
 
 /* navbar style */
