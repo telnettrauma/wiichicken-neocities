@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{{ title }}</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/favicon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/media/favicons/32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/media/favicons/16.png">
+		<link href="/style.css" rel="stylesheet">
+		<link href="/more/tools/snippets/snipstyle.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="chewTooth"></div>
+		<main>
+			<div id="sidebar" class="sec-l box">
+				<div class="inner-content">
+					{% include "partials/more/tools/snippets/sitenav.njk" %}
+					<h1>{{ title }}</h1>
+					{{ content | safe }}
+				</div>
+			</div>
+			<div id="rightside">
+				<iframe src="preview.html" name="frame" class="boxy sec-tr"></iframe>
+				<div id="bottom-code" class="box sec-br">
+					<div class="inner-content">
+						<script src="{{ script }}"></script>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
