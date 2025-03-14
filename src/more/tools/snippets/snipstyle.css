@@ -84,3 +84,4 @@ iframe {
 	bottom: 0;
 	width: calc((100%) - 5px);
 }
+.gist .gist-file .gist-data {margin-bottom: 35px;}
