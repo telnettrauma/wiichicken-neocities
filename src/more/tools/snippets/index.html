@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>steal everything i have ever made - WiiCHiCKEN</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/favicon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/media/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/media/favicons/32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/media/favicons/16.png">
+		<link href="/style.css" rel="stylesheet">
+		<style>
+			* {
+				--dark-primary: #bfefb1;
+				--dark-tertiary: #bcebef;
+				--dark-on-tertiary: #00373a;
+				--light-on-primary-container: #032d03cc;
+				--dark-on-primary-container: #bfefb1;
+				--bg-1: #3cff00;
+				--bg-2: #00eaff;
+				--border: #3cff00;
+			}
+			h1, h2, h3, h4 {
+				margin-block-start: 0px;
+				margin-block-end: 0px;
+			}
+			h4 {margin-block-start: 5px;}
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 10px;
+			}
+			.grid .box {margin-bottom: unset;}
+			.grid .box:last-of-type {margin-bottom: 10px;}
+		</style>
+	</head>
+	<body>
+		{% include "partials/navbar.njk" %}
+		<div id="chewTooth"></div>
+		<main>
+			<div class="box page-top">
+				<h1>SNiPPETS</h1>
+			</div>
+			<div class="box">
+				<p><strong><img src='/media/emoji/bang.gif' loading='lazy' alt='bang emoji'>disclaimer</strong>: this is still a work in progress! i will be working on adding more snippets in the future. but for right now, this is all you get...</p>
+			</div>
+			<div class="box">
+				<p>here are some code snippets for you to use with your own projects!<br>although credit isn't required, it would still be nice if it was given somewhere.<img src='/media/emoji/smiling.gif' loading='lazy' alt='smiling emoji'></p>
+			</div>
+			<div class="box"><h2>Scripts</h2></div>
+			<div class="grid">
+				<a href="scripts/framelink/" class="box">
+					<h4>Frame Link+</h4>
+				</a>
+			</div>
+			<div class="box"><h2>Style</h2></div>
+			<div class="grid">
+				<a href="style/slanted/" class="box">
+					<h4>Slanted Corners</h4>
+				</a>
+			</div>
+		</main>
+	</body>
+</html>
