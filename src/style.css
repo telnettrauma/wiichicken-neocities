@@ -480,9 +480,3 @@ button {
 		font-weight: bold;
 	}
 }
-/* cursor for when you're using a high dpi */
-@media (min-resolution: 2dppx) {
-	body {
-		cursor: url(/media/home/cursor-big.png), default;
-	}
-}
