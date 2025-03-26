@@ -4,7 +4,8 @@
 	body {
 	background: url('https://wiggle.monster/starry.gif') !important;
 	image-rendering: pixelated;
-	font-family: 'Comfortaa', sans-serif;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: bolder;
 	}
 	@font-face {
 	 font-family: Comfortaa;
@@ -34,13 +35,8 @@
 	}
 	.p_img {
 	box-shadow: 0 0 20px 0;
-	border: none !important;
-	}
-	.p_img a img {
-	color: #a1f2db;
-	border-top: 1px solid !important;
-	border-left: 1px solid !important;
-	border-bottom: 1px solid !important;
+	border: solid !important;
+	margin-right: 5px;
 	}
 	.profile-pic {
 	border: 1px solid white;
@@ -289,9 +285,12 @@
 	background: linear-gradient(90deg, rgba(50,0,126,1) 0%, rgba(126,51,0,1) 100%);
 	color: #e9ddff;
 	}
+	.plurk .plurk_cnt {
+		border-color: var(--color);
+		box-shadow: 2px 2px 0 0 var(--color);
+	}
 	.plurk:nth-child(6n) .plurk_cnt {
-	 border-color: red;
-	 box-shadow: 2px 2px 0 0 red;
+	 --color: red;
 	 background-color: #3a090586;
 	}
 	.plurk:nth-child(6n) .plurk_cnt .text_holder {
@@ -299,8 +298,7 @@
 	}
 	
 	.plurk:nth-child(6n+1) .plurk_cnt {
-	 border-color: #ffee00;
-	 box-shadow: 2px 2px 0 0 #ffee00;
+	 --color: #ffee00;
 	 background-color: #1f1c0086;
 	}
 	.plurk:nth-child(6n+1) .plurk_cnt .text_holder {
@@ -308,8 +306,7 @@
 	}
 	
 	.plurk:nth-child(6n+2) .plurk_cnt {
-	 border-color: #00ff00;
-	 box-shadow: 2px 2px 0 0 #00ff00;
+	 --color: #00ff00;
 	 background-color: #00220086;
 	}
 	.plurk:nth-child(6n+2) .plurk_cnt .text_holder {
