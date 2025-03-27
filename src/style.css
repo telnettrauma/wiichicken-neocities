@@ -9,7 +9,7 @@ body {
 	margin: 0;
 	font-family: 'Ubuntu', sans-serif;
 	background-color: var(--bg-1);
-	cursor: url(/media/home/cursor.png), default;
+	cursor: url(/media/home/cursor.svg), default;
 	background-image: url(/starry.gif);
 	background-attachment: fixed;
 	image-rendering: pixelated;
