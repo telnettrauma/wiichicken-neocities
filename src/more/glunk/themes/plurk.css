@@ -409,6 +409,13 @@
 ._lch_ ~ .pop-window .divresponse .avatar img, ._lch_ ~ .pop-window .divplurk .avatar img {
 	border-radius: 0 !important;
 }
-._lch_ ~ .cbox_right {
-	background-color: #1a1d16;
+._lc_ :where(.plurk_cnt), ._lc_ #form_holder, ._lch_ ~ :where(.pop-window) :where(.pop-window-view) {
+	background-color: #314e19;
+}
+.pop-window-overlay {
+	background: #000000b3;
+}
+.pop-window.show .pop-window-overlay {
+	opacity: unset;
+	backdrop-filter: blur(10px);
 }
