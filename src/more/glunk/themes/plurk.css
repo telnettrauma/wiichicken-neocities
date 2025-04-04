@@ -132,15 +132,19 @@
 	color: #002019 !important;
 	}
 	.cmp_back_to_today::before {color: rgba(0,215,255,1);}
-	._lc_ ~ #top_bar {
+	._lc_ :is(' {'), #top_bar, .bar-icon, :is([} ._lc_ ]) {
 	color: #cde9de !important;
 	}
-	._lc_ ~ .bar-color, #top_bar {
+	._lc_ :is(' {'), .bar-color, :is([} ._lc_ ]) {
 	background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%) !important;
 	}
-	#noti_count {
+	._lc_ :is(' {'), #noti_count, :is([} ._lc_ ]) {
 	background: linear-gradient(0deg, rgba(255,136,0,1) 0%, rgba(255,46,0,1) 100%) !important;
 	box-shadow: 0 0 15px 3px red;
+	}
+	._lc_ :is(' {'), #top-bar-user, :is([} ._lc_ ]) {
+		position: relative !important;
+		z-index: 50;
 	}
 	.unread_generic {
 	background: linear-gradient(90deg, #86d6bf 0%, #86b9d6 100%);
@@ -415,7 +419,7 @@
 ._lc_ ]) {
   --plurk-background-color: #0b5130;
 }
-._lc_ :where(.plurk_cnt), ._lc_ #form_holder, ._lch_ ~ :where(.pop-window) :where(.pop-window-view) {
+._lch_ ~ :where(.pop-window) :where(.pop-window-view) {
   background-color: var(--plurk-background-color);
 	font-family: 'Helvetica', sans-serif;
 	image-rendering: pixelated;
