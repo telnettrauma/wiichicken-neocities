@@ -426,7 +426,7 @@
 ._lc_ :is(' {'), html, :is([}
 
 ._lc_ ]) {
-  --plurk-background-color: #0b5130;
+  --plurk-background-color: #002c1c;
 }
 ._lch_ ~ :where(.pop-window) :where(.pop-window-view) {
   background-color: var(--plurk-background-color);
@@ -490,4 +490,7 @@
 ._lc_ :is(' {'), #emoticon-selector .header .desc .title, :is([} ._lc_ ]) {
 	color: #c0e9fb;
 	font-family: 'Helvetica', sans-serif;
+}
+._lc_ :is(' {'), #emoticons-holder, :is([} ._lc_ ]) {
+	image-rendering: pixelated;
 }
