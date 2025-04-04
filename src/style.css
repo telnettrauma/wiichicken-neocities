@@ -9,7 +9,7 @@ body {
 	margin: 0;
 	font-family: 'Ubuntu', sans-serif;
 	background-color: var(--bg-1);
-	cursor: url(/media/home/cursor.png), default;
+	cursor: url(/media/home/cursor.svg), url(/media/home/cursor.svg), default;
 	background-image: url(/starry.gif);
 	background-attachment: fixed;
 	image-rendering: pixelated;
@@ -67,11 +67,11 @@ a {
 	text-decoration: none;
 	color: var(--dark-secondary);
 }
-a, a:hover, a:active {cursor: url(/media/pointer.png), pointer;}
+a, a:hover, a:active, button img, a img {cursor: url(/media/pointer.svg), url(/media/pointer.png), pointer;}
 code {font-family: 'Martian Mono', monospace;}
 img {image-rendering: pixelated;}
 button {
-	cursor: url(/media/pointer.png), pointer;
+	cursor: url(/media/pointer.svg), url(/media/pointer.png), pointer;
 	font-family: 'Ubuntu', sans-serif;
 }
 .nomarblock {
@@ -204,7 +204,7 @@ button {
 .footer p {text-align: center;}
 #random-message {
 	font-size: 10px;
-	cursor: url(/media/pointer.png), pointer;
+	cursor: url(/media/pointer.svg), url(/media/pointer.png), pointer;
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: normal;
 	color: gray;
@@ -261,7 +261,7 @@ button {
 	display: flex;
 	align-items: center;
 	transition-duration: 0.4s;
-	cursor: url(/media/pointer.png), pointer;
+	cursor: url(/media/pointer.svg), url(/media/pointer.png), pointer;
 	z-index: 2;
 	margin: -35px 20px 0 0;
 	padding: 5px;

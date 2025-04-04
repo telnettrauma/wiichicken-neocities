@@ -4,7 +4,7 @@ const mdAttrs = require('markdown-it-attrs');
 
 module.exports = function (eleventyConfig) {
 
-  eleventyConfig.addPassthroughCopy("src/**/*.{css,png,gif,json,jpg,jpeg,js,webmanifest,xml,ttf,ico,webp,txt}");
+  eleventyConfig.addPassthroughCopy("src/**/*.{css,png,gif,json,jpg,jpeg,js,webmanifest,xml,ttf,ico,webp,txt,svg}");
 
   eleventyConfig.setLibrary("md", markdownLib);
   eleventyConfig.amendLibrary("md", (markdownLib) => markdownLib.use(mdAttrs));
