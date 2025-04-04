@@ -132,10 +132,10 @@
 	color: #002019 !important;
 	}
 	.cmp_back_to_today::before {color: rgba(0,215,255,1);}
-	#top_bar {
+	._lc_ ~ #top_bar {
 	color: #cde9de !important;
 	}
-	.bar-color, #top_bar {
+	._lc_ ~ .bar-color, #top_bar {
 	background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%) !important;
 	}
 	#noti_count {
@@ -399,3 +399,16 @@
 	 height: 280px;
 	 transform: rotateZ('45deg');
 	}
+._lch_ ~ .pop-window .divplurk .avatar, ._lch_ ~ .pop-window .divresponse .avatar {
+	width: auto;
+	height: auto;
+	border: 1px solid #77ff00;
+	box-shadow: 2px 2px 0 0 #77ff00;
+	border-radius: 0 !important;
+}
+._lch_ ~ .pop-window .divresponse .avatar img, ._lch_ ~ .pop-window .divplurk .avatar img {
+	border-radius: 0 !important;
+}
+._lch_ ~ .cbox_right {
+	background-color: #1a1d16;
+}
