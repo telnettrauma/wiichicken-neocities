@@ -494,3 +494,10 @@
 ._lc_ :is(' {'), #emoticons-holder, :is([} ._lc_ ]) {
 	image-rendering: pixelated;
 }
+._lc_ :is(' {'), #top_bar #top-bar-title, :is([} ._lc_ ]) {
+	font-weight: bold;
+	font-size: 25px;
+	background-clip: text !important;
+	color: transparent;
+	background: linear-gradient(90deg, rgba(255,0,78,1) 0%, rgba(0,190,255,1) 100%);
+}
