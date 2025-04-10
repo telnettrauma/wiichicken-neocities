@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>SCALABLE VECTOR GRAPHiC (ONE)</title>
+			<pubDate>Sun, 6 Apr 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>the cursor is now an svg</description>
+		</item>
+		<item>
 			<title>SNiPPERCLiPS</title>
 			<pubDate>Sun, 16 Mar 2025 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -75,13 +82,6 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>a minor content update, but at least something is new</description>
-		</item>
-		<item>
-			<title>MERRY CHRiSTMAS WOOHOO</title>
-			<pubDate>Wed, 4 Dec 2024 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>flashbang! there is now a christmas theme</description>
 		</item>
 	</channel>
 </rss>
