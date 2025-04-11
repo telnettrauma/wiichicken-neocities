@@ -260,7 +260,11 @@ function saveToURL() {
 			{return 1;} else {return 0;}
 	}
 	// changes the value of the layout setting based on the layout
-	params.set('layout', detectActive('main', 'landscape'));
+	// dictionary of layout values
+	const layoutDictionary = {
+		"tl": 1, "tc": 2, "tr": 3, "ml": 4, "mc": 5, "mr": 6, "bl": 7, "bc": 8, "br": 9
+	}
+	params.set('layout', layoutDictionary[getMainLayout()]);
 	params.set('name', user);
 	params.set('bg', bgMode);
 	// decides what params should be saved depending on the background settings
@@ -288,9 +292,7 @@ function loadFromParams() {
 		for ([key, value] of params.entries()) {indexParams[key] = value;}
 		user = indexParams.name;
 		// changes the layout if it needs to be changed
-		if ((indexParams.layout === '0' && mainElement.classList.contains('landscape')) || (indexParams.layout === '1' && mainElement.classList.contains('portrait'))) {
-			toggleLayout();
-		}
+		setLayout(Number(indexParams.layout), 1);
 		// changes the background mode
 		var newBackground = indexParams.bg;
 		if (newBackground === '1') {
