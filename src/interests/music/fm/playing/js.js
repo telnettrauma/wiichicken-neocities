@@ -274,7 +274,8 @@ function saveToURL() {
 	// rounded corner size
 	params.set('corners', document.getElementById('round-slider').value);
 	// elements to display
-	params.set('disp', `${detectActive('disp-song', 'selected')}${detectActive('disp-artist', 'selected')}${detectActive('disp-album', 'selected')}`);
+	// track, artist, album, listening
+	params.set('disp', `${detectActive('disp-song', 'selected')}${detectActive('disp-artist', 'selected')}${detectActive('disp-album', 'selected')}${detectActive('disp-listening', 'selected')}`);
 	// applies the new settings to the page
 	window.location.search = params;
 }
@@ -320,6 +321,7 @@ function loadFromParams() {
 		if (displayThings[0] === '0') {toggleSongMetadata('track', 'hide-song', 'disp-song');}
 		if (displayThings[1] === '0') {toggleSongMetadata('track', 'hide-artist', 'disp-artist');}
 		if (displayThings[2] === '1') {toggleSongMetadata('track', 'hide-album', 'disp-album');}
+		if (displayThings[3] === '0') {toggleSongMetadata('listen', 'hide-listen', 'disp-listening');}
 	}
 	getNowPlaying();
 }
