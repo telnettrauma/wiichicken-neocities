@@ -87,6 +87,8 @@ body {
 	--settings-bg: #79747e;
 	background-color: #79747e6f;
 	border: 1px solid var(--settings-fg);
+	backdrop-filter: blur(10px) brightness(0.5);
+	-webkit-backdrop-filter: blur(10px) brightness(0.5);
 	z-index: 10;
 }
 .darky {background-color: #2a2331 !important;}
@@ -265,6 +267,7 @@ body {
 /* landscape right aligned */
 .landscape.right-side #hiPoopFart {
 	align-content: flex-end;
+	align-items: flex-end;
 	flex-wrap: wrap;
 }
 .landscape.right-side #hiPoopFart #listen, .landscape.right-side #hiPoopFart #artworklink #track {
