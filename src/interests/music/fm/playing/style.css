@@ -31,7 +31,7 @@ body {
 }
 #artworklink {
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: center;
 }
 #hiPoopFart {
@@ -232,7 +232,10 @@ body {
 #song {font-weight: bold;}
 .hide-song #song, .hide-artist #artist, .hide-album #album {display: none;}
 /* styles for when in portrait */
-.portrait #hiPoopFart #artworklink {flex-direction: column;}
+.portrait #hiPoopFart #artworklink {
+	flex-direction: column;
+	align-items: center;
+}
 .portrait #hiPoopFart #artworklink #track {text-align: center;}
 .portrait #hiPoopFart #artworklink #artist {font-size: 4vmin;}
 .portrait #hiPoopFart #artworklink #song {font-size: 5vmin;}
@@ -243,24 +246,25 @@ body {
 .landscape #hiPoopFart #artworklink #album {font-size: 3vmin;}
 .landscape #hiPoopFart #artworklink #track {
 	margin-block-end: 0;
-	text-align: left;
 	font-size: 2.5vmax;
 }
 .landscape #hiPoopFart #artworklink #song {font-size: 3vmax;}
 .landscape #hiPoopFart #artworklink #album {font-size: 2vmax;}
 .landscape #hiPoopFart {
-	/* align-items: flex-start; */
 	padding: 15px;
 }
 .landscape #hiPoopFart #artworklink #artwork {width: 20vmax;}
 /* landscape left aligned */
+.landscape.left-side #hiPoopFart {
+	align-content: flex-start;
+	align-items: flex-start;
+}
 .landscape.left-side #hiPoopFart #artworklink #track {
 	margin-left: 15px;
 }
 /* landscape right aligned */
 .landscape.right-side #hiPoopFart {
 	align-content: flex-end;
-	align-items: flex-end;
 	flex-wrap: wrap;
 }
 .landscape.right-side #hiPoopFart #listen, .landscape.right-side #hiPoopFart #artworklink #track {

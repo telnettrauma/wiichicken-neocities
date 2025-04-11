@@ -51,22 +51,27 @@ function getNowPlaying() {
 function detectSize() {
 	if (window.innerHeight >= window.innerWidth) {
 		mainElement.classList.add('portrait');
-		document.getElementById('layout-mode').innerHTML = 'Portrait';
+		setLayout(5);
 	} else {
 		mainElement.classList.add('landscape');
-		document.getElementById('layout-mode').innerHTML = 'Landscape';
+		setLayout(4);
 	}
 }
-function toggleLayout() {
-	if (mainElement.classList.contains('portrait')) {
-		mainElement.classList.replace('portrait', 'landscape');
-		document.getElementById('layout-mode').innerHTML = 'Landscape';
-	} else {
-		mainElement.classList.replace('landscape', 'portrait');
-		document.getElementById('layout-mode').innerHTML = 'Portrait';
-	}
+function getMainLayout() {
+	let yourModeIs;
+	// gets horizontal mode
+	if (mainElement.classList.contains('left-side')) {yourModeIs = 'l';}
+	else if (mainElement.classList.contains('portrait')) {yourModeIs = 'c';}
+	else {yourModeIs = 'r';}
+	// gets vertical mode
+	if (mainElement.classList.contains('top-pos')) {yourModeIs = 't' + yourModeIs;}
+	else if (mainElement.classList.contains('middle-pos')) {yourModeIs = 'm' + yourModeIs;}
+	else {yourModeIs = 'b' + yourModeIs;}
+	return yourModeIs;
 }
-function setLayout(layoutNumber) {
+function setLayout(layoutNumber, eraseButtons) {
+	// if eraseButtons = 1, removes the pressed effect from buttons
+	if (eraseButtons === 1) {document.getElementById(`layout-button-${getMainLayout()}`).classList.remove('enabled');}
 	// sets the main layout (landscape or portrait)
 	switch (layoutNumber) {
 		// center layout (portrait)
@@ -109,6 +114,8 @@ function setLayout(layoutNumber) {
 		main.classList.remove('middle-pos');
 		main.classList.add('bottom-pos');
 	}
+	// makes the button for whatever layout was selected active
+	document.getElementById(`layout-button-${getMainLayout()}`).classList.add('enabled');
 }
 function setUser() {
 	document.getElementById('enter-name').style.display = 'block';
