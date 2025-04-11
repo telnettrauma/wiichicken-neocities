@@ -72,13 +72,14 @@ function setLayout(layoutNumber) {
 		// center layout (portrait)
 		case 2:
 		case 5:
-		case 7:
+		case 8:
 			if (mainElement.classList.contains('landscape')) {mainElement.classList.replace('landscape', 'portrait');}
 			break;
 		// side layout (landscape)
 		default:
 			if (mainElement.classList.contains('portrait')) {mainElement.classList.replace('portrait', 'landscape');}
 	}
+	// figures out what horizontal side the elements will be on
 	if ((layoutNumber % 3) === 0) {
 		// if the layout number can be divided by 3, add right-side
 		main.classList.remove('left-side');
@@ -90,6 +91,23 @@ function setLayout(layoutNumber) {
 	} else {
 		main.classList.remove('right-side');
 		main.classList.remove('left-side');
+	}
+	// figures out where vertically the elements will be
+	if (layoutNumber >= 1 && layoutNumber <= 3) {
+		// top
+		main.classList.add('top-pos');
+		main.classList.remove('middle-pos');
+		main.classList.remove('bottom-pos');
+	} else if (layoutNumber >= 4 && layoutNumber <= 6) {
+		// middle
+		main.classList.remove('top-pos');
+		main.classList.add('middle-pos');
+		main.classList.remove('bottom-pos');
+	} else {
+		// bottom
+		main.classList.remove('top-pos');
+		main.classList.remove('middle-pos');
+		main.classList.add('bottom-pos');
 	}
 }
 function setUser() {
