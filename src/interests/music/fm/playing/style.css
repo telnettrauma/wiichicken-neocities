@@ -237,15 +237,17 @@ body {
 .portrait #hiPoopFart #artworklink #track {text-align: center;}
 .portrait #hiPoopFart #artworklink #artist {font-size: 4vmin;}
 .portrait #hiPoopFart #artworklink #song {font-size: 5vmin;}
-.landscape #hiPoopFart #artworklink #album {font-size: 3vmin;}
 /* styles for when in landscape */
+.landscape {
+	--side-margin: 15px;
+}
+.landscape #hiPoopFart #artworklink #album {font-size: 3vmin;}
 .landscape #hiPoopFart #artworklink {
 	flex-direction: row;
 	align-items: flex-end;
 }
 .landscape #hiPoopFart #artworklink #track {
 	margin-block-end: 0;
-	margin-left: 15px;
 	text-align: left;
 	font-size: 2.5vmax;
 }
@@ -256,6 +258,10 @@ body {
 	padding: 15px;
 }
 .landscape #hiPoopFart #artworklink #artwork {width: 20vmax;}
+/* landscape left aligned */
+.landscape.left-side #hiPoopFart #artworkLink #track {
+	margin-left: 15px;
+}
 /* whatever */
 .noBg #moneyOnMind, .noBg #fartOnMind {display: none;}
 .whiteBg {

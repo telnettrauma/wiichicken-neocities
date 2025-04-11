@@ -66,6 +66,32 @@ function toggleLayout() {
 		document.getElementById('layout-mode').innerHTML = 'Portrait';
 	}
 }
+function setLayout(layoutNumber) {
+	// sets the main layout (landscape or portrait)
+	switch (layoutNumber) {
+		// center layout (portrait)
+		case 2:
+		case 5:
+		case 7:
+			if (mainElement.classList.contains('landscape')) {mainElement.classList.replace('landscape', 'portrait');}
+			break;
+		// side layout (landscape)
+		default:
+			if (mainElement.classList.contains('portrait')) {mainElement.classList.replace('portrait', 'landscape');}
+	}
+	if ((layoutNumber % 3) === 0) {
+		// if the layout number can be divided by 3, add right-side
+		main.classList.remove('left-side');
+		main.classList.add('right-side');
+	} else if (layoutNumber === 1 || layoutNumber === 4 || layoutNumber === 7) {
+		// if the layout number is 1, 4, or 7; set layout to left-side
+		main.classList.remove('right-side');
+		main.classList.add('left-side');
+	} else {
+		main.classList.remove('right-side');
+		main.classList.remove('left-side');
+	}
+}
 function setUser() {
 	document.getElementById('enter-name').style.display = 'block';
 	document.getElementById('controls').style.display = 'none';
