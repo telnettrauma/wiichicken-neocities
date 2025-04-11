@@ -232,7 +232,7 @@ body {
 .color-button::-webkit-color-swatch-wrapper {padding: 0;}
 .color-button::-webkit-color-swatch {border: none;}
 #song {font-weight: bold;}
-.hide-song #song, .hide-artist #artist, .hide-album #album {display: none;}
+.hide-song #song, .hide-artist #artist, .hide-album #album, .hide-listen {display: none;}
 /* styles for when in portrait */
 .portrait #hiPoopFart #artworklink {
 	flex-direction: column;

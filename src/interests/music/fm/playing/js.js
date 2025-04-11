@@ -218,8 +218,11 @@ function toggleCoverArt() {
 }
 
 // toggle metadata (note that the conditions are inverted)
-function toggleSongMetadata(md, elm) {
-	var info = document.getElementById('track');
+// relm - root element
+// md - class to toggle
+// elm - element to toggle state
+function toggleSongMetadata(relm, md, elm) {
+	var info = document.getElementById(relm);
 	if (info.classList.contains(md)) {
 		info.classList.remove(md);
 		document.getElementById(elm).classList.add('selected');
@@ -314,9 +317,9 @@ function loadFromParams() {
 		// toggles displaying certain elements
 		var displayThings = indexParams.disp;
 		// song
-		if (displayThings[0] === '0') {toggleSongMetadata('hide-song', 'disp-song');}
-		if (displayThings[1] === '0') {toggleSongMetadata('hide-artist', 'disp-artist');}
-		if (displayThings[2] === '1') {toggleSongMetadata('hide-album', 'disp-album');}
+		if (displayThings[0] === '0') {toggleSongMetadata('track', 'hide-song', 'disp-song');}
+		if (displayThings[1] === '0') {toggleSongMetadata('track', 'hide-artist', 'disp-artist');}
+		if (displayThings[2] === '1') {toggleSongMetadata('track', 'hide-album', 'disp-album');}
 	}
 	getNowPlaying();
 }
