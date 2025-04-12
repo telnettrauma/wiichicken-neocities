@@ -21,10 +21,9 @@ The display of the settings screen can be displayed by clicking or tapping anywh
 
 ### Layout
 
-This changes the layout of the screen. By default, the layout will be determined by the aspect ratio of your device. The available layout options are:
+This changes the layout of the screen.
 
-- **Landscape** - All information will be left aligned
-- **Portrait** - All information will be displayed in the center of the screen
+There are 9 different positions from a 3x3 grid that are available. By default, the layout will be determined by the aspect ratio of your device. Landscape devices will use the left-center (`position 4`) layout, while portrait devices will use the center (`position 5`) layout. Information will be aligned based on what side (left, center, right) is selected.
 
 ### Username
 
@@ -67,11 +66,10 @@ If you would like to not round the corners of cover art at all, set the slider t
 
 Toggles displaying various pieces of information about the now playing track. The options include:
 
-- Song
-- Artist
-- Album
-
-By default, this is set so the `Song` and `Artist` are displayed, but the `Album` is not.
+- "Listening to:" text (enabled by default)
+- Song (enabled by default)
+- Artist (enabled by default)
+- Album (disabled by default)
 
 ### Save to URL
 
