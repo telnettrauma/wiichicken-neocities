@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="--fg: #a8f0ce; --bg: #001f13; --bg-blur: 10vmax;">
+<html lang="en" style="--fg: #a8f0ce; --bg: #001f13; --bg-blur: 10vmax; --edge-distance: 15px;">
 	<head>
 		<title>CURRENTLY LiSTENiNG TO</title>
 		<link rel="icon" type="image/x-icon" href="/favicon.png">
@@ -59,6 +59,12 @@
 					<button class="radio-button" id="layout-button-br" onclick="setLayout(9, 1);">
 						<div class="enabled-status"></div>
 					</button>
+				</div>
+			</div>
+			<div class="c-row w-slide">
+				<p><img src="playing/media/borderadius.png" alt="" loading="lazy">Dist From Edge</p>
+				<div class="slider-box">
+					<input type="range" class="slider" id="padding-slider" min="0" max="200" step="1" value="0">
 				</div>
 			</div>
 			<div class="c-row">

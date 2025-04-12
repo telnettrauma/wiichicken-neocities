@@ -197,6 +197,8 @@ function colorPickerStartup() {
 }
 function updateBg(event) {document.documentElement.style.setProperty("--bg", event.target.value);}
 function updateFg(event) {document.documentElement.style.setProperty("--fg", event.target.value);}
+var paddingSlider = document.getElementById('padding-slider');
+paddingSlider.oninput = function() {document.documentElement.style.setProperty("--edge-distance", `${paddingSlider.value}px`);}
 var cornerSlider = document.getElementById('round-slider');
 cornerSlider.oninput = function() {document.documentElement.style.setProperty("--corners", `${cornerSlider.value}%`);}
 var blurSlider = document.getElementById('blur-slider');
