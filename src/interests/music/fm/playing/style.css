@@ -306,6 +306,13 @@ body {
 	width: 100%;
 	margin-bottom: 10px;
 }
+.slider-box.has-label {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+	font-size: 8px;
+}
+.uniform-distance #edge-variable-sliders, .variable-distance #edge-uniform-slider {display: none;}
 .slider {
 	appearance: none;
 	width: 100%;

@@ -62,9 +62,32 @@
 				</div>
 			</div>
 			<div class="c-row w-slide">
-				<p><img src="playing/media/borderadius.png" alt="" loading="lazy">Dist From Edge</p>
-				<div class="slider-box">
-					<input type="range" class="slider" id="padding-slider" min="0" max="200" step="1" value="0">
+				<div class="c-row" style="border: none; padding: 0; width: 100%;">
+					<p><img src="playing/media/borderadius.png" alt="" loading="lazy">Edge Dist</p>
+					<a id="toggle-uniform-edges"><button>Uniform</button></a>
+				</div>
+				<div id="edge-sliders" class="uniform-distance" style="width: 100%;">
+					<div class="slider-box" id="edge-uniform-slider">
+						<input type="range" class="slider" id="padding-slider" min="0" max="200" step="1" value="0">
+					</div>
+					<div id="edge-variable-sliders">
+						<div class="slider-box has-label">
+							<p>L</p>
+							<input type="range" class="slider" id="left-padding-slider" min="0" max="200" step="1" value="0">
+						</div>
+						<div class="slider-box has-label">
+							<p>T</p>
+							<input type="range" class="slider" id="top-padding-slider" min="0" max="200" step="1" value="0">
+						</div>
+						<div class="slider-box has-label">
+							<p>R</p>
+							<input type="range" class="slider" id="right-padding-slider" min="0" max="200" step="1" value="0">
+						</div>
+						<div class="slider-box has-label">
+							<p>B</p>
+							<input type="range" class="slider" id="bottom-padding-slider" min="0" max="200" step="1" value="0">
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="c-row">
