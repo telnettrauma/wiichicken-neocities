@@ -10,7 +10,7 @@ body {
 #listen {
 	font-size: 20px;
 	margin-block-start: 0;
-	margin-block-end: 0;
+	margin-block-end: 10px;
 }
 .content {max-height: 100vh;}
 .moneyOnMind {
@@ -31,7 +31,7 @@ body {
 }
 #artworklink {
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: center;
 }
 #hiPoopFart {
@@ -45,7 +45,6 @@ body {
 	object-fit: contain;
 	margin: 0;
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
 	align-items: center;
 }
@@ -88,6 +87,8 @@ body {
 	--settings-bg: #79747e;
 	background-color: #79747e6f;
 	border: 1px solid var(--settings-fg);
+	backdrop-filter: blur(10px) brightness(0.5);
+	-webkit-backdrop-filter: blur(10px) brightness(0.5);
 	z-index: 10;
 }
 .darky {background-color: #2a2331 !important;}
@@ -131,6 +132,12 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding: 0;
+}
+.button-grid-3x3 {
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 1fr);
+	gap: 5px;
 }
 .enabled .enabled-status {
 	width: 14px;
@@ -225,31 +232,58 @@ body {
 .color-button::-webkit-color-swatch-wrapper {padding: 0;}
 .color-button::-webkit-color-swatch {border: none;}
 #song {font-weight: bold;}
-.hide-song #song, .hide-artist #artist, .hide-album #album {display: none;}
+.hide-song #song, .hide-artist #artist, .hide-album #album, .hide-listen {display: none;}
 /* styles for when in portrait */
-.portrait #hiPoopFart #artworklink {flex-direction: column;}
+.portrait #hiPoopFart #artworklink {
+	flex-direction: column;
+	align-items: center;
+}
 .portrait #hiPoopFart #artworklink #track {text-align: center;}
 .portrait #hiPoopFart #artworklink #artist {font-size: 4vmin;}
 .portrait #hiPoopFart #artworklink #song {font-size: 5vmin;}
-.landscape #hiPoopFart #artworklink #album {font-size: 3vmin;}
 /* styles for when in landscape */
-.landscape #hiPoopFart #artworklink {
-	flex-direction: row;
-	align-items: flex-end;
+.landscape {
+	--side-margin: 15px;
 }
+.landscape #hiPoopFart #artworklink #album {font-size: 3vmin;}
 .landscape #hiPoopFart #artworklink #track {
 	margin-block-end: 0;
-	margin-left: 15px;
-	text-align: left;
 	font-size: 2.5vmax;
 }
 .landscape #hiPoopFart #artworklink #song {font-size: 3vmax;}
 .landscape #hiPoopFart #artworklink #album {font-size: 2vmax;}
 .landscape #hiPoopFart {
-	align-items: flex-start;
 	padding: 15px;
 }
 .landscape #hiPoopFart #artworklink #artwork {width: 20vmax;}
+/* landscape left aligned */
+.landscape.left-side #hiPoopFart {
+	align-content: flex-start;
+	align-items: flex-start;
+}
+.landscape.left-side #hiPoopFart #artworklink #track {
+	margin-left: 15px;
+}
+/* landscape right aligned */
+.landscape.right-side #hiPoopFart {
+	align-content: flex-end;
+	align-items: flex-end;
+	flex-wrap: wrap;
+}
+.landscape.right-side #hiPoopFart #listen, .landscape.right-side #hiPoopFart #artworklink #track {
+	text-align: right;
+}
+.landscape.right-side #hiPoopFart #artworklink {
+	flex-direction: row-reverse;
+}
+.landscape.right-side #hiPoopFart #artworklink #track {
+	margin-right: 15px;
+}
+/* top middle and bottom */
+.top-pos #hiPoopFart {justify-content: flex-start;}
+.middle-pos #hiPoopFart {justify-content: center;}
+.bottom-pos #hiPoopFart {justify-content: flex-end;}
+
 /* whatever */
 .noBg #moneyOnMind, .noBg #fartOnMind {display: none;}
 .whiteBg {

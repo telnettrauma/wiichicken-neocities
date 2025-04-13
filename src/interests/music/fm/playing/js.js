@@ -51,20 +51,71 @@ function getNowPlaying() {
 function detectSize() {
 	if (window.innerHeight >= window.innerWidth) {
 		mainElement.classList.add('portrait');
-		document.getElementById('layout-mode').innerHTML = 'Portrait';
+		setLayout(5);
 	} else {
 		mainElement.classList.add('landscape');
-		document.getElementById('layout-mode').innerHTML = 'Landscape';
+		setLayout(4);
 	}
 }
-function toggleLayout() {
-	if (mainElement.classList.contains('portrait')) {
-		mainElement.classList.replace('portrait', 'landscape');
-		document.getElementById('layout-mode').innerHTML = 'Landscape';
-	} else {
-		mainElement.classList.replace('landscape', 'portrait');
-		document.getElementById('layout-mode').innerHTML = 'Portrait';
+function getMainLayout() {
+	let yourModeIs;
+	// gets horizontal mode
+	if (mainElement.classList.contains('left-side')) {yourModeIs = 'l';}
+	else if (mainElement.classList.contains('portrait')) {yourModeIs = 'c';}
+	else {yourModeIs = 'r';}
+	// gets vertical mode
+	if (mainElement.classList.contains('top-pos')) {yourModeIs = 't' + yourModeIs;}
+	else if (mainElement.classList.contains('middle-pos')) {yourModeIs = 'm' + yourModeIs;}
+	else {yourModeIs = 'b' + yourModeIs;}
+	return yourModeIs;
+}
+function setLayout(layoutNumber, eraseButtons) {
+	// if eraseButtons = 1, removes the pressed effect from buttons
+	if (eraseButtons === 1) {document.getElementById(`layout-button-${getMainLayout()}`).classList.remove('enabled');}
+	// sets the main layout (landscape or portrait)
+	switch (layoutNumber) {
+		// center layout (portrait)
+		case 2:
+		case 5:
+		case 8:
+			if (mainElement.classList.contains('landscape')) {mainElement.classList.replace('landscape', 'portrait');}
+			break;
+		// side layout (landscape)
+		default:
+			if (mainElement.classList.contains('portrait')) {mainElement.classList.replace('portrait', 'landscape');}
 	}
+	// figures out what horizontal side the elements will be on
+	if ((layoutNumber % 3) === 0) {
+		// if the layout number can be divided by 3, add right-side
+		main.classList.remove('left-side');
+		main.classList.add('right-side');
+	} else if (layoutNumber === 1 || layoutNumber === 4 || layoutNumber === 7) {
+		// if the layout number is 1, 4, or 7; set layout to left-side
+		main.classList.remove('right-side');
+		main.classList.add('left-side');
+	} else {
+		main.classList.remove('right-side');
+		main.classList.remove('left-side');
+	}
+	// figures out where vertically the elements will be
+	if (layoutNumber >= 1 && layoutNumber <= 3) {
+		// top
+		main.classList.add('top-pos');
+		main.classList.remove('middle-pos');
+		main.classList.remove('bottom-pos');
+	} else if (layoutNumber >= 4 && layoutNumber <= 6) {
+		// middle
+		main.classList.remove('top-pos');
+		main.classList.add('middle-pos');
+		main.classList.remove('bottom-pos');
+	} else {
+		// bottom
+		main.classList.remove('top-pos');
+		main.classList.remove('middle-pos');
+		main.classList.add('bottom-pos');
+	}
+	// makes the button for whatever layout was selected active
+	document.getElementById(`layout-button-${getMainLayout()}`).classList.add('enabled');
 }
 function setUser() {
 	document.getElementById('enter-name').style.display = 'block';
@@ -167,8 +218,11 @@ function toggleCoverArt() {
 }
 
 // toggle metadata (note that the conditions are inverted)
-function toggleSongMetadata(md, elm) {
-	var info = document.getElementById('track');
+// relm - root element
+// md - class to toggle
+// elm - element to toggle state
+function toggleSongMetadata(relm, md, elm) {
+	var info = document.getElementById(relm);
 	if (info.classList.contains(md)) {
 		info.classList.remove(md);
 		document.getElementById(elm).classList.add('selected');
@@ -206,7 +260,11 @@ function saveToURL() {
 			{return 1;} else {return 0;}
 	}
 	// changes the value of the layout setting based on the layout
-	params.set('layout', detectActive('main', 'landscape'));
+	// dictionary of layout values
+	const layoutDictionary = {
+		"tl": 1, "tc": 2, "tr": 3, "ml": 4, "mc": 5, "mr": 6, "bl": 7, "bc": 8, "br": 9
+	}
+	params.set('layout', layoutDictionary[getMainLayout()]);
 	params.set('name', user);
 	params.set('bg', bgMode);
 	// decides what params should be saved depending on the background settings
@@ -220,7 +278,8 @@ function saveToURL() {
 	// rounded corner size
 	params.set('corners', document.getElementById('round-slider').value);
 	// elements to display
-	params.set('disp', `${detectActive('disp-song', 'selected')}${detectActive('disp-artist', 'selected')}${detectActive('disp-album', 'selected')}`);
+	// track, artist, album, listening
+	params.set('disp', `${detectActive('disp-song', 'selected')}${detectActive('disp-artist', 'selected')}${detectActive('disp-album', 'selected')}${detectActive('disp-listening', 'selected')}`);
 	// applies the new settings to the page
 	window.location.search = params;
 }
@@ -233,9 +292,7 @@ function loadFromParams() {
 		for ([key, value] of params.entries()) {indexParams[key] = value;}
 		user = indexParams.name;
 		// changes the layout if it needs to be changed
-		if ((indexParams.layout === '0' && mainElement.classList.contains('landscape')) || (indexParams.layout === '1' && mainElement.classList.contains('portrait'))) {
-			toggleLayout();
-		}
+		setLayout(Number(indexParams.layout), 1);
 		// changes the background mode
 		var newBackground = indexParams.bg;
 		if (newBackground === '1') {
@@ -263,9 +320,10 @@ function loadFromParams() {
 		// toggles displaying certain elements
 		var displayThings = indexParams.disp;
 		// song
-		if (displayThings[0] === '0') {toggleSongMetadata('hide-song', 'disp-song');}
-		if (displayThings[1] === '0') {toggleSongMetadata('hide-artist', 'disp-artist');}
-		if (displayThings[2] === '1') {toggleSongMetadata('hide-album', 'disp-album');}
+		if (displayThings[0] === '0') {toggleSongMetadata('track', 'hide-song', 'disp-song');}
+		if (displayThings[1] === '0') {toggleSongMetadata('track', 'hide-artist', 'disp-artist');}
+		if (displayThings[2] === '1') {toggleSongMetadata('track', 'hide-album', 'disp-album');}
+		if (displayThings[3] === '0') {toggleSongMetadata('listen', 'hide-listen', 'disp-listening');}
 	}
 	getNowPlaying();
 }
