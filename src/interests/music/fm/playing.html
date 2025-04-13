@@ -31,7 +31,35 @@
 			</div>
 			<div class="c-row">
 				<p><img src="playing/media/horizontal.png" alt="" loading="lazy">Layout</p>
-				<button class="toggle-button" id="layout-mode" onclick="toggleLayout();">Horizontal</button>
+				<div class="button-grid-3x3">
+					<button class="radio-button" id="layout-button-tl" onclick="setLayout(1, 1);">
+						<div class="enabled-status"></div>
+					</button>
+					<button class="radio-button" id="layout-button-tc" onclick="setLayout(2, 1);">
+						<div class="enabled-status"></div>
+					</button>
+					<button class="radio-button" id="layout-button-tr" onclick="setLayout(3, 1);">
+						<div class="enabled-status"></div>
+					</button>
+					<button class="radio-button" id="layout-button-ml" onclick="setLayout(4, 1);">
+						<div class="enabled-status"></div>
+					</button>
+					<button class="radio-button" id="layout-button-mc" onclick="setLayout(5, 1);">
+						<div class="enabled-status"></div>
+					</button>
+					<button class="radio-button" id="layout-button-mr" onclick="setLayout(6, 1);">
+						<div class="enabled-status"></div>
+					</button>
+					<button class="radio-button" id="layout-button-bl" onclick="setLayout(7, 1);">
+						<div class="enabled-status"></div>
+					</button>
+					<button class="radio-button" id="layout-button-bc" onclick="setLayout(8, 1);">
+						<div class="enabled-status"></div>
+					</button>
+					<button class="radio-button" id="layout-button-br" onclick="setLayout(9, 1);">
+						<div class="enabled-status"></div>
+					</button>
+				</div>
 			</div>
 			<div class="c-row">
 				<p><img src="playing/media/listener.png" alt="" loading="lazy"><span id="show-username">Username</span></p>
@@ -78,9 +106,10 @@
 			<div class="c-row w-slide">
 				<p><img src="playing/media/info.png" alt="" loading="lazy">Display</p>
 				<div class="mult-choice">
-					<button id="disp-song" class="mc-o selected" onclick="toggleSongMetadata('hide-song', 'disp-song');">Song</button>
-					<button id="disp-artist" class="mc-o selected" onclick="toggleSongMetadata('hide-artist', 'disp-artist');">Artist</button>
-					<button id="disp-album" class="mc-o" onclick="toggleSongMetadata('hide-album', 'disp-album');">Album</button>
+					<button id="disp-listening" class="mc-o selected" onclick="toggleSongMetadata('listen', 'hide-listen', 'disp-listening');">Listening?</button>
+					<button id="disp-song" class="mc-o selected" onclick="toggleSongMetadata('track', 'hide-song', 'disp-song');">Song</button>
+					<button id="disp-artist" class="mc-o selected" onclick="toggleSongMetadata('track', 'hide-artist', 'disp-artist');">Artist</button>
+					<button id="disp-album" class="mc-o" onclick="toggleSongMetadata('track', 'hide-album', 'disp-album');">Album</button>
 				</div>
 			</div>
 			<div class="c-row w-slide">

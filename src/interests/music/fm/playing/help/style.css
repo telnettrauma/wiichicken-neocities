@@ -13,3 +13,9 @@ main {
 	margin: auto;
 }
 a {color: #e8c08e;}
+blockquote {
+	padding-left: 20px;
+	border-left: 5px solid #e8c08e;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
