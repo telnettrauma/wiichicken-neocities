@@ -10,7 +10,7 @@ When I get bored, I look at my Google Search Console insights, because why not. 
 
 Before I reveal the coin itself, you need to understand what a meme coin is and how it works. Remember Hawk Tuah coin? It's just that. Although crypto sucks, at least popular currencies such as Bitcoin have **some** real world use. Mainly if you're into purchasing meth over the internet or fraud, but not limited to those usages. Meme coins are useless in comparison. They do nothing except be investments.
 
-The website pump.fun gives everyone the tools to make their own meme coins. Not only can anybody easily make their own atrocities, but they can livestream to promote their coins. This usually includes doing stupid stuff like burning yourself, public blackface, or torturing yourself or others until your coin reaches a milestone ([Gizmodo Article](https://gizmodo.com/pump-fun-is-all-of-the-internets-worst-impulses-on-one-site-2000529483)).
+The website pump.fun gives everyone the tools to make their own meme coins. Not only can anybody easily make their own atrocities, but they can livestream to promote their coins. This usually includes doing stupid stuff like burning yourself, public blackface, or torturing yourself or others until your coin reaches a milestone ([Gizmodo Article](https://gizmodo.com/pump-fun-is-all-of-the-internets-worst-impulses-on-one-site-2000529483){target=_blank}).
 
 So now you know what a meme coin is. So let me introduce you to "Wiggle AI" (`$WIGGLEAI`), the future of finance:
 

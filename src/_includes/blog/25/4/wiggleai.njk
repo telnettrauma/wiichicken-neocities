@@ -16,15 +16,24 @@
 			max-width: 600px;
 			font-size: 16px;
 			padding: 20px;
+			box-shadow: 0 0 50px 5px red;
+			border: 1px solid red;
 		}
 		img {
 			max-width: 100%;
 			image-rendering: pixelated;
 		}
 		h1 {text-align: center;}
+		a {
+			color: #fbdfa6;
+		}
 	</style>
 </head>
 <body>
+	<nav>
+		<a href="/">Home</a>
+		<a href="/more/archive/blog/">Blog</a>
+	</nav>
 	<main>
 		<h1>{{ title }}</h1>
 		<p>{{ date | date("MMMM d, yyyy") }}</p>
