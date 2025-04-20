@@ -6,6 +6,7 @@ permalink: "/interests/music/fm/playing/help/changelog.html"
 ## v1
 
 ### v1.1
+- [v1.1.2](#1-1-2)
 - [v1.1.1](#1-1-1)
 - [v1.1.0](#1-1-0)
 
@@ -14,6 +15,12 @@ permalink: "/interests/music/fm/playing/help/changelog.html"
 - [v1.0.2](#1-0-2)
 - [v1.0.1](#1-0-1)
 - [v1.0.0](#1-0-0)
+
+<h2 id="1-1-1">v1.1.1</h2>
+
+April 20, 2025
+
+- New setting that allows you to adjust the distance that elements are from the edges of the screen
 
 <h2 id="1-1-1">v1.1.1</h2>
 
