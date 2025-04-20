@@ -25,6 +25,10 @@ This changes the layout of the screen.
 
 There are 9 different positions from a 3x3 grid that are available. By default, the layout will be determined by the aspect ratio of your device. Landscape devices will use the left-center (`position 4`) layout, while portrait devices will use the center (`position 5`) layout. Information will be aligned based on what side (left, center, right) is selected.
 
+### Distance From Edge
+
+Sets the distance that elements are from the edges of the screen.
+
 ### Username
 
 The last.fm username for the account that should be used. All that is required is entering the username, you do not need to login to your account. The default username is the creator of the tool, `wiichicken`.

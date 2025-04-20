@@ -279,6 +279,13 @@ function saveToURL() {
 	params.set('cart', detectActive('toggle-cover-art', 'enabled'));
 	// rounded corner size
 	params.set('corners', document.getElementById('round-slider').value);
+	// padding slider value
+	const paddingSize = document.getElementById('padding-slider').value;
+	// TODO these lines are placeholders until the entire feature is implemented
+	params.set('leftpad', paddingSize);
+	params.set('toppad', paddingSize);
+	params.set('rightpad', paddingSize);
+	params.set('botpad', paddingSize);
 	// elements to display
 	// track, artist, album, listening
 	params.set('disp', `${detectActive('disp-song', 'selected')}${detectActive('disp-artist', 'selected')}${detectActive('disp-album', 'selected')}${detectActive('disp-listening', 'selected')}`);
@@ -319,6 +326,8 @@ function loadFromParams() {
 		// changes how round rounded corners are
 		cornerSlider.value = Number(indexParams.corners);
 		document.documentElement.style.setProperty("--corners", `${Number(indexParams.corners)}%`);
+		paddingSlider.value = Number(indexParams.leftpad);
+		document.documentElement.style.setProperty("--edge-distance", `${Number(indexParams.leftpad)}px`);
 		// toggles displaying certain elements
 		var displayThings = indexParams.disp;
 		// song
