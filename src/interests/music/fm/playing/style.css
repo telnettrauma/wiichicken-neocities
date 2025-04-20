@@ -47,6 +47,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: var(--edge-distance);
 }
 @keyframes nowBack {
 	0% {background-position-y: 0%; background-position-x: 0%; transform: rotate(0deg);}
@@ -252,9 +253,6 @@ body {
 }
 .landscape #hiPoopFart #artworklink #song {font-size: 3vmax;}
 .landscape #hiPoopFart #artworklink #album {font-size: 2vmax;}
-.landscape #hiPoopFart {
-	padding: 15px;
-}
 .landscape #hiPoopFart #artworklink #artwork {width: 20vmax;}
 /* landscape left aligned */
 .landscape.left-side #hiPoopFart {
