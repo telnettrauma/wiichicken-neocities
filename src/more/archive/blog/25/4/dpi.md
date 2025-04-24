@@ -40,7 +40,7 @@ There are a lot of sizes that you can specify for favicon icon sizes. You probab
 
 ![Screenshot of the macOS dock](https://i.imgur.com/VV3K8IJ.png)
 
-Yes, the border doesn't follow the rounded corner formula[^1], but I'm probably going to be the only person that sees this, so does it really matter? After all, macOS icons would be [[Lost Shapes of Apple's Apps|better freeform anyway]][^2].
+Yes, the border doesn't follow the rounded corner formula[^1], but I'm probably going to be the only person that sees this, so does it really matter? After all, macOS icons would be [better freeform anyway](/more/archive/blog/2024/12/shapes.html){target=_blank}[^2].
 
 If you're making a personal website just for fun, none of this fancy favicon stuff is required. It's tedious work, and only benefits a small number of people. But it's still something that's an option, and it always makes me smile when someone supports it. If you want a tool to maybe make this easier, here is a [favicon generator I found](https://realfavicongenerator.net)[^3].
 
