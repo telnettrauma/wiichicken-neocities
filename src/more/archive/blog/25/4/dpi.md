@@ -61,6 +61,9 @@ The strange thing is that I cannot figure out what exactly causes this bug to ha
 One day, I hope to fix this very annoying bug. But that day has not come yet.
 
 [^1]: Completely unrelated, did you know that Microsoft Office has a gay mode, only on macOS? ![Screenshot of the "Show Your Pride" setting in Microsoft Office on macOS](https://i.imgur.com/y1rw5VM.png) All it really does is adds rainbow accents to some parts of the UI (such as the zoom slider) as well as a rainbow border around the app icon while it's running. ![Screenshot of PowerPoint in the macOS dock, with a rainbow border around the app icon](https://i.imgur.com/ybi6fCR.png) Windows users are forced to be straight.
+
 [^2]: I know they technically still are freeform, but all the icons are clearly a squircle, which is boring. The iPhone already took squircles!
-[^3]: Okay, fine, the only reason I found it was because it was linked in the [Stack Overflow post](https://stackoverflow.com/questions/4014823/does-a-favicon-have-to-be-32%C3%9732-or-16%C3%9716).
+
+[^3]: Okay, fine, the only reason I found it was because it was linked in the [Stack Overflow post](https://stackoverflow.com/questions/4014823/does-a-favicon-have-to-be-32%C3%9732-or-16%C3%9716){target=_blank}.
+
 [^4]: There is actually a way you can test locally on mobile. Check out this article from Ridvenge: [How to Test Your Website Locally on Mobile](https://ridvenge.neocities.org/scrapbox/test-locally){target=_blank}
