@@ -68,6 +68,10 @@ a {
 	color: var(--dark-secondary);
 }
 a, a:hover, a:active, button img, a img {cursor: url(/media/pointer.svg), url(/media/pointer.png), pointer;}
+.no-bg::after {
+	content: unset;
+	display: none;
+}
 code {font-family: 'Martian Mono', monospace;}
 img {image-rendering: pixelated;}
 button {
