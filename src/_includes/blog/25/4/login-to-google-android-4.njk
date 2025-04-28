@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{ title }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<meta charset="UTF-8">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+		body {
+			font-family: "Roboto", sans-serif;
+			background: #030304;
+			background: linear-gradient(180deg, #030304 0%, #202329 100%);
+			color: #f1f1f1;
+			background-attachment: fixed;
+		}
+		main {
+			margin: auto;
+			max-width: 670px;
+			font-size: 16px;
+			padding: 20px;
+			line-height: 30px;
+		}
+		img {
+			margin-top: 10px;
+			max-width: 100%;
+		}
+		h1 {text-align: center;}
+		pre {
+			background-color: #043634;
+			border: 2px solid #38726e;
+			color: #c8f4f3;
+			padding: 10px;
+			border-radius: 5px;
+			white-space: pre-line;
+		}
+		a, h1 {color: #33b4e4;}
+		hr {
+			border: unset;
+			border-top: 2px solid #5f5f60;
+		}
+		blockquote {
+			border-left: 2px solid #5f5f60;
+			margin-inline-start: 0px;
+			padding-left: 30px;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<a href="/">Home</a>
+		<a href="/more/archive/blog/">Blog</a>
+	</nav>
+	<main>
+		<h1>{{ title }}</h1>
+		<p>{{ date | date("MMMM d, yyyy") }}</p>
+		<hr>
+		{{ content | safe }}
+	</main>
+</body>
+</html>
