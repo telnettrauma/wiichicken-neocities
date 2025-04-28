@@ -13,7 +13,7 @@ body {
 	border: 1px solid red;
 	overflow-y: scroll;
 	width: calc(100vw - 10px);
-	height: calc(100vh - 60px);
+	height: calc(100vh - 55px);
 	top: 0;
 }
 nav {
@@ -22,6 +22,7 @@ nav {
 .topLinks {
 	display: flex;
 	justify-content: flex-end;
+	align-items: center;
 	margin-right: 5px;
 	background-image: url(/more/archive/blog/25/res/navglow.png);
 	background-repeat: no-repeat;
@@ -36,6 +37,7 @@ nav {
 	text-decoration: none;
 	/* background: linear-gradient(180deg, var(--background) 0%, #00000000 100%); */
 	width: 50px;
+	filter: drop-shadow(0 0 2px black);
 }
 .topLinks a img {
 	width: 24px;
@@ -61,6 +63,27 @@ nav {
 	color: #ffdad6;
 	--background: red;
 }
+#fakeLogo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding: 2px;
+	margin: 0 5px 0 5px;
+	pointer-events: all;
+	width: 40px;
+	height: 40px;
+	background: linear-gradient(0deg, #7e7e7e 0%, #ffffff 100%);
+	border: 5px solid black;
+	aspect-ratio: 1;
+}
+#fakeLogo .square {
+	width: 10px;
+	height: 10px;
+	margin: 2px;
+}
+#s1 {background-color: red; background: linear-gradient(0deg, #ff7b00 0%, #ff0000 100%);}
+#s2 {background-color: #00a2ff; background: linear-gradient(180deg, #00a2ff 0%, #0044ff 100%);}
 main {
 	margin: auto;
 	color: white;
