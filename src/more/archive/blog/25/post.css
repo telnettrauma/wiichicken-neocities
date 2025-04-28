@@ -1,0 +1,87 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	background-color: black;
+	display: flex;
+	flex-direction: column-reverse;
+}
+.content-area {
+	margin: 5px 5px 0 5px;
+	background-color: green;
+	border: 1px solid red;
+	overflow-y: scroll;
+	width: calc(100vw - 10px);
+	height: calc(100vh - 60px);
+	top: 0;
+}
+nav {
+	image-rendering: pixelated;
+}
+.topLinks {
+	display: flex;
+}
+.topLinks a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 10px;
+	padding: 0 5px 0 5px;
+	background: linear-gradient(180deg, var(--background) 0%, #00000000 100%);
+}
+.topLinks a img {
+	width: 16px;
+}
+.topLinks a:first-child {
+	color: #c5e7ff;
+	--background: blue;
+}
+.topLinks a:nth-child(2) {
+	color: #dce1ff;
+	--background: #0059ff;
+}
+.topLinks a:nth-child(3) {
+	color: #ffd6fe;
+	--background: #dd00ff;
+}
+.topLinks a:nth-child(4) {
+	color: #ffdadb;
+	--background: #ff0055;
+}
+.topLinks a:nth-child(5) {
+	color: #ffdad6;
+	--background: red;
+}
+main {
+	margin: auto;
+	color: white;
+	background-color: blue;
+	max-width: 670px;
+	font-size: 16px;
+	padding: 20px;
+	line-height: 30px;
+}
+img {
+	margin-top: 10px;
+	max-width: 100%;
+}
+h1 {text-align: center;}
+pre {
+	background-color: #043634;
+	border: 2px solid #38726e;
+	color: #c8f4f3;
+	padding: 10px;
+	border-radius: 5px;
+	white-space: pre-line;
+}
+a, h1 {color: #33b4e4;}
+hr {
+	border: unset;
+	border-top: 2px solid #5f5f60;
+}
+blockquote {
+	border-left: 2px solid #5f5f60;
+	margin-inline-start: 0px;
+	padding-left: 30px;
+}

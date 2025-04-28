@@ -5,55 +5,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta charset="UTF-8">
-	<style>
-		body {
-			background: #030304;
-			background: linear-gradient(180deg, #030304 0%, #202329 100%);
-			color: #f1f1f1;
-			background-attachment: fixed;
-		}
-		main {
-			margin: auto;
-			max-width: 670px;
-			font-size: 16px;
-			padding: 20px;
-			line-height: 30px;
-		}
-		img {
-			margin-top: 10px;
-			max-width: 100%;
-		}
-		h1 {text-align: center;}
-		pre {
-			background-color: #043634;
-			border: 2px solid #38726e;
-			color: #c8f4f3;
-			padding: 10px;
-			border-radius: 5px;
-			white-space: pre-line;
-		}
-		a, h1 {color: #33b4e4;}
-		hr {
-			border: unset;
-			border-top: 2px solid #5f5f60;
-		}
-		blockquote {
-			border-left: 2px solid #5f5f60;
-			margin-inline-start: 0px;
-			padding-left: 30px;
-		}
-	</style>
+	<link href="/more/archive/blog/25/post.css" rel="stylesheet">
 </head>
 <body>
 	<nav>
-		<a href="/">Home</a>
-		<a href="/more/archive/blog/">Blog</a>
+		<a id="fakeLogo" href="/" title="Home">
+			<div class="square" id="s1"></div>
+			<div class="square" id="s2"></div>
+		</a>
+		<div id="inHead">
+			<div class="topLinks">
+				<a href="/aboutme.html"><img src="/resources/nav/me.png">ABOUT</a>
+				<a href="/creative/"><img src="/resources/nav/art.png">ART</a>
+				<a href="/more/archive/blog/"><img src="/resources/nav/blog.png">BLOG</a>
+				<a href="/interests/"><img src="/resources/nav/intr.png">iNTERESTS</a>
+				<a href="/more/"><img src="/resources/nav/more.png">MORE</a>
+			</div>
+		</div>
 	</nav>
-	<main>
-		<h1>{{ title }}</h1>
-		<p>{{ date | date("MMMM d, yyyy") }}</p>
-		<hr>
-		{{ content | safe }}
-	</main>
+	<div class="content-area">
+		<main>
+			<h1>{{ title }}</h1>
+			<p>{{ date | date("MMMM d, yyyy") }}</p>
+			<hr>
+			{{ content | safe }}
+		</main>
+	</div>
 </body>
 </html>
