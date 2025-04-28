@@ -136,15 +136,21 @@
 				font-size: 25px;
 				font-family: 'Kode Mono', monospace;
 			}
+			#beeminder-sec {padding: 0;}
 			@media only screen and (max-width: 1050px) {
 				.sidebar {position: static;}
 				article, .row, #helloGames, main, .box, header, #qanda .box {width: -webkit-fill-available;}
 				.row {
 					flex-wrap: wrap;
 					flex-direction: column;
+					margin-bottom: 10px;
+					gap: 5px;
 				}
 				.hideMob {display: none !important;}
-				.row .box {width: auto;}
+				.row .box {
+					width: auto;
+					margin-bottom: 0px;
+				}
 				.yourMarginSucks {margin-right: 0 !important;}
 				#theGoofyRow {display: flex !important;}
 				main {
@@ -158,6 +164,9 @@
 					flex-wrap: wrap;
 					justify-content: space-evenly;
 				}
+			}
+			@media only screen and (min-width: 1050px) {
+				#beeminder-sec {width: 180%;}
 			}
 			@media (prefers-reduced-motion) {
 				* {animation: none !important;}
@@ -345,10 +354,10 @@
 					<p>As much as I don't like big tech and social media, this site wasn't made as a big middle finger towards them. Instead, this site is a creation of my own. It's something that I can look at and say "I made this" with pride. I feel alot of people forget about that when they start making their own websites. Making websites as protest is cool, but making websites for fun is also cool. <img src="media/emoji/glasses.gif"> I highly recommend you read the <a href="https://sadgrl.online/cyberspace/internet-manifesto" target="_blank">sadgrl.online Internet Manifesto</a>, as I strongly agree with what it says.</p>
 				</div>
 				<div class="row">
-					<div class="box" style="padding: 0; width: 180%;">
-						<img src="https://www.beeminder.com/cringe/website.png" loading="lazy" style="width: 100%; image-rendering: auto;">
+					<div class="box m-sec-t d-sec-l" id="beeminder-sec">
+						<img src="https://www.beeminder.com/cringe/website.png" loading="lazy" style="max-width: 100%; image-rendering: auto;">
 					</div>
-					<div class="box">
+					<div class="box m-sec-b d-sec-r">
 						<p>This graph shows the work I've done on this site. If the datapoints fall below the red line, I have failed my goal.</p>
 						<a href="https://www.beeminder.com/cringe/website" target="_blank" class="no-bg"><button>View on Beeminder</button></a>
 					</div>
