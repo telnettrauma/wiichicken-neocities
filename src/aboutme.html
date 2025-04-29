@@ -70,12 +70,6 @@
 				filter: blur(25px);
 				object-fit: cover;
 			}
-			.grid {
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				gap: 5px;
-			}
-			.grid .box {margin-bottom: 0;}
 			#buttons {
 				display: flex;
 				flex-wrap: wrap;
@@ -122,6 +116,12 @@
 			}
 			@media only screen and (min-width: 1050px) {
 				#beeminder-sec {width: 180%;}
+				.grid {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					gap: 5px;
+				}
+				.grid .box {margin-bottom: 0;}
 			}
 			@media (prefers-reduced-motion) {
 				* {animation: none !important;}
