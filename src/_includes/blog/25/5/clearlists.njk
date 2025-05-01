@@ -6,44 +6,40 @@
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta charset="UTF-8">
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 		body {
-			font-family: "Roboto", sans-serif;
-			background: #030304;
-			background: linear-gradient(180deg, #030304 0%, #202329 100%);
-			color: #f1f1f1;
-			background-attachment: fixed;
+			font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			background-color: black;
+			margin: 0;
 		}
 		main {
 			margin: auto;
 			max-width: 670px;
-			font-size: 16px;
-			padding: 20px;
-			line-height: 30px;
+			font-size: 18px;
+			line-height: 40px;
+			font-weight: bold;
 		}
-		img {
-			margin-top: 10px;
-			max-width: 100%;
+		main header, main p, main section {
+			padding: 20px 30px 20px 30px;
+			color: white;
+			margin-block-start: 0;
+			margin-block-end: 0;
+			text-shadow: 0 0 10px #755600ad;
 		}
-		h1 {text-align: center;}
-		pre {
-			background-color: #043634;
-			border: 2px solid #38726e;
-			color: #c8f4f3;
-			padding: 10px;
-			border-radius: 5px;
-			white-space: pre-line;
+		a {
+			color: white;
+			line-break: anywhere;
 		}
-		a, h1 {color: #33b4e4;}
-		hr {
-			border: unset;
-			border-top: 2px solid #5f5f60;
-		}
-		blockquote {
-			border-left: 2px solid #5f5f60;
-			margin-inline-start: 0px;
-			padding-left: 30px;
-		}
+		main header:first-child {background-color: #df0702;}
+		#sec2 {background-color: #E31708;}
+		#sec3 {background-color: #E52807;}
+		#sec4 {background-color: #E83807;}
+		#sec5 {background-color: #EA4906;}
+		#sec6 {background-color: #EC5A05;}
+		#sec7 {background-color: #EF6B04;}
+		#sec8 {background-color: #F17B04;}
+		#sec9 {background-color: #F48C03;}
+		#sec10 {background-color: #F69D02;}
+		#sec11 {background-color: #F8AE01;}
 	</style>
 </head>
 <body>
@@ -52,9 +48,10 @@
 		<a href="/more/archive/blog/">Blog</a>
 	</nav>
 	<main>
-		<h1>{{ title }}</h1>
-		<p>{{ date | date("MMMM d, yyyy") }}</p>
-		<hr>
+		<header>
+			<h1>{{ title }}</h1>
+			<p>{{ date | date("MMMM d, yyyy") }}</p>
+		</header>
 		{{ content | safe }}
 	</main>
 </body>
