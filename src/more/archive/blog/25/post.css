@@ -22,17 +22,11 @@ body {
 nav {
 	image-rendering: pixelated;
 }
-#in-nav {
-	display: flex;
-	justify-content: space-between;
-}
 .topLinks {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	margin-right: 5px;
-}
-#main-nav {
 	background-image: url(/more/archive/blog/25/res/navglow.png);
 	background-repeat: no-repeat;
 	background-position: right top;
@@ -50,23 +44,23 @@ nav {
 	width: 24px;
 	margin-bottom: 4px;
 }
-.topLinks a:first-child {
+.topLinks a:nth-child(2) {
 	color: #c5e7ff;
 	--background: blue;
 }
-.topLinks a:nth-child(2) {
+.topLinks a:nth-child(3) {
 	color: #dce1ff;
 	--background: #0059ff;
 }
-.topLinks a:nth-child(3) {
+.topLinks a:nth-child(4) {
 	color: #ffd6fe;
 	--background: #dd00ff;
 }
-.topLinks a:nth-child(4) {
+.topLinks a:nth-child(5) {
 	color: #ffdadb;
 	--background: #ff0055;
 }
-.topLinks a:nth-child(5) {
+.topLinks a:nth-child(6) {
 	color: #ffdad6;
 	--background: red;
 }
@@ -89,8 +83,15 @@ nav {
 	height: 10px;
 	margin: 2px;
 }
-#s1 {background-color: red; background: linear-gradient(0deg, #ff7b00 0%, #ff0000 100%); animation: blink 15s infinite;}
-#s2 {background-color: #00a2ff; background: linear-gradient(180deg, #00a2ff 0%, #0044ff 100%);}
+#s1 {
+	background-color: red;
+	background: linear-gradient(0deg, #ff7b00 0%, #ff0000 100%);
+	animation: blink 15s infinite;
+}
+#s2 {
+	background-color: #00a2ff;
+	background: linear-gradient(180deg, #00a2ff 0%, #0044ff 100%);
+}
 @keyframes blink {
 	0% {height: 10px; margin-top: 0; margin-bottom: 0;}
 	10% {height: 10px; margin-top: 0; margin-bottom: 0;}
@@ -98,9 +99,20 @@ nav {
 	12% {height: 10px; margin-top: 0; margin-bottom: 0;}
 	100% {height: 10px; margin-top: 0; margin-bottom: 0;}
 }
+#accessibility-button {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: #000;
+	color: #fff;
+	padding: 8px;
+	z-index: 100;
+}
+#accessibility-button:focus {top: 0;}
 /* post content area */
 .content-area.default {
 	background-image: url('/more/archive/blog/25/res/bg/light.png');
+	--border: #96dc7e;
 }
 .content-area.default main {
 	margin: 30px auto 0 auto;
@@ -110,11 +122,12 @@ nav {
 	font-size: 16px;
 	padding: 20px;
 	line-height: 30px;
+	border: 2px solid var(--border);
 }
 img {
 	max-width: 100%;
 }
-h1, h2, h3, h4, h5, h6 {font-family: 'Kode Mono', monospace;}
+.content-area.default h1, .content-area.default h2, .content-area.default h3, .content-area.default h4, .content-area.default h5, .content-area.default h6 {font-family: 'Kode Mono', monospace;}
 pre {
 	background-color: #043634;
 	border: 2px solid #38726e;
