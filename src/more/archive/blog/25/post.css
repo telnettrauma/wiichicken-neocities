@@ -2,6 +2,9 @@
 	box-sizing: border-box;
 }
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@700&family=Martian+Mono:wght@600&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+html {
+	scroll-behavior: smooth;
+}
 body {
 	margin: 0;
 	background-color: black;
@@ -19,11 +22,17 @@ body {
 nav {
 	image-rendering: pixelated;
 }
+#in-nav {
+	display: flex;
+	justify-content: space-between;
+}
 .topLinks {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	margin-right: 5px;
+}
+#main-nav {
 	background-image: url(/more/archive/blog/25/res/navglow.png);
 	background-repeat: no-repeat;
 	background-position: right top;
@@ -94,7 +103,7 @@ nav {
 	background-image: url('/more/archive/blog/25/res/bg/light.png');
 }
 .content-area.default main {
-	margin: auto;
+	margin: 30px auto 0 auto;
 	color: #052d03;
 	background-color: #bae9aa;
 	max-width: 670px;
