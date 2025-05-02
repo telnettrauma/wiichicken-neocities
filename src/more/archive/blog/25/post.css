@@ -113,52 +113,19 @@ nav {
 .content-area.default {
 	background: #f7dfbb;
 	background-image: url('/more/archive/blog/25/res/bg/light.png');
+	--accent: #ff9c01;
 	--border: #f1d5a8;
+	scrollbar-width: 8px;
+	scrollbar-color: var(--accent) #fdf4e8;
 }
 .content-area.default main {
-	will-change: transform;
-	--p: 2;
-	--pixel: calc(var(--p) * 1px);
-	--s: calc(var(--pixel) * 6);
-	margin: 10px auto 0 auto;
+	margin: 10px auto 10px auto;
 	color: #201b13;
 	background-color: #fff8f3;
 	max-width: 700px;
 	font-size: 16px;
 	padding: 20px;
 	line-height: 30px;
-	position: relative;
-	clip-path: polygon(
-		var(--s) 0%, 
-		calc(100% - var(--s)) 0%, 
-		100% var(--s), 100% calc(100% - var(--s)), 
-		calc(100% - var(--s)) 100%, 
-		var(--s) 100%, 
-		0% calc(100% - var(--s)), 
-		0% var(--s));
-}
-.content-area.default main:before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	z-index: -1;
-	background: linear-gradient(45deg,var(--border),var(--border));
-	--g1:#000 var(--pixel),#0000 0 calc(100% - var(--pixel)),#000 0;
-	--g2:#0000   calc(0.707*var(--s)), 
-			#000  0 calc(0.707*var(--s) + var(--pixel)),
-			#0000 0 calc(100% - 0.707*var(--s) - var(--pixel)),
-			#000  0 calc(100% - 0.707*var(--s)),
-			#0000 0;
-	-webkit-mask:
-		linear-gradient(45deg ,var(--g2)),
-		linear-gradient(-45deg,var(--g2)),
-		linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
-		linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
-	mask:
-		linear-gradient(45deg ,var(--g2)),
-		linear-gradient(-45deg,var(--g2)),
-		linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
-		linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
 }
 img {
 	max-width: 100%;
@@ -182,10 +149,21 @@ img {
 	font-size: 10vw;
 	letter-spacing: -0.5vw;
 	line-height: 8vw;
-	color: #ff9c01;
+	color: var(--accent);
 	text-align: justify;
 }
 .content-area.default h1, .content-area.default h2, .content-area.default h3, .content-area.default h4, .content-area.default h5, .content-area.default h6 {font-family: 'Kode Mono', monospace;}
+.content-area.default a {color: var(--accent);}
+.content-area.default .footnote-ref a {text-decoration: none;}
+.content-area.default ul {
+	list-style: none;
+}
+.content-area.default ul li:before {
+	content: "▪";
+	margin-right: 10px;
+	font-size: 18px;
+	color: var(--accent);
+}
 pre {
 	background-color: #043634;
 	border: 2px solid #38726e;
@@ -203,15 +181,6 @@ blockquote {
 	margin-inline-start: 0px;
 	padding-left: 30px;
 }
-#floating-line {
-	width: calc(100% - 12px);
-	z-index: 10;
-	height: 20px;
-	position: absolute;
-	top: 6px;
-	background-color: #ff9e017b;
-	backdrop-filter: blur(5px);
-}
 
 @media only screen and (min-width: 700px) {
 	.content-area.default header {
@@ -223,5 +192,43 @@ blockquote {
 		writing-mode: vertical-rl;
 		text-orientation: sideways;
 		font-size: 3vw;
+	}
+	.content-area.default main {
+		will-change: transform;
+		--p: 2;
+		--pixel: calc(var(--p) * 1px);
+		--s: calc(var(--pixel) * 6);
+		position: relative;
+		clip-path: polygon(
+			var(--s) 0%,
+			calc(100% - var(--s)) 0%,
+			100% var(--s), 100% calc(100% - var(--s)),
+			calc(100% - var(--s)) 100%,
+			var(--s) 100%,
+			0% calc(100% - var(--s)),
+			0% var(--s));
+	}
+	.content-area.default main:before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		background: linear-gradient(45deg,var(--border),var(--border));
+		--g1:#000 var(--pixel),#0000 0 calc(100% - var(--pixel)),#000 0;
+		--g2:#0000   calc(0.707*var(--s)), 
+				#000  0 calc(0.707*var(--s) + var(--pixel)),
+				#0000 0 calc(100% - 0.707*var(--s) - var(--pixel)),
+				#000  0 calc(100% - 0.707*var(--s)),
+				#0000 0;
+		-webkit-mask:
+			linear-gradient(45deg ,var(--g2)),
+			linear-gradient(-45deg,var(--g2)),
+			linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+			linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
+		mask:
+			linear-gradient(45deg ,var(--g2)),
+			linear-gradient(-45deg,var(--g2)),
+			linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+			linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
 	}
 }
