@@ -28,10 +28,11 @@
 		</div>
 	</nav>
 	<div class="content-area default">
-		<main>
+		<header>
 			<h1 id="top">{{ title }}</h1>
-			<p>{{ date | date("MMMM d, yyyy") }}</p>
-			<hr>
+			<p id="article-date">{{ date | date("MMMM d, yyyy") }}</p>
+		</header>
+		<main>
 			{{ content | safe }}
 		</main>
 	</div>
