@@ -116,6 +116,9 @@ nav {
 	--border: #f1d5a8;
 }
 .content-area.default main {
+	--p: 2;
+	--pixel: calc(var(--p) * 1px);
+	--s: calc(var(--pixel) * 3);
 	margin: 10px auto 0 auto;
 	color: #201b13;
 	background-color: #fff8f3;
@@ -123,7 +126,38 @@ nav {
 	font-size: 16px;
 	padding: 20px;
 	line-height: 30px;
-	border: 2px solid var(--border);
+	position: relative;
+	clip-path: polygon(
+		var(--s) 0%, 
+		calc(100% - var(--s)) 0%, 
+		100% var(--s), 100% calc(100% - var(--s)), 
+		calc(100% - var(--s)) 100%, 
+		var(--s) 100%, 
+		0% calc(100% - var(--s)), 
+		0% var(--s));
+}
+.content-area.default main:before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background: linear-gradient(45deg,var(--border),var(--border));
+	--g1:#000 var(--pixel),#0000 0 calc(100% - var(--pixel)),#000 0;
+	--g2:#0000   calc(0.707*var(--s)), 
+			#000  0 calc(0.707*var(--s) + var(--pixel)),
+			#0000 0 calc(100% - 0.707*var(--s) - var(--pixel)),
+			#000  0 calc(100% - 0.707*var(--s)),
+			#0000 0;
+	-webkit-mask:
+		linear-gradient(45deg ,var(--g2)),
+		linear-gradient(-45deg,var(--g2)),
+		linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+		linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
+	mask:
+		linear-gradient(45deg ,var(--g2)),
+		linear-gradient(-45deg,var(--g2)),
+		linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+		linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
 }
 img {
 	max-width: 100%;
