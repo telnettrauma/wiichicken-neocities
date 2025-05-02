@@ -14,7 +14,7 @@ body {
 }
 .content-area {
 	margin: 5px 5px 0 5px;
-	border: 1px solid #00ff00;
+	border: 1px solid #ff9c01;
 	overflow-y: scroll;
 	width: calc(100vw - 10px);
 	height: calc(100vh - 55px);
@@ -111,13 +111,14 @@ nav {
 #accessibility-button:focus {top: 0;}
 /* post content area */
 .content-area.default {
+	background: #f7dfbb;
 	background-image: url('/more/archive/blog/25/res/bg/light.png');
-	--border: #96dc7e;
+	--border: #f1d5a8;
 }
 .content-area.default main {
 	margin: 10px auto 0 auto;
-	color: #052d03;
-	background-color: #bae9aa;
+	color: #201b13;
+	background-color: #fff8f3;
 	max-width: 700px;
 	font-size: 16px;
 	padding: 20px;
@@ -130,7 +131,7 @@ img {
 .content-area.default header {
 	text-transform: uppercase;
 	padding: 5px;
-	background: linear-gradient(180deg, #d7e8cd 0%, #d7e8cd 60%, #d7e8cd00 100%);
+	background: linear-gradient(180deg, #fdf4e8 0%, #fdf4e8 60%, #00000000 100%);
 }
 .content-area.default #article-date, .content-area.default h1 {
 	margin-block-start: 0;
@@ -140,13 +141,13 @@ img {
 	font-family: 'Kode Mono', monospace;
 	font-weight: bold;
 	font-size: 6vw;
-	color: #3c4b37;
+	color: #58432c;
 }
 .content-area.default h1 {
 	font-size: 10vw;
 	letter-spacing: -0.5vw;
 	line-height: 8vw;
-	color: #406836;
+	color: #ff9c01;
 	text-align: justify;
 }
 .content-area.default h1, .content-area.default h2, .content-area.default h3, .content-area.default h4, .content-area.default h5, .content-area.default h6 {font-family: 'Kode Mono', monospace;}
