@@ -111,12 +111,13 @@ nav {
 #accessibility-button:focus {top: 0;}
 /* post content area */
 .content-area.default {
-	background: #f7dfbb;
 	background-image: url('/more/archive/blog/25/res/bg/light.png');
 	--accent: #ff9c01;
+	--blend: #fdf4e8;
 	--border: #f1d5a8;
+	background: var(--blend);
 	scrollbar-width: 8px;
-	scrollbar-color: var(--accent) #fdf4e8;
+	scrollbar-color: var(--accent) var(--blend);
 }
 .content-area.default main {
 	margin: 10px auto 10px auto;
@@ -133,7 +134,7 @@ img {
 .content-area.default header {
 	text-transform: uppercase;
 	padding: 5px;
-	background: linear-gradient(180deg, #fdf4e8 0%, #fdf4e8 60%, #00000000 100%);
+	background: linear-gradient(180deg, var(--blend) 0%, var(--blend) 60%, #00000000 100%);
 }
 .content-area.default #article-date, .content-area.default h1 {
 	margin-block-start: 0;
@@ -151,6 +152,7 @@ img {
 	line-height: 8vw;
 	color: var(--accent);
 	text-align: justify;
+	padding-right: 3px;
 }
 .content-area.default h1, .content-area.default h2, .content-area.default h3, .content-area.default h4, .content-area.default h5, .content-area.default h6 {font-family: 'Kode Mono', monospace;}
 .content-area.default a {color: var(--accent);}
@@ -180,6 +182,20 @@ blockquote {
 	border-left: 2px solid #5f5f60;
 	margin-inline-start: 0px;
 	padding-left: 30px;
+}
+
+@media (prefers-color-scheme: dark) {
+	.content-area.default {
+		background-image: url('/more/archive/blog/25/res/bg/dark.png');
+		--border: #50453a;
+		--blend: #211a14;
+		scrollbar-color: var(--accent) var(--blend);
+	}
+	.content-area.default #article-date {color: #e0c1a3;}
+	.content-area.default main {
+		color: #eee0d5;
+		background-color: #19120c;
+	}
 }
 
 @media only screen and (min-width: 700px) {
