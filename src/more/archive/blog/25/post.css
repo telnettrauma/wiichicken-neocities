@@ -75,7 +75,7 @@ nav {
 	width: 40px;
 	height: 40px;
 	background: linear-gradient(0deg, #7e7e7e 0%, #ffffff 100%);
-	border: 5px solid black;
+	border: 4px solid black;
 	aspect-ratio: 1;
 }
 #fakeLogo .square {
@@ -120,7 +120,7 @@ nav {
 	scrollbar-color: var(--accent) var(--blend);
 }
 .content-area.default main {
-	margin: 10px auto 10px auto;
+	margin: 0 auto 0 auto;
 	color: #201b13;
 	background-color: #fff8f3;
 	max-width: 700px;
@@ -134,7 +134,7 @@ img {
 .content-area.default header {
 	text-transform: uppercase;
 	padding: 5px;
-	background: linear-gradient(180deg, var(--blend) 0%, var(--blend) 60%, #00000000 100%);
+	background: linear-gradient(0deg, var(--blend) 0%, #00000000 100%);
 }
 .content-area.default #article-date, .content-area.default h1 {
 	margin-block-start: 0;
@@ -203,6 +203,7 @@ blockquote {
 		display: flex;
 		flex-direction: row-reverse;
 		justify-content: flex-end;
+		background: linear-gradient(180deg, var(--blend) 0%, var(--blend) 60%, #00000000 100%);
 	}
 	.content-area.default #article-date {
 		writing-mode: vertical-rl;
@@ -210,6 +211,7 @@ blockquote {
 		font-size: 3vw;
 	}
 	.content-area.default main {
+		margin: 10px auto 10px auto;
 		will-change: transform;
 		--p: 2;
 		--pixel: calc(var(--p) * 1px);
