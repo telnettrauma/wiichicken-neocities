@@ -31,10 +31,34 @@ This just works, but it feels thrown together. I spend less than 5 minutes makin
 - Look generic, I'm not proud of the design of them
 - Mobile compatibility[^3]
 
-Because of all this, I decided it was finally time to make a default, uniform blog layout.
+Because of all this, I decided it was finally time to make a default, uniform blog layout. And that's what you're looking at right now.
+
+## New Layout
+
+I had a few goals for this new layout that I **had** to meet:
+
+- Make it look like something **I** would make, rather than looking like [Bear Blog](https://bearblog.dev)
+- Support robust formatting features, such as footnotes[^4]
+- Have a light mode and dark mode
+- Include site navigation
+- Be responsive for both desktop and mobile
+
+Additionally, I had a couple optional goals. These weren't required, but would still be nice to have:
+
+- Ability to have site navigation work for **any** blog post page, even ones without this layout
+- Set custom color themes per article[^5]
+- No JavaScript
+- Automatically generated table of contents
+- [Open Graph](https://ogp.me)
+
+All that ended up with this.
 
 [^1]: A static site generator writes the code for pages automatically, but if no code is changed, the page is never changed. This is how most blogs work, and shouldn't be confused for a dynamic page (like a Twitter feed)
 
 [^2]: Allows inserting code snippets into a page. If the snippet is updated, than every page with that snippet is updated to reflect that snippet. Unlike a template—which inserts your code inside an existing skeleton—a snippet inserts itself into your code, not around it. Does that make sense?
 
 [^3]: I understand people on desktop not wanting to make their complex layouts mobile compatible, but locking people out of my website because they don't have a computer is dumb. I'm not going to lock people who don't have a computer out of culture. Plus, blog posts are images and text, there is no reason I can't optimize the mobile experience.
+
+[^4]: hi
+
+[^5]: Inspired by [so1o.xyz](https://so1o.xyz/blog/mood)
