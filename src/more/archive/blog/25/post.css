@@ -1,6 +1,4 @@
-* {
-	box-sizing: border-box;
-}
+* {box-sizing: border-box;}
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@700&family=Martian+Mono:wght@600&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 html {
 	scroll-behavior: smooth;
@@ -19,9 +17,7 @@ body {
 	width: calc(100vw - 10px);
 	height: calc(100vh - 55px);
 }
-nav {
-	image-rendering: pixelated;
-}
+nav {image-rendering: pixelated;}
 .topLinks {
 	display: flex;
 	justify-content: flex-end;
@@ -111,18 +107,19 @@ nav {
 #accessibility-button:focus {top: 0;}
 /* post content area */
 .content-area.default {
-	background-image: url('/more/archive/blog/25/res/bg/light.png');
-	--accent: #ff9c01;
+	--accent: #ff7b00;
+	--body-accent: #c25400;
 	--blend: #fdf4e8;
 	--border: #f1d5a8;
 	background: var(--blend);
+	background-image: url('/more/archive/blog/25/res/bg/light.png');
 	scrollbar-width: 8px;
 	scrollbar-color: var(--accent) var(--blend);
 }
 .content-area.default main {
 	margin: 0 auto 0 auto;
 	color: #201b13;
-	background-color: #fff8f3;
+	background-color: #fffcfa;
 	max-width: 700px;
 	font-size: 16px;
 	padding: 20px;
@@ -154,8 +151,12 @@ img {
 	text-align: justify;
 	padding-right: 3px;
 }
-.content-area.default h1, .content-area.default h2, .content-area.default h3, .content-area.default h4, .content-area.default h5, .content-area.default h6 {font-family: 'Kode Mono', monospace;}
-.content-area.default a {color: var(--accent);}
+.content-area.default h1, .content-area.default h2, .content-area.default h3, .content-area.default h4, .content-area.default h5, .content-area.default h6 {
+	font-family: 'Kode Mono', monospace;
+	color: var(--accent);
+}
+.content-area.default h2 {font-size: 3em;}
+.content-area.default a {color: var(--body-accent);}
 .content-area.default .footnote-ref a {text-decoration: none;}
 .content-area.default ul {
 	list-style: none;
@@ -190,7 +191,7 @@ img {
 	position: absolute;
 	left: 30px;
 	transform: translateY(-18px);
-	background-color: #fff8f3;
+	background-color: #fffcfa;
 	padding: 3px;
 }
 
@@ -200,6 +201,7 @@ img {
 		background-image: url('/more/archive/blog/25/res/bg/dark.png');
 		--border: #50453a;
 		--blend: #211a14;
+		--body-accent: var(--accent);
 		scrollbar-color: var(--accent) var(--blend);
 	}
 	.content-area.default #article-date {color: #e0c1a3;}
