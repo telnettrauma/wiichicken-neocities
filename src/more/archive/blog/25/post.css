@@ -156,11 +156,13 @@ img {
 	color: var(--accent);
 }
 .content-area.default h2 {font-size: 3em;}
+.content-area.default h3 {font-size: 2.5em;}
+.content-area.default h4 {font-size: 2em;}
+.content-area.default h5 {font-size: 1.75em;}
+.content-area.default h6 {font-size: 1.5em;}
 .content-area.default a {color: var(--body-accent);}
 .content-area.default .footnote-ref a {text-decoration: none;}
-.content-area.default ul {
-	list-style: none;
-}
+.content-area.default ul {list-style: none;}
 .content-area.default ul li:before {
 	content: "▪";
 	margin-right: 10px;
