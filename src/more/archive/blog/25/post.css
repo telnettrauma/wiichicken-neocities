@@ -166,7 +166,7 @@ img {
 	font-size: 18px;
 	color: var(--accent);
 }
-pre {
+.content-area.default pre {
 	background-color: #043634;
 	border: 2px solid #38726e;
 	color: #c8f4f3;
@@ -174,15 +174,26 @@ pre {
 	border-radius: 5px;
 	white-space: pre-line;
 }
-hr {
+.content-area.default hr {
 	border: unset;
-	border-top: 2px solid var(--border);
+	height: 2px;
+	background-color: var(--accent);
 }
-blockquote {
+.content-area.default blockquote {
 	border-left: 2px solid #5f5f60;
 	margin-inline-start: 0px;
 	padding-left: 30px;
 }
+.content-area.default .footnotes-sep:before {
+	content: "Footnotes";
+	color: var(--accent);
+	position: absolute;
+	left: 30px;
+	transform: translateY(-18px);
+	background-color: #fff8f3;
+	padding: 3px;
+}
+
 
 @media (prefers-color-scheme: dark) {
 	.content-area.default {
@@ -196,6 +207,7 @@ blockquote {
 		color: #eee0d5;
 		background-color: #19120c;
 	}
+	.content-area.default .footnotes-sep:before {background-color: #19120c;}
 }
 
 @media only screen and (min-width: 700px) {
