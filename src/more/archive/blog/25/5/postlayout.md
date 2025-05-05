@@ -3,8 +3,9 @@ layout: blog/25/layout.njk
 title: "New Default Blog Theme"
 date: 2025-05-05
 permalink: "/more/archive/blog/25/5/postlayout.html"
+description: "Instead of making a generic, unoriginal theme for each article, I decided to make a new uniform theme for my blog posts."
 ---
-The design for my blog was inspired by [Neonaut's Microblog](https://neonaut.neocities.org/microblog/), where each page on their blog *could* be uniquely themed. The keyword there is **could**. [Some articles](https://neonaut.neocities.org/microblog/2022/google-drive-spam) have unique themes, but most use a basic, default theme.
+The design for my blog was inspired by [Neonaut's Microblog](https://neonaut.neocities.org/microblog/){target=_blank}, where each page on their blog *could* be uniquely themed. The keyword there is **could**. [Some articles](https://neonaut.neocities.org/microblog/2022/google-drive-spam){target=_blank} have unique themes, but most use a basic, default theme.
 
 I've given almost every article on this website a unique theme. At first, each article's theme had a little bit of thought put into it.
 
@@ -31,17 +32,17 @@ This just works, but it feels thrown together. I spend less than 5 minutes makin
 - Look generic, I'm not proud of the design of them
 - Mobile compatibility[^3]
 
-Because of all this, I decided it was finally time to make a default, uniform blog layout. And that's what you're looking at right now.
-
-## New Layout
+Because of all this, I decided it was finally time to make a default, uniform blog layout.
 
 I had a few goals for this new layout that I **had** to meet:
 
-- Make it look like something **I** would make, rather than looking like [Bear Blog](https://bearblog.dev)
-- Support robust formatting features, such as footnotes[^4]
-- Have a light mode and dark mode
-- Include site navigation
-- Be responsive for both desktop and mobile
+- **Unique**: Make it look like something **I** would make, rather than looking like [Bear Blog](https://bearblog.dev){target=_blank}
+- **Robust**: Support robust formatting features, such as footnotes[^4]
+- Have a light mode and dark mode. There's no one word to describe this one
+- **Navigable**: Include site navigation
+- **Responsive**: Be responsive for both desktop and mobile
+- **Inoffensive**: The theme shouldn't get in the way of the article content. If I'm writing about something serious, this theme shouldn't make me appear tone deaf
+- **Accessible**: The page should be easy to read for anybody. Additionally, the page should remain perfectly readable when using a browsers reader mode
 
 Additionally, I had a couple optional goals. These weren't required, but would still be nice to have:
 
@@ -49,9 +50,39 @@ Additionally, I had a couple optional goals. These weren't required, but would s
 - Set custom color themes per article[^5]
 - No JavaScript
 - Automatically generated table of contents
-- [Open Graph](https://ogp.me)
+- [Open Graph](https://ogp.me){target=_blank}
 
-All that ended up with this.
+With my goals set out, I began working on the new layout.
+
+## New Layout
+
+The result of all the work I did is what you're looking at right now. I'm quite happy with how everything turned out. The layout looks nice and hits **most** of the goals I set out on.
+
+### Theme
+
+The theme is white and orange, a color combination I started to like one day and have no idea why. This works really well with the sharp, "futuristic" corners that I like to use. However, when you switch to dark mode, you get a brown and orange look, which although being more rustic, still looks nice.
+
+My favorite part is the header, especially on desktop. I messed around with line height and leading, and it really paid off. And the best part is that its mobile responsive.
+
+### Navigation
+
+I decided to use a navigation bar that's similar to the one already on the site. However, this time the designs are consistent across desktop and mobile.
+
+I might make adjustments to it in the future. I feel it's a little too flashy and colorful for the rest of the page, as well as a little too big, but it works. I wanted to toy around with making the colors orange to match the page, but I figured that would look weird on pages without the theme.
+
+### Features That Didn't Make It
+
+Sadly, not everything that I intended to include made it into the final version. I might work on adding them in later, but they aren't here as of writing.
+
+Per article customization was one of those, mainly because I couldn't figure out how it would work. Maybe I could change the colors, but I definitely couldn't change the background image. Plus, I don't think there would be much value in being able to change these.
+
+I skipped out on Social Graph support simply because I don't have a need for that. Search engine optimization isn't that big of a priority for me. It would probably be easy for me to setup social graph, but it just isn't in my best interest right now.
+
+Finally, I didn't include the table of contents because I don't know how and I'm too busy playing Splatoon 3 to learn it.
+
+## Future
+
+I will likely start applying this theme to articles that have little to no theming. Most themed articles will remain the way they currently are, but I will include the brand new navigation bar on them.
 
 [^1]: A static site generator writes the code for pages automatically, but if no code is changed, the page is never changed. This is how most blogs work, and shouldn't be confused for a dynamic page (like a Twitter feed)
 
@@ -61,4 +92,4 @@ All that ended up with this.
 
 [^4]: hi
 
-[^5]: Inspired by [so1o.xyz](https://so1o.xyz/blog/mood)
+[^5]: Inspired by [so1o.xyz](https://so1o.xyz/blog/mood){target=_blank}
