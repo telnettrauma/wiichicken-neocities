@@ -7,13 +7,6 @@
 		<link rel="alternate" type="application/rss+xml" href="feed.xml" title="RSS">
 		<link href="/style.css" rel="stylesheet">
 		<meta charset="UTF-8">
-		<noscript>
-			<style>
-				#toggle-switch {display: none;}
-			</style>
-		</noscript>
-	</head>
-	<body>
 		<style>
 			* {
 				--border: #f7adfd;
@@ -170,12 +163,19 @@
 				.grid .box ul {grid-template-columns: repeat(2, 1fr);}
 			}
 		</style>
+		<noscript>
+			<style>
+				#toggle-switch {display: none;}
+			</style>
+		</noscript>
+	</head>
+	<body>
 		{% include "partials/navbar.njk" %}
 		<div id="chewTooth"></div>
 		<main>
 			<div class="head box page-top"></div>
 			<header class="box sec-full" style="display: flex; align-items: center; justify-content: space-between;">
-				<h1>MiCROBLOG</h1>
+				<h1>E/N BLOG</h1>
 				<a href="feed.xml" target="_blank" class="noline" style="margin-right: 5px;"><button>RSS Feed</button></a>
 			</header>
 			<div class="row">
@@ -212,7 +212,7 @@
 						<summary>2024</summary>
 						<ul>
 							<li><a href="#24m1">January</a></li>
-							<li><a href="#24m2">Feburary</a></li>
+							<li><a href="#24m2">February</a></li>
 							<li><a href="#24m4">April</a></li>
 							<li><a href="#24m5">May</a></li>
 							<li><a href="#24m6">June</a></li>
@@ -244,6 +244,7 @@
 				<div class="box">
 					<h3 id="25m5">May</h3>
 					<ul>
+						<li class="meta design"><a href="25/5/postlayout.html" target="_blank">5. New Default Blog Theme</a> <span class="metaBadge">#meta</span> <span class="designBadge">#design</span></li>
 						<li class="rant"><a href="25/5/clearlists.html" target="_blank">1. I'm Done With Clear Lists</a> <span class="rantBadge">#rant</span></li>
 					</ul>
 				</div>
@@ -438,7 +439,7 @@
 					</ul>
 				</div>
 				<div class="box">
-					<h3 id="24m2">Feburary</h3>
+					<h3 id="24m2">February</h3>
 					<ul>
 						<li class="rant social"><a target="_blank" href="2024/2/x.html">29. i updated Twitter to X</a> <span class="rantBadge">#rant</span> <span class="socialBadge">#social</span></li>
 						<li><a target="_blank" href="2024/2/neko.html">25. NekoWeb</a></li>
