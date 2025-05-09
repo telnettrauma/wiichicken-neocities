@@ -1,6 +1,7 @@
 ---
-layout: blog/24/1/np.njk
+layout: blog/25/layout.njk
 title: "comparing mobile now playing widgets"
+description: "comparing the now playing widgets from iOS, OneUI, the Google Pixel's Android, and HyperOS"
 date: 2024-01-16
 permalink: "/more/archive/blog/2024/1/np.html"
 ---
