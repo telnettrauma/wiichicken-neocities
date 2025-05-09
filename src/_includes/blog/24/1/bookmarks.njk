@@ -5,16 +5,19 @@
 		<link rel="icon" type="image/x-icon" href="/favicon.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
+		<link href="/more/archive/blog/25/res/navonly.css" rel="stylesheet">
 		<style>
-			body {
-				max-width: 800px;
-				margin: auto;
+			.content-area {
 				background-color: #211b00;
 				color: #fde265;
 			}
+			main {
+				max-width: 800px;
+				margin: auto;
+			}
 			img {max-width: 800px;}
 			h1 {font-family: monospace;}
-			a {
+			.content-area a {
 				text-decoration: none;
 				background-color: #c4eccf;
 				color: #2b4e38;
@@ -23,10 +26,15 @@
 		</style>
 	</head>
 	<body>
-		<header>
-			<h1>{{ title }}</h1>
-			<p>January 23, 2024</p>
-		</header>
-		{{ content | safe }}
+		{% include "partials/blog/25/blogbar.njk" %}
+		<div class="content-area">
+			<main>
+				<header>
+					<h1>{{ title }}</h1>
+					<p>January 23, 2024</p>
+				</header>
+				{{ content | safe }}
+			</main>
+		</div>
 	</body>
 </html>
