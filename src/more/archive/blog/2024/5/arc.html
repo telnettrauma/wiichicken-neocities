@@ -5,10 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta charset="UTF-8">
+	<link href="/more/archive/blog/25/res/navonly.css" rel="stylesheet">
 	<style>
 		* {box-sizing: border-box;}
-		body {
+		.content-area {
 			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			background-color: white;
 		}
 		main {
 			margin: 10px;
@@ -17,7 +19,7 @@
 			display: flex;
 			flex-direction: row;
 			padding: 10px;
-			height: 98vh;
+			height: calc(98vh - 60px);
 		}
 		article {
 			overflow-y: scroll;
@@ -84,6 +86,8 @@
 	</style>
 </head>
 <body>
+	{% include "partials/blog/25/blogbar.njk" %}
+	<div class="content-area">
 	<main>
 		<div id="sider">
 			<div class="tab">
@@ -166,5 +170,6 @@
 			</section>
 		</article>
 	</main>
+	</div>
 </body>
 </html>

@@ -1,11 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>center the taskbar - January 28, 2024 - WiiCHiCKEN BLOG</title>
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
-</head>
-<body>
+	<link href="/more/archive/blog/25/res/navonly.css" rel="stylesheet">
 	<style>
-		body {
+		.content-area {
 			background-image: url('https://i.imgur.com/C5N29Qr.jpeg');
 			font-family: Arial, Helvetica, sans-serif;
 		}
@@ -36,6 +37,10 @@
 		}
 		article {padding: 10px;}
 	</style>
+</head>
+<body>
+	{% include "partials/blog/25/blogbar.njk" %}
+	<div class="content-area">
 	<main>
 		<header>
 			<h1>center the taskbar</h1>
@@ -61,4 +66,6 @@
 			<p>Removing the ability to change the position just doesn't make sense to me.</p>
 		</article>
 	</main>
+	</div>
 </body>
+</html>

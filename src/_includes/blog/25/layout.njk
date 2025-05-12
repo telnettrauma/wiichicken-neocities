@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>{{ title }}</title>
+	<title>{{ title }} - WiiCHiCKEN BLOG</title>
 	<meta name="description" content="{{ description }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" sizes="32x32" href="/media/favicons/32.png">
@@ -13,22 +13,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<nav>
-		<div id="in-nav">
-			<div class="topLinks">
-				<a href="#top" id="accessibility-button">Skip to Content</a>
-				<a href="/aboutme.html"><img src="/resources/nav/me.png">ABOUT</a>
-				<a href="/creative/"><img src="/resources/nav/art.png">ART</a>
-				<a href="/more/archive/blog/"><img src="/resources/nav/blog.png">BLOG</a>
-				<a href="/interests/"><img src="/resources/nav/intr.png">iNTERESTS</a>
-				<a href="/more/"><img src="/resources/nav/more.png">MORE</a>
-				<a id="fakeLogo" href="/" title="Home">
-					<div class="square" id="s1"></div>
-					<div class="square" id="s2"></div>
-				</a>
-			</div>
-		</div>
-	</nav>
+	{% include "partials/blog/25/blogbar.njk" %}
 	<div class="content-area default">
 		<header>
 			<h1 id="top">{{ title }}</h1>

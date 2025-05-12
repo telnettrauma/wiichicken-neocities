@@ -1,14 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<title>why instagram keeps coming back - February 15, 2024 - WiiCHiCKEN</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta charset="UTF-8">
-</head>
-<body>
+	<link href="/more/archive/blog/25/res/navonly.css" rel="stylesheet">
 	<style>
-		body {
-			margin: 0;
+		.content-area {
 			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			background-color: white;
 		}
 		.gradient, #progress {
 			background: linear-gradient(90deg, rgba(255,214,0,1) 0%, rgba(255,122,0,1) 25%, rgba(255,0,105,1) 50%, rgba(211,0,197,1) 75%, rgba(118,56,250,1) 100%);
@@ -39,10 +40,14 @@
 		h1 {font-size: 15vw;}
 		.nomarblock {
 			margin-block-start: 0;
-  		margin-block-end: 0;
+			margin-block-end: 0;
 		}
 		p {font-size: 18px;}
 	</style>
+</head>
+<body>
+	{% include "partials/blog/25/blogbar.njk" %}
+	<div class="content-area">
 	<div id="progressBack">
 		<div id="progress" class="gradient"></div>
 	</div>
@@ -85,4 +90,6 @@
 			}
 		}
 	</script>
+	</div>
 </body>
+</html>

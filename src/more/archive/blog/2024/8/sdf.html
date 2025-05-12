@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/favicon.png">
   <meta charset="UTF-8">
+  <link href="/more/archive/blog/25/res/navonly.css" rel="stylesheet">
   <style>
-    body {
+    .content-area {
       background-color: black;
       color: #c0c0c0;
       font-family: monospace;
       font-size: 13px;
-      max-width: 700px;
     }
+    main {max-width: 700px;}
     h1 {
       font-size: 13px;
       background-color: yellow;
@@ -35,6 +36,8 @@
   </style>
 </head>
 <body>
+  {% include "partials/blog/25/blogbar.njk" %}
+  <div class="content-area">
   <main>
     <header>
       <h1>Using the SDF UNIX System</h1>
@@ -240,5 +243,6 @@ Thank you!
     <p>If you are looking to explore the SDF, here are some links that I think you would find helpful:</p>
     <p><a href="https://sdf.org/?tilde" target="_blank">Tilde</a> - Directory of sites SDF members created. Really fun to explore<br><a href="https://wiki.sdf.org/doku.php?id=sdf_general_use_tutorials" target="_blank">Tutorials for General Use of SDF</a><br><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank">Download PuTTY</a> - Helpful client that you will most likely need on Windows</p>
   </main>
+  </div>
 </body>
 </html>

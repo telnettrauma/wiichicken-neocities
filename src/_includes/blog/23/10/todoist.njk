@@ -6,12 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta charset="UTF-8">
+	<link href="/more/archive/blog/25/res/navonly.css" rel="stylesheet">
 	<style>
-		body {
+		.content-area {
 			font-family: Arial, Helvetica, sans-serif;
 			background-color: #fffbff;
 		}
-		article {
+		.content-area main {
 			background-color: #ece0df;
 			color: #201a1a;
 			margin: auto;
@@ -52,12 +53,15 @@
 	</style>
 </head>
 <body>
-	<article>
-		<header>
-			<h1>{{ title }}</h1>
-			<p>October 4, 2023</p>
-		</header>
-		{{ content | safe }}
-	</article>
+	{% include "partials/blog/25/blogbar.njk" %}
+	<div class="content-area">
+		<main>
+			<header>
+				<h1>{{ title }}</h1>
+				<p>October 4, 2023</p>
+			</header>
+			{{ content | safe }}
+		</main>
+	</div>
 </body>
 </html>

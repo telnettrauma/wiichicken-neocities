@@ -1,14 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<title>Spotify sucks!!! - January 26, 2024 - WiiCHiCKEN BLOG</title>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+	<link href="/more/archive/blog/25/res/navonly.css" rel="stylesheet">
 	<style>
-		body {
+		.content-area {
 			background: linear-gradient(180deg, #14ff00 0%, #121212 3%, #121212 100%);
 			color: white;
-			margin: 0;
 			font-family: 'Poppins', sans-serif;
+			background-attachment: local;
 		}
 		header {
 			text-align: center;
@@ -38,11 +39,11 @@
 			color: #14ff00;
 			text-shadow: 0 0 5px black;
 		}
-		a {
+		main a {
 			text-decoration: none;
 			color: #14ff00;
 		}
-		a:hover {
+		main a:hover {
 			text-decoration: underline;
 			color: white;
 		}
@@ -61,11 +62,15 @@
 			box-shadow: 0 0 10px 1px #000000c7;;
 		}
 	</style>
-	<header>
-		<h1>Spotify sucks!!!</h1>
-		<p>january 26, 2024</p>
-	</header>
+</head>
+<body>
+	{% include "partials/blog/25/blogbar.njk" %}
+	<div class="content-area">
 	<main>
+		<header>
+			<h1>Spotify sucks!!!</h1>
+			<p>january 26, 2024</p>
+		</header>
 		<p>I have been using Spotify for over 10 years now (my first liked song was Bad Romance by Lady Gaga; liked on September 2, 2013), it's actually kinda insane. Since Spotify has been around for so long, they've reached the point where they just have to keep consistently making thier product worse, for some reason. Everyone hates Spotify, so this isn't really a new perspective, but let me rant anyways.</p>
 		<p>Note: I didn't have screenshot fever until like 2018, mainly because I wasn't aware of the concept of a screenshot back then, nor did I have the storage, or knew how to backup.</p>
 		<h2>The Redesign</h2>
@@ -187,4 +192,6 @@
 		<h2>Conclusion</h2>
 		<p>in conclusion spotify is a poo poo</p>
 	</main>
+	</div>
 </body>
+</html>

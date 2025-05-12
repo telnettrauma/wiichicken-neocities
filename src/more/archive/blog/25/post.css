@@ -155,7 +155,10 @@ img {
 	font-family: 'Kode Mono', monospace;
 	color: var(--accent);
 }
-.content-area.default h2 {font-size: 3em;}
+.content-area.default h2 {
+	font-size: 3em;
+	line-height: 1.1em;
+}
 .content-area.default h3 {font-size: 2.5em;}
 .content-area.default h4 {font-size: 2em;}
 .content-area.default h5 {font-size: 1.75em;}

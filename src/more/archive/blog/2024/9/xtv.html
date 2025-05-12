@@ -5,8 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta charset="UTF-8">
+	<link href="/more/archive/blog/25/res/navonly.css" rel="stylesheet">
 	<style>
-		body {
+		.content-area {
 			font-family: Arial, Helvetica, sans-serif;
 			font-size: 18px;
 			background-color: black;
@@ -16,13 +17,15 @@
 			max-width: 600px;
 			margin: auto;
 		}
-		img {
+		main img {
 			max-width: 100%;
 			max-height: 60vh;
 		}
 	</style>
 </head>
 <body>
+	{% include "partials/blog/25/blogbar.njk" %}
+	<div class="content-area">
 	<main>
 		<header>
 			<h1>Twitter's Terrible New TV App</h1>
@@ -47,5 +50,6 @@
 		<p>So, yeah, this is all super unnecessary, but Elon is just going to keep on adding useless stuff nobody will ask for. But judging by the reviews, the app already is a hit among people who fight for freedom of speech so they can be racist. If only they would try Tweeting the word "cis".</p>
 		<img src="https://i.imgur.com/ZZLBHUT.png" loading="lazy">
 	</main>
+	</div>
 </body>
 </html>

@@ -5,12 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta charset="UTF-8">
+	<link href="/more/archive/blog/25/res/navonly.css" rel="stylesheet">
 	<style>
-		body {
+		.content-area {
 			background-color: #eaddff;
 			font-family: 'Courier New', Courier, monospace;
 		}
-		article {
+		main {
 			margin: auto;
 			max-width: 800px;
 			padding: 30px;
@@ -21,7 +22,9 @@
 	</style>
 </head>
 <body>
-	<article>
+	{% include "partials/blog/25/blogbar.njk" %}
+	<div class="content-area">
+	<main>
 		<header>
 			<h1>what will we actually use ai for?</h1>
 			<p>May 2, 2024</p>
@@ -45,6 +48,7 @@
 		<p>chatbots can remain, as long as they stay as their own thing, instead of being integrated in everything. they have some practical uses, but they can get things wrong too much. gpt-4 still things you can take a screenshot on an apple tv by pressing home and menu at the same time.</p>
 		<h2>deepfaking</h2>
 		<p>no.</p>
-	</article>
+	</main>
+	</div>
 </body>
 </html>

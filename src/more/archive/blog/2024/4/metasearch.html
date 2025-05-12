@@ -5,8 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta charset="UTF-8">
+	<link href="/more/archive/blog/25/res/navonly.css" rel="stylesheet">
 	<style>
-		body {background: radial-gradient(circle, rgba(219,220,255,1) 0%, rgba(248,217,255,1) 59%, rgba(198,255,255,1) 100%);}
+		.content-area {background: radial-gradient(circle, rgba(219,220,255,1) 0%, rgba(248,217,255,1) 59%, rgba(198,255,255,1) 100%);}
 		main {
 			max-width: 800px;
 			margin: auto;
@@ -17,7 +18,7 @@
 			padding: 10px;
 			background-color: white;
 		}
-		img {
+		main img {
 			width: 100%;
 			max-height: 40vh;
 			object-fit: scale-down;
@@ -26,6 +27,8 @@
 	</style>
 </head>
 <body>
+	{% include "partials/blog/25/blogbar.njk" %}
+	<div class="content-area">
 	<main>
 		<header>
 			<h1>Meta AI: a case study on how not to introduce a gimmick</h1>
@@ -47,5 +50,6 @@
 		<img src="https://i.imgur.com/g4nmTEc.png" loading="lazy">
 		<p>But hey, at least I can generate "girl wearing headphones" no matter what app I'm in.</p>
 	</main>
+	</div>
 </body>
 </html>

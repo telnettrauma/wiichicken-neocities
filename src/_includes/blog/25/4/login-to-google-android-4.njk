@@ -5,9 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta charset="UTF-8">
+	<link href="/more/archive/blog/25/res/navonly.css" rel="stylesheet">
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-		body {
+		.content-area {
 			font-family: "Roboto", sans-serif;
 			background: #030304;
 			background: linear-gradient(180deg, #030304 0%, #202329 100%);
@@ -21,7 +22,7 @@
 			padding: 20px;
 			line-height: 30px;
 		}
-		img {
+		main img {
 			margin-top: 10px;
 			max-width: 100%;
 		}
@@ -34,7 +35,7 @@
 			border-radius: 5px;
 			white-space: pre-line;
 		}
-		a, h1 {color: #33b4e4;}
+		main a, h1 {color: #33b4e4;}
 		hr {
 			border: unset;
 			border-top: 2px solid #5f5f60;
@@ -47,15 +48,14 @@
 	</style>
 </head>
 <body>
-	<nav>
-		<a href="/">Home</a>
-		<a href="/more/archive/blog/">Blog</a>
-	</nav>
-	<main>
-		<h1>{{ title }}</h1>
-		<p>{{ date | date("MMMM d, yyyy") }}</p>
-		<hr>
-		{{ content | safe }}
-	</main>
+	{% include "partials/blog/25/blogbar.njk" %}
+	<div class="content-area">
+		<main>
+			<h1>{{ title }}</h1>
+			<p>{{ date | date("MMMM d, yyyy") }}</p>
+			<hr>
+			{{ content | safe }}
+		</main>
+	</div>
 </body>
 </html>
