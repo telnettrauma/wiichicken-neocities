@@ -1,8 +1,9 @@
 ---
-layout: blog/25/1/kbgy9news.njk
+layout: blog/25/layout.njk
 title: "KBGY 9 News Sadly Isn't Real"
 date: 2025-01-30
 permalink: "/more/archive/blog/25/1/kgby9news.html"
+description: "fictional news channel KBGY 9 News is... fictional"
 ---
 I hate to be someone who goes around ruining the fun for everyone else, but that's what I'm going to do here. Sorry!
 
