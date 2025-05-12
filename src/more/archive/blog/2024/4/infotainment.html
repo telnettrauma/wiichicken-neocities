@@ -5,8 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta charset="UTF-8">
+	<link href="/more/archive/blog/25/res/navonly.css" rel="stylesheet">
 	<style>
-		body {
+		.content-area {
 			background: linear-gradient(180deg, rgba(0,196,255,1) 0%, rgba(205,220,255,1) 100%);
 			font-family: Arial, Helvetica, sans-serif;
 		}
@@ -23,6 +24,8 @@
 	</style>
 </head>
 <body>
+	{% include "partials/blog/25/blogbar.njk" %}
+	<div class="content-area">
 	<main>
 		<header>
 			<h1>replacing my infotainment system</h1>
@@ -50,5 +53,6 @@
 		<h2>conclusion</h2>
 		<p>in conclusion, this is just a to-do list for me, disguised as a blog post.</p>
 	</main>
+	</div>
 </body>
 </html>

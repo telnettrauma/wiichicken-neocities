@@ -5,13 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta charset="UTF-8">
+	<link href="/more/archive/blog/25/res/navonly.css" rel="stylesheet">
 	<style>
 		* {box-sizing: border-box;}
-		body {
+		.content-area {
 			background-color: #1b2836;
 			color: white;
 			font-family: Arial, Helvetica, sans-serif;
-			margin: 0;
 			font-size: 18px;
 		}
 		article {
@@ -28,7 +28,7 @@
 			margin-block-start: 0;
 			margin-block-end: 0;
 		}
-		img {
+		main img {
 			max-width: 100%;
 			max-height: 800px;
 			border-radius: 20px;
@@ -47,6 +47,9 @@
 	</style>
 </head>
 <body>
+	{% include "partials/blog/25/blogbar.njk" %}
+	<div class="content-area">
+	<main>
 	<div id="head">
 		<h1>Your account is suspended or locked</h1>
 		<p>June 8, 2024</p>
@@ -78,5 +81,7 @@
 		<p>hello, its me from the future here. this is a really hastily written thing about more things i tried. i will actually write this later, maybe. i tried calling twitter support. all i got was an automated message saying the number doesn't exist anymore. i bought twitter blue for the priority support. support is offered over direct message. guess what you cant do when suspended. that was a waste of $3, but i can view tweets i wrote pre suspension, which is nice.<br>you cannot download your data while suspended. so thats great. i tried dickriding elon in my appeal  request. didn't work. eh.<br>Sent from my iPhone, so reply may be brief.
 		</p>
 	</article>
+	</main>
+	</div>
 </body>
 </html>
