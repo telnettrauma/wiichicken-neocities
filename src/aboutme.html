@@ -102,6 +102,18 @@
 				color: #ffdbc8;
 				--border: #ff7700;
 			}
+			#point-card {
+				background-color: #554500cc;
+				color: #fbe186;
+				--border: #F7CE00;
+			}
+			#point-card hr {
+				border: none;
+				height: 1px;
+				background-color: #373016;
+				margin: 0;
+			}
+			#splatoon-main-stats .box {margin-bottom: 3px;}
 			@media only screen and (max-width: 1050px) {
 				article, .row, #helloGames, main, .box, header, .grid .box {width: -webkit-fill-available;}
 				.row {
@@ -229,12 +241,20 @@
 			</div>
 			<h4 class="box" style="margin-bottom: 3px;">SPLATOON 3 STATS</h4>
 			<div class="grid" id="splatoon-3-stats" style="margin-bottom: 10px; gap: 3px;">
-				<p class="box turf-colors">Level: <strong>19</strong></p>
-				<p class="box turf-colors">Inked: <strong>215,000p</strong></p>
-				<p class="box ranked-colors">Rank: <strong>A-</strong></p>
-				<p class="box ranked-colors">Best Rank: <strong>A-</strong></p>
-				<p class="box">Badges: <strong>8</strong></p>
-				<p class="box">Updated: <strong>May 13, 2025</strong></p>
+				<div id="splatoon-main-stats">
+					<p class="box turf-colors">Level: <strong>19</strong></p>
+					<p class="box ranked-colors">Rank: <strong>A-</strong></p>
+					<p class="box">Inked: <strong>215,000p</strong></p>
+					<p class="box" style="margin-bottom: 0;">Badges: <strong>8</strong></p>
+				</div>
+				<div class="box" id="point-card">
+					<p>Shifts: <strong>70</strong></p>
+					<p>Golden Eggs: <strong>3,400</strong></p>
+					<p>Power Eggs: <strong>131,000</strong></p>
+					<p>Points: <strong>9000</strong></p>
+					<hr>
+					<p>Updated: <strong>May 13, 2025</strong></p>
+				</div>
 			</div>
 			<h3 class="box">MUSiC</h3>
 			<div class="row tight-row" style="flex-wrap: nowrap; margin-bottom: 5px;">
