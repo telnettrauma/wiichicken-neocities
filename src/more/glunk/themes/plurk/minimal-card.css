@@ -1,6 +1,5 @@
 * {
 	font-family: 'Times New Roman' !important;
-	border-radius: unset !important;
 	box-shadow: none !important;
 }
 .timeline-cnt .plurk .text_holder {
@@ -14,9 +13,10 @@
 .dash-group-form {
 	position: fixed !important;
 	float: unset !important;
-	width: 100% !important;
 	z-index: 999999999999 !important;
-	background-color: black !important;
+}
+#dash-friends-pics {
+	display: none;
 }
 #input_big, .submit_img {
 	font-size: 14px !important;
@@ -59,7 +59,7 @@
 	width: 300px !important;
 }
 .response_box {
-	max-height: 50vh !important;
+	max-height: 250px !important;
 	min-height: 100px;
 }
 .plurk_cnt:not(.list .plurk_cnt) {

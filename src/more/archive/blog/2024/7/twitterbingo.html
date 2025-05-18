@@ -6,9 +6,10 @@
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
 	<meta charset="UTF-8">
+	<link href="/more/archive/blog/25/res/navonly.css" rel="stylesheet">
 	<style>
 		* {box-sizing: border-box;}
-		body {
+		.content-area {
 			background-color: #101418;
 			font-family: 'PT Sans', sans-serif;
 		}
@@ -70,6 +71,8 @@
 	</style>
 </head>
 <body>
+	{% include "partials/blog/25/blogbar.njk" %}
+	<div class="content-area">
 	<main>
 		<div id="text" style="border-radius: 10px 5px 5px 10px;">
 			<h1>TWiTTER BiNGO</h1>
@@ -115,5 +118,6 @@
 			</tr>
 		</table>
 	</main>
+	</div>
 </body>
 </html>

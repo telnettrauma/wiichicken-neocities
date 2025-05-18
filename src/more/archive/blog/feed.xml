@@ -7,6 +7,41 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>New Default Blog Theme</title>
+			<pubDate>Mon, 5 May 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/5/postlayout.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/5/postlayout.html</guid>
+			<description>#meta #design</description>
+		</item>
+		<item>
+			<title>I'm Done With Clear Lists</title>
+			<pubDate>Thu, 1 May 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/5/clearlists.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/5/clearlists.html</guid>
+			<description>#rant</description>
+		</item>
+		<item>
+			<title>How to Login to Google on Android 4</title>
+			<pubDate>Mon, 28 Apr 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/4/login-to-google-android-4.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/4/login-to-google-android-4.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>DPI Observations I've Made</title>
+			<pubDate>Thu, 24 Apr 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/4/dpi.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/4/dpi.html</guid>
+			<description>#meta #code</description>
+		</item>
+		<item>
+			<title>Someone Turned My Site into a Cryptocurrency</title>
+			<pubDate>Wed, 16 Apr 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/4/wiggleai.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/4/wiggleai.html</guid>
+			<description>#meta</description>
+		</item>
+		<item>
 			<title>Playboi Carti - I AM MUSIC Album Review</title>
 			<pubDate>Fri, 14 Mar 2025 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/25/3/iammusic.html</link>

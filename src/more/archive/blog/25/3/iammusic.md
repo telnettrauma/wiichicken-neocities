@@ -1,8 +1,9 @@
 ---
-layout: blog/25/3/iammusic.njk
+layout: blog/25/layout.njk
 title: "Playboi Carti - I AM MUSIC Album Review"
 date: 2025-03-14
 permalink: "/more/archive/blog/25/3/iammusic.html"
+description: "a review of I AM MUSIC by Playboi Carti"
 ---
 Welcome to the article where I lose almost all the credibility that I never had.
 

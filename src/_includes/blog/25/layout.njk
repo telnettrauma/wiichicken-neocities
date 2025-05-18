@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{ title }} - WiiCHiCKEN BLOG</title>
+	<meta name="description" content="{{ description }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="/media/favicons/32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/media/favicons/16.png">
+	<meta charset="UTF-8">
+	<meta property="og:title" content="{{ title }}">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://wiggle.monster{{ permalink }}">
+	<meta property="og:image" content="/more/archive/blog/25/res/og_img.png">
+	<meta property="og:description" content="{{ description }}">
+	<meta property="og:site_name" content="WiiCHiCKEN i AM AWESOME">
+	<link href="/more/archive/blog/25/post.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+	{% include "partials/blog/25/blogbar.njk" %}
+	<div class="content-area default">
+		<header>
+			<h1 id="top">{{ title }}</h1>
+			<p id="article-date">{{ date | date("MMMM d, yyyy") }}</p>
+		</header>
+		<main>
+			{{ content | safe }}
+		</main>
+	</div>
+</body>
+</html>

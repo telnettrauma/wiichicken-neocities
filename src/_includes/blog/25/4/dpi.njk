@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{ title }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<meta charset="UTF-8">
+	<link href="/more/archive/blog/25/res/navonly.css" rel="stylesheet">
+	<style>
+		.content-area {
+			font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			background: #96fffc;
+			background: linear-gradient(180deg,#96fffc 0%, #99a5f0 100%);
+			color: #002b2a;
+		}
+		main {
+			background-color: rgba(150, 235, 232, 0.5);
+			border: 2px solid #6bb2af;
+			margin: auto;
+			max-width: 670px;
+			font-size: 16px;
+			padding: 20px;
+			border-radius: 15px;
+		}
+		main img {
+			max-width: 100%;
+			image-rendering: pixelated;
+			border-radius: 5px;
+		}
+		h1 {text-align: center;}
+		pre {
+			background-color: #043634;
+			border: 2px solid #38726e;
+			color: #c8f4f3;
+			padding: 10px;
+			border-radius: 5px;
+			white-space: pre-line;
+		}
+		a {color: #07284c;}
+		.footnote-ref a {
+			color: #463450;
+			text-decoration: none;
+		}
+		hr {
+			border: unset;
+			border-top: 1px solid #6c93c4;
+		}
+	</style>
+</head>
+<body>
+	{% include "partials/blog/25/blogbar.njk" %}
+	<div class="content-area">
+		<main>
+			<h1>{{ title }}</h1>
+			<p>{{ date | date("MMMM d, yyyy") }}</p>
+			<hr>
+			{{ content | safe }}
+		</main>
+	</div>
+</body>
+</html>
