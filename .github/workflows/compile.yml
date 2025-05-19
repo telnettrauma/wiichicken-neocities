@@ -112,6 +112,7 @@ jobs:
           title: Website Updated
           message: Woohoo the website has been updated
           priority: -1
+        continue-on-error: true
 
       - name: Sync changes to main
         uses: jojomatik/sync-branch@v2
