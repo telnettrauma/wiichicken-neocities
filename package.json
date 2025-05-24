@@ -2,7 +2,6 @@
   "name": "wiichicken-neocities",
   "version": "1.0.0",
   "description": "hi, this is my website.",
-  "main": "index.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy"
