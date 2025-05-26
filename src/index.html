@@ -844,11 +844,16 @@
 			</div>
 			<div class="box sec-t">
 				<h2>siteUpdates</h2>
-				<h3 style="margin: 0; font-size: 15px;"><strong>HELP YOU FiND YOUR WAY</strong></h3>
-				<p id="updatedate">May 12, 2025</p>
+				<h3 style="margin: 0; font-size: 15px;"><strong>DON'T KNOW WHAT TO CALL THiS ONE</strong></h3>
+				<p id="updatedate">May 26, 2025</p>
 			</div>
 			<div class="box">
-				<p>most of the blog posts now have the new navigation bar i made, so that's quite cool i think.</p>
+				<p>ok yeah there isn't much new this time, like always. there is never anything new anymore.</p>
+				<ul>
+					<li>some of the blog posts now support open graph i guess. yay.</li>
+					<li>im putting my splatoon 3 stats on the <a href="/aboutme.html">about me</a> page, because why not</li>
+				</ul>
+				<p>why has it become cool not to try</p>
 			</div>
 			<div class="box sec-b">
 				<p>site updates almost every sunday, blog posts and content updates whenever</p>
@@ -859,9 +864,9 @@
 				<div style="display: flex; align-items: center;">
 					<img loading="lazy" alt="" src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
 					<div style="margin-left: 5px;">
-						<button id="copyLink" onclick="copyLinkToPage();" class="bring noscript-hidden" style="margin-bottom: 5px;">copyToClipboard</button>
-						<a class="bring" href="resources/widgets/home/med/embed.txt" target="_blank" style="font-size: 13.3px; margin-bottom: 5px;">scriptNotWorking?</a>
-						<a class="bring" href="creative/graphics/buttons/index.html#home" target="_blank" style="font-size: 13.3px;">moreOfMyButtons</a>
+						<button id="copyLink" onclick="copyLinkToPage();" class="bring noscript-hidden" style="margin-bottom: 5px;">copy to clipboard</button>
+						<a class="bring" href="resources/widgets/home/med/embed.txt" target="_blank" style="font-size: 13.3px; margin-bottom: 5px;">script not working?</a>
+						<a class="bring" href="creative/graphics/buttons/index.html#home" target="_blank" style="font-size: 13.3px;">more of my buttons</a>
 					</div>
 				</div>
 				<script>
@@ -948,7 +953,7 @@ document.addEventListener("keydown", (event) => {
 	}
 });
 function setRandomMessage() {
-	var msgList = ['Updated <code>index.html</code>', 'coded on a best buy kiosk macbook', 'jobs near me that pay trillion/hour', 'TV explodes in 30 seconds if not powered off', 'can we get a "woot woot"', 'anti-anti-aliasing', 'bring back parallax', 'wth is a framework', 'oh to be a navbar with 3 items', 'internet explorer is safe... so far', 'THiS iS A POOP ALERT', 'debbie downers DNI', 'do not use this website around pacemakers', 'Smile! You\'re on <i>Old Navy</i> TV!', 'one of the greatest', 'keep this place our secret', 'Thanks SiriusXM for making this possible!', 'not the best thing to show to an employer', 'awwwards are impractical anyways', 'dm for proto', 'it takes a village and a half', 'we bought a zoo', 'free for 7 days', 'like transformers, but funnier', 'this website was created just for YOU!', 'hosted on Neocities.', 'updated every Sunday. almost', '<span class="gradientText" style="background: linear-gradient(90deg, #58c7f1 0%, #eba1b0 50%, #ffffff 100%);">Trans rights are human rights!</span>'];
+	var msgList = ['Updated <code>index.html</code>', 'coded on a best buy kiosk macbook', 'jobs near me that pay trillion/hour', 'TV explodes in 30 seconds if not powered off', 'can we get a "woot woot"', 'anti-anti-aliasing', 'bring back parallax', 'wth is a framework', 'oh to be a navbar with 3 items', 'internet explorer is safe... so far', 'THiS iS A POOP ALERT', 'debbie downers DNI', 'do not use this website around pacemakers', 'Smile! You\'re on <i>Old Navy</i> TV!', 'one of the greatest', 'keep this place our secret', 'Thanks SiriusXM for making this possible!', 'not the best thing to show to an employer', 'awwwards are impractical anyways', 'dm for proto', 'it takes a village and a half', 'we bought a zoo', 'free for 7 days', 'like transformers, but funnier', 'this website was created just for YOU!', 'hosted on Neocities.', 'updated every Sunday. almost', '<span class="gradientText" style="background: linear-gradient(90deg, #58c7f1 0%, #eba1b0 50%, #ffffff 100%);">Trans rights are human rights!</span>', 'do you hear that beeping sound?'];
 	document.getElementById('random-message').innerHTML = msgList[Math.floor(Math.random() * msgList.length)];
 }
 setRandomMessage();

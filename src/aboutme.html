@@ -91,6 +91,29 @@
 				font-family: 'Kode Mono', monospace;
 			}
 			#beeminder-sec {padding: 0;}
+			#splatoon-3-stats strong {font-family: 'Kode Mono', monospace;}
+			.turf-colors {
+				background-color: #354e16cc;
+				color: #cdeda4;
+				--border: #97F200;
+			}
+			.ranked-colors {
+				background-color: #6f3811cc;
+				color: #ffdbc8;
+				--border: #ff7700;
+			}
+			#point-card {
+				background-color: #554500cc;
+				color: #fbe186;
+				--border: #F7CE00;
+			}
+			#point-card hr {
+				border: none;
+				height: 1px;
+				background-color: #373016;
+				margin: 0;
+			}
+			#splatoon-main-stats .box {margin-bottom: 3px;}
 			@media only screen and (max-width: 1050px) {
 				article, .row, #helloGames, main, .box, header, .grid .box {width: -webkit-fill-available;}
 				.row {
@@ -206,29 +229,34 @@
 			<div class="box">
 				<p>you can find more of my interests on the <a href="interests/index.html">interests</a> page. these aren't in any particular order, btw.</p>
 			</div>
-			<div class="grid" style="margin-bottom: 10px;">
-				<div>
-					<h3 class="box" style="margin-bottom: 3px;">GAMES</h3>
-					<div class="box">
-						<ul>
-							<li>OneShot</li>
-							<li>Fortnite (#sorrycharlie)</li>
-							<li>Saints Row 3</li>
-							<li>WarioWare Gold</li>
-						</ul>
-						<p><strong>switch friend code</strong>: SW-6656-0767-2100</p>
-					</div>
+			<h3 class="box" style="margin-bottom: 3px;">GAMES</h3>
+			<div class="box">
+				<ul>
+					<li>OneShot</li>
+					<li>Fortnite (#sorrycharlie)</li>
+					<li>Saints Row 3</li>
+					<li>WarioWare Gold</li>
+				</ul>
+				<p><strong>switch friend code</strong>: SW-6656-0767-2100</p>
+			</div>
+			<h4 class="box" style="margin-bottom: 3px;">SPLATOON 3 STATS</h4>
+			<div class="grid" id="splatoon-3-stats" style="margin-bottom: 10px; gap: 3px;">
+				<div id="splatoon-main-stats">
+					<p class="box turf-colors">Level: <strong>28</strong></p>
+					<p class="box ranked-colors">Rank: <strong>A+</strong></p>
+					<p class="box ranked-colors">Max Rank: <strong>A+</strong></p>
+					<p class="box">Inked: <strong>500,000p</strong></p>
+					<p class="box">Wins: <strong>230</strong></p>
+					<p class="box" style="margin-bottom: 0;">Badges: <strong>17</strong></p>
 				</div>
-				<div style="width: 100%; height: auto;">
-					<h3 class="box" style="margin-bottom: 3px;">FiLMS</h3>
-					<div class="box">
-						<p>i hate to tell you but i really dont watch movies much</p>
-						<ul>
-							<li>WALL-E</li>
-							<li>Everything Everywhere All at Once</li>
-						</ul>
-						<p>maybe one day there will be more...</p>
-					</div>
+				<div class="box" id="point-card">
+					<p>Shifts: <strong>140</strong></p>
+					<p>Xtrawaves Beaten: <strong>0</strong></p>
+					<p>Golden Eggs: <strong>7,200</strong></p>
+					<p>Power Eggs: <strong>280,000</strong></p>
+					<p>Points: <strong>20,000</strong></p>
+					<hr>
+					<p>Updated: <strong>May 26, 2025</strong></p>
 				</div>
 			</div>
 			<h3 class="box">MUSiC</h3>

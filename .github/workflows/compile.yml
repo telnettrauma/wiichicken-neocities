@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   testrun:
-    if: github.ref != 'refs/heads/live'  # Run on all branches except live
+    if: github.ref != 'refs/heads/live' # Run on all branches except live
     runs-on: ubuntu-latest
 
     steps:
@@ -39,6 +39,17 @@ jobs:
         run: |
           npm i
           npm run build
+      
+      - name: Make Pushover Alert
+        uses: umahmood/pushover-actions@main
+        env:
+          PUSHOVER_TOKEN: ${{ secrets.PUSHOVER_TOKEN }}
+          PUSHOVER_USER: ${{ secrets.PUSHOVER_USER }}
+        with:
+          status: ${{ job.status }}
+          title: Site Compiled
+          message: good job
+          priority: -2
 
   todos:
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' # Run only on main or master branch
@@ -89,6 +100,18 @@ jobs:
           cleanup: true
           dist_dir: public # specify the directory where your site is built
           neocities_supporter: true
+        continue-on-error: true
+      
+      - name: Make Pushover Alert
+        uses: umahmood/pushover-actions@main
+        env:
+          PUSHOVER_TOKEN: ${{ secrets.PUSHOVER_TOKEN }}
+          PUSHOVER_USER: ${{ secrets.PUSHOVER_USER }}
+        with:
+          status: ${{ job.status }}
+          title: Website Updated
+          message: Woohoo the website has been updated
+          priority: -1
         continue-on-error: true
 
       - name: Sync changes to main

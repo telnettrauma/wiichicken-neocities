@@ -2,7 +2,6 @@
   "name": "wiichicken-neocities",
   "version": "1.0.0",
   "description": "hi, this is my website.",
-  "main": "index.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy"
@@ -11,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy": "^3.1.0",
     "luxon": "^3.6.1",
     "markdown-it": "^14.1.0",
     "markdown-it-attrs": "^4.3.1",

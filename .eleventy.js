@@ -36,6 +36,10 @@ module.exports = function (eleventyConfig) {
     },
   });
 
+  eleventyConfig.setServerOptions({
+    port: 1738
+  });
+
   return {
     passthroughFileCopy: true,
     dir: {
