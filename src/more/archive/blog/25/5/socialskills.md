@@ -17,4 +17,4 @@ The thing is that I **want** to change, but I just can't figure out how. I've al
 
 [^1]: Granted, *Splatoon* is a good "only personality trait" to have. Almost everyone who plays Splatoon seems like a cool person, but maybe that's bias from me growing up with the series.
 
-[^2]: Benny, I am so sorry that I haven't read your DM yet. Also, ignore how this is the second footnote despite it being the first one in the article.
+[^2]: Benny, I am so sorry that I haven't read your DM yet. Also, ignore how this is the second footnote despite it being the first one in the article. *(Edit: Okay, this is smarter than I thought it would be. It automatically reordered it to be in the correct order. Good job!)*
