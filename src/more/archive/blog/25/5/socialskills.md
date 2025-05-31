@@ -2,7 +2,7 @@
 layout: blog/25/layout.njk
 title: "Summer Has Already Killed my Social Skills"
 date: 2025-05-31
-permalink: "/more/archive/blog/25/5/postlayout.html"
+permalink: "/more/archive/blog/25/5/socialskills.html"
 description: "It appears not talking to people hurts your ability to talk to people"
 ---
 It's only about a month into summer, in fact most students who aren't in college are still in school as of writing, and I already feel that my social skills have been fried.
