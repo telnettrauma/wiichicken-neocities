@@ -26,7 +26,7 @@
 			<p id="article-date">{{ date | date("MMMM d, yyyy") }}</p>
 		</header>
 		<main>
-			<details>
+			<details id="table-of-contents">
 				<summary>Table of Contents</summary>
 				{{ content | toc | safe }}
 			</details>
