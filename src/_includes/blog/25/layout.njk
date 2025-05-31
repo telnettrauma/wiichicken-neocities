@@ -26,6 +26,10 @@
 			<p id="article-date">{{ date | date("MMMM d, yyyy") }}</p>
 		</header>
 		<main>
+			<details>
+				<summary>Table of Contents</summary>
+				{{ content | toc | safe }}
+			</details>
 			{{ content | safe }}
 		</main>
 	</div>

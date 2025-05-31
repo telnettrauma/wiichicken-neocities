@@ -3,7 +3,7 @@ const markdownIt = require('markdown-it')
 const mdAttrs = require('markdown-it-attrs')
 const markdownItFootnote = require('markdown-it-footnote')
 const markdownItAnchor = require("markdown-it-anchor")
-const markdownItTOC = require("markdown-it-table-of-contents")
+const pluginTOC = require('eleventy-plugin-toc')
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/**/*.{css,png,gif,json,jpg,jpeg,js,webmanifest,xml,ttf,ico,webp,txt,svg}")
@@ -14,13 +14,14 @@ module.exports = function (eleventyConfig) {
     .use(markdownItAnchor, {
       permalink: markdownItAnchor.permalink.headerLink()
     })
-    .use(markdownItTOC, {
-      includeLevel: [2, 3, 4, 5, 6],
-      containerClass: "toc",
-      markerPattern: /^\[toc\]/im
-    })
 
   eleventyConfig.setLibrary("md", markdownLib)
+
+  eleventyConfig.addPlugin(pluginTOC, {
+    tags: ['h2', 'h3', 'h4', 'h5', 'h6'],
+    wrapper: '',
+    ul: true
+  })
 
   eleventyConfig.addPairedShortcode("markdown", (content, inline = null) => {
     return inline
