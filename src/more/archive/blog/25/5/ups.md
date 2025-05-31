@@ -2,7 +2,7 @@
 layout: blog/25/layout.njk
 title: "You (yes, you) Should Have a UPS"
 date: 2025-05-20
-permalink: "/more/archive/blog/25/5/postlayout.html"
+permalink: "/more/archive/blog/25/5/ups.html"
 description: "How having a UPS saved my Splatoon 3 match"
 ---
 A UPS is an Uninterrupted Power Supply. Basically, its a power strip with a big, chunky battery on it. This allows it to continue to supply power to a small number of devices in the event of a power outage.
