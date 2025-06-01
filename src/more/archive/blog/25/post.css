@@ -118,16 +118,15 @@ nav {image-rendering: pixelated;}
 }
 .content-area.default main {
 	margin: 0 auto 0 auto;
-	color: #201b13;
+	--text-color: #201b13;
+	color: var(--text-color);
 	background-color: #fffcfa;
 	max-width: 700px;
 	font-size: 16px;
 	padding: 20px;
 	line-height: 30px;
 }
-img {
-	max-width: 100%;
-}
+img {max-width: 100%;}
 .content-area.default header {
 	text-transform: uppercase;
 	padding: 5px;
@@ -143,6 +142,21 @@ img {
 	font-size: 6vw;
 	color: #58432c;
 }
+.content-area.default #table-of-contents {
+	width: 100%;
+	padding: 10px;
+	background-color: #ffdcc0;
+}
+.content-area.default #table-of-contents summary {
+	font-family: 'Kode Mono', monospace;
+	font-weight: bold;
+	font-size: 2vw;
+	color: var(--accent);
+}
+.content-area.default .toc a {
+	text-decoration: unset;
+	color: var(--text-color);
+}
 .content-area.default h1 {
 	font-size: 10vw;
 	letter-spacing: -0.5vw;
@@ -155,6 +169,7 @@ img {
 	font-family: 'Kode Mono', monospace;
 	color: var(--accent);
 }
+.content-area.default h2 a, .content-area.default h3 a, .content-area.default h4 a, .content-area.default h5 a, .content-area.default h6 a {text-decoration: unset;}
 .content-area.default h2 {
 	font-size: 3em;
 	line-height: 1.1em;
@@ -211,10 +226,11 @@ img {
 	}
 	.content-area.default #article-date {color: #e0c1a3;}
 	.content-area.default main {
-		color: #eee0d5;
+		--text-color: #eee0d5;
 		background-color: #19120c;
 	}
 	.content-area.default .footnotes-sep:before {background-color: #19120c;}
+	.content-area.default #table-of-contents {background-color: #59422d;}
 }
 
 @media only screen and (min-width: 700px) {
