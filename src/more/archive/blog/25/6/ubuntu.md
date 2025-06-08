@@ -59,6 +59,8 @@ Although a lot of the apps I use are available, a lot of apps I use also aren't.
 
 I can use Git without GitHub Desktop, but one of the things I like is how easy it makes authenticating for private repos. I sync my [Obsidian](https://obsidian.md){target=_blank} vault with Git, but every 3 minutes I get a popup asking me to authenticate. No matter how many times I do (even if I use a token), the popup still returns. This is very frustrating, as you could likely imagine.
 
+**Edit**: I don't know how, but I got it to work through the GitHub CLI. I've tried this before and it never worked, but it does now. Huh.
+
 And another annoying thing is the top bar. I remember in much earlier versions of Ubuntu the top bar behaved like the macOS one, where it showed menu commands. But it no longer does that. Now, it shows an indicator for your virtual desktop (not virtual machine), the clock, and status area. I feel all of this could've been put on the dock, it just wastes space being at the top with no real purpose.
 
 Another annoying thing is drivers, specifically interactions with my monitor. Because I use a laptop connected to a monitor, obviously the laptop has a screen. But an issue with this is during startup, things only appear on the screen, including when in textmode. So, I'm left in the dark on what's happening when turning my laptop on. However, I will say that it works with my magic mouse near perfectly. Scrolling is a little weird, but middle click works. The magic mouse doesn't even have a middle click.
