@@ -607,51 +607,15 @@
 				<div class="sidebox" id="frens" style="--side-bg: #29005599; --side-text: #eddcff; --border: #7d24e4;">
 					<div class="sidehead" style="color: #eddcff;">
 						<p class="boxy" style="background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(138,0,189,1) 100%); --b-radius-tr: 2;"><strong>FRiENDS</strong></p>
-						<span class="helpbutt boxy" id="frihelp" onclick="flipTheScript('frihelp', 'frens', 'fri2', 'fri1', '#4b252d', '#f2b7c2')" style="color: #4b252d; background-color: #f2b7c2; --border: #7f525b; --b-radius-tl: 2;">?</span>
 					</div>
 					<div class="sidebox-content boxy">
-						<div id="fri1">
-							<div class="dabuttons">
-								<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
-								<a href="https://mari.blue" target="_blank"><img src="interests/websites/img/button/naybor/mariiful.gif" loading="lazy" alt="mari"></a>
-							</div>
-							<div class="dalist" style="--border: #7d24e4; background-color: #1d1a20; color: #eddcff;">
-								<a href="https://crypticworm.neocities.org" target="_blank"><img src="interests/websites/img/ficon/default.png" loading="lazy" alt="">crypticworm</a>
-							</div>
+						<div class="dabuttons">
+							<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
+							<a href="https://mari.blue" target="_blank"><img src="interests/websites/img/button/naybor/mariiful.gif" loading="lazy" alt="mari"></a>
 						</div>
-						<div id="fri2">
-							<p class="nomarblock">If we are friends, just contact me to get your button added here (we're friends, so you should have contact with me). If I only know you on Neocities, I may still add you, but don't feel upset if I don't! <img src="media/emoji/sweat.gif" loading="lazy"></p>
+						<div class="dalist" style="--border: #7d24e4; background-color: #1d1a20; color: #eddcff;">
+							<a href="https://crypticworm.neocities.org" target="_blank"><img src="interests/websites/img/ficon/default.png" loading="lazy" alt="">crypticworm</a>
 						</div>
-						<script>
-							function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms || DEF_DELAY));}
-							async function flipTheScript(buttono, elemento, side1, side2, mainColor, bgColor) {
-								console.log('hi charlie');
-								var friHelp = document.getElementById(buttono);
-								var frens = document.getElementById(elemento);
-								frens.style.transitionDuration = '0.2s';
-								frens.style.transform = 'rotateY(90deg)';
-								await sleep(200);
-								if (window.getComputedStyle(document.getElementById(side1)).display === 'block') {
-									document.getElementById(side1).style.display = 'none';
-									document.getElementById(side2).style.display = 'block';
-									friHelp.style.backgroundColor = bgColor;
-									friHelp.style.color = mainColor;
-								} else {
-									document.getElementById(side1).style.display = 'block';
-									document.getElementById(side2).style.display = 'none';
-									friHelp.style.color = bgColor;
-									friHelp.style.backgroundColor = mainColor;
-								}
-								frens.style.transitionDuration = '0s';
-								frens.style.transform = 'rotateY(270deg)';
-								await sleep(10);
-								frens.style.transitionDuration = '0.2s';
-								frens.style.transform = 'rotateY(360deg)';
-								await sleep(200);
-								frens.style.transitionDuration = '0s';
-								frens.style.transform = 'rotateY(0)';
-							}
-						</script>
 					</div>
 				</div>
 				<div class="sidebox" id="moresites" style="--side-bg: #001e3399; --side-text: #cee5ff; --border: #00a6ff;">
@@ -826,13 +790,7 @@
 					<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!" width="120px" height="144px"></a>
 				</div>
 				<div class="box lefty mobileHidden reducedHidden noscript-hidden" id="navlink" style="padding: 0; --border: #bec9c8 !important;">
-					<span class="helpbutt" id="adHelp" onclick="flipTheScript('adHelp', 'navlink', 'nava2', 'nava1', '#1a1c1e', '#e2e2e5')">?</span>
-					<div id="nava1">
-						<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
-					</div>
-					<div id="nava2" style="display: none; width: 180px; height: 180px;">
-						<p class="nomarblock" style="padding: 5px;">These "ads" are just here for fun! I am not making any profit off of them.<br>Visit <a href="https://dimden.dev/navlinkads" target="_blank">dimden.dev/navlinkads</a> for more information.<br><a target="_blank" style="background-color: unset;" href="https://dimden.dev/"><img src="https://dimden.dev/services/images/88x31.gif" loading="lazy"></a></p>
-					</div>
+					<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
 				</div>
 				<div class="box middleBoy lefty d-sec-br m-sec-b" style="width: 100%; background-color: #00201a9b; --border: #00ffbf !important; flex-direction: column;">
 					<img src="media/home/pets/chatt/chatt.png" loading="lazy" onmouseover="this.src ='media/home/pets/chatt/blink.png'" onmouseleave="this.src = 'media/home/pets/chatt/chatt.png'">
@@ -928,6 +886,7 @@
 	</div>
 </div>
 <script>
+function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms || DEF_DELAY));}
 document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById('fakeLogo').removeAttribute('href');
 	document.getElementById('fakeLogo').setAttribute('onclick', "window.scrollTo({top: 0, behavior: 'smooth'});");
