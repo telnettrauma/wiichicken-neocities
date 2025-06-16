@@ -111,10 +111,6 @@
 			--b-radius-bl: 5;
 			--b-radius-br: 5;
 		}
-		.sidebox-content a:not(:has(img)) {
-			background-color: #ffb4aa;
-			color: #690003;
-		}
 		.middleBoy {
 			display: flex;
 			align-items: center;
@@ -243,7 +239,7 @@
 		.afterfeat {
 			margin: 0px;
 			width: 3px;
-			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+			box-shadow: 0px 0px 5px 0px #000000b3;
 			transition-duration: 0.5s;
 			object-fit: cover;
 		}
@@ -497,9 +493,9 @@
 			object-fit: cover;
 		}
 		@keyframes glowy {
-			0%{box-shadow: 0px 0px 200px 50px rgba(0, 255, 161, 0.75); --border: rgba(0, 255, 161);}
-			50%{box-shadow: 0px 0px 200px 50px rgba(0, 126, 255, 0.75); --border: rgb(0, 126, 255);}
-			100%{box-shadow: 0px 0px 200px 50px rgba(0, 255, 161, 0.75); --border: rgba(0, 255, 161);}
+			0%{box-shadow: 0px 0px 200px 50px #00ffa1bf; --border: #00ffa1;}
+			50%{box-shadow: 0px 0px 200px 50px #007effbf; --border: #007eff;}
+			100%{box-shadow: 0px 0px 200px 50px #00ffa1bf; --border: #00ffa1;}
 		}
 		.mobileVisible {display: none;}
 		/* i hate my life and i wanan die, i aint got no iphone */
@@ -610,57 +606,22 @@
 			<div id="personSighted">
 				<div class="sidebox" id="frens" style="--side-bg: #29005599; --side-text: #eddcff; --border: #7d24e4;">
 					<div class="sidehead" style="color: #eddcff;">
-						<p class="boxy" style="background: linear-gradient(45deg, rgba(97,0,189,1) 0%, rgba(138,0,189,1) 100%); --b-radius-tr: 2;"><strong>FRiENDS</strong></p>
-						<span class="helpbutt boxy" id="frihelp" onclick="flipTheScript('frihelp', 'frens', 'fri2', 'fri1', '#4b252d', '#f2b7c2')" style="color: #4b252d; background-color: #f2b7c2; --border: #7f525b; --b-radius-tl: 2;">?</span>
+						<p class="boxy" style="background: linear-gradient(45deg, #6100bd 0%, #8a00bd 100%);"><strong>FRiENDS</strong></p>
 					</div>
 					<div class="sidebox-content boxy">
-						<div id="fri1">
-							<div class="dabuttons">
-								<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
-							</div>
-							<div class="dalist" style="--border: #7d24e4; background-color: #1d1a20; color: #eddcff;">
-								<a href="https://crypticworm.neocities.org" target="_blank"><img src="interests/websites/img/ficon/default.png" loading="lazy" alt="">crypticworm</a>
-								<a href="https://mari.blue" target="_blank"><img src="interests/websites/img/ficon/cities/mari.png" loading="lazy" alt="">mariiful</a>
-							</div>
+						<div class="dabuttons">
+							<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
+							<a href="https://parafungal.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/parafungal.gif" loading="lazy" alt="Parafungal"></a>
+							<a href="https://mari.blue" target="_blank"><img src="interests/websites/img/button/naybor/mariiful.gif" loading="lazy" alt="mari"></a>
 						</div>
-						<div id="fri2">
-							<p class="nomarblock">If we are friends, just contact me to get your button added here (we're friends, so you should have contact with me). If I only know you on Neocities, I may still add you, but don't feel upset if I don't! <img src="media/emoji/sweat.gif" loading="lazy"></p>
+						<div class="dalist" style="--border: #7d24e4; background-color: #1d1a20; color: #eddcff;">
+							<a href="https://crypticworm.neocities.org" target="_blank"><img src="interests/websites/img/ficon/default.png" loading="lazy" alt="">crypticworm</a>
 						</div>
-						<script>
-							function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms || DEF_DELAY));}
-							async function flipTheScript(buttono, elemento, side1, side2, mainColor, bgColor) {
-								console.log('hi charlie');
-								var friHelp = document.getElementById(buttono);
-								var frens = document.getElementById(elemento);
-								frens.style.transitionDuration = '0.2s';
-								frens.style.transform = 'rotateY(90deg)';
-								await sleep(200);
-								if (window.getComputedStyle(document.getElementById(side1)).display === 'block') {
-									document.getElementById(side1).style.display = 'none';
-									document.getElementById(side2).style.display = 'block';
-									friHelp.style.backgroundColor = bgColor;
-									friHelp.style.color = mainColor;
-								} else {
-									document.getElementById(side1).style.display = 'block';
-									document.getElementById(side2).style.display = 'none';
-									friHelp.style.color = bgColor;
-									friHelp.style.backgroundColor = mainColor;
-								}
-								frens.style.transitionDuration = '0s';
-								frens.style.transform = 'rotateY(270deg)';
-								await sleep(10);
-								frens.style.transitionDuration = '0.2s';
-								frens.style.transform = 'rotateY(360deg)';
-								await sleep(200);
-								frens.style.transitionDuration = '0s';
-								frens.style.transform = 'rotateY(0)';
-							}
-						</script>
 					</div>
 				</div>
 				<div class="sidebox" id="moresites" style="--side-bg: #001e3399; --side-text: #cee5ff; --border: #00a6ff;">
 					<div class="sidehead" style="color: #cee5ff;">
-						<p class="boxy" style="background: linear-gradient(45deg, rgba(0,74,119,1) 0%, rgba(0,105,119,1) 100%);"><strong>MORE SiTES</strong></p>
+						<p class="boxy" style="background: linear-gradient(45deg, #004a77 0%, #006977 100%);"><strong>MORE SiTES</strong></p>
 					</div>
 					<div class="sidebox-content boxy" style="padding: 0;">
 						<div class="dabuttons">
@@ -743,7 +704,7 @@
 			<div class="row" id="infamous" style="display: grid; gap: 10px;">
 				<div class="box noscript-hidden d-sec-l m-sec-t" style="width: 200px; padding: 0; grid-column: 1 / 2; grid-row: 1 / 3; display: inline;">
 					<div style="display: flex; flex-wrap: wrap;" id="statusCard">
-						<div id="statuscafe" style="padding: 5px; background: linear-gradient(0deg, rgba(255,180,168,1) 0%, rgba(255,212,168,1) 100%); width: 100%; min-height: 93px;">
+						<div id="statuscafe" style="padding: 5px; background: linear-gradient(0deg, #ffb4a8 0%, #ffd4a8 100%); width: 100%; min-height: 93px;">
 							<a href="https://status.cafe/users/cringe" class="noBg" target="_blank">
 								<div id="statuscafe-username">10 years ago</div>
 								<div id="statuscafe-content">this is still being loaded, give me a second</div>
@@ -830,13 +791,7 @@
 					<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!" width="120px" height="144px"></a>
 				</div>
 				<div class="box lefty mobileHidden reducedHidden noscript-hidden" id="navlink" style="padding: 0; --border: #bec9c8 !important;">
-					<span class="helpbutt" id="adHelp" onclick="flipTheScript('adHelp', 'navlink', 'nava2', 'nava1', '#1a1c1e', '#e2e2e5')">?</span>
-					<div id="nava1">
-						<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
-					</div>
-					<div id="nava2" style="display: none; width: 180px; height: 180px;">
-						<p class="nomarblock" style="padding: 5px;">These "ads" are just here for fun! I am not making any profit off of them.<br>Visit <a href="https://dimden.dev/navlinkads" target="_blank">dimden.dev/navlinkads</a> for more information.<br><a target="_blank" style="background-color: unset;" href="https://dimden.dev/"><img src="https://dimden.dev/services/images/88x31.gif" loading="lazy"></a></p>
-					</div>
+					<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
 				</div>
 				<div class="box middleBoy lefty d-sec-br m-sec-b" style="width: 100%; background-color: #00201a9b; --border: #00ffbf !important; flex-direction: column;">
 					<img src="media/home/pets/chatt/chatt.png" loading="lazy" onmouseover="this.src ='media/home/pets/chatt/blink.png'" onmouseleave="this.src = 'media/home/pets/chatt/chatt.png'">
@@ -932,6 +887,7 @@
 	</div>
 </div>
 <script>
+function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms || DEF_DELAY));}
 document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById('fakeLogo').removeAttribute('href');
 	document.getElementById('fakeLogo').setAttribute('onclick', "window.scrollTo({top: 0, behavior: 'smooth'});");
