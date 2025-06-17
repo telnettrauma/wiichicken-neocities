@@ -116,8 +116,25 @@
 			#splatoon-main-stats .box {margin-bottom: 3px;}
 			#splashtag {
 				background-image: url('/resources/about/img/splat/banner.png');
+				background-size: cover;
 				display: flex;
 				flex-direction: column;
+				color: white;
+			}
+			#splashtag-title {font-size: 14px;}
+			#splashtag-name {
+				font-size: 28px;
+				text-align: center;
+			}
+			#splashtag-bottom {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				font-size: 14px;
+			}
+			#splashtag-bottom img {
+				width: 32px;
+				height: 32px;
 			}
 			@media only screen and (max-width: 1050px) {
 				article, .row, #helloGames, main, .box, header, .grid .box {width: -webkit-fill-available;}
@@ -250,9 +267,13 @@
 				<div id="splatoon-main-stats">
 					<div class="box" id="splashtag">
 						<p id="splashtag-title">The First Tableturf Battler</p>
-						<p>cringePoop</p>
-						<div>
+						<p id="splashtag-name" class="headText">cringePoop</p>
+						<div id="splashtag-bottom">
 							<p>#1088</p>
+							<div>
+								<img src="/resources/about/img/splat/badge/badge1.png" alt="" title="30+ stars on Z+F gear" loading="lazy">
+								<img src="/resources/about/img/splat/badge/badge3.png" alt="" title="Splatted Scrapper 100x" loading="lazy">
+							</div>
 						</div>
 					</div>
 					<p class="box turf-colors">Level: <strong>34</strong></p>
