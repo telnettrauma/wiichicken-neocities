@@ -285,3 +285,6 @@ img {max-width: 100%;}
 			linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
 	}
 }
+@media (prefers-reduced-motion) {
+	#s1 {animation: unset;}
+}
