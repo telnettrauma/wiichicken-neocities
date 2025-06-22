@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>iM STiLL WORKiNG ON iT!</title>
+			<pubDate>Sun, 22 Jun 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>put my splashtag on the about me page. that's all!</description>
+		</item>
+		<item>
 			<title>tikTOC</title>
 			<pubDate>Sun, 1 Jun 2025 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -75,13 +82,6 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>there is a list instead of a grid</description>
-		</item>
-		<item>
-			<title>SORRY!</title>
-			<pubDate>Sun, 9 Feb 2025 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>i translated something from chinese to enlgish</description>
 		</item>
 	</channel>
 </rss>
