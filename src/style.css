@@ -258,7 +258,11 @@ button {
 	background-color: unset !important;
 }
 .topLinks a:first-child {color: #c5e7ff;}
-.topLinks a:nth-child(2) {color: #dce1ff;}
+/* .topLinks a:nth-child(2) {color: #dce1ff;} */
+.topLinks a:nth-child(2) {
+	color: #ffd9e1;
+	text-shadow: 0 0 5px #ffd9e1;
+}
 .topLinks a:nth-child(3) {color: #ffd6fe;}
 .topLinks a:nth-child(4) {color: #ffdadb;}
 .topLinks a:nth-child(5) {color: #ffdad6;}
