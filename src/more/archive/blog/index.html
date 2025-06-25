@@ -41,7 +41,6 @@
 			}
 			.grid .box h2, .grid .box h3 {background-color: unset;}
 			.head {background-image: url('/media/headers/blog.png');}
-			.box ul li:nth-child(even) a {color: #dec48c;}
 			/* styling for grid mode */
 			.grid .box {
 				padding: 0;
@@ -53,20 +52,23 @@
 				display: grid;
 				grid-template-columns: repeat(2, 1fr);
 				grid-gap: 2px;
-				padding-left: 5px;
+				padding: 0 5px 0 5px;
 			}
 			.grid .box ul li {
 				display: flex;
+				flex-direction: row;
+				align-items: center;
 				padding: 0;
-				flex-wrap: wrap;
 				margin-bottom: 0;
-				border: 1px solid white;
+				border: 1px solid #ffd6fe;
+				background-color: #261329cc;
 			}
 			.grid .box ul li a {
 				font-size: 20px;
 				margin: 5px;
 				padding: 5px;
 				width: 100%;
+				color: #ffd6fe;
 			}
 			.grid .box ul li a::after {display: none;}
 			/* the styling for grid mode ended btw */
@@ -91,8 +93,10 @@
 			ul {padding-left: 25px;}
 			h1, h2, h3 {margin: 0;}
 			#link-list .box {margin-bottom: 2px;}
-			.metaBadge, .designBadge, .rantBadge, .socialBadge, .codeBadge, .favBadge {padding: 0 2px 0 2px;}
-			.metaBadge, .designBadge, .rantBadge, .socialBadge, .codeBadge, .favBadge {padding: 0 2px 0 2px;}
+			.metaBadge, .designBadge, .rantBadge, .socialBadge, .codeBadge, .favBadge {
+				padding: 0 2px 0 2px;
+				margin: 3px 3px 3px 0;
+			}
 			.metaBadge {
 				background-color: #d3ec9e;
 				color: #141f00;
