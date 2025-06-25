@@ -16,9 +16,7 @@
 				--bg-1: #dd00ff;
 				--bg-2: #ce6353;
 			}
-			main {
-				max-width: 1200px;
-			}
+			main {max-width: 700px;}
 			p {
 				margin-block-start: 0;
 				margin-block-end: 0;
@@ -129,8 +127,23 @@
 				background-color: #5c4300;
 				color: #ffdea0;
 			}
-			@media only screen and (max-width: 900px) {
+			@media only screen and (max-width: 699px) {
+				.grid .box ul {grid-template-columns: repeat(1, 1fr);}
+			}
+			@media only screen and (min-width: 700px) {
 				.grid .box ul {grid-template-columns: repeat(2, 1fr);}
+			}
+			@media only screen and (min-width: 1250px) {
+				main {max-width: 1200px;}
+				.grid .box ul {grid-template-columns: repeat(3, 1fr);}
+			}
+			@media only screen and (min-width: 1700px) {
+				main {max-width: 1650px;}
+				.grid .box ul {grid-template-columns: repeat(4, 1fr);}
+			}
+			@media only screen and (min-width: 2200px) {
+				main {max-width: 2150px;}
+				.grid .box ul {grid-template-columns: repeat(5, 1fr);}
 			}
 		</style>
 	</head>
