@@ -70,12 +70,6 @@
 			}
 			.grid .box ul li a::after {display: none;}
 			/* the styling for grid mode ended btw */
-			#toggle-switch, #jumpto-box {
-				display: flex;
-				align-items: center;
-			}
-			#jumpto-box {justify-content: space-between;}
-			#toggle-switch .active {background-color: #350040;}
 			header {box-shadow: 0 0 150px 20px #f7adfd;}
 			a button {
 				background-color: #6a2e73;
@@ -135,11 +129,6 @@
 				.grid .box ul {grid-template-columns: repeat(2, 1fr);}
 			}
 		</style>
-		<noscript>
-			<style>
-				#toggle-switch {display: none;}
-			</style>
-		</noscript>
 	</head>
 	<body>
 		{% include "partials/navbar.njk" %}
@@ -204,11 +193,6 @@
 						</ul>
 					</details>
 				</details>
-				<div id="toggle-switch">
-					<p>View:</p>
-					<a onclick="listView()"><button class="active" onclick="listView()" id="en-list" title="List view"><img src="arch/media/list.png" loading="lazy" alt=""></button></a>
-					<a onclick="gridView()"><button id="en-grid" onclick="gridView()" title="Grid view"><img src="arch/media/grid.png" loading="lazy" alt=""></button></a>
-				</div>
 			</div>
 			<div id="link-list" class="grid">
 				<div class="box sec-t">
