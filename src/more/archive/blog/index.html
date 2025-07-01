@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>WiiCHiCKEN Neocities Blog</title>
+		<title>BLOG</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/x-icon" href="favicon.png">
 		<link rel="alternate" type="application/rss+xml" href="feed.xml" title="RSS">
@@ -16,12 +16,13 @@
 				--bg-1: #dd00ff;
 				--bg-2: #ce6353;
 			}
+			main {max-width: 700px;}
 			p {
 				margin-block-start: 0;
 				margin-block-end: 0;
 			}
 			#flex {display: flex;}
-			.box, header, .grid .box ul li, .grid .box h2, .grid .box h3 {
+			.box, header, h2, h3 {
 				--bg: #310938cc;
 				--text: #ffd6fe;
 				--border: #f7adfd;
@@ -36,75 +37,45 @@
 				width: 100%;
 				gap: 10px;
 			}
-			.grid .box h2, .grid .box h3 {background-color: unset;}
+			.box h2, .box h3 {background-color: unset;}
 			.head {background-image: url('/media/headers/blog.png');}
-			.box ul li:nth-child(even) a {color: #dec48c;}
-			/* styling for grid mode */
-			.grid .box {
-				padding: 0;
-				margin-bottom: 0;
-				border: none;
-				backdrop-filter: unset;
-			}
-			.grid .box ul {
+			.monthicles {
 				display: grid;
-				grid-template-columns: repeat(3, 1fr);
-				grid-gap: 10px;
-				padding-left: 0;
+				grid-template-columns: repeat(2, 1fr);
+				grid-gap: 5px;
+				padding: 0 5px 0 5px;
+				margin-bottom: 5px;
 			}
-			.grid .box ul li {
+			.monthicles a {
 				display: flex;
-				padding: 0;
-				flex-wrap: wrap;
-				margin-bottom: 0;
-			}
-			.grid .box ul li a {
-				font-size: 20px;
-				margin: 5px;
-				padding: 5px;
-				width: 100%;
-				background-color: var(--text);
-				color: var(--bg);
-			}
-			.grid .box ul li a::after {display: none;}
-			.grid .box ul .meta {
-				--bg: #012200cc;
-				--text: #a8f692;
-				--border: #8dd979;
-			}
-			.grid .box ul .code {
-				--bg: #131f00cc;
-				--text: #caef86;
-				--border: #afd36d;
-			}
-			.grid .box ul .design {
-				--bg: #360f00cc;
-				--text: #ffdbcd;
-				--border: #99461c;
-			}
-			.grid .box ul .rant {
-				--bg: #410000cc;
-				--text: #ffdad4;
-				--border: #b62316;
-			}
-			.grid .box ul .social {
-				--bg: #000f5dcc;
-				--text: #dee0ff;
-				--border: #344ddc;
-			}
-			.grid .box ul .ai {
-				--bg: #270057cc;
-				--text: #ecdcff;
-				--border: #7824ff;
-			}
-			/* the styling for grid mode ended btw */
-			#toggle-switch, #jumpto-box {
-				display: flex;
+				flex-direction: row;
 				align-items: center;
+				padding: 5px;
+				margin-bottom: 0;
+				border: 1px solid var(--border);
+				background-color: #261329cc;
+				box-shadow: 2px 2px 0 0 var(--border);
+				text-decoration: none !important;
 			}
-			#jumpto-box {justify-content: space-between;}
-			#toggle-switch .active {background-color: #350040;}
-			header {box-shadow: 0 0 150px 20px #f7adfd;}
+			.monthicles a p {
+				font-size: 20px;
+				margin-right: 10px;
+				width: 100%;
+				color: #ffd6fe;
+			}
+			.monthicles a div {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				text-align: right;
+				width: 70px;
+			}
+			.monthicles a p time {
+				display: block;
+				font-size: 12px;
+				color: #d7bfd5;
+			}
+			.monthicles a::after {display: none;}
 			a button {
 				background-color: #6a2e73;
 				color: #ffd6fe;
@@ -122,11 +93,11 @@
 				box-shadow: none;
 				transform: translate(2px, 2px);
 			}
-			ul {padding-left: 25px;}
 			h1, h2, h3 {margin: 0;}
-			#link-list .box {margin-bottom: 2px;}
-			.metaBadge, .designBadge, .rantBadge, .socialBadge, .codeBadge, .favBadge {padding: 0 2px 0 2px;}
-			.metaBadge, .designBadge, .rantBadge, .socialBadge, .codeBadge, .favBadge {padding: 0 2px 0 2px;}
+			.metaBadge, .designBadge, .rantBadge, .socialBadge, .codeBadge, .favBadge {
+				padding: 0 2px 0 2px;
+				margin: 3px 3px 3px 0;
+			}
 			.metaBadge {
 				background-color: #d3ec9e;
 				color: #141f00;
@@ -159,19 +130,31 @@
 				background-color: #5c4300;
 				color: #ffdea0;
 			}
-			@media only screen and (max-width: 900px) {
-				.grid .box ul {grid-template-columns: repeat(2, 1fr);}
+			@media only screen and (max-width: 699px) {
+				.monthicles {grid-template-columns: repeat(1, 1fr);}
+			}
+			@media only screen and (min-width: 700px) {
+				.monthicles {grid-template-columns: repeat(2, 1fr);}
+			}
+			@media only screen and (min-width: 1250px) {
+				main {max-width: 1200px;}
+				.head {background-image: url('/media/headers/blog/1200.png');}
+				.monthicles{grid-template-columns: repeat(3, 1fr);}
+			}
+			@media only screen and (min-width: 1700px) {
+				main {max-width: 1650px;}
+				.head {background-image: url('/media/headers/blog/1700.png');}
+				.monthicles {grid-template-columns: repeat(4, 1fr);}
+			}
+			@media only screen and (min-width: 2200px) {
+				main {max-width: 2150px;}
+				.head {background-image: url('/media/headers/blog/2150.png');}
+				.monthicles {grid-template-columns: repeat(5, 1fr);}
 			}
 		</style>
-		<noscript>
-			<style>
-				#toggle-switch {display: none;}
-			</style>
-		</noscript>
 	</head>
 	<body>
 		{% include "partials/navbar.njk" %}
-		<div id="chewTooth"></div>
 		<main>
 			<div class="head box page-top"></div>
 			<header class="box sec-full" style="display: flex; align-items: center; justify-content: space-between;">
@@ -206,6 +189,7 @@
 							<li><a href="#25m3">March</a></li>
 							<li><a href="#25m4">April</a></li>
 							<li><a href="#25m5">May</a></li>
+							<li><a href="#25m6">June</a></li>
 						</ul>
 					</details>
 					<details style="margin-left: 10px;">
@@ -231,267 +215,485 @@
 						</ul>
 					</details>
 				</details>
-				<div id="toggle-switch">
-					<p>View:</p>
-					<a onclick="listView()"><button class="active" onclick="listView()" id="en-list" title="List view"><img src="arch/media/list.png" loading="lazy" alt=""></button></a>
-					<a onclick="gridView()"><button id="en-grid" onclick="gridView()" title="Grid view"><img src="arch/media/grid.png" loading="lazy" alt=""></button></a>
+			</div>
+			<div class="box sec-t">
+				<h2 id="25">2025</h2>
+			</div>
+			<div class="box">
+				<h3 id="25m6">June</h3>
+				<div class="monthicles">
+					<a href="25/6/newblog.html" target="_blank" class="meta">
+						<p><time datetime="2025-6-29">June 29, 2025</time>My New Blog Index</p>
+						<div><span class="metaBadge">#meta</span></div>
+					</a>
+					<a href="25/6/sweat3.html" target="_blank"><p><time datetime="2025-06-24">June 24, 2025</time>Either Splatoon 3 is Too Competitive, or I'm a Loser</p></a>
+					<a href="25/6/ios26.html" target="_blank" class="design rant">
+						<p><time datetime="2025-06-09">June 9, 2025</time>This is What Technology Will Look Like in 2030 (iOS 26)</p>
+						<div>
+							<span class="designBadge">#design</span>
+							<span class="rantBadge">#rant</span>
+						</div>
+					</a>
+					<a href="25/6/ubuntu.html" target="_blank"><p><time datetime="2025-06-08">June 8, 2025</time>I'm (Partially) a Linux User Now</p></a>
+					<a href="25/6/cameraroll.html" target="_blank"><p><time datetime="2025-06-06">June 6, 2025</time>Cleaning Out my Camera Roll</p></a>
 				</div>
 			</div>
-			<div id="link-list" class="list">
-				<div class="box sec-t">
-					<h2 id="25">2025</h2>
+			<div class="box">
+				<h3 id="25m5">May</h3>
+				<div class="monthicles">
+					<a href="25/5/socialskills.html" target="_blank" class="rant">
+						<p><time datetime="2025-05-31">May 31, 2025</time>Summer Has Already Killed my Social Skills</p>
+						<div><span class="rantBadge">#rant</span></div>
+					</a>
+					<a href="25/5/ups.html" target="_blank"><p><time datetime="2025-05-20">May 20, 2025</time>You (yes, you) Should Have a UPS</p></a>
+					<a href="25/5/postlayout.html" target="_blank" class="meta design">
+						<p><time datetime="2025-05-05">May 5, 2025</time>New Default Blog Theme</p>
+						<div>
+							<span class="metaBadge">#meta</span>
+							<span class="designBadge">#design</span>
+						</div>
+					</a>
+					<a href="25/5/clearlists.html" target="_blank" class="rant">
+						<p><time datetime="2025-05-01">May 1, 2025</time>I'm Done With Clear Lists</p>
+						<div><span class="rantBadge">#rant</span></div>
+					</a>
 				</div>
-				<div class="box">
-					<h3 id="25m6">June</h3>
-					<ul>
-						<li><a href="25/6/cameraroll.html" target="_blank">6. Cleaning Out my Camera Roll</a></li>
-					</ul>
+			</div>
+			<div class="box">
+				<h3 id="25m4">April</h3>
+				<div class="monthicles">
+					<a href="25/4/login-to-google-android-4.html" target="_blank"><p><time datetime="2025-04-28">April 28, 2025</time>How to Login to Google on Android 4</p></a>
+					<a href="25/4/dpi.html" target="_blank" class="meta code">
+						<p><time datetime="2025-04-24">April 24, 2025</time>DPI Observations I've Made</p>
+						<div>
+							<span class="metaBadge">#meta</span>
+							<span class="codeBadge">#code</span>
+						</div>
+					</a>
+					<a href="25/4/wiggleai.html" target="_blank" class="meta">
+						<p><time datetime="2025-04-16">April 16, 2025</time>Someone Turned My Site into a Cyptocurrency</p>
+						<div><span class="metaBadge">#meta</span></div>
+					</a>
 				</div>
-				<div class="box">
-					<h3 id="25m5">May</h3>
-					<ul>
-						<li class="rant"><a href="25/5/socialskills.html" target="_blank">31. Summer Has Already Killed my Social Skills</a> <span class="rantBadge">#rant</span></li>
-						<li><a href="25/5/ups.html" target="_blank">20. You (yes, you) Should Have a UPS</a></li>
-						<li class="meta design"><a href="25/5/postlayout.html" target="_blank">5. New Default Blog Theme</a> <span class="metaBadge">#meta</span> <span class="designBadge">#design</span></li>
-						<li class="rant"><a href="25/5/clearlists.html" target="_blank">1. I'm Done With Clear Lists</a> <span class="rantBadge">#rant</span></li>
-					</ul>
+			</div>
+			<div class="box">
+				<h3 id="25m3">March</h3>
+				<div class="monthicles">
+					<a href="25/3/iammusic.html" target="_blank"><p><time datetime="2025-03-14">March 14, 2025</time>Playboi Carti - I AM MUSIC Album Review</p></a>
 				</div>
-				<div class="box">
-					<h3 id="25m4">April</h3>
-					<ul>
-						<li><a href="25/4/login-to-google-android-4.html" target="_blank">28. How to Login to Google on Android 4</a></li>
-						<li class="meta code"><a href="25/4/dpi.html" target="_blank">24. DPI Observations I've Made</a> <span class="metaBadge">#meta</span> <span class="codeBadge">#code</span></li>
-						<li class="meta"><a href="25/4/wiggleai.html" target="_blank">16. Someone Turned My Site into a Cyptocurrency</a> <span class="metaBadge">#meta</span></li>
-					</ul>
+			</div>
+			<div class="box">
+				<h3 id="25m2">February</h3>
+				<div class="monthicles">
+					<a href="25/2/appledeveloper.html" target="_blank"><p><time datetime="2025-02-01">February 1, 2025</time>What Happened to my Sideloaded Apps When my Apple Developer Membership Expired</p></a>
 				</div>
-				<div class="box">
-					<h3 id="25m3">March</h3>
-					<ul>
-						<li><a href="25/3/iammusic.html" target=_blank">14. Playboi Carti - I AM MUSIC Album Review</a></li>
-					</ul>
+			</div>
+			<div class="box sec-b" style="margin-bottom: 10px;">
+				<h3 id="25m1">January</h3>
+				<div class="monthicles">
+					<a href="25/1/kbgy9news.html" target="_blank" class="social">
+						<p><time datetime="2025-01-30">January 30, 2025</time>KBGY 9 News Sadly Isn't Real</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="25/1/tiktokactuallybanned.html" target="_blank" class="social">
+						<p><time datetime="2025-01-20">January 20, 2025</time>TikTok IS Still Banned in the US</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="25/1/tiktokbanned.html" target="_blank" class="social">
+						<p><time datetime="2025-01-19">January 19, 2025</time>The TikTok Ban Was a Nothing Burger</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="25/1/boxes.html" target="_blank">
+						<p><time datetime="2025-01-14">January 14, 2025</time>Boxes and Boxes and Boxes</p>
+					</a>
+					<a href="25/1/littleredbook.html" target="_blank" class="social">
+						<p><time datetime="2025-01-13">January 13, 2025</time>Goodbye TikTok... Hello 小红书!</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="25/1/grokapp.html" target="_blank" class="design">
+						<p><time datetime="2025-01-12">January 12, 2025</time>Twitter's Grok App Design Review</p>
+						<div><span class="designBadge">#design</span></div>
+					</a>
+					<a href="25/1/raindropio.html" target="_blank"><p><time datetime="2025-01-11">January 11, 2025</time>raindrop.io for Bookmarks</p></a>
+					<a href="25/1/drawstring.html" target="_blank"><p><time datetime="2025-01-10">January 10, 2025</time>Don't Like Drawstrings? I Don't Like You</p></a>
+					<a href="25/1/airbuds.html" target="_blank" class="social">
+						<p><time datetime="2025-01-09">January 9, 2025</time>Airbuds - A Poor Attempt at a Music SNS</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="25/1/balatro.html" target="_blank"><p><time datetime="2025-01-08">January 8, 2025</time>Balatro has Been Installed</p></a>
+					<a href="25/1/100ways.html" target="_blank"><p><time datetime="2025-01-07">January 7, 2025</time>100 Goals for the New Year</p></a>
+					<a href="25/1/walkbreak.html" target="_blank"><p><time datetime="2025-01-06">January 6, 2025</time>Don't Just Sit There!</p></a>
+					<a href="25/1/alexa.html" target="_blank"><p><time datetime="2025-01-05">January 5, 2025</time>Alexa Plays Music and Sets Timers</p></a>
+					<a href="25/1/neocitiesbug.html" target="_blank" class="meta code">
+						<p><time datetime="2025-01-04">January 4, 2025</time>Really Stupid Neocities Bug I'm Experiencing</p>
+						<div>
+							<span class="metaBadge">#meta</span>
+							<span class="codeBadge">#code</span>
+						</div>
+					</a>
+					<a href="25/1/artstyle.html" target="_blank" class="rant">
+						<p><time datetime="2025-01-03">January 3, 2025</time>Get a New Artstyle</p>
+						<div><span class="rantBadge">#rant</span></div>
+					</a>
+					<a href="25/1/gtav.html" target="_blank"><p><time datetime="2025-01-02">January 2, 2025</time>Late to the GTA V Train</p></a>
+					<a href="25/1/playback.html" target="_blank"><p><time datetime="2025-01-01">January 1, 2025</time>last.fm Playback 2024</p></a>
 				</div>
-				<div class="box">
-					<h3 id="25m2">February</h3>
-					<ul>
-						<li><a href="25/2/appledeveloper.html" target="_blank">1. What Happened to my Sideloaded Apps When my Apple Developer Membership Expired</a></li>
-					</ul>
+			</div>
+			<div class="box sec-t">
+				<h2 id="24">2024</h2>
+			</div>
+			<div class="box">
+				<h3 id="24m12">December</h3>
+				<div class="monthicles">
+					<a href="2024/12/inbox.html" target="_blank" class="favorite">
+						<p><time datetime="2024-12-31">December 31, 2024</time>Updating my Gmail Filters</p>
+						<div><span class="favBadge">#favorite</span></div>
+					</a>
+					<a href="2024/12/shopping.html" target="_blank"><p><time datetime="2024-12-30">December 30, 2024</time>How do People Order Things Online</p></a>
+					<a href="2024/12/1year.html" target="_blank" class="meta">
+						<p><time datetime="2024-12-30">December 30, 2024</time>1 Year of wiggle.monster!</p>
+						<div><span class="metaBadge">#meta</span></div>
+					</a>
+					<a href="2024/12/oldside.html" target="_blank"><p><time datetime="2024-12-29">December 29, 2024</time>Its Still 2009, Just Go Outside</p></a>
+					<a href="2024/12/blowup.html" target="_blank" class="social">
+						<p><time datetime="2024-12-28">December 28, 2024</time>Blowing Up on TikTok was Hell</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="2024/12/shapes.html" target="_blank" class="design">
+						<p><time datetime="2024-12-27">December 27, 2024</time>Lost Shapes of Apple's Apps</p>
+						<div><span class="designBadge">#design</span></div>
+					</a>
+					<a href="2024/12/fears.html" target="_blank"><p><time datetime="2024-12-26">December 26, 2024</time>When I was Scared of Water and CAPTCHA</p></a>
+					<a href="2024/12/colormytree.html" target="_blank" class="meta">
+						<p><time datetime="2024-12-25">December 25, 2024</time>🎄 Color my Tree Replies</p>
+						<div><span class="metaBadge">#meta</span></div>
+					</a>
+					<a href="2024/12/boring.html" target="_blank"><p><time datetime="2024-12-24">December 24, 2024</time>Is the Internet Boring</p></a>
+					<a href="2024/12/cookies.html" target="_blank"><p><time datetime="2024-12-23">December 23, 2024</time>Making Cookies Isn't Fun</p></a>
+					<a href="2024/12/lowstorage.html" target="_blank"><p><time datetime="2024-12-22">December 22, 2024</time>Low Storage Will Be the Death of You</p></a>
+					<a href="2024/12/using.html" target="_blank" class="design">
+						<p><time datetime="2024-12-21">December 21, 2024</time>People Will be Using These Interfaces</p>
+						<div><span class="designBadge">#design</span></div>
+					</a>
+					<a href="2024/12/consistency.html" target="_blank" class="rant">
+						<p><time datetime="2024-12-20">December 20, 2024</time>Consistency is Key. Don't Drive Me Insane</p>
+						<div><span class="rantBadge">#rant</span></div>
+					</a>
+					<a href="2024/12/radio.html" target="_blank"><p><time datetime="2024-12-19">December 19, 2024</time>DRM on the Radio</p></a>
+					<a href="2024/12/lemon8.html" target="_blank" class="social">
+						<p><time datetime="2024-12-18">December 18, 2024</time>Lemon8 is a app that exists</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="2024/12/mirror.html" target="_blank"><p><time datetime="2024-12-17">December 17, 2024</time>New Mirror, New Life (not really)</p></a>
+					<a href="2024/12/junctionview.html" target="_blank"><p><time datetime="2024-12-16">December 16, 2024</time>Bring Back Junction View</p></a>
+					<a href="2024/12/ogfortnite.html" target="_blank"><p><time datetime="2024-12-15">December 15, 2024</time>Fortnite OG (Again) is Actually Boring</p></a>
+					<a href="2024/12/grok.html" target="_blank" class="ai social">
+						<p><time datetime="2024-12-14">December 14, 2024</time>Grok Tuah! Prompt on That Thang!</p>
+						<div>
+							<span class="aiBadge">#ai</span>
+							<span class="socialBadge">#social</span>
+						</div>
+					</a>
+					<a href="2024/12/woeisme.html" target="_blank" class="rant">
+						<p><time datetime="2024-12-13">December 13, 2024</time>happy for you, but i hope you break up</p>
+						<div><span class="rantBadge">#rant</span></div>
+					</a>
+					<a href="2024/12/crash.html" target="_blank"><p><time datetime="2024-12-12">December 12, 2024</time>Drive Into a Lamppost or Something Solid</p></a>
+					<a href="2024/12/trolls.html" target="_blank" class="meta">
+						<p><time datetime="2024-12-11">December 11, 2024</time>I... I've Officially Made It 🥹</p>
+						<div><span class="metaBadge">#meta</span></div>
+					</a>
+					<a href="2024/12/list.html" target="_blank" class="rant">
+						<p><time datetime="2024-12-10">December 10, 2024</time>Not Making a List</p>
+						<div><span class="rantBadge">#rant</span></div>
+					</a>
+					<a href="2024/12/studio.html" target="_blank" class="rant">
+						<p><time datetime="2024-12-09">December 9, 2024</time>DO NOT Take 3 Studio Classes at Once</p>
+						<div><span class="rantBadge">#rant</span></div>
+					</a>
+					<a href="2024/12/magicmouse.html" target="_blank"><p><time datetime="2024-12-08">December 8, 2024</time>Using a Magic Mouse on Windows</p></a>
+					<a href="2024/12/blackboard.html" target="_blank" class="rant">
+						<p><time datetime="2024-12-07">December 7, 2024</time>Screw Discussion Posts</p>
+						<div><span class="rantBadge">#rant</span></div>
+					</a>
+					<a href="2024/12/gifts.html" target="_blank" class="rant">
+						<p><time datetime="2024-12-06">December 6, 2024</time>Giving Gifts is Better Than Getting Gifts</p>
+						<div><span class="rantBadge">#rant</span></div>
+					</a>
+					<a href="2024/12/sound.html" target="_blank"><p><time datetime="2024-12-05">December 5, 2024</time>🔊 to 🔇</p></a>
+					<a href="2024/12/wrapped.html" target="_blank">
+						<p><time datetime="2024-12-04">December 4, 2024</time>Wrapped 2024 was Bad, Which is Good</p>
+						<div><span class="favBadge">#favorite</span></div>
+					</a>
+					<a href="2024/12/helvetica.html" target="_blank" class="design">
+						<p><time datetime="2024-12-03">December 3, 2024</time>Helvetica Just Wins</p>
+						<div><span class="designBadge">#design</span></div>
+					</a>
+					<a href="2024/12/snapchat.html" target="_blank" class="social">
+						<p><time datetime="2024-12-02">December 2, 2024</time>Snapchat is Like Email</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="2024/12/firetv.html" target="_blank"><p><time datetime="2024-12-01">December 1, 2024</time>Using a Fire TV Sucks</p></a>
 				</div>
-				<div class="box sec-b" style="margin-bottom: 10px;">
-					<h3 id="25m1">January</h3>
-					<ul>
-						<li class="social"><a href="25/1/kbgy9news.html" target="_blank">30. KBGY 9 News Sadly Isn't Real</a> <span class="socialBadge">#social</span></li>
-						<li class="social"><a href="25/1/tiktokactuallybanned.html" target="_blank">20. TikTok IS Still Banned in the US</a> <span class="socialBadge">#social</span></li>
-						<li class="social"><a href="25/1/tiktokbanned.html" target="_blank">19. The TikTok Ban Was a Nothing Burger</a> <span class="socialBadge">#social</span></li>
-						<li><a href="25/1/boxes.html" target="_blank">14. Boxes and Boxes and Boxes</a></li>
-						<li class="social"><a href="25/1/littleredbook.html" target="_blank">13. Goodbye TikTok... Hello 小红书!</a> <span class="socialBadge">#social</span></li>
-						<li class="design social ai"><a href="25/1/grokapp.html" target="_blank">12. Twitter's Grok App Design Review</a> <span class="designBadge">#design</span> <span class="socialBadge">#social</span> <span class="aiBadge">#ai</span></li>
-						<li><a href="25/1/raindropio.html" target="_blank">11. raindrop.io for Bookmarks</a></li>
-						<li><a href="25/1/drawstring.html" target="_blank">10. Don't Like Drawstrings? I Don't Like You</a></li>
-						<li class="social"><a href="25/1/airbuds.html" target="_blank">9. Airbuds - A Poor Attempt at a Music SNS</a> <span class="socialBadge">#social</span></li>
-						<li><a href="25/1/balatro.html" target="_blank">8. Balatro has Been Installed</a></li>
-						<li><a href="25/1/100ways.html" target="_blank">7. 100 Goals for the New Year</a></li>
-						<li><a href="25/1/walkbreak.html" target="_blank">6. Don't Just Sit There!</a></li>
-						<li><a href="25/1/alexa.html" target="_blank">5. Alexa Plays Music and Sets Timers</a></li>
-						<li class="meta code"><a href="25/1/neocitiesbug.html" target="_blank">4. Really Stupid Neocities Bug I'm Experiencing</a> <span class="metaBadge">#meta</span> <span class="codeBadge">#code</span></li>
-						<li class="rant"><a href="25/1/artstyle.html" target="_blank">3. Get a New Artstyle</a> <span class="rantBadge">#rant</span></li>
-						<li><a href="25/1/gtav.html" target="_blank">2. Late to the GTA V Train</a></li>
-						<li><a href="25/1/playback.html" target="_blank">1. last.fm Playback 2024</a></li>
-					</ul>
+			</div>
+			<div class="box">
+				<h3 id="24m11">November</h3>
+				<div class="monthicles">
+					<a href="2024/11/markt.html" target="_blank"><p><time datetime="2024-11-30">November 30, 2024</time>This Little Piggy Went to Markt</p></a>
+					<a href="2024/11/winter.html" target="_blank"><p><time datetime="2024-11-29">November 29, 2024</time>happy fun snow driving time</p></a>
+					<a href="2024/11/thanksgiving.html" target="_blank"><p><time datetime="2024-11-28">November 28, 2024</time>Not the Biggest Fan of Thanksgiving</p></a>
+					<a href="2024/11/bowling.html" target="_blank"><p><time datetime="2024-11-27">November 27, 2024</time>Unresearched Rant on if Bowling is Too Family Friendly</p></a>
+					<a href="2024/11/experiment.html" target="_blank"><p><time datetime="2024-11-26">November 26, 2024</time>Online Social Experiments Don't Work Anymore</p></a>
+					<a href="2024/11/reflection.html" target="_blank" class="meta">
+						<p><time datetime="2024-11-25">November 25, 2024</time>Day 50 - A Reflection</p>
+						<div><span class="metaBadge">#meta</span></div>
+					</a>
+					<a href="2024/11/wordgame.html" target="_blank"><p><time datetime="2024-11-24">November 24, 2024</time>New York Times Word Game Review</p></a>
+					<a href="2024/11/twtint.html" target="_blank" class="social">
+						<p><time datetime="2024-11-23">November 23, 2024</time>You Could Tweet From Anything</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="2024/11/toolbar.html" target="_blank"><p><time datetime="2024-11-22">November 22, 2024</time>Windows Cannot Toolbar</p></a>
+					<a href="2024/11/gaming2024.html" target="_blank"><p><time datetime="2024-11-21">November 21, 2024</time>YouTube Gaming Recap 2024</p></a>
+					<a href="2024/11/lifestream.html" target="_blank"><p><time datetime="2024-11-20">November 20, 2024</time>Lifestreams - Not a Desktop</p></a>
+					<a href="2024/11/freeway.html" target="_blank"><p><time datetime="2024-11-19">November 19, 2024</time>Freeways Feel Like Cheating</p></a>
+					<a href="2024/11/sstv.html" target="_blank" class="social">
+						<p><time datetime="2024-11-18">November 18, 2024</time>Funniest TikTok Filter Bypass Yet</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="2024/11/moveon.html" target="_blank"><p><time datetime="2024-11-17">November 17, 2024</time>And the World Keeps on Spinning</p></a>
+					<a href="2024/11/maximize.html" target="_blank"><p><time datetime="2024-11-16">November 16, 2024</time>Breaking up With Maximizing</p></a>
+					<a href="2024/11/shorturl.html" target="_blank"><p><time datetime="2024-11-15">November 15, 2024</time>Do We Still Need Shortened URLs?</p></a>
+					<a href="2024/11/carousel.html" target="_blank" class="design">
+						<p><time datetime="2024-11-14">November 14, 2024</time>The Material 3 Carousel is Too Much</p>
+						<div><span class="designBadge">#design</span></div>
+					</a>
+					<a href="2024/11/juku.html" target="_blank" class="social">
+						<p><time datetime="2024-11-13">November 13, 2024</time>The Time Microsoft Copy Pasted an Entire Social Media</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="2024/11/monitor.html" target="_blank"><p><time datetime="2024-11-12">November 12, 2024</time>Time for a Monitor</p></a>
+					<a href="2024/11/newsky.html" target="_blank" class="social">
+						<p><time datetime="2024-11-11">November 11, 2024</time>BlueSky is Pre-2018 Tumblr</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="2024/11/discord.html" target="_blank"><p><time datetime="2024-11-10">November 10, 2024</time>Going Back to the Official Discord Client</p></a>
+					<a href="2024/11/support.html" target="_blank" class="social">
+						<p><time datetime="2024-11-09">November 9, 2024</time>Customer Support Has No Support</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="2024/11/xiaohongshu.html" target="_blank"><p><time datetime="2024-11-08">November 8, 2024</time>小红书 📕</p></a>
+					<a href="2024/11/angry.html" target="_blank"><p><time datetime="2024-11-07">November 7, 2024</time>hahahaha</p></a>
+					<a href="2024/11/election.html" target="_blank"><p><time datetime="2024-11-06">November 6, 2024</time>Dynamic Island - The Evil Scoreboard</p></a>
+					<a href="2024/11/g207.html" target="_blank"><p><time datetime="2024-11-05">November 5, 2024</time>Friendship Ended With the Pilot G2-07 Gel Pen</p></a>
+					<a href="2024/11/gdocs.html" target="_blank"><p><time datetime="2024-11-04">November 4, 2024</time>This Isn't You, Google Docs</p></a>
+					<a href="2024/11/dstforever.html" target="_blank"><p><time datetime="2024-11-03">November 3, 2024</time>DST Forever</p></a>
+					<a href="2024/11/livingchanges.html" target="_blank" class="fav">
+						<p><time datetime="2024-11-02">November 2, 2024</time>Upcoming Changes to Living</p>
+						<div><span class="favBadge">#favorite</span></div>
+					</a>
+					<a href="2024/11/snaproad.html" target="_blank"><p><time datetime="2024-11-01">November 1, 2024</time>Stop Snapping to the Road</p></a>
 				</div>
-				<div class="box sec-t">
-					<h2 id="24">2024</h2>
+			</div>
+			<div class="box">
+				<h3 id="24m10">October</h3>
+				<div class="monthicles">
+					<a href="2024/10/searchgpt.html" target="_blank" class="ai">
+						<p><time datetime="2024-10-31">October 31, 2024</time>ChatGPT is Now a Search Engine</p>
+						<div><span class="aiBadge">#ai</span></div>
+					</a>
+					<a href="2024/10/nintendomusic.html" target="_blank"><p><time datetime="2024-10-30">October 30, 2024</time>Nintendo is Launching a Music App</p></a>
+					<a href="2024/10/peek.html" target="_blank"><p><time datetime="2024-10-29">October 29, 2024</time>Peeking Into Apps</p></a>
+					<a href="2024/10/luciddream.html" target="_blank"><p><time datetime="2024-10-28">October 28, 2024</time>Think I Had a Lucid Dream</p></a>
+					<a href="2024/10/sports.html" target="_blank"><p><time datetime="2024-10-27">October 27, 2024</time>I'm Not a Sports Guy... BUT</p></a>
+					<a href="2024/10/tiktoksearch.html" target="_blank" class="social">
+						<p><time datetime="2024-10-26">October 26, 2024</time>TikTok Search is Horny</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="2024/10/ssorules.html" target="_blank"><p><time datetime="2024-10-25">October 25, 2024</time>SSO is the Coolest Thing Ever</p></a>
+					<a href="2024/10/vivaldi7.html" target="_blank"><p><time datetime="2024-10-24">October 24, 2024</time>Vivaldi 7.0</p></a>
+					<a href="2024/10/streaks.html" target="_blank" class="social">
+						<p><time datetime="2024-10-23">October 23, 2024</time>You Unlocked a 3 Day Streak</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="2024/10/ootl.html" target="_blank"><p><time datetime="2024-10-22">October 22, 2024</time>Falling Out of the Loop</p></a>
+					<a href="2024/10/cameracontrol.html" target="_blank" class="design fav">
+						<p><time datetime="2024-10-21">October 21, 2024</time>Camera Control and 3D Touch</p>
+						<div><span class="designBadge">#design</span> <span class="favBadge">#favorite</span></div>
+					</a>
+					<a href="2024/10/using11ty.html" target="_blank" class="meta code">
+						<p><time datetime="2024-10-20">October 20, 2024</time>Using 11ty</p>
+						<div><span class="metaBadge">#meta</span> <span class="codeBadge">#code</span></div>
+					</a>
+					<a href="2024/10/notoemoji.html" target="_blank" class="design">
+						<p><time datetime="2024-10-19">October 19, 2024</time>Noto Color Emoji are Ugly</p>
+						<div><span class="designBadge">#design</span></div>
+					</a>
+					<a href="2024/10/drawingoverandover.html" target="_blank" class="rant">
+						<p><time datetime="2024-10-18">October 18, 2024</time>Drawing the Same Things Over and Over Again</p>
+						<div><span class="rantBadge">#rant</span></div>
+					</a>
+					<a href="2024/10/fortniteblackhole.html" target="_blank"><p><time datetime="2024-10-17">October 17, 2024</time>Fortnite Black Hole</p></a>
+					<a href="2024/10/twtalt.html" target="_blank" class="social">
+						<p><time datetime="2024-10-16">October 16, 2024</time>There Won't be a Twitter Killer</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="2024/10/somean.html" target="_blank" class="rant">
+						<p><time datetime="2024-10-15">October 15, 2024</time>i am so mean hahaha</p>
+						<div><span class="rantBadge">#rant</span></div>
+					</a>
+					<a href="2024/10/corporatetv.html" target="_blank"><p><time datetime="2024-10-14">October 14, 2024</time>Corporate Television is Taking Over</p></a>
+					<a href="2024/10/captions.html" target="_blank" class="fav">
+						<p><time datetime="2024-10-13">October 13, 2024</time>Bring Back Good Captioning, and Make it Closed</p>
+						<div><span class="favBadge">#favorite</span></div>
+					</a>
+					<a href="2024/10/lowpowermode.html" target="_blank"><p><time datetime="2024-10-12">October 12, 2024</time>Low Power Mode on iOS Doesn't Exist</p></a>
+					<a href="2024/10/rym3star.html" target="_blank"><p><time datetime="2024-10-11">October 11, 2024</time>Everything on RYM is Rated 3 Stars</p></a>
+					<a href="2024/10/iadown.html" target="_blank"><p><time datetime="2024-10-10">October 10, 2024</time>Congrats, you Accomplished Nothing (Internet Archive DDoS)</p></a>
+					<a href="2024/10/professionalgit.html" target="_blank" class="meta code">
+						<p><time datetime="2024-10-09">October 9, 2024</time>Working With More Complex Git</p>
+						<div><span class="metaBadge">#meta</span> <span class="codeBadge">#code</span></div>
+					</a>
+					<a href="2024/10/jamrcs.html" target="_blank" class="rant">
+						<p><time datetime="2024-10-08">October 8, 2024</time>Things That Don't Work - RCS and Spotify Jam</p>
+						<div><span class="rantBadge">#rant</span></div>
+					</a>
+					<a href="2024/10/notion.html" target="_blank"><p><time datetime="2024-10-07">October 7, 2024</time>Why I Came Back to Notion After Obsidian</p></a>
+					<a href="2024/10/100daystooffload/" target="_blank" class="meta">
+						<p><time datetime="2024-10-06">October 6, 2024</time>#100DaysToOffload</p>
+						<div><span class="metaBadge">#meta</span></div>
+					</a>
 				</div>
-				<div class="box">
-					<h3 id="24m12">December</h3>
-					<ul>
-						<li class="favorite"><a href="2024/12/inbox.html" target="_blank">31. Updating my Gmail Filters</a> <span class="favBadge">#favorite</span></li>
-						<li><a href="2024/12/shopping.html" target="_blank">30. How do People Order Things Online</a></li>
-						<li class="meta"><a href="2024/12/1year.html" target="_blank">30. 1 Year of wiggle.monster!</a> <span class="metaBadge">#meta</span></li>
-						<li><a href="2024/12/oldside.html" target="_blank">29. Its Still 2009, Just Go Outside</a></li>
-						<li class="social"><a href="2024/12/blowup.html" target="_blank">28. Blowing Up on TikTok was Hell</a> <span class="socialBadge">#social</span></li>
-						<li class="design"><a href="2024/12/shapes.html" target="_blank">27. Lost Shapes of Apple's Apps</a> <span class="designBadge">#design</span></li>
-						<li><a href="2024/12/fears.html" target="_blank">26. When I was Scared of Water and CAPTCHA</a></li>
-						<li class="meta"><a href="2024/12/colormytree.html" target="_blank">25. 🎄 Color my Tree Replies</a> <span class="metaBadge">#meta</span></li>
-						<li><a href="2024/12/boring.html" target="_blank">24. Is the Internet Boring</a></li>
-						<li><a href="2024/12/cookies.html" target="_blank">23. Making Cookies Isn't Fun</a></li>
-						<li><a href="2024/12/lowstorage.html" target="_blank">22. Low Storage Will Be the Death of You</a></li>
-						<li class="design"><a href="2024/12/using.html" target="_blank">21. People Will be Using These Interfaces</a> <span class="designBadge">#design</span></li>
-						<li class="rant"><a href="2024/12/consistency.html" target="_blank">20. Consistency is Key. Don't Drive Me Insane</a> <span class="rantBadge">#rant</span></li>
-						<li><a href="2024/12/radio.html" target="_blank">19. DRM on the Radio</a></li>
-						<li class="social"><a href="2024/12/lemon8.html" target="_blank">18. Lemon8 is a app that exists</a> <span class="socialBadge">#social</span></li>
-						<li><a href="2024/12/mirror.html" target="_blank">17. New Mirror, New Life (not really)</a></li>
-						<li><a href="2024/12/junctionview.html" target="_blank">16. Bring Back Junction View</a></li>
-						<li><a href="2024/12/ogfortnite.html" target="_blank">15. Fortnite OG (Again) is Actually Boring</a></li>
-						<li class="ai social"><a href="2024/12/grok.html" target="_blank">14. Grok Tuah! Prompt on That Thang!</a> <span class="aiBadge">#ai</span> <span class="socialBadge">#social</span></li>
-						<li class="rant"><a href="2024/12/woeisme.html" target="_blank">13. happy for you, but i hope you break up</a> <span class="rantBadge">#rant</span></li>
-						<li><a href="2024/12/crash.html" target="_blank">12. Drive Into a Lamppost or Something Solid</a></li>
-						<li class="meta"><a href="2024/12/trolls.html" target="_blank">11. I... I've Officially Made It 🥹</a> <span class="metaBadge">#meta</span></li>
-						<li class="rant"><a href="2024/12/list.html" target="_blank">10. Not Making a List</a> <span class="rantBadge">#rant</span></li>
-						<li class="rant"><a href="2024/12/studio.html" target="_blank">9. DO NOT Take 3 Studio Classes at Once</a> <span class="rantBadge">#rant</span></li>
-						<li><a href="2024/12/magicmouse.html" target="_blank">8. Using a Magic Mouse on Windows</a></li>
-						<li class="rant"><a href="2024/12/blackboard.html" target="_blank">7. Screw Discussion Posts</a> <span class="rantBadge">#rant</span></li>
-						<li class="rant"><a href="2024/12/gifts.html" target="_blank">6. Giving Gifts is Better Than Getting Gifts</a> <span class="rantBadge">#rant</span></li>
-						<li><a href="2024/12/sound.html" target="_blank">5. 🔊 to 🔇</a></li>
-						<li><a href="2024/12/wrapped.html" target="_blank">4. Wrapped 2024 was Bad, Which is Good</a> <span class="favBadge">#favorite</span></li>
-						<li class="design"><a href="2024/12/helvetica.html" target="_blank">3. Helvetica Just Wins</a> <span class="designBadge">#design</span></li>
-						<li class="social"><a href="2024/12/snapchat.html" target="_blank">2. Snapchat is Like Email</a> <span class="socialBadge">#social</span></li>
-						<li><a href="2024/12/firetv.html" target="_blank">1. Using a Fire TV Sucks</a></li>
-					</ul>
+			</div>
+			<div class="box">
+				<h3 id="24m9">September</h3>
+				<div class="monthicles">
+					<a href="2024/9/xtv.html" target="_blank" class="social fav">
+						<p><time datetime="2024-09-05">September 5, 2024</time>Twitter's Terrible New TV App (X TV)</p>
+						<div><span class="socialBadge">#social</span> <span class="favBadge">#favorite</span></div>
+					</a>
 				</div>
-				<div class="box">
-					<h3 id="24m11">November</h3>
-					<ul>
-						<li><a href="2024/11/markt.html" target="_blank">30. This Little Piggy Went to Markt</a></li>
-						<li><a href="2024/11/winter.html" target="_blank">29. happy fun snow driving time</a></li>
-						<li><a href="2024/11/thanksgiving.html" target="_blank">28. Not the Biggest Fan of Thanksgiving</a></li>
-						<li><a href="2024/11/bowling.html" target="_blank">27. Unresearched Rant on if Bowling is Too Family Friendly</a></li>
-						<li><a href="2024/11/experiment.html" target="_blank">26. Online Social Experiments Don't Work Anymore</a></li>
-						<li class="meta"><a href="2024/11/reflection.html" target="_blank">25. Day 50 - A Reflection</a> <span class="metaBadge">#meta</span></li>
-						<li><a href="2024/11/wordgame.html" target="_blank">24. New York Times Word Game Review</a></li>
-						<li class="social"><a href="2024/11/twtint.html" target="_blank">23. You Could Tweet From Anything</a> <span class="socialBadge">#social</span></li>
-						<li><a href="2024/11/toolbar.html" target="_blank">22. Windows Cannot Toolbar</a></li>
-						<li><a href="2024/11/gaming2024.html" target="_blank">21. YouTube Gaming Recap 2024</a></li>
-						<li><a href="2024/11/lifestream.html" target="_blank">20. Lifestreams - Not a Desktop</a></li>
-						<li><a href="2024/11/freeway.html" target="_blank">19. Freeways Feel Like Cheating</a></li>
-						<li class="social"><a href="2024/11/sstv.html" target="_blank">18. Funniest TikTok Filter Bypass Yet</a> <span class="socialBadge">#social</span></li>
-						<li><a href="2024/11/moveon.html" target="_blank">17. And the World Keeps on Spinning</a></li>
-						<li><a href="2024/11/maximize.html" target="_blank">16. Breaking up With Maximizing</a></li>
-						<li><a href="2024/11/shorturl.html" target="_blank">15. Do We Still Need Shortened URLs?</a></li>
-						<li class="design"><a href="2024/11/carousel.html" target="_blank">14. The Material 3 Carousel is Too Much</a> <span class="designBadge">#design</span></li>
-						<li class="social"><a href="2024/11/juku.html" target="_blank">13. The Time Microsoft Copy Pasted an Entire Social Media</a> <span class="socialBadge">#social</span></li>
-						<li><a href="2024/11/monitor.html" target="_blank">12. Time for a Monitor</a></li>
-						<li class="social"><a href="2024/11/newsky.html" target="_blank">11. BlueSky is Pre-2018 Tumblr</a> <span class="socialBadge">#social</span></li>
-						<li><a href="2024/11/discord.html" target="_blank">10. Going Back to the Official Discord Client</a></li>
-						<li class="social"><a href="2024/11/support.html" target="_blank">9. Customer Support Has No Support</a> <span class="socialBadge">#social</span></li>
-						<li><a href="2024/11/xiaohongshu.html" target="_blank">8. 小红书 📕</a></li>
-						<li><a href="2024/11/angry.html" target="_blank">7. hahahaha</a></li>
-						<li><a href="2024/11/election.html" target="_blank">6. Dynamic Island - The Evil Scoreboard</a></li>
-						<li><a href="2024/11/g207.html" target="_blank">5. Friendship Ended With the Pilot G2-07 Gel Pen</a></li>
-						<li><a href="2024/11/gdocs.html" target="_blank">4. This Isn't You, Google Docs</a></li>
-						<li><a href="2024/11/dstforever.html" target="_blank">3. DST Forever</a></li>
-						<li class="fav"><a href="2024/11/livingchanges.html" target="_blank">2. Upcoming Changes to Living</a> <span class="favBadge">#favorite</span></li>
-						<li><a href="2024/11/snaproad.html" target="_blank">1. Stop Snapping to the Road</a></li>
-					</ul>
+			</div>
+			<div class="box">
+				<h3 id="24m8">August</h3>
+				<div class="monthicles">
+					<a href="2024/8/sdf.html" target="_blank" class="fav">
+						<p><time datetime="2024-08-30">August 30, 2024</time>Using the SDF UNIX System</p>
+						<div><span class="favBadge">#favorite</span></div>
+					</a>
+					<a href="2024/8/soms.html" target="_blank" class="meta">
+						<p><time datetime="2024-08-21">August 21, 2024</time>State of my Site - August 2024</p>
+						<div><span class="metaBadge">#meta</span></div>
+					</a>
+					<a href="2024/8/newtwitter.html" target="_blank" class="social">
+						<p><time datetime="2024-08-16">August 16, 2024</time>If We Were the CEO of Twitter</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
 				</div>
-				<div class="box">
-					<h3 id="24m10">October</h3>
-					<ul>
-						<li class="ai"><a href="2024/10/searchgpt.html" target="_blank">31. ChatGPT is Now a Search Engine</a> <span class="aiBadge">#ai</span></li>
-						<li><a href="2024/10/nintendomusic.html" target="_blank">30. Nintendo is Launching a Music App</a></li>
-						<li><a href="2024/10/peek.html" target="_blank">29. Peeking Into Apps</a></li>
-						<li><a href="2024/10/luciddream.html" target="_blank">28. Think I Had a Lucid Dream</a></li>
-						<li><a href="2024/10/sports.html" target="_blank">27. I'm Not a Sports Guy... BUT</a></li>
-						<li class="social"><a href="2024/10/tiktoksearch.html" target="_blank">26. TikTok Search is Horny</a> <span class="socialBadge">#social</span></li>
-						<li><a href="2024/10/ssorules.html" target="_blank">25. SSO is the Coolest Thing Ever</a></li>
-						<li><a href="2024/10/vivaldi7.html" target="_blank">24. Vivaldi 7.0</a></li>
-						<li class="social"><a href="2024/10/streaks.html" target="_blank">23. You Unlocked a 3 Day Streak</a> <span class="socialBadge">#social</span></li>
-						<li><a href="2024/10/ootl.html" target="_blank">22. Falling Out of the Loop</a></li>
-						<li class="design"><a href="2024/10/cameracontrol.html" target="_blank">21. Camera Control and 3D Touch</a> <span class="designBadge">#design</span> <span class="favBadge">#favorite</span></li>
-						<li class="meta code"><a href="2024/10/using11ty.html" target="_blank">20. Using 11ty</a> <span class="metaBadge">#meta</span> <span class="codeBadge">#code</span></li>
-						<li class="design"><a href="2024/10/notoemoji.html" target="_blank">19. Noto Color Emoji are Ugly</a> <span class="designBadge">#design</span></li>
-						<li class="rant"><a href="2024/10/drawingoverandover.html" target="_blank">18. Drawing the Same Things Over and Over Again</a> <span class="rantBadge">#rant</span></li>
-						<li><a href="2024/10/fortniteblackhole.html" target="_blank">17. Fortnite Black Hole</a></li>
-						<li class="social"><a href="2024/10/twtalt.html" target="_blank">16. There Won't be a Twitter Killer</a> <span class="socialBadge">#social</span></li>
-						<li class="rant"><a href="2024/10/somean.html" target="_blank">15. i am so mean hahaha</a> <span class="rantBadge">#rant</span></li>
-						<li><a href="2024/10/corporatetv.html" target="_blank">14. Corporate Television is Taking Over</a></li>
-						<li class="fav"><a href="2024/10/captions.html" target="_blank">13. Bring Back Good Captioning, and Make it Closed</a> <span class="favBadge">#favorite</span></li>
-						<li><a href="2024/10/lowpowermode.html" target="_blank">12. Low Power Mode on iOS Doesn't Exist</a></li>
-						<li><a href="2024/10/rym3star.html" target="_blank">11. Everything on RYM is Rated 3 Stars</a></li>
-						<li><a href="2024/10/iadown.html" target="_blank">10. Congrats, you Accomplished Nothing (Internet Archive DDoS)</a></li>
-						<li class="meta code"><a href="2024/10/professionalgit.html" target="_blank">9. Working With More Complex Git</a> <span class="metaBadge">#meta</span> <span class="codeBadge">#code</span></li>
-						<li class="rant"><a href="2024/10/jamrcs.html" target="_blank">8. Things That Don't Work - RCS and Spotify Jam</a> <span class="rantBadge">#rant</span></li>
-						<li><a href="2024/10/notion.html" target="_blank">7. Why I Came Back to Notion After Obsidian</a></li>
-						<li class="meta"><a href="2024/10/100daystooffload/" target="_blank">6. #100DaysToOffload</a> <span class="metaBadge">#meta</span></li>
-					</ul>
+			</div>
+			<div class="box">
+				<h3 id="24m7">July</h3>
+				<div class="monthicles">
+					<a href="2024/7/twitterbingo.html" target="_blank" class="social">
+						<p><time datetime="2024-07-25">July 25, 2024</time>TWiTTER BiNGO</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
 				</div>
-				<div class="box">
-					<h3 id="24m9">September</h3>
-					<ul>
-						<li class="social fav"><a href="2024/9/xtv.html" target="_blank">5. Twitter's Terrible New TV App (X TV)</a> <span class="socialBadge">#social</span> <span class="favBadge">#favorite</span></li>
-					</ul>
+			</div>
+			<div class="box">
+				<h3 id="24m6">June</h3>
+				<div class="monthicles">
+					<a href="2024/6/ios18.html" target="_blank" class="rant fav">
+						<p><time datetime="2024-06-13">June 13, 2024</time>iOS 18 is stupid</p>
+						<div><span class="rantBadge">#rant</span> <span class="designBadge">#design</span> <span class="favBadge">#favorite</span></div>
+					</a>
+					<a href="2024/6/suspended.html" target="_blank" class="social">
+						<p><time datetime="2024-06-08">June 8, 2024</time>Your account is suspended or locked</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
 				</div>
-				<div class="box">
-					<h3 id="24m8">August</h3>
-					<ul>
-						<li class="fav"><a href="2024/8/sdf.html" target="_blank">30. Using the SDF UNIX System</a> <span class="favBadge">#favorite</span></li>
-						<li class="meta"><a href="2024/8/soms.html" target="_blank">21. State of my Site - August 2024</a> <span class="metaBadge">#meta</span></li>
-						<li class="social"><a href="2024/8/newtwitter.html" target="_blank">16. If We Were the CEO of Twitter</a> <span class="socialBadge">#social</span></li>
-					</ul>
+			</div>
+			<div class="box">
+				<h3 id="24m5">May</h3>
+				<div class="monthicles">
+					<a href="2024/5/arc.html" target="_blank"><p><time datetime="2024-05-21">May 21, 2024</time>using arc for windows (as a non memoji pfp)</p></a>
+					<a href="2024/5/usingai.html" target="_blank" class="ai">
+						<p><time datetime="2024-05-02">May 2, 2024</time>what will we actually use ai for?</p>
+						<div><span class="aiBadge">#ai</span></div>
+					</a>
 				</div>
-				<div class="box">
-					<h3 id="24m7">July</h3>
-					<ul>
-						<li class="social"><a href="2024/7/twitterbingo.html" target="_blank">25. TWiTTER BiNGO</a> <span class="socialBadge">#social</span></li>
-					</ul>
+			</div>
+			<div class="box">
+				<h3 id="24m4">April</h3>
+				<div class="monthicles">
+					<a href="2024/4/metasearch.html" target="_blank" class="ai social rant">
+						<p><time datetime="2024-04-24">April 24, 2024</time>Meta AI: a case study on how NOT to introduce a gimmick</p>
+						<div><span class="socialBadge">#social</span> <span class="rantBadge">#rant</span></div>
+					</a>
+					<a href="2024/4/infotainment.html" target="_blank"><p><time datetime="2024-04-18">April 18, 2024</time>replacing my infotainment system</p></a>
+					<a href="2024/4/aprilfools.html" target="_blank" class="social">
+						<p><time datetime="2024-04-01">April 1, 2024</time>april fools (online)</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
 				</div>
-				<div class="box">
-					<h3 id="24m6">June</h3>
-					<ul>
-						<li class="rant fav"><a href="2024/6/ios18.html" target="_blank">13. iOS 18 is stupid</a> <span class="rantBadge">#rant</span> <span class="designBadge">#design</span> <span class="favBadge">#favorite</span></li>
-						<li class="social"><a href="2024/6/suspended.html" target="_blank">8. Your account is suspended or locked</a> <span class="socialBadge">#social</span></li>
-					</ul>
+			</div>
+			<div class="box">
+				<h3 id="24m2">February</h3>
+				<div class="monthicles">
+					<a href="2024/2/x.html" target="_blank" class="rant social">
+						<p><time datetime="2024-02-29">February 29, 2024</time>i updated Twitter to X</p>
+						<div><span class="rantBadge">#rant</span> <span class="socialBadge">#social</span></div>
+					</a>
+					<a href="2024/2/neko.html" target="_blank"><p><time datetime="2024-02-25">February 25, 2024</time>NekoWeb</p></a>
+					<a href="2024/2/insta.html" target="_blank" class="social">
+						<p><time datetime="2024-02-15">February 15, 2024</time>why instagram keeps coming back</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="2024/2/headset.html" target="_blank"><p><time datetime="2024-02-06">February 6, 2024</time>the apple headset will die in a week</p></a>
+					<a href="2024/2/git.html" target="_blank" class="meta code">
+						<p><time datetime="2024-02-02">February 2, 2024</time>trying to use Git on my site</p>
+						<div><span class="metaBadge">#meta</span> <span class="codeBadge">#code</span></div>
+					</a>
 				</div>
-				<div class="box">
-					<h3 id="24m5">May</h3>
-					<ul>
-						<li><a href="2024/5/arc.html" target="_blank">21. using arc for windows (as a non memoji pfp)</a></li>
-						<li class="ai"><a href="2024/5/usingai.html" target="_blank">2. what will we actually use ai for?</a> <span class="aiBadge">#ai</span></li>
-					</ul>
+			</div>
+			<div class="box sec-b" style="margin-bottom: 10px;">
+				<h3 id="24m1">January</h3>
+				<div class="monthicles">
+					<a href="2024/1/headempty.html" target="_blank" class="rant">
+						<p><time datetime="2024-01-31">January 31, 2024</time>Click to add text</p>
+						<div><span class="rantBadge">#rant</span></div>
+					</a>
+					<a href="2024/1/start.html" target="_blank" class="design">
+						<p><time datetime="2024-01-28">January 28, 2024</time>lock the taskbar</p>
+						<div><span class="designBadge">#design</span></div>
+					</a>
+					<a href="2024/1/spotify.html" target="_blank" class="rant fav">
+						<p><time datetime="2024-01-26">January 26, 2024</time>Spotify Sucks!!</p>
+						<div><span class="rantBadge">#rant</span> <span class="favBadge">#favorite</span></div>
+					</a>
+					<a href="2024/1/follow.html" target="_blank" class="social">
+						<p><time datetime="2024-01-25">January 25, 2024</time>i DONT WANT TO BE YOUR FRiEND</p>
+						<div><span class="socialBadge">#social</span></div>
+					</a>
+					<a href="2024/1/bookmarks.html" target="_blank"><p><time datetime="2024-01-23">January 23, 2024</time>i need BOOKMARKS Goku</p></a>
+					<a href="2024/1/np.html" target="_blank" class="design">
+						<p><time datetime="2024-01-16">January 16, 2024</time>comparing mobile now playing widgets</p>
+						<div><span class="designBadge">#design</span></div>
+					</a>
 				</div>
-				<div class="box">
-					<h3 id="24m4">April</h3>
-					<ul>
-						<li class="ai social rant"><a href="2024/4/metasearch.html" target="_blank">24. Meta AI: a case study on how NOT to introduce a gimmick</a> <span class="aiBadge">#ai</span> <span class="socialBadge">#social</span> <span class="rantBadge">#rant</span></li>
-						<li><a href="2024/4/infotainment.html" target="_blank">18. replacing my infotainment system</a></li>
-						<li class="social"><a href="2024/4/aprilfools.html" target="_blank">1. april fools (online)</a> <span class="socialBadge">#social</span></li>
-					</ul>
-				</div>
-				<div class="box">
-					<h3 id="24m2">February</h3>
-					<ul>
-						<li class="rant social"><a target="_blank" href="2024/2/x.html">29. i updated Twitter to X</a> <span class="rantBadge">#rant</span> <span class="socialBadge">#social</span></li>
-						<li><a target="_blank" href="2024/2/neko.html">25. NekoWeb</a></li>
-						<li class="social"><a target="_blank" href="2024/2/insta.html">15. why instagram keeps coming back</a> <span class="socialBadge">#social</span></li>
-						<li><a target="_blank" href="2024/2/headset.html">6. the apple headset will die in a week</a></li>
-						<li class="meta code"><a target="_blank" href="2024/2/git.html">2. trying to use Git on my site</a> <span class="metaBadge">#meta</span> <span class="codeBadge">#code</span></li>
-					</ul>
-				</div>
-				<div class="box sec-b" style="margin-bottom: 10px;">
-					<h3 id="24m1">January</h3>
-					<ul>
-						<li class="rant"><a target="_blank" href="2024/1/headempty.html">31. Click to add text</a> <span class="rantBadge">#rant</span></li>
-						<li class="design"><a target="_blank" href="2024/1/start.html">28. lock the taskbar</a> <span class="designBadge">#design</span></li>
-						<li class="rant fav"><a target="_blank" href="2024/1/spotify.html">26. Spotify Sucks!!</a> <span class="rantBadge">#rant</span> <span class="favBadge">#favorite</span></li>
-						<li class="social"><a target="_blank" href="2024/1/follow.html">25. i DONT WANT TO BE YOUR FRiEND</a> <span class="socialBadge">#social</span></li>
-						<li><a target="_blank" href="2024/1/bookmarks.html">23. i need BOOKMARKS Goku</a></li>
-						<li class="design"><a target="_blank" href="2024/1/np.html">16. comparing mobile now playing widgets</a> <span class="designBadge">#design</span></li>
-					</ul>
-				</div>
-				<div class="box sec-t">
-					<h2 id="23">2023</h2>
-				</div>
-				<div class="box sec-b" style="margin-bottom: 10px;">
-					<h3 id="23m10">October</h3>
-					<ul>
-						<li><a href="2023/october/todoist.html" target="_blank">4. Todoist vs. TickTick (Free Tier Review)</a></li>
-					</ul>
+			</div>
+			<div class="box sec-t">
+				<h2 id="23">2023</h2>
+			</div>
+			<div class="box sec-b" style="margin-bottom: 10px;">
+				<h3 id="23m10">October</h3>
+				<div class="monthicles">
+					<a href="2023/october/todoist.html" target="_blank"><p><time datetime="2023-10-04">October 4, 2023</time>Todoist vs. TickTick (Free Tier Review)</p></a>
 				</div>
 			</div>
 			<div class="box page-bottom" style="border-radius: 5px 5px 10px 10px; margin-bottom: 0;">
 				<a target="_blank" href="hell.html">abandomed city</a>
 			</div>
 		</main>
-		<script>
-			function listView() {
-				document.getElementById('link-list').classList.replace('grid', 'list');
-				document.getElementById('en-list').classList.add('active');
-				document.getElementById('en-grid').classList.remove('active');
-			}
-			function gridView() {
-				document.getElementById('link-list').classList.replace('list', 'grid');
-				document.getElementById('en-list').classList.remove('active');
-				document.getElementById('en-grid').classList.add('active');
-			}
-		</script>
 	</body>
 </html>
