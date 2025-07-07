@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>WiiCHiCKEN Neocities Blog</title>
+		<title>BLOG</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/x-icon" href="favicon.png">
 		<link rel="alternate" type="application/rss+xml" href="feed.xml" title="RSS">
@@ -52,8 +52,10 @@
 				align-items: center;
 				padding: 5px;
 				margin-bottom: 0;
-				border: 1px solid #ffd6fe;
+				border: 1px solid var(--border);
 				background-color: #261329cc;
+				box-shadow: 2px 2px 0 0 var(--border);
+				text-decoration: none !important;
 			}
 			.monthicles a p {
 				font-size: 20px;
@@ -74,7 +76,6 @@
 				color: #d7bfd5;
 			}
 			.monthicles a::after {display: none;}
-			header {box-shadow: 0 0 150px 20px #f7adfd;}
 			a button {
 				background-color: #6a2e73;
 				color: #ffd6fe;
@@ -189,6 +190,7 @@
 							<li><a href="#25m4">April</a></li>
 							<li><a href="#25m5">May</a></li>
 							<li><a href="#25m6">June</a></li>
+							<li><a href="#25m7">July</a></li>
 						</ul>
 					</details>
 					<details style="margin-left: 10px;">
@@ -219,8 +221,21 @@
 				<h2 id="25">2025</h2>
 			</div>
 			<div class="box">
+				<h3 id="25m7">July</h3>
+				<div class="monthicles">
+					<a href="25/7/makemoney.html" target="_blank" class="rant">
+						<p><time datetime="2025-07-01">July 1, 2025</time>not everything should be about making money</p>
+						<div><span class="rantBadge">#rant</span></div>
+					</a>
+				</div>
+			</div>
+			<div class="box">
 				<h3 id="25m6">June</h3>
 				<div class="monthicles">
+					<a href="25/6/newblog.html" target="_blank" class="meta">
+						<p><time datetime="2025-6-29">June 29, 2025</time>My New Blog Index</p>
+						<div><span class="metaBadge">#meta</span></div>
+					</a>
 					<a href="25/6/sweat3.html" target="_blank"><p><time datetime="2025-06-24">June 24, 2025</time>Either Splatoon 3 is Too Competitive, or I'm a Loser</p></a>
 					<a href="25/6/ios26.html" target="_blank" class="design rant">
 						<p><time datetime="2025-06-09">June 9, 2025</time>This is What Technology Will Look Like in 2030 (iOS 26)</p>
