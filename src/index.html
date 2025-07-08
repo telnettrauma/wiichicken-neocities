@@ -587,6 +587,16 @@
 			.contrastVisible {display: block !important;}
 			.sidehead p {color: white !important;}
 		}
+		#splatfest {
+			background: linear-gradient(90deg,#534600 0%, #004d61 50%, #653661 100%);
+			--border: #EFCF1B;
+		}
+		#splatfest p {color: #eee2bc;}
+		#splatfest .headText {
+			color: #f8e288;
+			text-align: center;
+		}
+		#splatfest::before {background: linear-gradient(90deg,#efcf1b 0%, #00bbe7 50%, #eb47eb 100%);}
 	</style>
 	{% include "partials/interests/websites/sotfp/style.njk" %}
 	<noscript>
@@ -701,8 +711,9 @@
 				</ul>
 				<p>please note that just because a feature is enabled doesn't mean the entire site is compatible with it. these features are still a work in progress</p>
 			</div>
-			<div class="box sec-full" style="text-align: center; background-color: #534600cc; color: #f8e288; --border: #EFCF1B;">
+			<div class="box sec-full" id="splatfest">
 				<p class="headText">Go team Land!</p>
+				<p>Now that I <strong>finally</strong> have a Nintendo Switch Online subscription, I can participate in my first splatfest since NSO went paid! I'm really excited and <strong>really</strong> hope I don't miss it.</p>
 			</div>
 			<div class="row" id="infamous" style="display: grid; gap: 10px;">
 				<div class="box mobileHidden noscript-hidden" style="grid-column: 2/3; grid-row: 1; margin-bottom: 0; padding: 0; --border: #E6E1E5; background-color: #1C1B1Fcc;">
