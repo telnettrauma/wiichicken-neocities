@@ -68,14 +68,27 @@ iframe {
 	justify-content: flex-start;
 	padding-right: unset;
 }
-#topLinks a img {
+#topLinks {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+#topLinks a {
 	width: 24px;
 	height: 24px;
-	margin: 5px;
 	image-rendering: pixelated;
+	display: block;
 	opacity: 0.75;
+	background-size: cover !important;
 }
-#topLinks a img:hover {opacity: 1;}
+#topLinks a::after {content: unset;}
+#topLinks a:hover {opacity: 1;}
+#topLinks a:first-child {background: url(/resources/nav/navicons.png) 0 0;}
+#topLinks a:nth-child(2) {background: url(/resources/nav/navicons.png) -24px 0;}
+#topLinks a:nth-child(3) {background: url(/resources/nav/navicons.png) -48px 0;}
+#topLinks a:nth-child(4) {background: url(/resources/nav/navicons.png) -72px 0;}
+#topLinks a:nth-child(5) {background: url(/resources/nav/navicons.png) -96px 0;}
+#topLinks a:nth-child(6) {background: url(/resources/nav/navicons.png) -120px 0;}
 
 /* Gist style */
 
