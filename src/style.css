@@ -485,7 +485,7 @@ button {
 	.heading::after {background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-1) 100%);}
 	#poopBlock iframe {height: 60px;}
 	.footer p {text-align: left;}
-
+}
 /* prefers reduced transparency */
 @media (prefers-reduced-transparency: reduce) {
 	main {
@@ -497,12 +497,8 @@ button {
 }
 /* increased contrast */
 @media (prefers-contrast: more) {
-	.box {
-		color: white !important;
-	}
-	.topLinks a {
-		color: white;
-	}
+	.box {color: white !important;}
+	.topLinks a {color: white;}
 	.topLinks a:hover {
 		transition-duration: 0;
 		font-weight: bold;

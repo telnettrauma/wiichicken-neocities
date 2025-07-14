@@ -36,30 +36,37 @@ nav {image-rendering: pixelated;}
 	text-decoration: none;
 	width: 50px;
 }
-.topLinks a img {
+.topLinks a .nav-icon {
 	width: 24px;
+	height: 24px;
 	margin-bottom: 4px;
+	background-size: cover !important;
 }
 .topLinks a:nth-child(2) {
 	color: #c5e7ff;
 	--background: blue;
 }
+.topLinks a:nth-child(2) .nav-icon {background: url(/resources/nav/navicons.png) 0 0;}
 .topLinks a:nth-child(3) {
 	color: #dce1ff;
 	--background: #0059ff;
 }
+.topLinks a:nth-child(3) .nav-icon {background: url(/resources/nav/navicons.png) -24px 0;}
 .topLinks a:nth-child(4) {
 	color: #ffd6fe;
 	--background: #dd00ff;
 }
+.topLinks a:nth-child(4) .nav-icon {background: url(/resources/nav/navicons.png) -48px 0;}
 .topLinks a:nth-child(5) {
 	color: #ffdadb;
 	--background: #ff0055;
 }
+.topLinks a:nth-child(5) .nav-icon {background: url(/resources/nav/navicons.png) -72px 0;}
 .topLinks a:nth-child(6) {
 	color: #ffdad6;
 	--background: red;
 }
+.topLinks a:nth-child(6) .nav-icon {background: url(/resources/nav/navicons.png) -96px 0;}
 #fakeLogo {
 	display: flex;
 	flex-direction: row;
