@@ -39,23 +39,21 @@
 				height: 62px;
 			}
 			.grid table img:first-child, .list table img:nth-child(2) {display: block !important;}
-			.grid table img:nth-child(2), .list table img:first-child, .real-grid table img:nth-child(2) {display: none !important;}
+			.grid table img:nth-child(2), .list table img:first-child, .real-grid table img:nth-child(2), .real-grid td:nth-child(2) {display: none !important;}
 			.real-grid table {
 				background-color: #001f27bd;
 			}
 			.real-grid table tbody {
 				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
 				gap: 5px;
 			}
 			.real-grid td:first-child {
 				display: block;
 				border: none;
 			}
-			.real-grid td img {
-				width: 88px;
-				height: 31px;
-			}
-			.real-grid td:nth-child(2) {display: none;}
+			.real-grid tr {width: unset;}
 			/* additional styling for sotfp */
 			#sotfp {border-color: #F6BE14;}
 			#sotfp a {background-color: unset;}
@@ -153,41 +151,28 @@
 					<td><a target="_blank" href="https://melonking.net"><img loading="lazy" alt="Visit Melonking.Net!" src="https://melonking.net/images/badges/MELON-BADGE-2.GIF" style="image-rendering: pixelated"><img src="img/ficon/cities/melonking.png" loading="lazy"></a></td>
 					<td>likely one of the most important websites in all of neocities, at least if you're really into indieweb. runs the melonland project</td>
 				</tr>
+				<tr>
+					<td><a href="https://neonriser.neocities.org" target="_blank"><img src="img/button/more/neonriser.png" loading="lazy"><img src="img/ficon/cities/neonriser.png" loading="lazy"></a></td>
+					<td>a dream journal and more with a really cool design</td>
+				</tr>
+				<tr>
+					<td><a href="https://saddleblasters.neocities.org" target="_blank"><img src="img/button/saddle.png" loading="lazy"><img src="img/ficon/default.png" loading="lazy"></a></td>
+					<td>pieces of writing that i enjoy reading</td>
+				</tr>
+				<tr>
+					<td><a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif" loading="lazy"><img src="img/ficon/cities/sunnyshines.png" loading="lazy"></a></td>
+					<td>really cool artwork that for the most part only uses black, white, and red</td>
+				</tr>
 			</table>
 			<div class="box buttonhell">
-				<a target="_blank" href="https://momg.neocities.org/"><img loading="lazy" alt="Visit the Gif Gallery!" src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
-				<a href="https://neonriser.neocities.org" target="_blank"><img src="img/button/more/neonriser.png" loading="lazy"></a>
-				<a href="https://nerucom.neocities.org"><img loading="lazy" src="https://nerucom.neocities.org/images/neruconc/nerucom.gif"></a>
-				<a href="https://saddleblasters.neocities.org" target="_blank"><img src="img/button/saddle.png" loading="lazy"></a>
-				<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif" loading="lazy"></a>
 				<a href="https://the-simple-site.neocities.org" target="_blank"><img src="img/button/naybor/simple.gif" loading="lazy"></a>
 				<a href="https://volpeon.ink" target="_blank"><img src="img/button/naybor/volpeon.svg" loading="lazy" alt="volpeon"></a>
 			</div>
 			<div class="urls listhell">
 				<table>
 					<tr>
-						<td><img src="img/ficon/cities/momg.png" loading="lazy"></td>
-						<td><a href="https://momg.neocities.org" target="_blank">MoMG</a></td>
-					</tr>
-					<tr>
-						<td><img src="img/ficon/cities/neonriser.png" loading="lazy"></td>
-						<td><a href="https://neonriser.neocities.org" target="_blank">Neonriser</a></td>
-					</tr>
-					<tr>
-						<td><img src="img/ficon/cities/nerucom.gif" loading="lazy"></td>
-						<td><a href="https://nerucom.neocities.org" target="_blank">nerucom - elio's web hangout</a></td>
-					</tr>
-					<tr>
-						<td><img src="img/ficon/default.png" loading="lazy"></td>
-						<td><a href="https://saddleblasters.neocities.org" target="_blank">saddleblasters</a></td>
-					</tr>
-					<tr>
 						<td><img src="img/ficon/cities/simple.png" loading="lazy"></td>
 						<td><a href="https://the-simple-site.neocities.org" target="_blank">The Simple Site</a></td>
-					</tr>
-					<tr>
-						<td><img src="img/ficon/cities/sunnyshines.png" loading="lazy"></td>
-						<td><a href="https://sunnyshines.neocities.org" target="_blank">sunny's website</a></td>
 					</tr>
 					<tr>
 						<td><img src="img/ficon/default.png" loading="lazy"></td>
