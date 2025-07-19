@@ -30,16 +30,35 @@
 				flex-wrap: wrap;
 			}
 			.listhell table tr td:nth-child(2n) {width: 100%;}
-			.grid table img:first-child, .list table img:nth-child(2) {display: block;}
-			.grid table img:nth-child(2), .list table img:first-child {display: none;}
-			.list .buttonhell, .grid .listhell {display: none;}
-			/* additional styling for sotfp */
-			#sotfp {border-color: #F6BE14;}
-			#sotfp a {background-color: unset;}
-			.zoom table img {
+			.urls.grid table tr td:first-child img, .urls.real-grid table tr td:first-child img {
+				width: 88px;
+				height: 31px;
+			}
+			.urls.zoom table tr td:first-child img {
 				width: 176px;
 				height: 62px;
 			}
+			.grid table img:first-child, .list table img:nth-child(2) {display: block !important;}
+			.grid table img:nth-child(2), .list table img:first-child, .real-grid table img:nth-child(2) {display: none !important;}
+			.real-grid table {
+				background-color: #001f27bd;
+			}
+			.real-grid table tbody {
+				display: flex;
+				gap: 5px;
+			}
+			.real-grid td:first-child {
+				display: block;
+				border: none;
+			}
+			.real-grid td img {
+				width: 88px;
+				height: 31px;
+			}
+			.real-grid td:nth-child(2) {display: none;}
+			/* additional styling for sotfp */
+			#sotfp {border-color: #F6BE14;}
+			#sotfp a {background-color: unset;}
 		</style>
 		{% include "partials/interests/websites/sotfp/style.njk" %}
 	</head>
@@ -84,14 +103,14 @@
 			<h1>DiRECTORY</h1>
 		</div>
 		{% include "partials/interests/websites/sotfp/widget.njk" %}
-		<div id="butterball" class="grid">
+		<div id="butterball" class="grid urls">
 			<header>
 				<div class="box" style="width: auto;">
 					<h2>BUTTONS!</h2>
 				</div>
 			</header>
 			<div class="box noscript-bye">
-				<p>display as: <button id="set-list" onclick="document.getElementById('butterball').className = 'list';">favicon</button> <button id="set-grid" onclick="document.getElementById('butterball').className = 'grid';">buttons</button> <button id="zoom-grid" onclick="document.getElementById('butterball').className = 'grid zoom';">buttons (large)</button></p>
+				<p>display as: <button id="set-list" onclick="document.getElementById('butterball').className = 'list urls';">favicon</button> <button id="set-grid" onclick="document.getElementById('butterball').className = 'grid urls';">buttons</button> <button id="zoom-grid" onclick="document.getElementById('butterball').className = 'grid zoom urls';">buttons (large)</button> <button id="actual-grid" onclick="document.getElementById('butterball').className = 'real-grid urls';">grid</button></p>
 			</div>
 			<header>
 				<div class="box lessvis">
@@ -100,11 +119,10 @@
 			</header>
 			<table>
 				<tr>
-					<td>
+					<td><a href="https://afellowu.neocities.org/" target="_blank">
 						<img loading="lazy" src="img/button/mebi_county.gif">
 						<img src="img/ficon/cities/mebi.png" loading="lazy">
-					</td>
-					<td><a href="https://afellowu.neocities.org/" target="_blank">Mebi County</a></td>
+						</a></td>
 					<td>cute, charming website. i also love the robot character</td>
 				</tr>
 			</table>
