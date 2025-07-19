@@ -55,6 +55,30 @@
 				border: none;
 			}
 			.real-grid tr {width: unset;}
+			@media (prefers-reduced-motion = no-preference) {
+				.real-grid a:hover {
+					width: 88px;
+					height: 31px;
+				}
+				.real-grid table tbody tr td a:hover img {
+					position: relative;
+					width: 176px !important;
+					height: 62px !important;
+					pointer-events: none;
+					transform: translate(-30px, -10px);
+					filter: drop-shadow(0 0 15px black);
+				}
+				.real-grid.zoom a:hover {
+					width: 176px !important;
+					height: 62px !important;
+				}
+				.real-grid.zoom table tbody tr td a:hover img {
+					width: 352px !important;
+					height: 124px !important;
+					transform: translate(-80px, -30px);
+					filter: drop-shadow(0 0 15px black);
+				}
+			}
 			/* additional styling for sotfp */
 			#sotfp {border-color: #F6BE14;}
 			#sotfp a {background-color: unset;}
