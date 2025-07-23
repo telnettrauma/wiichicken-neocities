@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<atom:link href="https://wiggle.monster/more/archive/blog/feed.xml" rel="self" type="application/rss+xml"/>
+		<title>WiiCHiCKEN'S AWESOME BLOG</title>
+		<link>https://wiggle.monster</link>
+		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
+		<language>en-us</language>
+		<item>
+			<title>My Thoughts on Splatoon 3 Splatfest</title>
+			<pubDate>Sun, 13 Jul 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/7/splatfest.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/7/splatfest.html</guid>
+			<description>i did my first splatoon 3 splatfest!</description>
+		</item>
+		<item>
+			<title>No Motivation for Art Fight This Year</title>
+			<pubDate>Wed, 9 Jul 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/7/noartfight.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/7/noartfight.html</guid>
+			<description>I want to do Art Fight, but I just can't!</description>
+		</item>
+		<item>
+			<title>not everything should be about making money</title>
+			<pubDate>Tue, 1 Jul 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/7/makemoney.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/7/makemoney.html</guid>
+			<description>Make memories, not funny moment montages</description>
+		</item>
+		<item>
+			<title>My New Blog Index</title>
+			<pubDate>Sun, 29 Jun 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/6/newblog.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/6/newblog.html</guid>
+			<description>i have a brand new index page for my blog!</description>
+		</item>
+		<item>
+			<title>Either Splatoon 3 is Too Competitive, or I'm a Loser</title>
+			<pubDate>Tue, 24 Jun 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/6/sweat3.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/6/sweat3.html</guid>
+			<description>person who sucks at splatoon complains that they suck at the game</description>
+		</item>
+		<item>
+			<title>This is What Technology Will Look Like in 2030 (iOS 26)</title>
+			<pubDate>Mon, 9 Jun 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/6/ios26.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/6/ios26.html</guid>
+			<description>iOS 26 was announced, and I'm not a fan</description>
+		</item>
+		<item>
+			<title>I'm (Partially) a Linux User Now</title>
+			<pubDate>Sun, 8 Jun 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/6/ubuntu.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/6/ubuntu.html</guid>
+			<description>How a bug on Windows explorer brought me to Ubuntu, and why I'm not happy to be here</description>
+		</item>
+		<item>
+			<title>Cleaning Out my Camera Roll</title>
+			<pubDate>Fri, 6 Jun 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/6/cameraroll.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/6/cameraroll.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Summer Has Already Killed my Social Skills</title>
+			<pubDate>Sat, 30 May 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/5/socialskills.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/5/socialskills.html</guid>
+			<description>#rant</description>
+		</item>
+		<item>
+			<title>You (yes, you) Should Have a UPS</title>
+			<pubDate>Tue, 20 May 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/5/ups.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/5/ups.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>New Default Blog Theme</title>
+			<pubDate>Mon, 5 May 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/5/postlayout.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/5/postlayout.html</guid>
+			<description>#meta #design</description>
+		</item>
+		<item>
+			<title>I'm Done With Clear Lists</title>
+			<pubDate>Thu, 1 May 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/5/clearlists.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/5/clearlists.html</guid>
+			<description>#rant</description>
+		</item>
+		<item>
+			<title>How to Login to Google on Android 4</title>
+			<pubDate>Mon, 28 Apr 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/4/login-to-google-android-4.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/4/login-to-google-android-4.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>DPI Observations I've Made</title>
+			<pubDate>Thu, 24 Apr 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/4/dpi.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/4/dpi.html</guid>
+			<description>#meta #code</description>
+		</item>
+		<item>
+			<title>Someone Turned My Site into a Cryptocurrency</title>
+			<pubDate>Wed, 16 Apr 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/4/wiggleai.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/4/wiggleai.html</guid>
+			<description>#meta</description>
+		</item>
+		<item>
+			<title>Playboi Carti - I AM MUSIC Album Review</title>
+			<pubDate>Fri, 14 Mar 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/3/iammusic.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/3/iammusic.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>What Happened to my Sideloaded Apps When my Apple Developer Membership Expired</title>
+			<pubDate>Sat, 1 Feb 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/2/appledeveloper.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/appledeveloper.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>KBGY 9 News Sadly Isn't Real</title>
+			<pubDate>Thu, 30 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/1/kbgy9news.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/kbgy9news.html</guid>
+			<description>#social</description>
+		</item>
+		<item>
+			<title>TikTok IS Still Banned in the US</title>
+			<pubDate>Mon, 20 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/1/tiktokactuallybanned.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/tiktokactuallybanned.html</guid>
+			<description>#social</description>
+		</item>
+		<item>
+			<title>The TikTok Ban Was a Nothing Burger</title>
+			<pubDate>Sun, 19 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/1/tiktokbanned.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/tiktokbanned.html</guid>
+			<description>#social</description>
+		</item>
+		<item>
+			<title>Boxes and Boxes and Boxes</title>
+			<pubDate>Tue, 14 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/1/boxes.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/boxes.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Goodbye TikTok... Hello 小红书!</title>
+			<pubDate>Mon, 13 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/1/littleredbook.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/littleredbook.html</guid>
+			<description>#social</description>
+		</item>
+		<item>
+			<title>Twitter's Grok App Design Review</title>
+			<pubDate>Sun, 12 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/1/grokapp.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/grokapp.html</guid>
+			<description>#design #social #ai</description>
+		</item>
+		<item>
+			<title>raindrop.io for Bookmarks</title>
+			<pubDate>Sat, 11 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/1/raindropio.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/raindropio.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Don't Like Drawstrings? I Don't Like You</title>
+			<pubDate>Fri, 10 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/1/drawstring.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/drawstring.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Airbuds - A Poor Attempt at a Music SNS</title>
+			<pubDate>Thu, 9 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/1/airbuds.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/airbuds.html</guid>
+			<description>#social</description>
+		</item>
+		<item>
+			<title>Balatro has Been Installed</title>
+			<pubDate>Wed, 8 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/1/balatro.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/balatro.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>100 Goals for the New Year</title>
+			<pubDate>Tue, 7 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/1/100ways.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/100ways.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Don't Just Sit There!</title>
+			<pubDate>Mon, 6 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/1/walkbreak.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/walkbreak.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Alexa Plays Music and Sets Timers</title>
+			<pubDate>Sun, 5 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/1/alexa.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/alexa.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Really Stupid Neocities Bug I'm Experiencing</title>
+			<pubDate>Sat, 4 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/1/neocitiesbug.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/neocitiesbug.html</guid>
+			<description>#meta #code</description>
+		</item>
+		<item>
+			<title>Late to the GTA V Train</title>
+			<pubDate>Thu, 2 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/1/gtav.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/gtav.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>last.fm Playback 2024</title>
+			<pubDate>Wed, 1 Jan 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/25/1/playback.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/25/1/playback.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Updating my Gmail Filters</title>
+			<pubDate>Tue, 31 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/inbox.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/inbox.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>How do People Order Things Online</title>
+			<pubDate>Mon, 30 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/shopping.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/shopping.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>1 Year of wiggle.monster!</title>
+			<pubDate>Mon, 30 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/1year.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/1year.html</guid>
+			<description>#meta</description>
+		</item>
+		<item>
+			<title>Its Still 2009, Just Go Outside</title>
+			<pubDate>Sun, 29 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/oldside.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/oldside.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Blowing Up on TikTok was Hell</title>
+			<pubDate>Sat, 28 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/blowup.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/blowup.html</guid>
+			<description>#social</description>
+		</item>
+		<item>
+			<title>Lost Shapes of Apple's Apps</title>
+			<pubDate>Fri, 27 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/shapes.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/shapes.html</guid>
+			<description>#design</description>
+		</item>
+		<item>
+			<title>When I was Scared of Water and CAPTCHA</title>
+			<pubDate>Thu, 26 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/fears.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/fears.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>🎄 Color my Tree Replies</title>
+			<pubDate>Wed, 25 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/colormytree.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/colormytree.html</guid>
+			<description>#meta</description>
+		</item>
+		<item>
+			<title>Is the Internet Boring</title>
+			<pubDate>Tue, 24 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/boring.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/boring.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Making Cookies Isn't Fun</title>
+			<pubDate>Mon, 23 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/cookies.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/cookies.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>People Will be Using These Interfaces</title>
+			<pubDate>Sat, 21 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/using.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/using.html</guid>
+			<description>#design</description>
+		</item>
+		<item>
+			<title>Consistency is Key. Don't Drive Me Insane</title>
+			<pubDate>Fri, 20 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/consistency.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/consistency.html</guid>
+			<description>#rant</description>
+		</item>
+		<item>
+			<title>DRM on the Radio</title>
+			<pubDate>Thu, 19 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/radio.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/radio.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Lemon8 is a app that exists</title>
+			<pubDate>Wed, 18 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/lemon8.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/lemon8.html</guid>
+			<description>#social</description>
+		</item>
+		<item>
+			<title>New Mirror, New Life (not really)</title>
+			<pubDate>Tue, 17 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/mirror.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/mirror.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Bring Back Junction View</title>
+			<pubDate>Mon, 16 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/junctionview.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/junctionview.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Fortnite OG (Again) is Actually Boring</title>
+			<pubDate>Sun, 15 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/ogfortnite.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/ogfortnite.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Grok Tuah! Prompt on That Thang!</title>
+			<pubDate>Sat, 14 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/grok.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/grok.html</guid>
+			<description>#ai #social</description>
+		</item>
+		<item>
+			<title>happy for you, but i hope you break up</title>
+			<pubDate>Fri, 13 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/woeisme.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/woeisme.html</guid>
+			<description>#rant</description>
+		</item>
+		<item>
+			<title>Drive Into a Lamppost or Something Solid</title>
+			<pubDate>Thu, 12 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/crash.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/crash.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>I... I've Officially Made It 🥹</title>
+			<pubDate>Wed, 11 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/trolls.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/trolls.html</guid>
+			<description>#meta</description>
+		</item>
+		<item>
+			<title>Not Making a List</title>
+			<pubDate>Tue, 10 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/list.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/list.html</guid>
+			<description>#rant</description>
+		</item>
+		<item>
+			<title>DO NOT Take 3 Studio Classes at Once</title>
+			<pubDate>Mon, 9 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/studio.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/studio.html</guid>
+			<description>#rant</description>
+		</item>
+		<item>
+			<title>Using a Magic Mouse on Windows</title>
+			<pubDate>Sun, 8 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/magicmouse.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/magicmouse.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Screw Discussion Posts</title>
+			<pubDate>Sat, 7 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/blackboard.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/blackboard.html</guid>
+			<description>#rant</description>
+		</item>
+		<item>
+			<title>Giving Gifts is Better Than Getting Gifts</title>
+			<pubDate>Fri, 6 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/gifts.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/gifts.html</guid>
+			<description>#rant</description>
+		</item>
+		<item>
+			<title>🔊 to 🔇</title>
+			<pubDate>Thu, 5 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/sound.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/sound.html</guid>
+			<description>no tags</description>
+		</item>
+		<item>
+			<title>Wrapped 2024 was Bad, Which is Good</title>
+			<pubDate>Wed, 4 Dec 2024 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/2024/12/wrapped.html</link>
+			<guid>https://wiggle.monster/more/archive/blog/2024/12/wrapped.html</guid>
+			<description>no tags</description>
+		</item>
+	</channel>
+</rss>
