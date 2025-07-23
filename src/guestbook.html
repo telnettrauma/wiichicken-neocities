@@ -11,74 +11,74 @@
 			#no-script {display: block !important;}
 		</style>
 	</noscript>
+	<style>
+		* {
+			--dark-tertiary: #c5c2ea;
+			--dark-on-tertiary: #2e2d4d;
+			--bg-1: #00c3ff;
+			--bg-2: #4b45ff;
+		}
+		body {
+			color: white;
+			background-color: #001f2a;
+		}
+		h1, h2, .author-name {font-family: 'Martian Mono', monospace !important;}
+		p, .date, .hcb-comment-body {font-family: 'Ubuntu', sans-serif !important;}
+		h3 {display: none;}
+		a:not(:has(img)) {
+			text-decoration: none;
+			background-color: #4f4061;
+			color: #eddcff;
+		}
+		main {
+			width: 600px;
+			margin: auto;
+		}
+		blockquote {
+			margin-block-start: 0;
+			margin-block-end: 0;
+		}
+		.box, #HCB_comment_form_box, .comment, header {
+			background-color: #001f2a88;
+			color: #bfe9ff;
+			padding: 5px;
+			--border: #bfe9ff;
+			margin-bottom: 5px !important;
+		}
+		#HCB_comment_form_box, .comment {border: 1px solid var(--border);}
+		header {box-shadow: 0 0 150px 20px #bfe9ff;}
+		#hcb_form_name_container input, .commentbox {
+			background-color: #94ccff;
+			color: #003352;
+			border: 1px solid #cde5ff;
+		}
+		#hcb_msg {display: none;}
+		.comment .comment {margin: 5px 0 10px 20px !important;}
+		.submit, .inputfile, .btn-secondary {
+			color: #94ccff !important;
+			background-color: #003352 !important;
+			border: 1px solid #cde5ff !important;
+			cursor: pointer;
+		}
+		.btn {box-shadow: 2px 2px 0 0 #cde5ff !important;}
+		.btn:hover {
+			box-shadow: 1px 1px 0 0 #cde5ff !important;
+			transform: translate(1px, 1px) !important;
+		}
+		.btn:active {
+			box-shadow: none !important;
+			transform: translate(2px, 2px) !important;
+		}
+		.home-desc {display: none;}
+		#comments_list {width: 100%;}
+		#hcb_form_name::before {content: 'Name:';}
+		#hcb_form_website::before {content: 'Website:';}
+		#hcb_form_website::after {content: ' (optional)';}
+		#no-script {display: none}
+		.head {background-image: url('/media/headers/guestbook.png');}
+	</style>
 </head>
 <body>
-<style>
-	* {
-		--dark-tertiary: #c5c2ea;
-		--dark-on-tertiary: #2e2d4d;
-		--bg-1: #00c3ff;
-		--bg-2: #4b45ff;
-	}
-	body {
-		color: white;
-		background-color: #001f2a;
-	}
-	h1, h2, .author-name {font-family: 'Martian Mono', monospace !important;}
-	p, .date, .hcb-comment-body {font-family: 'Ubuntu', sans-serif !important;}
-	h3 {display: none;}
-	a:not(:has(img)) {
-		text-decoration: none;
-		background-color: #4f4061;
-		color: #eddcff;
-	}
-	main {
-		width: 600px;
-		margin: auto;
-	}
-	blockquote {
-		margin-block-start: 0;
-		margin-block-end: 0;
-	}
-	.box, #HCB_comment_form_box, .comment, header {
-		background-color: #001f2a88;
-		color: #bfe9ff;
-		padding: 5px;
-		--border: #bfe9ff;
-		margin-bottom: 5px !important;
-	}
-	#HCB_comment_form_box, .comment {border: 1px solid var(--border);}
-	header {box-shadow: 0 0 150px 20px #bfe9ff;}
-	#hcb_form_name_container input, .commentbox {
-		background-color: #94ccff;
-		color: #003352;
-		border: 1px solid #cde5ff;
-	}
-	#hcb_msg {display: none;}
-	.comment .comment {margin: 5px 0 10px 20px !important;}
-	.submit, .inputfile, .btn-secondary {
-		color: #94ccff !important;
-		background-color: #003352 !important;
-		border: 1px solid #cde5ff !important;
-		cursor: pointer;
-	}
-	.btn {box-shadow: 2px 2px 0 0 #cde5ff !important;}
-	.btn:hover {
-		box-shadow: 1px 1px 0 0 #cde5ff !important;
-		transform: translate(1px, 1px) !important;
-	}
-	.btn:active {
-		box-shadow: none !important;
-		transform: translate(2px, 2px) !important;
-	}
-	.home-desc {display: none;}
-	#comments_list {width: 100%;}
-	#hcb_form_name::before {content: 'Name:';}
-	#hcb_form_website::before {content: 'Website:';}
-	#hcb_form_website::after {content: ' (optional)';}
-	#no-script {display: none}
-	.head {background-image: url('/media/headers/guestbook.png');}
-</style>
 {% include "partials/navbar.njk" %}
 <div id="chewTooth"></div>
 <main>
