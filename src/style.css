@@ -372,6 +372,7 @@ button {
 		bottom: 0;
 		left: 0;
 	}
+	.square {transform: translate(0, 8px);}
 	@keyframes wink {
 		0% {height: 15px; margin-top: 0; margin-bottom: 0;}
 		10% {height: 15px; margin-top: 0; margin-bottom: 0;}
