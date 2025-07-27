@@ -257,15 +257,28 @@ button {
 	padding: 0 7px 0 7px;
 	background-color: unset !important;
 }
+.nav-icon {
+	display: inline;
+	width: 12px;
+	height: 12px;
+	margin-right: 2px;
+	image-rendering: pixelated;
+}
 .topLinks a:first-child {color: #c5e7ff;}
+.topLinks a:first-child .nav-icon {background: url(/resources/nav/navicons.png) 0 0;}
 /* .topLinks a:nth-child(2) {color: #dce1ff;} */
 .topLinks a:nth-child(2) {
 	color: #ffd9e1;
 	text-shadow: 0 0 5px #ffd9e1;
 }
+.topLinks a:nth-child(2) .nav-icon {background: url(/resources/nav/navicons.png) -12px 0;}
 .topLinks a:nth-child(3) {color: #ffd6fe;}
+.topLinks a:nth-child(3) .nav-icon {background: url(/resources/nav/navicons.png) -24px 0;}
 .topLinks a:nth-child(4) {color: #ffdadb;}
+.topLinks a:nth-child(4) .nav-icon {background: url(/resources/nav/navicons.png) -36px 0;}
 .topLinks a:nth-child(5) {color: #ffdad6;}
+.topLinks a:nth-child(5) .nav-icon {background: url(/resources/nav/navicons.png) -48px 0;}
+.topLinks a:nth-child(6) .nav-icon {background: url(/resources/nav/navicons.png) -60px 0;}
 #fakeLogo {
 	display: flex;
 	align-items: center;
@@ -359,6 +372,7 @@ button {
 		bottom: 0;
 		left: 0;
 	}
+	.square {transform: translate(0, 8px);}
 	@keyframes wink {
 		0% {height: 15px; margin-top: 0; margin-bottom: 0;}
 		10% {height: 15px; margin-top: 0; margin-bottom: 0;}
@@ -459,10 +473,16 @@ button {
 		padding: 0 5px 0 5px;
 	}
 	.topLinks a:nth-child(6n) {display: none;}
-	.topLinks a img {
+	.topLinks a .nav-icon {
 		width: 36px;
+		height: 36px;
 		z-index: 50 !important;
+		background-size: cover !important;
 	}
+	.topLinks a:nth-child(2) .nav-icon {background: url(/resources/nav/navicons.png) -36px 0;}
+	.topLinks a:nth-child(3) .nav-icon {background: url(/resources/nav/navicons.png) -72px 0;}
+	.topLinks a:nth-child(4) .nav-icon {background: url(/resources/nav/navicons.png) -108px 0;}
+	.topLinks a:nth-child(5) .nav-icon {background: url(/resources/nav/navicons.png) -144px 0;}
 	.heading::after {background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-1) 100%);}
 	#poopBlock iframe {height: 60px;}
 	.footer p {text-align: left;}
@@ -478,12 +498,8 @@ button {
 }
 /* increased contrast */
 @media (prefers-contrast: more) {
-	.box {
-		color: white !important;
-	}
-	.topLinks a {
-		color: white;
-	}
+	.box {color: white !important;}
+	.topLinks a {color: white;}
 	.topLinks a:hover {
 		transition-duration: 0;
 		font-weight: bold;
