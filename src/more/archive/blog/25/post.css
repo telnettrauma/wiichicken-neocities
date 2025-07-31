@@ -1,28 +1,27 @@
 * {box-sizing: border-box;}
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@700&family=Martian+Mono:wght@600&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-html {
-	scroll-behavior: smooth;
-}
+html {scroll-behavior: smooth;}
 body {
 	margin: 0;
 	background-color: black;
-	display: flex;
-	flex-direction: column-reverse;
 	font-family: 'Ubuntu', sans-serif;
 }
 .content-area {
-	margin: 5px 5px 0 5px;
-	border: 1px solid #ff9c01;
-	overflow-y: scroll;
-	width: calc(100vw - 10px);
-	height: calc(100vh - 55px);
+	margin-bottom: 42px;
+	height: 100%;
 }
-nav {image-rendering: pixelated;}
+nav {
+	image-rendering: pixelated;
+	position: fixed;
+	bottom: 0;
+	background-color: black;
+	border-top: 1px solid #ff7b00;
+	width: 100%;
+}
 .topLinks {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	margin-right: 5px;
 	background-image: url(/more/archive/blog/25/res/navglow.png);
 	background-repeat: no-repeat;
 	background-position: right top;
@@ -104,7 +103,7 @@ nav {image-rendering: pixelated;}
 }
 #accessibility-button {
 	position: absolute;
-	top: -40px;
+	top: 80px;
 	left: 0;
 	background: #000;
 	color: #fff;
@@ -222,7 +221,6 @@ img {max-width: 100%;}
 	padding: 3px;
 }
 
-
 @media (prefers-color-scheme: dark) {
 	.content-area.default {
 		background-image: url('/more/archive/blog/25/res/bg/dark.png');
@@ -241,6 +239,23 @@ img {max-width: 100%;}
 }
 
 @media only screen and (min-width: 700px) {
+	body {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.content-area {
+		margin: 5px 5px 0 5px;
+		overflow-y: scroll;
+		width: calc(100vw - 10px);
+		height: calc(100vh - 55px);
+		border: 1px solid #ff9c01;
+	}
+	nav {
+		position: unset;
+		border-top: unset;
+	}
+	.topLinks {margin-right: 5px;}
+	#accessibility-button {top: -40px;}
 	.content-area.default header {
 		display: flex;
 		flex-direction: row-reverse;
