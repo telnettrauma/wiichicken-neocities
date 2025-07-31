@@ -4,25 +4,24 @@ html {scroll-behavior: smooth;}
 body {
 	margin: 0;
 	background-color: black;
-	display: flex;
-	flex-direction: column-reverse;
 }
 .content-area {
-	margin: 5px 5px 0 5px;
-	border: 1px solid #ffffff;
-	overflow-y: scroll;
-	width: calc(100vw - 10px);
-	height: calc(100vh - 55px);
+	margin-bottom: 42px;
+	height: 100%;
 }
 nav {
 	image-rendering: pixelated;
 	font-family: 'Ubuntu', sans-serif;
+	position: fixed;
+	bottom: 0;
+	background-color: black;
+	border-top: 1px solid white;
+	width: 100%;
 }
 .topLinks {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	margin-right: 5px;
 	background-image: url(/more/archive/blog/25/res/navglow.png);
 	background-repeat: no-repeat;
 	background-position: right top;
@@ -36,30 +35,37 @@ nav {
 	text-decoration: none;
 	width: 50px;
 }
-.topLinks a img {
+.topLinks a .nav-icon {
 	width: 24px;
+	height: 24px;
 	margin-bottom: 4px;
+	background-size: cover !important;
 }
 .topLinks a:nth-child(2) {
 	color: #c5e7ff;
 	--background: blue;
 }
+.topLinks a:nth-child(2) .nav-icon {background: url(/resources/nav/navicons.png) 0 0;}
 .topLinks a:nth-child(3) {
 	color: #dce1ff;
 	--background: #0059ff;
 }
+.topLinks a:nth-child(3) .nav-icon {background: url(/resources/nav/navicons.png) -24px 0;}
 .topLinks a:nth-child(4) {
 	color: #ffd6fe;
 	--background: #dd00ff;
 }
+.topLinks a:nth-child(4) .nav-icon {background: url(/resources/nav/navicons.png) -48px 0;}
 .topLinks a:nth-child(5) {
 	color: #ffdadb;
 	--background: #ff0055;
 }
+.topLinks a:nth-child(5) .nav-icon {background: url(/resources/nav/navicons.png) -72px 0;}
 .topLinks a:nth-child(6) {
 	color: #ffdad6;
 	--background: red;
 }
+.topLinks a:nth-child(6) .nav-icon {background: url(/resources/nav/navicons.png) -96px 0;}
 #fakeLogo {
 	display: flex;
 	flex-direction: row;
@@ -97,7 +103,7 @@ nav {
 }
 #accessibility-button {
 	position: absolute;
-	top: -40px;
+	top: 80px;
 	left: 0;
 	background: #000;
 	color: #fff;
@@ -105,3 +111,23 @@ nav {
 	z-index: 100;
 }
 #accessibility-button:focus {top: 0;}
+
+@media only screen and (min-width: 700px) {
+	body {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.content-area {
+		margin: 5px 5px 0 5px;
+		overflow-y: scroll;
+		width: calc(100vw - 10px);
+		height: calc(100vh - 55px);
+		border: 1px solid white;
+	}
+	nav {
+		position: unset;
+		border-top: unset;
+	}
+	.topLinks {margin-right: 5px;}
+	#accessibility-button {top: -40px;}
+}
