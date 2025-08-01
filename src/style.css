@@ -266,11 +266,7 @@ button {
 }
 .topLinks a:first-child {color: #c5e7ff;}
 .topLinks a:first-child .nav-icon {background: url(/resources/nav/navicons.png) 0 0;}
-/* .topLinks a:nth-child(2) {color: #dce1ff;} */
-.topLinks a:nth-child(2) {
-	color: #ffd9e1;
-	text-shadow: 0 0 5px #ffd9e1;
-}
+.topLinks a:nth-child(2) {color: #dce1ff;}
 .topLinks a:nth-child(2) .nav-icon {background: url(/resources/nav/navicons.png) -12px 0;}
 .topLinks a:nth-child(3) {color: #ffd6fe;}
 .topLinks a:nth-child(3) .nav-icon {background: url(/resources/nav/navicons.png) -24px 0;}
