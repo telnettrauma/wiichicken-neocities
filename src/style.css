@@ -23,7 +23,7 @@ main {
 	padding: 10px;
 	overflow: hidden;
 	margin-top: 10px !important;
-	margin-bottom: 40px !important;
+	margin-bottom: 50px !important;
 	position: relative;
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
@@ -223,30 +223,23 @@ button {
 
 /* navbar */
 .heading {
-	width: 100%;
+	width: 525px;
 	z-index: 10;
 	margin: 0;
-	bottom: 0;
+	bottom: 10px;
+	right: 10px;
 	position: fixed;
 	transition-duration: 0.5s;
 	height: 30px;
-	background-color: black;
-}
-.heading::after {
-	position: absolute;
-	height: 1px;
-	width: 100%;
-	background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-1) 100%);
-	content: '';
-	bottom: 0;
-	top: 0;
+	background: linear-gradient(90deg, black 0%, black 80%, var(--bg-2) 100%);
+	border: 1px solid var(--border);
 }
 #inHead {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	padding-right: 100px;
-	margin: 5px;
+	padding-right: 70px;
+	margin: 4px 0 5px 0;
 }
 .topLinks, .topLinks a, #fakeLogo, .square {pointer-events: all;}
 .topLinks {display: flex;}
@@ -281,7 +274,7 @@ button {
 	transition-duration: 0.4s;
 	cursor: url(/media/pointer.svg), url(/media/pointer.png), pointer;
 	z-index: 2;
-	margin: -35px 20px 0 0;
+	margin: -35px 0 0 0;
 	padding: 5px;
 	pointer-events: all;
 	position: absolute;
@@ -446,6 +439,8 @@ button {
 		height: 50px;
 		width: calc(100vw - 10px);
 		margin: 5px;
+		bottom: 0;
+		right: 0;
 		background: url('/media/noise.png') #00000099;
 		border: 1px solid var(--border);
 		backdrop-filter: blur(5px);
