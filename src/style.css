@@ -446,7 +446,7 @@ button {
 		height: 50px;
 		width: calc(100vw - 10px);
 		margin: 5px;
-		background: url('/media/noise.png') rgba(0, 0, 0, 0.60);
+		background: url('/media/noise.png') #00000099;
 		border: 1px solid var(--border);
 		backdrop-filter: blur(5px);
 		-webkit-backdrop-filter: blur(5px);
@@ -454,13 +454,13 @@ button {
 	.heading:after {content: unset;}
 	#inHead {
 		align-items: flex-start;
-		padding-right: 55px;
+		padding-right: 60px;
 	}
 	#fakeLogo {
 		margin: 0;
-		border: unset;
 		right: 5px;
 		bottom: 5px;
+		border: 5px solid black;
 	}
 	.topLinks {
 		position: absolute;
@@ -471,12 +471,13 @@ button {
 		align-items: center;
 		font-size: 12px;
 		text-decoration: none !important;
-		padding: 0 5px 0 5px;
+		padding: 0 12px 0 12px;
 	}
 	.topLinks a:nth-child(6n) {display: none;}
 	.topLinks a .nav-icon {
 		width: 24px;
 		height: 24px;
+		margin-bottom: 3px;
 		z-index: 50 !important;
 		background-size: cover !important;
 	}
