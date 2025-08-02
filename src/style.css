@@ -445,8 +445,14 @@ button {
 	}
 	.heading {
 		height: 60px;
-		background-image: url('/starry.gif');
+		width: calc(100vw - 10px);
+		margin: 5px;
+		background: url('/media/noise.png') rgba(0, 0, 0, 0.60);
+		border: 1px solid var(--border);
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
 	}
+	.heading:after {content: unset;}
 	#inHead {
 		align-items: flex-start;
 		padding-right: 55px;
@@ -479,7 +485,6 @@ button {
 	.topLinks a:nth-child(3) .nav-icon {background: url(/resources/nav/navicons.png) -72px 0;}
 	.topLinks a:nth-child(4) .nav-icon {background: url(/resources/nav/navicons.png) -108px 0;}
 	.topLinks a:nth-child(5) .nav-icon {background: url(/resources/nav/navicons.png) -144px 0;}
-	.heading::after {background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-1) 100%);}
 	#poopBlock iframe {height: 60px;}
 	.footer p {text-align: left;}
 }
