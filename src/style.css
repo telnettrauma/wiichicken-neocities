@@ -431,20 +431,19 @@ button {
 	.page-top::before, .page-bottom::before, .m-page-top::before {content: '';}
 	a {text-decoration: underline;}
 	main {
-		margin-bottom: 35px !important;
 		backdrop-filter: unset;
 		-webkit-backdrop-filter: unset;
 		background-color: black;
-		padding-bottom: 35px !important;
-		margin: 0;
-		padding-bottom: 10px;
+		margin: 0 0 65px 0 !important;
+		margin-top: 0px !important;
 	}
 	main::before {
+		content: unset;
 		background: unset;
 		background-color: var(--bg-1);
 	}
 	.heading {
-		height: 60px;
+		height: 50px;
 		width: calc(100vw - 10px);
 		margin: 5px;
 		background: url('/media/noise.png') rgba(0, 0, 0, 0.60);
@@ -470,22 +469,21 @@ button {
 	.topLinks a {
 		flex-direction: column;
 		align-items: center;
-		font-size: 9px;
+		font-size: 12px;
 		text-decoration: none !important;
 		padding: 0 5px 0 5px;
 	}
 	.topLinks a:nth-child(6n) {display: none;}
 	.topLinks a .nav-icon {
-		width: 36px;
-		height: 36px;
+		width: 24px;
+		height: 24px;
 		z-index: 50 !important;
 		background-size: cover !important;
 	}
-	.topLinks a:nth-child(2) .nav-icon {background: url(/resources/nav/navicons.png) -36px 0;}
-	.topLinks a:nth-child(3) .nav-icon {background: url(/resources/nav/navicons.png) -72px 0;}
-	.topLinks a:nth-child(4) .nav-icon {background: url(/resources/nav/navicons.png) -108px 0;}
-	.topLinks a:nth-child(5) .nav-icon {background: url(/resources/nav/navicons.png) -144px 0;}
-	#poopBlock iframe {height: 60px;}
+	.topLinks a:nth-child(2) .nav-icon {background: url(/resources/nav/navicons.png) -24px 0;}
+	.topLinks a:nth-child(3) .nav-icon {background: url(/resources/nav/navicons.png) -48px 0;}
+	.topLinks a:nth-child(4) .nav-icon {background: url(/resources/nav/navicons.png) -72px 0;}
+	.topLinks a:nth-child(5) .nav-icon {background: url(/resources/nav/navicons.png) -96px 0;}
 	.footer p {text-align: left;}
 }
 /* prefers reduced transparency */
