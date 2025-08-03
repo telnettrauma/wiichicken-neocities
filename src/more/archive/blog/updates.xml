@@ -69,26 +69,5 @@
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>now playing is updated to v1.1.1</description>
 		</item>
-		<item>
-			<title>SCALABLE VECTOR GRAPHiC (ONE)</title>
-			<pubDate>Sun, 6 Apr 2025 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>the cursor is now an svg</description>
-		</item>
-		<item>
-			<title>SNiPPERCLiPS</title>
-			<pubDate>Sun, 16 Mar 2025 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>in development page for snippets</description>
-		</item>
-		<item>
-			<title>SHORT AND SWEET!</title>
-			<pubDate>Mon, 3 Mar 2025 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>just some small changes</description>
-		</item>
 	</channel>
 </rss>
