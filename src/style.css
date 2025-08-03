@@ -23,7 +23,7 @@ main {
 	padding: 10px;
 	overflow: hidden;
 	margin-top: 10px !important;
-	margin-bottom: 40px !important;
+	margin-bottom: 50px !important;
 	position: relative;
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
@@ -223,30 +223,23 @@ button {
 
 /* navbar */
 .heading {
-	width: 100%;
+	width: 525px;
 	z-index: 10;
 	margin: 0;
-	bottom: 0;
+	bottom: 10px;
+	right: 10px;
 	position: fixed;
 	transition-duration: 0.5s;
 	height: 30px;
-	background-color: black;
-}
-.heading::after {
-	position: absolute;
-	height: 1px;
-	width: 100%;
-	background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-1) 100%);
-	content: '';
-	bottom: 0;
-	top: 0;
+	background: linear-gradient(90deg, black 0%, black 80%, var(--bg-2) 100%);
+	border: 1px solid var(--border);
 }
 #inHead {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	padding-right: 100px;
-	margin: 5px;
+	padding-right: 70px;
+	margin: 4px 0 5px 0;
 }
 .topLinks, .topLinks a, #fakeLogo, .square {pointer-events: all;}
 .topLinks {display: flex;}
@@ -281,7 +274,7 @@ button {
 	transition-duration: 0.4s;
 	cursor: url(/media/pointer.svg), url(/media/pointer.png), pointer;
 	z-index: 2;
-	margin: -35px 20px 0 0;
+	margin: -35px 0 0 0;
 	padding: 5px;
 	pointer-events: all;
 	position: absolute;
@@ -431,31 +424,38 @@ button {
 	.page-top::before, .page-bottom::before, .m-page-top::before {content: '';}
 	a {text-decoration: underline;}
 	main {
-		margin-bottom: 35px !important;
 		backdrop-filter: unset;
 		-webkit-backdrop-filter: unset;
 		background-color: black;
-		padding-bottom: 35px !important;
-		margin: 0;
-		padding-bottom: 10px;
+		margin: 0 0 65px 0 !important;
+		margin-top: 0px !important;
 	}
 	main::before {
+		content: unset;
 		background: unset;
 		background-color: var(--bg-1);
 	}
 	.heading {
-		height: 60px;
-		background-image: url('/starry.gif');
+		height: 50px;
+		width: calc(100vw - 10px);
+		margin: 5px;
+		bottom: 0;
+		right: 0;
+		background: url('/media/noise.png') #00000099;
+		border: 1px solid var(--border);
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
 	}
+	.heading:after {content: unset;}
 	#inHead {
 		align-items: flex-start;
-		padding-right: 55px;
+		padding-right: 60px;
 	}
 	#fakeLogo {
 		margin: 0;
-		border: unset;
 		right: 5px;
 		bottom: 5px;
+		border: 5px solid black;
 	}
 	.topLinks {
 		position: absolute;
@@ -464,23 +464,22 @@ button {
 	.topLinks a {
 		flex-direction: column;
 		align-items: center;
-		font-size: 9px;
+		font-size: 12px;
 		text-decoration: none !important;
-		padding: 0 5px 0 5px;
+		padding: 0 12px 0 12px;
 	}
 	.topLinks a:nth-child(6n) {display: none;}
 	.topLinks a .nav-icon {
-		width: 36px;
-		height: 36px;
+		width: 24px;
+		height: 24px;
+		margin-bottom: 3px;
 		z-index: 50 !important;
 		background-size: cover !important;
 	}
-	.topLinks a:nth-child(2) .nav-icon {background: url(/resources/nav/navicons.png) -36px 0;}
-	.topLinks a:nth-child(3) .nav-icon {background: url(/resources/nav/navicons.png) -72px 0;}
-	.topLinks a:nth-child(4) .nav-icon {background: url(/resources/nav/navicons.png) -108px 0;}
-	.topLinks a:nth-child(5) .nav-icon {background: url(/resources/nav/navicons.png) -144px 0;}
-	.heading::after {background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-1) 100%);}
-	#poopBlock iframe {height: 60px;}
+	.topLinks a:nth-child(2) .nav-icon {background: url(/resources/nav/navicons.png) -24px 0;}
+	.topLinks a:nth-child(3) .nav-icon {background: url(/resources/nav/navicons.png) -48px 0;}
+	.topLinks a:nth-child(4) .nav-icon {background: url(/resources/nav/navicons.png) -72px 0;}
+	.topLinks a:nth-child(5) .nav-icon {background: url(/resources/nav/navicons.png) -96px 0;}
 	.footer p {text-align: left;}
 }
 /* prefers reduced transparency */

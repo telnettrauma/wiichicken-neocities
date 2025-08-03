@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>THANKS A LOT APPLE</title>
+			<pubDate>Sun, 3 Aug 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>descriptions for buttons in the directory, as well as image maps</description>
+		</item>
+		<item>
 			<title>WHO? WHAT? WHERE? WHY?</title>
 			<pubDate>Sun, 27 Jul 2025 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -68,27 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>now playing is updated to v1.1.1</description>
-		</item>
-		<item>
-			<title>SCALABLE VECTOR GRAPHiC (ONE)</title>
-			<pubDate>Sun, 6 Apr 2025 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>the cursor is now an svg</description>
-		</item>
-		<item>
-			<title>SNiPPERCLiPS</title>
-			<pubDate>Sun, 16 Mar 2025 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>in development page for snippets</description>
-		</item>
-		<item>
-			<title>SHORT AND SWEET!</title>
-			<pubDate>Mon, 3 Mar 2025 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>just some small changes</description>
 		</item>
 	</channel>
 </rss>
