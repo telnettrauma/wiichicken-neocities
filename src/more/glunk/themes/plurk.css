@@ -33,6 +33,17 @@
 	.plurk_cnt, .response_count, .p_img, #updater .item a, .filter_selected, .plurk_box {
 	border: 1px solid;
 	}
+	.timeline-cnt .plurk:after {
+		content: '';
+		background-image: url(https://i.imgur.com/VrVqpWF.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: -50px;
+		right: 20px;
+		height: 50px;
+		width: 50px;
+	}
 	.p_img {
 	box-shadow: 0 0 20px 0;
 	border: solid !important;
