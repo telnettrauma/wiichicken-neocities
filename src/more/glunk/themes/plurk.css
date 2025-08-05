@@ -298,6 +298,7 @@
 	color: #e9ddff !important;
 	}
 	.plurk .plurk_cnt {
+		background: url('https://wiggle.monster/media/noise.png'), var(--bg);
 		border-color: var(--color);
 		box-shadow: 2px 2px 0 0 var(--color);
 	}
@@ -308,7 +309,7 @@
 	}
 	.plurk:nth-child(6n) .plurk_cnt, .plurk:nth-child(6n) .td_img .p_img {
 	 --color: red;
-	 background-color: #3a090586;
+	 --bg: #3a090586;
 	}
 	.plurk:nth-child(6n) .plurk_cnt .text_holder {
 	 color: #ffdad4;
@@ -316,7 +317,7 @@
 	
 	.plurk:nth-child(6n+1) .plurk_cnt, .plurk:nth-child(6n+1) .td_img .p_img {
 	 --color: #ffee00;
-	 background-color: #1f1c0086;
+	 --bg: #1f1c0086;
 	}
 	.plurk:nth-child(6n+1) .plurk_cnt .text_holder {
 	 color: #efe58b;
@@ -324,7 +325,7 @@
 	
 	.plurk:nth-child(6n+2) .plurk_cnt, .plurk:nth-child(6n+2) .td_img .p_img {
 	 --color: #00ff00;
-	 background-color: #00220086;
+	 --bg: #00220086;
 	}
 	.plurk:nth-child(6n+2) .plurk_cnt .text_holder {
 	 color: #c0efb0;
@@ -332,7 +333,7 @@
 	
 	.plurk:nth-child(6n+3) .plurk_cnt, .plurk:nth-child(6n+3) .td_img .p_img {
 	 --color: #00ffbf;
-	 background-color: #00211686;
+	 --bg: #00211686;
 	}
 	.plurk:nth-child(6n+3) .plurk_cnt .text_holder {
 	 color: #a7f2d1;
@@ -340,7 +341,7 @@
 	
 	.plurk:nth-child(6n+4) .plurk_cnt, .plurk:nth-child(6n+4) .td_img .p_img {
 	 --color: #d400ff;
-	 background-color: #30093986;
+	 --bg: #30093986;
 	}
 	.plurk:nth-child(6n+4) .plurk_cnt .text_holder {
 	 color: #fed6ff;
@@ -348,7 +349,7 @@
 	
 	.plurk:nth-child(6n+5) .plurk_cnt, .plurk:nth-child(6n+5) .td_img .p_img {
 	 --color: #914cff;
-	 background-color: #240e4586;
+	 --bg: #240e4586;
 	}
 	.plurk:nth-child(6n+5) .plurk_cnt .text_holder {
 	 color: #ebdcff;
