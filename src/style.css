@@ -231,7 +231,6 @@ button {
 	position: fixed;
 	transition-duration: 0.5s;
 	height: 30px;
-	background: linear-gradient(90deg, black 0%, black 80%, var(--bg-2) 100%);
 	border: 1px solid var(--border);
 }
 #inHead {
@@ -391,7 +390,12 @@ button {
 		margin-right: 3px;
 	}
 	main {background-image: url('/media/noise.png'), linear-gradient(0deg, var(--bg-2) 0%, #00000000 20%, #00000000 80%, var(--bg-1) 100%);}
-
+	.heading {
+		box-shadow: 5px 5px 0 0 var(--border);
+		background: url('/media/noise.png'), linear-gradient(90deg, #000000bf 0%, #000000bf 80%, var(--bg-2) 100%);
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+	}
 }
 /* styling for mobile */
 @media only screen and (max-width: 650px) {
