@@ -16,6 +16,7 @@
 			--dark-primary: #93000a;
 			--dark-tertiary: #dec48c;
 			--dark-on-tertiary: #382a49;
+			--border: red;
 			--bg-1: red;
 			--bg-2: blue;
 		}
@@ -27,7 +28,6 @@
 			gap: 10px;
 		}
 		iframe {border: none;}
-		.heading {display: none;}
 		#leftSidebar, #rightSidebar {transition-duration: 0.5s;}
 		#leftSidebar {
 			order: 1;
@@ -44,7 +44,6 @@
 			order: 2;
 			flex: 1;
 			min-width: 670px;
-			margin-bottom: 10px !important;
 			margin-top: 0;
 		}
 		.row {
@@ -603,7 +602,7 @@
 	</noscript>
 </head>
 <body>
-<div id="chewTooth"></div>
+{% include "partials/navbar.njk" %}
 <div class="main">
 	<div id="flex">
 		<aside id="leftSidebar">
