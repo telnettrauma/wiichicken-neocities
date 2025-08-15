@@ -26,15 +26,6 @@ a {
 	height: 30px;
 	background-color: black;
 }
-.heading::after {
-	position: absolute;
-	height: 1px;
-	width: 100%;
-	background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 80%, var(--bg-1) 100%);
-	content: '';
-	bottom: 0;
-	top: 0;
-}
 #inHead {
 	display: flex;
 	justify-content: flex-end;
@@ -48,7 +39,10 @@ a {
 	color: var(--dark-tertiary);
 	background-color: unset !important;
 }
-.topLinks a:hover {color: white !important;}
+#int-nav-icons a:first-child {color: #ffdbcc;}
+#int-nav-icons a:first-child .nav-icon {background: url(/interests/res/nav/nav.png) 0 0;}
+#int-nav-icons a:nth-child(2) {color: #b3ebff;}
+#int-nav-icons a:nth-child(2) .nav-icon {background: url(/interests/res/nav/nav.png) -12px 0;}
 #fakeLogo {
 	display: flex;
 	align-items: center;
@@ -99,3 +93,6 @@ a {
 }
 #fakeLogo:active #s1 {transform: scale(1.7); margin-right: 15px;}
 #fakeLogo:active #s2 {transform: scale(2.1);}
+@media only screen and (max-width: 650px) {
+	#int-nav-icons a:nth-child(2) .nav-icon {background: url(/interests/res/nav/nav.png) -24px 0;}
+}

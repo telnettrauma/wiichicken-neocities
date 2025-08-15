@@ -223,6 +223,7 @@ button {
 
 /* navbar */
 .heading {
+	width: unset;
 	z-index: 10;
 	margin: 0;
 	bottom: 10px;
