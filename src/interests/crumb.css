@@ -23,7 +23,6 @@ a {
 	bottom: 0;
 	position: fixed;
 	transition-duration: 0.5s;
-	height: 30px;
 	background-color: black;
 }
 #inHead {
@@ -73,15 +72,6 @@ a {
 	transform-origin: center;
 	margin: 1px;
 	transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
-	animation: look-around 3s;
-}
-@keyframes look-around {
-	30% {transform-origin: initial;}
-	40% {transform-origin: left;}
-	50% {transform-origin: left;}
-	60% {transform-origin: right;}
-	75% {transform-origin: right;}
-	85% {transform-origin: initial;}
 }
 #fakeLogo:hover #s1 {margin-right: 10px;}
 #s1 {background-color: red; transition-duration: 0.3s;}
