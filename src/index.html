@@ -16,6 +16,7 @@
 			--dark-primary: #93000a;
 			--dark-tertiary: #dec48c;
 			--dark-on-tertiary: #382a49;
+			--border: red;
 			--bg-1: red;
 			--bg-2: blue;
 		}
@@ -27,7 +28,6 @@
 			gap: 10px;
 		}
 		iframe {border: none;}
-		.heading {display: none;}
 		#leftSidebar, #rightSidebar {transition-duration: 0.5s;}
 		#leftSidebar {
 			order: 1;
@@ -44,7 +44,6 @@
 			order: 2;
 			flex: 1;
 			min-width: 670px;
-			margin-bottom: 10px !important;
 			margin-top: 0;
 		}
 		.row {
@@ -348,9 +347,6 @@
 			background: linear-gradient(45deg, rgb(70, 0, 0) 0%, rgb(0, 14, 70)100%);
 			background-image: url(media/home/ditty.png);
 			image-rendering: pixelated;
-			--border: #00ffa1;
-			/* box-shadow: 0px 0px 200px 10px rgba(0, 255, 161, 0.50);
-			animation: glowy 10s infinite; */
 		}
 		#thisIsMyName {text-shadow: 0 0 10px black; font-weight: bold;}
 		.bring {
@@ -603,7 +599,7 @@
 	</noscript>
 </head>
 <body>
-<div id="chewTooth"></div>
+{% include "partials/navbar.njk" %}
 <div class="main">
 	<div id="flex">
 		<aside id="leftSidebar">
@@ -804,11 +800,11 @@
 			</div>
 			<div class="box sec-t">
 				<h2>siteUpdates</h2>
-				<h3 style="margin: 0; font-size: 15px;"><strong>THANKS A LOT APPLE</strong></h3>
-				<p id="updatedate">August 3, 2025</p>
+				<h3 style="margin: 0; font-size: 15px;"><strong>iT LOOKS DiFFERENT</strong></h3>
+				<p id="updatedate">August 17, 2025</p>
 			</div>
 			<div class="box">
-				<p>so there was a bug where for blog posts, the safari interface would cover the navigation bar, so you had to go into full screen to use it. oops! thanks apple! this is now fixed.<br>additionally, the navigation bar now has a new look on mobile and desktop, and i think it's kinda alright</p>
+				<p>the navigation bar looks different i guess</p>
 			</div>
 			<div class="box sec-b">
 				<p>site updates almost every sunday, blog posts and content updates whenever</p>
@@ -874,7 +870,7 @@
 				<div class="sidebox-content boxy" style="text-align: center; padding: 0;">
 					<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;">----</p>
 					<p class="headText nomarblock" id="upDate" style="background-color: #ede0dd; color: #201a19; font-size: 50px;">##</p>
-					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;">2024</p>
+					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;">2025</p>
 				</div>
 			</div>
 			<div class="sidebox" style="--side-bg: #001f23cc; --side-text: #8ef2ff; --border: #4ed8e8;" id="side-flood">

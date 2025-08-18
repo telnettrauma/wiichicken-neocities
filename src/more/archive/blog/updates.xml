@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>iT LOOKS DiFFERENT</title>
+			<pubDate>Sun, 17 Aug 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>the navbar looks different i guess</description>
+		</item>
+		<item>
 			<title>THANKS A LOT APPLE</title>
 			<pubDate>Sun, 3 Aug 2025 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>now playing is updated to v1.1.2</description>
-		</item>
-		<item>
-			<title>NOW PLAYiNG v1.1.1</title>
-			<pubDate>Sun, 13 Apr 2025 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>now playing is updated to v1.1.1</description>
 		</item>
 	</channel>
 </rss>
