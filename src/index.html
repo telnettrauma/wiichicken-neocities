@@ -529,7 +529,6 @@
 				min-height: 50px;
 			}
 			#personSighted {display: flex;}
-			#lonelyNav {margin-left: 0 !important;}
 			#alibaba {
 				align-items: flex-start;
 				margin-left: 5px;
@@ -563,9 +562,8 @@
 	<noscript>
 		<style>
 			#noscript-error, #infamous {display: block !important;}
-			.noscript-hidden, #signguest, #lonelyNav {display: none !important;}
+			.noscript-hidden, #signguest {display: none !important;}
 			#infamous .box {margin-bottom: 10px !important;}
-			#navig {width: 100% !important;}
 		</style>
 	</noscript>
 </head>
@@ -573,48 +571,6 @@
 {% include "partials/navbar.njk" %}
 <div class="main">
 	<div id="flex">
-		<aside id="leftSidebar">
-			<div id="personSighted">
-				<div class="sidebox" id="frens" style="--side-bg: #29005599; --side-text: #eddcff; --border: #7d24e4;">
-					<div class="sidehead" style="color: #eddcff;">
-						<p class="boxy" style="background: linear-gradient(45deg, #6100bd 0%, #8a00bd 100%);"><strong>FRiENDS</strong></p>
-					</div>
-					<div class="sidebox-content boxy">
-						<div class="dabuttons">
-							<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
-							<a href="https://parafungal.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/parafungal.gif" loading="lazy" alt="Parafungal"></a>
-							<a href="https://mari.blue" target="_blank"><img src="interests/websites/img/button/naybor/mariiful.gif" loading="lazy" alt="mari"></a>
-						</div>
-						<div class="dalist" style="--border: #7d24e4; background-color: #1d1a20; color: #eddcff;">
-							<a href="https://crypticworm.neocities.org" target="_blank"><img src="interests/websites/img/ficon/default.png" loading="lazy" alt="">crypticworm</a>
-						</div>
-					</div>
-				</div>
-				<div class="sidebox" id="moresites" style="--side-bg: #001e3399; --side-text: #cee5ff; --border: #00a6ff;">
-					<div class="sidehead" style="color: #cee5ff;">
-						<p class="boxy" style="background: linear-gradient(45deg, #004a77 0%, #006977 100%);"><strong>MORE SiTES</strong></p>
-					</div>
-					<div class="sidebox-content boxy" style="padding: 0;">
-						<div class="dabuttons">
-							<iframe src="https://incr.easrng.net/badge?key=wiichicken" title="increment badge" width="88" height="31" frameborder="0" style="padding: 2px; box-sizing: content-box;"></iframe>
-							<a href="https://corvidae.digital" target="_blank"><img src="interests/websites/img/button/corvidae.gif" loading="lazy" alt="CORViDAE DiGiTAL"></a>
-							<a href="https://bulltown.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/bulltownneo.png" loading="lazy" alt="bulltown.neo"></a>
-							<a href="https://catbyte.site/" target="_blank"><img src="interests/websites/img/button/catbyte.png" alt="catbyte.site"></a>
-							<a href="https://kiwimeowo.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/kiwimeow.png" loading="lazy" alt="Cosmos"></a>
-							<a href="https://psychicnewborn.neocities.org" target="_blank"><img loading="lazy" src="interests/websites/img/button/psychic.gif" alt="Psychic Newborn"></a>
-							<a href="https://charpine.neocities.org" target="_blank"><img src="interests/websites/img/button/artists/charpine.gif" loading="lazy" alt="Charpine"></a>
-							<a href="https://bruno-rubim.neocities.org/" target="_blank"><img src="interests/websites/img/button/bruno-button.gif" loading="lazy" alt="Bruno Rubim"></a>
-						</div>
-						<div class="dalist" style="--border: #00a6ff; --bg: #181c20; color: #cee5ff; margin: 0 5px 5px 5px;">
-							<a href="https://e4494s.neocities.org" target="_blank"><img src="interests/websites/img/ficon/game/e4494s.png" loading="lazy">e4494s</a>
-							<a href="https://awe921.neocities.org" target="_blank"><img src="media/buttons/favicon/awehead.png" loading="lazy">awe921</a>
-							<a href="https://cattafang.neocities.org" target="_blank"><img src="media/buttons/favicon/cattafang.ico" loading="lazy">cattafang</a>
-							<a href="interests/websites/directory.html">DiRECTORY</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</aside>
 		<main>
 			<div class="box head page-top" id="start">
 				<div id="tittle">
@@ -694,6 +650,38 @@
 				</div>
 			</div>
 			{% include "partials/interests/websites/sotfp/widget.njk" %}
+			<div class="row">
+				<div class="box sec-l">
+					<h3>FRiENDS</h3>
+					<div class="dabuttons">
+						<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
+						<a href="https://parafungal.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/parafungal.gif" loading="lazy" alt="Parafungal"></a>
+						<a href="https://mari.blue" target="_blank"><img src="interests/websites/img/button/naybor/mariiful.gif" loading="lazy" alt="mari"></a>
+					</div>
+					<div class="dalist" style="--border: #7d24e4; background-color: #1d1a20; color: #eddcff;">
+						<a href="https://crypticworm.neocities.org" target="_blank"><img src="interests/websites/img/ficon/default.png" loading="lazy" alt="">crypticworm</a>
+					</div>
+				</div>
+				<div class="box lefty sec-r">
+					<h3>FEATURED</h3>
+					<div class="dabuttons">
+						<iframe src="https://incr.easrng.net/badge?key=wiichicken" title="increment badge" width="88" height="31" frameborder="0" style="padding: 2px; box-sizing: content-box;"></iframe>
+						<a href="https://corvidae.digital" target="_blank"><img src="interests/websites/img/button/corvidae.gif" loading="lazy" alt="CORViDAE DiGiTAL"></a>
+						<a href="https://bulltown.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/bulltownneo.png" loading="lazy" alt="bulltown.neo"></a>
+						<a href="https://catbyte.site/" target="_blank"><img src="interests/websites/img/button/catbyte.png" alt="catbyte.site"></a>
+						<a href="https://kiwimeowo.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/kiwimeow.png" loading="lazy" alt="Cosmos"></a>
+						<a href="https://psychicnewborn.neocities.org" target="_blank"><img loading="lazy" src="interests/websites/img/button/psychic.gif" alt="Psychic Newborn"></a>
+						<a href="https://charpine.neocities.org" target="_blank"><img src="interests/websites/img/button/artists/charpine.gif" loading="lazy" alt="Charpine"></a>
+						<a href="https://bruno-rubim.neocities.org/" target="_blank"><img src="interests/websites/img/button/bruno-button.gif" loading="lazy" alt="Bruno Rubim"></a>
+					</div>
+					<div class="dalist" style="--border: #00a6ff; --bg: #181c20; color: #cee5ff; margin: 0 5px 5px 5px;">
+						<a href="https://e4494s.neocities.org" target="_blank"><img src="interests/websites/img/ficon/game/e4494s.png" loading="lazy">e4494s</a>
+						<a href="https://awe921.neocities.org" target="_blank"><img src="media/buttons/favicon/awehead.png" loading="lazy">awe921</a>
+						<a href="https://cattafang.neocities.org" target="_blank"><img src="media/buttons/favicon/cattafang.ico" loading="lazy">cattafang</a>
+						<a href="interests/websites/directory.html">DiRECTORY</a>
+					</div>
+				</div>
+			</div>
 			<div class="row">
 				<div class="box d-sec-l m-sec-t" style="width: 50%;">
 					<h2>latestArt</h2>
