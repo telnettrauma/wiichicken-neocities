@@ -308,35 +308,6 @@
 			display: none;
 			background-color: #750000;
 		}
-		#navig {
-			display: flex;
-			background: linear-gradient(270deg, #ff0000, #00a2ff);
-			padding: 1px;
-		}
-		#navig::before {
-			background-color: unset !important;
-			background: linear-gradient(270deg, #ff0000, #00a2ff) !important;
-		}
-		#navig a, #lonelyNav a {
-			font-family: 'Kode Mono', monospace;
-			padding: 5px 0 5px 0;
-			width: 100%;
-			display: flex;
-			justify-content: center;
-			mix-blend-mode: multiply;
-			background-color: rgb(50, 50, 50) !important;
-			color: white !important;
-		}
-		#navig a::after, #lonelyNav a::after {
-			background: black;
-			height: 3px;
-			mix-blend-mode: unset;
-		}
-		#navig a:hover, #lonelyNav a:hover {
-			background-color: white !important;
-			color: black !important;
-			text-shadow: black 0 0 20px;
-		}
 		#scrobbleWidget {
 			width: 200px;
 			height: 70px;
@@ -665,20 +636,6 @@
 					document.getElementById("alerta").style.display = "block";
 				}
 			</script>
-			<nav id="youWillScroll">
-				<div class="row">
-					<div class="box d-sec-l m-sec-t" style="width: 80%; border: none;" id="navig">
-						<a class="noBg" id="a1" href="aboutme.html">ABOUT</a>
-						<a class="noBg" id="a2" href="creative/">ART</a>
-						<a class="noBg" id="a3" href="more/archive/blog/">BLOG</a>
-						<a class="noBg" id="a4" href="interests/">iNTERESTS</a>
-						<a class="noBg" id="a5" href="more">MORE</a>
-					</div>
-					<div class="box noblur d-sec-r m-sec-b" style="padding: 1px; width: 20%; margin-left: 10px; background-color: #bfbfbf; --border: #bfbfbf !important; border: none;" id="lonelyNav">
-						<a class="noBg boxyless d-sec-r m-sec-b" id="a7" href="guestbook.html">GUESTBOOK</a>
-					</div>
-				</div>
-			</nav>
 			<div class="mobileVisible section box compat-error">
 				<h2 class="nomarblock">MOBiLE MODE</h2>
 				<p class="nomarblock">Because you are on a small screen, a few adjustments have been made for mobile. This site is still desktop designed, but your experience on a mobile device should hopefully still be less malarky. Note that layouts and designs will be different than desktop.</p>
