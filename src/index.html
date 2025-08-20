@@ -373,6 +373,13 @@
 		}
 		#statuscafe-username a {display: none;}
 		#statuscafe-username, #statuscafe-content {color: #561e16 !important;}
+		#status-cafe-box {
+			display: inline;
+			padding: 0;
+			width: 200px;
+			overflow-y: hidden;
+			max-height: 300px;
+		}
 		.dabuttons {
 			display: flex;
 			justify-items: center;
@@ -590,10 +597,9 @@
 				<div class="box d-sec-tl" style="grid-column: 1 / 3; grid-row: 1; margin-bottom: 0;">
 					<p class="headText nomarblock" style="text-align: center; font-size: 18px;">now welcoming visitor #<span id="visitorscount">######</span>!</p>
 				</div>
-				<div class="box noscript-hidden d-sec-r m-sec-t" style="width: 200px; padding: 0; grid-column: 3 / 3; grid-row: 1 / 3; display: inline;">
+				<div id="status-cafe-box" class="box noscript-hidden d-sec-r m-sec-t" style="grid-column: 3 / 3; grid-row: 1 / 3;">
 					<div style="display: flex; flex-wrap: wrap;" id="statusCard">
 						<div id="statuscafe" style="padding: 5px; background: linear-gradient(0deg, #ffb4a8 0%, #ffd4a8 100%); width: 100%; min-height: 93px;">
-							<a class="noBg" style="background-color: unset;" href="https://www.imood.com/users/RiPPY" target="_blank"><img src="https://moods.imood.com/display/uname-RiPPY/fg-561e16/trans-1/imood.gif"></a>
 							<a href="https://status.cafe/users/cringe" class="noBg" target="_blank">
 								<div id="statuscafe-username">10 years ago</div>
 								<div id="statuscafe-content">this is still being loaded, give me a second</div>
@@ -601,17 +607,11 @@
 						</div>
 						<script src="https://status.cafe/current-status.js?name=cringe" defer></script>
 						<img src="media/home/status.png" width="200" height="220" loading="lazy" style="z-index: 1;" onmouseover="this.src ='media/home/statusy.png'" onmouseleave="this.src = 'media/home/status.png'">
-						<img src="media/home/ditherglow.png" class="blurry" loading="lazy" style="height: 200px; width: 200px; bottom: 0; filter: none !important; opacity: 0.6;">
 					</div>
 				</div>
 				<div class="box d-sec-bl m-sec-b" style="grid-column: 1 / 3; grid-row: 2;">
-					<h2>aboutMe</h2>
-					<ul>
-						<li>i am born and raised american. sad, i know <img src="media/emoji/tear.gif" loading="lazy" alt=""></li>
-						<li>my favorite color is <span style="color: #00ffcc;">aquamarine</span>, but i also like using <span style="color: red;">red</span> and <span style="color: #00ccff;">blue</span> gradients, in a non-patriotic way</li>
-						<li>i have assburgers (ive spelled it like that my whole life im not stopping now)</li>
-						<li>i am feeling </li>
-					</ul>
+					<p>welcome to the very first website on the internet. the revolution is finally here, and its only just begun! <img src='/media/emoji/rofl.gif' loading='lazy' alt='rofl emoji'><br>this is just a place where i put my various works and ramblings, use the bar at the bottom right of your screen to explore around.</p>
+					<p>since we're both here, why not get to know each other a <em>little</em> better <img src='/media/emoji/glasses.gif' loading='lazy' alt='glasses emoji'>? check out the <a href="aboutme.html">about me</a> page to learn more about somebody you've never met and likely never will meet <img src='/media/emoji/unamused.gif' loading='lazy' alt='unamused emoji'></p>
 				</div>
 			</div>
 			{% include "partials/interests/websites/sotfp/widget.njk" %}
