@@ -22,29 +22,12 @@
 		}
 		body {color: white;}
 		h1, h2, h3, h4 {margin: 0;}
-		aside {
-			width: 300px;
-			padding: 0;
-			gap: 10px;
-		}
 		iframe {border: none;}
-		#leftSidebar, #rightSidebar {transition-duration: 0.5s;}
-		#leftSidebar {
-			order: 1;
-			z-index: 1;
-		}
-		#leftSidebar .sidebox {margin: 10px 0 10px 10px;}
-		#rightSidebar {order: 3;}
-		#rightSidebar .sidebox {margin: 10px 10px 10px 0;}
-		.main {
-			width: 650px;
-			margin: auto;
-		}
 		main {
-			order: 2;
-			flex: 1;
 			min-width: 670px;
 			margin-top: 0;
+			width: 650px;
+			margin: auto;
 		}
 		.row {
 			display: flex;
@@ -438,9 +421,6 @@
 		}
 		.mobileVisible {display: none;}
 		/* i hate my life and i wanan die, i aint got no iphone */
-		@media only screen and (min-width: 900px) {
-			main {margin: 10px;}
-		}
 		/* wow iphone */
 		@media only screen and (max-width: 900px) {
 			#flex, aside {flex-wrap: wrap;}
@@ -541,227 +521,223 @@
 </head>
 <body>
 {% include "partials/navbar.njk" %}
-<div class="main">
-	<div id="flex">
-		<main>
-			<div class="box head page-top" id="start">
-				<div id="tittle">
-					<div id="logocontent">
-						<p id="thisIsMyName" class="nomarblock mobileVisible headText" style="color: white;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN</p>
-						<div id="wiiLogo" class="mobileHidden" style="image-rendering: pixelated;">
-							<img src="logo.png" loading="lazy">
-						</div>
-					</div>
+<main>
+	<div class="box head page-top" id="start">
+		<div id="tittle">
+			<div id="logocontent">
+				<p id="thisIsMyName" class="nomarblock mobileVisible headText" style="color: white;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN</p>
+				<div id="wiiLogo" class="mobileHidden" style="image-rendering: pixelated;">
+					<img src="logo.png" loading="lazy">
 				</div>
 			</div>
-			<div id="alerta" class="box" style="padding: 0; --border: red !important; color: white; --b-radius: 5;"></div>
-			<script>
-				const alertaChance = Math.floor(Math.random() * 10);
-				if (alertaChance === 3) {
-					const alertList = [ "THE NATIONAL WEATHER SERVICE HAS ISSUED A SEVERE THUNDERSTORM WARNING IN EFFECT FROM 12:23 PM UNTIL 2:00 PM. FOR YOUR PROTECTION MOVE TO AN INTERIOR ROOM ON THE LOWEST FLOOR OF A BUILDING.", "THE NATIONAL WEATHER SERVICE IN BIRMINGHAM HAS ISSUED A TORNADO WARNING UNTIL 2:45 AM. AT 2:06 AM CST...THE NATIONAL WEATHER SERVICE INDICATED A SEVERE THUNDERSTORM CAPABLE OF PRODUCING A TORNADO. THIS DANGEROUS STORM WAS LOCATED NEAR MEMPHIS...OR 8 MILES SOUTHWEST OF PICKENSVILLE... AND MOVING NORTHEAST AT 45 MPH. TORNADOES ARE DIFFICULT TO SEE AND CONFIRM AT NIGHT. TAKE COVER NOW.", "THE NATIONAL WEATHER SERVICE HAS ISSUED A SPECIAL MARINE WARNING UNTIL 9:15 AM. AT 7:13 AM EDT...DOPPLER RADAR INDICATED A LINE OF THUNDERSTORMS... CAPABLE OF PRODUCING DANGEROUS WINDS IN EXCESS OF 50 KNOTS AND LARGE HAIL FROM 24 NM NORTHWEST OF ALABASTER TO 43 NM SOUTHWEST OF ALABASTER...MOVING EAST AT 35 KNOTS. MARINERS CAN EXPECT GUSTY WINDS...LARGE HAIL...HIGH WAVES...DANGEROUS LIGHTNING...AND HEAVY RAINS. BOATERS SHOULD SEEK SAFE HARBOR IMMEDIATELY...UNTIL THESE STORMS PASS.", "A civil authority has issued A LOCAL AREA EMERGENCY for the following counties or areas: Edgefield, SC; at 5:40 PM on SEP 30, 2024 Effective until 8:40 PM. Message from IPAWSCAP. Edgefield County mandatory curfew from Monday, September 30, at 9 pm to Tuesday, October 1, at 6 am. Essential workers for local businesses/services and responders will be exempt from this curfew. Road conditions are DANGEROUS due to downed power lines and trees. Do NOT travel after 9 pm.", "A civil authority has issued A 911 TELEPHONE OUTAGE EMERGENCY for the following counties or areas: Aiken, SC; at 3:12 PM on SEP 30, 2024 Effective until 11:12 PM. Message from IPAWSCAP. URGENT MESSAGE. From Aiken County. AT&T customers attempting to dial 9-1-1 in the Aiken County and surrounding area are EXPERIENCING TECHNICAL DIFFICULTIES and are UNABLE to make wireless calls to 9-1-1. Please find other alternative methods to communicate to 9-1-1 or call (803) 642-1751.", "A broadcast or cable system has issued A PRACTICE/DEMO WARNING for the following counties or areas: Norfolk, VA; at 1:05 PM on OCT 2, 2024 Effective until 4:05 PM. Message from TGR/DAS."];
-					const selectedAlert = alertList[Math.floor(Math.random() * alertList.length)];
-					document.getElementById("alerta").innerHTML = "<marquee scrollamount='10'>" + selectedAlert + "</marquee>";
-					document.getElementById("alerta").style.display = "block";
-				}
-			</script>
-			<div class="mobileVisible section box compat-error">
-				<h2 class="nomarblock">MOBiLE MODE</h2>
-				<p class="nomarblock">Because you are on a small screen, a few adjustments have been made for mobile. This site is still desktop designed, but your experience on a mobile device should hopefully still be less malarky. Note that layouts and designs will be different than desktop.</p>
-			</div>
-			<div class="reducedVisible section box compat-error">
-				<h2 class="nomarblock">REDUCED MOTiON</h2>
-				<p class="nomarblock">Reduced motion, an experimental site feature, has been enabled, because reduced motion is enabled in your device settings. Some widgets may be hidden. I don't think this changes anything outside of the homepage.</p>
-			</div>
-			<div class="section box compat-error" style="display: none;" id="noscript-error">
-				<h2 class="nomarblock">NOSCRiPT</h2>
-				<p class="nomarblock">uh oh! it looks like you don't have javascript support! no worries, i have made some small changes to make your browsing experience slightly better. i love you too.<br>note that some things still may not work.</p>
-			</div>
-			<div class="compat-error box reducedVisible contrastVisible transparentVisible" id="compat-table">
-				<h2>ACCESSiBiLiTY FEATURES</h2>
-				<p>the following accessibility features are enabled:</p>
-				<ul>
-					<li class="reducedVisible">Reduced Motion</li>
-					<li class="contrastVisible">Increased Contrast</li>
-					<li class="transparentVisible">Reduced Transparency</li>
-				</ul>
-				<p>please note that just because a feature is enabled doesn't mean the entire site is compatible with it. these features are still a work in progress</p>
-			</div>
-			<div class="row" id="infamous" style="display: grid; gap: 10px;">
-				<div class="box d-sec-tl" style="grid-column: 1 / 3; grid-row: 1; margin-bottom: 0;">
-					<p class="headText nomarblock" style="text-align: center; font-size: 18px;">now welcoming visitor #<span id="visitorscount">######</span>!</p>
-				</div>
-				<div id="status-cafe-box" class="box noscript-hidden d-sec-r m-sec-t" style="grid-column: 3 / 3; grid-row: 1 / 3;">
-					<div style="display: flex; flex-wrap: wrap;" id="statusCard">
-						<div id="statuscafe" style="padding: 5px; background: linear-gradient(0deg, #ffb4a8 0%, #ffd4a8 100%); width: 100%; min-height: 93px;">
-							<a href="https://status.cafe/users/cringe" class="noBg" target="_blank">
-								<div id="statuscafe-username">10 years ago</div>
-								<div id="statuscafe-content">this is still being loaded, give me a second</div>
-							</a>
-						</div>
-						<script src="https://status.cafe/current-status.js?name=cringe" defer></script>
-						<img src="media/home/status.png" width="200" height="220" loading="lazy" style="z-index: 1;" onmouseover="this.src ='media/home/statusy.png'" onmouseleave="this.src = 'media/home/status.png'">
-					</div>
-				</div>
-				<div class="box d-sec-bl m-sec-b" style="grid-column: 1 / 3; grid-row: 2;">
-					<p>welcome to the very first website on the internet. the revolution is finally here, and its only just begun! <img src='/media/emoji/rofl.gif' loading='lazy' alt='rofl emoji'><br>this is just a place where i put my various works and ramblings, use the bar at the bottom right of your screen to explore around.</p>
-					<p>since we're both here, why not get to know each other a <em>little</em> better <img src='/media/emoji/glasses.gif' loading='lazy' alt='glasses emoji'>? check out the <a href="aboutme.html">about me</a> page to learn more about somebody you've never met and likely never will meet <img src='/media/emoji/unamused.gif' loading='lazy' alt='unamused emoji'></p>
-				</div>
-			</div>
-			{% include "partials/interests/websites/sotfp/widget.njk" %}
-			<div class="row">
-				<div class="box sec-l">
-					<h3>FRiENDS</h3>
-					<div class="dabuttons">
-						<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
-						<a href="https://parafungal.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/parafungal.gif" loading="lazy" alt="Parafungal"></a>
-						<a href="https://mari.blue" target="_blank"><img src="interests/websites/img/button/naybor/mariiful.gif" loading="lazy" alt="mari"></a>
-					</div>
-					<div class="dalist">
-						<a href="https://crypticworm.neocities.org" target="_blank"><img src="interests/websites/img/ficon/default.png" loading="lazy" alt="">crypticworm</a>
-					</div>
-				</div>
-				<div class="box lefty sec-r">
-					<h3>FEATURED</h3>
-					<div class="dabuttons">
-						<iframe src="https://incr.easrng.net/badge?key=wiichicken" title="increment badge" width="88" height="31" frameborder="0" style="padding: 2px; box-sizing: content-box;"></iframe>
-						<a href="https://corvidae.digital" target="_blank"><img src="interests/websites/img/button/corvidae.gif" loading="lazy" alt="CORViDAE DiGiTAL"></a>
-						<a href="https://bulltown.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/bulltownneo.png" loading="lazy" alt="bulltown.neo"></a>
-						<a href="https://catbyte.site/" target="_blank"><img src="interests/websites/img/button/catbyte.png" alt="catbyte.site"></a>
-						<a href="https://kiwimeowo.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/kiwimeow.png" loading="lazy" alt="Cosmos"></a>
-						<a href="https://psychicnewborn.neocities.org" target="_blank"><img loading="lazy" src="interests/websites/img/button/psychic.gif" alt="Psychic Newborn"></a>
-						<a href="https://charpine.neocities.org" target="_blank"><img src="interests/websites/img/button/artists/charpine.gif" loading="lazy" alt="Charpine"></a>
-						<a href="https://bruno-rubim.neocities.org/" target="_blank"><img src="interests/websites/img/button/bruno-button.gif" loading="lazy" alt="Bruno Rubim"></a>
-					</div>
-					<div class="dalist">
-						<a href="https://e4494s.neocities.org" target="_blank"><img src="interests/websites/img/ficon/game/e4494s.png" loading="lazy">e4494s</a>
-						<a href="https://awe921.neocities.org" target="_blank"><img src="media/buttons/favicon/awehead.png" loading="lazy">awe921</a>
-						<a href="https://cattafang.neocities.org" target="_blank"><img src="media/buttons/favicon/cattafang.ico" loading="lazy">cattafang</a>
-					</div>
-				</div>
-			</div>
-			<a href="interests/websites/directory.html"><button class="bring wide-button">DiRECTORY</button></a>
-			<div class="row">
-				<div class="box d-sec-l m-sec-t" style="width: 50%;">
-					<h2>latestArt</h2>
-					<div style="display: flex; flex-direction: column; align-items: center;">
-						<div style="display: flex; align-items: center; margin-right: 10px;">
-							<img id="artfeat" class="boxyless" src="https://i.imgur.com/oojjWol.jpeg" width="100px" height="100px" style="image-rendering: pixelated; display: inline-block; box-shadow: 0px 0px 5px 0px #000000b3; --b-radius-bl: 5;" loading="lazy">
-							<div class="afterfeat" style="height: 95px; background: linear-gradient(45deg, #6100bd 0%, #e3e800 100%); width: 8px; opacity: 0.7;"></div>
-							<div class="afterfeat" style="height: 90px; width: 4px; background: linear-gradient(45deg, #bd0080 0%, #00e8b3 100%); opacity: 0.5;"></div>
-						</div>
-						<div style="width: 100%;">
-							<p class="nomarblock">whatever i drew. idc enough to move it i just need to update this</p>
-							<a class="noBg" style="width: min-content;" href="creative/gallery/"><button class="bring">View</button></a>
-						</div>
-					</div>
-				</div>
-				<div class="lefty">
-					<div class="box d-sec-tr m-sec-b">
-						<h2>curr.FavSong</h2>
-						<div style="display: flex;">
-							<img src="https://lastfm.freetls.fastly.net/i/u/300x300/f990e852bb7c42c7c2dd17da86a89974.jpg" width="100px" height="100px" style="margin-right: 10px; border: 1px solid #cde5ff; z-index: 1;">
-							<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/300x300/f990e852bb7c42c7c2dd17da86a89974.jpg" width="100px" height="100px" style="margin-right: 10px; opacity: 0.5;">
-							<div style="width: 100%;">
-								<p class="nomarblock"><strong>Class Historian</strong></p>
-								<p class="nomarblock">BRONCHO</p>
-								<a class="bring" href="interests/music/favarchive">Current Fav Song Archive</a>
-							</div>
-						</div>
-					</div>
-					<div class="box sec-br" style="padding: 0;">
-						<iframe src="resources/widgets/home/np.html" id="scrobbleWidget" scrolling="no" class="boxyless"></iframe>
-					</div>
-				</div>
-			</div>
-			<div class="box sec-t">
-				<h2>toDo</h2>
-				<ul>
-					<li>put all art
-						<ul>
-							<li>finish character pages</li>
-						</ul>
-					</li>
-					<li>make a guestbook archive</li>
-					<li>improve line heights</li>
-					<li>complete <a href="more/tools/snippets/">snippets</a> page</li>
-					<li>add interests</li>
-				</ul>
-				<p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
-			</div>
-			<div class="box sec-b">
-				<p>what are you supposed to put on your homepage</p>
-			</div>
-			<div class="box sec-t">
-				<h2>pets</h2>
-			</div>
-			<div class="row">
-				<div class="box middleBoy d-sec-bl" style="background-color: #001e2e9b; --border: #00a6ff !important; min-width: 200px;">
-					<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!" width="120px" height="144px"></a>
-				</div>
-				<div class="box lefty mobileHidden reducedHidden noscript-hidden" id="navlink" style="padding: 0; --border: #bec9c8 !important;">
-					<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
-				</div>
-				<div class="box middleBoy lefty d-sec-br m-sec-b" style="width: 100%; background-color: #00201a9b; --border: #00ffbf !important; flex-direction: column;">
-					<img src="media/home/pets/chatt/chatt.png" loading="lazy" onmouseover="this.src ='media/home/pets/chatt/blink.png'" onmouseleave="this.src = 'media/home/pets/chatt/chatt.png'">
-					<p class="nomarblock" style="color: #a0f2dd;">adopted from <a href="https://neonriser.neocities.org/adopt" target="_blank" style="color: #aacbe4; --dark-primary: #afd18c; --dark-tertiary: #ffb1c0;">Neonriser</a>!</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="box sec-tl" style="width: 100%;">
-					<h2>siteUpdates</h2>
-					<h3 style="margin: 0; font-size: 15px;"><strong>iT LOOKS DiFFERENT</strong></h3>
-					<p id="updatedate">August 17, 2025</p>
-				</div>
-				<div class="box lefty sec-tr" style="text-align: center; padding: 0; width: 150px;">
-					<p class="headText nomarblock" id="upHeader">LAST UPDATE</p>
-					<p class="headText nomarblock" id="upMonth">----</p>
-					<p class="headText nomarblock" id="upDate">##</p>
-					<p class="nomarblock headText" id="upYear">2025</p>
-				</div>
-			</div>
-			<div class="box">
-				<p>the navigation bar looks different i guess</p>
-			</div>
-			<div class="box sec-b">
-				<p>site updates almost every sunday, blog posts and content updates whenever</p>
-				<a class="bring" href="more/archive/blog/updates.html">Site Update Archive</a>
-			</div>
-			<div id="mybum" class="box sec-full" style="--border: #9462bd;">
-				<h2>myButton</h2>
-				<div style="display: flex; align-items: center;">
-					<img loading="lazy" alt="" src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
-					<div style="margin-left: 5px;">
-						<button id="copyLink" onclick="copyLinkToPage();" class="bring noscript-hidden" style="margin-bottom: 5px;">copy to clipboard</button>
-						<a class="bring" href="resources/widgets/home/med/embed.txt" target="_blank" style="font-size: 13.3px; margin-bottom: 5px;">script not working?</a>
-						<a class="bring" href="creative/graphics/buttons/index.html#home" target="_blank" style="font-size: 13.3px;">more of my buttons</a>
-					</div>
-				</div>
-				<script>
-					async function copyLinkToPage() {
-						await navigator.clipboard.writeText('<a href="https://wiggle.monster"><img loading="lazy" src="https://wiggle.monster/button.gif" style="image-rendering: pixelated;" alt="Visit WiiCHiCKEN\'s website"></a>');
-						window.alert('done!');
-					}
-				</script>
-				<p style="margin-block-start: 0; margin-block-end: 0;">hotlink, or don't hotlink! the choice is yours!</p>
-			</div>
-			<div id="signguest" class="box sec-full" style="--border: #ff8875;">
-				<p class="middleBoy"><img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt="">Remember: <a class="noBg" style="cursor: pointer !important; margin-right: 10px;" href="guestbook.html">sign the guestbook</a> before you go<img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt=""></p>
-			</div>
-			<div class="footer page-bottom">
-				<div>
-					<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2025</p>
-					<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
-				</div>
-				<div id="cornerInBox">
-					<a class="noBg boxy sec-bl" href="credits.html">credits</a>
-					<a class="noBg boxy" href="sitemap.html">sitemap</a>
-					<a class="noBg boxy" href="https://github.com/telnettrauma/wiichicken-neocities/tree/live" target="_blank">GitHub</a>
-					<a class="noBg boxy sec-br" style="margin-right: 0;" href="https://cd5k.net/tau/">&tau;</a>
-				</div>
-			</div>
-		</main>
+		</div>
 	</div>
-</div>
+	<div id="alerta" class="box" style="padding: 0; --border: red !important; color: white; --b-radius: 5;"></div>
+	<script>
+		const alertaChance = Math.floor(Math.random() * 10);
+		if (alertaChance === 3) {
+			const alertList = [ "THE NATIONAL WEATHER SERVICE HAS ISSUED A SEVERE THUNDERSTORM WARNING IN EFFECT FROM 12:23 PM UNTIL 2:00 PM. FOR YOUR PROTECTION MOVE TO AN INTERIOR ROOM ON THE LOWEST FLOOR OF A BUILDING.", "THE NATIONAL WEATHER SERVICE IN BIRMINGHAM HAS ISSUED A TORNADO WARNING UNTIL 2:45 AM. AT 2:06 AM CST...THE NATIONAL WEATHER SERVICE INDICATED A SEVERE THUNDERSTORM CAPABLE OF PRODUCING A TORNADO. THIS DANGEROUS STORM WAS LOCATED NEAR MEMPHIS...OR 8 MILES SOUTHWEST OF PICKENSVILLE... AND MOVING NORTHEAST AT 45 MPH. TORNADOES ARE DIFFICULT TO SEE AND CONFIRM AT NIGHT. TAKE COVER NOW.", "THE NATIONAL WEATHER SERVICE HAS ISSUED A SPECIAL MARINE WARNING UNTIL 9:15 AM. AT 7:13 AM EDT...DOPPLER RADAR INDICATED A LINE OF THUNDERSTORMS... CAPABLE OF PRODUCING DANGEROUS WINDS IN EXCESS OF 50 KNOTS AND LARGE HAIL FROM 24 NM NORTHWEST OF ALABASTER TO 43 NM SOUTHWEST OF ALABASTER...MOVING EAST AT 35 KNOTS. MARINERS CAN EXPECT GUSTY WINDS...LARGE HAIL...HIGH WAVES...DANGEROUS LIGHTNING...AND HEAVY RAINS. BOATERS SHOULD SEEK SAFE HARBOR IMMEDIATELY...UNTIL THESE STORMS PASS.", "A civil authority has issued A LOCAL AREA EMERGENCY for the following counties or areas: Edgefield, SC; at 5:40 PM on SEP 30, 2024 Effective until 8:40 PM. Message from IPAWSCAP. Edgefield County mandatory curfew from Monday, September 30, at 9 pm to Tuesday, October 1, at 6 am. Essential workers for local businesses/services and responders will be exempt from this curfew. Road conditions are DANGEROUS due to downed power lines and trees. Do NOT travel after 9 pm.", "A civil authority has issued A 911 TELEPHONE OUTAGE EMERGENCY for the following counties or areas: Aiken, SC; at 3:12 PM on SEP 30, 2024 Effective until 11:12 PM. Message from IPAWSCAP. URGENT MESSAGE. From Aiken County. AT&T customers attempting to dial 9-1-1 in the Aiken County and surrounding area are EXPERIENCING TECHNICAL DIFFICULTIES and are UNABLE to make wireless calls to 9-1-1. Please find other alternative methods to communicate to 9-1-1 or call (803) 642-1751.", "A broadcast or cable system has issued A PRACTICE/DEMO WARNING for the following counties or areas: Norfolk, VA; at 1:05 PM on OCT 2, 2024 Effective until 4:05 PM. Message from TGR/DAS."];
+			const selectedAlert = alertList[Math.floor(Math.random() * alertList.length)];
+			document.getElementById("alerta").innerHTML = "<marquee scrollamount='10'>" + selectedAlert + "</marquee>";
+			document.getElementById("alerta").style.display = "block";
+		}
+	</script>
+	<div class="mobileVisible section box compat-error">
+		<h2 class="nomarblock">MOBiLE MODE</h2>
+		<p class="nomarblock">Because you are on a small screen, a few adjustments have been made for mobile. This site is still desktop designed, but your experience on a mobile device should hopefully still be less malarky. Note that layouts and designs will be different than desktop.</p>
+	</div>
+	<div class="reducedVisible section box compat-error">
+		<h2 class="nomarblock">REDUCED MOTiON</h2>
+		<p class="nomarblock">Reduced motion, an experimental site feature, has been enabled, because reduced motion is enabled in your device settings. Some widgets may be hidden. I don't think this changes anything outside of the homepage.</p>
+	</div>
+	<div class="section box compat-error" style="display: none;" id="noscript-error">
+		<h2 class="nomarblock">NOSCRiPT</h2>
+		<p class="nomarblock">uh oh! it looks like you don't have javascript support! no worries, i have made some small changes to make your browsing experience slightly better. i love you too.<br>note that some things still may not work.</p>
+	</div>
+	<div class="compat-error box reducedVisible contrastVisible transparentVisible" id="compat-table">
+		<h2>ACCESSiBiLiTY FEATURES</h2>
+		<p>the following accessibility features are enabled:</p>
+		<ul>
+			<li class="reducedVisible">Reduced Motion</li>
+			<li class="contrastVisible">Increased Contrast</li>
+			<li class="transparentVisible">Reduced Transparency</li>
+		</ul>
+		<p>please note that just because a feature is enabled doesn't mean the entire site is compatible with it. these features are still a work in progress</p>
+	</div>
+	<div class="row" id="infamous" style="display: grid; gap: 10px;">
+		<div class="box d-sec-tl" style="grid-column: 1 / 3; grid-row: 1; margin-bottom: 0;">
+			<p class="headText nomarblock" style="text-align: center; font-size: 18px;">now welcoming visitor #<span id="visitorscount">######</span>!</p>
+		</div>
+		<div id="status-cafe-box" class="box noscript-hidden d-sec-r m-sec-t" style="grid-column: 3 / 3; grid-row: 1 / 3;">
+			<div style="display: flex; flex-wrap: wrap;" id="statusCard">
+				<div id="statuscafe" style="padding: 5px; background: linear-gradient(0deg, #ffb4a8 0%, #ffd4a8 100%); width: 100%; min-height: 93px;">
+					<a href="https://status.cafe/users/cringe" class="noBg" target="_blank">
+						<div id="statuscafe-username">10 years ago</div>
+						<div id="statuscafe-content">this is still being loaded, give me a second</div>
+					</a>
+				</div>
+				<script src="https://status.cafe/current-status.js?name=cringe" defer></script>
+				<img src="media/home/status.png" width="200" height="220" loading="lazy" style="z-index: 1;" onmouseover="this.src ='media/home/statusy.png'" onmouseleave="this.src = 'media/home/status.png'">
+			</div>
+		</div>
+		<div class="box d-sec-bl m-sec-b" style="grid-column: 1 / 3; grid-row: 2;">
+			<p>welcome to the very first website on the internet. the revolution is finally here, and its only just begun! <img src='/media/emoji/rofl.gif' loading='lazy' alt='rofl emoji'><br>this is just a place where i put my various works and ramblings, use the bar at the bottom right of your screen to explore around.</p>
+			<p>since we're both here, why not get to know each other a <em>little</em> better <img src='/media/emoji/glasses.gif' loading='lazy' alt='glasses emoji'>? check out the <a href="aboutme.html">about me</a> page to learn more about somebody you've never met and likely never will meet <img src='/media/emoji/unamused.gif' loading='lazy' alt='unamused emoji'></p>
+		</div>
+	</div>
+	{% include "partials/interests/websites/sotfp/widget.njk" %}
+	<div class="row">
+		<div class="box sec-l">
+			<h3>FRiENDS</h3>
+			<div class="dabuttons">
+				<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
+				<a href="https://parafungal.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/parafungal.gif" loading="lazy" alt="Parafungal"></a>
+				<a href="https://mari.blue" target="_blank"><img src="interests/websites/img/button/naybor/mariiful.gif" loading="lazy" alt="mari"></a>
+			</div>
+			<div class="dalist">
+				<a href="https://crypticworm.neocities.org" target="_blank"><img src="interests/websites/img/ficon/default.png" loading="lazy" alt="">crypticworm</a>
+			</div>
+		</div>
+		<div class="box lefty sec-r">
+			<h3>FEATURED</h3>
+			<div class="dabuttons">
+				<iframe src="https://incr.easrng.net/badge?key=wiichicken" title="increment badge" width="88" height="31" frameborder="0" style="padding: 2px; box-sizing: content-box;"></iframe>
+				<a href="https://corvidae.digital" target="_blank"><img src="interests/websites/img/button/corvidae.gif" loading="lazy" alt="CORViDAE DiGiTAL"></a>
+				<a href="https://bulltown.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/bulltownneo.png" loading="lazy" alt="bulltown.neo"></a>
+				<a href="https://catbyte.site/" target="_blank"><img src="interests/websites/img/button/catbyte.png" alt="catbyte.site"></a>
+				<a href="https://kiwimeowo.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/kiwimeow.png" loading="lazy" alt="Cosmos"></a>
+				<a href="https://psychicnewborn.neocities.org" target="_blank"><img loading="lazy" src="interests/websites/img/button/psychic.gif" alt="Psychic Newborn"></a>
+				<a href="https://charpine.neocities.org" target="_blank"><img src="interests/websites/img/button/artists/charpine.gif" loading="lazy" alt="Charpine"></a>
+				<a href="https://bruno-rubim.neocities.org/" target="_blank"><img src="interests/websites/img/button/bruno-button.gif" loading="lazy" alt="Bruno Rubim"></a>
+			</div>
+			<div class="dalist">
+				<a href="https://e4494s.neocities.org" target="_blank"><img src="interests/websites/img/ficon/game/e4494s.png" loading="lazy">e4494s</a>
+				<a href="https://awe921.neocities.org" target="_blank"><img src="media/buttons/favicon/awehead.png" loading="lazy">awe921</a>
+				<a href="https://cattafang.neocities.org" target="_blank"><img src="media/buttons/favicon/cattafang.ico" loading="lazy">cattafang</a>
+			</div>
+		</div>
+	</div>
+	<a href="interests/websites/directory.html"><button class="bring wide-button">DiRECTORY</button></a>
+	<div class="row">
+		<div class="box d-sec-l m-sec-t" style="width: 50%;">
+			<h2>latestArt</h2>
+			<div style="display: flex; flex-direction: column; align-items: center;">
+				<div style="display: flex; align-items: center; margin-right: 10px;">
+					<img id="artfeat" class="boxyless" src="https://i.imgur.com/oojjWol.jpeg" width="100px" height="100px" style="image-rendering: pixelated; display: inline-block; box-shadow: 0px 0px 5px 0px #000000b3; --b-radius-bl: 5;" loading="lazy">
+					<div class="afterfeat" style="height: 95px; background: linear-gradient(45deg, #6100bd 0%, #e3e800 100%); width: 8px; opacity: 0.7;"></div>
+					<div class="afterfeat" style="height: 90px; width: 4px; background: linear-gradient(45deg, #bd0080 0%, #00e8b3 100%); opacity: 0.5;"></div>
+				</div>
+				<div style="width: 100%;">
+					<p class="nomarblock">whatever i drew. idc enough to move it i just need to update this</p>
+					<a class="noBg" style="width: min-content;" href="creative/gallery/"><button class="bring">View</button></a>
+				</div>
+			</div>
+		</div>
+		<div class="lefty">
+			<div class="box d-sec-tr m-sec-b">
+				<h2>curr.FavSong</h2>
+				<div style="display: flex;">
+					<img src="https://lastfm.freetls.fastly.net/i/u/300x300/f990e852bb7c42c7c2dd17da86a89974.jpg" width="100px" height="100px" style="margin-right: 10px; border: 1px solid #cde5ff; z-index: 1;">
+					<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/300x300/f990e852bb7c42c7c2dd17da86a89974.jpg" width="100px" height="100px" style="margin-right: 10px; opacity: 0.5;">
+					<div style="width: 100%;">
+						<p class="nomarblock"><strong>Class Historian</strong></p>
+						<p class="nomarblock">BRONCHO</p>
+						<a class="bring" href="interests/music/favarchive">Current Fav Song Archive</a>
+					</div>
+				</div>
+			</div>
+			<div class="box sec-br" style="padding: 0;">
+				<iframe src="resources/widgets/home/np.html" id="scrobbleWidget" scrolling="no" class="boxyless"></iframe>
+			</div>
+		</div>
+	</div>
+	<div class="box sec-t">
+		<h2>toDo</h2>
+		<ul>
+			<li>put all art
+				<ul>
+					<li>finish character pages</li>
+				</ul>
+			</li>
+			<li>make a guestbook archive</li>
+			<li>improve line heights</li>
+			<li>complete <a href="more/tools/snippets/">snippets</a> page</li>
+			<li>add interests</li>
+		</ul>
+		<p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
+	</div>
+	<div class="box sec-b">
+		<p>what are you supposed to put on your homepage</p>
+	</div>
+	<div class="box sec-t">
+		<h2>pets</h2>
+	</div>
+	<div class="row">
+		<div class="box middleBoy d-sec-bl" style="background-color: #001e2e9b; --border: #00a6ff !important; min-width: 200px;">
+			<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!" width="120px" height="144px"></a>
+		</div>
+		<div class="box lefty mobileHidden reducedHidden noscript-hidden" id="navlink" style="padding: 0; --border: #bec9c8 !important;">
+			<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
+		</div>
+		<div class="box middleBoy lefty d-sec-br m-sec-b" style="width: 100%; background-color: #00201a9b; --border: #00ffbf !important; flex-direction: column;">
+			<img src="media/home/pets/chatt/chatt.png" loading="lazy" onmouseover="this.src ='media/home/pets/chatt/blink.png'" onmouseleave="this.src = 'media/home/pets/chatt/chatt.png'">
+			<p class="nomarblock" style="color: #a0f2dd;">adopted from <a href="https://neonriser.neocities.org/adopt" target="_blank" style="color: #aacbe4; --dark-primary: #afd18c; --dark-tertiary: #ffb1c0;">Neonriser</a>!</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="box sec-tl" style="width: 100%;">
+			<h2>siteUpdates</h2>
+			<h3 style="margin: 0; font-size: 15px;"><strong>iT LOOKS DiFFERENT</strong></h3>
+			<p id="updatedate">August 17, 2025</p>
+		</div>
+		<div class="box lefty sec-tr" style="text-align: center; padding: 0; width: 150px;">
+			<p class="headText nomarblock" id="upHeader">LAST UPDATE</p>
+			<p class="headText nomarblock" id="upMonth">----</p>
+			<p class="headText nomarblock" id="upDate">##</p>
+			<p class="nomarblock headText" id="upYear">2025</p>
+		</div>
+	</div>
+	<div class="box">
+		<p>the navigation bar looks different i guess</p>
+	</div>
+	<div class="box sec-b">
+		<p>site updates almost every sunday, blog posts and content updates whenever</p>
+		<a class="bring" href="more/archive/blog/updates.html">Site Update Archive</a>
+	</div>
+	<div id="mybum" class="box sec-full" style="--border: #9462bd;">
+		<h2>myButton</h2>
+		<div style="display: flex; align-items: center;">
+			<img loading="lazy" alt="" src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
+			<div style="margin-left: 5px;">
+				<button id="copyLink" onclick="copyLinkToPage();" class="bring noscript-hidden" style="margin-bottom: 5px;">copy to clipboard</button>
+				<a class="bring" href="resources/widgets/home/med/embed.txt" target="_blank" style="font-size: 13.3px; margin-bottom: 5px;">script not working?</a>
+				<a class="bring" href="creative/graphics/buttons/index.html#home" target="_blank" style="font-size: 13.3px;">more of my buttons</a>
+			</div>
+		</div>
+		<script>
+			async function copyLinkToPage() {
+				await navigator.clipboard.writeText('<a href="https://wiggle.monster"><img loading="lazy" src="https://wiggle.monster/button.gif" style="image-rendering: pixelated;" alt="Visit WiiCHiCKEN\'s website"></a>');
+				window.alert('done!');
+			}
+		</script>
+		<p style="margin-block-start: 0; margin-block-end: 0;">hotlink, or don't hotlink! the choice is yours!</p>
+	</div>
+	<div id="signguest" class="box sec-full" style="--border: #ff8875;">
+		<p class="middleBoy"><img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt="">Remember: <a class="noBg" style="cursor: pointer !important; margin-right: 10px;" href="guestbook.html">sign the guestbook</a> before you go<img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt=""></p>
+	</div>
+	<div class="footer page-bottom">
+		<div>
+			<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2025</p>
+			<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
+		</div>
+		<div id="cornerInBox">
+			<a class="noBg boxy sec-bl" href="credits.html">credits</a>
+			<a class="noBg boxy" href="sitemap.html">sitemap</a>
+			<a class="noBg boxy" href="https://github.com/telnettrauma/wiichicken-neocities/tree/live" target="_blank">GitHub</a>
+			<a class="noBg boxy sec-br" style="margin-right: 0;" href="https://cd5k.net/tau/">&tau;</a>
+		</div>
+	</div>
+</main>
 <script>
 function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms || DEF_DELAY));}
 document.addEventListener('DOMContentLoaded', function() {
