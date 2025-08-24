@@ -760,16 +760,6 @@
 				</div>
 			</div>
 		</main>
-		<aside id="rightSidebar" class="noscript-hidden">
-			<div class="sidebox" style="--side-bg: #00201c99; --side-text: #75f8e3; --border: #55dbc7;" id="visitorcount">
-				<div class="sidehead" style="color: #83d5c6;">
-					<p class="boxy" style="background: linear-gradient(90deg, #005047 0%, #00502b 100%);">ViSiTOR #</p>
-				</div>
-				<div class="sidebox-content boxy middleBoy" id="googgo" style="flex-wrap: wrap; padding: 2px;">
-					<p class="nomarblock">HiTS: <code><span id="hitcount">000000</span></code></p>
-				</div>
-			</div>
-		</aside>
 	</div>
 </div>
 <script>
@@ -821,7 +811,6 @@ xhttp.onreadystatechange = async function() {
 			document.getElementById('upDate').innerHTML = date_obj.getDate();
 			document.getElementById('upYear').innerHTML = date_obj.getFullYear();
 		}
-		document.getElementById('hitcount').innerHTML = site_data.info.hits;
 		await sleep(500);
 		let daBob = site_data.info.views / 20;
 		let setNew = 0;
