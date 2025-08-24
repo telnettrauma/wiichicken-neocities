@@ -164,6 +164,27 @@
 			96% {background-color: #570066; color:#faabff;}
 			100% {background-color: #690100; color:#ffb4a8;}
 		}
+		#upHeader {
+			font-size: 14px;
+			background-color: #231918;
+			color: #fff8f7;
+		}
+		#upMonth {
+			font-size: 16px;
+			background-color: #93000a;
+			color: #ffdad6;
+			padding: 2px;
+		}
+		#upDate {
+			background-color: #ede0dd;
+			color: #201a19;
+			font-size: 30px;
+		}
+		#upYear {
+			background-color: #d8c2be;
+			color: #534341;
+			font-size: 15px;
+		}
 		#random-message:hover, #cornerInBox a:hover {
 			color: white;
 			box-shadow: none;
@@ -680,10 +701,18 @@
 					<p class="nomarblock" style="color: #a0f2dd;">adopted from <a href="https://neonriser.neocities.org/adopt" target="_blank" style="color: #aacbe4; --dark-primary: #afd18c; --dark-tertiary: #ffb1c0;">Neonriser</a>!</p>
 				</div>
 			</div>
-			<div class="box sec-t">
-				<h2>siteUpdates</h2>
-				<h3 style="margin: 0; font-size: 15px;"><strong>iT LOOKS DiFFERENT</strong></h3>
-				<p id="updatedate">August 17, 2025</p>
+			<div class="row">
+				<div class="box sec-tl" style="width: 100%;">
+					<h2>siteUpdates</h2>
+					<h3 style="margin: 0; font-size: 15px;"><strong>iT LOOKS DiFFERENT</strong></h3>
+					<p id="updatedate">August 17, 2025</p>
+				</div>
+				<div class="box lefty sec-tr" style="text-align: center; padding: 0; width: 150px;">
+					<p class="headText nomarblock" id="upHeader">LAST UPDATE</p>
+					<p class="headText nomarblock" id="upMonth">----</p>
+					<p class="headText nomarblock" id="upDate">##</p>
+					<p class="nomarblock headText" id="upYear">2025</p>
+				</div>
 			</div>
 			<div class="box">
 				<p>the navigation bar looks different i guess</p>
@@ -742,16 +771,6 @@
 				</div>
 				<div class="sidebox-content boxy middleBoy" id="googgo" style="flex-wrap: wrap; padding: 2px;">
 					<p class="nomarblock">HiTS: <code><span id="hitcount">000000</span></code></p>
-				</div>
-			</div>
-			<div class="sidebox" id="lastUpdated" style="overflow: visible; margin: 0; --border: #f5ddda;">
-				<div class="sidehead" style="display: flex; color: #f5ddda;">
-					<p class="boxy" style="background: linear-gradient(90deg, #534341 0%, #665949 100%);">UPDATED</p>
-				</div>
-				<div class="sidebox-content boxy" style="text-align: center; padding: 0;">
-					<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;">----</p>
-					<p class="headText nomarblock" id="upDate" style="background-color: #ede0dd; color: #201a19; font-size: 50px;">##</p>
-					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;">2025</p>
 				</div>
 			</div>
 		</aside>
