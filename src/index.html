@@ -22,29 +22,12 @@
 		}
 		body {color: white;}
 		h1, h2, h3, h4 {margin: 0;}
-		aside {
-			width: 300px;
-			padding: 0;
-			gap: 10px;
-		}
 		iframe {border: none;}
-		#leftSidebar, #rightSidebar {transition-duration: 0.5s;}
-		#leftSidebar {
-			order: 1;
-			z-index: 1;
-		}
-		#leftSidebar .sidebox {margin: 10px 0 10px 10px;}
-		#rightSidebar {order: 3;}
-		#rightSidebar .sidebox {margin: 10px 10px 10px 0;}
-		.main {
-			width: 650px;
-			margin: auto;
-		}
 		main {
-			order: 2;
-			flex: 1;
 			min-width: 670px;
 			margin-top: 0;
+			width: 650px;
+			margin: auto;
 		}
 		.row {
 			display: flex;
@@ -137,23 +120,6 @@
 			border: 1px solid #1a1c1e;
 		}
 		#fri2 {display: none;}
-		@media only screen and (min-width: 900px) {
-			#frens {animation: pooFart 1.1s;}
-			#moresites {animation: pooFart 1.2s;}
-			#piclog {animation: fartPoo 1.1s;}
-			#scrobblebox {animation: fartPoo 1.2s;}
-			#visitorcount {animation: fartPoo 1.3s;}
-			#lastUpdated {animation: fartPoo 1.4s;}
-			#side-flood {animation: fartPoo 1.5s;}
-		}
-		@keyframes pooFart {
-			from {transform: translateX(-1000px)}
-			to {transform: translateX(0);}
-		}
-		@keyframes fartPoo {
-			from {transform: translateX(1000px);}
-			to {transform: translateX(0);}
-		}
 		#randring:hover {animation: rainbow 1s infinite;}
 		@keyframes dcAnim {
 			0% {filter: hue-rotate(0deg);}
@@ -180,6 +146,27 @@
 			84% {background-color: #41008b; color:#d5bbff;}
 			96% {background-color: #570066; color:#faabff;}
 			100% {background-color: #690100; color:#ffb4a8;}
+		}
+		#upHeader {
+			font-size: 14px;
+			background-color: #231918;
+			color: #fff8f7;
+		}
+		#upMonth {
+			font-size: 16px;
+			background-color: #93000a;
+			color: #ffdad6;
+			padding: 2px;
+		}
+		#upDate {
+			background-color: #ede0dd;
+			color: #201a19;
+			font-size: 30px;
+		}
+		#upYear {
+			background-color: #d8c2be;
+			color: #534341;
+			font-size: 15px;
 		}
 		#random-message:hover, #cornerInBox a:hover {
 			color: white;
@@ -308,38 +295,9 @@
 			display: none;
 			background-color: #750000;
 		}
-		#navig {
-			display: flex;
-			background: linear-gradient(270deg, #ff0000, #00a2ff);
-			padding: 1px;
-		}
-		#navig::before {
-			background-color: unset !important;
-			background: linear-gradient(270deg, #ff0000, #00a2ff) !important;
-		}
-		#navig a, #lonelyNav a {
-			font-family: 'Kode Mono', monospace;
-			padding: 5px 0 5px 0;
-			width: 100%;
-			display: flex;
-			justify-content: center;
-			mix-blend-mode: multiply;
-			background-color: rgb(50, 50, 50) !important;
-			color: white !important;
-		}
-		#navig a::after, #lonelyNav a::after {
-			background: black;
-			height: 3px;
-			mix-blend-mode: unset;
-		}
-		#navig a:hover, #lonelyNav a:hover {
-			background-color: white !important;
-			color: black !important;
-			text-shadow: black 0 0 20px;
-		}
 		#scrobbleWidget {
-			width: 200px;
 			height: 70px;
+			width: 100%;
 			display: flex;
 		}
 		.head {
@@ -377,52 +335,24 @@
 			box-shadow: 0 0 !important;
 		}
 		.bring::after {display: none;}
+		.wide-button {
+			width: 100%;
+			font-size: 25px;
+			margin-bottom: 10px;
+			justify-content: center;
+			padding: 5px;
+		}
 		main .bring {
 			background-color: #392e2c !important;
 			color: #ffedea !important;
 			--border: #857370;
 		}
-		#clockContainer {
-			position: relative;
-			width: 96px;
-			height: 100%;
-			display: inline-block;
+		#statuscafe {
+			color: #561e16 !important;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
 		}
-		#hour, #minute, #second, #thatThingInTheCenterOfaClock {
-			position: absolute;
-			background: #E6E1E5;
-			transform-origin: bottom;
-		}
-		#thatThingInTheCenterOfaClock {
-			width: 4%;
-			height: 4%;
-			top: 48%;
-			bottom: 50%;
-			left: 49%;
-			right: 50%;
-		}
-		#hour {
-			width: 1.8%;
-			height: 25%;
-			top: 25%;
-			left: 50%;
-			opacity: 0.8;
-		}
-		#minute {
-			width: 1.6%;
-			height: 30%;
-			top: 19%;
-			left: 50%;
-			opacity: 0.8;
-		}
-		#second {
-			width: 1%;
-			height: 40%;
-			top: 9%;
-			left: 50%;
-			opacity: 0.8;
-		}
-		#statuscafe {color: #561e16 !important;}
 		#statuscafe-username {
 			text-align: center;
 			font-weight: bold;
@@ -430,6 +360,13 @@
 		}
 		#statuscafe-username a {display: none;}
 		#statuscafe-username, #statuscafe-content {color: #561e16 !important;}
+		#status-cafe-box {
+			display: inline;
+			padding: 0;
+			width: 200px;
+			overflow-y: hidden;
+			max-height: 300px;
+		}
 		.dabuttons {
 			display: flex;
 			justify-items: center;
@@ -458,12 +395,6 @@
 			align-items: center;
 		}
 		#googgo a {background: none !important;}
-		#visitorscount {
-			background: linear-gradient(90deg, #75f8e3 0%, #75f89c 100%);
-			background-clip: text;
-			color: transparent;
-			text-shadow: 0 0 15px #75f8e380;
-		}
 		#mainsection {
 			background-color: #051f22;
 			color: #94f1ff;
@@ -488,16 +419,8 @@
 			filter: blur(25px);
 			object-fit: cover;
 		}
-		@keyframes glowy {
-			0%{box-shadow: 0px 0px 200px 50px #00ffa1bf; --border: #00ffa1;}
-			50%{box-shadow: 0px 0px 200px 50px #007effbf; --border: #007eff;}
-			100%{box-shadow: 0px 0px 200px 50px #00ffa1bf; --border: #00ffa1;}
-		}
 		.mobileVisible {display: none;}
 		/* i hate my life and i wanan die, i aint got no iphone */
-		@media only screen and (min-width: 900px) {
-			main {margin: 10px;}
-		}
 		/* wow iphone */
 		@media only screen and (max-width: 900px) {
 			#flex, aside {flex-wrap: wrap;}
@@ -558,7 +481,6 @@
 				min-height: 50px;
 			}
 			#personSighted {display: flex;}
-			#lonelyNav {margin-left: 0 !important;}
 			#alibaba {
 				align-items: flex-start;
 				margin-left: 5px;
@@ -592,300 +514,230 @@
 	<noscript>
 		<style>
 			#noscript-error, #infamous {display: block !important;}
-			.noscript-hidden, #signguest, #lonelyNav {display: none !important;}
+			.noscript-hidden, #signguest {display: none !important;}
 			#infamous .box {margin-bottom: 10px !important;}
-			#navig {width: 100% !important;}
 		</style>
 	</noscript>
 </head>
 <body>
 {% include "partials/navbar.njk" %}
-<div class="main">
-	<div id="flex">
-		<aside id="leftSidebar">
-			<div id="personSighted">
-				<div class="sidebox" id="frens" style="--side-bg: #29005599; --side-text: #eddcff; --border: #7d24e4;">
-					<div class="sidehead" style="color: #eddcff;">
-						<p class="boxy" style="background: linear-gradient(45deg, #6100bd 0%, #8a00bd 100%);"><strong>FRiENDS</strong></p>
-					</div>
-					<div class="sidebox-content boxy">
-						<div class="dabuttons">
-							<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
-							<a href="https://parafungal.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/parafungal.gif" loading="lazy" alt="Parafungal"></a>
-							<a href="https://mari.blue" target="_blank"><img src="interests/websites/img/button/naybor/mariiful.gif" loading="lazy" alt="mari"></a>
-						</div>
-						<div class="dalist" style="--border: #7d24e4; background-color: #1d1a20; color: #eddcff;">
-							<a href="https://crypticworm.neocities.org" target="_blank"><img src="interests/websites/img/ficon/default.png" loading="lazy" alt="">crypticworm</a>
-						</div>
-					</div>
-				</div>
-				<div class="sidebox" id="moresites" style="--side-bg: #001e3399; --side-text: #cee5ff; --border: #00a6ff;">
-					<div class="sidehead" style="color: #cee5ff;">
-						<p class="boxy" style="background: linear-gradient(45deg, #004a77 0%, #006977 100%);"><strong>MORE SiTES</strong></p>
-					</div>
-					<div class="sidebox-content boxy" style="padding: 0;">
-						<div class="dabuttons">
-							<iframe src="https://incr.easrng.net/badge?key=wiichicken" title="increment badge" width="88" height="31" frameborder="0" style="padding: 2px; box-sizing: content-box;"></iframe>
-							<a href="https://corvidae.digital" target="_blank"><img src="interests/websites/img/button/corvidae.gif" loading="lazy" alt="CORViDAE DiGiTAL"></a>
-							<a href="https://bulltown.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/bulltownneo.png" loading="lazy" alt="bulltown.neo"></a>
-							<a href="https://catbyte.site/" target="_blank"><img src="interests/websites/img/button/catbyte.png" alt="catbyte.site"></a>
-							<a href="https://kiwimeowo.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/kiwimeow.png" loading="lazy" alt="Cosmos"></a>
-							<a href="https://psychicnewborn.neocities.org" target="_blank"><img loading="lazy" src="interests/websites/img/button/psychic.gif" alt="Psychic Newborn"></a>
-							<a href="https://charpine.neocities.org" target="_blank"><img src="interests/websites/img/button/artists/charpine.gif" loading="lazy" alt="Charpine"></a>
-							<a href="https://bruno-rubim.neocities.org/" target="_blank"><img src="interests/websites/img/button/bruno-button.gif" loading="lazy" alt="Bruno Rubim"></a>
-						</div>
-						<div class="dalist" style="--border: #00a6ff; --bg: #181c20; color: #cee5ff; margin: 0 5px 5px 5px;">
-							<a href="https://e4494s.neocities.org" target="_blank"><img src="interests/websites/img/ficon/game/e4494s.png" loading="lazy">e4494s</a>
-							<a href="https://awe921.neocities.org" target="_blank"><img src="media/buttons/favicon/awehead.png" loading="lazy">awe921</a>
-							<a href="https://cattafang.neocities.org" target="_blank"><img src="media/buttons/favicon/cattafang.ico" loading="lazy">cattafang</a>
-							<a href="interests/websites/directory.html">DiRECTORY</a>
-						</div>
-					</div>
+<main>
+	<div class="box head page-top" id="start">
+		<div id="tittle">
+			<div id="logocontent">
+				<p id="thisIsMyName" class="nomarblock mobileVisible headText" style="color: white;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN</p>
+				<div id="wiiLogo" class="mobileHidden" style="image-rendering: pixelated;">
+					<img src="logo.png" loading="lazy">
 				</div>
 			</div>
-		</aside>
-		<main>
-			<div class="box head page-top" id="start">
-				<div id="tittle">
-					<div id="logocontent">
-						<p id="thisIsMyName" class="nomarblock mobileVisible headText" style="color: white;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN</p>
-						<div id="wiiLogo" class="mobileHidden" style="image-rendering: pixelated;">
-							<img src="logo.png" loading="lazy">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="alerta" class="box" style="padding: 0; --border: red !important; color: white; --b-radius: 5;"></div>
-			<script>
-				const alertaChance = Math.floor(Math.random() * 10);
-				if (alertaChance === 3) {
-					const alertList = [ "THE NATIONAL WEATHER SERVICE HAS ISSUED A SEVERE THUNDERSTORM WARNING IN EFFECT FROM 12:23 PM UNTIL 2:00 PM. FOR YOUR PROTECTION MOVE TO AN INTERIOR ROOM ON THE LOWEST FLOOR OF A BUILDING.", "THE NATIONAL WEATHER SERVICE IN BIRMINGHAM HAS ISSUED A TORNADO WARNING UNTIL 2:45 AM. AT 2:06 AM CST...THE NATIONAL WEATHER SERVICE INDICATED A SEVERE THUNDERSTORM CAPABLE OF PRODUCING A TORNADO. THIS DANGEROUS STORM WAS LOCATED NEAR MEMPHIS...OR 8 MILES SOUTHWEST OF PICKENSVILLE... AND MOVING NORTHEAST AT 45 MPH. TORNADOES ARE DIFFICULT TO SEE AND CONFIRM AT NIGHT. TAKE COVER NOW.", "THE NATIONAL WEATHER SERVICE HAS ISSUED A SPECIAL MARINE WARNING UNTIL 9:15 AM. AT 7:13 AM EDT...DOPPLER RADAR INDICATED A LINE OF THUNDERSTORMS... CAPABLE OF PRODUCING DANGEROUS WINDS IN EXCESS OF 50 KNOTS AND LARGE HAIL FROM 24 NM NORTHWEST OF ALABASTER TO 43 NM SOUTHWEST OF ALABASTER...MOVING EAST AT 35 KNOTS. MARINERS CAN EXPECT GUSTY WINDS...LARGE HAIL...HIGH WAVES...DANGEROUS LIGHTNING...AND HEAVY RAINS. BOATERS SHOULD SEEK SAFE HARBOR IMMEDIATELY...UNTIL THESE STORMS PASS.", "A civil authority has issued A LOCAL AREA EMERGENCY for the following counties or areas: Edgefield, SC; at 5:40 PM on SEP 30, 2024 Effective until 8:40 PM. Message from IPAWSCAP. Edgefield County mandatory curfew from Monday, September 30, at 9 pm to Tuesday, October 1, at 6 am. Essential workers for local businesses/services and responders will be exempt from this curfew. Road conditions are DANGEROUS due to downed power lines and trees. Do NOT travel after 9 pm.", "A civil authority has issued A 911 TELEPHONE OUTAGE EMERGENCY for the following counties or areas: Aiken, SC; at 3:12 PM on SEP 30, 2024 Effective until 11:12 PM. Message from IPAWSCAP. URGENT MESSAGE. From Aiken County. AT&T customers attempting to dial 9-1-1 in the Aiken County and surrounding area are EXPERIENCING TECHNICAL DIFFICULTIES and are UNABLE to make wireless calls to 9-1-1. Please find other alternative methods to communicate to 9-1-1 or call (803) 642-1751.", "A broadcast or cable system has issued A PRACTICE/DEMO WARNING for the following counties or areas: Norfolk, VA; at 1:05 PM on OCT 2, 2024 Effective until 4:05 PM. Message from TGR/DAS."];
-					const selectedAlert = alertList[Math.floor(Math.random() * alertList.length)];
-					document.getElementById("alerta").innerHTML = "<marquee scrollamount='10'>" + selectedAlert + "</marquee>";
-					document.getElementById("alerta").style.display = "block";
-				}
-			</script>
-			<nav id="youWillScroll">
-				<div class="row">
-					<div class="box d-sec-l m-sec-t" style="width: 80%; border: none;" id="navig">
-						<a class="noBg" id="a1" href="aboutme.html">ABOUT</a>
-						<a class="noBg" id="a2" href="creative/">ART</a>
-						<a class="noBg" id="a3" href="more/archive/blog/">BLOG</a>
-						<a class="noBg" id="a4" href="interests/">iNTERESTS</a>
-						<a class="noBg" id="a5" href="more">MORE</a>
-					</div>
-					<div class="box noblur d-sec-r m-sec-b" style="padding: 1px; width: 20%; margin-left: 10px; background-color: #bfbfbf; --border: #bfbfbf !important; border: none;" id="lonelyNav">
-						<a class="noBg boxyless d-sec-r m-sec-b" id="a7" href="guestbook.html">GUESTBOOK</a>
-					</div>
-				</div>
-			</nav>
-			<div class="mobileVisible section box compat-error">
-				<h2 class="nomarblock">MOBiLE MODE</h2>
-				<p class="nomarblock">Because you are on a small screen, a few adjustments have been made for mobile. This site is still desktop designed, but your experience on a mobile device should hopefully still be less malarky. Note that layouts and designs will be different than desktop.</p>
-			</div>
-			<div class="reducedVisible section box compat-error">
-				<h2 class="nomarblock">REDUCED MOTiON</h2>
-				<p class="nomarblock">Reduced motion, an experimental site feature, has been enabled, because reduced motion is enabled in your device settings. Some widgets may be hidden. I don't think this changes anything outside of the homepage.</p>
-			</div>
-			<div class="section box compat-error" style="display: none;" id="noscript-error">
-				<h2 class="nomarblock">NOSCRiPT</h2>
-				<p class="nomarblock">uh oh! it looks like you don't have javascript support! no worries, i have made some small changes to make your browsing experience slightly better. i love you too.<br>note that some things still may not work.</p>
-			</div>
-			<div class="compat-error box reducedVisible contrastVisible transparentVisible" id="compat-table">
-				<h2>ACCESSiBiLiTY FEATURES</h2>
-				<p>the following accessibility features are enabled:</p>
-				<ul>
-					<li class="reducedVisible">Reduced Motion</li>
-					<li class="contrastVisible">Increased Contrast</li>
-					<li class="transparentVisible">Reduced Transparency</li>
-				</ul>
-				<p>please note that just because a feature is enabled doesn't mean the entire site is compatible with it. these features are still a work in progress</p>
-			</div>
-			<div class="row" id="infamous" style="display: grid; gap: 10px;">
-				<div class="box mobileHidden noscript-hidden" style="grid-column: 2/3; grid-row: 1; margin-bottom: 0; padding: 0; --border: #E6E1E5; background-color: #1C1B1Fcc;">
-					<div id="clockContainer">
-						<div id="thatThingInTheCenterOfaClock"></div>
-						<div id="hour"></div>
-						<div id="minute"></div>
-						<div id="second"></div>
-					</div>
-				</div>
-				<div class="box d-sec-tl" style="grid-column: 1 / 2; grid-row: 1; margin-bottom: 0;">
-					<p class="nomarblock">welcome... to the very first website that was ever made on the internet! the revolution is here, and its only just getting started!</p>
-				</div>
-				<div class="box noscript-hidden d-sec-r m-sec-t" style="width: 200px; padding: 0; grid-column: 3 / 3; grid-row: 1 / 3; display: inline;">
-					<div style="display: flex; flex-wrap: wrap;" id="statusCard">
-						<div id="statuscafe" style="padding: 5px; background: linear-gradient(0deg, #ffb4a8 0%, #ffd4a8 100%); width: 100%; min-height: 93px;">
-							<a href="https://status.cafe/users/cringe" class="noBg" target="_blank">
-								<div id="statuscafe-username">10 years ago</div>
-								<div id="statuscafe-content">this is still being loaded, give me a second</div>
-							</a>
-						</div>
-						<script src="https://status.cafe/current-status.js?name=cringe" defer></script>
-						<img src="media/home/status.png" width="200" height="220" loading="lazy" style="z-index: 1;" onmouseover="this.src ='media/home/statusy.png'" onmouseleave="this.src = 'media/home/status.png'">
-						<img src="media/home/ditherglow.png" class="blurry" loading="lazy" style="height: 200px; width: 200px; bottom: 0; filter: none !important; opacity: 0.6;">
-					</div>
-				</div>
-				<div class="box d-sec-bl m-sec-b" style="grid-column: 1 / 3; grid-row: 2;">
-					<h2>aboutMe</h2>
-					<ul>
-						<li>i am born and raised american. sad, i know <img src="media/emoji/tear.gif" loading="lazy" alt=""></li>
-						<li>my favorite color is <span style="color: #00ffcc;">aquamarine</span>, but i also like using <span style="color: red;">red</span> and <span style="color: #00ccff;">blue</span> gradients, in a non-patriotic way</li>
-						<li>i have assburgers (ive spelled it like that my whole life im not stopping now)</li>
-						<li>i am feeling <a class="noBg" style="background-color: unset;" href="https://www.imood.com/users/RiPPY" target="_blank"><img style="transform: translateY(3px);" src="https://moods.imood.com/display/uname-RiPPY/fg-ffdad6/trans-1/imood.gif"></a></li>
-					</ul>
-				</div>
-			</div>
-			{% include "partials/interests/websites/sotfp/widget.njk" %}
-			<div class="row">
-				<div class="box d-sec-l m-sec-t" style="width: 50%;">
-					<h2>latestArt</h2>
-					<div style="display: flex;">
-						<div style="display: flex; align-items: center; margin-right: 10px;">
-							<img id="artfeat" class="boxyless" src="https://i.imgur.com/oojjWol.jpeg" width="100px" height="100px" style="image-rendering: pixelated; display: inline-block; box-shadow: 0px 0px 5px 0px #000000b3; --b-radius-bl: 5;" loading="lazy">
-							<div class="afterfeat" style="height: 95px; background: linear-gradient(45deg, #6100bd 0%, #e3e800 100%); width: 8px; opacity: 0.7;"></div>
-							<div class="afterfeat" style="height: 90px; width: 4px; background: linear-gradient(45deg, #bd0080 0%, #00e8b3 100%); opacity: 0.5;"></div>
-						</div>
-						<div style="width: 100%;">
-							<p class="nomarblock">whatever i drew. idc enough to move it i just need to update this</p>
-							<a class="noBg" style="width: min-content;" href="creative/gallery/"><button class="bring">View</button></a>
-						</div>
-					</div>
-				</div>
-				<div class="box lefty d-sec-r m-sec-b" style="width: 50%;">
-					<h2>curr.FavSong</h2>
-					<div style="display: flex;">
-						<img src="https://lastfm.freetls.fastly.net/i/u/300x300/f990e852bb7c42c7c2dd17da86a89974.jpg" width="100px" height="100px" style="margin-right: 10px; border: 1px solid #cde5ff; z-index: 1;">
-						<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/300x300/f990e852bb7c42c7c2dd17da86a89974.jpg" width="100px" height="100px" style="margin-right: 10px; opacity: 0.5;">
-						<div style="width: 100%;">
-							<p class="nomarblock"><strong>Class Historian</strong></p>
-							<p class="nomarblock">BRONCHO</p>
-							<a class="bring" href="interests/music/favarchive">Current Fav Song Archive</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="box sec-t">
-				<h2>toDo</h2>
-				<ul>
-					<li>put all art
-						<ul>
-							<li>finish character pages</li>
-						</ul>
-					</li>
-					<li>make a guestbook archive</li>
-					<li>improve line heights</li>
-					<li>complete <a href="more/tools/snippets/">snippets</a> page</li>
-					<li>add interests</li>
-				</ul>
-				<p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
-			</div>
-			<div class="box sec-b">
-				<p>what are you supposed to put on your homepage</p>
-			</div>
-			<div class="box sec-t">
-				<h2>pets</h2>
-			</div>
-			<div class="row">
-				<div class="box middleBoy d-sec-bl" style="background-color: #001e2e9b; --border: #00a6ff !important; min-width: 200px;">
-					<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!" width="120px" height="144px"></a>
-				</div>
-				<div class="box lefty mobileHidden reducedHidden noscript-hidden" id="navlink" style="padding: 0; --border: #bec9c8 !important;">
-					<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
-				</div>
-				<div class="box middleBoy lefty d-sec-br m-sec-b" style="width: 100%; background-color: #00201a9b; --border: #00ffbf !important; flex-direction: column;">
-					<img src="media/home/pets/chatt/chatt.png" loading="lazy" onmouseover="this.src ='media/home/pets/chatt/blink.png'" onmouseleave="this.src = 'media/home/pets/chatt/chatt.png'">
-					<p class="nomarblock" style="color: #a0f2dd;">adopted from <a href="https://neonriser.neocities.org/adopt" target="_blank" style="color: #aacbe4; --dark-primary: #afd18c; --dark-tertiary: #ffb1c0;">Neonriser</a>!</p>
-				</div>
-			</div>
-			<div class="box sec-t">
-				<h2>siteUpdates</h2>
-				<h3 style="margin: 0; font-size: 15px;"><strong>iT LOOKS DiFFERENT</strong></h3>
-				<p id="updatedate">August 17, 2025</p>
-			</div>
-			<div class="box">
-				<p>the navigation bar looks different i guess</p>
-			</div>
-			<div class="box sec-b">
-				<p>site updates almost every sunday, blog posts and content updates whenever</p>
-				<a class="bring" href="more/archive/blog/updates.html">Site Update Archive</a>
-			</div>
-			<div id="mybum" class="box sec-full" style="--border: #9462bd;">
-				<h2>myButton</h2>
-				<div style="display: flex; align-items: center;">
-					<img loading="lazy" alt="" src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
-					<div style="margin-left: 5px;">
-						<button id="copyLink" onclick="copyLinkToPage();" class="bring noscript-hidden" style="margin-bottom: 5px;">copy to clipboard</button>
-						<a class="bring" href="resources/widgets/home/med/embed.txt" target="_blank" style="font-size: 13.3px; margin-bottom: 5px;">script not working?</a>
-						<a class="bring" href="creative/graphics/buttons/index.html#home" target="_blank" style="font-size: 13.3px;">more of my buttons</a>
-					</div>
-				</div>
-				<script>
-					async function copyLinkToPage() {
-						await navigator.clipboard.writeText('<a href="https://wiggle.monster"><img loading="lazy" src="https://wiggle.monster/button.gif" style="image-rendering: pixelated;" alt="Visit WiiCHiCKEN\'s website"></a>');
-						window.alert('done!');
-					}
-				</script>
-				<p style="margin-block-start: 0; margin-block-end: 0;">hotlink, or don't hotlink! the choice is yours!</p>
-			</div>
-			<div id="signguest" class="box sec-full" style="--border: #ff8875;">
-				<p class="middleBoy"><img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt="">Remember: <a class="noBg" style="cursor: pointer !important; margin-right: 10px;" href="guestbook.html">sign the guestbook</a> before you go<img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt=""></p>
-			</div>
-			<div class="footer page-bottom">
-				<div>
-					<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2025</p>
-					<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
-				</div>
-				<div id="cornerInBox">
-					<a class="noBg boxy sec-bl" href="credits.html">credits</a>
-					<a class="noBg boxy" href="sitemap.html">sitemap</a>
-					<a class="noBg boxy" href="https://github.com/telnettrauma/wiichicken-neocities/tree/live" target="_blank">GitHub</a>
-					<a class="noBg boxy sec-br" style="margin-right: 0;" href="https://cd5k.net/tau/">&tau;</a>
-				</div>
-			</div>
-		</main>
-		<aside id="rightSidebar" class="noscript-hidden">
-			<!-- last.fm scrobble widget -->
-			<div class="sidebox" id="scrobblebox" style="--border: red; --side-bg: #2c151299;">
-				<div class="sidehead">
-					<p class="boxy"><strong>SCROBBLES</strong></p>
-				</div>
-				<div class="sidebox-content boxy" style="padding: 0; overflow: hidden;">
-					<iframe src="resources/widgets/home/np.html" id="scrobbleWidget" scrolling="no" class="boxyless"></iframe>
-				</div>
-			</div>
-			<div class="sidebox" style="--side-bg: #00201c99; --side-text: #75f8e3; --border: #55dbc7;" id="visitorcount">
-				<div class="sidehead" style="color: #83d5c6;">
-					<p class="boxy" style="background: linear-gradient(90deg, #005047 0%, #00502b 100%);">ViSiTOR #</p>
-				</div>
-				<div class="sidebox-content boxy middleBoy" id="googgo" style="flex-wrap: wrap; padding: 2px;">
-					<p class="nomarblock headText" id="visitorscount" style="font-size: 35px;">000000</p>
-					<p class="nomarblock">HiTS: <code><span id="hitcount">000000</span></code></p>
-				</div>
-			</div>
-			<div class="sidebox" id="lastUpdated" style="overflow: visible; margin: 0; --border: #f5ddda;">
-				<div class="sidehead" style="display: flex; color: #f5ddda;">
-					<p class="boxy" style="background: linear-gradient(90deg, #534341 0%, #665949 100%);">UPDATED</p>
-				</div>
-				<div class="sidebox-content boxy" style="text-align: center; padding: 0;">
-					<p class="headText nomarblock" id="upMonth" style="font-size: 20px; background-color: #93000a; color: #ffdad6; padding: 2px;">----</p>
-					<p class="headText nomarblock" id="upDate" style="background-color: #ede0dd; color: #201a19; font-size: 50px;">##</p>
-					<p class="nomarblock headText" id="upYear" style="background-color: #d8c2be; color: #534341; font-size: 19px;">2025</p>
-				</div>
-			</div>
-			<div class="sidebox" style="--side-bg: #001f23cc; --side-text: #8ef2ff; --border: #4ed8e8;" id="side-flood">
-				<div class="sidehead">
-					<p class="boxy" style="background: linear-gradient(90deg, #006972 0%, #4a6366 100%); color: #98f5ff; --b-radius-tr: 2;"><strong>FLOOD</strong></p>
-					<a href="https://melonking.net/free/software/flood" target="_blank" class="helpbutt boxy" id="flood-info" style="--border: #515e7d; --b-radius-tl: 2;">&#x1FAA3;</a>
-				</div>
-				<div class="sidebox-content boxy" id="flood-inner" style="height: 100px; padding: 0; overflow: hidden;">
-					<link href="resources/widgets/home/flood/flood.css" rel="stylesheet" type="text/css" media="all"/>
-					<button id="flood-fill-water" class="bring">FiLL TANK</button>
-				</div>
-			</div>
-		</aside>
+		</div>
 	</div>
-</div>
+	<div id="alerta" class="box" style="padding: 0; --border: red !important; color: white; --b-radius: 5;"></div>
+	<script>
+		const alertaChance = Math.floor(Math.random() * 10);
+		if (alertaChance === 3) {
+			const alertList = [ "THE NATIONAL WEATHER SERVICE HAS ISSUED A SEVERE THUNDERSTORM WARNING IN EFFECT FROM 12:23 PM UNTIL 2:00 PM. FOR YOUR PROTECTION MOVE TO AN INTERIOR ROOM ON THE LOWEST FLOOR OF A BUILDING.", "THE NATIONAL WEATHER SERVICE IN BIRMINGHAM HAS ISSUED A TORNADO WARNING UNTIL 2:45 AM. AT 2:06 AM CST...THE NATIONAL WEATHER SERVICE INDICATED A SEVERE THUNDERSTORM CAPABLE OF PRODUCING A TORNADO. THIS DANGEROUS STORM WAS LOCATED NEAR MEMPHIS...OR 8 MILES SOUTHWEST OF PICKENSVILLE... AND MOVING NORTHEAST AT 45 MPH. TORNADOES ARE DIFFICULT TO SEE AND CONFIRM AT NIGHT. TAKE COVER NOW.", "THE NATIONAL WEATHER SERVICE HAS ISSUED A SPECIAL MARINE WARNING UNTIL 9:15 AM. AT 7:13 AM EDT...DOPPLER RADAR INDICATED A LINE OF THUNDERSTORMS... CAPABLE OF PRODUCING DANGEROUS WINDS IN EXCESS OF 50 KNOTS AND LARGE HAIL FROM 24 NM NORTHWEST OF ALABASTER TO 43 NM SOUTHWEST OF ALABASTER...MOVING EAST AT 35 KNOTS. MARINERS CAN EXPECT GUSTY WINDS...LARGE HAIL...HIGH WAVES...DANGEROUS LIGHTNING...AND HEAVY RAINS. BOATERS SHOULD SEEK SAFE HARBOR IMMEDIATELY...UNTIL THESE STORMS PASS.", "A civil authority has issued A LOCAL AREA EMERGENCY for the following counties or areas: Edgefield, SC; at 5:40 PM on SEP 30, 2024 Effective until 8:40 PM. Message from IPAWSCAP. Edgefield County mandatory curfew from Monday, September 30, at 9 pm to Tuesday, October 1, at 6 am. Essential workers for local businesses/services and responders will be exempt from this curfew. Road conditions are DANGEROUS due to downed power lines and trees. Do NOT travel after 9 pm.", "A civil authority has issued A 911 TELEPHONE OUTAGE EMERGENCY for the following counties or areas: Aiken, SC; at 3:12 PM on SEP 30, 2024 Effective until 11:12 PM. Message from IPAWSCAP. URGENT MESSAGE. From Aiken County. AT&T customers attempting to dial 9-1-1 in the Aiken County and surrounding area are EXPERIENCING TECHNICAL DIFFICULTIES and are UNABLE to make wireless calls to 9-1-1. Please find other alternative methods to communicate to 9-1-1 or call (803) 642-1751.", "A broadcast or cable system has issued A PRACTICE/DEMO WARNING for the following counties or areas: Norfolk, VA; at 1:05 PM on OCT 2, 2024 Effective until 4:05 PM. Message from TGR/DAS."];
+			const selectedAlert = alertList[Math.floor(Math.random() * alertList.length)];
+			document.getElementById("alerta").innerHTML = "<marquee scrollamount='10'>" + selectedAlert + "</marquee>";
+			document.getElementById("alerta").style.display = "block";
+		}
+	</script>
+	<div class="mobileVisible section box compat-error">
+		<h2 class="nomarblock">MOBiLE MODE</h2>
+		<p class="nomarblock">Because you are on a small screen, a few adjustments have been made for mobile. This site is still desktop designed, but your experience on a mobile device should hopefully still be less malarky. Note that layouts and designs will be different than desktop.</p>
+	</div>
+	<div class="reducedVisible section box compat-error">
+		<h2 class="nomarblock">REDUCED MOTiON</h2>
+		<p class="nomarblock">Reduced motion, an experimental site feature, has been enabled, because reduced motion is enabled in your device settings. Some widgets may be hidden. I don't think this changes anything outside of the homepage.</p>
+	</div>
+	<div class="section box compat-error" style="display: none;" id="noscript-error">
+		<h2 class="nomarblock">NOSCRiPT</h2>
+		<p class="nomarblock">uh oh! it looks like you don't have javascript support! no worries, i have made some small changes to make your browsing experience slightly better. i love you too.<br>note that some things still may not work.</p>
+	</div>
+	<div class="compat-error box reducedVisible contrastVisible transparentVisible" id="compat-table">
+		<h2>ACCESSiBiLiTY FEATURES</h2>
+		<p>the following accessibility features are enabled:</p>
+		<ul>
+			<li class="reducedVisible">Reduced Motion</li>
+			<li class="contrastVisible">Increased Contrast</li>
+			<li class="transparentVisible">Reduced Transparency</li>
+		</ul>
+		<p>please note that just because a feature is enabled doesn't mean the entire site is compatible with it. these features are still a work in progress</p>
+	</div>
+	<div class="row" id="infamous" style="display: grid; gap: 10px;">
+		<div class="box d-sec-tl" style="grid-column: 1 / 3; grid-row: 1; margin-bottom: 0;">
+			<p class="headText nomarblock" style="text-align: center; font-size: 18px;">now welcoming visitor #<span id="visitorscount">######</span>!</p>
+		</div>
+		<div id="status-cafe-box" class="box noscript-hidden d-sec-r m-sec-t" style="grid-column: 3 / 3; grid-row: 1 / 3;">
+			<div style="display: flex; flex-wrap: wrap;" id="statusCard">
+				<div id="statuscafe" style="padding: 5px; background: linear-gradient(0deg, #ffb4a8 0%, #ffd4a8 100%); width: 100%; min-height: 93px;">
+					<a href="https://status.cafe/users/cringe" class="noBg" target="_blank">
+						<div id="statuscafe-username">10 years ago</div>
+						<div id="statuscafe-content">this is still being loaded, give me a second</div>
+					</a>
+				</div>
+				<script src="https://status.cafe/current-status.js?name=cringe" defer></script>
+				<img src="media/home/status.png" width="200" height="220" loading="lazy" style="z-index: 1;" onmouseover="this.src ='media/home/statusy.png'" onmouseleave="this.src = 'media/home/status.png'">
+			</div>
+		</div>
+		<div class="box d-sec-bl m-sec-b" style="grid-column: 1 / 3; grid-row: 2;">
+			<p>welcome to the very first website on the internet. the revolution is finally here, and its only just begun! <img src='/media/emoji/rofl.gif' loading='lazy' alt='rofl emoji'><br>this is just a place where i put my various works and ramblings, use the bar at the bottom right of your screen to explore around.</p>
+			<p>since we're both here, why not get to know each other a <em>little</em> better <img src='/media/emoji/glasses.gif' loading='lazy' alt='glasses emoji'>? check out the <a href="aboutme.html">about me</a> page to learn more about somebody you've never met and likely never will meet <img src='/media/emoji/unamused.gif' loading='lazy' alt='unamused emoji'></p>
+		</div>
+	</div>
+	{% include "partials/interests/websites/sotfp/widget.njk" %}
+	<div class="row">
+		<div class="box sec-l">
+			<h3>FRiENDS</h3>
+			<div class="dabuttons">
+				<a target="_blank" href="https://sunnyshines.neocities.org"><img src="https://sunnyshines.neocities.org/buttons/stamp.gif"></a>
+				<a href="https://parafungal.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/parafungal.gif" loading="lazy" alt="Parafungal"></a>
+				<a href="https://mari.blue" target="_blank"><img src="interests/websites/img/button/naybor/mariiful.gif" loading="lazy" alt="mari"></a>
+			</div>
+			<div class="dalist">
+				<a href="https://crypticworm.neocities.org" target="_blank"><img src="interests/websites/img/ficon/default.png" loading="lazy" alt="">crypticworm</a>
+			</div>
+		</div>
+		<div class="box lefty sec-r">
+			<h3>FEATURED</h3>
+			<div class="dabuttons">
+				<iframe src="https://incr.easrng.net/badge?key=wiichicken" title="increment badge" width="88" height="31" frameborder="0" style="padding: 2px; box-sizing: content-box;"></iframe>
+				<a href="https://corvidae.digital" target="_blank"><img src="interests/websites/img/button/corvidae.gif" loading="lazy" alt="CORViDAE DiGiTAL"></a>
+				<a href="https://bulltown.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/bulltownneo.png" loading="lazy" alt="bulltown.neo"></a>
+				<a href="https://catbyte.site/" target="_blank"><img src="interests/websites/img/button/catbyte.png" alt="catbyte.site"></a>
+				<a href="https://kiwimeowo.neocities.org" target="_blank"><img src="interests/websites/img/button/naybor/kiwimeow.png" loading="lazy" alt="Cosmos"></a>
+				<a href="https://psychicnewborn.neocities.org" target="_blank"><img loading="lazy" src="interests/websites/img/button/psychic.gif" alt="Psychic Newborn"></a>
+				<a href="https://charpine.neocities.org" target="_blank"><img src="interests/websites/img/button/artists/charpine.gif" loading="lazy" alt="Charpine"></a>
+				<a href="https://bruno-rubim.neocities.org/" target="_blank"><img src="interests/websites/img/button/bruno-button.gif" loading="lazy" alt="Bruno Rubim"></a>
+			</div>
+			<div class="dalist">
+				<a href="https://e4494s.neocities.org" target="_blank"><img src="interests/websites/img/ficon/game/e4494s.png" loading="lazy">e4494s</a>
+				<a href="https://awe921.neocities.org" target="_blank"><img src="media/buttons/favicon/awehead.png" loading="lazy">awe921</a>
+				<a href="https://cattafang.neocities.org" target="_blank"><img src="media/buttons/favicon/cattafang.ico" loading="lazy">cattafang</a>
+			</div>
+		</div>
+	</div>
+	<a href="interests/websites/directory.html"><button class="bring wide-button">DiRECTORY</button></a>
+	<div class="row">
+		<div class="box d-sec-l m-sec-t" style="width: 50%;">
+			<h2>latestArt</h2>
+			<div style="display: flex; flex-direction: column; align-items: center;">
+				<div style="display: flex; align-items: center; margin-right: 10px;">
+					<img id="artfeat" class="boxyless" src="https://i.imgur.com/oojjWol.jpeg" width="100px" height="100px" style="image-rendering: pixelated; display: inline-block; box-shadow: 0px 0px 5px 0px #000000b3; --b-radius-bl: 5;" loading="lazy">
+					<div class="afterfeat" style="height: 95px; background: linear-gradient(45deg, #6100bd 0%, #e3e800 100%); width: 8px; opacity: 0.7;"></div>
+					<div class="afterfeat" style="height: 90px; width: 4px; background: linear-gradient(45deg, #bd0080 0%, #00e8b3 100%); opacity: 0.5;"></div>
+				</div>
+				<div style="width: 100%;">
+					<p class="nomarblock">whatever i drew. idc enough to move it i just need to update this</p>
+					<a class="noBg" style="width: min-content;" href="creative/gallery/"><button class="bring">View</button></a>
+				</div>
+			</div>
+		</div>
+		<div class="lefty">
+			<div class="box d-sec-tr m-sec-b">
+				<h2>curr.FavSong</h2>
+				<div style="display: flex;">
+					<img src="https://lastfm.freetls.fastly.net/i/u/300x300/f990e852bb7c42c7c2dd17da86a89974.jpg" width="100px" height="100px" style="margin-right: 10px; border: 1px solid #cde5ff; z-index: 1;">
+					<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/300x300/f990e852bb7c42c7c2dd17da86a89974.jpg" width="100px" height="100px" style="margin-right: 10px; opacity: 0.5;">
+					<div style="width: 100%;">
+						<p class="nomarblock"><strong>Class Historian</strong></p>
+						<p class="nomarblock">BRONCHO</p>
+						<a class="bring" href="interests/music/favarchive">Current Fav Song Archive</a>
+					</div>
+				</div>
+			</div>
+			<div class="box sec-br" style="padding: 0;">
+				<iframe src="resources/widgets/home/np.html" id="scrobbleWidget" scrolling="no" class="boxyless"></iframe>
+			</div>
+		</div>
+	</div>
+	<div class="box sec-t">
+		<h2>toDo</h2>
+		<ul>
+			<li>put all art
+				<ul>
+					<li>finish character pages</li>
+				</ul>
+			</li>
+			<li>make a guestbook archive</li>
+			<li>improve line heights</li>
+			<li>complete <a href="more/tools/snippets/">snippets</a> page</li>
+			<li>add interests</li>
+		</ul>
+		<p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
+	</div>
+	<div class="box sec-b">
+		<p>what are you supposed to put on your homepage</p>
+	</div>
+	<div class="box sec-t">
+		<h2>pets</h2>
+	</div>
+	<div class="row">
+		<div class="box middleBoy d-sec-bl" style="background-color: #001e2e9b; --border: #00a6ff !important; min-width: 200px;">
+			<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!" width="120px" height="144px"></a>
+		</div>
+		<div class="box lefty mobileHidden reducedHidden noscript-hidden" id="navlink" style="padding: 0; --border: #bec9c8 !important;">
+			<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
+		</div>
+		<div class="box middleBoy lefty d-sec-br m-sec-b" style="width: 100%; background-color: #00201a9b; --border: #00ffbf !important; flex-direction: column;">
+			<img src="media/home/pets/chatt/chatt.png" loading="lazy" onmouseover="this.src ='media/home/pets/chatt/blink.png'" onmouseleave="this.src = 'media/home/pets/chatt/chatt.png'">
+			<p class="nomarblock" style="color: #a0f2dd;">adopted from <a href="https://neonriser.neocities.org/adopt" target="_blank" style="color: #aacbe4; --dark-primary: #afd18c; --dark-tertiary: #ffb1c0;">Neonriser</a>!</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="box sec-tl" style="width: 100%;">
+			<h2>siteUpdates</h2>
+			<h3 style="margin: 0; font-size: 15px;"><strong>GOODBYE WiDGETS...</strong></h3>
+			<p id="updatedate">August 24, 2025</p>
+		</div>
+		<div class="box lefty sec-tr" style="text-align: center; padding: 0; width: 150px;">
+			<p class="headText nomarblock" id="upHeader">LAST UPDATE</p>
+			<p class="headText nomarblock" id="upMonth">----</p>
+			<p class="headText nomarblock" id="upDate">##</p>
+			<p class="nomarblock headText" id="upYear">2025</p>
+		</div>
+	</div>
+	<div class="box">
+		<p>did you like the widgets on the home screen? too bad.<br>ok, kinda. most of the widgets aren't gone, but i removed the sidebars and put the widgets in the page layout. the reason for this was page responsiveness. yes, there is still more work that needs to be done to make the current page responsive on mobile, but it looks much better than before. this also makes the page have less visual clutter<br>i also turned off the background flickering. i want to change the background eventually, but i said i would do that last year, and i still like the stars.</p>
+	</div>
+	<div class="box sec-b">
+		<p>site updates almost every sunday, blog posts and content updates whenever</p>
+		<a class="bring" href="more/archive/blog/updates.html">Site Update Archive</a>
+	</div>
+	<div id="mybum" class="box sec-full" style="--border: #9462bd;">
+		<h2>myButton</h2>
+		<div style="display: flex; align-items: center;">
+			<img loading="lazy" alt="" src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
+			<div style="margin-left: 5px;">
+				<button id="copyLink" onclick="copyLinkToPage();" class="bring noscript-hidden" style="margin-bottom: 5px;">copy to clipboard</button>
+				<a class="bring" href="resources/widgets/home/med/embed.txt" target="_blank" style="font-size: 13.3px; margin-bottom: 5px;">script not working?</a>
+				<a class="bring" href="creative/graphics/buttons/index.html#home" target="_blank" style="font-size: 13.3px;">more of my buttons</a>
+			</div>
+		</div>
+		<script>
+			async function copyLinkToPage() {
+				await navigator.clipboard.writeText('<a href="https://wiggle.monster"><img loading="lazy" src="https://wiggle.monster/button.gif" style="image-rendering: pixelated;" alt="Visit WiiCHiCKEN\'s website"></a>');
+				window.alert('done!');
+			}
+		</script>
+		<p style="margin-block-start: 0; margin-block-end: 0;">hotlink, or don't hotlink! the choice is yours!</p>
+	</div>
+	<div id="signguest" class="box sec-full" style="--border: #ff8875;">
+		<p class="middleBoy"><img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt="">Remember: <a class="noBg" style="cursor: pointer !important; margin-right: 10px;" href="guestbook.html">sign the guestbook</a> before you go<img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt=""></p>
+	</div>
+	<div class="footer page-bottom">
+		<div>
+			<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2025</p>
+			<p onclick="setRandomMessage()" id="random-message" class="nomarblock">she no till i script</p>
+		</div>
+		<div id="cornerInBox">
+			<a class="noBg boxy sec-bl" href="credits.html">credits</a>
+			<a class="noBg boxy" href="sitemap.html">sitemap</a>
+			<a class="noBg boxy" href="https://github.com/telnettrauma/wiichicken-neocities/tree/live" target="_blank">GitHub</a>
+			<a class="noBg boxy sec-br" style="margin-right: 0;" href="https://cd5k.net/tau/">&tau;</a>
+		</div>
+	</div>
+</main>
 <script>
 function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms || DEF_DELAY));}
 document.addEventListener('DOMContentLoaded', function() {
@@ -918,43 +770,6 @@ if (Math.floor(Math.random() * 25) === 10) {
 	}
 	favLink.href = 'media/home/corrupted.png';
 }
-let clockVisible = false;
-let clockInterval = null;
-function startClockScript() {
-	clockInterval = setInterval(() => {
-		d = new Date();
-		hr = d.getHours();
-		min = d.getMinutes();
-		sec = d.getSeconds();
-		hr_rotation = 30 * hr + min / 2;
-		min_rotation = 6 * min;
-		sec_rotation = 6 * sec;
-		hour.style.transform = `rotate(${hr_rotation}deg)`;
-		minute.style.transform = `rotate(${min_rotation}deg)`;
-		second.style.transform = `rotate(${sec_rotation}deg)`;
-	}, 1000);
-}
-function stopClockScript() {clearInterval(clockInterval);}
-function checkVisibility(entries) {
-	entries.forEach(entry => {
-		if (entry.isIntersecting) {
-			if (!clockVisible) {
-				clockVisible = true;
-				startClockScript();
-			}
-		} else {
-			if (clockVisible) {
-				clockVisible = false;
-				stopClockScript();
-			}
-		}
-	});
-}
-const observer = new IntersectionObserver(checkVisibility, {
-	root: null,
-	threshold: 0.1
-});
-observer.observe(document.querySelector('#clockContainer'));
 // code stolen from https://sadgrl.online/learn/articles/last-update-visitors
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = async function() {
@@ -972,7 +787,6 @@ xhttp.onreadystatechange = async function() {
 			document.getElementById('upDate').innerHTML = date_obj.getDate();
 			document.getElementById('upYear').innerHTML = date_obj.getFullYear();
 		}
-		document.getElementById('hitcount').innerHTML = site_data.info.hits;
 		await sleep(500);
 		let daBob = site_data.info.views / 20;
 		let setNew = 0;
@@ -987,6 +801,5 @@ xhttp.onreadystatechange = async function() {
 xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=wiichicken", true);
 xhttp.send();
 </script>
-<script src="resources/widgets/home/flood/flood.js"></script>
 </body>
 </html>
