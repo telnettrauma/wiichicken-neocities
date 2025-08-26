@@ -83,10 +83,10 @@ button {
 	margin-block-start: 0;
 	margin-block-end: 0;
 }
-.section {margin-bottom: 10px;}
+.section {margin-bottom: 10px !important;}
 .grid {
 	display: grid;
-	gap: 5px;
+	gap: 10px;
 }
 .box {
 	padding: 5px;

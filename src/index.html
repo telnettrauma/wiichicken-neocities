@@ -338,7 +338,7 @@
 		.wide-button {
 			width: 100%;
 			font-size: 25px;
-			margin-bottom: 10px;
+			margin: 5px 0 10px 0;
 			justify-content: center;
 			padding: 5px;
 		}
@@ -522,7 +522,7 @@
 <body>
 {% include "partials/navbar.njk" %}
 <main>
-	<div class="box head page-top" id="start">
+	<div class="box head page-top section" id="start">
 		<div id="tittle">
 			<div id="logocontent">
 				<p id="thisIsMyName" class="nomarblock mobileVisible headText" style="color: white;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN</p>
@@ -532,7 +532,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="alerta" class="box" style="padding: 0; --border: red !important; color: white; --b-radius: 5;"></div>
+	<div id="alerta" class="box section" style="padding: 0; --border: red !important; color: white; --b-radius: 5;"></div>
 	<script>
 		const alertaChance = Math.floor(Math.random() * 10);
 		if (alertaChance === 3) {
@@ -542,6 +542,7 @@
 			document.getElementById("alerta").style.display = "block";
 		}
 	</script>
+	<!-- displayed when accessibility features are enabled -->
 	<div class="mobileVisible section box compat-error">
 		<h2 class="nomarblock">MOBiLE MODE</h2>
 		<p class="nomarblock">Because you are on a small screen, a few adjustments have been made for mobile. This site is still desktop designed, but your experience on a mobile device should hopefully still be less malarky. Note that layouts and designs will be different than desktop.</p>
@@ -554,7 +555,7 @@
 		<h2 class="nomarblock">NOSCRiPT</h2>
 		<p class="nomarblock">uh oh! it looks like you don't have javascript support! no worries, i have made some small changes to make your browsing experience slightly better. i love you too.<br>note that some things still may not work.</p>
 	</div>
-	<div class="compat-error box reducedVisible contrastVisible transparentVisible" id="compat-table">
+	<div class="compat-error box reducedVisible contrastVisible transparentVisible section" id="compat-table">
 		<h2>ACCESSiBiLiTY FEATURES</h2>
 		<p>the following accessibility features are enabled:</p>
 		<ul>
@@ -564,7 +565,7 @@
 		</ul>
 		<p>please note that just because a feature is enabled doesn't mean the entire site is compatible with it. these features are still a work in progress</p>
 	</div>
-	<div class="row" id="infamous" style="display: grid; gap: 10px;">
+	<div class="grid section" id="infamous">
 		<div class="box d-sec-tl" style="grid-column: 1 / 3; grid-row: 1; margin-bottom: 0;">
 			<p class="headText nomarblock" style="text-align: center; font-size: 18px;">now welcoming visitor #<span id="visitorscount">######</span>!</p>
 		</div>
@@ -618,15 +619,11 @@
 		</div>
 	</div>
 	<a href="interests/websites/directory.html"><button class="bring wide-button">DiRECTORY</button></a>
-	<div class="grid">
+	<div class="grid section">
 		<div class="box d-sec-l m-sec-t" style="grid-column: 1/2; grid-row: 1/3;">
 			<h2>latestArt</h2>
 			<div style="display: flex; flex-direction: column; align-items: center;">
-				<div style="display: flex; align-items: center; margin-right: 10px;">
-					<img id="artfeat" class="boxyless" src="https://i.imgur.com/oojjWol.jpeg" width="100px" height="100px" style="image-rendering: pixelated; display: inline-block; box-shadow: 0px 0px 5px 0px #000000b3; --b-radius-bl: 5;" loading="lazy">
-					<div class="afterfeat" style="height: 95px; background: linear-gradient(45deg, #6100bd 0%, #e3e800 100%); width: 8px; opacity: 0.7;"></div>
-					<div class="afterfeat" style="height: 90px; width: 4px; background: linear-gradient(45deg, #bd0080 0%, #00e8b3 100%); opacity: 0.5;"></div>
-				</div>
+				<img id="artfeat" src="https://i.imgur.com/oojjWol.jpeg" width="100px" height="100px" style="image-rendering: pixelated; display: inline-block; box-shadow: 0px 0px 5px 0px #000000b3;" loading="lazy">
 				<div style="width: 100%;">
 					<p class="nomarblock">whatever i drew. idc enough to move it i just need to update this</p>
 					<a class="noBg" style="width: min-content;" href="creative/gallery/"><button class="bring">View</button></a>
@@ -649,60 +646,64 @@
 			<iframe src="resources/widgets/home/np.html" id="scrobbleWidget" scrolling="no" class="boxyless"></iframe>
 		</div>
 	</div>
-	<div class="box sec-t">
-		<h2>toDo</h2>
-		<ul>
-			<li>put all art
-				<ul>
-					<li>finish character pages</li>
-				</ul>
-			</li>
-			<li>make a guestbook archive</li>
-			<li>improve line heights</li>
-			<li>complete <a href="more/tools/snippets/">snippets</a> page</li>
-			<li>add interests</li>
-		</ul>
-		<p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
-	</div>
-	<div class="box sec-b">
-		<p>what are you supposed to put on your homepage</p>
-	</div>
-	<div class="box sec-t">
-		<h2>pets</h2>
-	</div>
-	<div class="row">
-		<div class="box middleBoy d-sec-bl" style="background-color: #001e2e9b; --border: #00a6ff !important; min-width: 200px;">
-			<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!" width="120px" height="144px"></a>
+	<div class="section">
+		<div class="box sec-t">
+			<h2>toDo</h2>
+			<ul>
+				<li>put all art
+					<ul>
+						<li>finish character pages</li>
+					</ul>
+				</li>
+				<li>make a guestbook archive</li>
+				<li>improve line heights</li>
+				<li>complete <a href="more/tools/snippets/">snippets</a> page</li>
+				<li>add interests</li>
+			</ul>
+			<p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
 		</div>
-		<div class="box mobileHidden reducedHidden noscript-hidden" id="navlink" style="padding: 0; --border: #bec9c8 !important;">
-			<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
-		</div>
-		<div class="box middleBoy d-sec-br m-sec-b" style="width: 100%; background-color: #00201a9b; --border: #00ffbf !important; flex-direction: column;">
-			<img src="media/home/pets/chatt/chatt.png" loading="lazy" onmouseover="this.src ='media/home/pets/chatt/blink.png'" onmouseleave="this.src = 'media/home/pets/chatt/chatt.png'">
-			<p class="nomarblock" style="color: #a0f2dd;">adopted from <a href="https://neonriser.neocities.org/adopt" target="_blank" style="color: #aacbe4; --dark-primary: #afd18c; --dark-tertiary: #ffb1c0;">Neonriser</a>!</p>
+		<div class="box sec-b">
+			<p>what are you supposed to put on your homepage</p>
 		</div>
 	</div>
-	<div class="row">
-		<div class="box sec-tl" style="width: 100%;">
+	<div class="section">
+		<div class="box sec-t">
+			<h2>pets</h2>
+		</div>
+		<div class="row">
+			<div class="box middleBoy d-sec-bl" style="background-color: #001e2e9b; --border: #00a6ff !important; min-width: 200px;">
+				<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!" width="120px" height="144px"></a>
+			</div>
+			<div class="box mobileHidden reducedHidden noscript-hidden" id="navlink" style="padding: 0; --border: #bec9c8 !important;">
+				<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
+			</div>
+			<div class="box middleBoy d-sec-br m-sec-b" style="width: 100%; background-color: #00201a9b; --border: #00ffbf !important; flex-direction: column;">
+				<img src="media/home/pets/chatt/chatt.png" loading="lazy" onmouseover="this.src ='media/home/pets/chatt/blink.png'" onmouseleave="this.src = 'media/home/pets/chatt/chatt.png'">
+				<p class="nomarblock" style="color: #a0f2dd;">adopted from <a href="https://neonriser.neocities.org/adopt" target="_blank" style="color: #aacbe4; --dark-primary: #afd18c; --dark-tertiary: #ffb1c0;">Neonriser</a>!</p>
+			</div>
+		</div>
+	</div>
+	<div class="section grid">
+		<div class="box sec-tl" style="grid-row: 1/2; grid-column: 1/2;">
 			<h2>siteUpdates</h2>
 			<h3 style="margin: 0; font-size: 15px;"><strong>GOODBYE WiDGETS...</strong></h3>
 			<p id="updatedate">August 24, 2025</p>
 		</div>
-		<div class="box lefty sec-tr" style="text-align: center; padding: 0; width: 150px;">
+		<div class="box sec-tr" style="text-align: center; padding: 0; grid-row: 1/2; grid-column: 2/3; max-width: 150px;">
 			<p class="headText nomarblock" id="upHeader">LAST UPDATE</p>
 			<p class="headText nomarblock" id="upMonth">----</p>
 			<p class="headText nomarblock" id="upDate">##</p>
 			<p class="nomarblock headText" id="upYear">2025</p>
 		</div>
+		<div class="box" style="grid-row: 2/3; grid-column: 1/3;">
+			<p>did you like the widgets on the home screen? too bad.<br>ok, kinda. most of the widgets aren't gone, but i removed the sidebars and put the widgets in the page layout. the reason for this was page responsiveness. yes, there is still more work that needs to be done to make the current page responsive on mobile, but it looks much better than before. this also makes the page have less visual clutter<br>i also turned off the background flickering. i want to change the background eventually, but i said i would do that last year, and i still like the stars.</p>
+		</div>
+		<div class="box sec-b" style="grid-row: 3/4; grid-column: 1/3;">
+			<p>site updates almost every sunday, blog posts and content updates whenever</p>
+			<a class="bring" href="more/archive/blog/updates.html">Site Update Archive</a>
+		</div>
 	</div>
-	<div class="box">
-		<p>did you like the widgets on the home screen? too bad.<br>ok, kinda. most of the widgets aren't gone, but i removed the sidebars and put the widgets in the page layout. the reason for this was page responsiveness. yes, there is still more work that needs to be done to make the current page responsive on mobile, but it looks much better than before. this also makes the page have less visual clutter<br>i also turned off the background flickering. i want to change the background eventually, but i said i would do that last year, and i still like the stars.</p>
-	</div>
-	<div class="box sec-b">
-		<p>site updates almost every sunday, blog posts and content updates whenever</p>
-		<a class="bring" href="more/archive/blog/updates.html">Site Update Archive</a>
-	</div>
-	<div id="mybum" class="box sec-full" style="--border: #9462bd;">
+	<div id="mybum" class="box section sec-full" style="--border: #9462bd;">
 		<h2>myButton</h2>
 		<div style="display: flex; align-items: center;">
 			<img loading="lazy" alt="" src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
@@ -720,7 +721,7 @@
 		</script>
 		<p style="margin-block-start: 0; margin-block-end: 0;">hotlink, or don't hotlink! the choice is yours!</p>
 	</div>
-	<div id="signguest" class="box sec-full" style="--border: #ff8875;">
+	<div id="signguest" class="box sec-full section" style="--border: #ff8875;">
 		<p class="middleBoy"><img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt="">Remember: <a class="noBg" style="cursor: pointer !important; margin-right: 10px;" href="guestbook.html">sign the guestbook</a> before you go<img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt=""></p>
 	</div>
 	<div class="footer page-bottom">
