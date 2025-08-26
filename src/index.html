@@ -32,16 +32,16 @@
 		.row {
 			display: flex;
 			width: 100%;
+			gap: 5px;
 		}
 		.box {
-			margin-bottom: 10px;
+			margin-bottom: 0;
 			--border: red;
 			background-color: #410002b3;
 			color: #ffdad6;
 			padding: 10px;
 			overflow: hidden;
 		}
-		.lefty {margin-left: 10px;}
 		.noBg::after {display: none;}
 		.compat-error {
 			background-color: #2a1800;
@@ -618,8 +618,8 @@
 		</div>
 	</div>
 	<a href="interests/websites/directory.html"><button class="bring wide-button">DiRECTORY</button></a>
-	<div class="row">
-		<div class="box d-sec-l m-sec-t" style="width: 50%;">
+	<div class="grid">
+		<div class="box d-sec-l m-sec-t" style="grid-column: 1/2; grid-row: 1/3;">
 			<h2>latestArt</h2>
 			<div style="display: flex; flex-direction: column; align-items: center;">
 				<div style="display: flex; align-items: center; margin-right: 10px;">
@@ -633,22 +633,20 @@
 				</div>
 			</div>
 		</div>
-		<div class="lefty">
-			<div class="box d-sec-tr m-sec-b">
-				<h2>curr.FavSong</h2>
-				<div style="display: flex;">
-					<img src="https://lastfm.freetls.fastly.net/i/u/300x300/f990e852bb7c42c7c2dd17da86a89974.jpg" width="100px" height="100px" style="margin-right: 10px; border: 1px solid #cde5ff; z-index: 1;">
-					<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/300x300/f990e852bb7c42c7c2dd17da86a89974.jpg" width="100px" height="100px" style="margin-right: 10px; opacity: 0.5;">
-					<div style="width: 100%;">
-						<p class="nomarblock"><strong>Class Historian</strong></p>
-						<p class="nomarblock">BRONCHO</p>
-						<a class="bring" href="interests/music/favarchive">Current Fav Song Archive</a>
-					</div>
+		<div class="box d-sec-tr m-sec-b" style="grid-column: 2/3; grid-row: 1/2;">
+			<h2>curr.FavSong</h2>
+			<div style="display: flex;">
+				<img src="https://lastfm.freetls.fastly.net/i/u/300x300/f990e852bb7c42c7c2dd17da86a89974.jpg" width="100px" height="100px" style="margin-right: 10px; border: 1px solid #cde5ff; z-index: 1;">
+				<img class="blurry" src="https://lastfm.freetls.fastly.net/i/u/300x300/f990e852bb7c42c7c2dd17da86a89974.jpg" width="100px" height="100px" style="margin-right: 10px; opacity: 0.5;">
+				<div style="width: 100%;">
+					<p class="nomarblock"><strong>Class Historian</strong></p>
+					<p class="nomarblock">BRONCHO</p>
+					<a class="bring" href="interests/music/favarchive">Current Fav Song Archive</a>
 				</div>
 			</div>
-			<div class="box sec-br" style="padding: 0;">
-				<iframe src="resources/widgets/home/np.html" id="scrobbleWidget" scrolling="no" class="boxyless"></iframe>
-			</div>
+		</div>
+		<div class="box sec-br" style="grid-column: 2/3; grid-row: 2/3; padding: 0;">
+			<iframe src="resources/widgets/home/np.html" id="scrobbleWidget" scrolling="no" class="boxyless"></iframe>
 		</div>
 	</div>
 	<div class="box sec-t">
@@ -676,10 +674,10 @@
 		<div class="box middleBoy d-sec-bl" style="background-color: #001e2e9b; --border: #00a6ff !important; min-width: 200px;">
 			<a class="noBg" href="https://tamanotchi.world/9395c"><img loading="lazy" src="https://tamanotchi.world/i2/9395" alt="It's tamaNOTchi! Click to feed!" width="120px" height="144px"></a>
 		</div>
-		<div class="box lefty mobileHidden reducedHidden noscript-hidden" id="navlink" style="padding: 0; --border: #bec9c8 !important;">
+		<div class="box mobileHidden reducedHidden noscript-hidden" id="navlink" style="padding: 0; --border: #bec9c8 !important;">
 			<iframe width="180" height="180" style="border:none; display: flex;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
 		</div>
-		<div class="box middleBoy lefty d-sec-br m-sec-b" style="width: 100%; background-color: #00201a9b; --border: #00ffbf !important; flex-direction: column;">
+		<div class="box middleBoy d-sec-br m-sec-b" style="width: 100%; background-color: #00201a9b; --border: #00ffbf !important; flex-direction: column;">
 			<img src="media/home/pets/chatt/chatt.png" loading="lazy" onmouseover="this.src ='media/home/pets/chatt/blink.png'" onmouseleave="this.src = 'media/home/pets/chatt/chatt.png'">
 			<p class="nomarblock" style="color: #a0f2dd;">adopted from <a href="https://neonriser.neocities.org/adopt" target="_blank" style="color: #aacbe4; --dark-primary: #afd18c; --dark-tertiary: #ffb1c0;">Neonriser</a>!</p>
 		</div>
