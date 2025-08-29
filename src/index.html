@@ -522,7 +522,7 @@
 <body>
 {% include "partials/navbar.njk" %}
 <main>
-	<div class="box head page-top section" id="start">
+	<section class="box head page-top" id="start">
 		<div id="tittle">
 			<div id="logocontent">
 				<p id="thisIsMyName" class="nomarblock mobileVisible headText" style="color: white;">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN</p>
@@ -531,8 +531,8 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div id="alerta" class="box section" style="padding: 0; --border: red !important; color: white; --b-radius: 5;"></div>
+	</section>
+	<section id="alerta" class="box" style="padding: 0; --border: red !important; color: white; --b-radius: 5;"></section>
 	<script>
 		const alertaChance = Math.floor(Math.random() * 10);
 		if (alertaChance === 3) {
@@ -543,19 +543,19 @@
 		}
 	</script>
 	<!-- displayed when accessibility features are enabled -->
-	<div class="mobileVisible section box compat-error">
+	<section class="mobileVisible box compat-error">
 		<h2 class="nomarblock">MOBiLE MODE</h2>
 		<p class="nomarblock">Because you are on a small screen, a few adjustments have been made for mobile. This site is still desktop designed, but your experience on a mobile device should hopefully still be less malarky. Note that layouts and designs will be different than desktop.</p>
-	</div>
-	<div class="reducedVisible section box compat-error">
+	</section>
+	<section class="reducedVisible box compat-error">
 		<h2 class="nomarblock">REDUCED MOTiON</h2>
 		<p class="nomarblock">Reduced motion, an experimental site feature, has been enabled, because reduced motion is enabled in your device settings. Some widgets may be hidden. I don't think this changes anything outside of the homepage.</p>
-	</div>
-	<div class="section box compat-error" style="display: none;" id="noscript-error">
+	</section>
+	<section class="box compat-error" style="display: none;" id="noscript-error">
 		<h2 class="nomarblock">NOSCRiPT</h2>
 		<p class="nomarblock">uh oh! it looks like you don't have javascript support! no worries, i have made some small changes to make your browsing experience slightly better. i love you too.<br>note that some things still may not work.</p>
-	</div>
-	<div class="compat-error box reducedVisible contrastVisible transparentVisible section" id="compat-table">
+	</section>
+	<section class="compat-error box reducedVisible contrastVisible transparentVisible" id="compat-table">
 		<h2>ACCESSiBiLiTY FEATURES</h2>
 		<p>the following accessibility features are enabled:</p>
 		<ul>
@@ -564,8 +564,8 @@
 			<li class="transparentVisible">Reduced Transparency</li>
 		</ul>
 		<p>please note that just because a feature is enabled doesn't mean the entire site is compatible with it. these features are still a work in progress</p>
-	</div>
-	<div class="grid section" id="infamous">
+	</section>
+	<section class="grid" id="infamous">
 		<div class="box d-sec-tl" style="grid-column: 1 / 3; grid-row: 1; margin-bottom: 0;">
 			<p class="headText nomarblock" style="text-align: center; font-size: 18px;">now welcoming visitor #<span id="visitorscount">######</span>!</p>
 		</div>
@@ -585,7 +585,7 @@
 			<p>welcome to the very first website on the internet. the revolution is finally here, and its only just begun! <img src='/media/emoji/rofl.gif' loading='lazy' alt='rofl emoji'><br>this is just a place where i put my various works and ramblings, use the bar at the bottom right of your screen to explore around.</p>
 			<p>since we're both here, why not get to know each other a <em>little</em> better <img src='/media/emoji/glasses.gif' loading='lazy' alt='glasses emoji'>? check out the <a href="aboutme.html">about me</a> page to learn more about somebody you've never met and likely never will meet <img src='/media/emoji/unamused.gif' loading='lazy' alt='unamused emoji'></p>
 		</div>
-	</div>
+	</section>
 	{% include "partials/interests/websites/sotfp/widget.njk" %}
 	<div class="row">
 		<div class="box sec-l">
@@ -646,7 +646,7 @@
 			<iframe src="resources/widgets/home/np.html" id="scrobbleWidget" scrolling="no" class="boxyless"></iframe>
 		</div>
 	</div>
-	<div class="section">
+	<section>
 		<div class="box sec-t">
 			<h2>toDo</h2>
 			<ul>
@@ -665,8 +665,8 @@
 		<div class="box sec-b">
 			<p>what are you supposed to put on your homepage</p>
 		</div>
-	</div>
-	<div class="section grid">
+	</section>
+	<section class="grid">
 		<div class="box sec-t" style="grid-row: 1/2; grid-column: 1/4;">
 			<h2>pets</h2>
 		</div>
@@ -680,8 +680,8 @@
 			<img src="media/home/pets/chatt/chatt.png" loading="lazy" onmouseover="this.src ='media/home/pets/chatt/blink.png'" onmouseleave="this.src = 'media/home/pets/chatt/chatt.png'">
 			<p class="nomarblock" style="color: #a0f2dd;">adopted from <a href="https://neonriser.neocities.org/adopt" target="_blank" style="color: #aacbe4; --dark-primary: #afd18c; --dark-tertiary: #ffb1c0;">Neonriser</a>!</p>
 		</div>
-	</div>
-	<div class="section grid">
+	</section>
+	<section class="grid">
 		<div class="box sec-tl" style="grid-row: 1/2; grid-column: 1/2;">
 			<h2>siteUpdates</h2>
 			<h3 style="margin: 0; font-size: 15px;"><strong>GOODBYE WiDGETS...</strong></h3>
@@ -700,8 +700,8 @@
 			<p>site updates almost every sunday, blog posts and content updates whenever</p>
 			<a class="bring" href="more/archive/blog/updates.html">Site Update Archive</a>
 		</div>
-	</div>
-	<div id="mybum" class="box section sec-full" style="--border: #9462bd;">
+	</section>
+	<section id="mybum" class="box sec-full" style="--border: #9462bd;">
 		<h2>myButton</h2>
 		<div style="display: flex; align-items: center;">
 			<img loading="lazy" alt="" src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
@@ -718,10 +718,10 @@
 			}
 		</script>
 		<p class="nomarblock">hotlink, or don't hotlink! the choice is yours!</p>
-	</div>
-	<div id="signguest" class="box sec-full section" style="--border: #ff8875;">
+	</section>
+	<section id="signguest" class="box sec-full" style="--border: #ff8875;">
 		<p class="middleBoy"><img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt="">Remember: <a class="noBg" style="cursor: pointer !important; margin-right: 10px;" href="guestbook.html">sign the guestbook</a> before you go<img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt=""></p>
-	</div>
+	</section>
 	<div class="footer page-bottom">
 		<div>
 			<p class="nomarblock">W<span style="color: red;">i</span><span style="color: #00a2ff;">i</span>CHiCKEN 2019-2025</p>

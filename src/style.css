@@ -83,7 +83,7 @@ button {
 	margin-block-start: 0;
 	margin-block-end: 0;
 }
-.section {margin-bottom: 10px !important;}
+section {margin-bottom: 10px !important;}
 .grid {
 	display: grid;
 	gap: 10px;
