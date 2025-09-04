@@ -86,7 +86,7 @@ button {
 section {margin-bottom: 10px !important;}
 .grid {
 	display: grid;
-	gap: 10px;
+	gap: 5px;
 }
 .box {
 	padding: 5px;
