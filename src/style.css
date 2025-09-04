@@ -87,6 +87,7 @@ section {margin-bottom: 10px !important;}
 .grid {
 	display: grid;
 	gap: 10px;
+	grid-template-columns: 1fr auto;
 }
 .box {
 	padding: 5px;
