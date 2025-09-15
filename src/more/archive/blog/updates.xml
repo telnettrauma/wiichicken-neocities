@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>iM NOT DEAD BECAUSE YEAH</title>
+			<pubDate>Sun, 14 Sep 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>im still workigng on things also nothing is new</description>
+		</item>
+		<item>
 			<title>GOODBYE WiDGETS...</title>
 			<pubDate>Sun, 24 Aug 2025 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>new blog post navigation bar now appears on most articles</description>
-		</item>
-		<item>
-			<title>PREPARE TO GET MUCH MORE BORiNG</title>
-			<pubDate>Mon, 5 May 2025 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>new default blog post layout and other stuff</description>
 		</item>
 	</channel>
 </rss>
