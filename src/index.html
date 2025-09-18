@@ -52,47 +52,6 @@
 			background-clip: text !important;
 			color: transparent;
 		}
-		.sidebox {
-			color: var(--side-text);
-			width: 200px;
-		}
-		.sidehead, .sidebox-content, .sidehead p {
-			backdrop-filter: blur(5px);
-			-webkit-backdrop-filter: blur(5px);
-			transition-duration: 0.5s;
-		}
-		.sidebox:hover .sidehead p {box-shadow: 0 0 20px 1px var(--side-border);}
-		.sidehead {
-			color: #ffdad5;
-			background-color: unset;
-			margin: 0;
-			margin-bottom: 2px;
-			font-family: 'Kode Mono', monospace;
-			font-size: 20px;
-			display: flex;
-		}
-		.sidehead p {
-			background: linear-gradient(45deg, #930006 0%, #743b00 100%);
-			margin-block-start: 0;
-			margin-block-end: 0;
-			padding-left: 3px;
-			width: 100%;
-		}
-		.sidehead p, .sidehead a, .sidehead span {
-			--b-radius-tl: 5;
-			--b-radius-tr: 5;
-			--b-radius-bl: 2;
-			--b-radius-br: 2;
-		}
-		.sidehead .helpbutt {margin-left: 2px;}
-		.sidebox-content {
-			padding: 5px;
-			background: var(--side-bg) url('/media/lownoise.png');
-			--b-radius-tl: 2;
-			--b-radius-tr: 2;
-			--b-radius-bl: 5;
-			--b-radius-br: 5;
-		}
 		.middleBoy {
 			display: flex;
 			align-items: center;
@@ -447,7 +406,6 @@
 				order: 3;
 				margin-bottom: 70px;
 			}
-			#rightSidebar .sidebox {margin: 0 0 10px 0;}
 			#inStep {margin-left: 10px;}
 			#glowBob {animation: none !important;}
 			.mumbo {display: inline-block;}
@@ -475,10 +433,6 @@
 				height: 90px;
 			}
 			#littleBuddies .lefty {margin-left: 10px;}
-			.sidebox {
-				width: auto;
-				margin-top: 0 !important;
-			}
 			#infamous {display: flex !important;}
 			.bring {
 				width: auto;
@@ -500,7 +454,7 @@
 			.head {height: 100px;}
 		}
 		@media (prefers-reduced-transparency) {
-			.box, .sidebox {
+			.box {
 				backdrop-filter: blur(0px);
 				-webkit-backdrop-filter: blur(0px);
 			}
