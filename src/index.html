@@ -667,12 +667,6 @@
 				<a class="bring" href="creative/graphics/buttons/index.html#home" target="_blank" style="font-size: 13.3px;">more of my buttons</a>
 			</div>
 		</div>
-		<script>
-			async function copyLinkToPage() {
-				await navigator.clipboard.writeText('<a href="https://wiggle.monster"><img loading="lazy" src="https://wiggle.monster/button.gif" style="image-rendering: pixelated;" alt="Visit WiiCHiCKEN\'s website"></a>');
-				window.alert('done!');
-			}
-		</script>
 		<p class="nomarblock">hotlink, or don't hotlink! the choice is yours!</p>
 	</section>
 	<section id="signguest" class="box sec-full" style="--border: #ff8875;">
@@ -753,6 +747,10 @@ xhttp.onreadystatechange = async function() {
 };
 xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=wiichicken", true);
 xhttp.send();
+async function copyLinkToPage() {
+	await navigator.clipboard.writeText('<a href="https://wiggle.monster"><img loading="lazy" src="https://wiggle.monster/button.gif" style="image-rendering: pixelated;" alt="Visit WiiCHiCKEN\'s website"></a>');
+	window.alert('done!');
+}
 </script>
 </body>
 </html>
