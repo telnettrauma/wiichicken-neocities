@@ -8,9 +8,53 @@
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/media/favicons/32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/media/favicons/16.png">
+	<style>
+		body {
+			background-color: #fff8f4;
+			font-family: Arial, Helvetica, sans-serif;
+			margin: 0;
+		}
+		.frame {
+			background-color: white;
+			margin: auto;
+			max-width: 700px;
+			border: 1px solid #DA8900;
+		}
+		nav {
+			background: linear-gradient(90deg,#ffddb9b3 0%, #ffcf6eb3 100%);
+			border: 3px solid #f9bb72;
+			border-right: unset;
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			padding: 20px;
+			border-radius: 100px 0 0 100px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 10px 0 0 10px;
+		}
+		#home-button {
+			background-color: white;
+			border-radius: 50%;
+			width: 75px;
+			height: 75px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		main {
+			padding: 10px;
+		}
+	</style>
 </head>
 <body>
 	<div class="frame">
+		<nav>
+			<a href="/" id="home-button">Home</a>
+			<a>Evolution</a>
+			<a>Reference</a>
+			<a>Lore</a>
+		</nav>
 		<main>
 			<h1>Evolution of FiSKiN</h1>
 			<p>This is where the page content will go</p>
