@@ -5,6 +5,8 @@ date: 2025-09-27
 permalink: "/more/archive/blog/25/9/tb3dock.html"
 description: "all the dock does now is charge my laptop"
 ---
+**I figured out how to fix it, check out my article: [How I Fixed My ThinkPad Thunderbolt 3 Dock](../10/dockfixed.html).**
+
 Likely in an effort to make the physical devices more slick, Lenovo changed how ThinkPad docks work. Before, you would "latch" them into a device. I'm terrible at explaining this in text, but it worked somewhat like how a Nintendo Switch works. However, the design of the dock has been changed. Instead, you plug something into your laptop to make the dock work. I actually like this better. Although I may miss how tactile the old dock was (including how fun it was to eject the laptop from it), the new one is much more compact and versatile.
 
 I actually really enjoyed using the dock. It was nice not having to reconnect everything individually to my laptop whenever I wanted to use it somewhere else. But the real game changer was being able to use my drawing tablet and have an external monitor connected at the same time. Also having more USB ports was cool, I guess.
