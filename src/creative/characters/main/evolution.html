@@ -51,6 +51,28 @@
 			padding: 10px;
 			line-height: 30px;
 		}
+		.gallery {
+			background-color: #e6e6e6;
+			padding: 5px;
+		}
+		.gallery summary {
+			font-weight: bold;
+			font-size: 18px;
+		}
+		.gallery-carousel {
+			display: flex;
+			overflow-y: scroll;
+		}
+		.gallery-item {
+			max-width: 200px;
+			line-height: 16px;
+		}
+		.gallery-item img {
+			aspect-ratio: 1 / 1;
+			object-fit: contain;
+			max-width: 200px;
+			max-height: 200px;
+		}
 	</style>
 </head>
 <body>
@@ -74,6 +96,15 @@
 			<h3>Personality</h3>
 			<p>For his personality, I chose to make him evil. At the time that's just what I felt fit him the best, although I think I took it a little too far. Instead of being slapstick evil, he just straight up murdered people just because edgy. My "lore" reason why was so terrible that I'm not even going to put it here. He also almost always had the meh, annoyed face, only showing emotion sometimes <img src='/media/emoji/unamused.gif' loading='lazy' alt='unamused emoji'>.</p>
 			<!-- TODO add image gallery for this section -->
+			<details class="gallery">
+				<summary>Gallery</summary>
+				<div class="gallery-carousel">
+					<div class="gallery-item">
+						<img src="media/evol/1/g/theimage.png" loading="lazy">
+						<p>Drawn by <a href="https://x.com/pseudosavant_" target="_blank">@pseudosavant_</a></p>
+					</div>
+				</div>
+			</details>
 			<h2>Accessorizing</h2>
 			<p>So now this little dude is officially my character. Awesome! My problem was that he didn't really feel unique and he had no personality. Anybody can make a character that's a solid color and 3 tufts of hair. So, I decided to make some changes.</p>
 			<h3>Scarf</h3>
