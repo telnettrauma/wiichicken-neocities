@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>HAPPY HALLOWEEN!!!</title>
+			<pubDate>Mon, 13 Oct 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>halloween theme</description>
+		</item>
+		<item>
 			<title>iM NOT DEAD BECAUSE YEAH</title>
 			<pubDate>Sun, 14 Sep 2025 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>yeah something but not much of anything is new.</description>
-		</item>
-		<item>
-			<title>HELP YOU FiND YOUR WAY</title>
-			<pubDate>Mon, 12 May 2025 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>new blog post navigation bar now appears on most articles</description>
 		</item>
 	</channel>
 </rss>
