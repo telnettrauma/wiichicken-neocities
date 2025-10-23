@@ -42,27 +42,32 @@ nav {
 	background-size: cover !important;
 }
 .topLinks a:nth-child(2) {
-	color: #c5e7ff;
+	/* color: #c5e7ff; */
+	color: #ffdcbd;
 	--background: blue;
 }
 .topLinks a:nth-child(2) .nav-icon {background: url(/resources/nav/navicons.png) 0 0;}
 .topLinks a:nth-child(3) {
-	color: #dce1ff;
+	/* color: #dce1ff; */
+	color: #ffdbc9;
 	--background: #0059ff;
 }
 .topLinks a:nth-child(3) .nav-icon {background: url(/resources/nav/navicons.png) -24px 0;}
 .topLinks a:nth-child(4) {
-	color: #ffd6fe;
+	/* color: #ffd6fe; */
+	color: #ffd9dd;
 	--background: #dd00ff;
 }
 .topLinks a:nth-child(4) .nav-icon {background: url(/resources/nav/navicons.png) -48px 0;}
 .topLinks a:nth-child(5) {
-	color: #ffdadb;
+	/* color: #ffdadb; */
+	color: #ffd7f6;
 	--background: #ff0055;
 }
 .topLinks a:nth-child(5) .nav-icon {background: url(/resources/nav/navicons.png) -72px 0;}
 .topLinks a:nth-child(6) {
-	color: #ffdad6;
+	/* color: #ffdad6; */
+	color: #f2daff;
 	--background: red;
 }
 .topLinks a:nth-child(6) .nav-icon {background: url(/resources/nav/navicons.png) -96px 0;}
