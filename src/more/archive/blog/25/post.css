@@ -91,17 +91,13 @@ nav {
 	margin: 2px;
 }
 #s1 {
-	/* background-color: red;
-	background: linear-gradient(0deg, #ff7b00 0%, #ff0000 100%); */
-	background-color: #AB3AFC;
-	background: linear-gradient(0deg, #AB3AFC 0%, #fc3afc 100%);
+	background-color: red;
+	background: linear-gradient(0deg, #ff7b00 0%, #ff0000 100%);
 	animation: blink 15s infinite;
 }
 #s2 {
-	/* background-color: #00a2ff;
-	background: linear-gradient(180deg, #00a2ff 0%, #0044ff 100%); */
-	background-color: #FE9900;
-	background: linear-gradient(180deg, #FE9900 0%, #fe5d00 100%);
+	background-color: #00a2ff;
+	background: linear-gradient(180deg, #00a2ff 0%, #0044ff 100%);
 }
 @keyframes blink {
 	0% {height: 10px; margin-top: 0; margin-bottom: 0;}
