@@ -21,7 +21,7 @@ For the example I gave, this could be attributed to being a new member of a frie
 
 This is how I see most friend groups I've been apart of:
 
-![[friendnode.png]]
+![Graph showing a red dot connected to a yellow dot, and a yellow dot connected to a large network of other dots](img/friendnode.png)
 
 The red node is myself, and the yellow node is the friend who introduced me to the friend group. Usually there will be one or two other people in the group who maybe like you, but not much. And there is everyone else in the group who talks to each other and does activities with each other. Maybe they're playing games with each other, or sending Tweets that remind them of each other. They still talk to you if you're conversating, but never outside of that.
 
