@@ -256,15 +256,15 @@ button {
 	margin-right: 2px;
 	image-rendering: pixelated;
 }
-.topLinks a:first-child {color: #ffdcbd;}
+.topLinks a:first-child {color: #c5e7ff;}
 .topLinks a:first-child .nav-icon {background: url(/resources/nav/navicons.png) 0 0;}
-.topLinks a:nth-child(2) {color: #ffdbc9;}
+.topLinks a:nth-child(2) {color: #dce1ff;}
 .topLinks a:nth-child(2) .nav-icon {background: url(/resources/nav/navicons.png) -12px 0;}
-.topLinks a:nth-child(3) {color: #ffd9dd;}
+.topLinks a:nth-child(3) {color: #ffd6fe;}
 .topLinks a:nth-child(3) .nav-icon {background: url(/resources/nav/navicons.png) -24px 0;}
-.topLinks a:nth-child(4) {color: #ffd7f6;}
+.topLinks a:nth-child(4) {color: #ffdadb;}
 .topLinks a:nth-child(4) .nav-icon {background: url(/resources/nav/navicons.png) -36px 0;}
-.topLinks a:nth-child(5) {color: #f2daff;}
+.topLinks a:nth-child(5) {color: #ffdad6;}
 .topLinks a:nth-child(5) .nav-icon {background: url(/resources/nav/navicons.png) -48px 0;}
 .topLinks a:nth-child(6) .nav-icon {background: url(/resources/nav/navicons.png) -60px 0;}
 #fakeLogo {
@@ -308,10 +308,8 @@ button {
 	85% {transform-origin: initial;}
 }
 #fakeLogo:hover #s1 {margin-right: 10px;}
-/* #s1 {background-color: red; background: linear-gradient(0deg, #ff7b00 0%, #ff0000 100%); transition-duration: 0.3s;}
-#s2 {background-color: #00a2ff; background: linear-gradient(180deg, #00a2ff 0%, #0044ff 100%); transition-duration: 0.5s;} */
-#s1 {background-color: #AB3AFC; background: linear-gradient(0deg, #AB3AFC 0%, #fc3afc 100%); transition-duration: 0.3s;}
-#s2 {background-color: #FE9900; background: linear-gradient(180deg, #FE9900 0%, #fe5d00 100%); transition-duration: 0.5s;}
+#s1 {background-color: red; background: linear-gradient(0deg, #ff7b00 0%, #ff0000 100%); transition-duration: 0.3s;}
+#s2 {background-color: #00a2ff; background: linear-gradient(180deg, #00a2ff 0%, #0044ff 100%); transition-duration: 0.5s;}
 #fakeLogo:active {
 	padding: 7px;
 	box-shadow: 0 0 100px 50px var(--bg-1);
