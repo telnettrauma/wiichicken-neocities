@@ -35,13 +35,13 @@
 			gap: 5px;
 		}
 		.box {
-			margin-bottom: 10px;
 			--border: red;
 			background-color: #410002b3;
 			color: #ffdad6;
 			padding: 10px;
 			overflow: hidden;
 		}
+		section .box {margin-bottom: 0px;}
 		.noBg::after {display: none;}
 		.compat-error {
 			background-color: #2a1800;
@@ -593,8 +593,8 @@
 			<iframe src="resources/widgets/home/np.html" id="scrobbleWidget" scrolling="no" class="boxyless"></iframe>
 		</div>
 	</section>
-	<section>
-		<div class="box sec-t">
+	<section class="grid">
+		<div class="box sec-t" style="grid-row: 1;">
 			<h2>toDo</h2>
 			<ul>
 				<li>put all art
@@ -609,7 +609,7 @@
 			</ul>
 			<p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
 		</div>
-		<div class="box sec-b">
+		<div class="box sec-b" style="grid-row: 2;">
 			<p>what are you supposed to put on your homepage</p>
 		</div>
 	</section>
@@ -629,36 +629,38 @@
 		</div>
 	</section>
 	<section class="grid" style="grid-template-columns: 1fr auto;">
-		<div class="box sec-tl" style="grid-row: 1/2; grid-column: 1/2;">
+		<div class="box sec-tl" style="grid-row: 1; grid-column: 1/2;">
 			<h2>siteUpdates</h2>
 			<h3 style="margin: 0; font-size: 15px;"><strong>HAPPY HALLOWEEN!!!</strong></h3>
 			<p id="updatedate">October 13, 2025</p>
 		</div>
-		<div class="box sec-tr" id="last-calendar" style="grid-row: 1/2; grid-column: 2/3;">
+		<div class="box sec-tr" id="last-calendar" style="grid-row: 1; grid-column: 2/3;">
 			<p class="headText nomarblock" id="upHeader">LAST UPDATE</p>
 			<p class="headText nomarblock" id="upMonth">----</p>
 			<p class="headText nomarblock" id="upDate">##</p>
 			<p class="headText nomarblock" id="upYear">2025</p>
 		</div>
-	</div>
-	<div class="box">
-		<p>happy halloween! i added a really rushed halloween theme to celebrate. still cool though. hopefully something of substance is coming soon. hopefully.</p>
-	</div>
-	<div class="box sec-b">
-		<p>site updates almost every sunday, blog posts and content updates whenever</p>
-		<a class="bring" href="more/archive/blog/updates.html">Site Update Archive</a>
-	</div>
-	<div id="mybum" class="box sec-full" style="--border: #9462bd;">
-		<h2>myButton</h2>
-		<div style="display: flex; align-items: center;">
-			<img loading="lazy" alt="" src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
-			<div style="margin-left: 5px;">
-				<button id="copyLink" onclick="copyLinkToPage();" class="bring noscript-hidden" style="margin-bottom: 5px;">copy to clipboard</button>
-				<a class="bring" href="resources/widgets/home/med/embed.txt" target="_blank" style="font-size: 13.3px; margin-bottom: 5px;">script not working?</a>
-				<a class="bring" href="creative/graphics/buttons/index.html#home" target="_blank" style="font-size: 13.3px;">more of my buttons</a>
-			</div>
+		<div class="box" style="grid-row: 2; grid-column: 1/3;">
+			<p>happy halloween! i added a really rushed halloween theme to celebrate. still cool though. hopefully something of substance is coming soon. hopefully.</p>
 		</div>
-		<p class="nomarblock">hotlink, or don't hotlink! the choice is yours!</p>
+		<div class="box sec-b" style="grid-row: 3; grid-column: 1/3;">
+			<p>site updates almost every sunday, blog posts and content updates whenever</p>
+			<a class="bring" href="more/archive/blog/updates.html">Site Update Archive</a>
+		</div>
+	</section>
+	<section>
+		<div id="mybum" class="box sec-full" style="--border: #9462bd;">
+			<h2>myButton</h2>
+			<div style="display: flex; align-items: center;">
+				<img loading="lazy" alt="" src="button.gif" style="image-rendering: pixelated;" width="176" height="62">
+				<div style="margin-left: 5px;">
+					<button id="copyLink" onclick="copyLinkToPage();" class="bring noscript-hidden" style="margin-bottom: 5px;">copy to clipboard</button>
+					<a class="bring" href="resources/widgets/home/med/embed.txt" target="_blank" style="font-size: 13.3px; margin-bottom: 5px;">script not working?</a>
+					<a class="bring" href="creative/graphics/buttons/index.html#home" target="_blank" style="font-size: 13.3px;">more of my buttons</a>
+				</div>
+			</div>
+			<p class="nomarblock">hotlink, or don't hotlink! the choice is yours!</p>
+		</div>
 	</section>
 	<section id="signguest" class="box sec-full" style="--border: #ff8875;">
 		<p class="middleBoy"><img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt="">Remember: <a class="noBg" style="cursor: pointer !important; margin-right: 10px;" href="guestbook.html">sign the guestbook</a> before you go<img class="mobileHidden" src="media/emoji/bang.gif" style="height: 30px;" loading="lazy" alt=""></p>
