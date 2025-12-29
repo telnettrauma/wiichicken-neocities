@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>i FiNALLY DiD SOMETHiNG!</title>
+			<pubDate>Mon, 15 Dec 2025 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>who knows, but i did something!</description>
+		</item>
+		<item>
 			<title>HAPPY HALLOWEEN!!!</title>
 			<pubDate>Mon, 13 Oct 2025 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>blog posts now have a table of contents</description>
-		</item>
-		<item>
-			<title>DON'T KNOW WHAT TO CALL THiS ONE</title>
-			<pubDate>Mon, 26 May 2025 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>yeah something but not much of anything is new.</description>
 		</item>
 	</channel>
 </rss>
