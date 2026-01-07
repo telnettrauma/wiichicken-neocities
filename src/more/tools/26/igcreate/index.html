@@ -351,18 +351,35 @@
 
 	<script>
 		const gradients = [
-			{ name: 'purple', colors: ['#667eea', '#764ba2'] },
-			{ name: 'pink', colors: ['#f093fb', '#f5576c'] },
-			{ name: 'blue', colors: ['#4facfe', '#00f2fe'] },
-			{ name: 'green', colors: ['#43e97b', '#38f9d7'] },
-			{ name: 'sunset', colors: ['#fa709a', '#fee140'] },
-			{ name: 'ocean', colors: ['#30cfd0', '#330867'] },
-			{ name: 'pastel', colors: ['#a8edea', '#fed6e3'] },
-			{ name: 'orange', colors: ['#ff9a56', '#ff6a88'] },
-			{ name: 'peach', colors: ['#ffecd2', '#fcb69f'] },
-			{ name: 'rose', colors: ['#ff6e7f', '#bfe9ff'] },
-			{ name: 'lavender', colors: ['#e0c3fc', '#8ec5fc'] },
-			{ name: 'coral', colors: ['#f77062', '#fe5196'] }
+			{ name: '18-m1', colors: ['#f88140', '#a828b3'], rot: '45deg' },
+			{ name: '18-m2', color: ['#34baf1', '#9c2fbc'], rot: '45deg' },
+			{ name: '18-m3', color: ['#d7ac4e', '#ee4957'], rot: '45deg' },
+			{ name: '18-m4', color: ['#60a344', '#28c4f4'], rot: '45deg' },
+			{ name: '18-m5', color: ['#b3075b', '#e84fff'], rot: '45deg' },
+			{ name: '18-m6', color: ['#2f81cd', '#28c4f5'], rot: '45deg' },
+			{ name: '18-n1', color: ['#24002a', '#7e0091'], rot: '45deg' },
+			{ name: '18-n2', color: ['#d981ab', '#b00053'], rot: '45deg' },
+			{ name: '18-n3', color: ['#0389b2', '#00274c'], rot: '45deg' },
+			{ name: '18-n4', color: ['#202020', '#363636'], rot: '45deg' },
+			{ name: '18-n5', color: ['#7d010c', '#000000'], rot: '45deg' },
+			{ name: '18-n6', color: ['#195000', '#000000'], rot: '45deg' },
+			{ name: '18-t1', color: ['#939393', '#eeeeee'], rot: '45deg' },
+			{ name: '18-t2', color: ['#202020', '#737172'], rot: '45deg' },
+			{ name: '18-t3', color: ['#d3c973', '#fef8e3'], rot: '45deg' },
+			{ name: '18-t4', color: ['#b9a282', '#b9b09f'], rot: '45deg' },
+			{ name: '18-t5', color: ['#400008', '#6e0006'], rot: '45deg' },
+			{ name: '18-s1', color: ['#ca3e49', '#0f0e0c'], rot: '45deg' },
+			{ name: '18-s2', color: ['#6ebfda', '#28c4f5'], rot: '45deg' },
+			{ name: '18-s3', color: ['#a9a9a9', '#fafafa'], rot: '45deg' },
+			{ name: '18-s4', color: ['#000000', '#262626'], rot: '45deg' },
+			{ name: '19-1', color: ['#cb31e2', '#fc8d33'], rot: '135deg' },
+			{ name: '19-2', color: ['#c731e3', '#5fb0ff'], rot: '135deg' },
+			{ name: '19-3', color: ['#6dc056', '#28c4f4'], rot: '135deg' },
+			{ name: '19-4', color: ['#ea4a59', '#fdca5c'], rot: '135deg' },
+			{ name: '19-5', color: ['#cb2fe3', '#fe6876'], rot: '135deg' },
+			{ name: '19-6', color: ['#000000', '#262626'], rot: '135deg' },
+			{ name: '19-7', color: ['#262626', '#262626'], rot: '135deg' },
+			{ name: '19-8', color: ['#dbdbdb', '#dbdbdb'], rot: '135deg' },
 		];
 
 		const fonts = [
@@ -392,7 +409,6 @@
 		let backgroundImage = null;
 		let textX = canvas.width / 2;
 		let textY = canvas.height / 2;
-		let isDragging = false;
 		let dragOffsetX = 0;
 		let dragOffsetY = 0;
 
@@ -460,48 +476,6 @@
 		currentBackground = gradients[0];
 		drawCanvas();
 
-		// Create gradient options
-		gradients.forEach((gradient, index) => {
-			const div = document.createElement('div');
-			div.className = 'gradient-option';
-			if (index === 0) div.classList.add('active');
-			div.style.background = `linear-gradient(135deg, ${gradient.colors[0]} 0%, ${gradient.colors[1]} 100%)`;
-			div.addEventListener('click', () => {
-				currentBackground = gradient;
-				backgroundImage = null;
-				document.querySelectorAll('.gradient-option').forEach(el => el.classList.remove('active'));
-				div.classList.add('active');
-				drawCanvas();
-			});
-			gradientGrid.appendChild(div);
-		});
-
-		// Create upload option
-		const uploadDiv = document.createElement('div');
-		uploadDiv.className = 'gradient-option upload-option';
-		uploadDiv.innerHTML = '📷<input type="file" id="imageUpload" accept="image/*">';
-		gradientGrid.appendChild(uploadDiv);
-
-		// Handle image upload
-		document.getElementById('imageUpload').addEventListener('change', (e) => {
-			const file = e.target.files[0];
-			if (file) {
-				const reader = new FileReader();
-				reader.onload = (event) => {
-					const img = new Image();
-					img.onload = () => {
-						backgroundImage = img;
-						currentBackground = null;
-						document.querySelectorAll('.gradient-option').forEach(el => el.classList.remove('active'));
-						uploadDiv.classList.add('active');
-						drawCanvas();
-					};
-					img.src = event.target.result;
-				};
-				reader.readAsDataURL(file);
-			}
-		});
-
 		// Create font options
 		fonts.forEach((font, index) => {
 			const div = document.createElement('div');
@@ -536,63 +510,6 @@
 			currentColor = e.target.value;
 			drawCanvas();
 		});
-
-		// Mouse drag functionality
-		canvas.addEventListener('mousedown', (e) => {
-			const rect = canvas.getBoundingClientRect();
-			const x = e.clientX - rect.left;
-			const y = e.clientY - rect.top;
-			
-			dragOffsetX = x - textX;
-			dragOffsetY = y - textY;
-			isDragging = true;
-		});
-
-		canvas.addEventListener('mousemove', (e) => {
-			if (isDragging) {
-				const rect = canvas.getBoundingClientRect();
-				textX = e.clientX - rect.left - dragOffsetX;
-				textY = e.clientY - rect.top - dragOffsetY;
-				drawCanvas();
-			}
-		});
-
-		canvas.addEventListener('mouseup', () => {
-			isDragging = false;
-		});
-
-		canvas.addEventListener('mouseleave', () => {
-			isDragging = false;
-		});
-
-		// Touch drag functionality
-		canvas.addEventListener('touchstart', (e) => {
-			e.preventDefault();
-			const rect = canvas.getBoundingClientRect();
-			const touch = e.touches[0];
-			const x = touch.clientX - rect.left;
-			const y = touch.clientY - rect.top;
-			
-			dragOffsetX = x - textX;
-			dragOffsetY = y - textY;
-			isDragging = true;
-		});
-
-		canvas.addEventListener('touchmove', (e) => {
-			e.preventDefault();
-			if (isDragging) {
-				const rect = canvas.getBoundingClientRect();
-				const touch = e.touches[0];
-				textX = touch.clientX - rect.left - dragOffsetX;
-				textY = touch.clientY - rect.top - dragOffsetY;
-				drawCanvas();
-			}
-		});
-
-		canvas.addEventListener('touchend', () => {
-			isDragging = false;
-		});
-
 		// Download functionality
 		downloadBtn.addEventListener('click', () => {
 			const link = document.createElement('a');
