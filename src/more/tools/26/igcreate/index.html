@@ -21,68 +21,47 @@
 			padding: 20px;
 		}
 
-		.container {
+		main {
 			display: flex;
 			gap: 20px;
 			max-width: 1200px;
 			width: 100%;
 		}
+		h4 {
+			margin-bottom: 10px;
+			font-weight: unset;
+		}
+
+		.canvas-wrapper {
+			position: relative;
+		}
 
 		.story-canvas {
 			width: 375px;
 			height: 667px;
-			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 			border-radius: 20px;
-			position: relative;
-			overflow: hidden;
 			box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-			cursor: text;
-		}
-
-		.text-content {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			font-size: 32px;
-			font-weight: 700;
-			color: white;
-			text-align: center;
-			padding: 20px;
-			max-width: 90%;
-			word-wrap: break-word;
-			text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 			cursor: move;
-			user-select: none;
+			display: block;
 		}
 
-		.controls {
+		#control-area {
 			flex: 1;
-			background: #1a1a1a;
-			border-radius: 20px;
 			padding: 30px;
 			color: white;
-			max-width: 400px;
+			display: flex;
+			gap: 10px;
 		}
-
-		h2 {
-			margin-bottom: 20px;
-			font-size: 24px;
+		.row {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
 		}
-
 		.control-group {
-			margin-bottom: 25px;
+			background-color: #242424;
+			padding: 10px;
+			border-radius: 5px;
 		}
-
-		label {
-			display: block;
-			margin-bottom: 8px;
-			font-size: 14px;
-			color: #aaa;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-		}
-
 		textarea {
 			width: 100%;
 			padding: 12px;
@@ -110,7 +89,7 @@
 		.gradient-option {
 			width: 40px;
 			height: 40px;
-			border-radius: 50px;
+			border-radius: 50%;
 			cursor: pointer;
 			transition: all 0.3s;
 		}
@@ -237,73 +216,111 @@
 			border-radius: 10px;
 		}
 
+		.download-btn {
+			width: 100%;
+			padding: 15px;
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			border: none;
+			border-radius: 10px;
+			color: white;
+			font-size: 16px;
+			font-weight: 600;
+			cursor: pointer;
+			transition: all 0.3s;
+		}
+
+		.download-btn:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+		}
+
+		.download-btn:active {
+			transform: translateY(0);
+		}
+
 		@media (max-width: 900px) {
-			.container {
+			main {
 				flex-direction: column;
 				align-items: center;
 			}
 			
-			.controls {
+			#control-area {
 				max-width: 375px;
 			}
 		}
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="story-canvas" id="canvas">
-			<div class="text-content" id="textContent">Tap to edit text</div>
+	<main>
+		<div class="canvas-wrapper">
+			<canvas id="canvas" class="story-canvas" width="375" height="667"></canvas>
 		</div>
+		<div id="control-area">
+			<div id="header"></div>
+			<div id="controls">
+				<div class="row">
+					<div class="control-group">
+						<h3>Text</h3>
+						<textarea id="textInput" placeholder="Enter your text...">Tap to edit text</textarea>
+					</div>
+					<div class="control-group">
+						<h3>Background</h3>
+						<h4>2019 (Create Mode)</h4>
+						<div class="gradient-grid">
+							<div class="gradient-option" style="background: linear-gradient(135deg, #cb31e2 0%, #fc8d33 100%);"></div>
+							<div class="gradient-option" style="background: linear-gradient(135deg, #c731e3 0%, #5fb0ff 100%);"></div>
+							<div class="gradient-option" style="background: linear-gradient(135deg, #6dc056 0%, #28c4f4 100%);"></div>
+							<div class="gradient-option" style="background: linear-gradient(135deg, #ea4a59 0%, #fdca5c 100%);"></div>
+							<div class="gradient-option" style="background: linear-gradient(135deg, #cb2fe3 0%, #fe6876 100%);"></div>
+							<div class="gradient-option" style="background: linear-gradient(135deg, #cb31e2 0%, #fc8d33 100%);"></div>
+							<div class="gradient-option" style="background: #262626;"></div>
+							<div class="gradient-option" style="background: #dbdbdb;"></div>
+						</div>
+					</div>
+					<div class="gradient-option upload-option">📷<input type="file" id="imageUpload" accept="image/*"></div>
+				</div>
 
-		<div class="controls">
-			<h2>Create Mode</h2>
+				<div class="control-group">
+					<label>Font Style</label>
+					<div class="font-grid" id="fontGrid"></div>
+				</div>
 
-			<div class="control-group">
-				<label>Text</label>
-				<textarea id="textInput" placeholder="Enter your text...">This is a text</textarea>
-			</div>
+				<div class="control-group">
+					<label>Font Size</label>
+					<div class="font-size-control">
+						<input type="range" id="fontSize" min="16" max="72" value="32">
+						<span class="size-value" id="fontSizeValue">32px</span>
+					</div>
+				</div>
 
-			<div class="control-group">
-				<label>Background Gradient</label>
-				<div class="gradient-grid" id="gradientGrid"></div>
-			</div>
+				<div class="control-group">
+					<label>Text Color</label>
+					<div class="color-picker-group">
+						<input type="color" id="textColor" value="#ffffff">
+					</div>
+				</div>
 
-			<div class="control-group">
-				<label>Font Style</label>
-				<div class="font-grid" id="fontGrid"></div>
-			</div>
-
-			<div class="control-group">
-				<label>Font Size</label>
-				<div class="font-size-control">
-					<input type="range" id="fontSize" min="16" max="72" value="32">
-					<span class="size-value" id="fontSizeValue">32px</span>
+				<div class="control-group">
+					<button class="download-btn" id="downloadBtn">📥 Download Story</button>
 				</div>
 			</div>
-
-			<div class="control-group">
-				<label>Text Color</label>
-				<div class="color-picker-group">
-					<input type="color" id="textColor" value="#ffffff">
-				</div>
-			</div>
 		</div>
-	</div>
+	</main>
 
 	<script>
 		const gradients = [
-			'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-			'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-			'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-			'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
-			'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-			'linear-gradient(135deg, #30cfd0 0%, #330867 100%)',
-			'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
-			'linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%)',
-			'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)',
-			'linear-gradient(135deg, #ff6e7f 0%, #bfe9ff 100%)',
-			'linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)',
-			'linear-gradient(135deg, #f77062 0%, #fe5196 100%)'
+			{ name: 'purple', colors: ['#667eea', '#764ba2'] },
+			{ name: 'pink', colors: ['#f093fb', '#f5576c'] },
+			{ name: 'blue', colors: ['#4facfe', '#00f2fe'] },
+			{ name: 'green', colors: ['#43e97b', '#38f9d7'] },
+			{ name: 'sunset', colors: ['#fa709a', '#fee140'] },
+			{ name: 'ocean', colors: ['#30cfd0', '#330867'] },
+			{ name: 'pastel', colors: ['#a8edea', '#fed6e3'] },
+			{ name: 'orange', colors: ['#ff9a56', '#ff6a88'] },
+			{ name: 'peach', colors: ['#ffecd2', '#fcb69f'] },
+			{ name: 'rose', colors: ['#ff6e7f', '#bfe9ff'] },
+			{ name: 'lavender', colors: ['#e0c3fc', '#8ec5fc'] },
+			{ name: 'coral', colors: ['#f77062', '#fe5196'] }
 		];
 
 		const fonts = [
@@ -316,34 +333,103 @@
 		];
 
 		const canvas = document.getElementById('canvas');
-		const textContent = document.getElementById('textContent');
+		const ctx = canvas.getContext('2d');
 		const textInput = document.getElementById('textInput');
 		const gradientGrid = document.getElementById('gradientGrid');
 		const fontGrid = document.getElementById('fontGrid');
 		const fontSize = document.getElementById('fontSize');
 		const fontSizeValue = document.getElementById('fontSizeValue');
 		const textColor = document.getElementById('textColor');
+		const downloadBtn = document.getElementById('downloadBtn');
 
+		let currentText = 'Tap to edit text';
+		let currentFontSize = 32;
+		let currentFont = fonts[0].family;
+		let currentColor = '#ffffff';
+		let currentBackground = null;
+		let backgroundImage = null;
+		let textX = canvas.width / 2;
+		let textY = canvas.height / 2;
 		let isDragging = false;
-		let currentX, currentY, initialX, initialY;
-		let currentBackground = '';
+		let dragOffsetX = 0;
+		let dragOffsetY = 0;
+
+		// Draw initial canvas
+		function drawCanvas() {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+			// Draw background
+			if (backgroundImage) {
+				const scale = Math.max(canvas.width / backgroundImage.width, canvas.height / backgroundImage.height);
+				const x = (canvas.width / 2) - (backgroundImage.width / 2) * scale;
+				const y = (canvas.height / 2) - (backgroundImage.height / 2) * scale;
+				ctx.drawImage(backgroundImage, x, y, backgroundImage.width * scale, backgroundImage.height * scale);
+			} else if (currentBackground) {
+				const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+				gradient.addColorStop(0, currentBackground.colors[0]);
+				gradient.addColorStop(1, currentBackground.colors[1]);
+				ctx.fillStyle = gradient;
+				ctx.fillRect(0, 0, canvas.width, canvas.height);
+			}
+
+			// Draw text with shadow
+			ctx.save();
+			ctx.font = `bold ${currentFontSize}px ${currentFont}`;
+			ctx.fillStyle = currentColor;
+			ctx.textAlign = 'center';
+			ctx.textBaseline = 'middle';
+			
+			// Add text shadow
+			ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
+			ctx.shadowBlur = 8;
+			ctx.shadowOffsetX = 0;
+			ctx.shadowOffsetY = 2;
+
+			// Word wrap
+			const maxWidth = canvas.width * 0.9;
+			const words = currentText.split(' ');
+			const lines = [];
+			let currentLine = words[0];
+
+			for (let i = 1; i < words.length; i++) {
+				const testLine = currentLine + ' ' + words[i];
+				const metrics = ctx.measureText(testLine);
+				if (metrics.width > maxWidth) {
+					lines.push(currentLine);
+					currentLine = words[i];
+				} else {
+					currentLine = testLine;
+				}
+			}
+			lines.push(currentLine);
+
+			const lineHeight = currentFontSize * 1.2;
+			const totalHeight = lines.length * lineHeight;
+			const startY = textY - (totalHeight / 2) + (lineHeight / 2);
+
+			lines.forEach((line, i) => {
+				ctx.fillText(line, textX, startY + (i * lineHeight));
+			});
+
+			ctx.restore();
+		}
+
+		// Initialize with first gradient
+		currentBackground = gradients[0];
+		drawCanvas();
 
 		// Create gradient options
 		gradients.forEach((gradient, index) => {
 			const div = document.createElement('div');
 			div.className = 'gradient-option';
-			if (index === 0) {
-				div.classList.add('active');
-				currentBackground = gradient;
-			}
-			div.style.background = gradient;
+			if (index === 0) div.classList.add('active');
+			div.style.background = `linear-gradient(135deg, ${gradient.colors[0]} 0%, ${gradient.colors[1]} 100%)`;
 			div.addEventListener('click', () => {
-				canvas.style.background = gradient;
-				canvas.style.backgroundSize = 'cover';
-				canvas.style.backgroundPosition = 'center';
 				currentBackground = gradient;
+				backgroundImage = null;
 				document.querySelectorAll('.gradient-option').forEach(el => el.classList.remove('active'));
 				div.classList.add('active');
+				drawCanvas();
 			});
 			gradientGrid.appendChild(div);
 		});
@@ -360,12 +446,15 @@
 			if (file) {
 				const reader = new FileReader();
 				reader.onload = (event) => {
-					canvas.style.background = `url('${event.target.result}')`;
-					canvas.style.backgroundSize = 'cover';
-					canvas.style.backgroundPosition = 'center';
-					currentBackground = `url('${event.target.result}')`;
-					document.querySelectorAll('.gradient-option').forEach(el => el.classList.remove('active'));
-					uploadDiv.classList.add('active');
+					const img = new Image();
+					img.onload = () => {
+						backgroundImage = img;
+						currentBackground = null;
+						document.querySelectorAll('.gradient-option').forEach(el => el.classList.remove('active'));
+						uploadDiv.classList.add('active');
+						drawCanvas();
+					};
+					img.src = event.target.result;
 				};
 				reader.readAsDataURL(file);
 			}
@@ -379,89 +468,96 @@
 			div.textContent = font.name;
 			div.style.fontFamily = font.family;
 			div.addEventListener('click', () => {
-				textContent.style.fontFamily = font.family;
+				currentFont = font.family;
 				document.querySelectorAll('.font-option').forEach(el => el.classList.remove('active'));
 				div.classList.add('active');
+				drawCanvas();
 			});
 			fontGrid.appendChild(div);
 		});
 
 		// Text input
 		textInput.addEventListener('input', (e) => {
-			textContent.textContent = e.target.value || 'Tap to edit text';
+			currentText = e.target.value || 'Tap to edit text';
+			drawCanvas();
 		});
 
 		// Font size
 		fontSize.addEventListener('input', (e) => {
-			const size = e.target.value;
-			textContent.style.fontSize = size + 'px';
-			fontSizeValue.textContent = size + 'px';
+			currentFontSize = parseInt(e.target.value);
+			fontSizeValue.textContent = currentFontSize + 'px';
+			drawCanvas();
 		});
 
 		// Text color
 		textColor.addEventListener('input', (e) => {
-			textContent.style.color = e.target.value;
+			currentColor = e.target.value;
+			drawCanvas();
 		});
 
-		// Canvas click to edit
-		canvas.addEventListener('click', (e) => {
-			if (e.target === canvas) {
-				textInput.focus();
-			}
+		// Mouse drag functionality
+		canvas.addEventListener('mousedown', (e) => {
+			const rect = canvas.getBoundingClientRect();
+			const x = e.clientX - rect.left;
+			const y = e.clientY - rect.top;
+			
+			dragOffsetX = x - textX;
+			dragOffsetY = y - textY;
+			isDragging = true;
 		});
 
-		// Drag functionality
-		textContent.addEventListener('mousedown', startDrag);
-		textContent.addEventListener('touchstart', startDrag);
-
-		function startDrag(e) {
-			if (e.type === 'touchstart') {
-				initialX = e.touches[0].clientX - currentX;
-				initialY = e.touches[0].clientY - currentY;
-			} else {
-				initialX = e.clientX - currentX;
-				initialY = e.clientY - currentY;
-			}
-
-			if (e.target === textContent) {
-				isDragging = true;
-			}
-		}
-
-		document.addEventListener('mousemove', drag);
-		document.addEventListener('touchmove', drag);
-
-		function drag(e) {
+		canvas.addEventListener('mousemove', (e) => {
 			if (isDragging) {
-				e.preventDefault();
-				
-				if (e.type === 'touchmove') {
-					currentX = e.touches[0].clientX - initialX;
-					currentY = e.touches[0].clientY - initialY;
-				} else {
-					currentX = e.clientX - initialX;
-					currentY = e.clientY - initialY;
-				}
-
 				const rect = canvas.getBoundingClientRect();
-				const x = ((currentX / rect.width) * 100);
-				const y = ((currentY / rect.height) * 100);
-
-				textContent.style.left = x + '%';
-				textContent.style.top = y + '%';
+				textX = e.clientX - rect.left - dragOffsetX;
+				textY = e.clientY - rect.top - dragOffsetY;
+				drawCanvas();
 			}
-		}
+		});
 
-		document.addEventListener('mouseup', endDrag);
-		document.addEventListener('touchend', endDrag);
-
-		function endDrag() {
+		canvas.addEventListener('mouseup', () => {
 			isDragging = false;
-		}
+		});
 
-		// Initialize position
-		currentX = 0;
-		currentY = 0;
+		canvas.addEventListener('mouseleave', () => {
+			isDragging = false;
+		});
+
+		// Touch drag functionality
+		canvas.addEventListener('touchstart', (e) => {
+			e.preventDefault();
+			const rect = canvas.getBoundingClientRect();
+			const touch = e.touches[0];
+			const x = touch.clientX - rect.left;
+			const y = touch.clientY - rect.top;
+			
+			dragOffsetX = x - textX;
+			dragOffsetY = y - textY;
+			isDragging = true;
+		});
+
+		canvas.addEventListener('touchmove', (e) => {
+			e.preventDefault();
+			if (isDragging) {
+				const rect = canvas.getBoundingClientRect();
+				const touch = e.touches[0];
+				textX = touch.clientX - rect.left - dragOffsetX;
+				textY = touch.clientY - rect.top - dragOffsetY;
+				drawCanvas();
+			}
+		});
+
+		canvas.addEventListener('touchend', () => {
+			isDragging = false;
+		});
+
+		// Download functionality
+		downloadBtn.addEventListener('click', () => {
+			const link = document.createElement('a');
+			link.download = 'instagram-story.png';
+			link.href = canvas.toDataURL('image/png');
+			link.click();
+		});
 	</script>
 </body>
 </html>
