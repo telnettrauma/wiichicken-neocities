@@ -96,11 +96,11 @@
 			font-family: inherit;
 			min-height: 80px;
 		}
-		.gradient-grid {
+		.gradient-grid, .font-grid, #swatches {
 			display: grid;
-			grid-template-columns: repeat(6, 1fr);
 			gap: 10px;
 		}
+		.gradient-grid {grid-template-columns: repeat(6, 1fr);}
 		.gradient-option {
 			width: 40px;
 			height: 40px;
@@ -110,15 +110,9 @@
 		.gradient-option:hover {
 			transform: scale(1.05);
 		}
-		.gradient-option.active {
-			border: 3px solid white;
-		}
+		.gradient-option.active {border: 3px solid white;}
 
-		.font-grid {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 10px;
-		}
+		.font-grid {grid-template-columns: repeat(2, 1fr);}
 		.font-option {
 			width: 120px;
 			height: 40px;
@@ -140,6 +134,19 @@
 			align-items: center;
 			gap: 15px;
 		}
+
+		#swatches {
+			grid-template-columns: repeat(9, 1fr);
+			gap: 5px;
+		}
+		.swatch {
+			width: 20px;
+			height: 20px;
+			border-radius: 5px;
+			border: 2px solid white;
+			cursor: pointer;
+		}
+
 		input[type="range"] {
 			flex: 1;
 			height: 6px;
@@ -159,23 +166,21 @@
 		}
 		.color-picker-group {
 			display: flex;
-			gap: 10px;
+			gap: 5px;
 			align-items: center;
 		}
 		input[type="color"] {
-			width: 50px;
-			height: 50px;
+			width: 20px;
+			height: 70px;
 			border: none;
-			border-radius: 10px;
+			border-radius: 5px;
 			cursor: pointer;
 			background: transparent;
 		}
-		input[type="color"]::-webkit-color-swatch-wrapper {
-			padding: 0;
-		}
+		input[type="color"]::-webkit-color-swatch-wrapper {padding: 0;}
 		input[type="color"]::-webkit-color-swatch {
-			border: 3px solid #3a3a3a;
-			border-radius: 10px;
+			border-radius: 5px;
+			border: 2px solid white;
 		}
 		.dl-button {
 			width: 100%;
@@ -246,6 +251,35 @@
 						<h3>Text Color</h3>
 						<div class="color-picker-group">
 							<input type="color" id="textColor" value="#ffffff">
+							<div id="swatches">
+								<div class="swatch" style="background: #ffffff;"></div>
+								<div class="swatch" style="background: #000000;"></div>
+								<div class="swatch" style="background: #3798f2;"></div>
+								<div class="swatch" style="background: #70c04f;"></div>
+								<div class="swatch" style="background: #fdcb5c;"></div>
+								<div class="swatch" style="background: #fc8d33;"></div>
+								<div class="swatch" style="background: #ee4957;"></div>
+								<div class="swatch" style="background: #d1076a;"></div>
+								<div class="swatch" style="background: #a207ba;"></div>
+								<div class="swatch" style="background: #ed0014;"></div>
+								<div class="swatch" style="background: #ed858e;"></div>
+								<div class="swatch" style="background: #fed3d4;"></div>
+								<div class="swatch" style="background: #fedbb3;"></div>
+								<div class="swatch" style="background: #ffc482;"></div>
+								<div class="swatch" style="background: #d38f44;"></div>
+								<div class="swatch" style="background: #98643b;"></div>
+								<div class="swatch" style="background: #432324;"></div>
+								<div class="swatch" style="background: #1c4928;"></div>
+								<div class="swatch" style="background: #262626;"></div>
+								<div class="swatch" style="background: #363636;"></div>
+								<div class="swatch" style="background: #555555;"></div>
+								<div class="swatch" style="background: #737373;"></div>
+								<div class="swatch" style="background: #999999;"></div>
+								<div class="swatch" style="background: #b2b2b2;"></div>
+								<div class="swatch" style="background: #c7c7c7;"></div>
+								<div class="swatch" style="background: #dbdbdb;"></div>
+								<div class="swatch" style="background: #efefef;"></div>
+							</div>
 						</div>
 					</div>
 				</div>
