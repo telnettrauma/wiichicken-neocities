@@ -177,19 +177,35 @@
 			border: 3px solid #3a3a3a;
 			border-radius: 10px;
 		}
-		.download-btn {
+		.dl-button {
 			width: 100%;
-			padding: 15px;
-			background-color: gray;
+			padding: 0 10px 0 10px;
+			background-color: white;
 			border: none;
 			border-radius: 10px;
 			color: white;
-			font-size: 16px;
-			font-weight: bold;
 			cursor: pointer;
 		}
+		.dl-button p {
+			--color-1: #9744a9;
+			--color-2: #393fb7;
+		}
+		.dl-button:hover {
+			background: linear-gradient(90deg, #9744a9, #393fb7);
+		}
+		.dl-button:hover p {
+			--color-1: white;
+			--color-2: white;
+		}
 		.gradient-text {
-			
+			font-family: 'Aveny T', sans-serif;
+			background: linear-gradient(90deg, var(--color-1), var(--color-2));
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+			text-transform: uppercase;
+			font-size: 41px;
+			font-weight: bold;
 		}
 		@media (max-width: 900px) {
 			main {
@@ -209,9 +225,9 @@
 		</div>
 		<div id="control-area">
 			<div id="header">
-				<h1>IG Create Mode Online</h1>
+				<h1 class="gradient-text" style="--color-1: #dca386; --color-2: #d16d9a;">Create Mode</h1>
 				<div>
-					<button class="download-btn" id="downloadBtn">DOWNLOAD</button>
+					<button class="dl-button" id="downloadBtn"><p class="gradient-text">Download</p></button>
 				</div>
 			</div>
 			<div id="controls">
@@ -353,7 +369,7 @@
 		const textColor = document.getElementById('textColor');
 		const downloadBtn = document.getElementById('downloadBtn');
 
-		let currentText = 'Tap to edit text';
+		let currentText = 'Use the text tool on the sidebar to edit text';
 		let currentFontSize = 32;
 		let currentFont = fonts[0].family;
 		let currentColor = '#ffffff';
@@ -451,7 +467,7 @@
 
 		// Text input
 		textInput.addEventListener('input', (e) => {
-			currentText = e.target.value || 'Tap to edit text';
+			currentText = e.target.value || 'Use the text tool on the sidebar to edit text';
 			drawCanvas();
 		});
 
