@@ -250,36 +250,8 @@
 					<div class="control-group">
 						<h3>Text Color</h3>
 						<div class="color-picker-group">
-							<input type="color" id="textColor" value="#ffffff">
-							<div id="swatches">
-								<div class="swatch" style="background: #ffffff;"></div>
-								<div class="swatch" style="background: #000000;"></div>
-								<div class="swatch" style="background: #3798f2;"></div>
-								<div class="swatch" style="background: #70c04f;"></div>
-								<div class="swatch" style="background: #fdcb5c;"></div>
-								<div class="swatch" style="background: #fc8d33;"></div>
-								<div class="swatch" style="background: #ee4957;"></div>
-								<div class="swatch" style="background: #d1076a;"></div>
-								<div class="swatch" style="background: #a207ba;"></div>
-								<div class="swatch" style="background: #ed0014;"></div>
-								<div class="swatch" style="background: #ed858e;"></div>
-								<div class="swatch" style="background: #fed3d4;"></div>
-								<div class="swatch" style="background: #fedbb3;"></div>
-								<div class="swatch" style="background: #ffc482;"></div>
-								<div class="swatch" style="background: #d38f44;"></div>
-								<div class="swatch" style="background: #98643b;"></div>
-								<div class="swatch" style="background: #432324;"></div>
-								<div class="swatch" style="background: #1c4928;"></div>
-								<div class="swatch" style="background: #262626;"></div>
-								<div class="swatch" style="background: #363636;"></div>
-								<div class="swatch" style="background: #555555;"></div>
-								<div class="swatch" style="background: #737373;"></div>
-								<div class="swatch" style="background: #999999;"></div>
-								<div class="swatch" style="background: #b2b2b2;"></div>
-								<div class="swatch" style="background: #c7c7c7;"></div>
-								<div class="swatch" style="background: #dbdbdb;"></div>
-								<div class="swatch" style="background: #efefef;"></div>
-							</div>
+							<input type="color" id="text-color" value="#ffffff">
+							<div id="swatches"></div>
 						</div>
 					</div>
 				</div>
@@ -393,14 +365,15 @@
 			{ name: "Papyrus", family: "Papyrus" }
 		];
 
+		const colors = ["#ffffff", "#000000", "#3798f2", "#70c04f", "#fdcb5c", "#fc8d33", "#ee4957", "#d1076a", "#a207ba", "#ed0014", "#ed858e", "#fed3d4", "#fedbb3", "#ffc482", "#d38f44", "#98643b", "#432324", "#1c4928", "#262626", "#363636", "#555555", "#737373", "#999999", "#b2b2b2", "#c7c7c7", "#dbdbdb", "#efefef"];
+
 		const canvas = document.getElementById('canvas');
 		const ctx = canvas.getContext('2d');
 		const textInput = document.getElementById('textInput');
 		const gradientGrid = document.getElementById('gradientGrid');
-		const fontGrid = document.getElementById('fontGrid');
 		const fontSize = document.getElementById('fontSize');
 		const fontSizeValue = document.getElementById('fontSizeValue');
-		const textColor = document.getElementById('textColor');
+		const textColor = document.getElementById('text-color');
 		const downloadBtn = document.getElementById('downloadBtn');
 
 		let currentText = 'Use the text tool on the sidebar to edit text';
@@ -484,6 +457,7 @@
 		setBackground(0);
 
 		// Create font options
+		const fontGrid = document.getElementById('fontGrid');
 		fonts.forEach((font, index) => {
 			const div = document.createElement('div');
 			div.className = 'font-option';
@@ -498,6 +472,19 @@
 			});
 			fontGrid.appendChild(div);
 		});
+
+		const colorGrid = document.getElementById('swatches');
+		colors.forEach((color, index) => {
+			const div = document.createElement('div');
+			div.className = "swatch";
+			div.style.backgroundColor = color;
+			div.addEventListener('click', () => {
+				currentColor = color;
+				textColor.value = color;
+				drawCanvas();
+			});
+			swatches.appendChild(div);
+		})
 
 		// Text input
 		textInput.addEventListener('input', (e) => {
