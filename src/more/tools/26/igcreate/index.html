@@ -13,12 +13,15 @@
 			font-family: Cosmopolitan Script;
 			src: url("font/cosmo.ttf");
 		}
+		@font-face {
+			font-family: "Courier New Bold";
+			src: url("font/typewriter.ttf");
+		}
 		* {
 			margin: 0;
 			padding: 0;
 			box-sizing: border-box;
 		}
-
 		body {
 			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 			background: black;
@@ -28,7 +31,6 @@
 			min-height: 100vh;
 			padding: 20px;
 		}
-
 		main {
 			display: flex;
 			gap: 20px;
@@ -39,20 +41,13 @@
 			margin-bottom: 10px;
 			font-weight: unset;
 		}
-
-		.canvas-wrapper {
-			position: relative;
-		}
-
+		.canvas-wrapper {position: relative;}
 		.story-canvas {
 			width: 375px;
 			height: 667px;
 			border-radius: 20px;
-			box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-			cursor: move;
 			display: block;
 		}
-
 		#control-area {
 			color: white;
 			display: flex;
@@ -87,13 +82,7 @@
 			color: white;
 			font-size: 16px;
 			font-family: inherit;
-			resize: vertical;
 			min-height: 80px;
-		}
-
-		textarea:focus {
-			outline: none;
-			border-color: #667eea;
 		}
 
 		.gradient-grid {
@@ -170,12 +159,6 @@
 			border: none;
 		}
 
-		.size-value {
-			min-width: 40px;
-			text-align: right;
-			font-weight: 600;
-		}
-
 		.color-picker-group {
 			display: flex;
 			gap: 10px;
@@ -243,20 +226,19 @@
 			<div id="header">
 				<h1>IG Create Mode Online</h1>
 				<div>
-					<button class="download-btn" id="downloadBtn">📥 Download Story</button>
+					<button class="download-btn" id="downloadBtn">DOWNLOAD</button>
 				</div>
 			</div>
 			<div id="controls">
 				<div class="row">
 					<div class="control-group">
 						<h3>Text</h3>
-						<textarea id="textInput" placeholder="Enter your text...">Tap to edit text</textarea>
+						<textarea id="textInput" placeholder="Click to edit">Insert text</textarea>
 					</div>
 					<div class="control-group">
 						<h3>Font Size</h3>
 						<div class="font-size-control">
 							<input type="range" id="fontSize" min="16" max="72" value="32">
-							<span class="size-value" id="fontSizeValue">32px</span>
 						</div>
 					</div>
 					<div class="control-group">
@@ -369,6 +351,8 @@
 		const fonts = [
 			{ name: 'Classic', family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' },
 			{ name: "Modern", family: "Aveny T" },
+			{ name: "Cursive", family: "Cosmopolitan Script" },
+			{ name: "Typewriter", family: "Courier New Bold" }
 		];
 
 		const canvas = document.getElementById('canvas');
@@ -486,7 +470,6 @@
 		// Font size
 		fontSize.addEventListener('input', (e) => {
 			currentFontSize = parseInt(e.target.value);
-			fontSizeValue.textContent = currentFontSize + 'px';
 			drawCanvas();
 		});
 
