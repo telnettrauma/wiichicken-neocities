@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>number and item to a list</title>
+		<style>
+			main {
+				max-width: 600px;
+				margin: auto;
+				padding: 20px;
+				border: 1px solid black;
+				box-shadow: 2px 2px 0 0 black;
+				background-color: white;
+			}
+			button {
+				color: black;
+				background-color: yellow;
+				border: 1px solid black;
+				box-shadow: 2px 2px 0 0 black;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>my list generator tool thing</h1>
+			<p>hi so this is a very niche tool that i made entirely for myself.</p>
+			<div class="input-group">
+				<label for="input">enter your number and item</label>
+				<input type="text" id="input" placeholder="ex. 3 slime" />
+			</div>
+			<button onclick="generateList()">make that!</button>
+			<div id="output"></div>
+		</main>
+
+		<script>
+			function generateList() {
+				const input = document.getElementById("input").value.trim();
+				const output = document.getElementById("output");
+				if (!input) {
+					output.innerHTML =
+						'<p style="color: red;">You are doing it wrong.</p>';
+					return;
+				}
+
+				// extract the first nubbys number factory
+				const match = input.match(/^(\d+)\s+(.+)$/);
+				if (!match) {
+					output.innerHTML =
+						'<p style="color: red;">wrong format noob omg</p>';
+					return;
+				}
+				const number = parseInt(match[1]);
+				const item = match[2];
+				if (number < 1) {
+					output.innerHTML =
+						'<p style="color: red;">number must be 1 or greater</p>';
+					return;
+				}
+				let listHTML = "<ul>";
+				let listText = "";
+				for (let i = 1; i <= number; i++) {
+					listHTML += `<li>${item} ${i}</li>`;
+					listText += `${item} ${i}\n`;
+				}
+				listHTML += "</ul>";
+				output.innerHTML = listHTML;
+				// clipboard
+				navigator.clipboard
+					.writeText(listText.trim())
+					.then(() => {
+						output.innerHTML =
+							listHTML +
+							'<p style="color: green;">welcome to the clipboard</p>';
+					})
+					.catch((err) => {
+						output.innerHTML =
+							listHTML +
+							'<p style="color: red;">couldn\'t copy to the clippy</p>';
+					});
+			}
+			// use enter key
+			document
+				.getElementById("input")
+				.addEventListener("keypress", function (e) {
+					if (e.key === "Enter") generateList();
+				});
+		</script>
+	</body>
+</html>
