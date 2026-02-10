@@ -8,6 +8,8 @@ accent: "#ff0d00"
 articleNumber: 98
 permalink: "/more/archive/blog/25/1/grokapp.html"
 ---
+> This article was written before the whole incident of Grok being used to undress women and generate illegal imagery of children. If you're using Grok for any of these functions, **kill yourself immediately**.
+
 About a month ago I wrote about how [Grok is now free](/more/archive/blog/2024/12/grok.html). And now to embrace that, Twitter (or xAi, because they're separate kinda) has released an app for the AI chatbot everyone loves to ignore. Currently, this app is only available on iOS, but I still decided to download it because why not.
 
 **Before I go any deeper, this is a review on the app itself. I don't care about the actual AI model, as I don't use Grok, and neither does anybody else. I haven't updated Twitter in long enough to have the Grok button.**

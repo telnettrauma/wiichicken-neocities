@@ -8,6 +8,8 @@ accent: "#1e00ff"
 articleNumber: 69
 permalink: "/more/archive/blog/2024/12/grok.html"
 ---
+> This article was written before the whole incident of Grok being used to undress women and generate illegal imagery of children. If you're using Grok for any of these functions, **kill yourself immediately**.
+
 Grok, Twitter's AI assistant, now no longer requires a subscription to Twitter Blue in order to use. And because of that, people are going crazy. Well, not really. However, it's funny whenever a feature is used for it's unintended purpose on Twitter because Elon Musk sucks (but you already knew that).
 
 Grok has [been a thing](https://x.ai/blog/grok){target=_blank} for a little over a year now, however only people who bought the upper 2 tiers of Twitter Blue could actually use it. Twitter having AI features, yet alone building an entire model, is completely unnecessary, yet they still [raised $6 billion from investors](https://x.ai/blog/series-b){target=_blank}.
