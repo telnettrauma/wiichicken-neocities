@@ -47,9 +47,23 @@
 				height: 90px;
 				margin-right: 5px;
 			}
-			#themachine, main {
+			main {
 				max-width: 800px;
 				margin: auto;
+			}
+			.album {
+				padding: 10px;
+				margin-bottom: 10px;
+				border: 1px solid var(--fg);
+				background-color: var(--bg);
+				color: var(--fg);
+				display: flex;
+				gap: 10px;
+			}
+			.album img {
+				width: 100px;
+				height: 100px;
+				border: 1px solid var(--fg);
 			}
 		</style>
 	</head>
@@ -69,8 +83,12 @@
 		<main>
 			<h1 style="font-family: 'Martian Mono', monospace; color: #8ffc69;">My Favorite Albums</h1>
 			<p style="color: #8ffc69;">Last updated: December 8, 2023<br></p>
-		</main>
-		<div id="themachine">
+			<div class="album">
+				<img src="https://lastfm.freetls.fastly.net/i/u/avatar170s/f41be035fdd8af4dad695c744ca8d3ac.jpg">
+				<div class="info">
+					<h4>MIKE - Beware of the Monkey</h4>
+				</div>
+			</div>
 			<h2>Legacy</h2>
 			<p>I only kept this here just to preserve how ugly this page used to look.</p>
 			<div class="albox" style="background-color: #75d1ff; color: #003548;">
@@ -129,6 +147,6 @@
 					<p>Another underrated and unique album. Every song here is really fun to listen to and I also really like the messages of some of the tracks.</p>
 				</div>
 			</div>
-		</div>
+		</main>
 	</body>
 </html>
