@@ -5,28 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>mesh gradient generator</title>
 	<style>
+		body {
+			max-width: 800px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: black;
+			color: white;
+		}
 		header {
 			text-align: center;
 			margin-bottom: 52px;
-		}
-
-		.logo {
-			font-family: 'Silkscreen', monospace;
-			font-size: clamp(28px, 5vw, 48px);
-			letter-spacing: -1px;
-			color: var(--paper);
-			line-height: 1;
-		}
-
-		.logo span {
-			color: var(--accent);
-		}
-
-		.tagline {
-			margin-top: 10px;
-			font-size: 13px;
-			color: var(--muted);
-			letter-spacing: 0.05em;
 		}
 
 		/* upload zone */
@@ -37,14 +26,12 @@
 			padding: 48px 24px;
 			text-align: center;
 			cursor: pointer;
-			transition: border-color 0.2s, background 0.2s;
 			position: relative;
-			background: rgba(255,255,255,0.02);
+			background: #ffffff05;
 		}
 
 		.upload-zone:hover, .upload-zone.drag {
-			border-color: var(--sub);
-			background: rgba(124,111,255,0.05);
+			background: #7c6fff0d;
 		}
 
 		.upload-zone input {
@@ -56,24 +43,6 @@
 			height: 100%;
 		}
 
-		.upload-icon {
-			font-family: 'Silkscreen', monospace;
-			font-size: 32px;
-			margin-bottom: 14px;
-			color: var(--sub);
-		}
-
-		.upload-text {
-			font-size: 14px;
-			color: var(--muted);
-			line-height: 1.7;
-		}
-
-		.upload-text strong {
-			color: var(--paper);
-			font-weight: 400;
-		}
-
 		/* preview strip */
 		.preview-strip {
 			margin-top: 20px;
@@ -82,7 +51,7 @@
 			align-items: center;
 			gap: 12px;
 			padding: 10px 14px;
-			background: rgba(255,255,255,0.04);
+			background: #ffffff0a;
 			border-radius: 4px;
 			border: 1px solid #2a2535;
 		}
@@ -99,21 +68,18 @@
 
 		.preview-name {
 			font-size: 12px;
-			color: var(--muted);
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
 		}
 
-		/* generate btn */
 		.btn-generate {
 			margin-top: 28px;
 			font-family: 'Silkscreen', monospace;
 			font-size: 13px;
 			letter-spacing: 0.06em;
 			padding: 14px 36px;
-			background: var(--accent);
-			color: #fff;
+			color: white;
 			border: none;
 			border-radius: 2px;
 			cursor: pointer;
@@ -139,7 +105,6 @@
 			font-family: 'Silkscreen', monospace;
 			font-size: 11px;
 			letter-spacing: 0.1em;
-			color: var(--sub);
 			margin-bottom: 20px;
 			text-align: center;
 		}
@@ -164,7 +129,7 @@
 			aspect-ratio: 1;
 			border-radius: 2px;
 			overflow: hidden;
-			box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+			box-shadow: 0 8px 40px #00000080;
 		}
 
 		.gradient-canvas-wrap canvas {
@@ -182,25 +147,17 @@
 		.card-name {
 			font-size: 11px;
 			color: var(--muted);
-			font-family: 'Silkscreen', monospace;
 		}
 
 		.btn-dl {
-			font-family: 'Silkscreen', monospace;
 			font-size: 10px;
 			padding: 7px 16px;
 			background: transparent;
 			border: 1px solid #3a3545;
-			color: var(--muted);
 			border-radius: 2px;
 			cursor: pointer;
 			transition: border-color 0.2s, color 0.2s;
 			letter-spacing: 0.05em;
-		}
-
-		.btn-dl:hover {
-			border-color: var(--sub);
-			color: var(--paper);
 		}
 
 		.btn-dl-all {
@@ -210,8 +167,7 @@
 			font-family: 'Silkscreen', monospace;
 			font-size: 12px;
 			padding: 16px;
-			background: var(--sub);
-			color: #fff;
+			color: white;
 			border: none;
 			border-radius: 2px;
 			cursor: pointer;
@@ -249,7 +205,6 @@
 			padding: 7px 14px;
 			background: transparent;
 			border: 1px solid #3a3545;
-			color: var(--muted);
 			border-radius: 2px;
 			cursor: pointer;
 			transition: border-color 0.2s, color 0.2s, transform 0.1s;
@@ -271,7 +226,6 @@
 			padding: 13px;
 			background: transparent;
 			border: 1px solid #3a3545;
-			color: var(--muted);
 			border-radius: 2px;
 			cursor: pointer;
 			letter-spacing: 0.08em;
@@ -296,19 +250,13 @@
 	</style>
 </head>
 <body>
-
-<header>
-	<div class="logo">splat<span>★</span>grad</div>
-	<div class="tagline">mesh gradients from your images — like splatting ink but prettier (ᵔ◡ᵔ)</div>
-</header>
-
 <div class="upload-zone" id="uploadZone">
 	<input type="file" id="fileInput" accept="image/*">
 	<div class="upload-icon">⬆</div>
 	<div class="upload-text">
 		<strong>drop your image here</strong><br>
 		or click to browse<br>
-		png, jpg, webp — anything goes
+		png, jpg, webp...
 	</div>
 </div>
 
@@ -317,10 +265,10 @@
 	<span class="preview-name" id="previewName"></span>
 </div>
 
-<button class="btn-generate" id="btnGenerate">generate gradients ★</button>
+<button class="btn-generate" id="btnGenerate">generate gradients</button>
 
 <div class="output-section" id="outputSection">
-	<div class="output-label">// two gradients extracted from your image</div>
+	<div class="output-label">gradients</div>
 	<div class="gradients-row">
 		<div class="gradient-card">
 			<div class="gradient-canvas-wrap">
@@ -340,17 +288,15 @@
 			<div class="card-footer">
 				<span class="card-name">gradient_02</span>
 				<div class="card-actions">
-					<button class="btn-action" id="btnShuffle">shuffle ↯</button>
+					<button class="btn-action" id="btnShuffle">shuffle</button>
 					<button class="btn-dl" id="dl2">download</button>
 				</div>
 			</div>
 		</div>
 	</div>
-	<button class="btn-regen" id="btnRegen">↺ regenerate both</button>
-	<button class="btn-dl-all" id="dlAll">download both ↓</button>
+	<button class="btn-regen" id="btnRegen">renegerate both</button>
+	<button class="btn-dl-all" id="dlAll">download both</button>
 </div>
-
-<footer>made with ink & algorithms. watch out for octolings.</footer>
 
 <canvas id="samplerCanvas" style="display:none" width="100" height="100"></canvas>
 
