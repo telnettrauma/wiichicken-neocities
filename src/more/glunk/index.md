@@ -5,7 +5,7 @@ permalink: "/more/glunk/index.html"
 ---
 - [chatlog/](chatlog/)
 - [themes/](themes/)
-- [tools](tools/)
+- [tools/](tools/)
 - [.about.txt](.about.txt)
 - [balls.html](balls.html)
 - [bobby.html](bobby.html)
