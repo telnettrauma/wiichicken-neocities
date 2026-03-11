@@ -21,17 +21,12 @@
 		/* upload zone */
 		.upload-zone {
 			width: min(480px, 100%);
-			border: 1.5px dashed #3a3545;
+			border: 1px solid white;
 			border-radius: 4px;
 			padding: 48px 24px;
 			text-align: center;
 			cursor: pointer;
 			position: relative;
-			background: #ffffff05;
-		}
-
-		.upload-zone:hover, .upload-zone.drag {
-			background: #7c6fff0d;
 		}
 
 		.upload-zone input {
@@ -51,9 +46,6 @@
 			align-items: center;
 			gap: 12px;
 			padding: 10px 14px;
-			background: #ffffff0a;
-			border-radius: 4px;
-			border: 1px solid #2a2535;
 		}
 
 		.preview-strip.visible { display: flex; }
@@ -73,24 +65,6 @@
 			white-space: nowrap;
 		}
 
-		.btn-generate {
-			margin-top: 28px;
-			font-family: 'Silkscreen', monospace;
-			font-size: 13px;
-			letter-spacing: 0.06em;
-			padding: 14px 36px;
-			color: white;
-			border: none;
-			border-radius: 2px;
-			cursor: pointer;
-			transition: transform 0.1s, opacity 0.2s;
-			display: none;
-		}
-
-		.btn-generate.visible { display: block; }
-		.btn-generate:hover { transform: translateY(-2px); opacity: 0.9; }
-		.btn-generate:active { transform: translateY(0); }
-
 		/* output section */
 		.output-section {
 			margin-top: 60px;
@@ -100,14 +74,6 @@
 		}
 
 		.output-section.visible { display: block; }
-
-		.output-label {
-			font-family: 'Silkscreen', monospace;
-			font-size: 11px;
-			letter-spacing: 0.1em;
-			margin-bottom: 20px;
-			text-align: center;
-		}
 
 		.gradients-row {
 			display: grid;
@@ -129,7 +95,6 @@
 			aspect-ratio: 1;
 			border-radius: 2px;
 			overflow: hidden;
-			box-shadow: 0 8px 40px #00000080;
 		}
 
 		.gradient-canvas-wrap canvas {
@@ -149,35 +114,6 @@
 			color: var(--muted);
 		}
 
-		.btn-dl {
-			font-size: 10px;
-			padding: 7px 16px;
-			background: transparent;
-			border: 1px solid #3a3545;
-			border-radius: 2px;
-			cursor: pointer;
-			transition: border-color 0.2s, color 0.2s;
-			letter-spacing: 0.05em;
-		}
-
-		.btn-dl-all {
-			margin-top: 28px;
-			display: none;
-			width: 100%;
-			font-family: 'Silkscreen', monospace;
-			font-size: 12px;
-			padding: 16px;
-			color: white;
-			border: none;
-			border-radius: 2px;
-			cursor: pointer;
-			letter-spacing: 0.06em;
-			transition: opacity 0.2s, transform 0.1s;
-		}
-
-		.btn-dl-all.visible { display: block; }
-		.btn-dl-all:hover { opacity: 0.88; transform: translateY(-1px); }
-
 		/* swatch row */
 		.swatch-row {
 			display: flex;
@@ -189,7 +125,6 @@
 			width: 18px;
 			height: 18px;
 			border-radius: 50%;
-			border: 1.5px solid rgba(255,255,255,0.08);
 			flex-shrink: 0;
 		}
 
@@ -198,58 +133,10 @@
 			gap: 8px;
 			align-items: center;
 		}
-
-		.btn-action {
-			font-family: 'Silkscreen', monospace;
-			font-size: 10px;
-			padding: 7px 14px;
-			background: transparent;
-			border: 1px solid #3a3545;
-			border-radius: 2px;
-			cursor: pointer;
-			transition: border-color 0.2s, color 0.2s, transform 0.1s;
-			letter-spacing: 0.05em;
-		}
-
-		.btn-action:hover {
-			border-color: var(--accent);
-			color: var(--paper);
-		}
-
-		.btn-action:active { transform: scale(0.96); }
-
-		.btn-regen {
-			margin-top: 16px;
-			width: 100%;
-			font-family: 'Silkscreen', monospace;
-			font-size: 11px;
-			padding: 13px;
-			background: transparent;
-			border: 1px solid #3a3545;
-			border-radius: 2px;
-			cursor: pointer;
-			letter-spacing: 0.08em;
-			transition: border-color 0.2s, color 0.2s, transform 0.1s;
-		}
-
-		.btn-regen:hover {
-			border-color: var(--accent);
-			color: var(--paper);
-		}
-
-		.btn-regen:active { transform: scale(0.99); }
-
-		footer {
-			margin-top: 80px;
-			font-size: 11px;
-			color: #3a3545;
-			font-family: 'Silkscreen', monospace;
-			text-align: center;
-			letter-spacing: 0.06em;
-		}
 	</style>
 </head>
 <body>
+<!-- obviously i didn't make this lol -->
 <div class="upload-zone" id="uploadZone">
 	<input type="file" id="fileInput" accept="image/*">
 	<div class="upload-icon">⬆</div>
