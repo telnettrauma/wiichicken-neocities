@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>mesh gradient generator</title>
+	<style>
+		body {
+			max-width: 800px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: black;
+			color: white;
+		}
+		header {
+			text-align: center;
+			margin-bottom: 52px;
+		}
+
+		/* upload zone */
+		.upload-zone {
+			width: min(480px, 100%);
+			border: 1px solid white;
+			border-radius: 4px;
+			padding: 48px 24px;
+			text-align: center;
+			cursor: pointer;
+			position: relative;
+		}
+
+		.upload-zone input {
+			position: absolute;
+			inset: 0;
+			opacity: 0;
+			cursor: pointer;
+			width: 100%;
+			height: 100%;
+		}
+
+		/* preview strip */
+		.preview-strip {
+			margin-top: 20px;
+			width: min(480px, 100%);
+			display: none;
+			align-items: center;
+			gap: 12px;
+			padding: 10px 14px;
+		}
+
+		.preview-strip.visible { display: flex; }
+
+		.preview-thumb {
+			width: 40px;
+			height: 40px;
+			border-radius: 2px;
+			object-fit: cover;
+			flex-shrink: 0;
+		}
+
+		.preview-name {
+			font-size: 12px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		/* output section */
+		.output-section {
+			margin-top: 60px;
+			width: 100%;
+			max-width: 900px;
+			display: none;
+		}
+
+		.output-section.visible { display: block; }
+
+		.gradients-row {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 20px;
+		}
+
+		@media (max-width: 600px) {
+			.gradients-row { grid-template-columns: 1fr; }
+		}
+
+		.gradient-card {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		.gradient-canvas-wrap {
+			aspect-ratio: 1;
+			border-radius: 2px;
+			overflow: hidden;
+		}
+
+		.gradient-canvas-wrap canvas {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+
+		.card-footer {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.card-name {
+			font-size: 11px;
+			color: var(--muted);
+		}
+
+		/* swatch row */
+		.swatch-row {
+			display: flex;
+			gap: 4px;
+			flex-wrap: wrap;
+		}
+
+		.swatch {
+			width: 18px;
+			height: 18px;
+			border-radius: 50%;
+			flex-shrink: 0;
+		}
+
+		.card-actions {
+			display: flex;
+			gap: 8px;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+<!-- obviously i didn't make this lol -->
+<div class="upload-zone" id="uploadZone">
+	<input type="file" id="fileInput" accept="image/*">
+	<div class="upload-icon">⬆</div>
+	<div class="upload-text">
+		<strong>drop your image here</strong><br>
+		or click to browse<br>
+		png, jpg, webp...
+	</div>
+</div>
+
+<div class="preview-strip" id="previewStrip">
+	<img class="preview-thumb" id="previewThumb" src="" alt="">
+	<span class="preview-name" id="previewName"></span>
+</div>
+
+<button class="btn-generate" id="btnGenerate">generate gradients</button>
+
+<div class="output-section" id="outputSection">
+	<div class="output-label">gradients</div>
+	<div class="gradients-row">
+		<div class="gradient-card">
+			<div class="gradient-canvas-wrap">
+				<canvas id="canvas1" width="800" height="800"></canvas>
+			</div>
+			<div class="swatch-row" id="swatches1"></div>
+			<div class="card-footer">
+				<span class="card-name">gradient_01</span>
+				<button class="btn-dl" id="dl1">download</button>
+			</div>
+		</div>
+		<div class="gradient-card">
+			<div class="gradient-canvas-wrap">
+				<canvas id="canvas2" width="800" height="800"></canvas>
+			</div>
+			<div class="swatch-row" id="swatches2"></div>
+			<div class="card-footer">
+				<span class="card-name">gradient_02</span>
+				<div class="card-actions">
+					<button class="btn-action" id="btnShuffle">shuffle</button>
+					<button class="btn-dl" id="dl2">download</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<button class="btn-regen" id="btnRegen">renegerate both</button>
+	<button class="btn-dl-all" id="dlAll">download both</button>
+</div>
+
+<canvas id="samplerCanvas" style="display:none" width="100" height="100"></canvas>
+
+<script>
+	const uploadZone = document.getElementById('uploadZone');
+	const fileInput = document.getElementById('fileInput');
+	const previewStrip = document.getElementById('previewStrip');
+	const previewThumb = document.getElementById('previewThumb');
+	const previewName = document.getElementById('previewName');
+	const btnGenerate = document.getElementById('btnGenerate');
+	const outputSection = document.getElementById('outputSection');
+	const dlAll = document.getElementById('dlAll');
+	const samplerCanvas = document.getElementById('samplerCanvas');
+	const samplerCtx = samplerCanvas.getContext('2d', { willReadFrequently: true });
+
+	let loadedImage = null;
+	let currentPalette2 = null; // stored so shuffle can reuse it
+
+	// drag events
+	uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('drag'); });
+	uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag'));
+	uploadZone.addEventListener('drop', e => {
+		e.preventDefault();
+		uploadZone.classList.remove('drag');
+		const f = e.dataTransfer.files[0];
+		if (f && f.type.startsWith('image/')) handleFile(f);
+	});
+
+	fileInput.addEventListener('change', () => {
+		if (fileInput.files[0]) handleFile(fileInput.files[0]);
+	});
+
+	function handleFile(file) {
+		const url = URL.createObjectURL(file);
+		previewThumb.src = url;
+		previewName.textContent = file.name;
+		previewStrip.classList.add('visible');
+		btnGenerate.classList.add('visible');
+
+		const img = new Image();
+		img.onload = () => { loadedImage = img; };
+		img.src = url;
+	}
+
+	btnGenerate.addEventListener('click', () => {
+		if (!loadedImage) return;
+		generateGradients(loadedImage);
+	});
+
+	// ── color extraction ──────────────────────────────────────────────
+	function extractColors(img, count) {
+		const S = 80;
+		samplerCanvas.width = S;
+		samplerCanvas.height = S;
+		samplerCtx.drawImage(img, 0, 0, S, S);
+		const data = samplerCtx.getImageData(0, 0, S, S).data;
+
+		// collect all pixels
+		const pixels = [];
+		for (let i = 0; i < data.length; i += 4) {
+			const r = data[i], g = data[i+1], b = data[i+2], a = data[i+3];
+			if (a < 128) continue;
+			pixels.push([r, g, b]);
+		}
+
+		// simple k-means
+		return kMeans(pixels, count);
+	}
+
+	function kMeans(pixels, k, iterations = 12) {
+		// init centroids by spacing through pixel list
+		let centroids = [];
+		const step = Math.floor(pixels.length / k);
+		for (let i = 0; i < k; i++) {
+			centroids.push([...pixels[i * step]]);
+		}
+
+		for (let iter = 0; iter < iterations; iter++) {
+			const clusters = Array.from({length: k}, () => []);
+
+			for (const px of pixels) {
+				let best = 0, bestDist = Infinity;
+				for (let c = 0; c < k; c++) {
+					const d = colorDist(px, centroids[c]);
+					if (d < bestDist) { bestDist = d; best = c; }
+				}
+				clusters[best].push(px);
+			}
+
+			for (let c = 0; c < k; c++) {
+				if (!clusters[c].length) continue;
+				const avg = [0,0,0];
+				for (const px of clusters[c]) { avg[0]+=px[0]; avg[1]+=px[1]; avg[2]+=px[2]; }
+				const n = clusters[c].length;
+				centroids[c] = [avg[0]/n, avg[1]/n, avg[2]/n];
+			}
+		}
+
+		// ensure diversity — if two centroids are too close, shift one
+		for (let a = 0; a < k; a++) {
+			for (let b = a+1; b < k; b++) {
+				if (colorDist(centroids[a], centroids[b]) < 30) {
+					// nudge b randomly
+					centroids[b] = centroids[b].map((v, i) => Math.min(255, Math.max(0, v + (Math.random()-0.5)*80)));
+				}
+			}
+		}
+
+		return centroids.map(c => ({
+			r: Math.round(c[0]),
+			g: Math.round(c[1]),
+			b: Math.round(c[2])
+		}));
+	}
+
+	function colorDist(a, b) {
+		return Math.sqrt((a[0]-b[0])**2 + (a[1]-b[1])**2 + (a[2]-b[2])**2);
+	}
+
+	function toRgb(c, a=1) {
+		return `rgba(${c.r},${c.g},${c.b},${a})`;
+	}
+
+	// ── mesh gradient renderer ────────────────────────────────────────
+	function generateMeshGradient(canvas, colors) {
+		const ctx = canvas.getContext('2d');
+		const W = canvas.width, H = canvas.height;
+		ctx.clearRect(0, 0, W, H);
+
+		// fill base
+		ctx.fillStyle = toRgb(colors[0]);
+		ctx.fillRect(0, 0, W, H);
+
+		// place 9 radial blobs at pseudo-random positions
+		// use a seeded layout for variety between the two gradients
+		const positions = [
+			[0.1, 0.1], [0.5, 0.05], [0.9, 0.15],
+			[0.15, 0.5], [0.5, 0.5], [0.85, 0.5],
+			[0.1, 0.88], [0.5, 0.92], [0.9, 0.85],
+		];
+
+		const radii = [0.72, 0.65, 0.7, 0.68, 0.8, 0.66, 0.71, 0.63, 0.75];
+
+		for (let i = 0; i < 9; i++) {
+			const [px, py] = positions[i];
+			const x = px * W, y = py * H;
+			const r = radii[i] * W * 0.7;
+			const color = colors[i];
+
+			const grad = ctx.createRadialGradient(x, y, 0, x, y, r);
+			grad.addColorStop(0, toRgb(color, 0.92));
+			grad.addColorStop(0.4, toRgb(color, 0.55));
+			grad.addColorStop(1, toRgb(color, 0));
+
+			ctx.fillStyle = grad;
+			ctx.fillRect(0, 0, W, H);
+		}
+
+		// soft overlay to blend
+		for (let i = 0; i < 3; i++) {
+			const c = colors[(i * 3) % 9];
+			const gx = (0.3 + i * 0.25) * W;
+			const gy = (0.2 + i * 0.3) * H;
+			const gr = 0.9 * W;
+			const over = ctx.createRadialGradient(gx, gy, 0, gx, gy, gr);
+			over.addColorStop(0, toRgb(c, 0.18));
+			over.addColorStop(1, toRgb(c, 0));
+			ctx.fillStyle = over;
+			ctx.fillRect(0, 0, W, H);
+		}
+	}
+
+	function generateGradients(img) {
+		// extract 18 colors total, split into two palettes
+		const all = extractColors(img, 18);
+		const palette1 = all.slice(0, 9);
+		const palette2 = all.slice(9, 18);
+
+		// variant 2: reverse hue-sort for a different feel
+		palette2.sort((a, b) => {
+			const ha = rgb2hue(a), hb = rgb2hue(b);
+			return ha - hb;
+		});
+
+		// scramble palette1 for a different layout
+		palette1.sort((a, b) => {
+			const la = 0.299*a.r + 0.587*a.g + 0.114*a.b;
+			const lb = 0.299*b.r + 0.587*b.g + 0.114*b.b;
+			return la - lb;
+		});
+
+		currentPalette2 = [...palette2];
+
+		const canvas1 = document.getElementById('canvas1');
+		const canvas2 = document.getElementById('canvas2');
+
+		// shuffle positions for canvas2
+		generateMeshGradient(canvas1, palette1);
+		generateMeshGradientAlt(canvas2, palette2);
+
+		// swatches
+		renderSwatches('swatches1', palette1);
+		renderSwatches('swatches2', palette2);
+
+		outputSection.classList.add('visible');
+		dlAll.classList.add('visible');
+
+		outputSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	}
+
+	// shuffle gradient 2 colors and redraw
+	document.getElementById('btnShuffle').addEventListener('click', () => {
+		if (!currentPalette2) return;
+		// fisher-yates shuffle
+		const p = [...currentPalette2];
+		for (let i = p.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[p[i], p[j]] = [p[j], p[i]];
+		}
+		currentPalette2 = p;
+		generateMeshGradientAlt(document.getElementById('canvas2'), p);
+		renderSwatches('swatches2', p);
+	});
+
+	// regenerate both entirely from the image
+	document.getElementById('btnRegen').addEventListener('click', () => {
+		if (!loadedImage) return;
+		generateGradients(loadedImage);
+	});
+
+	function generateMeshGradientAlt(canvas, colors) {
+		const ctx = canvas.getContext('2d');
+		const W = canvas.width, H = canvas.height;
+		ctx.clearRect(0, 0, W, H);
+
+		ctx.fillStyle = toRgb(colors[8]);
+		ctx.fillRect(0, 0, W, H);
+
+		// alt positions — more diagonal feel
+		const positions = [
+			[0.88, 0.12], [0.5, 0.18], [0.12, 0.08],
+			[0.82, 0.5], [0.5, 0.5], [0.18, 0.5],
+			[0.9, 0.9], [0.5, 0.82], [0.08, 0.88],
+		];
+
+		const radii = [0.7, 0.68, 0.73, 0.66, 0.82, 0.7, 0.68, 0.65, 0.74];
+
+		for (let i = 0; i < 9; i++) {
+			const [px, py] = positions[i];
+			const x = px * W, y = py * H;
+			const r = radii[i] * W * 0.72;
+			const color = colors[i];
+
+			const grad = ctx.createRadialGradient(x, y, 0, x, y, r);
+			grad.addColorStop(0, toRgb(color, 0.9));
+			grad.addColorStop(0.45, toRgb(color, 0.5));
+			grad.addColorStop(1, toRgb(color, 0));
+
+			ctx.fillStyle = grad;
+			ctx.fillRect(0, 0, W, H);
+		}
+
+		for (let i = 0; i < 3; i++) {
+			const c = colors[(i * 2 + 1) % 9];
+			const gx = (0.7 - i * 0.25) * W;
+			const gy = (0.6 - i * 0.15) * H;
+			const gr = 0.85 * W;
+			const over = ctx.createRadialGradient(gx, gy, 0, gx, gy, gr);
+			over.addColorStop(0, toRgb(c, 0.15));
+			over.addColorStop(1, toRgb(c, 0));
+			ctx.fillStyle = over;
+			ctx.fillRect(0, 0, W, H);
+		}
+	}
+
+	function rgb2hue(c) {
+		const r = c.r/255, g = c.g/255, b = c.b/255;
+		const max = Math.max(r,g,b), min = Math.min(r,g,b);
+		let h = 0;
+		if (max !== min) {
+			const d = max - min;
+			if (max === r) h = ((g - b) / d + (g < b ? 6 : 0)) / 6;
+			else if (max === g) h = ((b - r) / d + 2) / 6;
+			else h = ((r - g) / d + 4) / 6;
+		}
+		return h;
+	}
+
+	function renderSwatches(id, colors) {
+		const container = document.getElementById(id);
+		container.innerHTML = '';
+		for (const c of colors) {
+			const s = document.createElement('div');
+			s.className = 'swatch';
+			s.style.background = `rgb(${c.r},${c.g},${c.b})`;
+			s.title = `rgb(${c.r},${c.g},${c.b})`;
+			container.appendChild(s);
+		}
+	}
+
+	// ── downloads ─────────────────────────────────────────────────────
+	function downloadCanvas(canvas, name) {
+		const a = document.createElement('a');
+		a.href = canvas.toDataURL('image/png');
+		a.download = name;
+		a.click();
+	}
+
+	document.getElementById('dl1').addEventListener('click', () => {
+		downloadCanvas(document.getElementById('canvas1'), 'gradient_01.png');
+	});
+
+	document.getElementById('dl2').addEventListener('click', () => {
+		downloadCanvas(document.getElementById('canvas2'), 'gradient_02.png');
+	});
+
+	dlAll.addEventListener('click', () => {
+		downloadCanvas(document.getElementById('canvas1'), 'gradient_01.png');
+		setTimeout(() => {
+			downloadCanvas(document.getElementById('canvas2'), 'gradient_02.png');
+		}, 300);
+	});
+</script>
+</body>
+</html>

@@ -38,46 +38,57 @@
 			function generateList() {
 				const input = document.getElementById("input").value.trim();
 				const output = document.getElementById("output");
+				// clear previous output
+				output.innerHTML = "";
 				if (!input) {
-					output.innerHTML =
-						'<p style="color: red;">You are doing it wrong.</p>';
+					const p = document.createElement("p");
+					p.style.color = "red";
+					p.textContent = "You are doing it wrong.";
+					output.appendChild(p);
 					return;
 				}
 
 				// extract the first nubbys number factory
 				const match = input.match(/^(\d+)\s+(.+)$/);
 				if (!match) {
-					output.innerHTML =
-						'<p style="color: red;">wrong format noob omg</p>';
+					const p = document.createElement("p");
+					p.style.color = "red";
+					p.textContent = "wrong format noob omg";
+					output.appendChild(p);
 					return;
 				}
 				const number = parseInt(match[1]);
 				const item = match[2];
 				if (number < 1) {
-					output.innerHTML =
-						'<p style="color: red;">number must be 1 or greater</p>';
+					const p = document.createElement("p");
+					p.style.color = "red";
+					p.textContent = "number must be 1 or greater";
+					output.appendChild(p);
 					return;
 				}
-				let listHTML = "<ul>";
+				const ul = document.createElement("ul");
 				let listText = "";
 				for (let i = 1; i <= number; i++) {
-					listHTML += `<li>${item} ${i}</li>`;
+					const li = document.createElement("li");
+					li.textContent = `${item} ${i}`;
+					ul.appendChild(li);
 					listText += `${item} ${i}\n`;
 				}
-				listHTML += "</ul>";
-				output.innerHTML = listHTML;
+				output.appendChild(ul);
 				// clipboard
 				navigator.clipboard
 					.writeText(listText.trim())
 					.then(() => {
-						output.innerHTML =
-							listHTML +
-							'<p style="color: green;">welcome to the clipboard</p>';
+						const p = document.createElement("p");
+						p.style.color = "green";
+						p.textContent = "welcome to the clipboard";
+						output.appendChild(p);
 					})
 					.catch((err) => {
-						output.innerHTML =
-							listHTML +
-							'<p style="color: red;">couldn\'t copy to the clippy</p>';
+						const p = document.createElement("p");
+						p.style.color = "red";
+						p.textContent = "couldn't copy to the clippy";
+						output.appendChild(p);
 					});
 			}
 			// use enter key

@@ -1,0 +1,3 @@
+these are a bunch of niche tools that i created for myself. they're all designed around a specific workflow i have, or even something that i needed to do one time only.
+
+obviously i didn't write the code for most of these. i hate ai, but obviously most of these are written by it. although learning how to use html canvas sounds like a lot of fun, when i make these they're for one specific thing that i usually don't have the time to learn how to make myself. i don't use ai chatbots for anything else, and i rarely make these. i hope you can understand that.
