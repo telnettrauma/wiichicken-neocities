@@ -3,6 +3,12 @@ let user = 'wiichicken';
 // background modes: 1 - color; 2 - light; 3 - dark
 let bgMode = 1;
 let previousCover = 'nothing!';
+// counts: user plays, global plays, listeners
+let grabbingCounts = {
+	"track": [ 1, 1, 1 ],
+	"artist": [ 0, 0, 0 ],
+	"album": [ 0, 0, 0 ]
+};
 function getNowPlaying() {
 	var url = `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`;
 	var request = new XMLHttpRequest();
