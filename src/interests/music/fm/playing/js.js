@@ -55,32 +55,38 @@ async function getNowPlaying() {
 
 	// update the visible information
 	var trackInfo = document.getElementById("track");
+
+	// gets the counts of different scrobble count types
+	async function retrieveScrobbleCount(type, title, artist) {
+		if (type === 'artist') {
+			// artist
+			var wrContent = await webRequest(`https://ws.audioscrobbler.com/2.0/?method=artist.getInfo&artist=${artist}&username=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`);
+		} else {
+			// all other types
+			var wrContent = await webRequest(`https://ws.audioscrobbler.com/2.0/?method=${type}.getInfo&artist=${artist}&track=${title}&username=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`);
+		}
+		var countData = JSON.parse(wrContent);
+		return [ countData.track.userplaycount, countData.track.playcount, countData.track.listeners ];
+	}
+
 	// checks to see if scrobble counts need to be grabbed
 	// TODO: make Scrobble Count detection actually work! becaus guess what? it DOESN'T!
-	let scrobbleCounts;
 	if (grabbingCounts.track[0] === 1) {
-		scrobbleCounts = retrieveScrobbleCount('track', song, artist);
-		console.log(scrobbleCounts);
+		var scrobbleCounts = await retrieveScrobbleCount('track', song, artist);
+		var uselessInfo = `your plays: ${scrobbleCounts[0]}, global: ${scrobbleCounts[1]}, listeners: ${scrobbleCounts[2]}`;
 	}
-	trackInfo.innerHTML = `<span id="song">${song}<br></span><span id="artist">${artist}<br></span><span id="album">${album}</span>`;
+	trackInfo.innerHTML = `<span id="song">${song}<br></span><span id="artist">${artist}<br></span><span id="album">${album}<br></span><span id="uselessinfo">${uselessInfo}</span>`;
 
 	// check if music is currently playing or not
-	if (typeof data.recenttracks.track[0]["@attr"] !== "undefined"){
-		var listenInfo = document.getElementById("listen");
+	var listenInfo = document.getElementById("listen");
+	if (typeof data.recenttracks.track[0]["@attr"] !== "undefined") {
+		// now playing
 		listenInfo.innerHTML = 'Listening to:';
 	} else {
-		var listenInfo = document.getElementById("listen");
+		// not playing
 		listenInfo.innerHTML = 'last <span>listened</span> to:';
 		console.log("false");
 	}
-}
-
-// gets the counts of different scrobble count types
-async function retrieveScrobbleCount(type, title, artist) {
-	if (type === 'artist') {var wrContent = await webRequest(`https://ws.audioscrobbler.com/2.0/?method=artist.getInfo&artist=${artist}&username=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`);} else {var wrContent = await webRequest(`https://ws.audioscrobbler.com/2.0/?method=${type}.getInfo&artist=${artist}&track=${title}&username=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`);}
-	console.log(wrContent);
-	var data = JSON.parse(wrContent);
-	return [ data.track.userplaycount, data.track.playcount, data.track.listeners ];
 }
 
 function detectSize() {
