@@ -10,6 +10,18 @@ let grabbingCounts = {
 	"album": [ 0, 0, 0 ]
 };
 
+function webRequest(url) {
+	var request = new XMLHttpRequest();
+	request.open('GET', encodeURI(url), true);
+
+	request.onload = function() {
+		if (request.status >= 200 && request.status < 400) {
+			return request;
+		} else {console.error("Error fetching data from server.");}
+	};
+	request.onerror = function() {console.error("Connection error.");};
+	request.send();
+}
 function getNowPlaying() {
 	var url = `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`;
 	var request = new XMLHttpRequest();
@@ -69,21 +81,10 @@ function getNowPlaying() {
 
 // gets the counts of different scrobble count types
 function retrieveScrobbleCount(type, title, artist) {
-	// if this is an artist query, use the artist url. if not, use the other url kind
-	if (type === 'artist') {var url = encodeURI(`https://ws.audioscrobbler.com/2.0/?method=artist.getInfo&artist=${artist}&username=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`);} else {var url = encodeURI(`https://ws.audioscrobbler.com/2.0/?method=${type}.getInfo&artist=${artist}&track=${title}&username=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`);}
-	var request = new XMLHttpRequest();
-	request.open('GET', url, true);
-
-	request.onload = function() {
-		if (request.status >= 200 && request.status < 400) {
-			// parse json
-			var data = JSON.parse(request.responseText);
-			// returns scrobble counts
-			return [ data.track.userplaycount, data.track.playcount, data.track.listeners ];
-		} else {console.error("Error fetching data from server.");}
-	};
-	request.onerror = function() {console.error("Connection error.");};
-	request.send();
+	if (type === 'artist') {var wrContent = webRequest(`https://ws.audioscrobbler.com/2.0/?method=artist.getInfo&artist=${artist}&username=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`);} else {var wrContent = webRequest(`https://ws.audioscrobbler.com/2.0/?method=${type}.getInfo&artist=${artist}&track=${title}&username=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`);}
+	console.log(wrContent);
+	var data = JSON.parse(wrContent);
+	return [ data.track.userplaycount, data.track.playcount, data.track.listeners ];
 }
 
 function detectSize() {
