@@ -25,6 +25,7 @@ function webRequest(url) {
 	});
 }
 
+let lastTrack, uselessInfo;
 // gets the now playing information
 async function getNowPlaying() {
 	// gets information from the last.fm API
@@ -71,9 +72,10 @@ async function getNowPlaying() {
 
 	// checks to see if scrobble counts need to be grabbed
 	// TODO: make Scrobble Count detection actually work! becaus guess what? it DOESN'T!
-	if (grabbingCounts.track[0] === 1) {
+	if (grabbingCounts.track[0] === 1 && lastTrack !== song) {
 		var scrobbleCounts = await retrieveScrobbleCount('track', song, artist);
-		var uselessInfo = `your plays: ${scrobbleCounts[0]}, global: ${scrobbleCounts[1]}, listeners: ${scrobbleCounts[2]}`;
+		uselessInfo = `your plays: ${scrobbleCounts[0]}, global: ${scrobbleCounts[1]}, listeners: ${scrobbleCounts[2]}`;
+		lastTrack = song;
 	}
 	trackInfo.innerHTML = `<span id="song">${song}<br></span><span id="artist">${artist}<br></span><span id="album">${album}<br></span><span id="uselessinfo">${uselessInfo}</span>`;
 
