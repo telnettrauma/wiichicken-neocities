@@ -10,80 +10,77 @@ let grabbingCounts = {
 	"album": [ 0, 0, 0 ]
 };
 
-function getNowPlaying() {
-	var url = `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`;
-	var request = new XMLHttpRequest();
-	request.open('GET', url, true);
+// makes a web request
+function webRequest(url) {
+	return new Promise((resolve, reject) => {
+		var request = new XMLHttpRequest();
+		request.open('GET', encodeURI(url), true);
 
-	request.onload = function() {
-		if (request.status >= 200 && request.status < 400) {
-			// parse json
-			var data = JSON.parse(request.responseText);
-			var artist = data.recenttracks.track[0].artist["#text"];
-			var album = data.recenttracks.track[0].album["#text"];
-			var song = data.recenttracks.track[0]["name"];
-			var artwork = data.recenttracks.track[0].image[3]["#text"];
+		request.onload = function() {
+			// return response, unless there is an error
+			if (request.status >= 200 && request.status < 400) {resolve(request.responseText);} else {reject("poop! it didn't work.");}
+		};
+		request.onerror = function() {reject("connection error.");};
+		request.send();
+	});
+}
 
-			// only adds background images if the background is set to image and the cover art isn't the same
-			if (!(previousCover === artwork)) {
-				// changes the background image when on blur mode
-				if (bgMode === 1) {
-					var fakeBlur = document.getElementById('moneyOnMind');
-					fakeBlur.style.backgroundImage = `url(${artwork})`;
-					document.getElementById('fartOnMind').style.backgroundImage = `url(${artwork})`;
-				}
-				// only updates the cover art if it is visible
-				if (coverArtVisible === 1) {
-					var artworkImg = document.getElementById("artwork");
-					artworkImg.setAttribute("src", artwork);
-				}
-				// updates the variable with the previous cover art
-				previousCover = artwork;
-			}
+// gets the now playing information
+async function getNowPlaying() {
+	// gets information from the last.fm API
+	var request = await webRequest(`http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`);
+	// parse json
+	var data = JSON.parse(request);
+	var artist = data.recenttracks.track[0].artist["#text"];
+	var album = data.recenttracks.track[0].album["#text"];
+	var song = data.recenttracks.track[0]["name"];
+	var artwork = data.recenttracks.track[0].image[3]["#text"];
 
-			// update the visible information
-			var trackInfo = document.getElementById("track");
-			// checks to see if scrobble counts need to be grabbed
-			// TODO: make Scrobble Count detection actually work! becaus guess what? it DOESN'T!
-			let scrobbleCounts;
-			if (grabbingCounts.track[0] === 1) {
-				scrobbleCounts = retrieveScrobbleCount('track', song, artist);
-				console.log(scrobbleCounts);
-			}
-			trackInfo.innerHTML = `<span id="song">${song}<br></span><span id="artist">${artist}<br></span><span id="album">${album}</span>`;
+	// only adds background images if the background is set to image and the cover art isn't the same
+	if (!(previousCover === artwork)) {
+		// changes the background image when on blur mode
+		if (bgMode === 1) {
+			var fakeBlur = document.getElementById('moneyOnMind');
+			fakeBlur.style.backgroundImage = `url(${artwork})`;
+			document.getElementById('fartOnMind').style.backgroundImage = `url(${artwork})`;
+		}
+		// only updates the cover art if it is visible
+		if (coverArtVisible === 1) {
+			var artworkImg = document.getElementById("artwork");
+			artworkImg.setAttribute("src", artwork);
+		}
+		// updates the variable with the previous cover art
+		previousCover = artwork;
+	}
 
-			// check if music is currently playing or not
-			if (typeof data.recenttracks.track[0]["@attr"] !== "undefined"){
-				var listenInfo = document.getElementById("listen");
-				listenInfo.innerHTML = 'Listening to:';
-			} else {
-				var listenInfo = document.getElementById("listen");
-				listenInfo.innerHTML = 'last <span>listened</span> to:';
-				console.log("false");
-			}
-		} else {console.error("Error fetching data from server.");}
-	};
-	request.onerror = function() {console.error("Connection error.");};
-	request.send();
+	// update the visible information
+	var trackInfo = document.getElementById("track");
+	// checks to see if scrobble counts need to be grabbed
+	// TODO: make Scrobble Count detection actually work! becaus guess what? it DOESN'T!
+	let scrobbleCounts;
+	if (grabbingCounts.track[0] === 1) {
+		scrobbleCounts = retrieveScrobbleCount('track', song, artist);
+		console.log(scrobbleCounts);
+	}
+	trackInfo.innerHTML = `<span id="song">${song}<br></span><span id="artist">${artist}<br></span><span id="album">${album}</span>`;
+
+	// check if music is currently playing or not
+	if (typeof data.recenttracks.track[0]["@attr"] !== "undefined"){
+		var listenInfo = document.getElementById("listen");
+		listenInfo.innerHTML = 'Listening to:';
+	} else {
+		var listenInfo = document.getElementById("listen");
+		listenInfo.innerHTML = 'last <span>listened</span> to:';
+		console.log("false");
+	}
 }
 
 // gets the counts of different scrobble count types
-function retrieveScrobbleCount(type, title, artist) {
-	// if this is an artist query, use the artist url. if not, use the other url kind
-	if (type === 'artist') {var url = encodeURI(`https://ws.audioscrobbler.com/2.0/?method=artist.getInfo&artist=${artist}&username=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`);} else {var url = encodeURI(`https://ws.audioscrobbler.com/2.0/?method=${type}.getInfo&artist=${artist}&track=${title}&username=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`);}
-	var request = new XMLHttpRequest();
-	request.open('GET', url, true);
-
-	request.onload = function() {
-		if (request.status >= 200 && request.status < 400) {
-			// parse json
-			var data = JSON.parse(request.responseText);
-			// returns scrobble counts
-			return [ data.track.userplaycount, data.track.playcount, data.track.listeners ];
-		} else {console.error("Error fetching data from server.");}
-	};
-	request.onerror = function() {console.error("Connection error.");};
-	request.send();
+async function retrieveScrobbleCount(type, title, artist) {
+	if (type === 'artist') {var wrContent = await webRequest(`https://ws.audioscrobbler.com/2.0/?method=artist.getInfo&artist=${artist}&username=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`);} else {var wrContent = await webRequest(`https://ws.audioscrobbler.com/2.0/?method=${type}.getInfo&artist=${artist}&track=${title}&username=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`);}
+	console.log(wrContent);
+	var data = JSON.parse(wrContent);
+	return [ data.track.userplaycount, data.track.playcount, data.track.listeners ];
 }
 
 function detectSize() {
