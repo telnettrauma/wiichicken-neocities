@@ -17,6 +17,7 @@ function getNowPlaying() {
 
 	request.onload = function() {
 		if (request.status >= 200 && request.status < 400) {
+			// parse json
 			var data = JSON.parse(request.responseText);
 			var artist = data.recenttracks.track[0].artist["#text"];
 			var album = data.recenttracks.track[0].album["#text"];
@@ -36,12 +37,22 @@ function getNowPlaying() {
 					var artworkImg = document.getElementById("artwork");
 					artworkImg.setAttribute("src", artwork);
 				}
+				// updates the variable with the previous cover art
 				previousCover = artwork;
 			}
 
+			// update the visible information
 			var trackInfo = document.getElementById("track");
+			// checks to see if scrobble counts need to be grabbed
+			// TODO: make Scrobble Count detection actually work! becaus guess what? it DOESN'T!
+			let scrobbleCounts;
+			if (grabbingCounts.track[0] === 1) {
+				scrobbleCounts = retrieveScrobbleCount('track', song, artist);
+				console.log(scrobbleCounts);
+			}
 			trackInfo.innerHTML = `<span id="song">${song}<br></span><span id="artist">${artist}<br></span><span id="album">${album}</span>`;
 
+			// check if music is currently playing or not
 			if (typeof data.recenttracks.track[0]["@attr"] !== "undefined"){
 				var listenInfo = document.getElementById("listen");
 				listenInfo.innerHTML = 'Listening to:';
@@ -58,13 +69,17 @@ function getNowPlaying() {
 
 // gets the counts of different scrobble count types
 function retrieveScrobbleCount(type, title, artist) {
-	var url = `https://ws.audioscrobbler.com/2.0/?method=${type}.getInfo&artist=${artist}&track=${title}&username=wiichicken&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`;
+	// if this is an artist query, use the artist url. if not, use the other url kind
+	if (type === 'artist') {var url = encodeURI(`https://ws.audioscrobbler.com/2.0/?method=artist.getInfo&artist=${artist}&username=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`);} else {var url = encodeURI(`https://ws.audioscrobbler.com/2.0/?method=${type}.getInfo&artist=${artist}&track=${title}&username=${user}&api_key=93016c14b5580e5f2a72cdc9413cfa36&limit=1&format=json`);}
 	var request = new XMLHttpRequest();
 	request.open('GET', url, true);
 
 	request.onload = function() {
 		if (request.status >= 200 && request.status < 400) {
-			// awesome sauce
+			// parse json
+			var data = JSON.parse(request.responseText);
+			// returns scrobble counts
+			return [ data.track.userplaycount, data.track.playcount, data.track.listeners ];
 		} else {console.error("Error fetching data from server.");}
 	};
 	request.onerror = function() {console.error("Connection error.");};
