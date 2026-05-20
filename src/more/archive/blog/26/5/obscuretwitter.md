@@ -221,15 +221,49 @@ This was simply a concept idea shared internally that never even got prototyped.
 
 ## Quote Tweet with Reaction
 
+![](https://i.imgur.com/s5gl1U9.png)
+
+SpaceGhostPurrp would probably use this feature[^14].
+
 ## Status
+
+Twitter at one point toyed with the idea of having online indicators[^13]. But not only this, you could add an account status. This would appear along with your Tweets, and the cool thing would be that search Tweets based on statuses, and any status with a hashtag would cause Tweets posted during that status to automatically included in that hashtag. This could be very useful for livetweeting. Look at the raw 2018 optimism in this image. Don't call it woke, because that's not what woke means.
+
+![](https://i.imgur.com/xb9aL87.png)
+
+Where in a Tweet the status would appear, I have no idea. This image is simply a mockup crated by Twitter designers.
 
 ### Vibes
 
+Vibes were an early prototype of the same feature I just discussed, but instead using a glitter gradient background because its 2022. Also a profile and a Tweet could both have a status, but that was probably because this was still an in progress feature and not for production yet.
+
+<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Twitter?src=hash&amp;ref_src=twsrc%5Etfw">#Twitter</a> keeps working on the Status feature 👀 <a href="https://t.co/BSGf2SAHYR">pic.twitter.com/BSGf2SAHYR</a></p>&mdash; Alessandro Paluzzi (@alex193a) <a href="https://twitter.com/alex193a/status/1512252792412516356?ref_src=twsrc%5Etfw">April 8, 2022</a></blockquote>
+
+It would be cool if this became a real feature that people could actually use.
+
 ### Tweet Status
+
+![](https://i.imgur.com/OCTPYVi.png)
+
+Wow.
+
+How this feature worked was you could set a status from a list of preset ones made by Twitter[^15]. These would constantly rotate, so if you're not feeling "🏖️Vacation mode" you better get into it before you can never get into it again. These statuses would appear under your name on a Tweet, and if you tapped the status you could see other Tweets with the same status. A status had to be set for each Tweet individually, and the whole thing was useless.
+
+![](https://i.imgur.com/KTdTEBZ.png)
+
+While this feature was released, not everyone got access to it. It was one of the unfortunate final experimental features before Elon took over, so it mysteriously vanished one day. But honestly, did anybody notice? That wasn't a rhetorical question, please [fill out the Google Form](https://forms.gle/uB9XmkusanpXXZHJ6).
 
 ## Facets
 
+Circles would be an awesome feature if it was on a platform that wasn't Google+. At one point Twitter debated copying them, which I **really** wish they did. Facets would allow you to post to different "personas," all on the same account. The cool thing is that each facet could be set to either be available for anyone to follow, for people to request to follow, or to only allow people you accept onto it. Each facet would also have its own profile picture and display name, which is cool on the profile, but could be confusing on the timeline, especially when it comes to retweeting public facets.
+
+<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Here&#39;s another approach, embracing an obvious truth: we’re different people in different contexts (w/ friends, fam, work, public)<br><br>Facets, an early idea, lets you Tweet from distinct personas within 1 acct. Others can follow the whole acct … or just Facets they&#39;re interested in. <a href="https://t.co/URt5UXeoa1">pic.twitter.com/URt5UXeoa1</a></p>&mdash; Quarter (@onefovrth) <a href="https://twitter.com/onefovrth/status/1410690431386411011?ref_src=twsrc%5Etfw">July 1, 2021</a></blockquote>
+
+This later was simplified into Trusted Friends, which became Circles. Other than the name being different, Trusted Friends also allowed you to have a feed of just people you added to your Trusted Friends list, and Tweets from Trusted Friends would be prioritized. Basically it would work exactly like Instagram's Close Friends list. I still miss circles.
+
 ## Thanks for the gold, kind tweep!
+
+Twitter monetization currently sucks.
 
 [^1]: [Twitter Is Testing A TikTok Revamp Of Its Explore Tab](https://www.tubefilter.com/2021/12/08/twitter-explore-tab-redesign-tweet-warnings/)
 
@@ -256,3 +290,7 @@ This was simply a concept idea shared internally that never even got prototyped.
 [^12]: https://web.archive.org/web/20201203170922/https://twitter.com/TwitterSupport/status/1334544255298232320
 
 [^13]: [Twitter tests new profile features, including presence indicators and ‘ice breakers’](https://archive.is/dpPXn)
+
+[^14]: https://web.archive.org/web/20220106201842/https://twitter.com/twitterSupport/status/1479185495267721218
+
+[^15]: [Twitter Launches Live Test of its New ‘Status’ Markers in Tweets](https://www.socialmediatoday.com/news/twitter-launches-live-test-of-its-new-status-markers-in-tweets/628397/)
