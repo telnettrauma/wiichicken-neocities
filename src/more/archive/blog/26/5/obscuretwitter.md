@@ -105,7 +105,131 @@ Cheer and sad both use heart emoji as placeholders. Similar to Facebook, reactio
 
 <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Twitter is working on Tweet Reactions picker <a href="https://t.co/CZx2szYusI">https://t.co/CZx2szYusI</a> <a href="https://t.co/HSzO5tLVoP">pic.twitter.com/HSzO5tLVoP</a></p>&mdash; Jane Manchun Wong (@wongmjane) <a href="https://twitter.com/wongmjane/status/1404863187237756932?ref_src=twsrc%5Etfw">June 15, 2021</a></blockquote>
 
+A really interesting thing is that feedback surveys shared by Twitter played with the idea of also having negative reactions[^6]. These would be unique, as they would be counted separately from likes.
 
+![](https://i.imgur.com/L8VC2th.png)
+
+The way this worked was similar to the next feature.
+
+### Downvotes
+
+In July of 2021, Twitter began testing downvotes for everyone[^7]. Unlike the name suggests, downvoting a Tweet didn't actually decrease the like count, or any count. And unlike the negative reaction feature just discussed, downvotes were only for replies to Tweets; a top level Tweet couldn't be downvoted. Additionally, nobody could see a downvote count. They existed only to gather internal feedback on the type of replies that people like.
+
+Downvotes had 3 different styles that were in testing:
+
+- Green upvote replacing likes and a orange downvote
+- Standard like button and an orange downvote (some tests had the downvote in a circle, while others had it appear similar to a Reddit downvote)
+- Green thumb up button and an orange thumb down button
+
+![](https://i.imgur.com/Mr9Ng48.png)
+
+Downvotes suddenly vanished one day without warning, and I don't think anybody was surprised or missed the feature, considering it did nothing visible to users other than play a cool animation.
+
+## Threaded Replies
+
+The way Twitter handles replies is one of the most iconic things about the platform. It makes following conversations really easy, and especially screenshotting them too. However, in 2019 Twitter made a new app called "twttr" (the name a reference to the original name for Twitter) to test what's likely the most radical change to replies ever.
+
+### Reply Threading
+
+I'm aware this heading is the same as the last but with the words swapped.
+
+This one is a lot to take in, so I'm going to show you the images first and tell you about it after.
+
+<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">hey Twitter. we&#39;ve been playing with some rough features to make it feel more conversational here. presence and reply threading. still early and iterating on these ideas. thoughts? <a href="https://t.co/3U3NvpHWPy">pic.twitter.com/3U3NvpHWPy</a></p>&mdash; sara beykpour (@pandemona) <a href="https://twitter.com/pandemona/status/1035581630180552704?ref_src=twsrc%5Etfw">August 31, 2018</a></blockquote>
+
+If you think this is ugly, don't worry, its supposed to be, for some reason. At least the colors are supposed to be "overly saturated."
+
+Instead of Tweets appearing in a straight line showing one conversation at a time, Tweets would now be threaded together, similar to Reddit. Instead of connecting replies using lines, replies would be placed inside a speech bubble. Perhaps the most jarring change is the removal of the engagement buttons. They wouldn't be completely gone forever, just until you tap a reply.
+
+You might of noticed how some replies have a background color. This would signify the following things:
+
+- Blue is a reply you made
+- Purple is a reply from the author of the Tweet
+- Green is a reply from someone you follow
+
+#### Public Beta Test
+
+When members of the general public were finally given access to the twttr app this was cleaned up a bit[^8]. While replies still had that ugly speech bubble shape, at least they were no longer colored in completely.
+
+![](https://i.imgur.com/P2VUe2B.png)
+
+Now, replies from people you follow would have a blue line to the left of them, while replies from the original Tweet author would have a black line. Additionally, it appears that no indentation was used if there were no other replies to a single reply, similar to how they work now. That was a really hard sentence to follow.
+
+Thankfully, this layout never made it to the final version of Twitter. However, all of the ideas from it were tested individually at some point.
+
+#### Author Context Labels
+
+Taking inspiration from the color coding used in the redesign, Twitter added badges next to relevant people in replies[^9]. These were specifically for the Tweet author, anyone mentioned, and people you follow.
+
+![](https://i.imgur.com/00oKVOU.png)
+
+Eventually, these would be condensed into icons that appeared over profile pictures[^9]. I feel this is actually more confusing than the labels.
+
+![](https://i.imgur.com/ZQvPAHN.png)
+
+Later on, the only label that would appear is "Original Author." And now, no labels appear. Wonderful!
+
+### Conversation View
+
+Twitter **really** liked Reddit style threaded replies, because they kept experimenting with them. At first, if multiple people you followed replied to the same Tweet, it would show all of their replies on your timeline[^10].
+
+![](https://i.imgur.com/5ye8Yw9.png)
+
+This was just the beginning. A new reply section had already been [being tested internally since 2019](https://x.com/wongmjane/status/1192756001646080000/photo/1). This took the things learned from the old twttr beta and worked to actually make them feel like Twitter. In May 2020, Twitter began testing this new reply layout on iOS and the web[^11]. The result?
+
+![](https://i.imgur.com/TF1Kq8Q.png)
+
+I'm going to say it, I actually really liked this layout. Not everyone had the engagement buttons hidden, so maybe that's why I enjoyed it. But it was so much easier to follow conversations, especially compared to the previous test. I LOVE THREADS CONNECTED WITH LINES THAT HAVE INDENTING AHHHHHH!! There was also a version with the [icons from the previous design](https://i.imgur.com/f5OLI7Q.png). I sure hope the next paragraph isn't about how Twitter disabled this due to user feedback, including a blockquote from the @TwitterSupport account.
+
+In December of 2020, Twitter announced they would be discontinuing this layout:
+
+> We asked and you let us know this reply layout wasn’t it, as it was harder to read and join conversations. So we’ve turned off this format to work on other ways to improve conversations on Twitter.[^12]
+
+Not only that, but twttr was also discontinued. So I think it's safe to say that Twitter was officially done with threaded replies. It was fun while it lasted.
+
+## Timeline
+
+I'm genuinely struggling to come up with something to write here that doesn't sound like text made to search engine optimize this article. However, I don't like putting a heading down and immediately throwing down another heading.
+
+### Edge-to-edge
+
+Have you ever wanted your timeline to look like Instagram? In September 2021, Twitter [announced a new edge-to-edge timeline](https://web.archive.org/web/20210907173118/https://twitter.com/TwitterSupport/status/1435287486411022337), which looked like Instagram. Images are bigger, everything is a little less compact, and I remember everyone complaining that the size of the engagement buttons was slightly larger than Tweet font size. This was back before Elon made the font size of Tweets really small on the Tweet detail page.
+
+![](https://i.imgur.com/yeLA0Q8.png)
+
+I genuinely have no thoughts on this other than it looks different.
+
+### Two Column
+
+I'm trying so hard to find any evidence this ever even existed, but I just can't. I know it did, and I even took a screenshot of it at one point, I can't find it. It was during Elon Musk, and basically it looked like the Tumblr search result page, but with Tweets and only 2 columns of them. You will only be alive for so long and you can never get the time you spent back. Also because its Elon musk there were no engagement buttons, but the view count would still appear in the top right corner of each Tweet.
+
+### the bad one elon wanted
+
+Elon Musk wanted to remove the engagement buttons from the timeline. Note that the view count would still be shown. To interact with Tweets, you would hold on them and a bunch of options would appear in a menu similar to the Pinterest long press menu.
+
+![](https://i.imgur.com/LR6pB9N.png)
+
+This version of the Twitter interface without the engagement buttons does exist in the current Twitter app, although its missing the menu that makes it not cumbersome to use. I'm not going to tell you how to enable it because it is stupid and I would like to quit talking about things built while Elon Musk was at Twitter.
+
+## Icebreakers
+
+If you've ever been really desperate to talk about something but not desperate enough to find people to talk about it with, icebreakers are the perfect feature for you. An icebreaker could be pinned to your profile, and people could reply to it, just like a Tweet. When you're online, your icebreaker would also appear in a page for people who want to talk[^13].
+
+![](https://i.imgur.com/o0AIBgn.png)
+
+This was simply a concept idea shared internally that never even got prototyped. I don't understand what the point of the feature is, or how it works. Considering I found it in an article about Twitter trying to promote positivity, I'm guessing the entire feature would be firing shots in the air to keep the rent low, or in this case pretend there are normal people on Twitter.
+
+## Quote Tweet with Reaction
+
+## Status
+
+### Vibes
+
+### Tweet Status
+
+## Facets
+
+## Thanks for the gold, kind tweep!
 
 [^1]: [Twitter Is Testing A TikTok Revamp Of Its Explore Tab](https://www.tubefilter.com/2021/12/08/twitter-explore-tab-redesign-tweet-warnings/)
 
@@ -116,3 +240,19 @@ Cheer and sad both use heart emoji as placeholders. Similar to Facebook, reactio
 [^4]: [Twitter’s New Camera Format Adds New Presentation Style on the Web Version](https://www.socialmediatoday.com/news/twitters-new-camera-format-adds-new-presentation-style-on-the-web-version/550672/)
 
 [^5]: https://www.telegraph.co.uk/technology/twitter/12001407/Twitter-could-replace-hearts-with-emoji-reactions.html
+
+[^6]: [Twitter Explores Using Facebook Reaction Emojis](https://social-stand.com/twitter-explores-using-facebook-reaction-emojis/)
+
+[^7]: [Twitter is testing a downvote button that's visible only to you](https://www.techradar.com/news/twitter-begins-testing-reddit-like-downvote-button)
+
+[^8]: [Twitter Has Launched its New Beta Testing App with the First Round of Users](https://www.socialmediatoday.com/news/twitter-has-launched-its-new-beta-testing-app-with-the-first-round-of-users/550330/)
+
+[^9]: https://web.archive.org/web/20190804210120/https://twitter.com/Twitter/status/1151924123939016708
+
+[^10]: https://web.archive.org/web/20200201121558/https://twitter.com/TwitterSupport/status/1223381130998636549
+
+[^11]: https://web.archive.org/web/20200506020934/https://twitter.com/TwitterSupport/status/1257802719798030336
+
+[^12]: https://web.archive.org/web/20201203170922/https://twitter.com/TwitterSupport/status/1334544255298232320
+
+[^13]: [Twitter tests new profile features, including presence indicators and ‘ice breakers’](https://archive.is/dpPXn)
