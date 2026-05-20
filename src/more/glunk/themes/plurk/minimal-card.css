@@ -91,3 +91,9 @@
 .name {
 	color: black !important;
 }
+._lc_ :is(' {'), .bar-color, :is([} ._lc_ ]) {
+	background: unset;
+}
+._lc_ :is(' {'), #plurk_logo, #navbar-premium, :is([} ._lc_ ]) {
+	display: none !important;
+}
