@@ -1,7 +1,7 @@
 ---
 layout: blog/25/layout.njk
 title: "Obscure Twitter Features That Died in A/B Testing"
-date: 2026-05-19
+date: 2026-05-20
 permalink: "/more/archive/blog/26/5/obscuretwitter.html"
 description: "before elon musk, twitter devs used to add whatever to the app"
 ---
@@ -263,7 +263,13 @@ This later was simplified into Trusted Friends, which became Circles. Other than
 
 ## Thanks for the gold, kind tweep!
 
-Twitter monetization currently sucks.
+For those unaware, a "tweep" was what Twitter wanted people to call Twitter users. Its a portamento of "Twitter" and "peep."
+
+Twitter monetization sucks. While I believe creatives should get paid for their work, most people who are monetized either run meme pages, content farms, or engagement bait. Twitter has always been a good platform for increasing your presence on other platforms, so monetization is a weird choice. Monetization is currently based on engagements you get under your Tweets. However, there was a different monetization that was being prototyped: Reddit awards.
+
+<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Here’s the list of Twitter Awards: <a href="https://t.co/PpgHebBWD6">https://t.co/PpgHebBWD6</a> <a href="https://t.co/BePDVAkzhy">pic.twitter.com/BePDVAkzhy</a></p>&mdash; Jane Manchun Wong (@wongmjane) <a href="https://twitter.com/wongmjane/status/1610978948044951553?ref_src=twsrc%5Etfw">January 5, 2023</a></blockquote>
+
+Honestly, I would've loved this idea much better. From an ironic standpoint, its just really funny. Plus, nobody is giving awards to Tweets that made them angry. I hope. The only thing I would hate about awards is I know Elon Musk would add a Cybertruck and Doge award.
 
 [^1]: [Twitter Is Testing A TikTok Revamp Of Its Explore Tab](https://www.tubefilter.com/2021/12/08/twitter-explore-tab-redesign-tweet-warnings/)
 
