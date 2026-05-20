@@ -271,6 +271,12 @@ Twitter monetization sucks. While I believe creatives should get paid for their 
 
 Honestly, I would've loved this idea much better. From an ironic standpoint, its just really funny. Plus, nobody is giving awards to Tweets that made them angry. I hope. The only thing I would hate about awards is I know Elon Musk would add a Cybertruck and Doge award.
 
+---
+
+Thank you so much for reading this article. I love looking at obscure features of things, so when I fell down a rabbit hole of Twitter features I knew I had to write an article about them. This is almost `3x` as long as my previous longest article, and it took me multiple days to write this, and I did so much research, so I really hope you enjoyed it.
+
+There are a ton of smaller features I found that I didn't mention here that might be interesting in a follow up article. I have 160 tabs open currently just related to Twitter features. However I didn't want to spend so long writing this that I got distracted and ended up forgetting to write the rest of the article.
+
 [^1]: [Twitter Is Testing A TikTok Revamp Of Its Explore Tab](https://www.tubefilter.com/2021/12/08/twitter-explore-tab-redesign-tweet-warnings/)
 
 [^2]: [Twitter Testing Ephemeral Tweets Called 'Fleets'](https://www.macrumors.com/2020/03/04/twitter-testing-ephemeral-tweets/)
