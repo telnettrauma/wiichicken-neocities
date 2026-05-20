@@ -7,7 +7,7 @@ description: "before elon musk, twitter devs used to add whatever to the app"
 ---
 Social media companies love testing new features and redesigns with small amounts of users before releasing them to everyone. This allows companies to gain feedback to optimize features, improve them, or decide releasing to all users isn't worth it. Before Elon Musk purchased Twitter and took over, there were tons of fun features that Twitter never released to everyone or became lost in obscurity. I find these features really fascinating, and I want to go over them, because I miss this era of Twitter so much.
 
-I want to give a shoutout to [Jane Manchun Wong](https://twitter.com/wongmjane), who is the reason we know about most of these. She used to post all sorts of new features Twitter was testing, and is the reason most people know these features even exist.
+I want to give a shoutout to [Jane Manchun Wong](https://twitter.com/wongmjane){target=_blank}, who is the reason we know about most of these. She used to post all sorts of new features Twitter was testing, and is the reason most people know these features even exist.
 
 ## TikTok Style Explore Page
 
@@ -25,7 +25,7 @@ Twitter used to have their own version of stories called Fleets (portamento of f
 
 ### Early Fleets
 
-Fleets were originally tested for users in Brazil on March 4, 2020[^2], with Twitter [making a blog post announcing the new feature](https://blog.x.com/pt_br/topics/product/2019/explorando-uma-nova-forma-de-iniciar-conversas-no-brasil). This early version of Fleets featured a more compact design, with Fleets appearing as thought bubbles on the home screen instead of the generic blue circle.
+Fleets were originally tested for users in Brazil on March 4, 2020[^2], with Twitter [making a blog post announcing the new feature](https://blog.x.com/pt_br/topics/product/2019/explorando-uma-nova-forma-de-iniciar-conversas-no-brasil){target=_blank}. This early version of Fleets featured a more compact design, with Fleets appearing as thought bubbles on the home screen instead of the generic blue circle.
 
 ![Screenshot of a carousel of profile pictures on top of the Twitter timeline](https://i.imgur.com/VhnmJBz.jpeg)
 
@@ -41,19 +41,19 @@ I honestly prefer this version of Fleets from the final. Although it doesn't fee
 
 ### Global Release
 
-On November 17, 2020, Twitter [released Fleets worldwide](https://blog.x.com/en_us/topics/product/2020/introducing-fleets-new-way-to-join-the-conversation). The final design was near identical to Instagram stories. Vertical scrolling was dropped for image by image viewing. Text posts would be on a selectable gradient background, similar to Instagram's create mode. Some other additional nice features were added, such as the ability to share Tweets to Fleets. This could be used as a silent Retweet.
+On November 17, 2020, Twitter [released Fleets worldwide](https://blog.x.com/en_us/topics/product/2020/introducing-fleets-new-way-to-join-the-conversation){target=_blank}. The final design was near identical to Instagram stories. Vertical scrolling was dropped for image by image viewing. Text posts would be on a selectable gradient background, similar to Instagram's create mode. Some other additional nice features were added, such as the ability to share Tweets to Fleets. This could be used as a silent Retweet.
 
 ![](https://i.imgur.com/0iujf72.png)
 
-Later on, more features were added to Fleets, such as animated stickers. Although not the first time they were teased, the new emoji stickers were one of the first public usages of the [new Twimoji](https://emojipedia.org/twitter-emoji-stickers). Near the end of Fleet's lifetime, I remember seeing a carousel of people who shared a Tweet to their Fleets under Tweets. I found an old screenshot of it:
+Later on, more features were added to Fleets, such as animated stickers. Although not the first time they were teased, the new emoji stickers were one of the first public usages of the [new Twimoji](https://emojipedia.org/twitter-emoji-stickers){target=_blank}. Near the end of Fleet's lifetime, I remember seeing a carousel of people who shared a Tweet to their Fleets under Tweets. I found an old screenshot of it:
 
 ![](https://i.imgur.com/lVuCLk4.png)
 
 ### Discontinuation
 
-On July 14, 2021 Twitter [announced Fleets would be removed](https://blog.x.com/en_us/topics/product/2021/goodbye-fleets). The reason was because Fleets were created to encourage more people to Tweet, but only people who already were Tweeting were using Fleets. So it was essentially a failure of a feature.
+On July 14, 2021 Twitter [announced Fleets would be removed](https://blog.x.com/en_us/topics/product/2021/goodbye-fleets){target=_blank}. The reason was because Fleets were created to encourage more people to Tweet, but only people who already were Tweeting were using Fleets. So it was essentially a failure of a feature.
 
-> We hoped Fleets would help more people feel comfortable joining the conversation on Twitter. But, in the time since [we introduced Fleets to everyone](https://twitter.com/kayvz/status/1328685331789484034?s=20), we haven’t seen an increase in the number of new people joining the conversation with Fleets like we hoped.
+> We hoped Fleets would help more people feel comfortable joining the conversation on Twitter. But, in the time since [we introduced Fleets to everyone](https://twitter.com/kayvz/status/1328685331789484034){target=_blank}, we haven’t seen an increase in the number of new people joining the conversation with Fleets like we hoped.
 
 I still miss Fleets. There is so much more I want to say about Fleets, however I think most people who used Twitter around that time at least have some memory of Fleets. Maybe in the future.
 
@@ -69,13 +69,13 @@ Speaking of stickers...
 
 ## \#stickers
 
-When Twitter [added stickers in 2016](https://blog.x.com/official/en_us/a/2016/introducing-stickers-on-twitter.html) they had an interesting utility: stickers functioned as hashtags. Tapping a sticker you saw on your timeline would take you to a search of other people who used that same sticker.
+When Twitter [added stickers in 2016](https://blog.x.com/official/en_us/a/2016/introducing-stickers-on-twitter.html){target=_blank} they had an interesting utility: stickers functioned as hashtags. Tapping a sticker you saw on your timeline would take you to a search of other people who used that same sticker.
 
 ![](https://i.imgur.com/X1rwAuL.png)
 
-At some point this feature was removed. My best guess is because people don't add sticker masks over the faces of their friends anymore. The only times people use stickers now are for redaction and making [healing memes](https://knowyourmeme.com/memes/there-was-a-healing).
+At some point this feature was removed. My best guess is because people don't add sticker masks over the faces of their friends anymore. The only times people use stickers now are for redaction and making [healing memes](https://knowyourmeme.com/memes/there-was-a-healing){target=_blank}.
 
-Sadly, last month [Twitter replaced the photo editor](https://x.com/nikitabier/status/2041594683072413883?s=20), removing stickers in the process entirely. Oh well.
+Sadly, last month [Twitter replaced the photo editor](https://x.com/nikitabier/status/2041594683072413883){target=_blank}, removing stickers in the process entirely. Oh well.
 
 ## News Camera
 
@@ -183,11 +183,11 @@ Twitter **really** liked Reddit style threaded replies, because they kept experi
 
 ![](https://i.imgur.com/5ye8Yw9.png)
 
-This was just the beginning. A new reply section had already been [being tested internally since 2019](https://x.com/wongmjane/status/1192756001646080000/photo/1). This took the things learned from the old twttr beta and worked to actually make them feel like Twitter. In May 2020, Twitter began testing this new reply layout on iOS and the web[^11]. The result?
+This was just the beginning. A new reply section had already been [being tested internally since 2019](https://x.com/wongmjane/status/1192756001646080000/photo/1){target=_blank}. This took the things learned from the old twttr beta and worked to actually make them feel like Twitter. In May 2020, Twitter began testing this new reply layout on iOS and the web[^11]. The result?
 
 ![](https://i.imgur.com/TF1Kq8Q.png)
 
-I'm going to say it, I actually really liked this layout. Not everyone had the engagement buttons hidden, so maybe that's why I enjoyed it. But it was so much easier to follow conversations, especially compared to the previous test. I LOVE THREADS CONNECTED WITH LINES THAT HAVE INDENTING AHHHHHH!! There was also a version with the [icons from the previous design](https://i.imgur.com/f5OLI7Q.png). I sure hope the next paragraph isn't about how Twitter disabled this due to user feedback, including a blockquote from the @TwitterSupport account.
+I'm going to say it, I actually really liked this layout. Not everyone had the engagement buttons hidden, so maybe that's why I enjoyed it. But it was so much easier to follow conversations, especially compared to the previous test. I LOVE THREADS CONNECTED WITH LINES THAT HAVE INDENTING AHHHHHH!! There was also a version with the [icons from the previous design](https://i.imgur.com/f5OLI7Q.png){target=_blank}. I sure hope the next paragraph isn't about how Twitter disabled this due to user feedback, including a blockquote from the @TwitterSupport account.
 
 In December of 2020, Twitter announced they would be discontinuing this layout:
 
@@ -203,7 +203,7 @@ I'm genuinely struggling to come up with something to write here that doesn't so
 
 ### Edge-to-edge
 
-Have you ever wanted your timeline to look like Instagram? In September 2021, Twitter [announced a new edge-to-edge timeline](https://web.archive.org/web/20210907173118/https://twitter.com/TwitterSupport/status/1435287486411022337), which looked like Instagram. Images are bigger, everything is a little less compact, and I remember everyone complaining that the size of the engagement buttons was slightly larger than Tweet font size. This was back before Elon made the font size of Tweets really small on the Tweet detail page.
+Have you ever wanted your timeline to look like Instagram? In September 2021, Twitter [announced a new edge-to-edge timeline](https://web.archive.org/web/20210907173118/https://twitter.com/TwitterSupport/status/1435287486411022337){target=_blank}, which looked like Instagram. Images are bigger, everything is a little less compact, and I remember everyone complaining that the size of the engagement buttons was slightly larger than Tweet font size. This was back before Elon made the font size of Tweets really small on the Tweet detail page.
 
 ![](https://i.imgur.com/yeLA0Q8.png)
 
@@ -263,7 +263,7 @@ How this feature worked was you could set a status from a list of preset ones ma
 
 ![](https://i.imgur.com/KTdTEBZ.png)
 
-While this feature was released, not everyone got access to it. It was one of the unfortunate final experimental features before Elon took over, so it mysteriously vanished one day. But honestly, did anybody notice? That wasn't a rhetorical question, please [fill out the Google Form](https://forms.gle/uB9XmkusanpXXZHJ6).
+While this feature was released, not everyone got access to it. It was one of the unfortunate final experimental features before Elon took over, so it mysteriously vanished one day. But honestly, did anybody notice? That wasn't a rhetorical question, please [fill out the Google Form](https://forms.gle/uB9XmkusanpXXZHJ6){target=_blank}.
 
 ## Facets
 
@@ -291,32 +291,32 @@ Thank you so much for reading this article. I love looking at obscure features o
 
 There are a ton of smaller features I found that I didn't mention here that might be interesting in a follow up article. I have 160 tabs open currently just related to Twitter features. However I didn't want to spend so long writing this that I got distracted and ended up forgetting to write the rest of the article.
 
-[^1]: [Twitter Is Testing A TikTok Revamp Of Its Explore Tab](https://www.tubefilter.com/2021/12/08/twitter-explore-tab-redesign-tweet-warnings/)
+[^1]: [Twitter Is Testing A TikTok Revamp Of Its Explore Tab](https://www.tubefilter.com/2021/12/08/twitter-explore-tab-redesign-tweet-warnings/){target=_blank}
 
-[^2]: [Twitter Testing Ephemeral Tweets Called 'Fleets'](https://www.macrumors.com/2020/03/04/twitter-testing-ephemeral-tweets/)
+[^2]: [Twitter Testing Ephemeral Tweets Called 'Fleets'](https://www.macrumors.com/2020/03/04/twitter-testing-ephemeral-tweets/){target=_blank}
 
-[^3]: [https://twitter.com/samhaves/status/1443293873493590016?s=20](https://twitter.com/samhaves/status/1443293873493590016?s=20)
+[^3]: [https://twitter.com/samhaves/status/1443293873493590016?s=20](https://twitter.com/samhaves/status/1443293873493590016?s=20){target=_blank}
 
-[^4]: [Twitter’s New Camera Format Adds New Presentation Style on the Web Version](https://www.socialmediatoday.com/news/twitters-new-camera-format-adds-new-presentation-style-on-the-web-version/550672/)
+[^4]: [Twitter’s New Camera Format Adds New Presentation Style on the Web Version](https://www.socialmediatoday.com/news/twitters-new-camera-format-adds-new-presentation-style-on-the-web-version/550672/){target=_blank}
 
-[^5]: [https://www.telegraph.co.uk/technology/twitter/12001407/Twitter-could-replace-hearts-with-emoji-reactions.html](https://www.telegraph.co.uk/technology/twitter/12001407/Twitter-could-replace-hearts-with-emoji-reactions.html)
+[^5]: [https://www.telegraph.co.uk/technology/twitter/12001407/Twitter-could-replace-hearts-with-emoji-reactions.html](https://www.telegraph.co.uk/technology/twitter/12001407/Twitter-could-replace-hearts-with-emoji-reactions.html){target=_blank}
 
-[^6]: [Twitter Explores Using Facebook Reaction Emojis](https://social-stand.com/twitter-explores-using-facebook-reaction-emojis/)
+[^6]: [Twitter Explores Using Facebook Reaction Emojis](https://social-stand.com/twitter-explores-using-facebook-reaction-emojis/){target=_blank}
 
-[^7]: [Twitter is testing a downvote button that's visible only to you](https://www.techradar.com/news/twitter-begins-testing-reddit-like-downvote-button)
+[^7]: [Twitter is testing a downvote button that's visible only to you](https://www.techradar.com/news/twitter-begins-testing-reddit-like-downvote-button){target=_blank}
 
-[^8]: [Twitter Has Launched its New Beta Testing App with the First Round of Users](https://www.socialmediatoday.com/news/twitter-has-launched-its-new-beta-testing-app-with-the-first-round-of-users/550330/)
+[^8]: [Twitter Has Launched its New Beta Testing App with the First Round of Users](https://www.socialmediatoday.com/news/twitter-has-launched-its-new-beta-testing-app-with-the-first-round-of-users/550330/){target=_blank}
 
-[^9]: [https://web.archive.org/web/20190804210120/https://twitter.com/Twitter/status/1151924123939016708](https://web.archive.org/web/20190804210120/https://twitter.com/Twitter/status/1151924123939016708)
+[^9]: [https://web.archive.org/web/20190804210120/https://twitter.com/Twitter/status/1151924123939016708](https://web.archive.org/web/20190804210120/https://twitter.com/Twitter/status/1151924123939016708){target=_blank}
 
-[^10]: [https://web.archive.org/web/20200201121558/https://twitter.com/TwitterSupport/status/1223381130998636549](https://web.archive.org/web/20200201121558/https://twitter.com/TwitterSupport/status/1223381130998636549)
+[^10]: [https://web.archive.org/web/20200201121558/https://twitter.com/TwitterSupport/status/1223381130998636549](https://web.archive.org/web/20200201121558/https://twitter.com/TwitterSupport/status/1223381130998636549){target=_blank}
 
-[^11]: [https://web.archive.org/web/20200506020934/https://twitter.com/TwitterSupport/status/1257802719798030336](https://web.archive.org/web/20200506020934/https://twitter.com/TwitterSupport/status/1257802719798030336)
+[^11]: [https://web.archive.org/web/20200506020934/https://twitter.com/TwitterSupport/status/1257802719798030336](https://web.archive.org/web/20200506020934/https://twitter.com/TwitterSupport/status/1257802719798030336){target=_blank}
 
-[^12]: [https://web.archive.org/web/20201203170922/https://twitter.com/TwitterSupport/status/1334544255298232320](https://web.archive.org/web/20201203170922/https://twitter.com/TwitterSupport/status/1334544255298232320)
+[^12]: [https://web.archive.org/web/20201203170922/https://twitter.com/TwitterSupport/status/1334544255298232320](https://web.archive.org/web/20201203170922/https://twitter.com/TwitterSupport/status/1334544255298232320){target=_blank}
 
-[^13]: [Twitter tests new profile features, including presence indicators and ‘ice breakers’](https://archive.is/dpPXn)
+[^13]: [Twitter tests new profile features, including presence indicators and ‘ice breakers’](https://archive.is/dpPXn){target=_blank}
 
-[^14]: [https://web.archive.org/web/20220106201842/https://twitter.com/twitterSupport/status/1479185495267721218](https://web.archive.org/web/20220106201842/https://twitter.com/twitterSupport/status/1479185495267721218)
+[^14]: [https://web.archive.org/web/20220106201842/https://twitter.com/twitterSupport/status/1479185495267721218](https://web.archive.org/web/20220106201842/https://twitter.com/twitterSupport/status/1479185495267721218){target=_blank}
 
-[^15]: [Twitter Launches Live Test of its New ‘Status’ Markers in Tweets](https://www.socialmediatoday.com/news/twitter-launches-live-test-of-its-new-status-markers-in-tweets/628397/)
+[^15]: [Twitter Launches Live Test of its New ‘Status’ Markers in Tweets](https://www.socialmediatoday.com/news/twitter-launches-live-test-of-its-new-status-markers-in-tweets/628397/){target=_blank}
