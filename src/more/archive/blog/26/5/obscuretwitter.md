@@ -295,11 +295,11 @@ There are a ton of smaller features I found that I didn't mention here that migh
 
 [^2]: [Twitter Testing Ephemeral Tweets Called 'Fleets'](https://www.macrumors.com/2020/03/04/twitter-testing-ephemeral-tweets/)
 
-[^3]: https://twitter.com/samhaves/status/1443293873493590016?s=20
+[^3]: [https://twitter.com/samhaves/status/1443293873493590016?s=20](https://twitter.com/samhaves/status/1443293873493590016?s=20)
 
 [^4]: [Twitter’s New Camera Format Adds New Presentation Style on the Web Version](https://www.socialmediatoday.com/news/twitters-new-camera-format-adds-new-presentation-style-on-the-web-version/550672/)
 
-[^5]: https://www.telegraph.co.uk/technology/twitter/12001407/Twitter-could-replace-hearts-with-emoji-reactions.html
+[^5]: [https://www.telegraph.co.uk/technology/twitter/12001407/Twitter-could-replace-hearts-with-emoji-reactions.html](https://www.telegraph.co.uk/technology/twitter/12001407/Twitter-could-replace-hearts-with-emoji-reactions.html)
 
 [^6]: [Twitter Explores Using Facebook Reaction Emojis](https://social-stand.com/twitter-explores-using-facebook-reaction-emojis/)
 
@@ -307,16 +307,16 @@ There are a ton of smaller features I found that I didn't mention here that migh
 
 [^8]: [Twitter Has Launched its New Beta Testing App with the First Round of Users](https://www.socialmediatoday.com/news/twitter-has-launched-its-new-beta-testing-app-with-the-first-round-of-users/550330/)
 
-[^9]: https://web.archive.org/web/20190804210120/https://twitter.com/Twitter/status/1151924123939016708
+[^9]: [https://web.archive.org/web/20190804210120/https://twitter.com/Twitter/status/1151924123939016708](https://web.archive.org/web/20190804210120/https://twitter.com/Twitter/status/1151924123939016708)
 
-[^10]: https://web.archive.org/web/20200201121558/https://twitter.com/TwitterSupport/status/1223381130998636549
+[^10]: [https://web.archive.org/web/20200201121558/https://twitter.com/TwitterSupport/status/1223381130998636549](https://web.archive.org/web/20200201121558/https://twitter.com/TwitterSupport/status/1223381130998636549)
 
-[^11]: https://web.archive.org/web/20200506020934/https://twitter.com/TwitterSupport/status/1257802719798030336
+[^11]: [https://web.archive.org/web/20200506020934/https://twitter.com/TwitterSupport/status/1257802719798030336](https://web.archive.org/web/20200506020934/https://twitter.com/TwitterSupport/status/1257802719798030336)
 
-[^12]: https://web.archive.org/web/20201203170922/https://twitter.com/TwitterSupport/status/1334544255298232320
+[^12]: [https://web.archive.org/web/20201203170922/https://twitter.com/TwitterSupport/status/1334544255298232320](https://web.archive.org/web/20201203170922/https://twitter.com/TwitterSupport/status/1334544255298232320)
 
 [^13]: [Twitter tests new profile features, including presence indicators and ‘ice breakers’](https://archive.is/dpPXn)
 
-[^14]: https://web.archive.org/web/20220106201842/https://twitter.com/twitterSupport/status/1479185495267721218
+[^14]: [https://web.archive.org/web/20220106201842/https://twitter.com/twitterSupport/status/1479185495267721218](https://web.archive.org/web/20220106201842/https://twitter.com/twitterSupport/status/1479185495267721218)
 
 [^15]: [Twitter Launches Live Test of its New ‘Status’ Markers in Tweets](https://www.socialmediatoday.com/news/twitter-launches-live-test-of-its-new-status-markers-in-tweets/628397/)
