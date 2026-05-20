@@ -2,6 +2,9 @@
 	font-family: 'Times New Roman' !important;
 	box-shadow: none !important;
 }
+body {
+	background: linear-gradient(0deg, rgb(55, 0, 72) 0%, rgb(31, 0, 35) 100%);
+}
 .timeline-cnt .plurk .text_holder {
 	width: 200px;
 }
