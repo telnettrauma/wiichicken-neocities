@@ -235,6 +235,8 @@ This was simply a concept idea shared internally that never even got prototyped.
 
 SpaceGhostPurrp would probably use this feature[^14].
 
+> **Update `June 3, 2026`**: It appears this is [now a feature on the latest version of the Twitter app](https://twitter.com/lunarhorrors/status/2061816613070832094){target=_blank}. If I was somehow the reason this came back, I'm sorry. But most likely the Twitter team was digging through old features, found this and asked Grok to clean it up a little and launched it.
+
 ## Status
 
 Twitter at one point toyed with the idea of having online indicators[^13]. But not only this, you could add an account status. This would appear along with your Tweets, and the cool thing would be that search Tweets based on statuses, and any status with a hashtag would cause Tweets posted during that status to automatically included in that hashtag. This could be very useful for livetweeting.
