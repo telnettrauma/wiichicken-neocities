@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>NO MORE THANKS</title>
+			<pubDate>Sat, 13 Jun 2026 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>i hate everyone now. sorry!</description>
+		</item>
+		<item>
 			<title>i FiNALLY DiD SOMETHiNG!</title>
 			<pubDate>Mon, 15 Dec 2025 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>put my splashtag on the about me page. that's all!</description>
-		</item>
-		<item>
-			<title>tikTOC</title>
-			<pubDate>Sun, 1 Jun 2025 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>blog posts now have a table of contents</description>
 		</item>
 	</channel>
 </rss>
