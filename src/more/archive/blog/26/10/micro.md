@@ -11,6 +11,12 @@ okay, so welcome to my microblog! i said i was going to start working on it, but
 
 ---
 
+## october 15, 2025
+
+### i cannot comfort anybody (19:35)
+
+i frequently think about how awful i am at comforting people when they're distressed. i try, i really do try! but i just am not that good at it. if someone was going to kill themselves and i was the only person who could stop them, i feel they likely wouldn't survive for 10 minutes. and that both makes me sad and stresses me out...
+
 ## october 14, 2026
 
 ### if i was to buy a new phone (19:03)
