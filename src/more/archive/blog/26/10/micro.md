@@ -11,6 +11,16 @@ okay, so welcome to my microblog! i said i was going to start working on it, but
 
 ---
 
+## october 27, 2026
+
+### everything is happening at once (10:18)
+
+midterms are here, which means that a lot of things are happening at once now. i have so much work i need to do, not just limited to school. its just so much, im constantly forgetting things such as my purse.
+
+design class is the worst. im horrible at coming up with ideas, and im having these major projects. these **shouldn't** be an issue at all, but they are becoming an issue because of my horrible habit of putting everything off until the very last minute. and it just makes things worse in combination with other classes, where i have to read 100 pages of a book in 2 days. and once again, there are still things happening outside of college stuff.
+
+at least i think splatfest is this weekend, but i have no idea what team i want to pick.
+
 ## october 18, 2026
 
 ### choosing a notification sound (23:20)
