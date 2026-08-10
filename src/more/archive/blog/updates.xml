@@ -7,6 +7,13 @@
 		<description>the most awesome blog in the history of blogging. i don't know if i will be updating this feed tho</description>
 		<language>en-us</language>
 		<item>
+			<title>an attempt at fixing whats broke</title>
+			<pubDate>Mon, 10 Aug 2026 12:00:00 EST</pubDate>
+			<link>https://wiggle.monster/more/archive/blog/updates</link>
+			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
+			<description>some things on the homepage were broken and i hope they aren't anymore</description>
+		</item>
+		<item>
 			<title>NO MORE THANKS</title>
 			<pubDate>Sat, 13 Jun 2026 12:00:00 EST</pubDate>
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
@@ -68,13 +75,6 @@
 			<link>https://wiggle.monster/more/archive/blog/updates</link>
 			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
 			<description>there is a new blog index</description>
-		</item>
-		<item>
-			<title>iM STiLL WORKiNG ON iT!</title>
-			<pubDate>Sun, 22 Jun 2025 12:00:00 EST</pubDate>
-			<link>https://wiggle.monster/more/archive/blog/updates</link>
-			<guid>https://wiggle.monster/more/archive/blog/updates</guid>
-			<description>put my splashtag on the about me page. that's all!</description>
 		</item>
 	</channel>
 </rss>
