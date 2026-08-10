@@ -1,0 +1,42 @@
+/* this theme is still a work in progress... okay!?! */
+/* i couldn't fidgure it out sorry */
+
+._lc_ td.td_qual:before {
+  content: '';
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE8AAABBCAYAAACQPvn2AAAACXBIWXMAAG66AABuugHW3rEXAAAChUlEQVR42u2cS47aQBCG22DeASEyUrJgkV0ukiPkCLlVjpATZTfLiTRgwtO8U7/lQoWng5kQxGP+XyoVdldXuT+6rRYSHWy3W2fV7Xbb4r6IfRL7nPoHsbbEvhffdIcVifXhgyB4FD9I7af5/Awv+RbiZ2Jx6m9KgQfeD3FffcHZ2NzkQXCw/bX5rk2hZ0AP/yv5rcPJU8Fzr33XIz4zvCqxEB7hEd4bgkcRHuHdHDy+8wjvMvBiYiG8i8CjCI/wCI/wKMI7NzxuVQiPy5bw3hK8AbFw5hEely1nHnUMPO7zCI/wCI/wKMIjvCuGR50A7zexcNkS3q3B4w8DnHmceZx5hEdx2XLmER6XLeFZ4Q/GYoO8PxpTf/9VhbOP8C4D75lo8vXijIFOp+NWq9V6sVi4Wq3m+v2+a7VayXkBpVIpiYnj2FWrVTefz5P7lUrFTSYT12w2Xa/Xc/V6PbmHdo2DEIM22xefIdTJtqH+bDZLvM2r7+PxeJzUxPNAms/Ww3ggGVPSPhqNdnXQD/miKNrFITdqNRqNJH46nb5u5kmCyF6jcLlc3l2v1+vEozCKhGG4d5IFIOOejYNl+yo4X160FQqFvRh8ochrn8vm99XzjUHjNJ8dm8r3fEfBk4eOMjD3TqqwA9AHSfslvlgsuuFwuBfn63tsm81rhS9J2/Jy2zFonOYDxGytf37nZWceiuhSsMBwD234VpfLpdtsNrsYzEgbp/1993x5YciHZaN5tZZKa2r8odx2DBqXzYdrreXL8YKT51AauG9i3+/9XJRTxa0K4V0XPO7zToD3SDRctmdVeKANsw9b9ydjv8TGqcXGIOwo28Z/EPuYGk5Ge+fu7JCvP0wBT/DWDoNfAAAAAElFTkSuQmCC) no-repeat center / contain !important;
+  position: absolute;
+  left: -18px;
+  width: 55px;
+  height: 20px;
+  z-index: 5;
+}
+
+._lc_ .td_qual:after {
+  content: '' !important;
+  position: absolute !important;
+  right: -20px;
+  width: 55px !important;
+  height: 20px;
+  background: url(data:image/png;base64,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) no-repeat center / contain !important;
+  z-index: 5;
+}
+
+._lc_ .td_qual span a {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  color: #ffffff;
+  white-space: nowrap;
+  z-index: 6;
+  margin-top: 3px !important;
+}
+
+._lc_ .td_qual span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.45));
+  background: linear-gradient(rgb(26, 26, 26), rgb(26, 26, 26)) no-repeat center / calc(100% - 30px) 48px;
+  z-index: 6;
+}
