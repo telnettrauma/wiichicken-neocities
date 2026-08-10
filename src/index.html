@@ -745,7 +745,7 @@ xhttp.onreadystatechange = async function() {
 		document.getElementById('visitorscount').innerHTML = site_data.info.views;
 	}
 };
-xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=wiichicken", true);
+xhttp.open("GET", "https://neocities.org/api/info?sitename=wiichicken", true);
 xhttp.send();
 async function copyLinkToPage() {
 	await navigator.clipboard.writeText('<a href="https://wiggle.monster"><img loading="lazy" src="https://wiggle.monster/button.gif" style="image-rendering: pixelated;" alt="Visit WiiCHiCKEN\'s website"></a>');
