@@ -164,6 +164,7 @@ header .box, .box, .app img, .app div {
 }
 .box::before {content: none;}
 .breadcrumb-box p {font-size: 0.75em;}
+.indent {margin-left: 10px;}
 header .lessvis {
 	background-color: #004e5f !important;
 	color: #b4ebff !important;
