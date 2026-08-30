@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>bizarre or notable emergency alert collection</title>
-		<meta name="description" content="a collection of emergency alerts i found that are either strange or notable">
+		<title>emergency alerts</title>
+		<meta name="description" content="a collection of emergency alerts mainly from the emergency alert system i found either strange or notable, as well as other emergency alert resources">
 		<link rel="icon" type="image/x-icon" href="/favicon.png">
 		<link href="/style.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=PT+Sans&display=swap" rel="stylesheet">
 		<link href="../sites.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
 		{% include "partials/interests/intnav.njk" %}
 		<div class="main">
-			<div class="box breadcrumb-box">
+			<nav class="box breadcrumb-box">
 				<!-- trying out a new thing where i include breadcrumbs because i like those. idk how it will go -->
-				<p><a href="/interests/websites/">websites</a> / <a href="../directory.html">directory</a> / Bizarre or Notable Emergency Alert Collection</p>
-			</div>
-			<div class="box">
-				<h1>Bizarre or Notable Emergency Alert Collection</h1>
+				<p><a href="/interests/websites/">websites</a> / <a href="../directory.html">directory</a> / emergency alerts</p>
+			</nav>
+			<header class="box">
+				<h1>emergency alerts</h1>
+			</header>
+			<p class="box">things related to emergency alerts, mostly the united states <a href="https://en.wikipedia.org/wiki/Emergency_Alert_System" target="_blank">Emergency Alert System</a></p>
+			<div class="urls">
+				<header class="box">
+					<h2>notable alerts</h2>
+				</header>
+				<p class="box">alerts that i found bizarre, notable, or just cool for some reason or another</p>
+				<table>
+					<tr>
+						<td><img src="../img/ficon/util/car.png" loading="lazy" alt=""></td>
+						<td><a href="https://alerts.globaleas.org/alert?hash=AD8A1C6020B2AFD538B2E43E15BAC01B28CF1222" target="_blank">low quality Puerto Rico test</a></td>
+						<td>i find it really cool that emergency alerts in Puerto Rico for the most part have real people read them aloud compared to a computer. the quality of this alert is really low however <code>(CEM; <time datetime="2025-10-16">Oct 16, 2025</time>)</code></td>
+					</tr>
+					<tr>
+						<td><img src="../img/ficon/youtube.png" loading="lazy" alt=""></td>
+						<td><a href="https://www.youtube.com/playlist?list=PLmHaymEP2jhTIjGAk_bGkZYjs4ICCfYk4" target="_blank">Local Access Alerts/Emergency Override Systems</a></td>
+					</tr>
+				</table>
 			</div>
 		</div>
 	</body>
