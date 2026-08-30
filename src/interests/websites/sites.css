@@ -23,7 +23,7 @@ body {
 #int-nav-icons a:nth-child(2) {color: #b3ebff;}
 #int-nav-icons a:nth-child(2) .nav-icon {background: url(/interests/res/nav/nav.png) -12px 0;}
 h1, h2, h3, h4, .mainnav {font-family: 'Martian Mono', monospace;}
-h1, h2, h3, h4, .mainnav, p.box, .breadcrumb-box {
+h1, h2, h3, h4, .mainnav, p.box, .breadcrumb-box p {
 	margin-block-start: 0;
 	margin-block-end: 0;
 }
@@ -164,7 +164,10 @@ header .box, .box, .app img, .app div {
 }
 .box::before {content: none;}
 .breadcrumb-box p {font-size: 0.75em;}
-.indent {margin-left: 10px;}
+.indent {
+	margin-left: 10px;
+	width: unset;
+}
 header .lessvis {
 	background-color: #004e5f !important;
 	color: #b4ebff !important;
