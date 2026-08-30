@@ -162,6 +162,11 @@ header .box, .box, .app img, .app div {
 	clip-path: none;
 }
 .box::before {content: none;}
+.breadcrumb-box p {
+	margin-block-start: 0;
+	margin-block-end: 0;
+	font-size: 0.75em;
+}
 header .lessvis {
 	background-color: #004e5f !important;
 	color: #b4ebff !important;
