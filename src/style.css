@@ -228,25 +228,11 @@ section {margin-bottom: 10px !important;}
 
 /* navbar */
 nav.site-nav {
-	width: 650px;
-	height: 100px;
+	height: 50px;
 	margin: auto;
 	display: flex;
-	align-items: flex-end;
-}
-#inHead {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-}
-.topLinks, .topLinks a, #fakeLogo, .square {pointer-events: all;}
-.topLinks {display: flex;}
-.topLinks a {
-	display: flex;
-	font-size: 15px;
-	color: white;
-	padding: 0 7px 0 7px;
-	background-color: unset !important;
+	justify-content: center;
+	background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0) 100%);
 }
 .nav-icon {
 	display: inline;
