@@ -227,23 +227,17 @@ section {margin-bottom: 10px !important;}
 /* navigation styles */
 
 /* navbar */
-.heading {
-	width: unset;
-	z-index: 10;
-	margin: 0;
-	bottom: 10px;
-	right: 10px;
-	position: fixed;
-	transition-duration: 0.5s;
-	height: 30px;
-	border: 1px solid var(--border);
+nav.site-nav {
+	width: 650px;
+	height: 100px;
+	margin: auto;
+	display: flex;
+	align-items: flex-end;
 }
 #inHead {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	padding-right: 70px;
-	margin: 4px 0 5px 0;
 }
 .topLinks, .topLinks a, #fakeLogo, .square {pointer-events: all;}
 .topLinks {display: flex;}
@@ -278,14 +272,13 @@ section {margin-bottom: 10px !important;}
 	transition-duration: 0.4s;
 	cursor: url(/media/pointer.svg), url(/media/pointer.png), pointer;
 	z-index: 2;
-	margin: -35px 0 0 0;
 	padding: 5px;
 	pointer-events: all;
-	position: absolute;
-	right: 5px;
 	background: linear-gradient(0deg, #7e7e7e 0%, #ffffff 100%);
 	border: 5px solid black;
 	aspect-ratio: 1;
+	width: 60px;
+	height: 60px;
 }
 #fakeLogo:hover {
 	padding: 10px;
