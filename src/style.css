@@ -228,30 +228,41 @@ section {margin-bottom: 10px !important;}
 
 /* navbar */
 nav.site-nav {
-	height: 50px;
+	height: 60px;
 	margin: auto;
 	display: flex;
 	justify-content: center;
 	background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0) 100%);
 }
-.nav-icon {
-	display: inline;
-	width: 12px;
-	height: 12px;
-	margin-right: 2px;
-	image-rendering: pixelated;
+.navbar-links {
+	display: flex;
 }
-.topLinks a:first-child {color: #c5e7ff;}
-.topLinks a:first-child .nav-icon {background: url(/resources/nav/navicons.png) 0 0;}
-.topLinks a:nth-child(2) {color: #dce1ff;}
-.topLinks a:nth-child(2) .nav-icon {background: url(/resources/nav/navicons.png) -12px 0;}
-.topLinks a:nth-child(3) {color: #ffd6fe;}
-.topLinks a:nth-child(3) .nav-icon {background: url(/resources/nav/navicons.png) -24px 0;}
-.topLinks a:nth-child(4) {color: #ffdadb;}
-.topLinks a:nth-child(4) .nav-icon {background: url(/resources/nav/navicons.png) -36px 0;}
-.topLinks a:nth-child(5) {color: #ffdad6;}
-.topLinks a:nth-child(5) .nav-icon {background: url(/resources/nav/navicons.png) -48px 0;}
-.topLinks a:nth-child(6) .nav-icon {background: url(/resources/nav/navicons.png) -60px 0;}
+.navbar-links a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 12px;
+	text-decoration: none !important;
+	padding: 6px;
+}
+.nav-icon {
+	width: 24px;
+	height: 24px;
+	margin-bottom: 3px;
+	z-index: 50 !important;
+	background-size: cover !important;
+}
+#n-a {color: #c5e7ff;}
+#n-a .nav-icon {background: url(/resources/nav/navicons.png) 0 0;}
+#n-c {color: #dce1ff;}
+#n-c .nav-icon {background: url(/resources/nav/navicons.png) -24px 0;}
+#n-b {color: #ffd6fe;}
+#n-b .nav-icon {background: url(/resources/nav/navicons.png) -48px 0;}
+#n-l {color: #ffdadb;}
+#n-l .nav-icon {background: url(/resources/nav/navicons.png) -72px 0;}
+#n-m {color: #ffdad6;}
+#n-m .nav-icon {background: url(/resources/nav/navicons.png) -96px 0;}
+#n-g .nav-icon {background: url(/resources/nav/navicons.png) -120px 0;}
 #fakeLogo {
 	display: flex;
 	align-items: center;
@@ -423,51 +434,12 @@ nav.site-nav {
 		background: unset;
 		background-color: var(--bg-1);
 	}
-	.heading {
-		height: 50px;
-		width: calc(100vw - 10px);
-		margin: 5px;
-		bottom: 0;
-		right: 0;
-		background: url('/media/noise.png') #00000099;
-		border: 1px solid var(--border);
-		backdrop-filter: blur(5px);
-		-webkit-backdrop-filter: blur(5px);
-	}
-	.heading:after {content: unset;}
-	#inHead {
-		align-items: flex-start;
-		padding-right: 60px;
-	}
 	#fakeLogo {
 		margin: 0;
 		right: 5px;
 		bottom: 5px;
 		border: 5px solid black;
 	}
-	.topLinks {
-		position: absolute;
-		align-items: flex-end;
-	}
-	.topLinks a {
-		flex-direction: column;
-		align-items: center;
-		font-size: 12px;
-		text-decoration: none !important;
-		padding: 0 12px 0 12px;
-	}
-	.topLinks a:nth-child(6n) {display: none;}
-	.topLinks a .nav-icon {
-		width: 24px;
-		height: 24px;
-		margin-bottom: 3px;
-		z-index: 50 !important;
-		background-size: cover !important;
-	}
-	.topLinks a:nth-child(2) .nav-icon {background: url(/resources/nav/navicons.png) -24px 0;}
-	.topLinks a:nth-child(3) .nav-icon {background: url(/resources/nav/navicons.png) -48px 0;}
-	.topLinks a:nth-child(4) .nav-icon {background: url(/resources/nav/navicons.png) -72px 0;}
-	.topLinks a:nth-child(5) .nav-icon {background: url(/resources/nav/navicons.png) -96px 0;}
 	.footer p {text-align: left;}
 	.mobile-list {
 		display: flex;
