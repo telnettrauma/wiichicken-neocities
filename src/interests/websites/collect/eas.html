@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>emergency alerts</title>
+	<meta name="description" content="a collection of emergency alerts mainly from the emergency alert system i found either strange or notable, as well as other emergency alert resources">
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<link href="/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=PT+Sans&display=swap" rel="stylesheet">
+	<link href="../sites.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	{% include "partials/interests/intnav.njk" %}
+	<div class="main">
+		<nav class="box breadcrumb-box">
+			<!-- trying out a new thing where i include breadcrumbs because i like those. idk how it will go -->
+			<p><a href="/interests/websites/">websites</a> / <a href="../directory.html">directory</a> / emergency alerts</p>
+		</nav>
+		<header class="box">
+			<h1>emergency alerts</h1>
+		</header>
+		<p class="box">things related to emergency alerts, mostly the united states <a href="https://en.wikipedia.org/wiki/Emergency_Alert_System" target="_blank">Emergency Alert System</a></p>
+
+		<div class="urls">
+			<header class="box">
+				<h2>resources</h2>
+			</header>
+			<table>
+				<tr>
+					<td><img src="../img/ficon/util/car.png" loading="lazy" alt=""></td>
+					<td><a href="https://alerts.globaleas.org" target="_blank">Central Alert Repository</a></td>
+					<td>a searchable archive of emergency alert messages with audio. sadly, it only goes a few years back, however its still really cool</td>
+				</tr>
+				<tr>
+					<td><img src="../img/ficon/other/donelan.png" loading="lazy" alt=""></td>
+					<td><a href="https://www.donelan.com/eas.html" target="_blank">Donelan.com Emergency Alert System information</a></td>
+					<td>more targetted towards people in the industry, but still has a lot of cool technical information</td>
+				</tr>
+				<tr>
+					<td><img src="../img/ficon/other/telegram.png" loading="lazy" alt=""></td>
+					<td><a href="https://t.me/wjonipsagelogs" target="_blank">WJON IP EAS Alerts Telegram Channel</a></td>
+					<td>a telegram channel that automatically posts audio of all alerts recieved by the <a href="https://wjonip.org" target="_blank">WJON IP Radio</a> station, which includes basically all alerts across the US</td>
+				</tr>
+				<tr>
+					<td><img src="../img/ficon/other/wxrchive.png" loading="lazy" alt=""></td>
+					<td><a href="https://wxrchive.secludedfox.com" target="_blank">WXRchive</a></td>
+					<td>archive of emergency alerts pulled from a ton of various sources</td>
+				</tr>
+			</table>
+			<header class="box">
+				<h2>notable alerts</h2>
+			</header>
+			<p class="box">alerts that i found bizarre, notable, or just cool for some reason or another</p>
+			<table>
+				<tr>
+					<td><img src="../img/ficon/util/car.png" loading="lazy" alt=""></td>
+					<td><a href="https://alerts.globaleas.org/alert?hash=AD8A1C6020B2AFD538B2E43E15BAC01B28CF1222" target="_blank">low quality Puerto Rico test</a></td>
+					<td>i find it really cool that emergency alerts in Puerto Rico for the most part have real people read them aloud compared to a computer. the quality of this alert is really low however <code>(CEM; <time datetime="2025-10-16">Oct 16, 2025</time>)</code></td>
+				</tr>
+				<tr>
+					<td><img src="../img/ficon/youtube.png" loading="lazy" alt=""></td>
+					<td><a href="https://www.youtube.com/playlist?list=PLmHaymEP2jhTIjGAk_bGkZYjs4ICCfYk4" target="_blank">Local Access Alerts/Emergency Override Systems</a></td>
+					<td>youtube playlist containing multiple local access alerts. these are custom systems usually unique to a single station. i find them super unique and fascinating. below are some of my favorites from this playlist:</td>
+				</tr>
+
+				<!-- emergency override system indentation begins! -->
+				<tr class="indent">
+					<td><img src="../img/ficon/youtube.png" loading="lazy" alt=""></td>
+					<td><a href="https://www.youtube.com/watch?v=rLT5b-xY4-U&list=PLmHaymEP2jhTIjGAk_bGkZYjs4ICCfYk4&index=1" target="_blank">CW Local Access Alert Drill 1982</a></td>
+					<td>the "HURRICANE!" slide they use is really cool. i would like that on a shirt maybe</td>
+				</tr>
+				<tr class="indent">
+					<td><img src="../img/ficon/youtube.png" loading="lazy" alt=""></td>
+					<td><a href="https://www.youtube.com/watch?v=N3avs9XQeIg&list=PLmHaymEP2jhTIjGAk_bGkZYjs4ICCfYk4&index=2" target="_blank">Keflavik, Iceland Winter Weather Advisory (November 1982)</a></td>
+					<td>i love how archaic this style of character generator looks, and combied with the sounds in the background, this is just so cool to me. especially with this being something from a NATO base</td>
+				</tr>
+				<tr class="indent">
+					<td><img src="../img/ficon/youtube.png" loading="lazy" alt=""></td>
+					<td><a href="https://www.youtube.com/watch?v=BR5fJwtyaBI&list=PLmHaymEP2jhTIjGAk_bGkZYjs4ICCfYk4&index=19" target="_blank">Local Access Alert For KQ2 St. Joseph, MO Dec 9, 2003</a></td>
+					<td>this one is a jumpscare because of how loud and sudden it is. i also love how urgent the bright red slide flashing "EMERGENCY ALERT!" is. there is something so comical about an exclamation point to me</td>
+				</tr>
+				<tr class="indent">
+					<td><img src="../img/ficon/youtube.png" loading="lazy" alt=""></td>
+					<td><a href="https://www.youtube.com/watch?v=nfdHshKFAkU&list=PLmHaymEP2jhTIjGAk_bGkZYjs4ICCfYk4&index=18" target="_blank">Local Access Alert / Emergency Override System interrupts Nickelodeon</a></td>
+					<td>the "gulping" sound is really satisfying to listen to for some reason. however seeing the tv go to static in person would scare the crap out of me, especially younger me</td>
+				</tr>
+				<!-- this concludes the indentation of the emergency override system -->
+
+				<tr>
+					<td><img src="../img/ficon/util/car.png" loading="lazy" alt=""></td>
+					<td><a href="https://alerts.globaleas.org/alert?hash=606F3D6607CF8AABCBFEB897B683BC6B5CEAE9FE" target="_blank">CANCEL CANCEL CANCEL CANCEL CANCEL CANCEL</a></td>
+					<td>i find it a little funny just how many times they mention to cancel the previous alert in this one before announcing another one. but at the same time i get it, people still call 911 because they think something is happening during the national test, and it really is a pain to get your message across to everyone <code>(CEM; <time datetime="2026-06-05">Jun 5, 2026</time>)</code></td>
+				</tr>
+				<tr>
+					<td><img src="../img/ficon/youtube.png" loading="lazy" alt=""></td>
+					<td><a href="https://www.youtube.com/watch?v=Ox2hLf5ab24" target="_blank">2018 Hawaii Missile Alert Television Broadcast</a></td>
+					<td>a television recording of the <a href="https://en.wikipedia.org/wiki/2018_Hawaii_false_missile_alert" target="_blank">2018 Hawaii missile alert false alarm</a>. sadly it doesn't contain the full alert, but its really interesting to see this footage</td>
+				</tr>
+				<tr>
+					<td><img src="../img/ficon/util/car.png" loading="lazy" alt=""></td>
+					<td><a href="https://alerts.globaleas.org/alert?hash=41A1FF3638FCC9EE2A62A1CC2C564462A9434CDD" target="_blank">tsunami warning with music</a></td>
+					<td>due to the emergency alert system mainly working over radio, it can lead to audio bleeding into alerts that shouldn't be there. here is an example of music bleeding into a tsunami warning <code>(TSW; <time datetime="2025-07-16">July 16, 2025</time>)</code></td>
+				</tr>
+				<tr>
+					<td><img src="../img/ficon/wiki.png" loading="lazy" alt=""></td>
+					<td><a href="https://en.wikipedia.org/wiki/National_Weather_Service_bulletin_for_Hurricane_Katrina#Bulletin_text" target="_blank">National Weather Service bulletin for Hurricane Katrina</a></td>
+					<td>i don't know if this one counts as an emergency alert (as there isn't any footage i could find of an official alert), however im still including it here because its similar enough. this is the weather bulletin issued by the National Weather Service for Hurricane Katrina. this was predicted to be an extremely devastating hurricane, and the alert had to reflect that. as such, this is one of the creepiest weather bulletins ive ever seen. the line "WATER SHORTAGES WILL MAKE HUMAN SUFFERING INCREDIBLE BY MODERN STANDARDS" especially hits. but this worked, as it made tons of people evacuate</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
