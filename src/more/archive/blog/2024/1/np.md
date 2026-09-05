@@ -7,7 +7,7 @@ permalink: "/more/archive/blog/2024/1/np.html"
 ---
 note: i originally wrote this article for [tumblr](https://cringepoop.tumblr.com/post/739696890303725568/one-ui){target=_blank}
 
-<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">iOS is stuck in 2015 ðŸ’€ <a href="[https://t.co/Hw1HRTqDyW](https://t.co/Hw1HRTqDyW)">pic.twitter.com/Hw1HRTqDyW</a></p>&mdash; Lewis Doyle (@lewisjdoyle) <a href="[https://twitter.com/lewisjdoyle/status/1746233164391948625?ref_src=twsrc%5Etfw](https://twitter.com/lewisjdoyle/status/1746233164391948625?ref_src=twsrc%5Etfw)">January 13, 2024</a></blockquote> <script async src="[https://platform.twitter.com/widgets.js](https://platform.twitter.com/widgets.js)" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">iOS is stuck in 2015 ðŸ’€ <a href="https://t.co/Hw1HRTqDyW">pic.twitter.com/Hw1HRTqDyW</a></p>&mdash; Lewis Doyle (@lewisjdoyle) <a href="https://twitter.com/lewisjdoyle/status/1746233164391948625?ref_src=twsrc%5Etfw">January 13, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 saw this and i wanted to give my thoughts on it
 

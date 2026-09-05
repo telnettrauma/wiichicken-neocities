@@ -490,6 +490,10 @@ section {margin-bottom: 10px !important;}
 	.topLinks a:nth-child(4) .nav-icon {background: url(/resources/nav/navicons.png) -72px 0;}
 	.topLinks a:nth-child(5) .nav-icon {background: url(/resources/nav/navicons.png) -96px 0;}
 	.footer p {text-align: left;}
+	.mobile-list {
+		display: flex;
+		flex-direction: column;
+	}
 }
 /* prefers reduced transparency */
 @media (prefers-reduced-transparency: reduce) {

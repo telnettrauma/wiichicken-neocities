@@ -6,10 +6,4 @@ hello! this is where i place all of the files for my website. why? because its c
 
 ## branches
 
-the work in progress version (non-public) is located on the `main` branch. the live version is on the `live` branch. i don't think it is hard to understand. also hi the article version is at `article`
-
-## flags
-
-these are important flags that are used to modify properties about pages generated with `11ty` and stuff
-
-- one used to exist but it doesn't anymore.
+the work in progress version (non-public) is located on the `main` branch. the live version is on the `live` branch. i don't think it is hard to understand. also hi the article version is at `article`. i dont feally use that one much anymore though

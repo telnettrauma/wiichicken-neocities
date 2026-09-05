@@ -225,6 +225,10 @@ img {max-width: 100%;}
 	background-color: #fffcfa;
 	padding: 3px;
 }
+.footnotes-list a {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
 
 @media (prefers-color-scheme: dark) {
 	.content-area.default {
