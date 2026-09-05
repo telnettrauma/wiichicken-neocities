@@ -232,7 +232,7 @@ nav.site-nav {
 	margin: auto;
 	display: flex;
 	justify-content: center;
-	background: url(/resources/nav/spiky.png);
+	background: url(/resources/nav/spiky.png) repeat-x;
 }
 .navbar-links {
 	display: flex;
