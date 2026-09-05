@@ -25,64 +25,10 @@ a {
 	transition-duration: 0.5s;
 	background-color: black;
 }
-#inHead {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	padding-right: 100px;
-	margin: 5px;
-}
-.topLinks, .topLinks a, #fakeLogo, .square {pointer-events: all;}
-.topLinks a {
-	font-size: 15px;
-	color: var(--dark-tertiary);
-	background-color: unset !important;
-}
-#int-nav-icons a:first-child {color: #ffdbcc;}
-#int-nav-icons a:first-child .nav-icon {background: url(/interests/res/nav/nav.png) 0 0;}
-#int-nav-icons a:nth-child(2) {color: #b3ebff;}
-#int-nav-icons a:nth-child(2) .nav-icon {background: url(/interests/res/nav/nav.png) -12px 0;}
-#fakeLogo {
-	display: flex;
-	align-items: center;
-	transition-duration: 0.4s;
-	cursor: pointer;
-	z-index: 2;
-	margin: -35px 20px 0 0;
-	padding: 5px;
-	pointer-events: all;
-	position: absolute;
-	right: 5px;
-	background-color: white;
-	aspect-ratio: 1;
-	border: 5px solid black;
-}
-#fakeLogo:hover {
-	padding: 10px;
-	transform: translateY(-20px);
-}
-#fakeLogo:hover #s1 {box-shadow: 0 0 100px 25px red, 42px 0 100px 25px #00a2ff;}
-#fakeLogo .square {
-	width: 15px;
-	height: 15px;
-	margin: 2px;
-}
-#fakeLogo:hover .square {
-	transform: scale(1.5);
-	transform-origin: center;
-	margin: 1px;
-	transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
-}
-#fakeLogo:hover #s1 {margin-right: 10px;}
-#s1 {background-color: red; transition-duration: 0.3s;}
-#s2 {background-color: #00a2ff; transition-duration: 0.5s;}
-#fakeLogo:active {padding: 7px;}
-#fakeLogo:active .square {
-	margin: 1px;
-	transition-duration: 0.2;
-}
-#fakeLogo:active #s1 {transform: scale(1.7); margin-right: 15px;}
-#fakeLogo:active #s2 {transform: scale(2.1);}
+#n-i-m {color: #ffdbcc;}
+#n-i-m .nav-icon {background: url(/interests/res/nav/nav.png) 0 0;}
+#n-i-w {color: #b3ebff;}
+#n-i-w .nav-icon {background: url(/interests/res/nav/nav.png) -24px 0;}
 @media only screen and (max-width: 650px) {
 	#int-nav-icons a:nth-child(2) .nav-icon {background: url(/interests/res/nav/nav.png) -24px 0;}
 }

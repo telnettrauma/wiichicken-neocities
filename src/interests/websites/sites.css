@@ -10,7 +10,6 @@ body {
 	background-color: #000e11 !important;
 	font-family: 'PT Sans', sans-serif;
 	margin: 0;
-	margin-top: 10px;
 }
 #flex {
 	display: flex;
@@ -18,10 +17,10 @@ body {
 	margin: auto;
 	margin-bottom: 30px !important;
 }
-#int-nav-icons a:first-child {color: #ffdbcc;}
-#int-nav-icons a:first-child .nav-icon {background: url(/interests/res/nav/nav.png) 0 0;}
-#int-nav-icons a:nth-child(2) {color: #b3ebff;}
-#int-nav-icons a:nth-child(2) .nav-icon {background: url(/interests/res/nav/nav.png) -12px 0;}
+#n-i-m {color: #ffdbcc;}
+#n-i-m .nav-icon {background: url(/interests/res/nav/nav.png) 0 0;}
+#n-i-w {color: #b3ebff;}
+#n-i-w .nav-icon {background: url(/interests/res/nav/nav.png) -24px 0;}
 h1, h2, h3, h4, .mainnav {font-family: 'Martian Mono', monospace;}
 h1, h2, h3, h4, .mainnav, p.box, .breadcrumb-box p {
 	margin-block-start: 0;
@@ -174,9 +173,6 @@ header .lessvis {
 	box-shadow: none;
 }
 .glow {box-shadow: 0px 0px 8px 1px #c1c4eb;}
-@media only screen and (max-width: 650px) {
-	#int-nav-icons a:nth-child(2) .nav-icon {background: url(/interests/res/nav/nav.png) -24px 0;}
-}
 @media only screen and (min-width: 900px) {
 	.main {flex: 1;}
 }

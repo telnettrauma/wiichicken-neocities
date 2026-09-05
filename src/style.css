@@ -260,6 +260,7 @@ nav.site-nav {
 #n-l .nav-icon {background: url(/resources/nav/navicons.png) -72px 0;}
 #n-m {color: #ffdad6;}
 #n-m .nav-icon {background: url(/resources/nav/navicons.png) -96px 0;}
+#n-g {color: white;}
 #n-g .nav-icon {background: url(/resources/nav/navicons.png) -120px 0;}
 #fakeLogo {
 	cursor: url(/media/pointer.svg), url(/media/pointer.png), pointer;
@@ -283,10 +284,10 @@ nav.site-nav {
 #fakeLogo img {
 	position: relative;
 	z-index: 2;
+	width: 50px;
+	height: 70px;
 }
-#fakeLogo:hover {
-	transform: translateY(0px);
-}
+#fakeLogo:hover {transform: translateY(0px);}
 #fakeLogo:hover::before {
 	opacity: 0.7;
 	transform: translate(-20px, 0px) scale(1);
