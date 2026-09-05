@@ -232,7 +232,7 @@ nav.site-nav {
 	margin: auto;
 	display: flex;
 	justify-content: center;
-	background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0) 100%);
+	background: url(/resources/nav/spiky.png);
 }
 .navbar-links {
 	display: flex;
@@ -264,14 +264,9 @@ nav.site-nav {
 #n-m .nav-icon {background: url(/resources/nav/navicons.png) -96px 0;}
 #n-g .nav-icon {background: url(/resources/nav/navicons.png) -120px 0;}
 #fakeLogo {
-	transition-duration: 0.4s;
 	cursor: url(/media/pointer.svg), url(/media/pointer.png), pointer;
 	z-index: 2;
-	padding: 5px;
 	pointer-events: all;
-	aspect-ratio: 1;
-	width: 70px;
-	height: 70px;
 }
 #to-start {
 	position: absolute;
