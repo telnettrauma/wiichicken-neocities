@@ -265,8 +265,30 @@ nav.site-nav {
 #n-g .nav-icon {background: url(/resources/nav/navicons.png) -120px 0;}
 #fakeLogo {
 	cursor: url(/media/pointer.svg), url(/media/pointer.png), pointer;
-	z-index: 2;
 	pointer-events: all;
+	transform: translateY(-5px);
+	transition-duration: 0.3s;
+}
+#fakeLogo::before {
+	content: '';
+	width: 90px;
+	height: 90px;
+	background: url(/resources/nav/homehover.png);
+	position: absolute;
+	z-index: 0;
+	transform: translateX(-20px);
+	opacity: 0;
+	transition-duration: 1s;
+}
+#fakeLogo img {
+	position: relative;
+	z-index: 2;
+}
+#fakeLogo:hover {
+	transform: translateY(0px);
+}
+#fakeLogo:hover::before {
+	opacity: 1;
 }
 #to-start {
 	position: absolute;
