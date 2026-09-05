@@ -22,8 +22,7 @@ main {
 	margin: auto;
 	padding: 10px;
 	overflow: hidden;
-	margin-top: 10px !important;
-	margin-bottom: 50px !important;
+	margin-bottom: 10px !important;
 	position: relative;
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
@@ -227,104 +226,72 @@ section {margin-bottom: 10px !important;}
 /* navigation styles */
 
 /* navbar */
-.heading {
-	width: unset;
-	z-index: 10;
-	margin: 0;
-	bottom: 10px;
-	right: 10px;
-	position: fixed;
-	transition-duration: 0.5s;
-	height: 30px;
-	border: 1px solid var(--border);
-}
-#inHead {
+nav.site-nav {
+	height: 60px;
+	margin: auto;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
+	background: url(/resources/nav/spiky.png) repeat-x;
+}
+.navbar-links {display: flex;}
+.navbar-links a {
+	display: flex;
+	flex-direction: column;
 	align-items: center;
-	padding-right: 70px;
-	margin: 4px 0 5px 0;
+	font-size: 10px;
+	text-decoration: none !important;
+	padding: 6px;
 }
-.topLinks, .topLinks a, #fakeLogo, .square {pointer-events: all;}
-.topLinks {display: flex;}
-.topLinks a {
-	display: flex;
-	font-size: 15px;
-	color: white;
-	padding: 0 7px 0 7px;
-	background-color: unset !important;
-}
+.navbar-links a:hover {text-decoration: underline !important;}
 .nav-icon {
-	display: inline;
-	width: 12px;
-	height: 12px;
-	margin-right: 2px;
-	image-rendering: pixelated;
+	width: 24px;
+	height: 24px;
+	margin-bottom: 3px;
+	z-index: 50 !important;
+	background-size: cover !important;
 }
-.topLinks a:first-child {color: #c5e7ff;}
-.topLinks a:first-child .nav-icon {background: url(/resources/nav/navicons.png) 0 0;}
-.topLinks a:nth-child(2) {color: #dce1ff;}
-.topLinks a:nth-child(2) .nav-icon {background: url(/resources/nav/navicons.png) -12px 0;}
-.topLinks a:nth-child(3) {color: #ffd6fe;}
-.topLinks a:nth-child(3) .nav-icon {background: url(/resources/nav/navicons.png) -24px 0;}
-.topLinks a:nth-child(4) {color: #ffdadb;}
-.topLinks a:nth-child(4) .nav-icon {background: url(/resources/nav/navicons.png) -36px 0;}
-.topLinks a:nth-child(5) {color: #ffdad6;}
-.topLinks a:nth-child(5) .nav-icon {background: url(/resources/nav/navicons.png) -48px 0;}
-.topLinks a:nth-child(6) .nav-icon {background: url(/resources/nav/navicons.png) -60px 0;}
+#n-a {color: #c5e7ff;}
+#n-a .nav-icon {background: url(/resources/nav/navicons.png) 0 0;}
+#n-c {color: #dce1ff;}
+#n-c .nav-icon {background: url(/resources/nav/navicons.png) -24px 0;}
+#n-b {color: #ffd6fe;}
+#n-b .nav-icon {background: url(/resources/nav/navicons.png) -48px 0;}
+#n-l {color: #ffdadb;}
+#n-l .nav-icon {background: url(/resources/nav/navicons.png) -72px 0;}
+#n-m {color: #ffdad6;}
+#n-m .nav-icon {background: url(/resources/nav/navicons.png) -96px 0;}
+#n-g {color: white;}
+#n-g .nav-icon {background: url(/resources/nav/navicons.png) -120px 0;}
 #fakeLogo {
-	display: flex;
-	align-items: center;
-	transition-duration: 0.4s;
 	cursor: url(/media/pointer.svg), url(/media/pointer.png), pointer;
-	z-index: 2;
-	margin: -35px 0 0 0;
-	padding: 5px;
 	pointer-events: all;
+	transform: translateY(-5px);
+	transition-duration: 0.3s;
+}
+#fakeLogo::before {
+	content: '';
+	width: 90px;
+	height: 90px;
+	background: url(/resources/nav/homehover.png);
 	position: absolute;
-	right: 5px;
-	background: linear-gradient(0deg, #7e7e7e 0%, #ffffff 100%);
-	border: 5px solid black;
-	aspect-ratio: 1;
+	z-index: 0;
+	transform: translate(-20px, -5px) scale(0);
+	transform-origin: top;
+	opacity: 0;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
 }
-#fakeLogo:hover {
-	padding: 10px;
-	transform: translateY(-10px);
-	box-shadow: 0 0 100px 20px var(--bg-1);
+#fakeLogo img {
+	position: relative;
+	z-index: 2;
+	width: 50px;
+	height: 70px;
 }
-#fakeLogo .square {
-	width: 15px;
-	height: 15px;
-	margin: 2px;
+#fakeLogo:hover {transform: translateY(0px);}
+#fakeLogo:hover::before {
+	opacity: 0.7;
+	transform: translate(-20px, 0px) scale(1);
 }
-#fakeLogo:hover .square {
-	transform: scale(1.5);
-	transform-origin: center;
-	margin: 1px;
-	transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
-	animation: look-around 3s;
-}
-@keyframes look-around {
-	30% {transform-origin: initial;}
-	40% {transform-origin: left;}
-	50% {transform-origin: left;}
-	60% {transform-origin: right;}
-	75% {transform-origin: right;}
-	85% {transform-origin: initial;}
-}
-#fakeLogo:hover #s1 {margin-right: 10px;}
-#s1 {background-color: red; background: linear-gradient(0deg, #ff7b00 0%, #ff0000 100%); transition-duration: 0.3s;}
-#s2 {background-color: #00a2ff; background: linear-gradient(180deg, #00a2ff 0%, #0044ff 100%); transition-duration: 0.5s;}
-#fakeLogo:active {
-	padding: 7px;
-	box-shadow: 0 0 100px 50px var(--bg-1);
-}
-#fakeLogo:active .square {
-	margin: 1px;
-	transition-duration: 0.2;
-}
-#fakeLogo:active #s1 {transform: scale(1.7); margin-right: 15px;}
-#fakeLogo:active #s2 {transform: scale(2.1);}
 #to-start {
 	position: absolute;
 	z-index: 1000;
@@ -365,35 +332,6 @@ section {margin-bottom: 10px !important;}
 		bottom: 0;
 		left: 0;
 	}
-	.square {transform: translate(0, 8px);}
-	@keyframes wink {
-		0% {height: 15px; margin-top: 0; margin-bottom: 0;}
-		10% {height: 15px; margin-top: 0; margin-bottom: 0;}
-		11% {height: 5px; margin-top: 5px; margin-bottom: 5px;}
-		12% {height: 15px; margin-top: 0; margin-bottom: 0;}
-		48% {height: 15px; margin-top: 0; margin-bottom: 0;}
-		50% {height: 5px; margin-top: 5px; margin-bottom: 5px;}
-		52% {height: 15px; margin-top: 0; margin-bottom: 0;}
-		100% {height: 15px; margin-top: 0; margin-bottom: 0;}
-	}
-	@keyframes blink {
-		0% {height: 15px; margin-top: 0; margin-bottom: 0;}
-		10% {height: 15px; margin-top: 0; margin-bottom: 0;}
-		11% {height: 5px; margin-top: 5px; margin-bottom: 5px;}
-		12% {height: 15px; margin-top: 0; margin-bottom: 0;}
-		100% {height: 15px; margin-top: 0; margin-bottom: 0;}
-	}
-	#fakeLogo:not(:hover) #s1 {animation: wink 15s infinite;}
-	#fakeLogo:not(:hover) #s2 {animation: blink 15s infinite;}
-	.topLinks a {
-		align-items: center;
-		opacity: 0.7;
-	}
-	.topLinks a:hover {opacity: 1;}
-	.topLinks a img {
-		height: 12px;
-		margin-right: 3px;
-	}
 	main {background-image: url('/media/noise.png'), linear-gradient(0deg, var(--bg-2) 0%, #00000000 20%, #00000000 80%, var(--bg-1) 100%);}
 	.heading {
 		box-shadow: 5px 5px 0 0 var(--border);
@@ -402,6 +340,7 @@ section {margin-bottom: 10px !important;}
 		-webkit-backdrop-filter: blur(5px);
 	}
 }
+
 /* styling for mobile */
 @media only screen and (max-width: 650px) {
 	.mobileHidden {display: none !important;}
@@ -436,7 +375,7 @@ section {margin-bottom: 10px !important;}
 		backdrop-filter: unset;
 		-webkit-backdrop-filter: unset;
 		background-color: black;
-		margin: 0 0 65px 0 !important;
+		margin: 0 0 10px 0 !important;
 		margin-top: 0px !important;
 	}
 	main::before {
@@ -444,51 +383,12 @@ section {margin-bottom: 10px !important;}
 		background: unset;
 		background-color: var(--bg-1);
 	}
-	.heading {
-		height: 50px;
-		width: calc(100vw - 10px);
-		margin: 5px;
-		bottom: 0;
-		right: 0;
-		background: url('/media/noise.png') #00000099;
-		border: 1px solid var(--border);
-		backdrop-filter: blur(5px);
-		-webkit-backdrop-filter: blur(5px);
-	}
-	.heading:after {content: unset;}
-	#inHead {
-		align-items: flex-start;
-		padding-right: 60px;
-	}
 	#fakeLogo {
 		margin: 0;
 		right: 5px;
 		bottom: 5px;
 		border: 5px solid black;
 	}
-	.topLinks {
-		position: absolute;
-		align-items: flex-end;
-	}
-	.topLinks a {
-		flex-direction: column;
-		align-items: center;
-		font-size: 12px;
-		text-decoration: none !important;
-		padding: 0 12px 0 12px;
-	}
-	.topLinks a:nth-child(6n) {display: none;}
-	.topLinks a .nav-icon {
-		width: 24px;
-		height: 24px;
-		margin-bottom: 3px;
-		z-index: 50 !important;
-		background-size: cover !important;
-	}
-	.topLinks a:nth-child(2) .nav-icon {background: url(/resources/nav/navicons.png) -24px 0;}
-	.topLinks a:nth-child(3) .nav-icon {background: url(/resources/nav/navicons.png) -48px 0;}
-	.topLinks a:nth-child(4) .nav-icon {background: url(/resources/nav/navicons.png) -72px 0;}
-	.topLinks a:nth-child(5) .nav-icon {background: url(/resources/nav/navicons.png) -96px 0;}
 	.footer p {text-align: left;}
 	.mobile-list {
 		display: flex;
