@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>im cool i think</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="favicon.png">
+	<link href="style.css" rel="stylesheet">
+	<meta name="theme-color" content="#dee3e5;">
+	<meta name="robots" content="noindex">
+	<style>
+	* {
+		--dark-primary: #fbb0d8;
+		--dark-tertiary: #f3ba9c;
+		--dark-on-tertiary: #4a2712;
+		--dark-on-primary-container: #ffd8ea;
+		--light-on-primary-container: #6c3455cc;
+		--border: #FF36C0;
+		--bg-1: #ff0088;
+		--bg-2: #ff0000;
+	}
+	.bring {
+		background-color: #4a2712;
+		color: #f3ba9c;
+		border: 1px solid var(--border);
+		--border: rgb(255, 162, 0);
+		padding: 0 2px 0 2px;
+		font-weight: bold;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-width: 12px;
+		box-shadow: 2px 2px 0 0 var(--border);
+		transition-duration: 0s !important;
+		position: relative;
+		width: auto;
+		margin: 1px;
+	}
+	.bring:hover {
+		box-shadow: 1px 1px 0 0 var(--border);
+		transform: translate(1px, 1px);
+	}
+	.bring:active {
+		transform: translate(2px, 2px);
+		box-shadow: 0 0 !important;
+	}
+	.bring::after {display: none;}
+	</style>
+</head>
+<body>
+{% include "partials/navbar.njk" %}
+<main>
+<section class="box page-top">
+	<p>i am going to poop and pee</p>
+</section>
+<section class="box sec-full">
+	<p>hello everybuddy! this is my informational page where you can learn about me and stuff. its currently a work in progress so thats why its bland and ugly but one day it will be built up and look gorgeous.</p>
+</section>
+<section>
+	<div class="box sec-t">
+		<h2>me</h2>
+	</div>
+	<div class="box sec-b">
+		<p>hello! i am nonbinary and i think i am very cool. i have asd and struggle a lot with talking to people, so if you think im shy now you know why</p>
+	</div>
+</section>
+<section>
+	<div class="box sec-t">
+		<h2>things i like</h2>
+	</div>
+	<div class="box sec-b">
+		<ul>
+			<li>splatoon!</li>
+			<li>my sona</li>
+			<li>global information systems</li>
+		</ul>
+	</div>
+</section>
+<section>
+	<div class="box sec-t">
+		<h2>contact me</h2>
+	</div>
+	<div class="box sec-b">
+		<p>these are ways that you can contact me if thats what you desire. or maybe you just wanna send me a friend request. that's fine too!<br>please note that im really bad at talking to people and i will likely hesitate to respond. im working on this, but if you force me into talking i probably will. <strong>don't let this put you off from sending a request or trying to talk to me!</strong></p>
+		<ul>
+			<li><strong>discord</strong>: <code>wiichicken#0040</code> (or <code>@bbctwo</code>)</li>
+			<li><strong>email</strong>: <a href="mailto:vimeoofficial@gmail.com" target="_blank">vimeoofficial@gmail.com</a></li>
+			<li><strong>telegram</strong>: <a href="https://t.me/fizzybomb" target="_blank"><code>@fizzybomb</code></a></li>
+		</ul>
+	</div>
+</section>
+<section class="box sec-full">
+	<p>more stuff is coming here soon! but this is just one introduction page on my whole website. if you want to know more about me, check out the rest of this site!</p>
+	<a href="/index.html" class="noline"><button class="bring">go to the homepage</button></a>
+</section>
+<section class="box page-bottom">
+	<p>wiichicken 2026. this is the footer.</p>
+</section>
+</main>
+</body>
+</html>

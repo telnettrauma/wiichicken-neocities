@@ -49,19 +49,10 @@
 	#moneyOnMind {
 		background-size: cover;
 		background-repeat: repeat;
-		animation: nowBack 120s linear infinite;
 	}
 	#hiPoopFart {
 		backdrop-filter: blur(30px);
 		-webkit-backdrop-filter: blur(30px); 
-	}
-	@keyframes nowBack {
-		0% {background-position-y: 0%; background-position-x: 0%;}
-		20% {background-position-x: 113%; background-position-y: 213%;}
-		40% {background-position-x: 226%; background-position-y: 426%;}
-		60% {background-position-x: 339%; background-position-y: 639%;}
-		80% {background-position-x: 452%; background-position-y: 852%;}
-		100% {background-position-y: 1065%; background-position-x: 565%;}
 	}
 	@media (prefers-reduced-motion) {
 		* {animation: none !important;}
@@ -145,7 +136,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			if (typeof data.recenttracks.track[0]["@attr"] !== "undefined"){
 				var listenInfo = document.getElementById("listen");
 				listenInfo.innerHTML = '<strong>listening</strong> to:';
-				fakeBlur.style.animationDuration = '30s';
 				document.getElementById('hiPoopFart').style.backdropFilter = 'blur(40px)';
 			} else {
 				var listenInfo = document.getElementById("listen");
