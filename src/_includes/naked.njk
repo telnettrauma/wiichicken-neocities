@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{ title }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="16x16" href="/media/favicons/16.png">
+	<meta charset="UTF-8">
+	<meta property="og:title" content="{{ title }}">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://wiggle.monster{{ permalink }}">
+</head>
+<body>
+{{ content | safe }}
+</body>
+</html>
