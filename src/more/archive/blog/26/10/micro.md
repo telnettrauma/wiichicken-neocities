@@ -11,6 +11,14 @@ okay, so welcome to my microblog! i said i was going to start working on it, but
 
 ---
 
+## october 13, 2026
+
+### thank you so much discord! (21:45)
+
+my discord client now has a persistent sidebar showing people in my friends list who are online. one of the features of this sidebar is that it groups people in the same voice channel, something i don't want to know. thankfully you can disbale this. however, today discord made it so it still shows a little speaker icon next to the avatar of someone in a voice channel.
+
+when will this ever end.
+
 ## october 6, 2026
 
 ### whoa! there's a bit too much going on at the moment.
