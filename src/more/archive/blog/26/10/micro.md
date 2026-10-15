@@ -11,6 +11,14 @@ okay, so welcome to my microblog! i said i was going to start working on it, but
 
 ---
 
+## october 14, 2026
+
+### if i was to buy a new phone (19:03)
+
+i think if i was to get a new phone i would get like an older android, but im worried about updates. if i had to keep an iPhone though i would get an iPhone se
+
+basically i don't want to spend more than $150 on a phone, but the most i will spend is $300, maybe $350
+
 ## october 13, 2026
 
 ### thank you so much discord! (21:45)
