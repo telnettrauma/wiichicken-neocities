@@ -11,7 +11,15 @@ okay, so welcome to my microblog! i said i was going to start working on it, but
 
 ---
 
-## october 
+## october 18, 2026
+
+### choosing a notification sound (23:20)
+
+one of the weirdest things to think about when choosing a new notification sound is considering the possibility that you will be hearing this sound right before learning your friend is attempting suicide, or that a family member has died. it isn't something i like to think about, but sadly something i have to consider.
+
+i sound i chose to set my notification sound to is the [Inkopolis Plaza News Arpeggio](https://downloads.khinsider.com/game-soundtracks/album/splatoon-2-the-complete-gamerip-switch-gamerip-2017/6-07.%2520Inkopolis%2520News%2520-%2520Arpeggio%25E2%2580%258E%25E2%2580%258E.mp3) for a few reasons. first of all, for the reason i just explained above, it isn't too offensive while sitll having a personality. it also isn't that distracting while still being noticable. it will grab my attention, but if it went off in public it would blend much more into the environment.
+
+my [previous notification sound](https://downloads.khinsider.com/game-soundtracks/album/splatoon-2-the-complete-gamerip-switch-gamerip-2017/5-59.%2520Dubble%2520Bath%2520%2528Voice%25204B%2529%25E2%2580%258E%25E2%2580%258E.mp3) didn't accomplish any of these things as far as im aware. it would scare me whenever it went off and people would look at me funny whenever it went off, even my own family. what a failure of a notification sound.
 
 ## october 15, 2026
 
