@@ -11,7 +11,9 @@ okay, so welcome to my microblog! i said i was going to start working on it, but
 
 ---
 
-## october 15, 2025
+## october 
+
+## october 15, 2026
 
 ### i cannot comfort anybody (19:35)
 
