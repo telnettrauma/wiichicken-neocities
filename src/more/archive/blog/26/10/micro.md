@@ -13,6 +13,10 @@ okay, so welcome to my microblog! i said i was going to start working on it, but
 
 ## october 27, 2026
 
+### is this what working an office job is like? (20:17)
+
+ive been using adobe illustrator for so long that the interface is beginning to make me nauseous. is this what working an office job is like? my laptop screen hasn't been anything but adobe illustrator for the past 5 hours, and my second monitor has been almost exclusively used for looking up how to do something in adobe illustrator. its really beginning to take a toll on me, but im `2/3` of the way done
+
 ### everything is happening at once (10:18)
 
 midterms are here, which means that a lot of things are happening at once now. i have so much work i need to do, not just limited to school. its just so much, im constantly forgetting things such as my purse.
