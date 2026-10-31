@@ -11,6 +11,12 @@ okay, so welcome to my microblog! i said i was going to start working on it, but
 
 ---
 
+## october 30, 2026
+
+### splatfest makes me somber (22:31)
+
+splatfest always makes me feel somber because everyone is posting their teams and wins and stuff and im just always alone. everyone on twitter is so much better than i am so i can't play w/ them, and like 2 people i know have the game haven't even unlocked anarchy yet
+
 ## october 27, 2026
 
 ### is this what working an office job is like? (20:17)
