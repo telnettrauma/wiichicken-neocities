@@ -7,9 +7,11 @@ permalink: "/interests/gaming/nintendo/splatoon/splatfest.html"
 
 ## Splatoon 3
 
-### Splatoween 2026 (Wizard vs. Knight vs. Ninja)
+### Splatoween 2026
 
 **What would you rather be in a fantasy world?**
+
+*Wizard vs. Knight vs. Ninja*
 
 **My Team**: Wizard
 
@@ -43,3 +45,15 @@ I also unlocked the following badges during this splatfest:
 - 180 Wins with Reefslider
 
 In the end, I had a ton of fun playing this splatfest. For some reason I feel like its the start of a new era, but maybe I'm just having strong feelings because it only ended an hour ago.
+
+### Summer Nights 2026
+
+### What's your fighting style?
+
+### Springfest 2026
+
+### Winterfest 2026
+
+### Splatoween 2025
+
+### Summer Nights 2025
