@@ -32,11 +32,13 @@ I started out **extremely** frustrated. The Splatfest began on Friday, and overn
 
 In the morning however I did much better. Sometimes you just need to get some sleep. This day was also Halloween. I got to play with my younger sister for about an hour before she went trick or treating. We were both inklings! We also did really well during that hour.
 
-With this said, I still had some melancholy feelings. I wrote on microblog:
+With this said, I still had some melancholy feelings. I wrote on my microblog:
 
 > splatfest always makes me feel somber because everyone is posting their teams and wins and stuff and im just always alone. everyone on twitter is so much better than i am so i can't play w/ them, and like the 2 people i know have the game haven't even unlocked anarchy yet
 
 Once tricolor was unlocked that was really fun. One of the maps was Scorch Gorge, which is just a small triangle. It is a really quirky map, and I've only ever played on it in modded lobbies. And I'm really happy I got to play it officially, because it is so unique and fun!
+
+On Twitter I usually see a lot of people complaining about things during Splatfest, mainly turf war being a kinda bad mode. There was a few hackers this fest, but this time they used hacks to make it so they couldn't be reported. So instead everyone was complaining about these hackers. Although I never encountered them, it seemed like it would be annoying, although it did add some chaos to the Splatfest.
 
 I also unlocked the following badges during this splatfest:
 
