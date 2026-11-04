@@ -4,6 +4,8 @@
 
 hello! this is where i place all of the files for my website. why? because its cool this way! and it gives me version control or whatever.
 
+i used to use [gitmoji](https://gitmoji.dev/) for commit titles (which is why they have emoji at the start) but now i just kinda use whatever emoji. not even because its helpful but idk its fun 😦
+
 ## branches
 
 the work in progress version (non-public) is located on the `main` branch. the live version is on the `live` branch. i don't think it is hard to understand. also hi the article version is at `article`. i dont feally use that one much anymore though
