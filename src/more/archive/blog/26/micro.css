@@ -19,11 +19,12 @@ body {
 main {
 	margin: 0 auto 0 auto;
 	display: flex;
+	flex-direction: column;
 }
 main article {
 	--text-color: #21191d;
 	color: var(--text-color);
-	background-color: #fffcfa;
+	background-color: #fff8f8;
 	max-width: 700px;
 	font-size: 16px;
 	padding: 20px;
@@ -50,16 +51,16 @@ header {text-transform: uppercase;}
 .side-panel ul li ul li a {
 	color: var(--text-color);
 	font-weight: unset;
-	font-size: 12px;
+	font-size: 1em;
 }
 .toc a {
 	text-decoration: unset;
 	color: var(--text-color);
 }
 h1 {
-	font-size: 5vw;
-	letter-spacing: -0.5vw;
-	line-height: 4vw;
+	font-size: 3em;
+	letter-spacing: -0.1em;
+	line-height: 0.8em;
 	color: var(--accent);
 	text-align: justify;
 	padding-right: 3px;
@@ -214,30 +215,13 @@ nav.site-nav {
 	#table-of-contents {background-color: #59422d;}
 }
 
+/* desktop layout */
 @media only screen and (min-width: 900px) {
-	.content-area {
-		margin: 5px 5px 0 5px;
-		overflow-y: scroll;
-		width: calc(100vw - 10px);
-		height: calc(100vh - 55px);
-		border: 1px solid #ff9c01;
-	}
-	.topLinks {margin-right: 5px;}
 	#accessibility-button {top: -40px;}
-	header {
-		display: flex;
-		flex-direction: row-reverse;
-		justify-content: flex-end;
-		background: linear-gradient(180deg, var(--blend) 0%, var(--blend) 60%, #00000000 100%);
-	}
-	#article-date {
-		writing-mode: vertical-rl;
-		text-orientation: sideways;
-		font-size: 3vw;
-	}
 	main {
 		margin: 10px auto 10px auto;
 		width: 1000px;
+		flex-direction: row;
 	}
 	/* these next 2 basically just apply the slanted corners */
 	article {
@@ -280,15 +264,34 @@ nav.site-nav {
 	}
 
 	.side-panel {
-		margin: 30px 0 30px 0;
+		margin: 30px 0 12px 0;
 		width: 150px;
+		height: 100%;
+		/* i basically stole this bit where the sidebar sticks from the minecraft wiki (https://minecraft.wiki) */
+		max-height: calc(100vh - 30px);
+		position: sticky;
+		top: 15px;
+		bottom: 15px;
+		overflow-y: scroll;
 	}
+	.side-panel ul li ul li a {font-size: 0.75em;}
 	.toc-nav {
 		border-right: 0px;
 		width: 200px;
 	}
 	.mb-nav {border-left: 0px;}
 }
+
+/* mobile layout (probably shouldn't have this, but whatever) */
+@media only screen and (max-width: 900px) {
+	.side-panel {
+		margin: 0 15px 0 15px;
+	}
+	.toc-nav {border-bottom: 0px;}
+	.mb-nav {border-top: 0px;}
+}
+
+/* reduced motion layout */
 @media (prefers-reduced-motion) {
 	#s1 {animation: unset;}
 }

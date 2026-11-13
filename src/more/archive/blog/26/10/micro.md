@@ -5,6 +5,8 @@ permalink: "/more/archive/blog/26/10/micro.html"
 ---
 okay, so welcome to my microblog! i said i was going to start working on it, but i never did. so, screw it, i decided to just make a naked page. hopefully eventually this page is actually properly formatted and looks nice. but for right now, you're looking at a website in almost its rawest form. how intimate!
 
+**hi me from the future here!** i finally added an actual style so yeah that's quite cool!
+
 ---
 
 ## october 30, 2026
