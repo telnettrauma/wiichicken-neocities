@@ -1,5 +1,5 @@
 ---
-layout: naked.njk
+layout: blog/26/micro.njk
 title: "october 2026 microblog"
 permalink: "/more/archive/blog/26/10/micro.html"
 ---
