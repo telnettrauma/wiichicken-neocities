@@ -5,13 +5,13 @@ body {
 	margin: 0;
 	font-family: 'Ubuntu', sans-serif;
 	--accent: #f700af;
-	--body-accent: #f700af;
+	--body-accent: #eb00a8;
 	--blend: #ffd8e8;
 	--border: #d4c2c8;
 	--sidebar: #f9eaee;
 	--sidebar-border: #eedfe3;
 	background: var(--blend);
-	background-image: url('/more/archive/blog/25/res/bg/light.png');
+	background-image: url('/more/archive/blog/26/res/micro/bg/light.png');
 	scrollbar-width: 8px;
 	scrollbar-color: var(--accent) var(--blend);
 }
@@ -25,7 +25,7 @@ main article {
 	--text-color: #21191d;
 	color: var(--text-color);
 	background-color: #fff8f8;
-	max-width: 700px;
+	max-width: 600px;
 	font-size: 16px;
 	padding: 20px;
 	line-height: 30px;
@@ -44,14 +44,17 @@ header {text-transform: uppercase;}
 .side-panel ul li {
 	margin-bottom: 5px;
 }
-.side-panel ul li a {
+.side-panel ul li a, .side-panel ul li p {
 	color: var(--body-accent);
 	font-weight: bold;
+	margin-block-start: 0;
+	margin-block-end: 0;
 }
 .side-panel ul li ul li a {
 	color: var(--text-color);
 	font-weight: unset;
 	font-size: 1em;
+	text-decoration: none;
 }
 .toc a {
 	text-decoration: unset;
@@ -198,21 +201,25 @@ nav.site-nav {
 	left: 0;
 }
 
+/* dark theme */
 @media (prefers-color-scheme: dark) {
 	body {
-		background-image: url('/more/archive/blog/25/res/bg/dark.png');
-		--border: #50453a;
-		--blend: #211a14;
-		--body-accent: var(--accent);
+		background-image: url('/more/archive/blog/26/res/micro/bg/dark.png');
+		--border: #504348;
+		--blend: #251d21;
+		--body-accent: #ff5acf;
 		scrollbar-color: var(--accent) var(--blend);
 	}
-	#article-date {color: #e0c1a3;}
-	main {
-		--text-color: #eee0d5;
-		background-color: #19120c;
+	main article {
+		--text-color: #eedfe3;
+		background-color: #181114;
+	}
+	.side-panel {
+		--sidebar: #251d21;
+		--sidebar-border: #30282b;
+		color: #eedfe3;
 	}
 	.footnotes-sep:before {background-color: #19120c;}
-	#table-of-contents {background-color: #59422d;}
 }
 
 /* desktop layout */
@@ -220,7 +227,7 @@ nav.site-nav {
 	#accessibility-button {top: -40px;}
 	main {
 		margin: 10px auto 10px auto;
-		width: 1000px;
+		width: 900px;
 		flex-direction: row;
 	}
 	/* these next 2 basically just apply the slanted corners */
@@ -279,16 +286,20 @@ nav.site-nav {
 		border-right: 0px;
 		width: 200px;
 	}
-	.mb-nav {border-left: 0px;}
+	.mb-nav {
+		border-left: 0px;
+		width: 100px;
+	}
 }
 
 /* mobile layout (probably shouldn't have this, but whatever) */
 @media only screen and (max-width: 900px) {
-	.side-panel {
-		margin: 0 15px 0 15px;
-	}
+	.side-panel {margin: 0 15px 0 15px;}
 	.toc-nav {border-bottom: 0px;}
 	.mb-nav {border-top: 0px;}
+	.side-panel ul li {
+		margin-bottom: 15px;
+	}
 }
 
 /* reduced motion layout */
