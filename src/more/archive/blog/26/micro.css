@@ -30,11 +30,7 @@ main article {
 	line-height: 30px;
 }
 img {max-width: 100%;}
-header {
-	text-transform: uppercase;
-	padding: 5px;
-	background: linear-gradient(0deg, var(--blend) 0%, #00000000 100%);
-}
+header {text-transform: uppercase;}
 .side-panel {
 	background-color: var(--sidebar);
 	border: 3px solid var(--sidebar-border);
@@ -44,11 +40,17 @@ header {
 	display: block;
 	padding-left: 0px;
 }
+.side-panel ul li {
+	margin-bottom: 5px;
+}
 .side-panel ul li a {
 	color: var(--body-accent);
+	font-weight: bold;
 }
 .side-panel ul li ul li a {
 	color: var(--text-color);
+	font-weight: unset;
+	font-size: 12px;
 }
 .toc a {
 	text-decoration: unset;
@@ -68,13 +70,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 h2 a, h3 a, h4 a, h5 a, h6 a {text-decoration: unset;}
 h2 {
-	font-size: 3em;
+	font-size: 2em;
 	line-height: 1.1em;
 }
-h3 {font-size: 2.5em;}
-h4 {font-size: 2em;}
-h5 {font-size: 1.75em;}
-h6 {font-size: 1.5em;}
+h3 {font-size: 1.5em;}
+h4 {font-size: 1.25em;}
+h5 {font-size: 1.15em;}
+h6 {font-size: 1.10em;}
 a {color: var(--body-accent);}
 .footnote-ref a {text-decoration: none;}
 ul {list-style: none;}
@@ -114,6 +116,85 @@ blockquote {
 .footnotes-list a {
 	overflow-wrap: break-word;
 	word-wrap: break-word;
+}
+
+/* navbar */
+nav.site-nav {
+	height: 60px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	background: url(/resources/nav/spiky.png) repeat-x;
+	image-rendering: pixelated;
+}
+.navbar-links {display: flex;}
+.navbar-links a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 10px;
+	text-decoration: none !important;
+	padding: 6px;
+}
+.navbar-links a:hover {text-decoration: underline !important;}
+.nav-icon {
+	width: 24px;
+	height: 24px;
+	margin-bottom: 3px;
+	z-index: 50 !important;
+	background-size: cover !important;
+}
+#n-a {color: #c5e7ff;}
+#n-a .nav-icon {background: url(/resources/nav/navicons.png) 0 0;}
+#n-c {color: #dce1ff;}
+#n-c .nav-icon {background: url(/resources/nav/navicons.png) -24px 0;}
+#n-b {color: #ffd6fe;}
+#n-b .nav-icon {background: url(/resources/nav/navicons.png) -48px 0;}
+#n-l {color: #ffdadb;}
+#n-l .nav-icon {background: url(/resources/nav/navicons.png) -72px 0;}
+#n-m {color: #ffdad6;}
+#n-m .nav-icon {background: url(/resources/nav/navicons.png) -96px 0;}
+#n-g {color: white;}
+#n-g .nav-icon {background: url(/resources/nav/navicons.png) -120px 0;}
+#fakeLogo {
+	cursor: url(/media/pointer.svg), url(/media/pointer.png), pointer;
+	pointer-events: all;
+	transform: translateY(-5px);
+	transition-duration: 0.3s;
+}
+#fakeLogo::before {
+	content: '';
+	width: 90px;
+	height: 90px;
+	background: url(/resources/nav/homehover.png);
+	position: absolute;
+	z-index: 0;
+	transform: translate(-20px, -5px) scale(0);
+	transform-origin: top;
+	opacity: 0;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+#fakeLogo img {
+	position: relative;
+	z-index: 2;
+	width: 50px;
+	height: 70px;
+}
+#fakeLogo:hover {transform: translateY(0px);}
+#fakeLogo:hover::before {
+	opacity: 0.7;
+	transform: translate(-20px, 0px) scale(1);
+}
+#to-start {
+	position: absolute;
+	z-index: 1000;
+	left: -500px;
+	opacity: 0;
+}
+#to-start:focus {
+	opacity: 1;
+	left: 0;
 }
 
 @media (prefers-color-scheme: dark) {
