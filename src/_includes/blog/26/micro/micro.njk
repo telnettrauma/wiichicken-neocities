@@ -17,12 +17,9 @@
 <body>
 {% include "partials/navbar.njk" %}
 <main>
-	<nav class="side-panel toc">
+	<nav class="side-panel toc-nav">
 		{% if content | toc %}
-			<details id="table-of-contents">
-				<summary>Table of Contents</summary>
-				{{ content | toc | safe }}
-			</details>
+			{{ content | toc | safe }}
 		{% endif %}
 	</nav>
 	<article>

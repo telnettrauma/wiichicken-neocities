@@ -3,12 +3,13 @@
 html {scroll-behavior: smooth;}
 body {
 	margin: 0;
-	background-color: black;
 	font-family: 'Ubuntu', sans-serif;
-	--accent: #ff7b00;
-	--body-accent: #c25400;
-	--blend: #fdf4e8;
-	--border: #f1d5a8;
+	--accent: #f700af;
+	--body-accent: #f700af;
+	--blend: #ffd8e8;
+	--border: #d4c2c8;
+	--sidebar: #f9eaee;
+	--sidebar-border: #eedfe3;
 	background: var(--blend);
 	background-image: url('/more/archive/blog/25/res/bg/light.png');
 	scrollbar-width: 8px;
@@ -20,7 +21,7 @@ main {
 	display: flex;
 }
 main article {
-	--text-color: #201b13;
+	--text-color: #21191d;
 	color: var(--text-color);
 	background-color: #fffcfa;
 	max-width: 700px;
@@ -34,35 +35,29 @@ header {
 	padding: 5px;
 	background: linear-gradient(0deg, var(--blend) 0%, #00000000 100%);
 }
-#article-date, h1 {
-	margin-block-start: 0;
-	margin-block-end: 0;
-}
-#article-date {
-	font-family: 'Kode Mono', monospace;
-	font-weight: bold;
-	font-size: 6vw;
-	color: #58432c;
-}
-#table-of-contents {
-	width: 100%;
+.side-panel {
+	background-color: var(--sidebar);
+	border: 3px solid var(--sidebar-border);
 	padding: 10px;
-	background-color: #ffdcc0;
 }
-#table-of-contents summary {
-	font-family: 'Kode Mono', monospace;
-	font-weight: bold;
-	font-size: 2vw;
-	color: var(--accent);
+.side-panel ul {
+	display: block;
+	padding-left: 0px;
+}
+.side-panel ul li a {
+	color: var(--body-accent);
+}
+.side-panel ul li ul li a {
+	color: var(--text-color);
 }
 .toc a {
 	text-decoration: unset;
 	color: var(--text-color);
 }
 h1 {
-	font-size: 10vw;
+	font-size: 5vw;
 	letter-spacing: -0.5vw;
-	line-height: 8vw;
+	line-height: 4vw;
 	color: var(--accent);
 	text-align: justify;
 	padding-right: 3px;
@@ -83,7 +78,7 @@ h6 {font-size: 1.5em;}
 a {color: var(--body-accent);}
 .footnote-ref a {text-decoration: none;}
 ul {list-style: none;}
-ul li:before {
+article ul li:before {
 	content: "▪";
 	margin-right: 10px;
 	font-size: 18px;
@@ -122,7 +117,7 @@ blockquote {
 }
 
 @media (prefers-color-scheme: dark) {
-	{
+	body {
 		background-image: url('/more/archive/blog/25/res/bg/dark.png');
 		--border: #50453a;
 		--blend: #211a14;
@@ -138,7 +133,7 @@ blockquote {
 	#table-of-contents {background-color: #59422d;}
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 900px) {
 	.content-area {
 		margin: 5px 5px 0 5px;
 		overflow-y: scroll;
@@ -161,6 +156,10 @@ blockquote {
 	}
 	main {
 		margin: 10px auto 10px auto;
+		width: 1000px;
+	}
+	/* these next 2 basically just apply the slanted corners */
+	article {
 		will-change: transform;
 		--p: 2;
 		--pixel: calc(var(--p) * 1px);
@@ -175,7 +174,7 @@ blockquote {
 			0% calc(100% - var(--s)),
 			0% var(--s));
 	}
-	main:before {
+	article:before {
 		content: "";
 		position: absolute;
 		inset: 0;
@@ -198,6 +197,16 @@ blockquote {
 			linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
 			linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
 	}
+
+	.side-panel {
+		margin: 30px 0 30px 0;
+		width: 150px;
+	}
+	.toc-nav {
+		border-right: 0px;
+		width: 200px;
+	}
+	.mb-nav {border-left: 0px;}
 }
 @media (prefers-reduced-motion) {
 	#s1 {animation: unset;}
