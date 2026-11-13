@@ -6,6 +6,14 @@ permalink: "/more/archive/blog/26/11/micro.html"
 # november 2026 microblog
 hi
 
+## november 16, 2026
+
+### working on the microblog (16:36)
+
+the microblog pages have been without a proper theme for far too long. so that is why today i think i am going to make a proper stylesheet for them.
+
+ive already been working on it, and so far i think it is going along good. however, i wish i wrote more articles, because there really aren't many and that's limiting me a little in my testing. but whatever. i will make do. hopefully.
+
 ## november 10, 2026
 
 ### it is still amazing youtube exists (11:13)
