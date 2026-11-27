@@ -3,10 +3,19 @@ layout: blog/26/micro/micro.njk
 title: "november 2026 microblog"
 permalink: "/more/archive/blog/26/11/micro.html"
 ---
-# november 2026 microblog
-hi
-
 ## november 16, 2026
+
+### small thing about myself ive noticed (21:15)
+
+i crave intimacy but all ive talked about this week are:
+
+- tornadoes
+- cartoon network
+- bbc radio 6
+
+and i make bulleted lists
+
+## november 13, 2026
 
 ### working on the microblog (16:36)
 
