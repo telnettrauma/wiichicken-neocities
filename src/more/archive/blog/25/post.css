@@ -118,10 +118,10 @@ nav {
 #accessibility-button:focus {top: 0;}
 /* post content area */
 .content-area.default {
-	--accent: #ff7b00;
-	--body-accent: #c25400;
-	--blend: #fdf4e8;
-	--border: #f1d5a8;
+	--accent: #f700af;
+	--body-accent: #eb00a8;
+	--blend: #ffd8e8;
+	--border: #d4c2c8;
 	background: var(--blend);
 	background-image: url('/more/archive/blog/25/res/bg/light.png');
 	scrollbar-width: 8px;
